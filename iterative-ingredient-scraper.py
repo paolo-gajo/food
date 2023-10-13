@@ -9,7 +9,7 @@ import csv
 
 
 # Initialize WebDriver
-driver = webdriver.Chrome(r"C:\Users\paolo\repos\food\chromedriver.exe")
+driver = webdriver.Chrome()
 
 # Navigate to the starting page
 driver.get("https://ricette.giallozafferano.it")
@@ -22,6 +22,7 @@ try:
         EC.presence_of_element_located((By.CSS_SELECTOR, ".amecp_button-accetto.iubenda-cs-accept-btn"))
     )
     button.click()
+    print('I clicked!')
 except Exception as e:
     print(f"Could not click the button: {e}")
 
