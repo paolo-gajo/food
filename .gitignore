@@ -2,3 +2,8 @@ giallo-zafferano-corpus/
 chromedriver.exe
 food-env/
 scraped-pages-giallozafferano/
+output_eff/
+slurm_error/
+slurm_output/
+jobgo.sh
+TASTEset/
