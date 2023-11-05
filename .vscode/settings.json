@@ -1,0 +1,7 @@
+{
+    "editor.parameterHints.enabled": false,
+    "files.watcherExclude": {
+        "*-env*": true,
+        "*venv*": true
+    }
+}
