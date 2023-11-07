@@ -7,3 +7,4 @@ slurm_error/
 slurm_output/
 jobgo.sh
 TASTEset/
+gz_textonly_parallel/
