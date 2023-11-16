@@ -8,3 +8,5 @@ slurm_output/
 jobgo.sh
 TASTEset/
 gz_textonly_parallel/
+GZ-Authentic/foods
+GZ-Authentic/survey-answers
