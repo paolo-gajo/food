@@ -39,7 +39,7 @@ def translate_TASTEset(json_path, tokenizer, model, device, verbose=False):
     with open(json_path, encoding='utf8') as json_file:
         data = json.load(json_file)
 
-    new_data = {'annotations': data['annotations'][:10]}
+    new_data = {'annotations': data['annotations']}
 
     # Process each recipe's annotations
     for recipe in tqdm(new_data['annotations'], desc="Translating"):
@@ -48,18 +48,24 @@ def translate_TASTEset(json_path, tokenizer, model, device, verbose=False):
         shift = 0
 
         for entity in recipe['entities']:
-            start, end, entity_type = entity
-            text_src = recipe['text'][start:end]
+            start_src, end_src, entity_type = entity
+            entity_text_src = recipe['text'][start_src:end_src]
             if verbose > 1:
-                print('source:', text_src, start, end)
-            new_start = start if start == 0 else new_end + 1
-            text_trg = translate_marianmt(text_src, tokenizer, model, device)
-            shift += len(text_trg) - len(text_src)
-            new_end = end + shift
-            new_text += text_trg + recipe['text'][end:end+1]
-            entities_trg.append([new_start, new_end, entity_type])
+                print('source:', entity_text_src, start_src, end_src)
+            entity_text_trg = translate_marianmt(entity_text_src, tokenizer, model, device)
+
+            start_trg = len(new_text)
+
+            shift += len(entity_text_trg) - len(entity_text_src)
+
+            
+
+            new_text += entity_text_trg
+            end_trg = len(new_text)
+            new_text += recipe['text'][end_src:end_src+1]
+            entities_trg.append([start_trg, end_trg, entity_type])
             if verbose > 1:
-                print('target:', new_text[new_start:new_end], new_start, new_end)
+                print('target:', new_text[start_trg:end_trg], start_trg, end_trg)
 
         if verbose:
             print('original text:', recipe['text'])
@@ -87,4 +93,4 @@ def main():
     translate_TASTEset(json_path, tokenizer, model, device, verbose=2)
 
 if __name__ == '__main__':
-    main()
+    main()  
