@@ -1,7 +1,17 @@
 # Load model directly
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, MarianMTModel
 tokenizer = AutoTokenizer.from_pretrained('Helsinki-NLP/opus-mt-tc-big-en-it')
-model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-tc-big-en-it') 
+model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-tc-big-en-it')
+
+# tokenizer = AutoTokenizer.from_pretrained('Helsinki-NLP/opus-mt-en-it')
+# model = MarianMTModel.from_pretrained('Helsinki-NLP/opus-mt-en-it')
+
+# model.get_encoder().to('cuda:0')
+# model.get_decoder().to('cuda:1')
+# print(model.config)
+
+# num_params = sum(p.numel() for p in model.parameters())
+# print(f"Number of parameters in the model: {num_params}")
 
 def translate_marianmt(text):
     batch = tokenizer([text], return_tensors="pt")
@@ -14,4 +24,6 @@ input_text = """
 """
 
 print(translate_marianmt(input_text))
+
+
 

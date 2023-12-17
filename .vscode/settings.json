@@ -3,5 +3,6 @@
     "files.watcherExclude": {
         "*-env*": true,
         "*venv*": true
-    }
+    },
+    "notebook.output.textLineLimit": 30
 }

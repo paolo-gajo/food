@@ -1,127 +1,86 @@
-import json
 from tqdm.auto import tqdm
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import torch
 import time
 import os
+import json
+from typing import List, Dict
+import argparse
 
-# Pseudo code:
-    # 1. look at each element in 'entities', e.g. [0, 1, 'QUANTITY'], and find the equivalent to the positions in 'text'
-    # 2. translate that equivalent and append it to a new list
-    # 3. get the difference in length between src and trg and add that to all starts and ends in each following element of entities_trg
+from os import environ
+
+from google.cloud import translate
+
+def translate_text(text: str, target_language_code: str) -> translate.Translation:
+    client = translate.TranslationServiceClient()
+
+    response = client.translate_text(
+        parent=PARENT,
+        contents=[text],
+        target_language_code=target_language_code,
+    )
+
+    return response.translations[0]
 
 def translate_marianmt(text, tokenizer, model, device):
-    """
-    Translate a piece of text using the MarianMT model.
-
-    Parameters:
-    - text: The source text to translate.
-    - tokenizer: The tokenizer for the model.
-    - model: The translation model.
-    - device: The device to run the model on.
-
-    Returns:
-    - The translated text.
-    """
     batch = tokenizer([text], return_tensors="pt").to(device)
     generated_ids = model.generate(**batch, max_new_tokens=1024)
     return tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
-def has_alphanumeric(s):
-    return any(char.isalnum() for char in s)
-
-def translate_TASTEset(json_path, tokenizer, model, device, verbose=False):
-    """
-    Translate the annotations within a TASTEset JSON file.
-
-    Parameters:
-    - json_path: Path to the TASTEset JSON file.
-    - tokenizer: The tokenizer for the model.
-    - model: The translation model.
-    - device: The device to run the model on.
-    - verbose: If set to True, prints additional information.
-    """
-
+def load_json(json_path):
     with open(json_path, encoding='utf8') as json_file:
         data = json.load(json_file)
+    return data
 
-    new_data = {'annotations': data['annotations'][:5]}
+def translate_list_of_texts(texts: List[str], tokenizer, model, device, verbose=False) -> List[str]:
+    trg_texts = []
 
     # Process each recipe's annotations
-    for recipe in tqdm(new_data['annotations'], desc="Translating"):
-        new_text = ''
-        entities_trg = []
-        shift = 0
-        for entity in recipe['entities']:
-            print('-------------------')
-            start_src, end_src, entity_type = entity
-            entity_text_src = recipe['text'][start_src:end_src]
-            if verbose > 1:
-                print('source:', entity_text_src, start_src, end_src)
-            entity_text_trg = translate_marianmt(entity_text_src, tokenizer, model, device)
-
-            start_trg = len(new_text)
-
-            shift += len(entity_text_trg) - len(entity_text_src)
-
-            new_text += entity_text_trg
-
-            end_trg = len(new_text)
-
-            if verbose > 1:
-                print('target:', new_text[start_trg:end_trg], start_trg, end_trg)
-
-            if recipe['text'][end_src:end_src+1] == ';':
-                end_char_trg = recipe['text'][end_src:end_src+1]
-            else:
-                # look for the next ; in the source text
-                # if there are any alphanumeric characters before it
-                # then end_char = ' ', else end_char = '; '
-                end_char_src = recipe['text'][end_src:].find(';')
-                if end_char_src == -1:
-                    # -1 means no ; was found
-                    end_char_trg = recipe['text'][end_src:end_src+1]
-                else:
-                    end_char_src += end_src
-                    print("recipe['text'][end_src:end_char_src]", recipe['text'][end_src:end_char_src])
-                    if has_alphanumeric(recipe['text'][end_src:end_char_src]):
-                        end_char_trg = recipe['text'][end_src:end_src+1]
-                    else:
-                        end_char_trg = '; '
-                    
-            print('end_char_trg: "', end_char_trg, '"') if end_char_trg != ' ' else print('end_char_trg: <space>')
-            
-            new_text += end_char_trg
-
-            entities_trg.append([start_trg, end_trg, entity_type])
-            
+    for text in tqdm(texts, desc="Translating"):
+        src_text = text
+        trg_text = translate_marianmt(src_text, tokenizer, model, device)
+        trg_texts.append(trg_text)
 
         if verbose:
-            print('original text:', recipe['text'])
-            print('new_text:', new_text)
-        recipe['text'] = new_text
-        recipe['entities'] = entities_trg
-
-    # Output the new data
-    print('new_data:', new_data)
-    time_string = time.strftime("%Y%m%d-%H%M%S")
-    output_path = json_path.replace('.json', '_translated.json')
-    output_path = os.path.join(os.path.dirname(output_path), time_string + os.path.basename(output_path))
-    with open(output_path, 'w', encoding='utf-8') as outfile:
-        json.dump(new_data, outfile, indent=4, ensure_ascii=False)
-    print(f"Translated data saved to {output_path}")
+            print("SRC:", src_text)
+            print("TRG:", trg_text)
+    
+    return trg_texts
 
 def main():
-    """
-    Main function to initialize the model and tokenizer, then translate a given JSON file.
-    """
-    model_name = 'Helsinki-NLP/opus-mt-tc-big-en-it'
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_name).to(device)
+    parser = argparse.ArgumentParser(description="Translate text using a pre-trained model.")
+    parser.add_argument("--model", default='Helsinki-NLP/opus-mt-tc-big-en-it', help="The name or path of the pre-trained model to use")
+    parser.add_argument("--json_path", default='/home/pgajo/working/food/data/TASTEset/data/TASTEset_semicolon.json', help="The path to the JSON file with input data")
+    parser.add_argument("--num_texts", type=int, default=-1, help="The number of texts to translate")
+    args = parser.parse_args()
+    model = args.model  # Get the model name from the command line argument
 
-    json_path = '/home/pgajo/working/food/data/TASTEset/data/TASTEset_semicolon.json'
-    translate_TASTEset(json_path, tokenizer, model, device, verbose=2)
+    tokenizer = AutoTokenizer.from_pretrained(model)
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    model = AutoModelForSeq2SeqLM.from_pretrained(model).to(device)
+
+    json_path = args.json_path
+
+    data_src = load_json(json_path)
+
+    if args.num_texts == -1:
+        src_texts = [el['text'] for el in data_src['annotations']]
+    else:
+        src_texts = [el['text'] for el in data_src['annotations'][:args.num_texts]]
+    
+    with open(json_path.replace('.json', '_srctest.txt'), 'w', encoding='utf8') as f:
+        for el in src_texts:
+            f.write(el+"\n")
+    
+    trg_texts = (translate_marianmt("\n".join(src_texts), "it")).split("\n")
+
+    with open(json_path.replace('.json', '_trgtest.txt'), 'w', encoding='utf8') as f:
+        for el in trg_texts:
+            f.write(el+"\n")
+
+    # PROJECT_ID = environ.get("PROJECT_ID", "")
+    # assert PROJECT_ID
+    # PARENT = f"projects/{PROJECT_ID}"
 
 if __name__ == '__main__':
     main()  
