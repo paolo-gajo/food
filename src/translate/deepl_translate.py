@@ -1,9 +1,11 @@
 import deepl
 from tqdm.auto import tqdm
-auth_key = "e056a862-0b99-c41d-46a9-57f62ab6cf61:fx"
+auth_key = "c8fe40ff-eada-719c-616f-ee298486d413:fx"
 translator = deepl.Translator(auth_key)
 
-with open("/home/pgajo/working/food/data/TASTEset/data/TASTEset_raw.en", "r") as f:
+filepath = "/home/pgajo/working/food/data/TASTEset/data/TASTEset_semicolon_formatted_raw.en"
+
+with open(filepath, "r") as f:
     recipes = f.readlines()
 
 translated_recipes = []
@@ -12,5 +14,5 @@ for recipe in tqdm(recipes, total=len(recipes)):
     translated_recipes.append(translated_recipe)
 usage = translator.get_usage()
 print(usage.character.count)
-with open("/home/pgajo/working/food/data/TASTEset/data/TASTEset_raw.it", "w") as f:
+with open(filepath.replace('.en', '.it'), "w") as f:
     f.writelines([el.text for el in translated_recipes])
