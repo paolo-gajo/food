@@ -6,8 +6,9 @@ output_eff/
 slurm_error/
 slurm_output/
 jobgo.sh
-TASTEset/
+data/
 gz_textonly_parallel/
 GZ-Authentic/foods
 GZ-Authentic/survey-answers
 stuff/
+src/ner/spacy_outputs/
