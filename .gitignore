@@ -1,14 +1,6 @@
-giallo-zafferano-corpus/
-chromedriver.exe
 food-env/
-scraped-pages-giallozafferano/
-output_eff/
 slurm_error/
 slurm_output/
-jobgo.sh
+.stuff/
 data/
-gz_textonly_parallel/
-GZ-Authentic/foods
-GZ-Authentic/survey-answers
-stuff/
 src/ner/spacy_outputs/

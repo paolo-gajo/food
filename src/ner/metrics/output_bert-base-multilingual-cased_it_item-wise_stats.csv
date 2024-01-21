@@ -1,0 +1,11 @@
+model,entity,precision,recall,f-score
+output_bert-base-multilingual-cased_it_item-wise,macro,0.7773269830069971,0.652871746752926,0.7096843461455874
+output_bert-base-multilingual-cased_it_item-wise,FOOD,0.577471264367816,0.5822902178952248,0.5798707294552169
+output_bert-base-multilingual-cased_it_item-wise,QUANTITY,0.8786147804355587,0.7503048780487804,0.8094063476401907
+output_bert-base-multilingual-cased_it_item-wise,UNIT,0.9775764439411099,0.9742663656884876,0.9759185980780102
+output_bert-base-multilingual-cased_it_item-wise,PHYSICAL_QUALITY,0.4979253112033195,0.0749063670411985,0.13022246337493218
+output_bert-base-multilingual-cased_it_item-wise,TASTE,0.0,0.0,0.0
+output_bert-base-multilingual-cased_it_item-wise,PART,0.16666666666666666,0.007575757575757576,0.014492753623188406
+output_bert-base-multilingual-cased_it_item-wise,PURPOSE,0.6818181818181818,0.42857142857142855,0.5263157894736843
+output_bert-base-multilingual-cased_it_item-wise,COLOR,0.75,0.006342494714587738,0.012578616352201259
+output_bert-base-multilingual-cased_it_item-wise,PROCESS,0.25663716814159293,0.11934156378600823,0.16292134831460672
