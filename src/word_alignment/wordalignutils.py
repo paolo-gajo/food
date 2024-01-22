@@ -4,6 +4,7 @@ from typing import List, Union
 from datasets import Dataset, DatasetDict
 import torch
 from tqdm.auto import tqdm
+import random
 
 class WADataset(DatasetDict):
 
@@ -33,6 +34,15 @@ class WADataset(DatasetDict):
             df_hf = Dataset.from_list(ds[split])
             self[split] = df_hf
     
+    @classmethod
+    def from_giza_alignments(cls,
+                             data_list):
+        return cls{
+            languages=languages,
+            
+
+        }
+
     def create_samples(self, sample, src_context = True):
         sample_list = []
         for j, pair in enumerate(sample['pairs']):
@@ -78,8 +88,6 @@ class WADataset(DatasetDict):
                 self[split] = self[split].shuffle(seed=42)
         return self
 
-# remember that you need to put back the dataset shuffle
-
     @staticmethod
     def calculate_spans(sentence):
         spans = []
@@ -109,3 +117,43 @@ class WADataset(DatasetDict):
 
         return converted_alignments
     
+def shuffle_entities(sample, lang):
+    text_key = f'text_{lang}'
+    entities_key = f'entities_{lang}'
+    shuffled_ents = []
+    indexes = [i for i in range(len(sample[entities_key]))]
+    random.shuffle(indexes)
+
+    # get non-entity positions and strings from the original text
+    blanks = []
+    for i in range(len(sample[entities_key])-1):
+        end_prev = sample[entities_key][i][1]
+        start_foll = sample[entities_key][i+1][0]
+        blanks.append([end_prev, start_foll, sample[text_key][end_prev:start_foll]])
+        
+    ent_start = 0
+    shuffled_text = ''
+    for new, idx in enumerate(indexes):
+        tmp_ent = sample[entities_key][idx]
+        text_tmp_ent = sample[text_key][sample[entities_key][idx][0]:sample[entities_key][idx][1]]
+        
+        len_text = len((text_tmp_ent))
+        tmp_ent[0] = ent_start
+        tmp_ent[1] = tmp_ent[0] + len_text
+        tmp_ent[2] = sample[entities_key][idx][2]
+        shuffled_ents.append(tmp_ent)
+
+        if len(blanks) > 0:
+            next_blank = blanks.pop(0)
+            ent_start += len((text_tmp_ent)) + next_blank[1] - next_blank[0]
+        else:
+            pass
+
+        shuffled_text += text_tmp_ent + next_blank[2]
+    
+    shuffled_sample = {
+        text_key: shuffled_text,
+        entities_key: shuffled_ents
+    }
+
+    return shuffled_sample
