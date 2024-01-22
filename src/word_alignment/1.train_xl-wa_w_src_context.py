@@ -1,9 +1,75 @@
-# %% [markdown]
-# load .tsv data
-
-# %%
 import os
 import pandas as pd
+from typing import List, Union
+from utils import XLWADataset
+
+class XLWADataset:
+
+    def __init__(self, languages: List, data_path: str, n_rows: Union[int, None] = None) -> List[dict]:
+        
+        self.train, self.dev, self.test = pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
+        self.lang_id = '-'.join(languages)
+        
+        for lang in languages:
+
+            df_train_tmp = pd.read_csv(os.path.join(data_path, f'{lang}/train.tsv'), sep='\t', header=None)
+            df_train_tmp.columns = ['src', 'tgt', 'alignments']
+            df_train_tmp['lang'] = lang
+            df_train_tmp['split'] = 'train'
+
+            df_dev_tmp = pd.read_csv(os.path.join(data_path, f'{lang}/dev.tsv'), sep='\t', header=None)
+            df_dev_tmp.columns = ['src', 'tgt', 'alignments']
+            df_dev_tmp['lang'] = lang
+            df_dev_tmp['split'] = 'dev'
+
+            df_test_tmp = pd.read_csv(os.path.join(data_path, f'{lang}/test.tsv'), sep='\t', header=None)
+            df_test_tmp.columns = ['src', 'tgt', 'alignments']
+            df_test_tmp['lang'] = lang
+            df_test_tmp['split'] = 'test'
+
+            # concat train and dev
+            self.train = pd.concat([self.train, df_train_tmp])
+            self.dev = pd.concat([self.dev, df_dev_tmp])
+            self.test = pd.concat([self.test, df_test_tmp])
+
+            self.train = self.train[:n_rows]
+            self.dev = self.dev[:n_rows]
+            self.test = self.test[:n_rows]
+
+            # Adding a new column for span alignments
+            self.train['span_alignments'] = self.train.apply(lambda row: self.convert_alignments(row[0], row[1], row[2]), axis=1)
+            self.dev['span_alignments'] = self.dev.apply(lambda row: self.convert_alignments(row[0], row[1], row[2]), axis=1)
+            self.test['span_alignments'] = self.test.apply(lambda row: self.convert_alignments(row[0], row[1], row[2]), axis=1)
+
+            self.dict = {
+                'train': df_train,
+                'dev': df_dev,
+                'test': df_test,
+            }
+    
+    @staticmethod
+    def calculate_spans(sentence):
+        spans = []
+        start = 0
+        for word in sentence.split():
+            end = start + len(word)
+            spans.append((start, end))
+            start = end + 1  # Add 1 for the space character
+        return spans
+
+    def convert_alignments(self, src_sentence, tgt_sentence, alignments):
+        src_spans = self.calculate_spans(src_sentence)
+        tgt_spans = self.calculate_spans(tgt_sentence)
+
+        converted_alignments = []
+        for alignment in alignments.split():
+            src_idx, tgt_idx = map(int, alignment.split('-'))
+            src_span = src_spans[src_idx]
+            tgt_span = tgt_spans[tgt_idx]
+            converted_alignments.append(((src_span[0],src_span[1]),(tgt_span[0], tgt_span[1])))
+
+        return converted_alignments
+
 
 lang_list = [
     # 'ru',
@@ -18,9 +84,11 @@ lang_list = [
     # 'sl',
 ]
 
-df_train = pd.DataFrame()
-df_dev = pd.DataFrame()
-df_test = pd.DataFrame()
+data_path = '/home/pgajo/working/food/src/word_alignment/XL-WA/data/'
+dataset = XLWADataset(lang_list,
+                        data_path,
+                        20
+                        )
 
 for lang in lang_list:
 
@@ -44,67 +112,13 @@ for lang in lang_list:
     df_dev = pd.concat([df_dev, df_dev_tmp])
     df_test = pd.concat([df_test, df_test_tmp])
 
-df_train = df_train #[:20]
-df_dev = df_dev     #[:20]
-df_test = df_test   #[:20]
-
-# display(df)
-
-def calculate_spans(sentence):
-    spans = []
-    start = 0
-    for word in sentence.split():
-        end = start + len(word)
-        spans.append((start, end))
-        start = end + 1  # Add 1 for the space character
-    return spans
-
-def convert_alignments(src_sentence, tgt_sentence, alignments):
-    src_spans = calculate_spans(src_sentence)
-    tgt_spans = calculate_spans(tgt_sentence)
-
-    converted_alignments = []
-    for alignment in alignments.split():
-        src_idx, tgt_idx = map(int, alignment.split('-'))
-        src_span = src_spans[src_idx]
-        tgt_span = tgt_spans[tgt_idx]
-        converted_alignments.append(((src_span[0],src_span[1]),(tgt_span[0], tgt_span[1])))
-
-    return converted_alignments
-
-# Adding a new column for span alignments
-df_train['span_alignments'] = df_train.apply(lambda row: convert_alignments(row[0], row[1], row[2]), axis=1)
-df_dev['span_alignments'] = df_dev.apply(lambda row: convert_alignments(row[0], row[1], row[2]), axis=1)
-df_test['span_alignments'] = df_test.apply(lambda row: convert_alignments(row[0], row[1], row[2]), axis=1)
-
-df_dict = {
-    'train': df_train,
-    'dev': df_dev,
-    'test': df_test,
-}
-
-# Now df contains a new column 'span_alignments' with the converted alignments
-# display(df_train)
-# display(df_dev)
-# display(df_test)
-
-# %%
-lang_id = '-'.join(df_train['lang'].value_counts().keys())
-lang_id
-
-# %% [markdown]
-# import tokenizer
-
-# %%
 from transformers import AutoTokenizer
 model_name = 'bert-base-multilingual-cased'
 # model_name = 'microsoft/mdeberta-v3-base'
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-# %% [markdown]
 # prepare data
 
-# %%
 import torch
 torch.set_printoptions(linewidth=10000)
 
@@ -138,7 +152,9 @@ for key in df_dict.keys():
             # print('tgt_end', tgt_end)
             entry['id_sentence'] = i
             entry['id_alignment'] = j
-            entry['query'] = src_sentences[i][:src_start] + '• ' + src_sentences[i][src_start:src_end] + ' •' + src_sentences[i][src_end:]
+            entry['query'] = src_sentences[i][:src_start] +\
+                '• ' + src_sentences[i][src_start:src_end] +\
+                ' •' + src_sentences[i][src_end:]
             # print(entry['query'])
             entry['context'] = tgt_sentences[i]
             entry['answer'] = tgt_sentences[i][tgt_start:tgt_end]
@@ -189,10 +205,8 @@ for key in df_dict.keys():
 
 print(f'max_len', max_len)
 
-# %% [markdown]
 # convert to Dataset format
 
-# %%
 from datasets import Dataset, DatasetDict
 dataset_train = Dataset.from_list(df_dict_formatted['train'])
 dataset_dev = Dataset.from_list(df_dict_formatted['dev'])
@@ -217,18 +231,14 @@ tokenized_dataset.set_format('torch', columns=['input_ids', 'token_type_ids', 'a
 print(tokenized_dataset)
 
 
-# %% [markdown]
 # make data loaders
 
-# %%
 train_loader = torch.utils.data.DataLoader(tokenized_dataset['train'], batch_size = 32, shuffle = True)
 val_loader = torch.utils.data.DataLoader(tokenized_dataset['validation'], batch_size = 32, shuffle = True)
 test_loader = torch.utils.data.DataLoader(tokenized_dataset['test'], batch_size = 32, shuffle = True)
 
-# %% [markdown]
 # prep training setup
 
-# %%
 import os
 results_path = f'/home/pgajo/working/food/src/word_alignment/XL-WA/results/{lang_id}'
 if not os.path.isdir(results_path):
@@ -241,7 +251,6 @@ test_losses, test_f1s, test_exact_matches, test_f1s_squad_evaluate, test_exact_m
 
 avg_type = 'micro'
 
-# %%
 from transformers import AutoModelForQuestionAnswering
 import torch
 torch.set_printoptions(linewidth=1000)
@@ -264,10 +273,8 @@ squad_metric_evaluate = load("squad_v2")
 from datasets import load_metric
 squad_metric_datasets = load_metric("squad")
 
-# %% [markdown]
 # training loop
 
-# %%
 # Initialize variables to track the best model and early stopping
 best_results_val_squad = 0.0
 best_model = None
@@ -563,17 +570,14 @@ for epoch in range(epochs):
 
 print("Total training and evaluation time: ", (time.time() - whole_train_eval_time))
 
-# %% [markdown]
 # save best model
 
-# %%
 from huggingface_hub import login
 token='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'
 login(token=token)
 model_save_name = f"pgajo/{model_name.split('/')[-1]}-xl-wa-{lang_id}-{epochs_best}-epochs"
 model.module.push_to_hub(model_save_name)
 
-# %%
 from huggingface_hub import whoami, create_repo, ModelCard, ModelCardData
 
 user = whoami(token=token)
@@ -589,10 +593,8 @@ card = ModelCard.from_template(
 )
 card.push_to_hub(repo_id)
 
-# %% [markdown]
 # load best model for testing evaluation
 
-# %%
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer
 import torch
 torch.set_printoptions(linewidth=1000)
@@ -635,16 +637,8 @@ squad_metric_evaluate = load("squad_v2")
 from datasets import load_metric
 squad_metric_datasets = load_metric("squad")
 
-# %%
-src = "The euro is certainly an important step - and I agree with the line taken by President Prodi - but it is not enough ."
-trg = "L' euro è certamente un passaggio importante - e io condivido l' impostazione del Presidente Prodi - ma non è sufficiente ."
-input = tokenizer(src, trg, 
-outputs = model()
-
-# %% [markdown]
 # evaluate model on test set
 
-# %%
 try:
     df
 except NameError:
@@ -803,7 +797,6 @@ df = pd.concat([df, pd.DataFrame(dict_df, index=[0])])
 
 df.to_csv(os.path.join(results_path, csv_filename), index=False)
 
-# %%
 
 
 

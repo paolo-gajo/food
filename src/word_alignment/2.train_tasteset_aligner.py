@@ -1,7 +1,5 @@
-# %% [markdown]
 # Train the TASTEset aligner from the item-wise translated TASTEset.
 
-# %%
 # Final shape of the dataset:
 # DatasetDict({
 #     train: Dataset({
@@ -14,14 +12,12 @@
 #     })
 # })
 
-# %%
 import json
 with open('/home/pgajo/working/food/data/TASTEset/data/aligned/TASTEset_sep_format_en-it_itemwise_deepl.json') as f:
     data = json.load(f)
 recipe_list = data['annotations']
 print(len(recipe_list))
 
-# %%
 # recipe_list_w_shuffles = recipe_list
 
 # import random
@@ -84,7 +80,6 @@ print(len(recipe_list))
 #     recipe_list_w_shuffles.append(shuffle_aligned_entities(recipe))
 # print(len(recipe_list_w_shuffles))
 
-# %%
 from transformers import AutoTokenizer, DebertaV2TokenizerFast
 tokenizer_name = 'bert-base-multilingual-cased'
 # tokenizer_name = 'microsoft/mdeberta-v3-base'
@@ -107,7 +102,6 @@ pd.options.display.max_columns = 256
 pd.options.display.max_rows = 2000
 example_df.T
 
-# %%
 dataset_list = []
 max_len = 0
 
@@ -191,14 +185,12 @@ for i, recipe in enumerate(recipe_list):
         dataset_list.append(entry)
 print('max_len', max_len)
 
-# %%
 import pandas as pd
 dataset_df = pd.DataFrame(dataset_list).drop_duplicates(['answer'])
 dataset_list = dataset_df.to_dict('records')
 len(dataset_list)
 dataset_df.head()
 
-# %%
 from datasets import Dataset, DatasetDict
 dataset_unsplit = Dataset.from_list(dataset_list)
 
@@ -229,12 +221,10 @@ tokenized_dataset.set_format('torch', columns=['input_ids',
 print(tokenized_dataset)
 
 
-# %%
 import torch
 train_loader = torch.utils.data.DataLoader(tokenized_dataset['train'], batch_size = 8, shuffle = True)
 val_loader = torch.utils.data.DataLoader(tokenized_dataset['validation'], batch_size = 8, shuffle = True)
 
-# %%
 from transformers import AutoModelForQuestionAnswering
 import torch
 torch.set_printoptions(linewidth=1000)
@@ -243,7 +233,6 @@ model = AutoModelForQuestionAnswering.from_pretrained(model_name).to(device)
 model = torch.nn.DataParallel(model)  # Use DataParallel
 optimizer = torch.optim.AdamW(model.parameters(), lr=2e-5)
 
-# %%
 # Training setup
 from tqdm.auto import tqdm
 import time
@@ -272,7 +261,6 @@ squad_metric_evaluate = load("squad_v2")
 from datasets import load_metric
 squad_metric_datasets = load_metric("squad")
 
-# %%
 src_context_opt = 'with_src_context' if src_context_flag else 'no_src_context'
 
 # Initialize variables to track the best model and early stopping
@@ -570,7 +558,6 @@ for epoch in range(epochs):
 
 print("Total training and evaluation time: ", (time.time() - whole_train_eval_time))
 
-# %%
 model.eval()
 # print validation outputs for the first batches just to make sure this is working
 for batch_idx, batch in tqdm(enumerate(val_loader), total=len(val_loader)):
@@ -613,10 +600,8 @@ for batch_idx, batch in tqdm(enumerate(val_loader), total=len(val_loader)):
             print(text_true)
             print('--------')
 
-# %% [markdown]
 # try aligning sentence-wise translated TASTEset
 
-# %%
 import json
 from tqdm.auto import tqdm
 bilingual_path = '/home/pgajo/working/food/data/TASTEset/data/formatted data/TASTEset_sep_format_en-it_unaligned.json'
@@ -628,7 +613,6 @@ print(data['annotations'][:3])
 recipe_list = data['annotations']#[:3] 
 len(recipe_list)
 
-# %%
 for idx, recipe in tqdm(enumerate(recipe_list), total=len(recipe_list)):
 
     for i, entity in enumerate(recipe['entities_en']):
@@ -730,14 +714,12 @@ for idx, recipe in tqdm(enumerate(recipe_list), total=len(recipe_list)):
             break
 print(data)
 
-# %%
 from huggingface_hub import login
 token="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"
 login(token=token)
 model_save_name = f"pgajo/{model_name.split('/')[-1]}-recipe-aligner-en-it-{epochs_best}-epochs"
 model.module.push_to_hub(model_save_name)
 
-# %%
 from huggingface_hub import whoami, create_repo, ModelCard, ModelCardData
 
 user = whoami(token=token)
