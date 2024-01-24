@@ -28,7 +28,7 @@ data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
 batch_size = 32
 dataset = data_loader(data,
                       batch_size,
-                      n_rows = 64,
+                    #   n_rows = 64,
                       )
 
 model_name = 'bert-base-multilingual-cased'
@@ -47,7 +47,7 @@ evaluator = SquadEvaluator(tokenizer,
                            load("squad_v2"),
                            )
 
-epochs = 3
+epochs = 10
 
 for epoch in range(epochs):
     # train
@@ -72,9 +72,9 @@ for epoch in range(epochs):
 
     evaluator.evaluate(split, epoch)
     epoch_train_loss /= len(dataset[split])
-    evaluator.metrics[epoch][f'{split}_loss'] = epoch_train_loss
+    evaluator.epoch_metrics[f'{split}_loss'] = epoch_train_loss
 
-    evaluator.print_metrics(epoch)
+    evaluator.print_metrics(current_epoch = epoch, current_split = split)
 
     # eval on dev
     epoch_dev_loss = 0
@@ -96,13 +96,16 @@ for epoch in range(epochs):
     
     evaluator.evaluate(split, epoch)
     epoch_dev_loss /= len(dataset[split])
-    evaluator.metrics[epoch][f'{split}_loss'] = epoch_dev_loss
+    evaluator.epoch_metrics[f'{split}_loss'] = epoch_dev_loss
 
-    evaluator.print_metrics(epoch)
+    evaluator.print_metrics(current_epoch = epoch, current_split = split)
+
+    evaluator.store_metrics()
 
     if evaluator.stop_training:
         print(f'Early stopping triggered on epoch {epoch}.\nBest epoch: {evaluator.epoch_best}.')
-    
+        break
+evaluator.print_metrics()    
 evaluator.save_metrics_to_csv(results_path)
 
 push_model(

@@ -34,10 +34,15 @@ class SquadEvaluator:
         self.trues = {'train': [], 'dev': [], 'test': []}
 
         self.metrics = []
+        self.epoch_metrics = {
+            'train_loss': 0, 'train_f1': 0, 'train_exact': 0,
+            'dev_loss': 0, 'dev_f1': 0, 'dev_exact': 0,
+            'test_loss': 0, 'test_f1': 0, 'test_exact': 0,
+            }
 
         self.tokenizer = tokenizer
         self.eval_fc = eval_fc
-        self.epoch_best = 0
+        self.epoch_best = 1
         self.f1_dev_best = 0
         self.exact_dev_best = 0
         self.patience = patience
@@ -50,21 +55,14 @@ class SquadEvaluator:
             self.model = model
 
     def evaluate(self, split, epoch):
-        metrics_entry = {
-            'train_loss': 0, 'train_f1': 0, 'train_exact': 0,
-            'dev_loss': 0, 'dev_f1': 0, 'dev_exact': 0,
-            'test_loss': 0, 'test_f1': 0, 'test_exact': 0,
-            }
-        metrics_entry[f'{split}_f1'] = self.eval_fc.compute(predictions=self.preds[split],
+        self.epoch_metrics[f'{split}_f1'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['f1']
-        metrics_entry[f'{split}_exact'] = self.eval_fc.compute(predictions=self.preds[split],
+        self.epoch_metrics[f'{split}_exact'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['exact']
 
-        self.metrics.append(metrics_entry)
-
-        if metrics_entry[f'{split}_exact'] > self.exact_dev_best:
-            self.exact_dev_best = metrics_entry[f'{split}_exact']
-            self.epoch_best = epoch
+        if self.epoch_metrics[f'{split}_exact'] > self.exact_dev_best:
+            self.exact_dev_best = self.epoch_metrics[f'{split}_exact']
+            self.epoch_best = epoch + 1
             self.patience_counter = 0
             print(f'----Best dev exact updated: {round(self.exact_dev_best, ndigits=2)}\
                   \n----Best epoch updated: {self.epoch_best}')
@@ -76,6 +74,14 @@ class SquadEvaluator:
             self.stop_training = True
 
         return self.stop_training
+    
+    def store_metrics(self):
+        self.metrics.append(self.epoch_metrics)
+        self.epoch_metrics = {
+            'train_loss': 0, 'train_f1': 0, 'train_exact': 0,
+            'dev_loss': 0, 'dev_f1': 0, 'dev_exact': 0,
+            'test_loss': 0, 'test_f1': 0, 'test_exact': 0,
+            }
 
     def get_eval_batch(self, model_outputs, batch, split):
         start_preds = torch.argmax(model_outputs['start_logits'], dim=1)
@@ -113,10 +119,19 @@ class SquadEvaluator:
         self.preds[split].append(dict_pred)
         self.trues[split].append(dict_true)
     
-    def print_metrics(self, epoch):
-        df = pd.DataFrame.from_dict(self.metrics[epoch], orient='index').reset_index()
+    def print_metrics(self, current_epoch = None, current_split = None):
+        if current_epoch is None:
+            df = pd.DataFrame(self.metrics)
+            print(df)
+            return df
+        if current_split is not None:
+            dict_current_split = {metric: self.epoch_metrics[metric] for metric in [f'{current_split}_loss', f'{current_split}_f1', f'{current_split}_exact']}
+            df = pd.DataFrame.from_dict(dict_current_split, orient='index').reset_index()
+        else:
+            df = pd.DataFrame.from_dict(self.epoch_metrics, orient='index').reset_index()
         df = df.round(decimals = 2)
         print(df)
+        return df
     
     def save_metrics_to_csv(self, path, add_date = True, add_best_dev = True, format = 'csv'):
         now = datetime.now()
