@@ -5,8 +5,8 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:2
 #SBATCH --time=infinite
-#SBATCH --output=slurm_output/output_%j.log
-#SBATCH --error=slurm_error/error_%j.log
+#SBATCH --output=.slurm_output/output_%j.log
+#SBATCH --error=.slurm_error/error_%j.log
 
 # Activate the virtual environment
 # cd /home/pgajo/working/food/TASTEset

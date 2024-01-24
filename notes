@@ -1,1 +1,16 @@
-finish fixing /home/pgajo/working/food/src/word_alignment/wordalignutils.py
+# finish fixing /home/pgajo/working/food/src/word_alignment/wordalignutils.py
+
+
+# class WADataset(DatasetDict):
+
+#     def __init__(self,
+#                  languages: List,
+#                  data_path: str,
+#                  n_rows: Union[int, None] = None
+#                  ) -> List[dict]:
+        
+#         splits = ['train', 'dev', 'test']
+#         languages = languages
+#         lang_id = '-'.join(languages)
+#         data_path = data_path
+#         n_rows = n_rows

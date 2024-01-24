@@ -1,4 +1,5 @@
 import json
+from word_alignment.utils import WADataset
 
 with open('/home/pgajo/working/food/data/TASTEset/data/entity-wise/EW-TASTE_en-it_DEEPL.json') as f:
     data = json.load(f)
@@ -14,9 +15,8 @@ shift_type = {
     'deberta': (-1, 0),
     'roberta': (0, 1),
 }
-# print('shift_type', shift_type)
+
 shifts = shift_type['bert']
-# print('shifts', shifts)
 
 import re
 def remove_non_alphanumeric(s):

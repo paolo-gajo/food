@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 from typing import List, Union
-from utils import XLWADataset
+from wlutils import XLWADataset
 
 class XLWADataset:
 
