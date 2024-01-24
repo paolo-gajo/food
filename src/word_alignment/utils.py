@@ -48,30 +48,30 @@ class SquadEvaluator:
         self.patience = patience
         self.patience_counter = 0
         self.stop_training = False
+        self.best_model = None
 
-        if hasattr(model, 'module'):
-            self.model = model.module
-        else:
-            self.model = model
-
-    def evaluate(self, split, epoch):
+    def evaluate(self, model, split, epoch, eval_metric = 'dev'):
         self.epoch_metrics[f'{split}_f1'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['f1']
         self.epoch_metrics[f'{split}_exact'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['exact']
-
-        if self.epoch_metrics[f'{split}_exact'] > self.exact_dev_best:
-            self.exact_dev_best = self.epoch_metrics[f'{split}_exact']
-            self.epoch_best = epoch + 1
-            self.patience_counter = 0
-            print(f'----Best dev exact updated: {round(self.exact_dev_best, ndigits=2)}\
-                  \n----Best epoch updated: {self.epoch_best}')
-        else:
-            self.patience_counter += 1
-            print(f'----Did not update best model, patience: {self.patience_counter}')
-        
-        if self.patience_counter > self.patience:
-            self.stop_training = True
+        if split == eval_metric:
+            if self.epoch_metrics[f'{eval_metric}_exact'] > self.exact_dev_best:
+                self.exact_dev_best = self.epoch_metrics[f'{eval_metric}_exact']
+                self.epoch_best = epoch + 1
+                self.patience_counter = 0
+                print(f'----Best dev exact updated: {round(self.exact_dev_best, ndigits=2)}\
+                    \n----Best epoch updated: {self.epoch_best}')
+                if hasattr(model, 'module'):
+                    self.best_model = model.module
+                else:
+                    self.best_model = model
+            else:
+                self.patience_counter += 1
+                print(f'----Did not update best model, patience: {self.patience_counter}')
+            
+            if self.patience_counter > self.patience:
+                self.stop_training = True
 
         return self.stop_training
     
@@ -121,15 +121,16 @@ class SquadEvaluator:
     
     def print_metrics(self, current_epoch = None, current_split = None):
         if current_epoch is None:
-            df = pd.DataFrame(self.metrics)
+            df = pd.DataFrame(self.metrics).round(decimals = 2)
             print(df)
             return df
         if current_split is not None:
             dict_current_split = {metric: self.epoch_metrics[metric] for metric in [f'{current_split}_loss', f'{current_split}_f1', f'{current_split}_exact']}
-            df = pd.DataFrame.from_dict(dict_current_split, orient='index').reset_index()
+            df = pd.DataFrame.from_dict(dict_current_split, orient='index')
         else:
-            df = pd.DataFrame.from_dict(self.epoch_metrics, orient='index').reset_index()
+            df = pd.DataFrame.from_dict(self.epoch_metrics, orient='index')
         df = df.round(decimals = 2)
+        df.index.name = f'epoch: {current_epoch}'
         print(df)
         return df
     
@@ -145,10 +146,11 @@ class SquadEvaluator:
         else:
             bl_string = ''
         df = pd.DataFrame(self.metrics)
+        df.index += 1
         df.index.name = 'epoch'
         if not os.path.isdir(path):
             os.makedirs(path)
-        metrics_save_name = os.path.join(path, dt_string + self.model.config._name_or_path + bl_string)
+        metrics_save_name = os.path.join(path, dt_string + self.best_model.config._name_or_path + bl_string)
         print(f'Saving metrics to: {metrics_save_name}')
         df.to_csv(metrics_save_name + f'.{format}')
 
@@ -190,6 +192,8 @@ def prep_xl_wa(data_path,
 def prep_tasteset(data_path,
                 languages,
                 tokenizer,
+                shuffle_num = None,
+                shuffle = True,
                 n_rows = None,
                 splits = ['train', 'dev', 'test']
                 ):
@@ -363,21 +367,24 @@ def data_loader(dataset, batch_size, n_rows = None):
             'test': loader_test}
 
 def push_model(model,
-               model_name,
+               model_name = None,
+               user = 'pgajo/',
                suffix = '',
                model_description = '',
                language = 'en',
                repo = "https://github.com/paolo-gajo/food",
                ):
     # save best model
+    if hasattr(model, 'module'):
+        model = model.module
+        
     token='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'
     login(token=token)
-    model_save_name = model_name + suffix
-    if hasattr(model, 'module'):
-        model.module.push_to_hub(model_save_name)
-    else:
-        model.push_to_hub(model_save_name)
-
+    if model_name is None:
+        model_name = model.config._name_or_path
+    model_save_name = user + model_name + suffix
+    model.push_to_hub(model_save_name)
+    
     # user = whoami(token=token)
     repo_id = model_save_name
     # url = create_repo(repo_id, exist_ok=True)
@@ -392,3 +399,4 @@ def push_model(model,
         repo = repo,
     )
     card.push_to_hub(repo_id)
+

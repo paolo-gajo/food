@@ -1,7 +1,7 @@
 import os
 import torch
 from tqdm.auto import tqdm
-from datasets import Dataset, DatasetDict
+from datasets import DatasetDict
 import pandas as pd
 from evaluate import load
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
@@ -28,7 +28,7 @@ data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
 batch_size = 32
 dataset = data_loader(data,
                       batch_size,
-                    #   n_rows = 64,
+                    #   n_rows = 320,
                       )
 
 model_name = 'bert-base-multilingual-cased'
@@ -70,7 +70,7 @@ for epoch in range(epochs):
         
         evaluator.get_eval_batch(outputs, batch, split)
 
-    evaluator.evaluate(split, epoch)
+    evaluator.evaluate(model, split, epoch)
     epoch_train_loss /= len(dataset[split])
     evaluator.epoch_metrics[f'{split}_loss'] = epoch_train_loss
 
@@ -87,14 +87,13 @@ for epoch in range(epochs):
         with torch.inference_mode():
             outputs = model(**batch)
         loss = outputs[0].mean()
-        epoch_train_loss += loss.item()
-        loss_tmp = round(epoch_train_loss / (i + 1), 4)
+        epoch_dev_loss += loss.item()
+        loss_tmp = round(epoch_dev_loss / (i + 1), 4)
         progbar.set_postfix({'Loss': loss_tmp})
         
         evaluator.get_eval_batch(outputs, batch, split)
     
-    
-    evaluator.evaluate(split, epoch)
+    evaluator.evaluate(model, split, epoch)
     epoch_dev_loss /= len(dataset[split])
     evaluator.epoch_metrics[f'{split}_loss'] = epoch_dev_loss
 
@@ -103,14 +102,17 @@ for epoch in range(epochs):
     evaluator.store_metrics()
 
     if evaluator.stop_training:
-        print(f'Early stopping triggered on epoch {epoch}.\nBest epoch: {evaluator.epoch_best}.')
+        print(f'Early stopping triggered on epoch {epoch}. \
+              \nBest epoch: {evaluator.epoch_best}.')                            
+                            
         break
+
 evaluator.print_metrics()    
 evaluator.save_metrics_to_csv(results_path)
 
 push_model(
-    model,
-    model_name,
+    evaluator.best_model,
+    # model_name = model_name,
     suffix = f'xl-wa-{lang_id}-{evaluator.exact_dev_best}',
     model_description = f'''
     Word alignment model fine-tuned on XL-WA ({lang_id})
