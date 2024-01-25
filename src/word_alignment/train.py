@@ -103,8 +103,7 @@ for epoch in range(epochs):
 
     if evaluator.stop_training:
         print(f'Early stopping triggered on epoch {epoch}. \
-              \nBest epoch: {evaluator.epoch_best}.')                            
-                            
+              \nBest epoch: {evaluator.epoch_best}.')                                               
         break
 
 evaluator.print_metrics()    
