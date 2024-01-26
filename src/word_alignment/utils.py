@@ -10,6 +10,7 @@ import uuid
 import torch
 from huggingface_hub import login, ModelCard, ModelCardData
 from datetime import datetime
+import copy
 
 class SquadEvaluator:
     '''
@@ -172,8 +173,8 @@ def prep_tasteset(data_path,
 
     Args:
         shuffle_ents (`bool`, *optional*, defaults to `False`):
-            If `True`, shuffled samples will be added to the dataset in proportion to the original
-            sample size.
+            If `True`, samples with shuffled entities will be added to the dataset
+            in proportion to the original sample size.
         shuffle_languages (`str` or `List[str]`):
             String of a single 2-character language code (ISO 639-1),
             string of multiple space-separated language codes, or list of language codes.
@@ -193,20 +194,20 @@ def prep_tasteset(data_path,
     Returns:
         `DatasetDict`: The raw dataset in the Hugging Face dictionary format.
     '''
-    recipe_list = extend_list(json.load(open(data_path))['annotations'], shuffled_size)
+    recipe_list = extend_dict_list(json.load(open(data_path))['annotations'], shuffled_size)
     ds_list_shuffled = []
     progbar = tqdm(recipe_list, total = len(recipe_list))
     progbar.set_description(f'Creating shuffled TASTEset samples...')
-    
     for line in progbar:
-        ds_list_shuffled += create_samples_tasteset(line,
+        line_buffer = copy.deepcopy(line)
+        ds_list_shuffled += create_samples_tasteset(line_buffer,
                                             tokenizer,
                                             shuffle_ents=shuffle_ents,
                                             shuffle_languages=shuffle_languages,
                                             src_lang = src_lang,
                                             )
     if shuffle_ents:
-        recipe_list = extend_list(json.load(open(data_path))['annotations'], unshuffled_size)
+        recipe_list = extend_dict_list([el for el in json.load(open(data_path))['annotations']], unshuffled_size)
         ds_list_unshuffled = []
         progbar = tqdm(recipe_list, total = len(recipe_list))
         progbar.set_description(f'Creating unshuffled TASTEset samples...')
@@ -221,11 +222,8 @@ def prep_tasteset(data_path,
         random.shuffle(ds_list_unshuffled)
         random.shuffle(ds_list_shuffled)
     ds_unshuffled = pd.DataFrame(ds_list_unshuffled[:len(ds_list_unshuffled)*unshuffled_size])
-    print('ds_unshuffled', len(ds_unshuffled))
-    
     ds_shuffled = pd.DataFrame(ds_list_shuffled[:len(ds_list_shuffled)*shuffled_size])
-    print('ds_shuffled', len(ds_shuffled))
-    df = pd.concat([ds_shuffled, ds_shuffled])
+    df = pd.concat([ds_unshuffled, ds_shuffled])
     if drop_duplicates:
         df = df.drop_duplicates(['answer'])
     df_list = df.to_dict(orient='records')
@@ -282,7 +280,7 @@ def create_samples_tasteset(sample,
     return sample_list
 
 def assign_indexes_to_entities(sample) -> dict:
-    sample_langs = list(set([key.split('_')[-1] for key in sample.keys()]))
+    sample_langs = list(set([key.split('_')[-1] for key in sample.keys() if '_' in key]))
     original_indexes = [i for i in range(len(sample[f'ents_{sample_langs[0]}']))]
     for l in sample_langs:
         sample.update({f'idx_{l}': original_indexes,
@@ -516,8 +514,19 @@ def qa_tokenize(sample: Union[str, List], tokenizer):
                     ))
     return sample
 
-def extend_list(list, ratio):
+def extend_dict_list(l, ratio):
     int_ratio = int(ratio)
     decimals = ratio % 1
-    extended_list = list * int_ratio + list[:round(len(list) * decimals)]
-    return extended_list
+    main = [el for el in l * int_ratio]
+    remainder = [el for el in l[:round(len(l) * decimals)]]
+    extended_list = main + remainder
+
+    # Creating a new list with new dictionary objects
+    new_extended_list = []
+    for i, el in enumerate(extended_list):
+        new_el = {}
+        new_el.update(el)  # create a new dictionary
+        new_el['index'] = i
+        new_extended_list.append(new_el)
+
+    return new_extended_list

@@ -1,7 +1,7 @@
 import os
 from utils import prep_tasteset, qa_tokenize
 from transformers import AutoTokenizer
-
+import warnings
 def build_tasteset(data_path,
                 shuffle_ents=False,
                 shuffle_languages=['it'],
@@ -27,7 +27,7 @@ def build_tasteset(data_path,
 
     dataset = dataset.map(lambda sample: qa_tokenize(sample, tokenizer),
                         batched=True,
-                        batch_size=8,
+                        batch_size=None,
                         )
 
     dataset.set_format('torch', columns=['input_ids',
@@ -44,18 +44,21 @@ def main():
     shuffle_languages = ['it']
     src_lang = 'en'
     tokenizer_name = 'bert-base-multilingual-cased'
-    tokenizer_name = 'microsoft/mdeberta-v3-base'
-    drop_duplicates = False
+    # tokenizer_name = 'microsoft/mdeberta-v3-base'
+    drop_duplicates = True
+    shuffled_size = 2
     dataset = build_tasteset(json_path,
                              shuffle_ents = shuffle_ents,
                              shuffle_languages = shuffle_languages,
                              src_lang = src_lang,
                              tokenizer_name = tokenizer_name,
                              drop_duplicates = drop_duplicates,
+                             shuffled_size = shuffled_size,
                              )
     lang_id = '-'.join(shuffle_languages)
     suffix = 'drop_duplicates' if drop_duplicates == True else 'keep_duplicates'
-    output_path = os.path.join(dir_path, f'.{src_lang}/{tokenizer_name.split("/")[-1]}_{lang_id}_{suffix}')
+    output_path = os.path.join(dir_path,
+                f'.{src_lang}/{tokenizer_name.split("/")[-1]}_{lang_id}_{suffix}_shuffled_size_{shuffled_size}')
     if not os.path.isdir(output_path):
         os.makedirs(output_path)
     
@@ -66,4 +69,6 @@ def main():
     dataset.save_to_disk(output_path)
 
 if __name__ == '__main__':
-    main()
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        main()
