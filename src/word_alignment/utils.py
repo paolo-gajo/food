@@ -220,10 +220,10 @@ def prep_tasteset(data_path,
     if shuffle_samples:
         random.shuffle(ds_list_unshuffled)
         random.shuffle(ds_list_shuffled)
-    ds_unshuffled = pd.DataFrame(ds_list_unshuffled[:len(ds_list_unshuffled)*unshuffled_size]).drop_duplicates(['answer'])
+    ds_unshuffled = pd.DataFrame(ds_list_unshuffled[:len(ds_list_unshuffled)*unshuffled_size])
     print('ds_unshuffled', len(ds_unshuffled))
     
-    ds_shuffled = pd.DataFrame(ds_list_shuffled[:len(ds_list_shuffled)*shuffled_size]).drop_duplicates(['answer'])
+    ds_shuffled = pd.DataFrame(ds_list_shuffled[:len(ds_list_shuffled)*shuffled_size])
     print('ds_shuffled', len(ds_shuffled))
     df = pd.concat([ds_shuffled, ds_shuffled])
     if drop_duplicates:
