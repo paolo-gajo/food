@@ -40,7 +40,7 @@ def main():
     results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
 
     data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
-    print('max_num_tokens', [len(data['train'][i]['input_ids']) for i in range(len(data['train']))])
+    # print('max_num_tokens', [len(data['train'][i]['input_ids']) for i in range(len(data['train']))])
     batch_size = 2
     dataset = data_loader(data,
                         batch_size,

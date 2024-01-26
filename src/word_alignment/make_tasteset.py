@@ -45,7 +45,7 @@ def main():
     src_lang = 'en'
     tokenizer_name = 'bert-base-multilingual-cased'
     tokenizer_name = 'microsoft/mdeberta-v3-base'
-    drop_duplicates = True
+    drop_duplicates = False
     dataset = build_tasteset(json_path,
                              shuffle_ents = shuffle_ents,
                              shuffle_languages = shuffle_languages,
@@ -54,7 +54,7 @@ def main():
                              drop_duplicates = drop_duplicates,
                              )
     lang_id = '-'.join(shuffle_languages)
-    suffix = 'drop_duplicates' if drop_duplicates == True else ''
+    suffix = 'drop_duplicates' if drop_duplicates == True else 'keep_duplicates'
     output_path = os.path.join(dir_path, f'.{src_lang}/{tokenizer_name.split("/")[-1]}_{lang_id}_{suffix}')
     if not os.path.isdir(output_path):
         os.makedirs(output_path)

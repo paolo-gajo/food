@@ -193,7 +193,7 @@ def prep_tasteset(data_path,
     Returns:
         `DatasetDict`: The raw dataset in the Hugging Face dictionary format.
     '''
-    recipe_list = json.load(open(data_path))['annotations']
+    recipe_list = extend_list(json.load(open(data_path))['annotations'], shuffled_size)
     ds_list_shuffled = []
     progbar = tqdm(recipe_list, total = len(recipe_list))
     progbar.set_description(f'Creating shuffled TASTEset samples...')
@@ -206,7 +206,7 @@ def prep_tasteset(data_path,
                                             src_lang = src_lang,
                                             )
     if shuffle_ents:
-        recipe_list = json.load(open(data_path))['annotations']
+        recipe_list = extend_list(json.load(open(data_path))['annotations'], unshuffled_size)
         ds_list_unshuffled = []
         progbar = tqdm(recipe_list, total = len(recipe_list))
         progbar.set_description(f'Creating unshuffled TASTEset samples...')
@@ -515,3 +515,9 @@ def qa_tokenize(sample: Union[str, List], tokenizer):
                     return_tensors = 'pt'
                     ))
     return sample
+
+def extend_list(list, ratio):
+    int_ratio = int(ratio)
+    decimals = ratio % 1
+    extended_list = list * int_ratio + list[:round(len(list) * decimals)]
+    return extended_list
