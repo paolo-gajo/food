@@ -45,10 +45,11 @@ def main():
     lang_list,
     # n_rows=20,
     )
+    src_lang = 'en'
     lang_id = '-'.join(lang_list)
-    output_path = os.path.join(data_path, f'.ready/{lang_id}')
+    output_path = os.path.join(data_path, f'.{src_lang}/{lang_id}')
     if not os.path.isdir(output_path):
-        os.mkdir(output_path)
+        os.makedirs(output_path)
     
     # print(dataset)
     # print(dataset['train'])

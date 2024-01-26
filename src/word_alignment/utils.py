@@ -130,7 +130,7 @@ class SquadEvaluator:
         else:
             df = pd.DataFrame.from_dict(self.epoch_metrics, orient='index')
         df = df.round(decimals = 2)
-        df.index.name = f'epoch: {current_epoch}'
+        df.index.name = f'epoch: {current_epoch + 1}'
         print(df)
         return df
     
@@ -159,31 +159,77 @@ def prep_tasteset(data_path,
                 shuffle_ents=False,
                 shuffle_languages=['it'],
                 src_lang = 'en',
-                test_size=0.2
-                ):
+                dev_size=0.2,
+                shuffled_size = 1,
+                unshuffled_size = 1,
+                shuffle_samples = True,
+                drop_duplicates = True,
+                ) -> DatasetDict:
     '''
     Prepares data from the TASTEset dataset based on the wanted languages,
     tokenizer, number of rows and whether
     we want source context or not surrounding the query word.
-    '''
-    with open(data_path) as f:
-        data = json.load(f)
-    recipe_list = data['annotations']
 
-    ds_list = []
+    Args:
+        shuffle_ents (`bool`, *optional*, defaults to `False`):
+            If `True`, shuffled samples will be added to the dataset in proportion to the original
+            sample size.
+        shuffle_languages (`str` or `List[str]`):
+            String of a single 2-character language code (ISO 639-1),
+            string of multiple space-separated language codes, or list of language codes.
+        src_lang (`str`):
+            ISO 639-1 language code. Indicates which language is the source language,
+            with the entities in that language not being shuffled.
+            string of multiple space-separated language codes, or list of language codes.
+        shuffled_size (`float`):
+            Size of the dev split compared to the train split.
+        shuffled_size (`int` or `float`):
+            Controls the % size of the output shuffled sample 
+            compared to the total shuffled samples being created.
+        unshuffled_size (`int` or `float`):
+            Controls the % size of the output unshuffled sample
+            compared to the total unshuffled samples being created.
+        
+    Returns:
+        `DatasetDict`: The raw dataset in the Hugging Face dictionary format.
+    '''
+    recipe_list = json.load(open(data_path))['annotations']
+    ds_list_shuffled = []
     progbar = tqdm(recipe_list, total = len(recipe_list))
-    progbar.set_description(f'Creating TASTEset samples...')
+    progbar.set_description(f'Creating shuffled TASTEset samples...')
     
     for line in progbar:
-        ds_list += create_samples_tasteset(line,
+        ds_list_shuffled += create_samples_tasteset(line,
                                             tokenizer,
                                             shuffle_ents=shuffle_ents,
                                             shuffle_languages=shuffle_languages,
                                             src_lang = src_lang,
                                             )
-    df = pd.DataFrame(ds_list).drop_duplicates(['answer']) # going to throw an error
+    if shuffle_ents:
+        recipe_list = json.load(open(data_path))['annotations']
+        ds_list_unshuffled = []
+        progbar = tqdm(recipe_list, total = len(recipe_list))
+        progbar.set_description(f'Creating unshuffled TASTEset samples...')
+        for line in progbar:
+            ds_list_unshuffled += create_samples_tasteset(line,
+                                                tokenizer,
+                                                shuffle_ents=False,
+                                                shuffle_languages=shuffle_languages,
+                                                src_lang = src_lang,
+                                                )
+    if shuffle_samples:
+        random.shuffle(ds_list_unshuffled)
+        random.shuffle(ds_list_shuffled)
+    ds_unshuffled = pd.DataFrame(ds_list_unshuffled[:len(ds_list_unshuffled)*unshuffled_size]).drop_duplicates(['answer'])
+    print('ds_unshuffled', len(ds_unshuffled))
+    
+    ds_shuffled = pd.DataFrame(ds_list_shuffled[:len(ds_list_shuffled)*shuffled_size]).drop_duplicates(['answer'])
+    print('ds_shuffled', len(ds_shuffled))
+    df = pd.concat([ds_shuffled, ds_shuffled])
+    if drop_duplicates:
+        df = df.drop_duplicates(['answer'])
     df_list = df.to_dict(orient='records')
-    ds_dict = Dataset.from_list(df_list).train_test_split(test_size=test_size)
+    ds_dict = Dataset.from_list(df_list).train_test_split(test_size=dev_size)
     ds_dict['dev'] = ds_dict.pop('test')
     
     return ds_dict
@@ -194,7 +240,7 @@ def create_samples_tasteset(sample,
                     shuffle_languages: Union[List, str] = ['it'],
                     src_lang = 'en',
                     src_context = True
-                    ):
+                    ) -> List[dict]:
     '''
     Creates one sample per word in the source sentence of the sample.
     '''
@@ -235,7 +281,7 @@ def create_samples_tasteset(sample,
         sample_list.append(new_sample)
     return sample_list
 
-def assign_indexes_to_entities(sample):
+def assign_indexes_to_entities(sample) -> dict:
     sample_langs = list(set([key.split('_')[-1] for key in sample.keys()]))
     original_indexes = [i for i in range(len(sample[f'ents_{sample_langs[0]}']))]
     for l in sample_langs:
@@ -244,7 +290,7 @@ def assign_indexes_to_entities(sample):
                       'num_ents': len(original_indexes)})
     return sample
 
-def shuffle_entities(sample, shuffle_lang, verbose = False):
+def shuffle_entities(sample, shuffle_lang, verbose = False) -> dict:
     '''
     Shuffles entities and text for a sample.
     Only shuffles, so the source and target entities need 
@@ -307,7 +353,7 @@ def prep_xl_wa(data_path,
                 tokenizer,
                 n_rows = None,
                 splits = ['train', 'dev', 'test']
-                ):
+                ) -> DatasetDict:
     '''
     Prepares data from the XL-WA dataset based on the wanted languages,
     tokenizer, number of rows and whether
@@ -340,7 +386,7 @@ def create_samples_xlwa(sample,
                     shuffle_ents = False,
                     shuffle_lang = 'en',
                     src_context = True
-                    ):
+                    ) -> List[dict]:
     '''
     Creates one sample per word in the source sentence of the sample.
     '''
@@ -374,7 +420,7 @@ def create_samples_xlwa(sample,
         sample_list.append(new_sample)
     return sample_list
 
-def convert_giza(src_sentence, tgt_sentence, alignments):
+def convert_giza(src_sentence, tgt_sentence, alignments) -> dict:
     '''
     Converts GIZA-style '0-1' string alignments to dicts like:
         {
