@@ -21,11 +21,14 @@ lang_list = [
 ]
 
 lang_id = '-'.join(lang_list)
-data_path = f'/home/pgajo/working/food/data/XL-WA/data/.ready/{lang_id}'
-results_path = f'/home/pgajo/working/food/src/word_alignment/XL-WA/results/{lang_id}'
+# data_path = f'/home/pgajo/working/food/data/XL-WA/data/.ready/{lang_id}'
+# results_path = f'/home/pgajo/working/food/results/xl-wa/{lang_id}'
+data_path = f'/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/.ready/{lang_id}'
+results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
 
 data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
-batch_size = 32
+print([len(data['train'][i]['input_ids']) for i in range(20)])
+batch_size = 8
 dataset = data_loader(data,
                       batch_size,
                     #   n_rows = 320,
@@ -106,7 +109,9 @@ for epoch in range(epochs):
               \nBest epoch: {evaluator.epoch_best}.')                                               
         break
 
-evaluator.print_metrics()    
+evaluator.print_metrics()
+if not os.path.isdir(results_path):
+    os.makedirs(results_path)
 evaluator.save_metrics_to_csv(results_path)
 
 push_model(

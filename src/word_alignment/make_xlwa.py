@@ -2,14 +2,15 @@ import os
 from utils import prep_xl_wa, qa_tokenize
 from transformers import AutoTokenizer
 
-def build_xl_wa(data_path, lang_list):
-    lang_id = '-'.join(lang_list)
+def build_xl_wa(data_path,
+                lang_list,
+                n_rows = None
+                ):
     tokenizer = AutoTokenizer.from_pretrained('bert-base-multilingual-cased')
     dataset = prep_xl_wa(data_path,
                         lang_list,
                         tokenizer,
-                        #   n_rows = 20,
-                        src_context = True,
+                        n_rows = n_rows,
                         ).shuffle(seed=42)
 
     dataset = dataset.map(lambda sample: qa_tokenize(sample, tokenizer),
@@ -21,13 +22,8 @@ def build_xl_wa(data_path, lang_list):
                                         'token_type_ids',
                                         'attention_mask',
                                         'start_positions',
-                                        'end_positions'])
-
-    data_train_path = os.path.join(data_path, f'.ready/{lang_id}')
-    if not os.path.isdir(data_train_path):
-        os.mkdir(data_train_path)
-        
-    dataset.save_to_disk(data_train_path)
+                                        'end_positions'])        
+    return dataset
 
 def main():
     data_path = '/home/pgajo/working/food/data/XL-WA/data'
@@ -44,6 +40,21 @@ def main():
       # 'bg',
       # 'sl',
       ]
+    
+    dataset = build_xl_wa(data_path,
+    lang_list,
+    # n_rows=20,
+    )
+    lang_id = '-'.join(lang_list)
+    output_path = os.path.join(data_path, f'.ready/{lang_id}')
+    if not os.path.isdir(output_path):
+        os.mkdir(output_path)
+    
+    # print(dataset)
+    # print(dataset['train'])
+    # print(dataset['train'][0])
+    
+    dataset.save_to_disk(output_path)
 
 if __name__ == '__main__':
     main()

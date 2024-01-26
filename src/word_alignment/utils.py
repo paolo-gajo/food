@@ -154,6 +154,154 @@ class SquadEvaluator:
         print(f'Saving metrics to: {metrics_save_name}')
         df.to_csv(metrics_save_name + f'.{format}')
 
+def prep_tasteset(data_path,
+                tokenizer,
+                shuffle_ents=False,
+                shuffle_languages=['it'],
+                src_lang = 'en',
+                test_size=0.2
+                ):
+    '''
+    Prepares data from the TASTEset dataset based on the wanted languages,
+    tokenizer, number of rows and whether
+    we want source context or not surrounding the query word.
+    '''
+    with open(data_path) as f:
+        data = json.load(f)
+    recipe_list = data['annotations']
+
+    ds_list = []
+    progbar = tqdm(recipe_list, total = len(recipe_list))
+    progbar.set_description(f'Creating TASTEset samples...')
+    
+    for line in progbar:
+        ds_list += create_samples_tasteset(line,
+                                            tokenizer,
+                                            shuffle_ents=shuffle_ents,
+                                            shuffle_languages=shuffle_languages,
+                                            src_lang = src_lang,
+                                            )
+    df = pd.DataFrame(ds_list).drop_duplicates(['answer']) # going to throw an error
+    df_list = df.to_dict(orient='records')
+    ds_dict = Dataset.from_list(df_list).train_test_split(test_size=test_size)
+    ds_dict['dev'] = ds_dict.pop('test')
+    
+    return ds_dict
+
+def create_samples_tasteset(sample,
+                    tokenizer,
+                    shuffle_ents = False,
+                    shuffle_languages: Union[List, str] = ['it'],
+                    src_lang = 'en',
+                    src_context = True
+                    ):
+    '''
+    Creates one sample per word in the source sentence of the sample.
+    '''
+    sample = assign_indexes_to_entities(sample)
+    tgt_lang = ''.join([lang for lang in sample['sample_langs'] if lang != src_lang])
+    sample_list = []
+    if isinstance(shuffle_languages, str):
+        shuffle_languages = shuffle_languages.split()
+    if shuffle_ents:
+        for shuffle_lang in shuffle_languages:
+            sample = shuffle_entities(sample, shuffle_lang)
+    for i in range(sample['num_ents']):
+        new_sample = {}
+
+        if src_context:
+            new_sample['query'] = sample[f'text_{src_lang}'][:sample[f'ents_{src_lang}'][i][0]] +\
+                        '• ' + sample[f'text_{src_lang}'][sample[f'ents_{src_lang}'][i][0]:sample[f'ents_{src_lang}'][i][1]] + ' •' +\
+                        sample[f'text_{src_lang}'][sample[f'ents_{src_lang}'][i][1]:]
+        else:
+            new_sample['query'] = sample[f'text_{src_lang}'][sample[f'ents_{src_lang}'][0]:sample[f'ents_{src_lang}'][1]]
+
+        new_sample['context'] = sample[f'text_{tgt_lang}']
+        # i [0, 1, 2, 3, 4] --> j indexes[j]['tgt_start']:indexes[j]['tgt_end']
+        # new_sample['answer'] = sample['tgt'][pair['tgt_start']:pair['tgt_end']]
+        # index of idx_en in idx_it idx_it.index(i)
+        new_sample['answer_start'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(i)][0]
+        new_sample['answer_end'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(i)][1]
+        new_sample['answer'] = sample[f'text_{tgt_lang}'][new_sample['answer_start']:new_sample['answer_end']]
+        query_enc = tokenizer(new_sample['query'])
+        l = len(query_enc['input_ids']) 
+        context_enc = tokenizer(new_sample['context'])
+
+        # start_positions and end_positions are token positions
+        new_sample['start_positions'] = context_enc.char_to_token(
+            new_sample['answer_start']) - 1 + l
+        new_sample['end_positions'] = context_enc.char_to_token(
+            new_sample['answer_end']-1) + l
+        sample_list.append(new_sample)
+    return sample_list
+
+def assign_indexes_to_entities(sample):
+    sample_langs = list(set([key.split('_')[-1] for key in sample.keys()]))
+    original_indexes = [i for i in range(len(sample[f'ents_{sample_langs[0]}']))]
+    for l in sample_langs:
+        sample.update({f'idx_{l}': original_indexes,
+                      'sample_langs': sample_langs,
+                      'num_ents': len(original_indexes)})
+    return sample
+
+def shuffle_entities(sample, shuffle_lang, verbose = False):
+    '''
+    Shuffles entities and text for a sample.
+    Only shuffles, so the source and target entities need 
+    to be linked somehow after shuffling one language
+    (usually the target language)!
+    '''
+    text_key = f'text_{shuffle_lang}'
+    ent_key = f'ents_{shuffle_lang}'
+    shuffled_ents = []
+    shuffled_indexes = [i for i in range(len(sample[ent_key]))]
+    random.shuffle(shuffled_indexes)
+    sample.update({f'idx_{shuffle_lang}': shuffled_indexes})
+    
+    # get non-entity positions and strings from the original text
+    blanks = []
+    for i in range(len(sample[ent_key])-1):
+        end_prev = sample[ent_key][i][1]
+        start_foll = sample[ent_key][i+1][0]
+        blanks.append([end_prev, start_foll, sample[text_key][end_prev:start_foll]])
+        
+    ent_start = 0
+    shuffled_text = ''
+    for new, idx in enumerate(sample[f'idx_{shuffle_lang}']):
+        tmp_ent = sample[ent_key][idx]
+        text_tmp_ent = sample[text_key][sample[ent_key][idx][0]:sample[ent_key][idx][1]]
+        
+        len_text = len((text_tmp_ent))
+        tmp_ent[0] = ent_start
+        tmp_ent[1] = tmp_ent[0] + len_text
+        tmp_ent[2] = sample[ent_key][idx][2]
+        shuffled_ents.append(tmp_ent)
+
+        if len(blanks) > 0:
+            next_blank = blanks.pop(0)
+            ent_start += len((text_tmp_ent)) + next_blank[1] - next_blank[0]
+        else:
+            pass
+
+        shuffled_text += text_tmp_ent + next_blank[2]
+    sample.update({
+        text_key: shuffled_text,
+        ent_key: shuffled_ents,
+    })
+    if verbose:
+        print_list = []
+        for i in range(len(sample[f'idx_{shuffle_lang}'])):
+            row = []
+            for l in sample['sample_langs']:
+                row.append([[sample[f'idx_{l}'].index(i)], sample[f'ents_{l}'][sample[f'idx_{l}'].index(i)] + [sample[f'text_{l}'][sample[f'ents_{l}'][sample[f'idx_{l}'].index(i)][0]:sample[f'ents_{l}'][sample[f'idx_{l}'].index(i)][1]]]])
+                # row.append(str(sample[f'idx_{l}'][i]) + ' | ' + ' '.join([str(el) for el in sample[f'ents_{l}'][i]]) + ' | ' + sample[f'text_{l}'][sample[f'ents_{l}'][i][0]:sample[f'ents_{l}'][i][1]])
+            print_list.append(row)
+        print(pd.DataFrame(print_list))
+        print(sample['idx_en'])
+        print(sample['idx_it'])
+
+    return sample
+
 def prep_xl_wa(data_path,
                 languages,
                 tokenizer,
@@ -166,7 +314,7 @@ def prep_xl_wa(data_path,
     we want source context or not surrounding the query word.
     '''
     ds = {key: [] for key in splits}
-    ds_dict_hf = DatasetDict()
+    ds_dict = DatasetDict()
     for split in splits:
         ds[split] = []
         unpacked_lines = []
@@ -178,67 +326,28 @@ def prep_xl_wa(data_path,
             df.columns = ['src', 'tgt', 'spans']
             df['lang'] = lang
             df['pairs'] = df.apply(
-                lambda row: convert_alignments(row[0], row[1], row[2]), axis=1)
+                lambda row: convert_giza(row[0], row[1], row[2]), axis=1)
             unpacked_lines += df[:n_rows].to_dict(orient='records')
         progbar = tqdm(unpacked_lines, total = len(unpacked_lines))
         progbar.set_description(f'Creating samples for {split} split...')
         for line in progbar:
-            ds[split] += create_samples(line, tokenizer)
+            ds[split] += create_samples_xlwa(line, tokenizer)
+        ds_dict[split] = Dataset.from_list(ds[split])
+    return ds_dict
 
-        df_hf = Dataset.from_list(ds[split])
-        ds_dict_hf[split] = df_hf
-    return ds_dict_hf
-
-def prep_tasteset(data_path,
-                languages,
-                tokenizer,
-                shuffle_num = None,
-                shuffle = True,
-                n_rows = None,
-                splits = ['train', 'dev', 'test']
-                ):
-    '''
-    Prepares data from the TASTEset dataset based on the wanted languages,
-    tokenizer, number of rows and whether
-    we want source context or not surrounding the query word.
-    '''
-    with open(data_path) as f:
-        data = json.load(f)
-    recipe_list = data['annotations']
-
-    ds = {key: [] for key in splits}
-    ds_dict_hf = DatasetDict()
-    progbar = tqdm(recipe_list, total = len(recipe_list))
-    progbar.set_description(f'Creating samples for {split} split...')
-    
-    for line in progbar:
-        ds[split] += create_samples(line, tokenizer)
-
-    df_hf = Dataset.from_list(ds[split])
-    ds_dict_hf[split] = df_hf
-    
-    return ds_dict_hf
-
-def qa_tokenize(sample: Union[str, List], tokenizer):
-    '''
-    Pass this to .map when tokenizing a dataset for QA-style training.
-    Remember to shuffle before using this, otherwise if you shuffle
-    after you get batch size mismatches,
-    since we're using longest in the batch for padding.
-    '''
-    sample.update(tokenizer(sample['query'],
-                    sample['context'],
-                    padding = 'longest',
-                    truncation = True,
-                    return_tensors = 'pt'
-                    ))
-    return sample
-
-def create_samples(sample, tokenizer, src_context = True):
+def create_samples_xlwa(sample,
+                    tokenizer,
+                    shuffle_ents = False,
+                    shuffle_lang = 'en',
+                    src_context = True
+                    ):
     '''
     Creates one sample per word in the source sentence of the sample.
     '''
+    # sample = assign_indexes_to_entities(sample)
     sample_list = []
+    # if shuffle_ents:
+    #     sample = shuffle_entities(sample, shuffle_lang)
     for j, pair in enumerate(sample['pairs']):
         new_sample = {}
 
@@ -265,7 +374,7 @@ def create_samples(sample, tokenizer, src_context = True):
         sample_list.append(new_sample)
     return sample_list
 
-def convert_alignments(src_sentence, tgt_sentence, alignments):
+def convert_giza(src_sentence, tgt_sentence, alignments):
     '''
     Converts GIZA-style '0-1' string alignments to dicts like:
         {
@@ -300,71 +409,17 @@ def calculate_spans(sentence):
         spans.append((start, end))
         start = end + 1
     return spans
-    
-def shuffle_entities(sample, lang):
-    '''
-    Shuffles entities and text for a sample.
-    Only shuffles, so the source and target entities need 
-    to be linked somehow after shuffling one language
-    (usually the target language)!
-    '''
-    text_key = f'text_{lang}'
-    ent_key = f'entities_{lang}'
-    shuffled_ents = []
-    indexes = [i for i in range(len(sample[ent_key]))]
-    random.shuffle(indexes)
-
-    # get non-entity positions and strings from the original text
-    blanks = []
-    for i in range(len(sample[ent_key])-1):
-        end_prev = sample[ent_key][i][1]
-        start_foll = sample[ent_key][i+1][0]
-        blanks.append([end_prev, start_foll, sample[text_key][end_prev:start_foll]])
-        
-    ent_start = 0
-    shuffled_text = ''
-    for new, idx in enumerate(indexes):
-        tmp_ent = sample[ent_key][idx]
-        text_tmp_ent = sample[text_key][sample[ent_key][idx][0]:sample[ent_key][idx][1]]
-        
-        len_text = len((text_tmp_ent))
-        tmp_ent[0] = ent_start
-        tmp_ent[1] = tmp_ent[0] + len_text
-        tmp_ent[2] = sample[ent_key][idx][2]
-        shuffled_ents.append(tmp_ent)
-
-        if len(blanks) > 0:
-            next_blank = blanks.pop(0)
-            ent_start += len((text_tmp_ent)) + next_blank[1] - next_blank[0]
-        else:
-            pass
-
-        shuffled_text += text_tmp_ent + next_blank[2]
-    shuffled_sample = {
-        text_key: shuffled_text,
-        ent_key: shuffled_ents
-    }
-    return shuffled_sample
 
 def data_loader(dataset, batch_size, n_rows = None):
-    loader_train = DataLoader(dataset['train'].select(
-                            range(len(dataset['train']))[:n_rows]),
+    dl_dict = {}
+    for split in dataset.keys():
+        dl_dict[split] = DataLoader(dataset[split].select(
+                            range(len(dataset[split]))[:n_rows]),
                             batch_size = batch_size,
                             # shuffle = True
                             )
-    loader_dev = DataLoader(dataset['dev'].select(
-                            range(len(dataset['dev']))[:n_rows]),
-                            batch_size = batch_size,
-                            # shuffle = True
-                            )
-    loader_test = DataLoader(dataset['test'].select(
-                            range(len(dataset['test']))[:n_rows]),
-                            batch_size = batch_size,
-                            # shuffle = True
-                            )
-    return {'train': loader_train,
-            'dev': loader_dev,
-            'test': loader_test}
+
+    return dl_dict
 
 def push_model(model,
                model_name = None,
@@ -400,3 +455,17 @@ def push_model(model,
     )
     card.push_to_hub(repo_id)
 
+def qa_tokenize(sample: Union[str, List], tokenizer):
+    '''
+    Pass this to .map when tokenizing a dataset for QA-style training.
+    Remember to shuffle before using this, otherwise if you shuffle
+    after you get batch size mismatches,
+    since we're using longest in the batch for padding.
+    '''
+    sample.update(tokenizer(sample['query'],
+                    sample['context'],
+                    padding = 'longest',
+                    truncation = True,
+                    return_tensors = 'pt'
+                    ))
+    return sample
