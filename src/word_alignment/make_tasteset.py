@@ -5,7 +5,6 @@ import warnings
 import argparse
 
 def build_tasteset(data_path,
-                shuffle_ents=False,
                 shuffle_languages=['it'],
                 src_lang = 'en',
                 tokenizer_name = 'bert-base-multilingual-cased',
@@ -18,7 +17,6 @@ def build_tasteset(data_path,
     tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
     dataset = prep_tasteset(data_path,
                         tokenizer,
-                        shuffle_ents=shuffle_ents,
                         shuffle_languages=shuffle_languages,
                         src_lang = src_lang,
                         dev_size = dev_size,
@@ -43,7 +41,6 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input', default='/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TASTE_en-it_DEEPL.json', help='path of the input json dataset')
     parser.add_argument('-o', '--output', default='', help='path of the input json dataset')
-    parser.add_argument('-sh', '--shuffle', default=True, help='if True (default=False), shuffle entities in samples')
     parser.add_argument('-l', '--shuffle_languages', default='it', help='space-separated 2-character codes of the dataset target languages to shuffle')
     parser.add_argument('-src', '--src_lang', default='en', help='space-separated 2-character code of the dataset source language')
     parser.add_argument('-t', '--tokenizer_name', default='bert-base-multilingual-cased', help='tokenizer to use')
@@ -54,19 +51,17 @@ def main():
 
     args = parser.parse_args()
 
-    args.shuffle_ents = True
     args.unshuffled_size = 1
-    args.shuffled_size = 1
+    args.shuffled_size = 0
     args.drop_duplicates = True
 
     dataset = build_tasteset(args.input,
-                             shuffle_ents = args.shuffle,
                              shuffle_languages = args.shuffle_languages,
                              src_lang = args.src_lang,
                              tokenizer_name = args.tokenizer_name,
                              drop_duplicates = args.drop_duplicates,
                              shuffled_size = args.shuffled_size,
-                             shuffled_size = args.unshuffled_size,
+                             unshuffled_size = args.unshuffled_size,
                              dev_size = args.dev_size
                              )
     
