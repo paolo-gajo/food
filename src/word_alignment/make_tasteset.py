@@ -1,41 +1,7 @@
 import os
-from utils import prep_tasteset, qa_tokenize
-from transformers import AutoTokenizer
+from utils import TASTEset
 import warnings
 import argparse
-
-def build_tasteset(data_path,
-                shuffle_languages=['it'],
-                src_lang = 'en',
-                tokenizer_name = 'bert-base-multilingual-cased',
-                dev_size=0.2,
-                shuffled_size = 1,
-                unshuffled_size = 1,
-                drop_duplicates = True,
-                ):
-    
-    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
-    dataset = prep_tasteset(data_path,
-                        tokenizer,
-                        shuffle_languages=shuffle_languages,
-                        src_lang = src_lang,
-                        dev_size = dev_size,
-                        shuffled_size = shuffled_size,
-                        unshuffled_size = unshuffled_size,
-                        drop_duplicates = drop_duplicates,
-                        ).shuffle(seed=42)
-
-    dataset = dataset.map(lambda sample: qa_tokenize(sample, tokenizer),
-                        batched=True,
-                        batch_size=None,
-                        )
-
-    dataset.set_format('torch', columns=['input_ids',
-                                        'token_type_ids',
-                                        'attention_mask',
-                                        'start_positions',
-                                        'end_positions'])        
-    return dataset
 
 def main():
     parser = argparse.ArgumentParser()
@@ -56,26 +22,29 @@ def main():
     args.shuffled_size = 0
     args.drop_duplicates = True
 
-    dataset = build_tasteset(args.input,
-                             shuffle_languages = args.shuffle_languages,
-                             src_lang = args.src_lang,
-                             tokenizer_name = args.tokenizer_name,
-                             drop_duplicates = args.drop_duplicates,
-                             shuffled_size = args.shuffled_size,
-                             unshuffled_size = args.unshuffled_size,
-                             dev_size = args.dev_size
-                             )
+    dataset = TASTEset.from_json(args.input,
+                shuffle_languages=['it'],
+                src_lang = 'en',
+                tokenizer_name = 'bert-base-multilingual-cased',
+                dev_size=0.2,
+                shuffled_size = 1,
+                unshuffled_size = 1,
+                drop_duplicates = True,
+                )
     
-    lang_id = '-'.join(args.shuffle_languages.split())
-    suffix = 'drop_duplicates' if args.drop_duplicates == True else 'keep_duplicates'
+    print(dataset.__class__)
+    print(dataset['train'])
+    
+    # lang_id = '-'.join(args.shuffle_languages.split())
+    # suffix = 'drop_duplicates' if args.drop_duplicates == True else 'keep_duplicates'
 
-    if not args.output:
-        output_path = os.path.join(os.path.dirname(args.input),
-                    f'.{args.src_lang}/{args.tokenizer_name.split("/")[-1]}_{lang_id}_{suffix}_shuffled_size_{args.shuffled_size}')
-        if not os.path.isdir(output_path):
-            os.makedirs(output_path)
+    # if not args.output:
+    #     output_path = os.path.join(os.path.dirname(args.input),
+    #                 f'.{args.src_lang}/{args.tokenizer_name.split("/")[-1]}_{lang_id}_{suffix}_shuffled_size_{args.shuffled_size}')
+    #     if not os.path.isdir(output_path):
+    #         os.makedirs(output_path)
     
-    dataset.save_to_disk(output_path)
+    # dataset.save_to_disk(output_path)
 
 if __name__ == '__main__':
     with warnings.catch_warnings():
