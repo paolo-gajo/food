@@ -157,7 +157,6 @@ class SquadEvaluator:
 
 def prep_tasteset(data_path,
                 tokenizer,
-                shuffle_ents=False,
                 shuffle_languages=['it'],
                 src_lang = 'en',
                 dev_size=0.2,
@@ -194,21 +193,23 @@ def prep_tasteset(data_path,
     Returns:
         `DatasetDict`: The raw dataset in the Hugging Face dictionary format.
     '''
-    recipe_list = extend_dict_list(json.load(open(data_path))['annotations'], shuffled_size)
     ds_list_shuffled = []
-    progbar = tqdm(recipe_list, total = len(recipe_list))
-    progbar.set_description(f'Creating shuffled TASTEset samples...')
-    for line in progbar:
-        line_buffer = copy.deepcopy(line)
-        ds_list_shuffled += create_samples_tasteset(line_buffer,
-                                            tokenizer,
-                                            shuffle_ents=shuffle_ents,
-                                            shuffle_languages=shuffle_languages,
-                                            src_lang = src_lang,
-                                            )
-    if shuffle_ents:
+    ds_list_unshuffled = []
+
+    if shuffled_size:
+        recipe_list = extend_dict_list(json.load(open(data_path))['annotations'], shuffled_size)
+        progbar = tqdm(recipe_list, total = len(recipe_list))
+        progbar.set_description(f'Creating shuffled TASTEset samples...')
+        for line in progbar:
+            line_buffer = copy.deepcopy(line)
+            ds_list_shuffled += create_samples_tasteset(line_buffer,
+                                                tokenizer,
+                                                shuffle_ents=True,
+                                                shuffle_languages=shuffle_languages,
+                                                src_lang = src_lang,
+                                                )
+    if unshuffled_size:
         recipe_list = extend_dict_list([el for el in json.load(open(data_path))['annotations']], unshuffled_size)
-        ds_list_unshuffled = []
         progbar = tqdm(recipe_list, total = len(recipe_list))
         progbar.set_description(f'Creating unshuffled TASTEset samples...')
         for line in progbar:

@@ -2,6 +2,8 @@ import os
 from utils import prep_tasteset, qa_tokenize
 from transformers import AutoTokenizer
 import warnings
+import argparse
+
 def build_tasteset(data_path,
                 shuffle_ents=False,
                 shuffle_languages=['it'],
@@ -38,33 +40,44 @@ def build_tasteset(data_path,
     return dataset
 
 def main():
-    json_path = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TASTE_en-it_DEEPL.json'
-    dir_path = os.path.dirname(json_path)
-    shuffle_ents = True
-    shuffle_languages = ['it']
-    src_lang = 'en'
-    tokenizer_name = 'bert-base-multilingual-cased'
-    # tokenizer_name = 'microsoft/mdeberta-v3-base'
-    drop_duplicates = True
-    shuffled_size = 2
-    dataset = build_tasteset(json_path,
-                             shuffle_ents = shuffle_ents,
-                             shuffle_languages = shuffle_languages,
-                             src_lang = src_lang,
-                             tokenizer_name = tokenizer_name,
-                             drop_duplicates = drop_duplicates,
-                             shuffled_size = shuffled_size,
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-i', '--input', default='/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TASTE_en-it_DEEPL.json', help='path of the input json dataset')
+    parser.add_argument('-o', '--output', default='', help='path of the input json dataset')
+    parser.add_argument('-sh', '--shuffle', default=True, help='if True (default=False), shuffle entities in samples')
+    parser.add_argument('-l', '--shuffle_languages', default='it', help='space-separated 2-character codes of the dataset target languages to shuffle')
+    parser.add_argument('-src', '--src_lang', default='en', help='space-separated 2-character code of the dataset source language')
+    parser.add_argument('-t', '--tokenizer_name', default='bert-base-multilingual-cased', help='tokenizer to use')
+    parser.add_argument('-d', '--drop_duplicates', default=True, help='if True (default=True), drop rows with the same answer')
+    parser.add_argument('-ss', '--shuffled_size', default=1, help='length multiplier for the number of shuffled instances (default=1)')
+    parser.add_argument('-us', '--unshuffled_size', default=1, help='length multiplier for the number of unshuffled instances (default=1)')
+    parser.add_argument('-ds', '--dev_size', default=1, help='size of the dev split (default=0.2)')
+
+    args = parser.parse_args()
+
+    args.shuffle_ents = True
+    args.unshuffled_size = 1
+    args.shuffled_size = 1
+    args.drop_duplicates = True
+
+    dataset = build_tasteset(args.input,
+                             shuffle_ents = args.shuffle,
+                             shuffle_languages = args.shuffle_languages,
+                             src_lang = args.src_lang,
+                             tokenizer_name = args.tokenizer_name,
+                             drop_duplicates = args.drop_duplicates,
+                             shuffled_size = args.shuffled_size,
+                             shuffled_size = args.unshuffled_size,
+                             dev_size = args.dev_size
                              )
-    lang_id = '-'.join(shuffle_languages)
-    suffix = 'drop_duplicates' if drop_duplicates == True else 'keep_duplicates'
-    output_path = os.path.join(dir_path,
-                f'.{src_lang}/{tokenizer_name.split("/")[-1]}_{lang_id}_{suffix}_shuffled_size_{shuffled_size}')
-    if not os.path.isdir(output_path):
-        os.makedirs(output_path)
     
-    # print(dataset)
-    # print(dataset['train'])
-    # print(dataset['train'][0])
+    lang_id = '-'.join(args.shuffle_languages.split())
+    suffix = 'drop_duplicates' if args.drop_duplicates == True else 'keep_duplicates'
+
+    if not args.output:
+        output_path = os.path.join(os.path.dirname(args.input),
+                    f'.{args.src_lang}/{args.tokenizer_name.split("/")[-1]}_{lang_id}_{suffix}_shuffled_size_{args.shuffled_size}')
+        if not os.path.isdir(output_path):
+            os.makedirs(output_path)
     
     dataset.save_to_disk(output_path)
 
