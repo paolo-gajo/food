@@ -39,6 +39,7 @@ def build_tasteset(data_path,
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument('-f', help='dummy argument to make the script work on Google Colab')
     parser.add_argument('-i', '--input', default='/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TASTE_en-it_DEEPL.json', help='path of the input json dataset')
     parser.add_argument('-o', '--output', default='', help='path of the input json dataset')
     parser.add_argument('-l', '--shuffle_languages', default='it', help='space-separated 2-character codes of the dataset target languages to shuffle')
