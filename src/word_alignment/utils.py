@@ -217,18 +217,32 @@ class TASTEset:
         self.unshuffled_samples = []
 
         dataset_formatted = self.prep_data()
-        dataset_tokenized = dataset_formatted.map(
+        self.dataset = dataset_formatted.map(
             lambda sample: qa_tokenize(sample, self.tokenizer),
             batched = True,
             batch_size = batch_size,
             )
-        dataset = dataset_tokenized.set_format('torch', columns = ['input_ids',
+        self.dataset.set_format('torch', columns = ['input_ids',
                                     'token_type_ids',
                                     'attention_mask',
                                     'start_positions',
                                     'end_positions']
                                     )
-        return dataset
+
+    # def __str__(self):
+    #     print_buffer = ''
+    #     for key in self.dataset.keys():
+    #         print_buffer += self.dataset[key]
+    #     return print_buffer
+
+    def __getitem__(self, key):
+        if self.dataset is None:
+            raise ValueError("Dataset not prepared yet. Call prep_data first.")
+        try:
+            return self.dataset[key]
+        except KeyError:
+            raise KeyError(f"Key {key} not found in dataset.")
+
 
     @classmethod
     def from_json(cls,

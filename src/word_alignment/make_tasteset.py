@@ -32,7 +32,7 @@ def main():
                 drop_duplicates = True,
                 )
     
-    print(dataset.__class__)
+    print(dataset)
     print(dataset['train'])
     
     # lang_id = '-'.join(args.shuffle_languages.split())
