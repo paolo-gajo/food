@@ -244,7 +244,7 @@ class TASTEset(dict):
     def __str__(self):
         dataset_buffer = ''
         for key in self.dataset.keys():
-            dataset_buffer += f"\t{key}: [{', '.join(list(self.dataset[key][0].keys()))}]\n\tnum_rows: {len(self.dataset[key])}\n"
+            dataset_buffer += f"\t{key}: {[el for el in self.dataset[key][0].keys()]}\n\tnum_rows: {self.dataset[key].num_rows}\n"
         print_buffer = f"TASTEset({{\n{dataset_buffer}}})"
         return print_buffer
 

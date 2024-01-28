@@ -1,6 +1,10 @@
+# Ignore
 food-env/
 slurm_error/
 slurm_output/
 .stuff/
-data/
+data/*
 src/ner/spacy_outputs/
+
+# Allow
+!data/EW-TASTE_en-it_DEEPL.json
