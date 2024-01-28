@@ -8,7 +8,7 @@ import random
 from torch.utils.data import DataLoader
 import uuid
 import torch
-from huggingface_hub import login, ModelCard, ModelCardData
+from huggingface_hub import login, ModelCard, ModelCardData, HfApi, CommitOperationAdd
 from datetime import datetime
 import copy
 from transformers import AutoTokenizer
@@ -28,6 +28,7 @@ class SquadEvaluator:
 
     def __init__(self,
                 tokenizer,
+                model,
                 eval_fc,
                 patience = 2
                 ) -> None:
@@ -49,9 +50,10 @@ class SquadEvaluator:
         self.patience = patience
         self.patience_counter = 0
         self.stop_training = False
+        self.model = model
         self.best_model = None
 
-    def evaluate(self, model, split, epoch, eval_metric = 'dev'):
+    def evaluate(self, split, epoch, eval_metric = 'dev'):
         self.epoch_metrics[f'{split}_f1'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['f1']
         self.epoch_metrics[f'{split}_exact'] = self.eval_fc.compute(predictions=self.preds[split],
@@ -63,10 +65,10 @@ class SquadEvaluator:
                 self.patience_counter = 0
                 print(f'----Best dev exact updated: {round(self.exact_dev_best, ndigits=2)}\
                     \n----Best epoch updated: {self.epoch_best}')
-                if hasattr(model, 'module'):
-                    self.best_model = model.module
+                if hasattr(self.model, 'module'):
+                    self.best_model = self.model.module
                 else:
-                    self.best_model = model
+                    self.best_model = self.model
             else:
                 self.patience_counter += 1
                 print(f'----Did not update best model, patience: {self.patience_counter}')
@@ -151,9 +153,12 @@ class SquadEvaluator:
         df.index.name = 'epoch'
         if not os.path.isdir(path):
             os.makedirs(path)
-        metrics_save_name = os.path.join(path, dt_string + self.best_model.config._name_or_path + bl_string)
-        print(f'Saving metrics to: {metrics_save_name}')
-        df.to_csv(metrics_save_name + f'.{format}')
+        if self.best_model:
+            metrics_save_name = os.path.join(path, dt_string + self.best_model.config._name_or_path + bl_string)
+            print(f'Saving metrics to: {metrics_save_name}')
+            df.to_csv(metrics_save_name + f'.{format}')
+        else:
+            print('No best model! Did you run with too few instances just for testing?')
 
 class TASTEset(DatasetDict):
     def __init__(self,
@@ -208,6 +213,7 @@ class TASTEset(DatasetDict):
         Returns:
             `TASTEset`: The raw dataset in the Hugging Face dictionary format.
         '''
+        self.name = 'tasteset'
         self.input_data = input_data
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
         self.shuffle_languages = shuffle_languages
@@ -226,7 +232,7 @@ class TASTEset(DatasetDict):
         self.prep_data()
 
         dataset = self.map(
-            lambda sample: qa_tokenize(sample, self.tokenizer),
+            lambda sample: self.qa_tokenize(sample, self.tokenizer),
             batched = True,
             batch_size = batch_size,
             )
@@ -444,6 +450,7 @@ class XLWADataset(DatasetDict):
                 languages = ['it'],
                 src_context = True,
                 n_rows = None,
+                batch_size = None,
                 splits = ['train', 'dev', 'test']
                     ):
         '''
@@ -455,6 +462,7 @@ class XLWADataset(DatasetDict):
             data_path (`str` or `os.PathLike`):
                 Path to the main XL-WA directory of the format "/path/to/XL-WA".
         '''
+        self.name = 'xlwa'
         self.tokenizer = tokenizer
         self.languages = languages
         self.src_context = src_context
@@ -478,6 +486,22 @@ class XLWADataset(DatasetDict):
             for line in progbar:
                 ds[split] += self.create_samples_xlwa(line)
             self[split] = Dataset.from_list(ds[split])
+
+        dataset = self.map(
+            lambda sample: self.qa_tokenize(sample, self.tokenizer),
+            batched = True,
+            batch_size = batch_size,
+            )
+        
+        for key in dataset.keys():
+            self[key] = dataset[key]
+        
+        self.set_format('torch', columns = ['input_ids',
+                                    'token_type_ids',
+                                    'attention_mask',
+                                    'start_positions',
+                                    'end_positions']
+                                    )
 
     def create_samples_xlwa(self, sample) -> List[dict]:
         '''
@@ -573,9 +597,26 @@ def data_loader(dataset, batch_size, n_rows = None):
 
     return dl_dict
 
+def push_model_repo_to_hf(model_dir,
+                model_name = None,
+                user = 'pgajo',
+                suffix = '',
+                 ):
+    if suffix:
+        suffix = '_' + suffix
+    save_name = f"{user}/{model_name}{suffix}"
+    print(f'Pushing model to repo: {save_name}')
+    # Initialize a new repository
+    api = HfApi()
+    api.create_repo(save_name, token=os.environ['HF_WRITE_TOKEN'])
+    api.upload_folder(repo_id=save_name,
+                      folder_path=model_dir,
+                      token=os.environ['HF_WRITE_TOKEN']
+                      )
+
 def push_model(model,
                model_name = None,
-               user = 'pgajo/',
+               user = 'pgajo',
                suffix = '',
                model_description = '',
                language = 'en',
@@ -584,16 +625,14 @@ def push_model(model,
     # save best model
     if hasattr(model, 'module'):
         model = model.module
-        
-    token='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'
-    login(token=token)
+    login(token=os.environ['HF_WRITE_TOKEN'])
     if model_name is None:
         model_name = model.config._name_or_path
-    model_save_name = user + model_name + suffix
-    model.push_to_hub(model_save_name)
+    save_name = f"{user}/{model_name}{suffix}"
+    model.push_to_hub(save_name)
     
     # user = whoami(token=token)
-    repo_id = model_save_name
+    repo_id = save_name
     # url = create_repo(repo_id, exist_ok=True)
     card_data = ModelCardData(language=language,
                               license='mit',
@@ -623,3 +662,13 @@ def extend_dict_list(l, ratio):
         new_extended_list.append(new_el)
 
     return new_extended_list
+
+def save_local_model(model_dir, model, tokenizer):
+    print(f'Saving model to directory: {model_dir}')
+    # Save the model and tokenizer in the local repository
+    if hasattr(model, 'module'):
+        model.module.save_pretrained(model_dir)
+        tokenizer.save_pretrained(model_dir)
+    else:
+        model.save_pretrained(model_dir)
+        tokenizer.save_pretrained(model_dir)

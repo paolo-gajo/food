@@ -5,20 +5,20 @@ from tqdm.auto import tqdm
 from datasets import DatasetDict
 from evaluate import load
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
-from utils import data_loader, SquadEvaluator, push_model
+from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, push_model_repo_to_hf, save_local_model
 from datetime import datetime
 
 def main():
-    # model_name = 'bert-base-multilingual-cased'
-    tokenizer_name = 'microsoft/mdeberta-v3-base'
-    model_name = 'microsoft/mdeberta-v3-base'
+    tokenizer_name = 'bert-base-multilingual-cased'
+    model_name = 'bert-base-multilingual-cased'
+    # tokenizer_name = 'microsoft/mdeberta-v3-base'
+    # model_name = 'microsoft/mdeberta-v3-base'
     now = datetime.now()
     dt_string = now.strftime("%Y-%m-%d_%H-%M-%S")
 
-    suffix = 'TASTEset'
     push_model_description = ''
 
-    lang_list = [
+    languages = [
         # 'ru',
         # 'nl',
         'it',
@@ -31,23 +31,43 @@ def main():
         # 'sl',
     ]
 
-    src_lang = 'en'
-    lang_id = '-'.join(lang_list)
-    # data_path = f'/home/pgajo/working/food/data/XL-WA/data/.{src_lang}/{lang_id}'
-    # results_path = f'/home/pgajo/working/food/results/xl-wa/{lang_id}'
-    # data_path = f'/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/.en/bert-base-multilingual-cased_it_drop_duplicates'
-    data_path = f'/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/.en/{tokenizer_name.split("/")[-1]}_it_drop_duplicates'
-    results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
+    lang_id = '-'.join(languages)
 
-    data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
-    # print('max_num_tokens', [len(data['train'][i]['input_ids']) for i in range(len(data['train']))])
-    batch_size = 2
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+    
+    # data_path = f'/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/.en/{tokenizer_name.split("/")[-1]}_it_drop_duplicates'
+    # results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
+    # data = TASTEset.from_json(
+    #         args.input,
+    #         shuffle_languages=['it'],
+    #         src_lang = 'en',
+    #         tokenizer_name = 'bert-base-multilingual-cased',
+    #         dev_size=0.2,
+    #         shuffled_size = 1,
+    #         unshuffled_size = 1,
+    #         drop_duplicates = True,
+    #         n_rows=10,
+    #         )
+
+    data_path = f'//home/pgajo/working/food/data/XL-WA/data'
+    results_path = f'/home/pgajo/working/food/results/xl-wa/{lang_id}'
+    data = XLWADataset(
+        data_path,
+        tokenizer,
+        languages = languages,
+        # n_rows=20,
+        )
+    
+    data_name = data.name
+    # data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
+    # print('max_num_tokens', [len(data['train'][i]['input_ids']) for i in range(0)])
+    batch_size = 32
     dataset = data_loader(data,
                         batch_size,
-                        #   n_rows = 320,
+                          n_rows = 500,
                         )
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    
     model = AutoModelForQuestionAnswering.from_pretrained(model_name)
     device = 'cuda'
     model = torch.nn.DataParallel(model).to(device)
@@ -57,12 +77,12 @@ def main():
                                 eps=1e-8
                                 )
 
-    evaluator = SquadEvaluator(tokenizer, 
+    evaluator = SquadEvaluator(tokenizer,
                             model,
                             load("squad_v2"),
                             )
 
-    epochs = 10
+    epochs = 1
 
     for epoch in range(epochs):
         # train
@@ -85,7 +105,7 @@ def main():
             
             evaluator.get_eval_batch(outputs, batch, split)
 
-        evaluator.evaluate(model, split, epoch)
+        evaluator.evaluate(split, epoch)
         epoch_train_loss /= len(dataset[split])
         evaluator.epoch_metrics[f'{split}_loss'] = epoch_train_loss
 
@@ -108,7 +128,7 @@ def main():
             
             evaluator.get_eval_batch(outputs, batch, split)
         
-        evaluator.evaluate(model, split, epoch)
+        evaluator.evaluate(split, epoch)
         epoch_dev_loss /= len(dataset[split])
         evaluator.epoch_metrics[f'{split}_loss'] = epoch_dev_loss
 
@@ -126,12 +146,16 @@ def main():
         os.makedirs(results_path)
     evaluator.save_metrics_to_csv(results_path)
 
-    push_model(
-        evaluator.best_model,
-        # model_name = model_name,
-        suffix = suffix + dt_string,
-        model_description = push_model_description
-    )
+    # model save folder
+    model_dir = '/home/pgajo/working/food/src/word_alignment/models'
+    model_save_dir = os.path.join(model_dir, f"{data_name}/{model_name.split('/')[-1]}_{evaluator.f1_dev_best}")
+    if not os.path.isdir(model_save_dir):
+        os.makedirs(model_save_dir)
+
+    save_local_model(model_save_dir, model, tokenizer)
+    
+    suffix = f"{data_name}_{evaluator.epoch_best}_epochs_{round(evaluator.f1_dev_best, ndigits=2)}"
+    push_model_repo_to_hf(model_save_dir, model_name=model_name, suffix=suffix)
 
 if __name__ == '__main__':
     with warnings.catch_warnings():
