@@ -155,11 +155,6 @@ class SquadEvaluator:
         print(f'Saving metrics to: {metrics_save_name}')
         df.to_csv(metrics_save_name + f'.{format}')
 
-class SampleList:
-    def __init__(self, samples:List[dict], shuffle:bool = False) -> None:
-        self.samples = samples
-        self.shuffle = shuffle
-
 class TASTEset(DatasetDict):
     def __init__(self,
         input_data,
@@ -241,21 +236,6 @@ class TASTEset(DatasetDict):
                                     'start_positions',
                                     'end_positions']
                                     )
-
-    # def __str__(self):
-    #     dataset_buffer = ''
-    #     for key in self.dataset.keys():
-    #         dataset_buffer += f"\t{key}: {[el for el in self.dataset[key][0].keys()]}\n\tnum_rows: {self.dataset[key].num_rows}\n"
-    #     print_buffer = f"TASTEset({{\n{dataset_buffer}}})"
-    #     return print_buffer
-
-    # def __getitem__(self, key):
-    #     if self.dataset is None:
-    #         raise ValueError("Dataset not prepared yet. Call prep_data first.")
-    #     try:
-    #         return self.dataset[key]
-    #     except KeyError:
-    #         raise KeyError(f"Key {key} not found in dataset.")
 
     @classmethod
     def from_json(cls,
@@ -448,6 +428,10 @@ class TASTEset(DatasetDict):
                         ))
         return sample
 
+class SampleList:
+    def __init__(self, samples:List[dict], shuffle:bool = False) -> None:
+        self.samples = samples
+        self.shuffle = shuffle
 
 def prep_xl_wa(data_path,
                 languages,
