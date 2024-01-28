@@ -30,12 +30,12 @@ def main():
                 shuffled_size = 1,
                 unshuffled_size = 1,
                 drop_duplicates = True,
-                # n_rows=10,
+                n_rows=10,
                 )
     
-    print(dataset)
-    print(dataset['train'])
-    print(dataset.__class__)
+    # print(dataset)
+    # print(dataset['train'])
+    # print(dataset.__class__)
     
     # lang_id = '-'.join(args.shuffle_languages.split())
     # suffix = 'drop_duplicates' if args.drop_duplicates == True else 'keep_duplicates'

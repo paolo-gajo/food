@@ -225,18 +225,22 @@ class TASTEset(DatasetDict):
 
         self.prep_data()
 
-        self = self.map(
+        dataset = self.map(
             lambda sample: qa_tokenize(sample, self.tokenizer),
             batched = True,
             batch_size = batch_size,
             )
+        
+        for key in dataset.keys():
+            self[key] = dataset[key]
+        
         self.set_format('torch', columns = ['input_ids',
                                     'token_type_ids',
                                     'attention_mask',
                                     'start_positions',
                                     'end_positions']
                                     )
-
+        
     @classmethod
     def from_json(cls,
                   json_path,
@@ -433,113 +437,130 @@ class SampleList:
         self.samples = samples
         self.shuffle = shuffle
 
-def prep_xl_wa(data_path,
-                languages,
+class XLWADataset(DatasetDict):
+    def __init__(self,
+                data_path,
                 tokenizer,
+                languages = ['it'],
+                src_context = True,
                 n_rows = None,
                 splits = ['train', 'dev', 'test']
-                ) -> DatasetDict:
-    '''
-    Prepares data from the XL-WA dataset based on the wanted languages,
-    tokenizer, number of rows and whether
-    we want source context or not surrounding the query word.
-    '''
-    ds = {key: [] for key in splits}
-    ds_dict = DatasetDict()
-    for split in splits:
-        ds[split] = []
-        unpacked_lines = []
-        for lang in languages:
-            df = pd.read_csv(os.path.join(data_path,
-                                            f'{lang}/{split}.tsv'),
-                                            sep='\t',
-                                            header=None)
-            df.columns = ['src', 'tgt', 'spans']
-            df['lang'] = lang
-            df['pairs'] = df.apply(
-                lambda row: convert_giza(row[0], row[1], row[2]), axis=1)
-            unpacked_lines += df[:n_rows].to_dict(orient='records')
-        progbar = tqdm(unpacked_lines, total = len(unpacked_lines))
-        progbar.set_description(f'Creating samples for {split} split...')
-        for line in progbar:
-            ds[split] += create_samples_xlwa(line, tokenizer)
-        ds_dict[split] = Dataset.from_list(ds[split])
-    return ds_dict
+                    ):
+        '''
+        Prepares data from the XL-WA dataset based on the wanted languages,
+        tokenizer, number of rows and whether
+        we want source context or not surrounding the query word.
 
-def create_samples_xlwa(sample,
-                    tokenizer,
-                    shuffle_ents = False,
-                    shuffle_lang = 'en',
-                    src_context = True
-                    ) -> List[dict]:
-    '''
-    Creates one sample per word in the source sentence of the sample.
-    '''
-    # sample = assign_indexes_to_entities(sample)
-    sample_list = []
-    # if shuffle_ents:
-    #     sample = shuffle_entities(sample, shuffle_lang)
-    for j, pair in enumerate(sample['pairs']):
-        new_sample = {}
+        Args:
+            data_path (`str` or `os.PathLike`):
+                Path to the main XL-WA directory of the format "/path/to/XL-WA".
+        '''
+        self.tokenizer = tokenizer
+        self.languages = languages
+        self.src_context = src_context
+        self.n_rows = n_rows
+        ds = {key: [] for key in splits}
+        for split in splits:
+            ds[split] = []
+            unpacked_lines = []
+            for lang in languages:
+                df = pd.read_csv(os.path.join(data_path,
+                                                f'{lang}/{split}.tsv'),
+                                                sep='\t',
+                                                header=None)
+                df.columns = ['src', 'tgt', 'spans']
+                df['lang'] = lang
+                df['pairs'] = df.apply(
+                    lambda row: self.convert_giza(row[0], row[1], row[2]), axis=1)
+                unpacked_lines += df[:n_rows].to_dict(orient='records')
+            progbar = tqdm(unpacked_lines, total = len(unpacked_lines))
+            progbar.set_description(f'Creating samples for {split} split...')
+            for line in progbar:
+                ds[split] += self.create_samples_xlwa(line)
+            self[split] = Dataset.from_list(ds[split])
 
-        if src_context:
-            new_sample['query'] = sample['src'][:pair['src_start']] +\
-                        '• ' + sample['src'][pair['src_start']:pair['src_end']] + ' •' +\
-                        sample['src'][pair['src_end']:]
-        else:
-            new_sample['query'] = sample['src'][pair['src_start']:pair['src_end']]
+    def create_samples_xlwa(self, sample) -> List[dict]:
+        '''
+        Creates one sample per word in the source sentence of the sample.
+        '''
+        sample_list = []
+        for pair in sample['pairs']:
+            new_sample = {}
 
-        new_sample['context'] = sample['tgt']
-        new_sample['answer'] = sample['tgt'][pair['tgt_start']:pair['tgt_end']]
-        new_sample['answer_start'] = pair['tgt_start']
-        new_sample['answer_end'] = pair['tgt_end']
-        query_enc = tokenizer(new_sample['query'])
-        l = len(query_enc['input_ids']) 
-        context_enc = tokenizer(new_sample['context'])
+            if self.src_context:
+                new_sample['query'] = sample['src'][:pair['src_start']] +\
+                            '• ' + sample['src'][pair['src_start']:pair['src_end']] + ' •' +\
+                            sample['src'][pair['src_end']:]
+            else:
+                new_sample['query'] = sample['src'][pair['src_start']:pair['src_end']]
 
-        # start_positions and end_positions are token positions
-        new_sample['start_positions'] = context_enc.char_to_token(
-            new_sample['answer_start']) - 1 + l
-        new_sample['end_positions'] = context_enc.char_to_token(
-            new_sample['answer_end']-1) + l
-        sample_list.append(new_sample)
-    return sample_list
+            new_sample['context'] = sample['tgt']
+            new_sample['answer'] = sample['tgt'][pair['tgt_start']:pair['tgt_end']]
+            new_sample['answer_start'] = pair['tgt_start']
+            new_sample['answer_end'] = pair['tgt_end']
+            query_enc = self.tokenizer(new_sample['query'])
+            l = len(query_enc['input_ids']) 
+            context_enc = self.tokenizer(new_sample['context'])
 
-def convert_giza(src_sentence, tgt_sentence, alignments) -> dict:
-    '''
-    Converts GIZA-style '0-1' string alignments to dicts like:
-        {
-            'src_start': src_span[0],
-            'src_end': src_span[1],
-            'tgt_start': tgt_span[0],
-            'tgt_end': tgt_span[1],
-        }
-    '''
-    src_spans = calculate_spans(src_sentence)
-    tgt_spans = calculate_spans(tgt_sentence)
-    converted_alignments = []
-    for alignment in alignments.split():
-        src_idx, tgt_idx = map(int, alignment.split('-'))
-        src_span = src_spans[src_idx]
-        tgt_span = tgt_spans[tgt_idx]
+            # start_positions and end_positions are token positions
+            new_sample['start_positions'] = context_enc.char_to_token(
+                new_sample['answer_start']) - 1 + l
+            new_sample['end_positions'] = context_enc.char_to_token(
+                new_sample['answer_end']-1) + l
+            sample_list.append(new_sample)
+        return sample_list
 
-        converted_alignments.append({
-            'src_start': src_span[0],
-            'src_end': src_span[1],
-            'tgt_start': tgt_span[0],
-            'tgt_end': tgt_span[1],
-        })
-    return converted_alignments
+    def convert_giza(self,  src_sentence, tgt_sentence, alignments) -> dict:
+        '''
+        Converts GIZA-style '0-1' string alignments to dicts like:
+            {
+                'src_start': src_span[0],
+                'src_end': src_span[1],
+                'tgt_start': tgt_span[0],
+                'tgt_end': tgt_span[1],
+            }
+        '''
+        src_spans = self.calculate_spans(src_sentence)
+        tgt_spans = self.calculate_spans(tgt_sentence)
+        converted_alignments = []
+        for alignment in alignments.split():
+            src_idx, tgt_idx = map(int, alignment.split('-'))
+            src_span = src_spans[src_idx]
+            tgt_span = tgt_spans[tgt_idx]
 
-def calculate_spans(sentence):
-    spans = []
-    start = 0
+            converted_alignments.append({
+                'src_start': src_span[0],
+                'src_end': src_span[1],
+                'tgt_start': tgt_span[0],
+                'tgt_end': tgt_span[1],
+            })
+        return converted_alignments
 
-    for word in sentence.split():
-        end = start + len(word)
-        spans.append((start, end))
-        start = end + 1
-    return spans
+    def calculate_spans(self, sentence):
+        spans = []
+        start = 0
+
+        for word in sentence.split():
+            end = start + len(word)
+            spans.append((start, end))
+            start = end + 1
+        return spans
+    
+    @staticmethod
+    def qa_tokenize(sample: Union[str, List], tokenizer):
+        '''
+        Pass this to .map when tokenizing a dataset for QA-style training.
+        Remember to shuffle before using this, otherwise if you shuffle
+        after you get batch size mismatches,
+        since we're using longest in the batch for padding.
+        '''
+        sample.update(tokenizer(sample['query'],
+                        sample['context'],
+                        padding = 'longest',
+                        truncation = True,
+                        return_tensors = 'pt'
+                        ))
+        return sample
 
 def data_loader(dataset, batch_size, n_rows = None):
     dl_dict = {}
@@ -585,21 +606,6 @@ def push_model(model,
         repo = repo,
     )
     card.push_to_hub(repo_id)
-
-def qa_tokenize(sample: Union[str, List], tokenizer):
-    '''
-    Pass this to .map when tokenizing a dataset for QA-style training.
-    Remember to shuffle before using this, otherwise if you shuffle
-    after you get batch size mismatches,
-    since we're using longest in the batch for padding.
-    '''
-    sample.update(tokenizer(sample['query'],
-                    sample['context'],
-                    padding = 'longest',
-                    truncation = True,
-                    return_tensors = 'pt'
-                    ))
-    return sample
 
 def extend_dict_list(l, ratio):
     int_ratio = int(ratio)
