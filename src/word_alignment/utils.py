@@ -160,7 +160,7 @@ class SampleList:
         self.samples = samples
         self.shuffle = shuffle
 
-class TASTEset:
+class TASTEset(dict):
     def __init__(self,
         input_data,
         tokenizer_name = 'bert-base-multilingual-cased',
@@ -179,16 +179,23 @@ class TASTEset:
         we want source context or not surrounding the query word.
 
         Args:
-            shuffle_ents (`bool`, *optional*, defaults to `False`):
-                If `True`, samples with shuffled entities will be added to the dataset
-                in proportion to the original sample size.
-            shuffle_languages (`str` or `List[str]`):
-                String of a single 2-character language code (ISO 639-1),
-                string of multiple space-separated language codes, or list of language codes.
+
+            input_data (`List[dict]`):
+                List of dict samples.
+            tokenizer_name (`str`):
+                Hugging-face name of the tokenizer.
             src_lang (`str`):
                 ISO 639-1 language code. Indicates which language is the source language,
                 with the entities in that language not being shuffled.
                 string of multiple space-separated language codes, or list of language codes.
+            shuffle_languages (`str` or `List[str]`):
+                String of a single 2-character language code (ISO 639-1),
+                string of multiple space-separated language codes, or list of language codes.
+            drop_duplicates (`bool`, defaults to `True`):
+                If `True`, drop duplicates from the dataset based on the ['answer'] column.
+            src_context (`bool`, defaults to `True`):
+                if `True`, the query is the whole source sentence and the word being aligned
+                is surrounded with "•" characters.
             shuffled_size (`float`):
                 Size of the dev split compared to the train split.
             shuffled_size (`int` or `float`):
@@ -197,6 +204,11 @@ class TASTEset:
             unshuffled_size (`int` or `float`):
                 Controls the % size of the output unshuffled sample
                 compared to the total unshuffled samples being created.
+            dev_size (`int` or `float`):
+                Size of the dev split compared to the train split.
+            batch_size (`int` or `None`):
+                Size of the train and dev batches.
+                If None, the whole dataset is tokenized to the token length of the longest sample.
             
         Returns:
             `TASTEset`: The raw dataset in the Hugging Face dictionary format.
@@ -229,11 +241,12 @@ class TASTEset:
                                     'end_positions']
                                     )
 
-    # def __str__(self):
-    #     print_buffer = ''
-    #     for key in self.dataset.keys():
-    #         print_buffer += self.dataset[key]
-    #     return print_buffer
+    def __str__(self):
+        dataset_buffer = ''
+        for key in self.dataset.keys():
+            dataset_buffer += f"\t{key}: [{', '.join(list(self.dataset[key][0].keys()))}]\n\tnum_rows: {len(self.dataset[key])}\n"
+        print_buffer = f"TASTEset({{\n{dataset_buffer}}})"
+        return print_buffer
 
     def __getitem__(self, key):
         if self.dataset is None:
@@ -243,13 +256,13 @@ class TASTEset:
         except KeyError:
             raise KeyError(f"Key {key} not found in dataset.")
 
-
     @classmethod
     def from_json(cls,
                   json_path,
+                  n_rows = None,
                   **kwargs
                   ) -> "TASTEset":
-        input_data = json.load(open(json_path))['annotations']
+        input_data = json.load(open(json_path))['annotations'][:n_rows]
         return cls(
             input_data,
             **kwargs
@@ -286,8 +299,9 @@ class TASTEset:
             return sample_list
 
     def generate_samples(self, sample_list):
+        shuffle_desc = 'shuffled' if sample_list.shuffle else 'unshuffled'
         progbar = tqdm(sample_list.samples, total = len(sample_list.samples))
-        progbar.set_description(f'Creating shuffled TASTEset samples...')
+        progbar.set_description(f'Creating samples ({shuffle_desc})...')
         list_buffer = []
         for line in progbar:
             line_buffer = copy.deepcopy(line)

@@ -30,6 +30,7 @@ def main():
                 shuffled_size = 1,
                 unshuffled_size = 1,
                 drop_duplicates = True,
+                # n_rows=10,
                 )
     
     print(dataset)
