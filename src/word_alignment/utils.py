@@ -160,7 +160,7 @@ class SampleList:
         self.samples = samples
         self.shuffle = shuffle
 
-class TASTEset(dict):
+class TASTEset(DatasetDict):
     def __init__(self,
         input_data,
         tokenizer_name = 'bert-base-multilingual-cased',
@@ -228,33 +228,34 @@ class TASTEset(dict):
         self.shuffled_samples = []
         self.unshuffled_samples = []
 
-        dataset_formatted = self.prep_data()
-        self.dataset = dataset_formatted.map(
+        self.prep_data()
+
+        self = self.map(
             lambda sample: qa_tokenize(sample, self.tokenizer),
             batched = True,
             batch_size = batch_size,
             )
-        self.dataset.set_format('torch', columns = ['input_ids',
+        self.set_format('torch', columns = ['input_ids',
                                     'token_type_ids',
                                     'attention_mask',
                                     'start_positions',
                                     'end_positions']
                                     )
 
-    def __str__(self):
-        dataset_buffer = ''
-        for key in self.dataset.keys():
-            dataset_buffer += f"\t{key}: {[el for el in self.dataset[key][0].keys()]}\n\tnum_rows: {self.dataset[key].num_rows}\n"
-        print_buffer = f"TASTEset({{\n{dataset_buffer}}})"
-        return print_buffer
+    # def __str__(self):
+    #     dataset_buffer = ''
+    #     for key in self.dataset.keys():
+    #         dataset_buffer += f"\t{key}: {[el for el in self.dataset[key][0].keys()]}\n\tnum_rows: {self.dataset[key].num_rows}\n"
+    #     print_buffer = f"TASTEset({{\n{dataset_buffer}}})"
+    #     return print_buffer
 
-    def __getitem__(self, key):
-        if self.dataset is None:
-            raise ValueError("Dataset not prepared yet. Call prep_data first.")
-        try:
-            return self.dataset[key]
-        except KeyError:
-            raise KeyError(f"Key {key} not found in dataset.")
+    # def __getitem__(self, key):
+    #     if self.dataset is None:
+    #         raise ValueError("Dataset not prepared yet. Call prep_data first.")
+    #     try:
+    #         return self.dataset[key]
+    #     except KeyError:
+    #         raise KeyError(f"Key {key} not found in dataset.")
 
     @classmethod
     def from_json(cls,
@@ -279,8 +280,8 @@ class TASTEset(dict):
             df = df.drop_duplicates(['answer'])
         df_list = df.to_dict(orient = 'records')
         ds_dict = Dataset.from_list(df_list).train_test_split(test_size = self.dev_size)
-        ds_dict['dev'] = ds_dict.pop('test')
-        return ds_dict
+        self['train'] = ds_dict['train']
+        self['dev'] = ds_dict.pop('test')
 
     def extend(self,
                 sample_list,

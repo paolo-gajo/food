@@ -34,6 +34,8 @@ def main():
                 )
     
     print(dataset)
+    print(dataset['train'])
+    print(dataset.__class__)
     
     # lang_id = '-'.join(args.shuffle_languages.split())
     # suffix = 'drop_duplicates' if args.drop_duplicates == True else 'keep_duplicates'
