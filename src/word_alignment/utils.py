@@ -13,6 +13,11 @@ from datetime import datetime
 import copy
 from transformers import AutoTokenizer
 
+sep_dict = {
+    'csv': ',',
+    'tsv': '\t'
+}
+
 class SquadEvaluator:
     '''
     Prepares evaluation samples for the Squad v2 Evaluate metric.
@@ -44,14 +49,14 @@ class SquadEvaluator:
 
         self.tokenizer = tokenizer
         self.eval_fc = eval_fc
-        self.epoch_best = 1
+        self.epoch_best = 0
         self.f1_dev_best = 0
         self.exact_dev_best = 0
         self.patience = patience
         self.patience_counter = 0
         self.stop_training = False
         self.model = model
-        self.best_model = None
+        self.best_model = model
 
     def evaluate(self, split, epoch, eval_metric = 'dev'):
         self.epoch_metrics[f'{split}_f1'] = self.eval_fc.compute(predictions=self.preds[split],
@@ -87,6 +92,7 @@ class SquadEvaluator:
             }
 
     def get_eval_batch(self, model_outputs, batch, split):
+        self.split = split
         start_preds = torch.argmax(model_outputs['start_logits'], dim=1)
         end_preds = torch.argmax(model_outputs['end_logits'], dim=1)
         pred_batch = [el for el in zip(start_preds.tolist(),
@@ -137,7 +143,7 @@ class SquadEvaluator:
         print(df)
         return df
     
-    def save_metrics_to_csv(self, path, add_date = True, add_best_dev = True, format = 'csv'):
+    def save_metrics_to_csv(self, path, add_date = True, add_best_dev = True, format = 'tsv'):
         now = datetime.now()
         if add_date:
             dt_string = now.strftime("%Y-%m-%d_%H-%M-%S") + '_'
@@ -145,20 +151,34 @@ class SquadEvaluator:
             dt_string = ''
         
         if add_best_dev:
-            bl_string = '_' + str(self.exact_dev_best)
+            exact_dev_best_suffix = '_' + str(round(self.exact_dev_best, ndigits=2))
         else:
-            bl_string = ''
+            exact_dev_best_suffix = ''
         df = pd.DataFrame(self.metrics)
         df.index += 1
         df.index.name = 'epoch'
         if not os.path.isdir(path):
             os.makedirs(path)
-        if self.best_model:
-            metrics_save_name = os.path.join(path, dt_string + self.best_model.config._name_or_path + bl_string)
+        if self.epoch_best > 0 or self.split == 'test':
+            metrics_save_name = os.path.join(path, dt_string + self.best_model.config._name_or_path + exact_dev_best_suffix)
             print(f'Saving metrics to: {metrics_save_name}')
-            df.to_csv(metrics_save_name + f'.{format}')
+            csv_save_name = metrics_save_name + f'.{format}'
+            df.to_csv(csv_save_name, sep=sep_dict[format])
         else:
             print('No best model! Did you run with too few instances just for testing?')
+    
+    def append_test_metrics(self, path, format = 'tsv'):
+        csv_path = os.path.join(path, 'metrics') + f'.{format}'
+        df_orig = pd.read_csv(csv_path)
+        df_append = pd.DataFrame(self.metrics, index = [0])
+        df_append['epoch'] = 'test'
+        df = pd.concat([df_orig, df_append])
+        df.to_csv(csv_path, sep=sep_dict[format], index=False)
+
+class SampleList:
+    def __init__(self, samples:List[dict], shuffle:bool = False) -> None:
+        self.samples = samples
+        self.shuffle = shuffle
 
 class TASTEset(DatasetDict):
     def __init__(self,
@@ -168,10 +188,11 @@ class TASTEset(DatasetDict):
         shuffle_languages = ['it'],
         drop_duplicates = True,
         src_context = True,
-        shuffled_size = 1,
+        shuffled_size = 0,
         unshuffled_size = 1,
         dev_size = 0.2,
         batch_size = None,
+        debug_dump = False,
         ) -> 'TASTEset':
         '''
         Prepares data from the TASTEset dataset based on the wanted languages,
@@ -206,7 +227,7 @@ class TASTEset(DatasetDict):
                 compared to the total unshuffled samples being created.
             dev_size (`int` or `float`):
                 Size of the dev split compared to the train split.
-            batch_size (`int` or `None`):
+            batch_size (`int`, defaults to `None`):
                 Size of the train and dev batches.
                 If None, the whole dataset is tokenized to the token length of the longest sample.
             
@@ -228,8 +249,9 @@ class TASTEset(DatasetDict):
         self.samples = []
         self.shuffled_samples = []
         self.unshuffled_samples = []
+        self.debug_dump = debug_dump
 
-        self.prep_data()
+        self.raw_data = self.prep_data()
 
         dataset = self.map(
             lambda sample: self.qa_tokenize(sample, self.tokenizer),
@@ -259,7 +281,7 @@ class TASTEset(DatasetDict):
             **kwargs
         )
 
-    def prep_data(self) -> 'TASTEset':
+    def prep_data(self) -> 'DatasetDict':
         if self.unshuffled_size:
             self.unshuffled_samples = self.generate_samples(SampleList(self.extend(self.input_data, self.unshuffled_size), shuffle = False))
         if self.shuffled_size:
@@ -269,25 +291,30 @@ class TASTEset(DatasetDict):
         if self.drop_duplicates:
             df = df.drop_duplicates(['answer'])
         df_list = df.to_dict(orient = 'records')
+        if self.debug_dump:
+            json.dump(df_list, open('debug_dump.json', 'w'), ensure_ascii=False)
         ds_dict = Dataset.from_list(df_list).train_test_split(test_size = self.dev_size)
         self['train'] = ds_dict['train']
-        self['dev'] = ds_dict.pop('test')
+        ds_dict['dev'] = ds_dict.pop('test')
+        self['dev'] = ds_dict['dev']
+        return ds_dict
 
-    def extend(self,
-                sample_list,
-                extend_ratio = 1,
-                ):
-        sample_list = self.extend(json.load(open(self.input))['annotations'], extend_ratio)
-        if sample_list:
-            progbar = tqdm(sample_list, total = len(sample_list))
-            progbar.set_description(f'Creating shuffled TASTEset samples...')
-            for line in progbar:
-                line_buffer = copy.deepcopy(line)
-                list_buffer += self.samples_from_line(line_buffer)
-            return list_buffer
-        else:
-            print('List was empty when trying to call generate_samples.')
-            return sample_list
+    def extend(self, sample_list, extend_ratio = 1):
+        int_ratio = int(extend_ratio)
+        decimals = extend_ratio % 1
+        main = [el for el in sample_list * int_ratio]
+        remainder = [el for el in sample_list[:round(len(sample_list) * decimals)]]
+        extended_list = main + remainder
+
+        # Creating a new list with new dictionary objects
+        new_extended_list = []
+        for i, el in enumerate(extended_list):
+            new_el = {}
+            new_el.update(el)  # create a new dictionary
+            new_el['index'] = i
+            new_extended_list.append(new_el)
+
+        return new_extended_list
 
     def generate_samples(self, sample_list):
         shuffle_desc = 'shuffled' if sample_list.shuffle else 'unshuffled'
@@ -296,11 +323,12 @@ class TASTEset(DatasetDict):
         list_buffer = []
         for line in progbar:
             line_buffer = copy.deepcopy(line)
-            list_buffer += self.samples_from_line(line_buffer)
+            list_buffer += self.samples_from_line(line_buffer, sample_list.shuffle)
         return list_buffer
 
     def samples_from_line(self,
                         sample,
+                        shuffle,
                         ) -> List[dict]:
         '''
         Creates one sample per word in the source sentence of the sample.
@@ -308,8 +336,9 @@ class TASTEset(DatasetDict):
         sample = self.assign_indexes_to_entities(sample)
         tgt_lang = ''.join([lang for lang in sample['sample_langs'] if lang != self.src_lang])
         sample_list = []
-        for shuffle_lang in self.shuffle_languages:
-            sample = self.shuffle_entities(sample, shuffle_lang)
+        if shuffle:
+            for shuffle_lang in self.shuffle_languages:
+                sample = self.shuffle_entities(sample, shuffle_lang)
         for i in range(sample['num_ents']):
             new_sample = {}
 
@@ -335,24 +364,6 @@ class TASTEset(DatasetDict):
                 new_sample['answer_end']-1) + l
             sample_list.append(new_sample)
         return sample_list
-
-    @staticmethod
-    def extend(l, ratio):
-        int_ratio = int(ratio)
-        decimals = ratio % 1
-        main = [el for el in l * int_ratio]
-        remainder = [el for el in l[:round(len(l) * decimals)]]
-        extended_list = main + remainder
-
-        # Creating a new list with new dictionary objects
-        new_extended_list = []
-        for i, el in enumerate(extended_list):
-            new_el = {}
-            new_el.update(el)  # create a new dictionary
-            new_el['index'] = i
-            new_extended_list.append(new_el)
-
-        return new_extended_list
 
     @staticmethod
     def assign_indexes_to_entities(sample) -> dict:
@@ -438,11 +449,6 @@ class TASTEset(DatasetDict):
                         ))
         return sample
 
-class SampleList:
-    def __init__(self, samples:List[dict], shuffle:bool = False) -> None:
-        self.samples = samples
-        self.shuffle = shuffle
-
 class XLWADataset(DatasetDict):
     def __init__(self,
                 data_path,
@@ -461,6 +467,20 @@ class XLWADataset(DatasetDict):
         Args:
             data_path (`str` or `os.PathLike`):
                 Path to the main XL-WA directory of the format "/path/to/XL-WA".
+            tokenizer (`transformers.models.*`):
+                Instance of transformers tokenizer.
+            languages (`List[str]`, defaults to `['it']`):
+                Language code of the target languages to include in the dataset.
+            src_context (`bool`, defaults to `True`):
+                if `True`, the query is the whole source sentence and the word being aligned
+                is surrounded with "•" characters.
+            n_rows (`int`, defaults to `None`):
+                Defines how many lines are going to be kept in the dataset. Normally used to speed up testing.
+            batch_size (`int`, defaults to `None`):
+                Size of the train and dev batches.
+                If None, the whole dataset is tokenized to the token length of the longest sample.
+            splits (`List[str]`, defaults to `['train', 'dev', 'test']`):
+                List of names of the splits to include in the dataset.
         '''
         self.name = 'xlwa'
         self.tokenizer = tokenizer
@@ -587,6 +607,15 @@ class XLWADataset(DatasetDict):
         return sample
 
 def data_loader(dataset, batch_size, n_rows = None):
+    '''
+    Args:
+        dataset (`DatasetDict`):
+            Dataset to load.
+        batch_size (`int`):
+            Size of the training/dev/test batches.
+        n_rows (`int`, defaults to `None`):
+            Defines how many dataset lines (not DataLoader batches!) are going to be kept in the dataset. Normally used to speed up testing.
+    '''
     dl_dict = {}
     for split in dataset.keys():
         dl_dict[split] = DataLoader(dataset[split].select(
@@ -598,18 +627,15 @@ def data_loader(dataset, batch_size, n_rows = None):
     return dl_dict
 
 def push_model_repo_to_hf(model_dir,
-                model_name = None,
+                save_name = None,
                 user = 'pgajo',
-                suffix = '',
                  ):
-    if suffix:
-        suffix = '_' + suffix
-    save_name = f"{user}/{model_name}{suffix}"
-    print(f'Pushing model to repo: {save_name}')
+    repo_name = f"{user}/{save_name}"
+    print(f'Pushing model to repo: {repo_name}')
     # Initialize a new repository
     api = HfApi()
-    api.create_repo(save_name, token=os.environ['HF_WRITE_TOKEN'])
-    api.upload_folder(repo_id=save_name,
+    api.create_repo(repo_name, token=os.environ['HF_WRITE_TOKEN'])
+    api.upload_folder(repo_id=repo_name,
                       folder_path=model_dir,
                       token=os.environ['HF_WRITE_TOKEN']
                       )

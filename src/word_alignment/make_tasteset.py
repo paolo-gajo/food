@@ -2,6 +2,7 @@ import os
 from utils import TASTEset
 import warnings
 import argparse
+from transformers import AutoTokenizer
 
 def main():
     parser = argparse.ArgumentParser()
@@ -17,24 +18,27 @@ def main():
     parser.add_argument('-ds', '--dev_size', default=1, help='size of the dev split (default=0.2)')
 
     args = parser.parse_args()
-
-    args.unshuffled_size = 1
-    args.shuffled_size = 0
+    # args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL.json'
+    args.unshuffled_size = 0
+    args.shuffled_size = 1
     args.drop_duplicates = True
 
+    model_name = 'bert-base-multilingual-cased'
+
     dataset = TASTEset.from_json(args.input,
-                shuffle_languages=['it'],
-                src_lang = 'en',
-                tokenizer_name = 'bert-base-multilingual-cased',
-                dev_size=0.2,
-                shuffled_size = 1,
-                unshuffled_size = 1,
-                drop_duplicates = True,
-                n_rows=10,
-                )
+        tokenizer_name = model_name,
+        shuffle_languages = ['it'],
+        src_lang = 'en',
+        dev_size = 0.2,
+        shuffled_size = args.shuffled_size,
+        unshuffled_size = args.unshuffled_size,
+        drop_duplicates = True,
+        debug_dump = True,
+        n_rows = 10,
+        )
     
     # print(dataset)
-    # print(dataset['train'])
+    # print(dataset['train'][0:5])
     # print(dataset.__class__)
     
     # lang_id = '-'.join(args.shuffle_languages.split())

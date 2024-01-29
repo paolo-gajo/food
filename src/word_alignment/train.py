@@ -9,14 +9,10 @@ from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, push_model
 from datetime import datetime
 
 def main():
-    tokenizer_name = 'bert-base-multilingual-cased'
     model_name = 'bert-base-multilingual-cased'
-    # tokenizer_name = 'microsoft/mdeberta-v3-base'
     # model_name = 'microsoft/mdeberta-v3-base'
     now = datetime.now()
     dt_string = now.strftime("%Y-%m-%d_%H-%M-%S")
-
-    push_model_description = ''
 
     languages = [
         # 'ru',
@@ -33,38 +29,37 @@ def main():
 
     lang_id = '-'.join(languages)
 
-    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
     
-    # data_path = f'/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/.en/{tokenizer_name.split("/")[-1]}_it_drop_duplicates'
-    # results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
-    # data = TASTEset.from_json(
-    #         args.input,
-    #         shuffle_languages=['it'],
-    #         src_lang = 'en',
-    #         tokenizer_name = 'bert-base-multilingual-cased',
-    #         dev_size=0.2,
-    #         shuffled_size = 1,
-    #         unshuffled_size = 1,
-    #         drop_duplicates = True,
-    #         n_rows=10,
-    #         )
+    data_path = f'/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL.json'
+    results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
+    data = TASTEset.from_json(
+            data_path,
+            tokenizer_name = model_name,
+            shuffle_languages=['it'],
+            src_lang = 'en',
+            dev_size = 0.2,
+            shuffled_size = 1,
+            unshuffled_size = 0,
+            # drop_duplicates = False,
+            debug_dump = True,
+            # n_rows=100,
+            )
 
-    data_path = f'//home/pgajo/working/food/data/XL-WA/data'
-    results_path = f'/home/pgajo/working/food/results/xl-wa/{lang_id}'
-    data = XLWADataset(
-        data_path,
-        tokenizer,
-        languages = languages,
-        # n_rows=20,
-        )
+    # data_path = f'//home/pgajo/working/food/data/XL-WA/data'
+    # results_path = f'/home/pgajo/working/food/results/xl-wa/{lang_id}'
+    # data = XLWADataset(
+    #     data_path,
+    #     tokenizer,
+    #     languages = languages,
+    #     # n_rows=20,
+    #     )
     
-    data_name = data.name
     # data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
     # print('max_num_tokens', [len(data['train'][i]['input_ids']) for i in range(0)])
     batch_size = 32
     dataset = data_loader(data,
                         batch_size,
-                          n_rows = 500,
                         )
 
     
@@ -82,7 +77,7 @@ def main():
                             load("squad_v2"),
                             )
 
-    epochs = 1
+    epochs = 10
 
     for epoch in range(epochs):
         # train
@@ -146,16 +141,27 @@ def main():
         os.makedirs(results_path)
     evaluator.save_metrics_to_csv(results_path)
 
+    model_dict = {
+        'bert-base-multilingual-cased': 'mbert',
+        'microsoft/mdeberta-v3-base': 'mdeberta',
+    }
+
+    if not hasattr(data, 'unshuffled_size'):
+        data.unshuffled_size = 1
+    if not hasattr(data, 'shuffled_size'):
+        data.shuffled_size = 0
+        
     # model save folder
     model_dir = '/home/pgajo/working/food/src/word_alignment/models'
-    model_save_dir = os.path.join(model_dir, f"{data_name}/{model_name.split('/')[-1]}_{evaluator.f1_dev_best}")
+    save_name = f"{model_dict[model_name]}_{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}_DROP{str(int(data.drop_duplicates))}"
+    model_save_dir = os.path.join(model_dir, f"{data.name}/{save_name}")
     if not os.path.isdir(model_save_dir):
         os.makedirs(model_save_dir)
 
+    evaluator.save_metrics_to_csv(os.path.join(model_save_dir, 'metrics'))
     save_local_model(model_save_dir, model, tokenizer)
     
-    suffix = f"{data_name}_{evaluator.epoch_best}_epochs_{round(evaluator.f1_dev_best, ndigits=2)}"
-    push_model_repo_to_hf(model_save_dir, model_name=model_name, suffix=suffix)
+    push_model_repo_to_hf(model_save_dir, save_name=save_name)
 
 if __name__ == '__main__':
     with warnings.catch_warnings():
