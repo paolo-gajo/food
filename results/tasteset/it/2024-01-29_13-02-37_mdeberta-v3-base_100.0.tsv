@@ -1,0 +1,2 @@
+epoch	train_loss	train_f1	train_exact	dev_loss	dev_f1	dev_exact	test_loss	test_f1	test_exact
+1	0.5666644482205258	88.04217172352185	84.23913043478261	0.030394556404566987	100.0	100.0	0	0	0

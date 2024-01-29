@@ -7,6 +7,7 @@ from evaluate import load
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, push_model_repo_to_hf, save_local_model, push_card
 from datetime import datetime
+from huggingface_hub import HfApi
 
 def main():
     model_name = 'bert-base-multilingual-cased'
@@ -39,11 +40,11 @@ def main():
             shuffle_languages=['it'],
             src_lang = 'en',
             dev_size = 0.2,
-            shuffled_size = 1,
-            unshuffled_size = 0,
+            shuffled_size = 0,
+            unshuffled_size = 1,
             # drop_duplicates = False,
             debug_dump = True,
-            # n_rows=100,
+            # n_rows=200,
             )
 
     # data_path = f'//home/pgajo/working/food/data/XL-WA/data'
@@ -79,7 +80,7 @@ def main():
                             load("squad_v2"),
                             )
 
-    epochs = 99
+    epochs = 10
 
     for epoch in range(epochs):
         # train
@@ -102,7 +103,7 @@ def main():
             
             evaluator.get_eval_batch(outputs, batch, split)
 
-        evaluator.evaluate(split, epoch)
+        evaluator.evaluate(model, split, epoch)
         epoch_train_loss /= len(dataset[split])
         evaluator.epoch_metrics[f'{split}_loss'] = epoch_train_loss
 
@@ -125,7 +126,7 @@ def main():
             
             evaluator.get_eval_batch(outputs, batch, split)
         
-        evaluator.evaluate(split, epoch)
+        evaluator.evaluate(model, split, epoch)
         epoch_dev_loss /= len(dataset[split])
         evaluator.epoch_metrics[f'{split}_loss'] = epoch_dev_loss
 
@@ -175,11 +176,18 @@ def main():
     Optimizer eps = {eps}
     Batch size = {batch_size}
     '''
-    repo_id = push_model_repo_to_hf(model_save_dir, save_name=save_name)
+    open(f'{model_save_dir}/model_description.txt', 'w', encoding='utf8').write(model_description)
+
+    repo_id = f"pgajo/{save_name}"
+
+    api = HfApi()
+    token = os.environ['HF_WRITE_TOKEN']
+    api.create_repo(repo_id, token=token)
     push_card(repo_id=repo_id,
-              model_name=model_dict[model_name],
-              model_description=model_description,
-              )
+            model_name=model_name,
+            model_description=model_description,
+            )
+    api.upload_folder(repo_id=repo_id, folder_path=model_save_dir, token=token)
 
 if __name__ == '__main__':
     with warnings.catch_warnings():

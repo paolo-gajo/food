@@ -55,10 +55,9 @@ class SquadEvaluator:
         self.patience = patience
         self.patience_counter = 0
         self.stop_training = False
-        self.model = model
         self.best_model = model
 
-    def evaluate(self, split, epoch, eval_metric = 'dev'):
+    def evaluate(self, model, split, epoch, eval_metric = 'dev'):
         self.epoch_metrics[f'{split}_f1'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['f1']
         self.epoch_metrics[f'{split}_exact'] = self.eval_fc.compute(predictions=self.preds[split],
@@ -70,10 +69,10 @@ class SquadEvaluator:
                 self.patience_counter = 0
                 print(f'----Best dev exact updated: {round(self.exact_dev_best, ndigits=2)}\
                     \n----Best epoch updated: {self.epoch_best}')
-                if hasattr(self.model, 'module'):
-                    self.best_model = self.model.module
+                if hasattr(model, 'module'):
+                    self.best_model = model.module
                 else:
-                    self.best_model = self.model
+                    self.best_model = model
             else:
                 self.patience_counter += 1
                 print(f'----Did not update best model, patience: {self.patience_counter}')
@@ -160,7 +159,7 @@ class SquadEvaluator:
         if not os.path.isdir(path):
             os.makedirs(path)
         if self.epoch_best > 0 or self.split == 'test':
-            metrics_save_name = os.path.join(path, dt_string + self.best_model.config._name_or_path + exact_dev_best_suffix)
+            metrics_save_name = os.path.join(path, dt_string + self.best_model.config._name_or_path.split('/')[-1] + exact_dev_best_suffix)
             print(f'Saving metrics to: {metrics_save_name}')
             csv_save_name = metrics_save_name + f'.{format}'
             df.to_csv(csv_save_name, sep=sep_dict[format])
@@ -623,16 +622,10 @@ def data_loader(dataset, batch_size, n_rows = None):
                             batch_size = batch_size,
                             # shuffle = True
                             )
-
     return dl_dict
 
-def push_model_repo_to_hf(model_dir,
-                save_name = None,
-                user = 'pgajo',
-                 ):
-    repo_id = f"{user}/{save_name}"
+def push_model_repo_to_hf(repo_id, model_dir):
     print(f'Pushing model to repo: {repo_id}')
-    # Initialize a new repository
     api = HfApi()
     api.create_repo(repo_id, token=os.environ['HF_WRITE_TOKEN'])
     api.upload_folder(repo_id=repo_id,
@@ -641,22 +634,17 @@ def push_model_repo_to_hf(model_dir,
                       )
     return repo_id
 
-def push_model(model,
-               save_name = None,
-               user = 'pgajo',
+def push_model(repo_id,
+               model,
                ):
-    # save best model
     if hasattr(model, 'module'):
         model = model.module
     login(token=os.environ['HF_WRITE_TOKEN'])
-    repo_id = f"{user}/{save_name}"
     model.push_to_hub(repo_id)
     return repo_id
 
 def push_card(repo_id, model_name, model_description = '', language = 'en'):
-    # user = whoami(token=token)
     repo_id = repo_id
-    # url = create_repo(repo_id, exist_ok=True)
     card_data = ModelCardData(language=language,
                               license='mit',
                               library_name='pytorch',
@@ -670,23 +658,6 @@ def push_card(repo_id, model_name, model_description = '', language = 'en'):
     )
     card.push_to_hub(repo_id)
     return repo_id
-
-def extend_dict_list(l, ratio):
-    int_ratio = int(ratio)
-    decimals = ratio % 1
-    main = [el for el in l * int_ratio]
-    remainder = [el for el in l[:round(len(l) * decimals)]]
-    extended_list = main + remainder
-
-    # Creating a new list with new dictionary objects
-    new_extended_list = []
-    for i, el in enumerate(extended_list):
-        new_el = {}
-        new_el.update(el)  # create a new dictionary
-        new_el['index'] = i
-        new_extended_list.append(new_el)
-
-    return new_extended_list
 
 def save_local_model(model_dir, model, tokenizer):
     print(f'Saving model to directory: {model_dir}')
