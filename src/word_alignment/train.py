@@ -181,7 +181,6 @@ def main():
     repo_id = f"pgajo/{save_name}"
 
     api = HfApi()
-    # token = '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'
     token = os.environ['HF_WRITE_TOKEN']
     api.create_repo(repo_id, token=token)
     push_card(repo_id=repo_id,
