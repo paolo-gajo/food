@@ -155,7 +155,7 @@ def main():
         data.shuffled_size = 0
         
     # model save folder
-    model_dir = '/home/pgajo/working/food/src/word_alignment/models'
+    model_dir = './models'
     save_name = f"{model_dict[model_name]}_{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}_DROP{str(int(data.drop_duplicates))}"
     model_save_dir = os.path.join(model_dir, f"{data.name}/{save_name}")
     if not os.path.isdir(model_save_dir):
@@ -181,6 +181,7 @@ def main():
     repo_id = f"pgajo/{save_name}"
 
     api = HfApi()
+    # token = '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'
     token = os.environ['HF_WRITE_TOKEN']
     api.create_repo(repo_id, token=token)
     push_card(repo_id=repo_id,
