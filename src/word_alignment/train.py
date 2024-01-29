@@ -68,7 +68,7 @@ def main():
     device = 'cuda'
     model = torch.nn.DataParallel(model).to(device)
     
-    lr = 5e-5
+    lr = 3e-5
     eps=1e-8
     optimizer = torch.optim.AdamW(params=model.parameters(),
                                 lr=lr,
