@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 from datasets import DatasetDict
 from evaluate import load
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
-from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, push_model_repo_to_hf, save_local_model
+from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, upload_folder_hf, save_local_model, push_card_hf
 from datetime import datetime
 
 def main():
@@ -161,7 +161,11 @@ def main():
     evaluator.save_metrics_to_csv(os.path.join(model_save_dir, 'metrics'))
     save_local_model(model_save_dir, model, tokenizer)
     
-    push_model_repo_to_hf(model_save_dir, save_name=save_name)
+    repo_id = upload_folder_hf(model_save_dir, save_name=save_name)
+    push_card_hf(repo_id=repo_id,
+              model_name=model_dict[model_name],
+              
+              )
 
 if __name__ == '__main__':
     with warnings.catch_warnings():

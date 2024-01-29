@@ -626,27 +626,24 @@ def data_loader(dataset, batch_size, n_rows = None):
 
     return dl_dict
 
-def push_model_repo_to_hf(model_dir,
+def upload_folder_hf(model_dir,
                 save_name = None,
                 user = 'pgajo',
                  ):
-    repo_name = f"{user}/{save_name}"
-    print(f'Pushing model to repo: {repo_name}')
+    repo_id = f"{user}/{save_name}"
+    print(f'Pushing model to repo: {repo_id}')
     # Initialize a new repository
     api = HfApi()
-    api.create_repo(repo_name, token=os.environ['HF_WRITE_TOKEN'])
-    api.upload_folder(repo_id=repo_name,
+    api.create_repo(repo_id, token=os.environ['HF_WRITE_TOKEN'])
+    api.upload_folder(repo_id=repo_id,
                       folder_path=model_dir,
                       token=os.environ['HF_WRITE_TOKEN']
                       )
+    return repo_id
 
 def push_model(model,
-               model_name = None,
+               save_name = None,
                user = 'pgajo',
-               suffix = '',
-               model_description = '',
-               language = 'en',
-               repo = "https://github.com/paolo-gajo/food",
                ):
     # save best model
     if hasattr(model, 'module'):
@@ -654,12 +651,12 @@ def push_model(model,
     login(token=os.environ['HF_WRITE_TOKEN'])
     if model_name is None:
         model_name = model.config._name_or_path
-    save_name = f"{user}/{model_name}{suffix}"
-    model.push_to_hub(save_name)
-    
-    # user = whoami(token=token)
-    repo_id = save_name
-    # url = create_repo(repo_id, exist_ok=True)
+    repo_id = f"{user}/{save_name}"
+    model.push_to_hub(repo_id)
+    return repo_id
+
+def push_card(repo_id, model_name, model_description = '', language = 'en'):
+    repo_id = repo_id
     card_data = ModelCardData(language=language,
                               license='mit',
                               library_name='pytorch')
@@ -668,26 +665,9 @@ def push_model(model,
         model_id = model_name.split('/')[-1],
         model_description = model_description,
         developers = "Paolo Gajo",
-        repo = repo,
     )
     card.push_to_hub(repo_id)
-
-def extend_dict_list(l, ratio):
-    int_ratio = int(ratio)
-    decimals = ratio % 1
-    main = [el for el in l * int_ratio]
-    remainder = [el for el in l[:round(len(l) * decimals)]]
-    extended_list = main + remainder
-
-    # Creating a new list with new dictionary objects
-    new_extended_list = []
-    for i, el in enumerate(extended_list):
-        new_el = {}
-        new_el.update(el)  # create a new dictionary
-        new_el['index'] = i
-        new_extended_list.append(new_el)
-
-    return new_extended_list
+    return repo_id
 
 def save_local_model(model_dir, model, tokenizer):
     print(f'Saving model to directory: {model_dir}')
