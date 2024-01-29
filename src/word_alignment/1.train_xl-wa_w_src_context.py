@@ -573,7 +573,7 @@ print("Total training and evaluation time: ", (time.time() - whole_train_eval_ti
 # save best model
 
 from huggingface_hub import login
-token='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'
+token=os.environ['HF_TOKEN']
 login(token=token)
 model_save_name = f"pgajo/{model_name.split('/')[-1]}-xl-wa-{lang_id}-{epochs_best}-epochs"
 model.module.push_to_hub(model_save_name)
