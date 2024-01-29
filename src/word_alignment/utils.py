@@ -655,7 +655,7 @@ def push_model(model,
     model.push_to_hub(repo_id)
     return repo_id
 
-def push_card(repo_id, model_name, model_description = '', language = 'en'):
+def push_card_hf(repo_id, model_name, model_description = '', language = 'en'):
     repo_id = repo_id
     card_data = ModelCardData(language=language,
                               license='mit',
