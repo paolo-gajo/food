@@ -630,47 +630,46 @@ def push_model_repo_to_hf(model_dir,
                 save_name = None,
                 user = 'pgajo',
                  ):
-    repo_name = f"{user}/{save_name}"
-    print(f'Pushing model to repo: {repo_name}')
+    repo_id = f"{user}/{save_name}"
+    print(f'Pushing model to repo: {repo_id}')
     # Initialize a new repository
     api = HfApi()
-    api.create_repo(repo_name, token=os.environ['HF_WRITE_TOKEN'])
-    api.upload_folder(repo_id=repo_name,
+    api.create_repo(repo_id, token=os.environ['HF_WRITE_TOKEN'])
+    api.upload_folder(repo_id=repo_id,
                       folder_path=model_dir,
                       token=os.environ['HF_WRITE_TOKEN']
                       )
+    return repo_id
 
 def push_model(model,
-               model_name = None,
+               save_name = None,
                user = 'pgajo',
-               suffix = '',
-               model_description = '',
-               language = 'en',
-               repo = "https://github.com/paolo-gajo/food",
                ):
     # save best model
     if hasattr(model, 'module'):
         model = model.module
     login(token=os.environ['HF_WRITE_TOKEN'])
-    if model_name is None:
-        model_name = model.config._name_or_path
-    save_name = f"{user}/{model_name}{suffix}"
-    model.push_to_hub(save_name)
-    
+    repo_id = f"{user}/{save_name}"
+    model.push_to_hub(repo_id)
+    return repo_id
+
+def push_card(repo_id, model_name, model_description = '', language = 'en'):
     # user = whoami(token=token)
-    repo_id = save_name
+    repo_id = repo_id
     # url = create_repo(repo_id, exist_ok=True)
     card_data = ModelCardData(language=language,
                               license='mit',
-                              library_name='pytorch')
+                              library_name='pytorch',
+                              metrics='exact_match'
+                              )
     card = ModelCard.from_template(
         card_data,
         model_id = model_name.split('/')[-1],
         model_description = model_description,
         developers = "Paolo Gajo",
-        repo = repo,
     )
     card.push_to_hub(repo_id)
+    return repo_id
 
 def extend_dict_list(l, ratio):
     int_ratio = int(ratio)

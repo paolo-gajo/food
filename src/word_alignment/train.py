@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 from datasets import DatasetDict
 from evaluate import load
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
-from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, push_model_repo_to_hf, save_local_model
+from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, push_model_repo_to_hf, save_local_model, push_card
 from datetime import datetime
 
 def main():
@@ -66,10 +66,12 @@ def main():
     model = AutoModelForQuestionAnswering.from_pretrained(model_name)
     device = 'cuda'
     model = torch.nn.DataParallel(model).to(device)
-
+    
+    lr = 5e-5
+    eps=1e-8
     optimizer = torch.optim.AdamW(params=model.parameters(),
-                                lr=2e-5,
-                                eps=1e-8
+                                lr=lr,
+                                eps=eps
                                 )
 
     evaluator = SquadEvaluator(tokenizer,
@@ -77,7 +79,7 @@ def main():
                             load("squad_v2"),
                             )
 
-    epochs = 10
+    epochs = 99
 
     for epoch in range(epochs):
         # train
@@ -161,7 +163,23 @@ def main():
     evaluator.save_metrics_to_csv(os.path.join(model_save_dir, 'metrics'))
     save_local_model(model_save_dir, model, tokenizer)
     
-    push_model_repo_to_hf(model_save_dir, save_name=save_name)
+    model_description = f'''
+    Model: {model_dict[model_name]}
+    Dataset: {data.name}
+    Unshuffled ratio: {data.unshuffled_size}
+    Shuffled ratio: {data.shuffled_size}
+    Best exact match epoch: {evaluator.epoch_best}
+    Best exact match: {str(round(evaluator.exact_dev_best, ndigits=2))}
+    Drop duplicates: {data.drop_duplicates}
+    Optimizer lr = {lr}
+    Optimizer eps = {eps}
+    Batch size = {batch_size}
+    '''
+    repo_id = push_model_repo_to_hf(model_save_dir, save_name=save_name)
+    push_card(repo_id=repo_id,
+              model_name=model_dict[model_name],
+              model_description=model_description,
+              )
 
 if __name__ == '__main__':
     with warnings.catch_warnings():
