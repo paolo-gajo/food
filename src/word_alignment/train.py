@@ -172,6 +172,8 @@ def main():
     token = os.environ['HF_TOKEN']
     api.create_repo(repo_id, token=token)
 
+    df_desc = pd.DataFrame(evaluator.metrics).round(2).to_markdown()
+    df_desc.index.name = 'epoch'
     model_description = f'''
     Model: {model_dict[model_name]}\n
     Dataset: {data.name}\n
@@ -184,8 +186,9 @@ def main():
     Optimizer eps = {eps}\n
     Batch size = {batch_size}\n
     Metrics:\n
-    {pd.DataFrame(evaluator.metrics).round(2).to_markdown()}
+    {df_desc}
     '''
+    
     open(f'{model_save_dir}/model_description.txt', 'w', encoding='utf8').write(model_description)
     push_card(repo_id=repo_id,
             model_name=model_name,
