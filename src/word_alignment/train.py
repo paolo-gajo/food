@@ -5,12 +5,17 @@ from tqdm.auto import tqdm
 from datasets import DatasetDict
 from evaluate import load
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
-from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, push_model_repo_to_hf, save_local_model, push_card
+from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, save_local_model, push_card
 from datetime import datetime
 from huggingface_hub import HfApi
 import pandas as pd
+import argparse
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-t', '--test', default=False, action='store_true', help='Add a "_test" suffix to the repo name')
+    args = parser.parse_args()
+
     model_name = 'bert-base-multilingual-cased'
     # model_name = 'microsoft/mdeberta-v3-base'
     now = datetime.now()
@@ -44,8 +49,8 @@ def main():
             shuffled_size = 0,
             unshuffled_size = 1,
             # drop_duplicates = False,
-            debug_dump = True,
-            n_rows=200,
+            # debug_dump = True,
+            # n_rows=200,
             )
 
     # data_path = f'//home/pgajo/working/food/data/XL-WA/data'
@@ -70,7 +75,7 @@ def main():
     model = torch.nn.DataParallel(model).to(device)
     
     lr = 3e-5
-    eps=1e-8
+    eps = 1e-8
     optimizer = torch.optim.AdamW(params=model.parameters(),
                                 lr=lr,
                                 eps=eps
@@ -82,7 +87,6 @@ def main():
                             )
 
     epochs = 1
-
     for epoch in range(epochs):
         # train
         epoch_train_loss = 0
@@ -94,9 +98,9 @@ def main():
         for i, batch in progbar:
             outputs = model(**batch) # ['loss', 'start_logits', 'end_logits']
             loss = outputs[0].mean()
-            optimizer.zero_grad()
             loss.backward()
             optimizer.step()
+            optimizer.zero_grad()
             
             epoch_train_loss += loss.item()
             loss_tmp = round(epoch_train_loss / (i + 1), 4)
@@ -158,22 +162,22 @@ def main():
     # model save folder
     model_dir = './models'
     save_name = f"{model_dict[model_name]}_{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}_DROP{str(int(data.drop_duplicates))}"
-    save_name = save_name + "_test" # comment if not testing
+    if args.test:
+        save_name = save_name + "_test" # comment if not testing
     model_save_dir = os.path.join(model_dir, f"{data.name}/{save_name}")
     if not os.path.isdir(model_save_dir):
         os.makedirs(model_save_dir)
-
     evaluator.save_metrics_to_csv(os.path.join(model_save_dir, 'metrics'))
     save_local_model(model_save_dir, model, tokenizer)
 
     repo_id = f"pgajo/{save_name}"
-
-    api = HfApi()
-    token = os.environ['HF_TOKEN']
-    api.create_repo(repo_id, token=token)
-
-    df_desc = pd.DataFrame(evaluator.metrics).round(2).to_markdown()
+    print('repo_id', repo_id)
+    api = HfApi(token = os.environ['HF_TOKEN'])
+    api.create_repo(repo_id)
+    df_desc = pd.DataFrame(evaluator.metrics).round(2)
+    df_desc.index += 1
     df_desc.index.name = 'epoch'
+    df_desc = df_desc.to_markdown()
     model_description = f'''
     Model: {model_dict[model_name]}\n
     Dataset: {data.name}\n
@@ -188,14 +192,11 @@ def main():
     Metrics:\n
     {df_desc}
     '''
-    
-    open(f'{model_save_dir}/model_description.txt', 'w', encoding='utf8').write(model_description)
     push_card(repo_id=repo_id,
             model_name=model_name,
             model_description=model_description,
             )
-    
-    api.upload_folder(repo_id=repo_id, folder_path=model_save_dir, token=token) 
+    api.upload_folder(repo_id=repo_id, folder_path=model_save_dir) 
 
 if __name__ == '__main__':
     with warnings.catch_warnings():

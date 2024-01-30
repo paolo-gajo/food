@@ -624,25 +624,6 @@ def data_loader(dataset, batch_size, n_rows = None):
                             )
     return dl_dict
 
-def push_model_repo_to_hf(repo_id, model_dir):
-    print(f'Pushing model to repo: {repo_id}')
-    api = HfApi()
-    api.create_repo(repo_id, token=os.environ['HF_TOKEN'])
-    api.upload_folder(repo_id=repo_id,
-                      folder_path=model_dir,
-                      token=os.environ['HF_TOKEN']
-                      )
-    return repo_id
-
-def push_model(repo_id,
-               model,
-               ):
-    if hasattr(model, 'module'):
-        model = model.module
-    login(token=os.environ['HF_TOKEN'])
-    model.push_to_hub(repo_id)
-    return repo_id
-
 def push_card(repo_id, model_name, model_description = '', language = 'en'):
     repo_id = repo_id
     card_data = ModelCardData(language=language,
