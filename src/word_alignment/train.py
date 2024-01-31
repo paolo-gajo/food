@@ -18,9 +18,7 @@ def main():
 
     model_name = 'bert-base-multilingual-cased'
     # model_name = 'microsoft/mdeberta-v3-base'
-    now = datetime.now()
-    dt_string = now.strftime("%Y-%m-%d_%H-%M-%S")
-
+    
     languages = [
         # 'ru',
         # 'nl',
