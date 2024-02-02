@@ -6,7 +6,7 @@ slurm_output/
 data/*
 src/ner/spacy_outputs/
 models/
-/.vscode
+.vscode
 
 # Allow
 !data/EW-TASTE_en-it_DEEPL.json
