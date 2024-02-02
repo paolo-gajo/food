@@ -16,8 +16,8 @@ def main():
     parser.add_argument('-t', '--test', default=False, action='store_true', help='Add a "_test" suffix to the repo name')
     args = parser.parse_args()
 
-    model_name = 'bert-base-multilingual-cased'
-    # model_name = 'microsoft/mdeberta-v3-base'
+    # model_name = 'bert-base-multilingual-cased'
+    model_name = 'microsoft/mdeberta-v3-base'
     
     languages = [
         # 'ru',
@@ -35,19 +35,18 @@ def main():
     lang_id = '-'.join(languages)
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    
     data_path = f'/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL.json'
     results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
     data = TASTEset.from_json(
             data_path,
-            tokenizer_name = model_name,
+            tokenizer = tokenizer,
             shuffle_languages=['it'],
             src_lang = 'en',
             dev_size = 0.2,
-            shuffled_size = 0,
-            unshuffled_size = 1,
+            shuffled_size = 1,
+            unshuffled_size = 0,
             # drop_duplicates = False,
-            # debug_dump = True,
+            debug_dump = True,
             # n_rows=200,
             )
 
@@ -61,7 +60,6 @@ def main():
     #     )
     
     # data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
-    # print('max_num_tokens', [len(data['train'][i]['input_ids']) for i in range(0)])
     batch_size = 8
     dataset = data_loader(data,
                         batch_size,
@@ -74,9 +72,9 @@ def main():
     
     lr = 3e-5
     eps = 1e-8
-    optimizer = torch.optim.AdamW(params=model.parameters(),
-                                lr=lr,
-                                eps=eps
+    optimizer = torch.optim.AdamW(params = model.parameters(),
+                                lr = lr,
+                                eps = eps
                                 )
 
     evaluator = SquadEvaluator(tokenizer,
@@ -84,7 +82,7 @@ def main():
                             load("squad_v2"),
                             )
 
-    epochs = 1
+    epochs = 10
     for epoch in range(epochs):
         # train
         epoch_train_loss = 0

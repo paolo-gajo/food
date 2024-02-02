@@ -19,22 +19,25 @@ def main():
 
     args = parser.parse_args()
     # args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL.json'
-    args.unshuffled_size = 0
-    args.shuffled_size = 1
+    args.unshuffled_size = 1
+    args.shuffled_size = 0
     args.drop_duplicates = True
 
-    model_name = 'bert-base-multilingual-cased'
+    args.input = '/home/pgajo/working/food/data/TASTEset/data/formatted/TASTEset_sep_format_en-it_unaligned.json'
 
+    model_name = 'bert-base-multilingual-cased'
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
     dataset = TASTEset.from_json(args.input,
-        tokenizer_name = model_name,
+        tokenizer =  tokenizer,
         shuffle_languages = ['it'],
         src_lang = 'en',
         dev_size = 0.2,
         shuffled_size = args.shuffled_size,
         unshuffled_size = args.unshuffled_size,
-        drop_duplicates = True,
+        # drop_duplicates = True,
         debug_dump = True,
-        n_rows = 10,
+        # n_rows = 10,
+        aligned = False,
         )
     
     # print(dataset)

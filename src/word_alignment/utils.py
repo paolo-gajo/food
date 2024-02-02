@@ -182,7 +182,8 @@ class SampleList:
 class TASTEset(DatasetDict):
     def __init__(self,
         input_data,
-        tokenizer_name = 'bert-base-multilingual-cased',
+        *,
+        tokenizer,
         src_lang = 'en',
         shuffle_languages = ['it'],
         drop_duplicates = True,
@@ -192,6 +193,7 @@ class TASTEset(DatasetDict):
         dev_size = 0.2,
         batch_size = None,
         debug_dump = False,
+        aligned = True,
         ) -> 'TASTEset':
         '''
         Prepares data from the TASTEset dataset based on the wanted languages,
@@ -229,13 +231,18 @@ class TASTEset(DatasetDict):
             batch_size (`int`, defaults to `None`):
                 Size of the train and dev batches.
                 If None, the whole dataset is tokenized to the token length of the longest sample.
+            aligned (`bool`, defaults to `True`):
+                If `True`, the output dataset will include answer data, otherwise if `False` only 'query' and 'context' lines will be available for each sample.
             
         Returns:
             `TASTEset`: The raw dataset in the Hugging Face dictionary format.
         '''
         self.name = 'tasteset'
         self.input_data = input_data
-        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+        self.tokenizer = tokenizer
+        if not hasattr(self.tokenizer, 'sep'):
+            self.tokenizer.sep = None
+        self.rm_char = [' ', ';']
         self.shuffle_languages = shuffle_languages
         if isinstance(self.shuffle_languages, str):
             self.shuffle_languages = self.shuffle_languages.split()
@@ -249,34 +256,42 @@ class TASTEset(DatasetDict):
         self.shuffled_samples = []
         self.unshuffled_samples = []
         self.debug_dump = debug_dump
+        self.aligned = aligned
+        if not self.aligned:
+            self.drop_duplicates = False
+            print("Input data is unaligned, setting 'drop_duplicates' to False.")
 
         self.raw_data = self.prep_data()
 
-        dataset = self.map(
-            lambda sample: self.qa_tokenize(sample, self.tokenizer),
-            batched = True,
-            batch_size = batch_size,
-            )
-        
-        for key in dataset.keys():
-            self[key] = dataset[key]
-        
-        self.set_format('torch', columns = ['input_ids',
-                                    'token_type_ids',
-                                    'attention_mask',
-                                    'start_positions',
-                                    'end_positions']
-                                    )
+        if self.aligned:
+            dataset = self.map(
+                lambda sample: self.qa_tokenize(sample, self.tokenizer),
+                batched = True,
+                batch_size = batch_size,
+                )
+            
+            for key in dataset.keys():
+                self[key] = dataset[key]
+            
+            self.set_format('torch', columns = ['input_ids',
+                                        'token_type_ids',
+                                        'attention_mask',
+                                        'start_positions',
+                                        'end_positions']
+                                        )
         
     @classmethod
     def from_json(cls,
                   json_path,
+                  *,
+                  tokenizer,
                   n_rows = None,
                   **kwargs
                   ) -> "TASTEset":
         input_data = json.load(open(json_path))['annotations'][:n_rows]
         return cls(
             input_data,
+            tokenizer = tokenizer,
             **kwargs
         )
 
@@ -290,6 +305,7 @@ class TASTEset(DatasetDict):
         if self.drop_duplicates:
             df = df.drop_duplicates(['answer'])
         df_list = df.to_dict(orient = 'records')
+        print('Number of samples:', len(df_list))
         if self.debug_dump:
             json.dump(df_list, open('debug_dump.json', 'w'), ensure_ascii=False)
         ds_dict = Dataset.from_list(df_list).train_test_split(test_size = self.dev_size)
@@ -322,11 +338,12 @@ class TASTEset(DatasetDict):
         list_buffer = []
         for line in progbar:
             line_buffer = copy.deepcopy(line)
-            list_buffer += self.samples_from_line(line_buffer, sample_list.shuffle)
+            list_buffer += self.samples_from_line(line_buffer, shuffle=sample_list.shuffle)
         return list_buffer
 
     def samples_from_line(self,
                         sample,
+                        *,
                         shuffle,
                         ) -> List[dict]:
         '''
@@ -349,25 +366,31 @@ class TASTEset(DatasetDict):
                 new_sample['query'] = sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][0]:sample[f'ents_{self.src_lang}'][1]]
 
             new_sample['context'] = sample[f'text_{tgt_lang}']
-            new_sample['answer_start'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(i)][0]
-            new_sample['answer_end'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(i)][1]
-            new_sample['answer'] = sample[f'text_{tgt_lang}'][new_sample['answer_start']:new_sample['answer_end']]
-            query_enc = self.tokenizer(new_sample['query'])
-            l = len(query_enc['input_ids']) 
-            context_enc = self.tokenizer(new_sample['context'])
+            if self.aligned:
+                new_sample['answer_start'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(i)][0]
+                new_sample['answer_end'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(i)][1]
+                new_sample['answer'] = sample[f'text_{tgt_lang}'][new_sample['answer_start']:new_sample['answer_end']]
+                query_enc = self.tokenizer(new_sample['query'])
+                l = len(query_enc['input_ids']) 
+                context_enc = self.tokenizer(new_sample['context'])
 
-            # start_positions and end_positions are token positions
-            new_sample['start_positions'] = context_enc.char_to_token(
-                new_sample['answer_start']) - 1 + l
-            new_sample['end_positions'] = context_enc.char_to_token(
-                new_sample['answer_end']-1) + l
+                # start_positions and end_positions are token positions
+                new_sample['start_positions'] = context_enc.char_to_token(
+                    new_sample['answer_start']) - 1 + l
+                new_sample['end_positions'] = context_enc.char_to_token(
+                    new_sample['answer_end']-1) + l
+                
+            if self.tokenizer.sep:
+                for char in self.rm_char:
+                    new_sample['query'] = new_sample['query'].replace(char, self.tokenizer.sep)
+                    new_sample['context'] = new_sample['context'].replace(char, self.tokenizer.sep)
+
             sample_list.append(new_sample)
         return sample_list
 
-    @staticmethod
-    def assign_indexes_to_entities(sample) -> dict:
+    def assign_indexes_to_entities(self, sample) -> dict:
         sample_langs = list(set([key.split('_')[-1] for key in sample.keys() if '_' in key]))
-        original_indexes = [i for i in range(len(sample[f'ents_{sample_langs[0]}']))]
+        original_indexes = [i for i in range(len(sample[f'ents_{self.src_lang}']))]
         for l in sample_langs:
             sample.update({f'idx_{l}': original_indexes,
                         'sample_langs': sample_langs,
@@ -649,3 +672,36 @@ def save_local_model(model_dir, model, tokenizer):
     else:
         model.save_pretrained(model_dir)
         tokenizer.save_pretrained(model_dir)
+
+def print_ents_tasteset_sample(path):
+    df_list = []
+    with open(path, encoding='utf8') as f:
+        data = json.load(f)
+    for sample in data['annotations'][:3]:
+        row = []
+        for i in range(len(sample['entities_it'])):
+            row.append(sample['text_it'][sample['entities_it'][i][0]:sample['entities_it'][i][1]])
+        df_list.append(row)
+        # for i in range(len(sample['entities_it'])):
+        #     print(i, sample['text_it'][sample['entities_it'][i][0]:sample['entities_it'][i][1]], sep=' -- ', end = '|')
+    for line in df_list:
+        print(line)
+
+def token_span_to_char_indexes(input, start_index_token, end_index_token, sample, tokenizer, target_text_key = 'text_it'):
+    tokens = input['input_ids'].squeeze()
+    token_span = tokens[start_index_token:end_index_token]
+    token_based_prediction = tokenizer.decode(token_span)
+    start = input.token_to_chars(start_index_token)[0]
+    if 'deberta_v2' in str(tokenizer.__class__).split('.'):
+        end = start + len(token_based_prediction)
+        char_span_prediction = sample[target_text_key][start:end]
+        if char_span_prediction[0] == ' ':
+            start += 1
+            end += 1
+    elif 'bert' in str(tokenizer.__class__).split('.'):
+        # end_span = input.token_to_chars(end_index_token)
+        # end = end_span[1]
+        end = start + len(token_based_prediction)
+    char_span_prediction = sample[target_text_key][start:end]
+    print('char_span_prediction', [char_span_prediction])
+    return start, end
