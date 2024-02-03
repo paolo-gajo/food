@@ -5,9 +5,10 @@ slurm_output/
 .stuff/
 data/*
 src/ner/spacy_outputs/
+src/translate/*
 models/
 .vscode
 
 # Allow
 !data/EW-TASTE_en-it_DEEPL.json
-!data/TASTEset_en-it_unaligned_DEEPL.json
+!data/SW-TASTE_en-it_DEEPL_unaligned.json
