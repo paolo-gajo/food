@@ -12,3 +12,4 @@ models/
 # Allow
 !data/EW-TASTE_en-it_DEEPL.json
 !data/SW-TASTE_en-it_DEEPL_unaligned.json
+!data/TASTEset/utils/*
