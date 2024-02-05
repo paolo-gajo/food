@@ -679,11 +679,11 @@ def print_ents_tasteset_sample(path):
         data = json.load(f)
     for sample in data['annotations'][:3]:
         row = []
-        for i in range(len(sample['entities_it'])):
-            row.append(sample['text_it'][sample['entities_it'][i][0]:sample['entities_it'][i][1]])
+        for i in range(len(sample['ents_it'])):
+            row.append(sample['text_it'][sample['ents_it'][i][0]:sample['ents_it'][i][1]])
         df_list.append(row)
-        # for i in range(len(sample['entities_it'])):
-        #     print(i, sample['text_it'][sample['entities_it'][i][0]:sample['entities_it'][i][1]], sep=' -- ', end = '|')
+        # for i in range(len(sample['ents_it'])):
+        #     print(i, sample['text_it'][sample['ents_it'][i][0]:sample['ents_it'][i][1]], sep=' -- ', end = '|')
     for line in df_list:
         print(line)
 

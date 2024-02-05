@@ -11,17 +11,17 @@ ENTITIES = ["FOOD", "QUANTITY", "UNIT", "PROCESS", "PHYSICAL_QUALITY", "COLOR",
             "TASTE", "PURPOSE", "PART"]
 
 
-def prepare_data(taste_set, entities_format="spans", encoding="utf-8"):
+def prepare_data(taste_set, ents_format="spans", encoding="utf-8"):
     """
     :param tasteset: TASTEset as pd.DataFrame or a path to the TASTEset
-    :param entities_format: the format of entities. If equal to 'bio', entities
+    :param ents_format: the format of entities. If equal to 'bio', entities
     will be of the following format: [[B-FOOD, I-FOOD, O, ...], [B-UNIT, ...]].
     If equal to span, entities will be of the following format:
     [[(0, 6, FOOD), (10, 15, PROCESS), ...], [(0, 2, UNIT), ...]]
     :return: list of recipes and corresponding list of entities
     """
 
-    assert entities_format in ["bio", "spans"],\
+    assert ents_format in ["bio", "spans"],\
         'You provided incorrect entities format!'
     if isinstance(taste_set, pd.DataFrame):
         df = taste_set
@@ -41,7 +41,7 @@ def prepare_data(taste_set, entities_format="spans", encoding="utf-8"):
             entities.append((entity_dict["start"], entity_dict["end"],
                              entity_dict["type"]))
 
-        if entities_format == "bio":
+        if ents_format == "bio":
             tokenized_recipe, entities = span_to_bio(all_recipes[idx], entities)
             all_recipes[idx] = tokenized_recipe
 
@@ -152,7 +152,7 @@ def spans_to_prodigy_spans(list_of_spans):
     return prodigy_list_of_spans
 
 
-def evaluate_predictions(true_entities, pred_entities, entities_format):
+def evaluate_predictions(true_entities, pred_entities, ents_format):
     """
     :param true_entities: list of true entities
     :param pred_entities: list of predicted entities
@@ -163,10 +163,10 @@ def evaluate_predictions(true_entities, pred_entities, entities_format):
     :return: metrics for the predicted entities
     """
 
-    assert entities_format in ["bio", "spans"],\
+    assert ents_format in ["bio", "spans"],\
         'You provided incorrect entities format!'
 
-    if entities_format == "spans":
+    if ents_format == "spans":
         true_entities = spans_to_prodigy_spans(true_entities)
         pred_entities = spans_to_prodigy_spans(pred_entities)
 

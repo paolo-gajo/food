@@ -17,7 +17,7 @@ with open(json_path_unaligned, encoding='utf8') as f:
 recipe_list = data['annotations'][:3]
 
 for idx, recipe in tqdm(enumerate(recipe_list), total=len(recipe_list)):
-    for i, entity in enumerate(recipe['entities_en']):
+    for i, entity in enumerate(recipe['ents_en']):
         input = tokenizer(
             recipe['text_en'][:entity[0]] + '• ' + recipe['text_en'][entity[0]:entity[1]] + ' •' + recipe['text_en'][entity[1]:],
             recipe['text_it'],
@@ -37,7 +37,7 @@ for idx, recipe in tqdm(enumerate(recipe_list), total=len(recipe_list)):
 
         if start_index_token < end_index_token:
             start, end = token_span_to_char_indexes(input, start_index_token, end_index_token, recipe, tokenizer)
-            recipe['entities_it'].append([start, end, entity[2]])
+            recipe['ents_it'].append([start, end, entity[2]])
         else:
             # print('### START TOKEN !< END TOKEN ###')
             pass
