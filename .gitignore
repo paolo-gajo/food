@@ -5,7 +5,7 @@ slurm_output/
 .stuff/
 data/*
 src/ner/spacy_outputs/
-src/translate/*
+# src/translate/*
 models/
 .vscode
 
