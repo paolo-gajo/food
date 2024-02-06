@@ -8,8 +8,9 @@ src/ner/spacy_outputs/
 # src/translate/*
 models/
 .vscode
+output.log
 
 # Allow
-!data/EW-TASTE_en-it_DEEPL.json
-!data/SW-TASTE_en-it_DEEPL_unaligned.json
+!data/EW-TASTE*
+!data/SW-TASTE*
 !data/TASTEset/utils/*

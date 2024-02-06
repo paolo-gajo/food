@@ -135,8 +135,36 @@ it_mapping = {
     'de-seminato': 'senza semi',
     'seminato': 'senza semi',
     'artichokes': 'carciofi',
+    'schizzo': 'goccio',
+    'involucri integrali': 'piadine integrali',
+    'seno': 'petto',
+    'gambero tigre': 'gamberi giganti',
+    'gamberi jumbo': 'gamberoni',
+    'cilantro leaves': 'foglie di coriandolo',
+    'miscela': 'preparato',
+    'Miscela': 'preparato',
+    'pizza dough': 'impasto per pizza',
+    'salsa al pesto': 'pesto',
+    'briciola di pane': 'pangrattato',
+    'provolone cheese': 'provolone',
+    'ricordato': 'decorticato',
+    'bacchette': 'cosce',
+    'pelle su': 'con la pelle',
+    'per il sapore': 'per insaporire',
+    'latte di riso normale': 'latte di riso',
+    'rotoli di sottomarino': 'filoncini',
+    'per la guarnizione': 'per guarnire',
+    'prodotta': 'infuso',
+    'lampone a scatto': 'Schnapps al lampone',
+    'cuneo': 'spicchio',
+    'pasta biscotto': 'impasto per biscotti',
+    'prezzemolo in scaglie': 'fiocchi di prezzemolo',
+    'mix per budino': 'preparato per budino',
+    'sodio ridotto': 'a basso contenuto di sodio',
+    'succo di vongola': 'brodo di vongole',
+    'vanilla sugar': 'zucchero vanigliato',
+    'tagliato a scaglie': 'tagliato a strisce'
 }
-
 mappings = {
     'en': en_mapping,
     'it': it_mapping,
@@ -208,7 +236,7 @@ class Converter:
         return ' - '.join([str(n) for n in nums])
     
     def localize_ingredients(self, sample_list, lang = 'it'):
-        with open('output.txt', 'w') as f:
+        with open('/home/pgajo/working/food/output.log', 'w') as f:
             for j, sample in enumerate(sample_list):
                 text_key = f'text_{lang}'
                 ents_key = f'ents_{lang}'
@@ -223,7 +251,7 @@ class Converter:
                 for pattern in pattern_list:
                     adjustment = 0
                     
-                    regex = re.compile(pattern['pattern']) 
+                    regex = re.compile(pattern['pattern'], re.IGNORECASE) 
                     matches = re.finditer(regex, text)
                     tuple_matches = re.findall(regex, text)
                     for i, match in enumerate(matches):
@@ -268,12 +296,14 @@ pattern_list = [
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:chili|chilo|lbs?\.?|libbre|pounds|pound|sterline|sterlina)(?!\w)', 'ratio': 0.45, 'uom': 'kg', 'type': 'quantity'},
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:di pollice|pollic.)(?!\w)', 'ratio': 2.54, 'uom': 'cm', 'type': 'quantity'},
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:pinte|pinta)(?!\w)', 'ratio': 473, 'uom': 'ml', 'type': 'quantity'},
+    {'pattern': r'(\d[-/\.\,\d\s]*)(?:quartini|quartino)(?!\w)', 'ratio': 946, 'uom': 'ml', 'type': 'quantity'},
 
     {'pattern': r'tazz.(?!\w)', 'ratio': 236, 'uom': 'g', 'type': 'uom'},
     {'pattern': r'(?:(?:once fluide)|(?:oncia fluida)|once|oncia|oz\.|oz)(?!\w)', 'ratio': 28.35, 'uom': 'g', 'type': 'uom'},
     {'pattern': r'(?:chili|chilo|lbs?\.?|libbre|pounds|pound|sterline|sterlina)(?!\w)', 'ratio': 0.45, 'uom': 'kg', 'type': 'uom'},
     {'pattern': r'(?:di pollice|pollic.)(?!\w)', 'ratio': 2.54, 'uom': 'cm', 'type': 'uom'},
     {'pattern': r'(?:pinte|pinta)(?!\w)', 'ratio': 473, 'uom': 'ml', 'type': 'uom'},
+    {'pattern': r'(?:quartini|quartino)(?!\w)', 'ratio': 946, 'uom': 'ml', 'type': 'uom'},
 
     {'pattern': r'tigli(?!\w)', 'type': 'plain', 'sub': 'lime'},
     {'pattern': r'orso(?!\w)', 'type': 'plain', 'sub': 'birra'},
@@ -285,6 +315,13 @@ pattern_list = [
     {'pattern': r'abbondanza(?= sale kosher)', 'type': 'plain', 'sub': 'in abbondanza'},
     {'pattern': r'kg(?= lime)', 'type': 'plain', 'sub': 'chili'},
     {'pattern': r'(?<=mini )peperoni', 'type': 'plain', 'sub': 'peperoncini'},
+    {'pattern': r'(?<=aglio )chiodo di garofano', 'type': 'plain', 'sub': 'spicchio'},
+    {'pattern': r'chiodo di garofano(?= aglio)', 'type': 'plain', 'sub': 'spicchio'},
+    {'pattern': r'[Zz]uppa di cipolle alla francese', 'type': 'plain', 'sub': 'zuppa di cipolle francese'},
+    {'pattern': r'sale di cipolla', 'type': 'plain', 'sub': 'sale alla cipolla'},
+    {'pattern': r'livido', 'type': 'plain', 'sub': 'schiacciato'},
+    {'pattern': r'caldo(?= peperoncino)', 'type': 'plain', 'sub': 'piccante'},    
+    {'pattern': r'[Ff]arina di tutti i tipi', 'type': 'plain', 'sub': 'farina 00'},
 ]
 
 converter = Converter(patterns=pattern_list)
