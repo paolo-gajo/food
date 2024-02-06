@@ -1,5 +1,6 @@
 import re
 import json
+import random
 
 en_mapping = {
         '½': '1/2', '¼': '1/4', '¾': '3/4',
@@ -9,8 +10,18 @@ en_mapping = {
         '⅜': '3/8', '⅝': '5/8', '⅞': '7/8',
         'mnce': 'minced',
         'maccha': 'matcha',
-
+        'bushes baked beans': "Bush's Baked Beans",
+        '/colored': 'colored',
+        '2 2 ': '2 ',
+        'empire apples or': 'empire apples',
+        'lipton recip secret': 'Lipton Recipe Secrets',
+        'matzoh': 'matzah',
     }
+
+def randomizer(s_list):
+    i = random.randrange(len(s_list))
+    return s_list[i]
+
     
 it_mapping = {
     r"panini con l'hashish": "hash browns",
@@ -97,6 +108,7 @@ it_mapping = {
     'guarnizione montata': 'panna montata',
     'ippoglosso': 'halibut',
     'patata russa': 'patata russet',
+    'patate russe': 'patate russet',
     'borsa': 'busta',
     'arrosto di prima scelta': 'costoletta arrosto',
     'torta angelica': 'torta degli angeli',
@@ -163,8 +175,80 @@ it_mapping = {
     'sodio ridotto': 'a basso contenuto di sodio',
     'succo di vongola': 'brodo di vongole',
     'vanilla sugar': 'zucchero vanigliato',
-    'tagliato a scaglie': 'tagliato a strisce'
+    'tagliato a scaglie': 'tagliato a strisce',
+    'accorciamento': 'grasso alimentare',
+    'crema di formaggio': 'formaggio spalmabile',
+    'tagliato del grasso': 'grasso rimosso',
+    'Una grande pentola di': 'una pentola grande',
+    'Avena Quaker': 'fiocchi di avena Quaker',
+    'cespugli di fagioli al forno': "Bush's Baked Beans",
+    'la miscela': 'il preparato',
+    'rotolo di pane francese': 'panino',
+    'pane francese': 'pane',
+    'Pane francese': 'pane',
+    'EVOO': "olio extravergine di oliva",
+    'caramelle fuse': 'candy melts',
+    'verdura di mare': 'alghe',
+    'umeboshi vinegar': 'aceto umeboshi',
+    '/colorato': 'colorati',
+    'riservato': 'messo da parte',
+    'zucchinis': 'zucchine',
+    'grande valore': 'grande risparmio',
+    'Angostura bitters': 'angostura',
+    'caffè tequila': 'tequila al caffè',
+    'grappa di butterscotch': 'schnapps al butterscotch',
+    'cile': 'peperoncino',
+    'pasta per rotini': 'fusilli',
+    'più il succo': 'con il succo',
+    'maraschino cherry juice': 'succo di ciliegia maraschino',
+    'maraschino cherry': 'ciliegia maraschino',
+    'Io sono lo yogurt': 'yogurt di soia',
+    'ciliegie in succo': 'ciliegie sciroppate',
+    'tomatillos': 'tomatillo',
+    'vinaigrette al balsamico': "vinaigrette all'aceto balsamico",
+    'distrutto': 'schiacciato',
+    'a piacere': ['q.b.', 'quanto basta'],
+    'A piacere': ['q.b.', 'quanto basta'],
+    'secondo necessità': ['q.b.', 'quanto basta'],
+    '2 2 ': '2 ',
+    "mele dell'impero o": 'mele empire',
+    'tagliare': 'tagliato',
+    'tagliato con le forbici in piccoli brandelli': 'tagliato con le forbici in strisce sottili',
+    'rasato': 'a scaglie',
+    'sciroppo semplice': 'sciroppo',
+    'fungo': 'funghi',
+    'spruzzare lo spray da cucina': 'spruzzi di spray da cucina',
+    'Condimento Old Bay': 'Old Bay Seasoning',
+    'broccoli florets': 'cime di broccolo',
+    'lipton recip secret': 'Lipton Recipe Secrets',
+    'orzo pasta': 'pasta orzo',
+    'ruota': 'fetta',
+    'sprig': 'ramoscello',
+    'cime di collardo': 'cavolo nero',
+    'bistecche di fianchetto': 'bavetta',
+    'bistecca di fianchetto': 'bavetta',
+    'gocce da forno': 'gocce di cioccolato',
+    'di dimensioni taco': 'di dimensioni per taco',
+    'rondelle di 1/8': 'rondelle di 3 mm',
+    'pizza crust': 'base per pizza',
+    'matzoh': 'matzah',
+    'tomato': 'pomodoro',
+    'ditone': 'patate fingerling',
+    'mozzarella ball': 'ciliegine di mozzarella',
+    'mascarpone cheese': 'mascarpone',
+    'top verde acceso o spento': 'con o senza foglioline',
+    'cola dietetica': 'cola light',
+    'colatura di pancetta': 'grasso di pancetta',
+    'graniglia': 'semolino',
+    'Spessore di 1/2".': 'spessa 1 cm',
+    'cereali di riso': 'crema di riso',
+    'biscotti di wafer': 'wafer',
+    'sgranato': 'sgusciato',
+    '1 giorno di vita': 'del giorno prima',
+    'elaborato': 'a pasta fusa',
+
 }
+
 mappings = {
     'en': en_mapping,
     'it': it_mapping,
@@ -174,18 +258,22 @@ def sub_shift(json_data, mappings, *, lang):
     text_key = f'text_{lang}'
     ents_key = f'ents_{lang}'
 
-    pattern = re.compile('|'.join(re.escape(key) for key in mappings[lang].keys()))
+    
 
     for j, annotation in enumerate(json_data['annotations']):
         text = annotation[text_key]
         entities = annotation[ents_key]
         adjustment = 0
-
+        pattern = re.compile('|'.join(re.escape(key) for key in mappings[lang].keys()))
         for match in re.finditer(pattern, text):
             match_index = match.start() + adjustment
             match_contents = match.group()
-            subbed_text = mappings[lang][match_contents]
-
+            contents = mappings[lang][match_contents]
+            # if it's a list put it through the randomizer function
+            if isinstance(contents, list):
+                subbed_text = randomizer(contents)
+            else:
+                subbed_text = contents
             len_diff = len(subbed_text) - len(match_contents)
             text = text[:match_index] + subbed_text + text[match_index + len(match_contents):]
             # Adjust the indices of subsequent annotations
@@ -209,16 +297,8 @@ class Converter:
     def str_frac_to_float(self, s):
         nums = [float(n) for n in s.split('/')]
         if len(nums)>1:
-            out = (nums[0]*self.uom)/nums[1]
-            if out>10:
-                return int(out)
-            else:
-                return round(out, ndigits=1)
-        out = nums[0]*self.uom
-        if out>10:
-            return int(out)
-        else:
-            return round(out, ndigits=1)
+            return (nums[0]*self.uom)/nums[1]
+        return nums[0]*self.uom
 
     @staticmethod
     def tighten_slash(s):
@@ -232,7 +312,11 @@ class Converter:
             num_buffer = 0
             int_and_frac = self.tighten_slash(ext).split()
             num_buffer = sum(self.str_frac_to_float(part) for part in int_and_frac)
-            nums.append(num_buffer)
+            if num_buffer>10:
+                nums.append(int(num_buffer))
+            else:
+                nums.append(round(num_buffer, ndigits=1))
+            
         return ' - '.join([str(n) for n in nums])
     
     def localize_ingredients(self, sample_list, lang = 'it'):
@@ -288,7 +372,8 @@ pattern_list = [
     # fix uom
     {'pattern': r'chili pepper(?!\w)', 'type': 'plain', 'sub': 'peperoncino'},
     {'pattern': r'cancellato(?!\w)', 'type': 'plain', 'sub': 'strofinate'},
-    {'pattern': r'(?<=cucchiai\s)come(?!\w)', 'type': 'plain', 'sub': 'menta'},
+    {'pattern': r'(?<=cucchiai )come(?!\w)', 'type': 'plain', 'sub': 'menta'},
+    {'pattern': r'(?<=ramoscello fresco )come(?!\w)', 'type': 'plain', 'sub': 'menta'},
     {'pattern': r'come(?=\s(?:foglie|foglia))', 'type': 'plain', 'sub': 'menta'},
 
     {'pattern': r'(\d[-/\.\,\d\s]*)tazz.(?!\w)', 'ratio': 236, 'uom': 'g', 'type': 'quantity'},
@@ -297,6 +382,7 @@ pattern_list = [
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:di pollice|pollic.)(?!\w)', 'ratio': 2.54, 'uom': 'cm', 'type': 'quantity'},
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:pinte|pinta)(?!\w)', 'ratio': 473, 'uom': 'ml', 'type': 'quantity'},
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:quartini|quartino)(?!\w)', 'ratio': 946, 'uom': 'ml', 'type': 'quantity'},
+    {'pattern': r'(\d[-/\.\,\d\s]*)gallon(?!\w)', 'ratio': 3.78, 'uom': 'l', 'type': 'quantity'},
 
     {'pattern': r'tazz.(?!\w)', 'ratio': 236, 'uom': 'g', 'type': 'uom'},
     {'pattern': r'(?:(?:once fluide)|(?:oncia fluida)|once|oncia|oz\.|oz)(?!\w)', 'ratio': 28.35, 'uom': 'g', 'type': 'uom'},
@@ -304,6 +390,7 @@ pattern_list = [
     {'pattern': r'(?:di pollice|pollic.)(?!\w)', 'ratio': 2.54, 'uom': 'cm', 'type': 'uom'},
     {'pattern': r'(?:pinte|pinta)(?!\w)', 'ratio': 473, 'uom': 'ml', 'type': 'uom'},
     {'pattern': r'(?:quartini|quartino)(?!\w)', 'ratio': 946, 'uom': 'ml', 'type': 'uom'},
+    {'pattern': r'gallon(?!\w)', 'ratio': 3.78, 'uom': 'l', 'type': 'uom'},
 
     {'pattern': r'tigli(?!\w)', 'type': 'plain', 'sub': 'lime'},
     {'pattern': r'orso(?!\w)', 'type': 'plain', 'sub': 'birra'},
@@ -315,13 +402,35 @@ pattern_list = [
     {'pattern': r'abbondanza(?= sale kosher)', 'type': 'plain', 'sub': 'in abbondanza'},
     {'pattern': r'kg(?= lime)', 'type': 'plain', 'sub': 'chili'},
     {'pattern': r'(?<=mini )peperoni', 'type': 'plain', 'sub': 'peperoncini'},
-    {'pattern': r'(?<=aglio )chiodo di garofano', 'type': 'plain', 'sub': 'spicchio'},
-    {'pattern': r'chiodo di garofano(?= aglio)', 'type': 'plain', 'sub': 'spicchio'},
+    {'pattern': r'(?<=aglio )(?:chiodo di garofano|chiodi di garofano)', 'type': 'plain', 'sub': 'spicchio'},
+    {'pattern': r'(?:chiodo di garofano|chiodi di garofano)(?= aglio)', 'type': 'plain', 'sub': 'spicchio'},
     {'pattern': r'[Zz]uppa di cipolle alla francese', 'type': 'plain', 'sub': 'zuppa di cipolle francese'},
     {'pattern': r'sale di cipolla', 'type': 'plain', 'sub': 'sale alla cipolla'},
     {'pattern': r'livido', 'type': 'plain', 'sub': 'schiacciato'},
     {'pattern': r'caldo(?= peperoncino)', 'type': 'plain', 'sub': 'piccante'},    
     {'pattern': r'[Ff]arina di tutti i tipi', 'type': 'plain', 'sub': 'farina 00'},
+    {'pattern': r'(?<=cannella )bastone', 'type': 'plain', 'sub': 'bastoncino'},
+    {'pattern': r'bastone(?= cannella)', 'type': 'plain', 'sub': 'bastoncino'},
+    {'pattern': r'(?<=burro )bastone', 'type': 'plain', 'sub': 'panetto'},
+    {'pattern': r'bastone(?= burro)', 'type': 'plain', 'sub': 'panetto'},
+    {'pattern': r'(?<=pepe \()[Ff]resco', 'type': 'plain', 'sub': 'appena'},
+    {'pattern': r'(?<=alghe \()filo', 'type': 'plain', 'sub': 'arame'}, 
+    {'pattern': r'(?<=mazzo )verdi', 'type': 'plain', 'sub': 'verdura'},
+    {'pattern': r'scuro(?= gocce di cioccolato)', 'type': 'plain', 'sub': 'fondente'},
+    {'pattern': r'scuro(?= cioccolato)', 'type': 'plain', 'sub': 'fondente'},
+    {'pattern': r'(?<=scolato )sfogliato', 'type': 'plain', 'sub': 'a lamelle'},
+    {'pattern': r'cubo(?= bistecche)', 'type': 'plain', 'sub': 'girello'},
+    {'pattern': r'(?<!\w)[Mm]aggio', 'type': 'plain', 'sub': 'maionese'},
+    {'pattern': r'noce di cocco', 'type': 'plain', 'sub': 'cocco'},
+    {'pattern': r'(?<=(?:uova|uovo) )(bianchi)', 'type': 'plain', 'sub': 'albumi'},
+    {'pattern': r'carton(?!\w)', 'type': 'plain', 'sub': 'cartone'},
+    {'pattern': r'(?<=matzah )tavole', 'type': 'plain', 'sub': 'fogli'},
+    {'pattern': r'barattolo(?= cola)', 'type': 'plain', 'sub': 'lattina'},
+    {'pattern': r'per person(?!\w)', 'type': 'plain', 'sub': 'per persona'},
+    {'pattern': r'caldo(?= salsa)', 'type': 'plain', 'sub': 'piccante'},
+    {'pattern': r'(?<=wafer al cioccolato \()scuro', 'type': 'plain', 'sub': 'fondente'},
+     
+
 ]
 
 converter = Converter(patterns=pattern_list)
