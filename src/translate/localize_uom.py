@@ -16,6 +16,8 @@ en_mapping = {
         'empire apples or': 'empire apples',
         'lipton recip secret': 'Lipton Recipe Secrets',
         'matzoh': 'matzah',
+        'course': 'coarse',
+        'rotel': 'Rotel',
     }
 
 def randomizer(s_list):
@@ -246,7 +248,6 @@ it_mapping = {
     '1 giorno di vita': 'del giorno prima',
     'elaborato': 'a pasta fusa',
     'bistecca di manzo': 'sottofesa di manzo',
-    'petto di manzo in scatola': 'punta di petto di manzo in scatola',
     'granatina': 'sciroppo di granatina',
     'mozzarella garlic bread': "pane all'aglio e mozzarella",
     "polpetta di salsiccia": "hamburger di salsiccia",
@@ -286,8 +287,41 @@ it_mapping = {
     'grano corto': 'a chicco corto',
     'Grana media': 'a chicco medio',
     'Pomodori rom': 'pomodori Roma',
-
-
+    "per l'ingrassaggio": 'per ungere la padella',
+    'stagionata': 'condito',
+    "sottaceti all'aneto": "cetrioli sott'aceto all'aneto",
+    '4 pollici (10 cm)': '4 pollici',
+    'ruggine patate': 'russet patate',
+    'incrinato': 'schiacciato',
+    'lampadina': 'testa',
+    'club soda': 'acqua tonica',
+    'cola soda': 'bibita cola',
+    'spaccato longitudinalmente': 'tagliato in lunghezza',
+    'votato': 'senza picciolo',
+    'cucinare le mele': 'mele',
+    'apple pie spice': 'spezie per torta di mele',
+    "l'olio della carne": "grasso della carne",
+    "pacchetto": 'confezione',
+    'snocciolato': 'denocciolato',
+    'pelle attaccata': 'con la pelle',
+    'di polimerizzazione': 'per stagionatura',
+    'Arancione': 'arancia',
+    'arancione': 'arancia',
+    'zestato': 'grattuggiata',
+    'spezzato in circa 4 pezzi': 'rotto in circa 4 pezzi',
+    'razzo': 'rucola',
+    'gara': 'in cristalli',
+    'rotel': 'Rotel',
+    'come guarnizione': 'come condimento',
+    'Avvolgimento': 'crepes',
+    'pasta di pane': 'impasto per il pane',
+    'pacchetti': 'confezioni',
+    'budino3': 'budino 3',
+    'torta a forma di pagnotta': 'plumcake',
+    'ambito di applicazione': 'pallina',
+    'bevanda analcolica alla cola': 'bevanda alla cola',
+    'Da 2 1/2 a 1,4': 'Da 2 1/2 a 3',
+        
 }
 
 mappings = {
@@ -347,7 +381,12 @@ class Converter:
         return re.sub(slash_pattern, '/', s.strip())
 
     def convert_num(self, input_string):
-        extremes = [s for s in input_string.split('-') if s != '']
+        if 'a' in input_string:
+            self.sep = 'a'
+            extremes = [s.replace('-', '') for s in input_string.split('a') if s != '']
+        else:
+            self.sep = '-'
+            extremes = [s for s in input_string.split('-') if s != '']
         nums = []
         for ext in extremes:
             num_buffer = 0
@@ -358,10 +397,10 @@ class Converter:
             else:
                 nums.append(round(num_buffer, ndigits=1))
             
-        return ' - '.join([str(n) for n in nums])
+        return ' - '.join([str(n) for n in nums]) if self.sep == '-' else ' a '.join([str(n) for n in nums])
     
     def localize_ingredients(self, sample_list, lang = 'it'):
-        with open('/home/pgajo/working/food/output.log', 'w') as f:
+        with open('./output.log', 'w') as f:
             for j, sample in enumerate(sample_list):
                 text_key = f'text_{lang}'
                 ents_key = f'ents_{lang}'
@@ -419,7 +458,7 @@ pattern_list = [
 
     {'pattern': r'(\d[-/\.\,\d\s]*)tazz.(?!\w)', 'ratio': 236, 'uom': 'g', 'type': 'quantity'},
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:(?:once fluide)|(?:oncia fluida)|once|oncia|oz\.|oz)(?!\w)', 'ratio': 28.35, 'uom': 'g', 'type': 'quantity'},
-    {'pattern': r'(\d[-/\.\,\d\s]*)(?:chili|chilo|lbs?\.?|libbre|pounds|pound|sterline|sterlina)(?!\w)', 'ratio': 0.45, 'uom': 'kg', 'type': 'quantity'},
+    {'pattern': r'(\d[-/\.\,\d\sa]*)(?:chili|chilo|lbs?\.?|libbre|pounds|pound|sterline|sterlina)(?!\w)', 'ratio': 0.45, 'uom': 'kg', 'type': 'quantity'},
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:di pollice|pollic.|\")(?!\w)', 'ratio': 2.54, 'uom': 'cm', 'type': 'quantity'},
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:pinte|pinta)(?!\w)', 'ratio': 473, 'uom': 'ml', 'type': 'quantity'},
     {'pattern': r'(\d[-/\.\,\d\s]*)(?:quartini|quartino)(?!\w)', 'ratio': 946, 'uom': 'ml', 'type': 'quantity'},
@@ -477,7 +516,20 @@ pattern_list = [
     {'pattern': r'bastoncini(?= burro)', 'type': 'plain', 'sub': 'panetti'},
     {'pattern': r'bastoncini(?= salato burro)', 'type': 'plain', 'sub': 'panetti'},
     {'pattern': r'(?<=circa 20 )bastoncini', 'type': 'plain', 'sub': 'punte'},
-
+    {'pattern': r'in polvere(?= zucchero)', 'type': 'plain', 'sub': 'a velo'},
+    {'pattern': r'barattolo(?= soda)', 'type': 'plain', 'sub': 'lattina'},
+    {'pattern': r'(?<=lime )soda', 'type': 'plain', 'sub': 'bibita'},
+    {'pattern': r'(?<=lattina )soda', 'type': 'plain', 'sub': 'bibita'},
+    {'pattern': r'barattolo(?= tonno)', 'type': 'plain', 'sub': 'lattina'},
+    {'pattern': r'(?<=2 kg )manzo in scatola punta di petto', 'type': 'plain', 'sub': 'punta di petto di manzo in scatola'},
+    {'pattern': r'(?<=4 fette )manzo in scatola', 'type': 'plain', 'sub': 'petto di manzo in scatola'},
+    {'pattern': r'(?<=0,9 - 1,4 kg )petto di manzo in scatola', 'type': 'plain', 'sub': 'punta di petto di manzo in scatola'},
+    {'pattern': r'(?<=vaniglia )fagiolo', 'type': 'plain', 'sub': 'baccello'},
+    {'pattern': r'(?<=denocciolato )data', 'type': 'plain', 'sub': 'dattero'},
+    {'pattern': r'(?<=arrostito rosso )pepe', 'type': 'plain', 'sub': 'peperone'},
+    {'pattern': r'pepe(?= \(a cubetti\))', 'type': 'plain', 'sub': 'peperone'},
+    {'pattern': r'pani(?!\w)', 'type': 'plain', 'sub': 'pagnotte'},
+    
 ]
 
 converter = Converter(patterns=pattern_list)
