@@ -321,6 +321,9 @@ it_mapping = {
     'ambito di applicazione': 'pallina',
     'bevanda analcolica alla cola': 'bevanda alla cola',
     'Da 2 1/2 a 1,4': 'Da 2 1/2 a 3',
+    'bone in': 'con le ossa',
+    'Zia Maria': 'Tia Maria',
+    'Grasso ridotto': 'a basso contenuto di grassi',
         
 }
 
@@ -399,9 +402,9 @@ class Converter:
             
         return ' - '.join([str(n) for n in nums]) if self.sep == '-' else ' a '.join([str(n) for n in nums])
     
-    def localize_ingredients(self, sample_list, lang = 'it'):
+    def localize_ingredients(self, data, lang = 'it'):
         with open('./output.log', 'w') as f:
-            for j, sample in enumerate(sample_list):
+            for j, sample in enumerate(data['annotations']):
                 text_key = f'text_{lang}'
                 ents_key = f'ents_{lang}'
                 text = sample[text_key]
@@ -446,7 +449,7 @@ class Converter:
                 print(text, file = f)
                 print([text[ents[i][0]:ents[i][1]] for i in range(len(ents))], file = f)
                 print('-----------------------------------------------------------', file = f)
-        return sample_list
+        return data
 
 pattern_list = [
     # fix uom
@@ -541,7 +544,7 @@ with open(json_file, 'r', encoding='utf-8') as file:
 # clean up translation mistakes by doing simple substitutions first with this function
 modified_data = sub_shift(data, mappings, lang = 'en')
 modified_data = sub_shift(data, mappings, lang = 'it')
-localized_data = converter.localize_ingredients(modified_data['annotations'])
+localized_data = converter.localize_ingredients(modified_data)
 # save to updated json file with different name
 with open(json_file[:-5] + '_localized_uom.json', 'w', encoding='utf-8') as file:
     json.dump(localized_data, file, ensure_ascii=False, indent=4)
