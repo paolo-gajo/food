@@ -14,10 +14,11 @@ import argparse
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-t', '--test', default=False, action='store_true', help='Add a "_test" suffix to the repo name')
+    parser.add_argument('-f', '--file', default='/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json')
     args = parser.parse_args()
 
-    # model_name = 'bert-base-multilingual-cased'
-    model_name = 'microsoft/mdeberta-v3-base'
+    model_name = 'bert-base-multilingual-cased'
+    # model_name = 'microsoft/mdeberta-v3-base'
     
     languages = [
         # 'ru',
@@ -35,10 +36,11 @@ def main():
     lang_id = '-'.join(languages)
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    data_path = f'/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL.json'
+    # args.file = f'/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL.json'
+    # args.file = f'/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json'
     results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
     data = TASTEset.from_json(
-            data_path,
+            args.file,
             tokenizer = tokenizer,
             shuffle_languages=['it'],
             src_lang = 'en',
@@ -60,7 +62,7 @@ def main():
     #     )
     
     # data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
-    batch_size = 8
+    batch_size = 16
     dataset = data_loader(data,
                         batch_size,
                         )
@@ -157,7 +159,7 @@ def main():
         
     # model save folder
     model_dir = './models'
-    save_name = f"{model_dict[model_name]}_{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}_DROP{str(int(data.drop_duplicates))}"
+    save_name = f"{model_dict[model_name]}_{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}_DROP{str(int(data.drop_duplicates))}_{args.file.split('/')[-1][:-5]}"
     if args.test:
         save_name = save_name + "_test" # comment if not testing
     model_save_dir = os.path.join(model_dir, f"{data.name}/{save_name}")
@@ -185,6 +187,7 @@ def main():
     Optimizer lr = {lr}\n
     Optimizer eps = {eps}\n
     Batch size = {batch_size}\n
+    Dataset path = {args.file}\n
     Metrics:\n
     {df_desc}
     '''

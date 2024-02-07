@@ -194,6 +194,7 @@ class TASTEset(DatasetDict):
         batch_size = None,
         debug_dump = False,
         aligned = True,
+        n_rows = None,
         ) -> 'TASTEset':
         '''
         Prepares data from the TASTEset dataset based on the wanted languages,
@@ -232,13 +233,19 @@ class TASTEset(DatasetDict):
                 Size of the train and dev batches.
                 If None, the whole dataset is tokenized to the token length of the longest sample.
             aligned (`bool`, defaults to `True`):
-                If `True`, the output dataset will include answer data, otherwise if `False` only 'query' and 'context' lines will be available for each sample.
+                If `True`, the output dataset will include answer data,
+                otherwise if `False` only 'query' and 'context' lines will be available for each sample.
+                Essentially, set to `False` to create an unannotated dataset,
+                `True` to make a training dataset when starting from an already annotated dataset.
+            n_rows (`int`, defaults to `None`):
+                Defines how many lines are going to be kept in the dataset. Normally used to speed up testing.
             
         Returns:
             `TASTEset`: The raw dataset in the Hugging Face dictionary format.
         '''
         self.name = 'tasteset'
-        self.input_data = input_data
+        self.data_path = input_data['path']
+        self.input_data = input_data['annotations']
         self.tokenizer = tokenizer
         if not hasattr(self.tokenizer, 'sep'):
             self.tokenizer.sep = None
@@ -260,7 +267,7 @@ class TASTEset(DatasetDict):
         if not self.aligned:
             self.drop_duplicates = False
             print("Input data is unaligned, setting 'drop_duplicates' to False.")
-
+        self.n_rows = n_rows
         self.raw_data = self.prep_data()
 
         if self.aligned:
@@ -285,10 +292,10 @@ class TASTEset(DatasetDict):
                   json_path,
                   *,
                   tokenizer,
-                  n_rows = None,
                   **kwargs
                   ) -> "TASTEset":
-        input_data = json.load(open(json_path))['annotations'][:n_rows]
+        input_data = json.load(open(json_path))
+        input_data['path'] = json_path
         return cls(
             input_data,
             tokenizer = tokenizer,
@@ -297,9 +304,9 @@ class TASTEset(DatasetDict):
 
     def prep_data(self) -> 'DatasetDict':
         if self.unshuffled_size:
-            self.unshuffled_samples = self.generate_samples(SampleList(self.extend(self.input_data, self.unshuffled_size), shuffle = False))
+            self.unshuffled_samples = self.generate_samples(SampleList(self.extend(self.input_data[:self.n_rows], self.unshuffled_size), shuffle = False))
         if self.shuffled_size:
-            self.shuffled_samples = self.generate_samples(SampleList(self.extend(self.input_data, self.shuffled_size), shuffle = True))
+            self.shuffled_samples = self.generate_samples(SampleList(self.extend(self.input_data[:self.n_rows], self.shuffled_size), shuffle = True))
         df = pd.concat([pd.DataFrame(self.unshuffled_samples),
                         pd.DataFrame(self.shuffled_samples)])
         if self.drop_duplicates:
@@ -307,7 +314,11 @@ class TASTEset(DatasetDict):
         df_list = df.to_dict(orient = 'records')
         print('Number of samples:', len(df_list))
         if self.debug_dump:
-            json.dump(df_list, open('debug_dump.json', 'w'), ensure_ascii=False)
+            if self.aligned:
+                dump_suffix = 'aligned_qa'
+            else:
+                dump_suffix = 'unaligned_qa'
+            json.dump(df_list, open(self.data_path.replace('.json', f'_{dump_suffix}.json'), 'w'), ensure_ascii=False)
         ds_dict = Dataset.from_list(df_list).train_test_split(test_size = self.dev_size)
         self['train'] = ds_dict['train']
         ds_dict['dev'] = ds_dict.pop('test')
@@ -677,7 +688,7 @@ def print_ents_tasteset_sample(path):
     df_list = []
     with open(path, encoding='utf8') as f:
         data = json.load(f)
-    for sample in data['annotations'][:3]:
+    for sample in data['annotations']:
         row = []
         for i in range(len(sample['ents_it'])):
             row.append(sample['text_it'][sample['ents_it'][i][0]:sample['ents_it'][i][1]])

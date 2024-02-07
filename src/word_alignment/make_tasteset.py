@@ -23,7 +23,7 @@ def main():
     args.shuffled_size = 0
     args.drop_duplicates = True
 
-    args.input = '/home/pgajo/working/food/data/TASTEset/data/formatted/TASTEset_sep_format_en-it_unaligned.json'
+    args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json'
 
     model_name = 'bert-base-multilingual-cased'
     tokenizer = AutoTokenizer.from_pretrained(model_name)
