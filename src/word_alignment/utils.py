@@ -197,6 +197,7 @@ class TASTEset(DatasetDict):
         debug_dump = False,
         aligned = True,
         n_rows = None,
+        label_studio = False,
         ) -> 'TASTEset':
         '''
         Prepares data from the TASTEset dataset based on the wanted languages,
@@ -241,9 +242,9 @@ class TASTEset(DatasetDict):
                 Set to `True` to make a training dataset when starting from an already annotated dataset.
             n_rows (`int`, defaults to `None`):
                 Defines how many lines are going to be kept in the dataset. Normally used to speed up testing.
-            
-        Returns:
-            `TASTEset`: The raw dataset in the Hugging Face dictionary format.
+            label_studio (`bool`, defaults to `False`):
+                If `True`, the input data is assumed to be in Label Studio format
+                and is going to be converted to TASTEset format using 'label_studio_to_tasteset'.
         '''
         self.name = 'TASTEset'
         if isinstance(input_data, DatasetDict):
@@ -257,13 +258,15 @@ class TASTEset(DatasetDict):
             self['dev'] = input_data['dev']
 
         else:
+            self.src_lang = src_lang
+            if label_studio:
+                input_data = label_studio_to_tasteset(input_data, self.src_lang)
             self.input_data = input_data['annotations']
             self.data_path = data_path
             self.tokenizer_name = tokenizer_name
             self.tokenizer = AutoTokenizer.from_pretrained(self.tokenizer_name)
             self.rm_char = [' ', ';']
             self.shuffle_languages = shuffle_languages
-            self.src_lang = src_lang
             self.drop_duplicates = drop_duplicates
             self.src_context = src_context
             self.shuffled_size = shuffled_size
@@ -774,3 +777,19 @@ def tasteset_to_label_studio(annotation_list, model_name):
             'predictions': predictions,
         })
     return tasks
+
+def label_studio_to_tasteset(data, src_lang = 'it'):
+    formatted_data = []
+    languages = [key.split('_')[-1] for key in data[0]['data'].keys() if '_' in key]
+    tgt_langs = [lang for lang in languages if lang != src_lang]
+    for line in data:
+        tmp_dict = {}
+        for tgt_lang in tgt_langs:
+            tmp_dict[f'text_{tgt_lang}'] = line['data'][f'ingredients_{tgt_lang}']
+        tmp_dict[f'text_{src_lang}'] = line['data'][f'ingredients_{src_lang}']
+        tmp_dict[f'ents_{src_lang}'] = []
+        for ent in line['annotations'][0]['result']:
+            tmp_dict[f'ents_{src_lang}'].append([ent['value']['start'], ent['value']['end'], ent['value']['labels'][0]])
+        tmp_dict[f'ents_{src_lang}'].sort()
+        formatted_data.append(tmp_dict)
+    return {'annotations': formatted_data}

@@ -11,7 +11,7 @@ def main():
     tokenizer_name = 'bert-base-multilingual-cased'
     # tokenizer_name = 'microsoft/mdeberta-v3-base'
 
-    data_path = '/home/pgajo/working/food/data/GZ-GOLD-NER_for_sample_generation.json'
+    data_path = '/home/pgajo/working/food/data/GZ-GOLD-NER.json'
     
     dataset = TASTEset.from_json(
         data_path,
@@ -23,13 +23,14 @@ def main():
         unshuffled_size = unshuffled_size,
         aligned = False,
         debug_dump = True,
+        label_studio = True,
         )
-    
+    return
     tokenizer_dict = {
         'bert-base-multilingual-cased': 'mbert',
         'microsoft/mdeberta-v3-base': 'mdeberta',
     }
-    
+
     dataset.name = 'GZ-ALIGN'
     save_name = f"{tokenizer_dict[tokenizer_name]}_{dataset.name}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_DROP{str(int(dataset.drop_duplicates))}"
     repo_id = f"pgajo/{save_name}"
