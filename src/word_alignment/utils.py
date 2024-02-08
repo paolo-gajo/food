@@ -178,6 +178,7 @@ class SampleList:
     def __init__(self, samples:List[dict], shuffle:bool = False) -> None:
         self.samples = samples
         self.shuffle = shuffle
+        self.index = None
 
 class TASTEset(DatasetDict):
     def __init__(self,
@@ -273,6 +274,7 @@ class TASTEset(DatasetDict):
             self.n_rows = n_rows
             self.unshuffled_samples = []
             self.shuffled_samples = []
+            self.index = 0
             if not hasattr(self.tokenizer, 'sep'):
                 self.tokenizer.sep = None
 
@@ -364,16 +366,17 @@ class TASTEset(DatasetDict):
 
     def generate_samples(self, sample_list):
         shuffle_desc = 'shuffled' if sample_list.shuffle else 'unshuffled'
-        progbar = tqdm(sample_list.samples, total = len(sample_list.samples))
+        progbar = tqdm(enumerate(sample_list.samples), total = len(sample_list.samples))
         progbar.set_description(f'Creating samples ({shuffle_desc})...')
         list_buffer = []
-        for line in progbar:
+        for sentence_index, line in progbar:
             line_buffer = copy.deepcopy(line)
-            list_buffer += self.samples_from_line(line_buffer, shuffle=sample_list.shuffle)
+            list_buffer += self.samples_from_line(line_buffer, sentence_index, shuffle=sample_list.shuffle)
         return list_buffer
 
     def samples_from_line(self,
                         sample,
+                        sentence_index,
                         *,
                         shuffle,
                         ) -> List[dict]:
@@ -398,8 +401,8 @@ class TASTEset(DatasetDict):
 
             new_sample['context'] = sample[f'text_{tgt_lang}']
             if self.aligned:
-                new_sample['answer_start'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(i)][0]
-                new_sample['answer_end'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(i)][1]
+                new_sample['answer_start'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].i(i)][0]
+                new_sample['answer_end'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].i(i)][1]
                 new_sample['answer'] = sample[f'text_{tgt_lang}'][new_sample['answer_start']:new_sample['answer_end']]
                 query_enc = self.tokenizer(new_sample['query'])
                 l = len(query_enc['input_ids']) 
@@ -415,7 +418,10 @@ class TASTEset(DatasetDict):
                 for char in self.rm_char:
                     new_sample['query'] = new_sample['query'].replace(char, self.tokenizer.sep)
                     new_sample['context'] = new_sample['context'].replace(char, self.tokenizer.sep)
-
+            new_sample['sentence_index'] = sentence_index
+            new_sample['sample_index'] = i
+            new_sample['index'] = self.index
+            self.index += 1
             sample_list.append(new_sample)
         return sample_list
 
