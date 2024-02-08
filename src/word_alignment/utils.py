@@ -746,5 +746,31 @@ def token_span_to_char_indexes(input, start_index_token, end_index_token, sample
         # end = end_span[1]
         end = start + len(token_based_prediction)
     char_span_prediction = sample[target_text_key][start:end]
-    print('char_span_prediction', [char_span_prediction])
+    # print('char_span_prediction', [char_span_prediction])
     return start, end
+
+def tasteset_to_label_studio(annotation_list, model_name):
+    tasks = []
+    for recipe in annotation_list:
+        predictions = []
+        results = []
+        languages = ['en', 'it']
+        entry = {}
+        for language in languages:
+            for entity in recipe[f'ents_{language}']:
+                results.append({
+                    'from_name': f'label_{language}',
+                    'to_name': f'text_{language}_ref',
+                    'type': 'labels',
+                    'value': {
+                        'start': entity[0],
+                        'end': entity[1],
+                        'labels': [entity[2]]}
+                        })
+            entry[f'text_{language}'] = recipe[f'text_{language}']
+        predictions.append({'model_version': model_name, 'result': results})
+        tasks.append({
+            'data': entry,
+            'predictions': predictions,
+        })
+    return tasks

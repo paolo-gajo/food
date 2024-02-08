@@ -1,20 +1,20 @@
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
-from utils import token_span_to_char_indexes
+from utils import token_span_to_char_indexes, tasteset_to_label_studio
 import torch
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 torch.set_printoptions(linewidth=10000)
-model_name = 'pgajo/mdeberta_tasteset_U0_S1_E10_DEV98.0_DROP1'
+model_name = 'pgajo/mdeberta_TASTEset_U0_S1_DROP1_E1_DEV89.0'
 # model_name = 'pgajo/mbert_tasteset_U0_S1_E10_DEV61.0_DROP1'
 model = AutoModelForQuestionAnswering.from_pretrained(model_name).to(device)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 import json
 from tqdm.auto import tqdm
-json_path_unaligned = '/home/pgajo/working/food/data/TASTEset/data/formatted/TASTEset_sep_format_en-it_unaligned.json'
-with open(json_path_unaligned, encoding='utf8') as f:
+json_path_unaligned = '/home/pgajo/working/food/data/SW-TASTE_en-it_DEEPL_unaligned.json'
+with open(json_path_unaligned, 'r', encoding='utf8') as f:
     data = json.load(f)
 
-recipe_list = data['annotations'][:3]
+recipe_list = data['annotations']#[:3]
 
 for idx, recipe in tqdm(enumerate(recipe_list), total=len(recipe_list)):
     for i, entity in enumerate(recipe['ents_en']):
@@ -42,14 +42,15 @@ for idx, recipe in tqdm(enumerate(recipe_list), total=len(recipe_list)):
             # print('### START TOKEN !< END TOKEN ###')
             pass
 
-# save aligned dataset to a new json
-import os
-sw_dir = '/home/pgajo/working/food/data/TASTEset/data/SW-TASTE'
-filename = f"{os.path.splitext(os.path.basename(json_path_unaligned))[0]}_{model_name.split('/')[-1]}.json".replace('unaligned', 'aligned')
+filename = f"{json_path_unaligned.replace('.json', '')}_{model_name.split('/')[-1]}.json".replace('unaligned', 'aligned')
 new_data = {'classes': data['classes'], 'annotations': recipe_list}
-# json_path_aligned = os.path.join(sw_dir, filename)
-json_path_aligned = 'gz_aligned.json'
-with open(json_path_aligned, 'w', encoding='utf8') as f:
+with open(filename, 'w', encoding='utf8') as f:
     json.dump(new_data, f, ensure_ascii=False)
 
-print(json_path_aligned)
+print(filename)
+
+ls_data = tasteset_to_label_studio(data['annotations'], model_name)
+
+ls_filename = filename.replace('.json', '_ls.json')
+with open(ls_filename, 'w', encoding='utf8') as f:
+    json.dump(ls_data, f, ensure_ascii=False)

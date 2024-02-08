@@ -16,8 +16,8 @@ def main():
     parser.add_argument('-f', '--file', default='/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json')
     args = parser.parse_args()
 
-    model_name = 'bert-base-multilingual-cased'
-    # model_name = 'microsoft/mdeberta-v3-base'
+    # model_name = 'bert-base-multilingual-cased'
+    model_name = 'microsoft/mdeberta-v3-base'
     
     languages = [
         # 'ru',
@@ -36,7 +36,7 @@ def main():
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    args.file = 'pgajo/mbert_TASTEset_U0_S1_DROP1'
+    args.file = 'pgajo/mdeberta_TASTEset_U0_S1_DROP1'
     # args.file = 'pgajo/xlwa_en-it'
     data = TASTEset.from_datasetdict(args.file)
 
@@ -51,7 +51,7 @@ def main():
     #     unshuffled_size = 1,
     #     )
 
-    batch_size = 32
+    batch_size = 8
     dataset = data_loader(data,
                         batch_size,
                         # n_rows=320,
@@ -170,12 +170,13 @@ def main():
     model_description = f'''
     Model: {model_dict[model_name]}\n
     Dataset: {data.name}\n
-    Unshuffled ratio: {re.search(u_ratio, 'pgajo/mbert_TASTEset_U0_S1_DROP1').group()}\n
-    Shuffled ratio: {re.search(s_ratio, 'pgajo/mbert_TASTEset_U0_S1_DROP1').group()}\n
+    Unshuffled ratio: {re.search(u_ratio, args.file).group()}\n
+    Shuffled ratio: {re.search(s_ratio, args.file).group()}\n
     Best exact match epoch: {evaluator.epoch_best}\n
     Best exact match: {str(round(evaluator.exact_dev_best, ndigits=2))}\n
-    Drop duplicates: {re.search(drop_flag, 'pgajo/mbert_TASTEset_U0_S1_DROP1').group()}\n
-    Epochs = {epochs}\n
+    Best epoch: {evaluator.epoch_best}\n
+    Drop duplicates: {re.search(drop_flag, args.file).group()}\n
+    Max epochs = {epochs}\n
     Optimizer lr = {lr}\n
     Optimizer eps = {eps}\n
     Batch size = {batch_size}\n
