@@ -1,0 +1,13 @@
+ingredient	quantity
+Biscotti Digestive	270 g
+Burro	100 g
+Fichi viola	400 g
+Formaggio fresco spalmabile	750 g
+Yogurt greco	400 g
+Panna fresca liquida	300 g
+Miele millefiori	100 g
+Zucchero a velo	60 g
+Gelatina in fogli	8 g
+Fichi viola	300 g
+Miele millefiori	q.b.
+Menta	q.b.

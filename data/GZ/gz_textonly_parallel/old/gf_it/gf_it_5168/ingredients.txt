@@ -1,0 +1,7 @@
+ingredient	quantity
+Cioccolato fondente	200 g
+Mascarpone	100 g
+Cacao amaro in polvere	10 g
+Cocco rapè	40 g
+Granella di pistacchi	20 g
+Granella di nocciole	20 g

@@ -1,0 +1,14 @@
+ingredient	quantity
+Burro (a temperatura ambiente)	180 g
+Zucchero	250 g
+Uova	3
+Tuorli	1
+Farina 00	180 g
+Latte intero (a temperatura ambiente)	75 g
+Lievito in polvere per dolci	12 g
+Cacao amaro in polvere	30 g
+Baccello di vaniglia	1
+Cioccolato fondente	650 g
+Panna fresca liquida	650 g
+Tartufi di cioccolato (fondenti)	14
+Granella di nocciole	30 g

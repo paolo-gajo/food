@@ -1,0 +1,12 @@
+ingredient	quantity
+Pasta Sfoglia rettangolare	1 foglio
+Burro (da fondere)	25 g
+Zucchero	100 g
+Ricotta vaccina	200 g
+Zucchero	80 g
+Arancia candita	60 g
+Uva sultanina	30 g
+Latte intero	200 ml
+Tuorli	2
+Zucchero	40 g
+Farina 00	25 g

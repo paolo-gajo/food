@@ -1,0 +1,9 @@
+ingredient	quantity
+Salmone norvegese	400 g
+Zucchine	600 g
+Patate	300 g
+Timo	2 rametti
+Sale affumicato	1 pizzico
+Sale fino	1 pizzico
+Pepe bianco	1 pizzico
+Olio extravergine d'oliva	50 g

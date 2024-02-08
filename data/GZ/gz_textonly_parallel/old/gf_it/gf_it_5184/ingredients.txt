@@ -1,0 +1,9 @@
+ingredient	quantity
+Nutella	265 g
+Burro	120 g
+Zucchero	55 g
+Uova (circa 4)	210 g
+Farina 00	90 g
+Granella di nocciole	30 g
+Burro	10 g
+Farina 00	10 g

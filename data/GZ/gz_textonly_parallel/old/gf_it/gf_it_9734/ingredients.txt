@@ -1,0 +1,8 @@
+ingredient	quantity
+Patate rosse	1 kg
+Provola	220 g
+Grana Padano DOP	80 g
+Timo	3 rametti
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

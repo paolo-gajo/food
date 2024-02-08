@@ -1,0 +1,10 @@
+ingredient	quantity
+Pennoni rigati	500 g
+Passata di pomodoro	600 g
+Patate rosse	400 g
+Caciocavallo	220 g
+Pangrattato	100 g
+Brodo vegetale o acqua calda	250 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

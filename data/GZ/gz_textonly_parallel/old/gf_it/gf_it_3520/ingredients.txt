@@ -1,0 +1,12 @@
+ingredient	quantity
+Riso Arborio	300 g
+Radicchio trevigiano	250 g
+Gorgonzola	150 g
+Acqua circa	1 l
+Prezzemolo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	4
+Pangrattato	q.b.
+Olio di semi di arachide	q.b.

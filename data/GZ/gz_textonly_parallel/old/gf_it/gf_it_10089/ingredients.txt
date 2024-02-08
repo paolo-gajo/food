@@ -1,0 +1,6 @@
+ingredient	quantity
+Mandorle	330 g
+Amarene con sciroppo	135 g
+Zucchero	150 g
+Albumi	115 g
+Zucchero a velo	q.b.

@@ -1,0 +1,11 @@
+ingredient	quantity
+Farfalle	360 g
+Speck	150 g
+Farina 00	30 g
+Burro	20 g
+Panna fresca liquida	500 ml
+Parmigiano Reggiano DOP	100 g
+Granella di pistacchi	80 g
+Pomodorini ciliegino	6
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.

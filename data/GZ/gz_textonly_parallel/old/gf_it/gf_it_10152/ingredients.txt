@@ -1,0 +1,15 @@
+ingredient	quantity
+Pesce spada un trancio	500 g
+Pangrattato	100 g
+Menta	5 rametti
+Zenzero fresco	5 g
+Mandorle in scaglie	q.b.
+Sale fino	q.b.
+Arance	1
+Olio extravergine d'oliva	q.b.
+Scorza di limone	1
+Pepe nero	q.b.
+Mele Evelina	1
+Olio extravergine d'oliva	30 g
+Lime	1
+Sale fino	q.b.

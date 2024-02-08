@@ -1,0 +1,22 @@
+ingredient	quantity
+Pancarrè	16 fette
+Maiale macinato	200 g
+Salsiccia	100 g
+Salsiccia a punta di coltello	100 g
+Vino bianco	60 g
+Sedano	1 costa
+Carote	1
+Scalogno	1
+Aglio	1 spicchio
+Timo	2 rametti
+Rosmarino	1 rametto
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	10 g
+Brodo vegetale	250 g
+Ricotta vaccina	400 g
+Scorza di limone	½
+Parmigiano Reggiano DOP (da grattugiare)	25 g
+Pomodori secchi sott'olio	30 g
+Noce moscata (da grattugiare)	q.b.
+Sale fino	q.b.

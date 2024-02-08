@@ -1,0 +1,13 @@
+ingredient	quantity
+Uova	125 g
+Miele millefiori	12 g
+Zucchero	115 g
+Farina 00	120 g
+Farina di pistacchi	75 g
+Pasta di pistacchi	30 g
+Fragole	200 g
+Panna fresca liquida	200 g
+Zucchero a velo	30 g
+Cioccolato bianco	200 g
+Panna fresca liquida	200 g
+Cioccolato fondente	300 g

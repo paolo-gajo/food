@@ -1,0 +1,16 @@
+ingredient	quantity
+Anelli Siciliani	350 g
+Manzo (macinato)	200 g
+Maiale (macinato)	200 g
+Concentrato di pomodoro	150 g
+Piselli surgelati	200 g
+Primosale	100 g
+Vino rosso	125 g
+Caciocavallo da grattugiare	80 g
+Pangrattato	40 g
+Olio extravergine d'oliva	40 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Cipolle rosse di Tropea	80 g
+Olio extravergine d'oliva	q.b.
+Pangrattato	q.b.

@@ -1,0 +1,15 @@
+ingredient	quantity
+Patate	130 g
+Birra chiara	100 ml
+Farina 00	150 g
+Semola	150 g
+Acqua tiepida	100 ml
+Olio extravergine d'oliva	15 g
+Sale fino	8 g
+Lievito di birra secco	3 g
+Zucchero	1 cucchiaino
+Olive denocciolate	50 g
+Patate piccole	100 g
+Semi di finocchio	q.b.
+Timo	q.b.
+Alloro	q.b.

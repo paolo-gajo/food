@@ -1,0 +1,13 @@
+ingredient	quantity
+Filetto di merluzzo	600 g
+Scorza di limone grattugiata	1 cucchiaio
+Timo	1 cucchiaio
+Prezzemolo da tritare	1 cucchiaio
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	2
+Farina 00	q.b.
+Pangrattato	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di semi di girasole	q.b.

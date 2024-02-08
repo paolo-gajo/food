@@ -1,0 +1,11 @@
+ingredient	quantity
+Zucchero	50 g
+Farina 00	500 g
+Olio di semi	50 g
+Acqua tiepida	300 g
+Scorza di limone	1
+Lievito di birra secco	3 g
+Sale fino	1 pizzico
+Olio di semi per friggere	800 g
+Zucchero per la superficie	100 g
+Olio di semi per ungere le mani e il piano da lavoro	q.b.

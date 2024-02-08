@@ -1,0 +1,10 @@
+ingredient	quantity
+Cioccolato fondente	120 g
+Burro	120 g
+Zucchero	95 g
+Lievito in polvere per dolci	3 g
+Uova	155 g
+Farina 00	100 g
+Cioccolato al latte	250 g
+Panna fresca liquida	200 g
+Frutti di bosco	q.b.

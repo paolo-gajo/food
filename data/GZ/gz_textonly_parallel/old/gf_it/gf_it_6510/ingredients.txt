@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina 00	500 g
+Burro	250 g
+Zucchero a velo	200 g
+Uova medie	2
+Scorza d'arancia	1
+Marmellata di arance	500 g

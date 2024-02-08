@@ -1,0 +1,12 @@
+ingredient	quantity
+Baccalà dissalato	800 g
+Tuorli	2
+Parmigiano Reggiano DOP grattugiato	100 g
+Prezzemolo tritato	5 g
+Pinoli	50 g
+Uvetta	80 g
+Vino bianco	100 g
+Mele verdi	480 g
+Zucchero	40 g
+Zenzero fresco	q.b.
+Acqua	60 g

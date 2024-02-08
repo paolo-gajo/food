@@ -1,0 +1,15 @@
+ingredient	quantity
+Capesante	6
+Ribes	50 g
+Acqua	20 g
+Burro chiarificato	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pere Williams	1
+Grana Padano DOP Riserva oltre 20 mesi	90 g
+Pepe nero	q.b.
+Uva bianca	q.b.
+Ribes	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

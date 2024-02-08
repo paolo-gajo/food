@@ -1,0 +1,13 @@
+ingredient	quantity
+Baccalà dissalato	540 g
+Ceci precotti	400 g
+Pomodori pelati	400 g
+Acqua	180 g
+Cipolle rosse	70 g
+Peperoncino fresco piccolo	1
+Rosmarino	q.b.
+Salvia	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Timo	q.b.

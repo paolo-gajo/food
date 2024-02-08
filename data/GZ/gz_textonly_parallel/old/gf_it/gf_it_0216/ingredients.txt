@@ -1,0 +1,13 @@
+ingredient	quantity
+Melanzane lunghe	280 g
+Zucchine	200 g
+Peperoni verdi	150 g
+Peperoni gialli	150 g
+Pomodori perini	250 g
+Cipolle bianche	120 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Timo	q.b.
+Prezzemolo	q.b.
+Basilico	q.b.

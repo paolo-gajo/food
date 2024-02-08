@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina Manitoba	150 g
+Farina 00	350 g
+Lievito di birra secco	2 g
+Zucchero	10 g
+Sale fino	8 g
+Latte intero a temperatura ambiente	300 g
+Burro a temperatura ambiente	50 g
+Curcuma in polvere	5 g
+Olive riviera denocciolate	50 g
+Uva sultanina	50 g

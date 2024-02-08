@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina 00	250 g
+Zucchero	100 g
+Burro	100 g
+Uova	1
+Tuorli	1
+Lievito in polvere per dolci	8 g
+Latte intero	500 ml
+Zucchero	100 g
+Farina 00	50 g
+Tuorli	4
+Pinoli	40 g
+Latte intero	10 g
+Uova	1

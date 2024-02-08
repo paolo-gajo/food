@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina 00	500 g
+Zucchero	300 g
+Cioccolato bianco	200 g
+Burro morbido	250 g
+Latte intero a temperatura ambiente	200 g
+Uova (circa 2 a temperatura ambiente)	110 g
+Lievito in polvere per dolci	16 g
+Estratto di vaniglia	½ cucchiaino
+Cioccolato fondente al 55% (piccole pepite o tritato)	250 g
+Panna fresca liquida	350 g
+Lamponi	70 g
+Burro morbido	400 g
+Zucchero a velo	300 g
+Grappa	40 g
+Cioccolato fondente al 55% (piccole pepite o tritato)	200 g
+Panna fresca liquida	200 g
+Burro	35 g
+Lamponi	q.b.
+More	q.b.
+Meringhe	q.b.

@@ -1,0 +1,9 @@
+ingredient	quantity
+Triplo concentrato di pomodoro	35 g
+Farina 00	200 g
+Burro (freddo di frigo)	100 g
+Acqua (fredda)	40 g
+Stracciatella	550 g
+Pomodori cuore di bue	430 g
+Zucchero di canna	20 g
+Basilico	q.b.

@@ -1,0 +1,13 @@
+ingredient	quantity
+Zucchine	1
+Melanzane piccola	1
+Peperoni rossi	1
+Peperoni gialli	1
+Funghi champignon	10
+Pomodorini ciliegino	20
+Mozzarelline ciliegine	20
+Capperi sott'aceto	30 g
+Prezzemolo	1 mazzetto
+Olio extravergine d'oliva	4 cucchiai
+Succo di limone	1
+Aglio	1

@@ -1,0 +1,4 @@
+ingredient	quantity
+Susine	1050 g
+Zucchero	300 g
+Succo di limone	40 g

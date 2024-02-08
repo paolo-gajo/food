@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 0	250 g
+Acqua	125 ml
+Lievito di birra fresco	6 g
+Sale fino	½ cucchiaino
+Melanzane	1
+Pomodorini ciliegino	150 g
+Aglio	1 spicchio
+Olio di semi di arachide	q.b.
+Sale fino	q.b.
+Basilico	q.b.
+Olio extravergine d'oliva	q.b.

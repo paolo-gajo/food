@@ -1,0 +1,13 @@
+ingredient	quantity
+Peperoni verdi, gialli, rossi	600 g
+Zucchine	570 g
+Patate	350 g
+Melanzane	235 g
+Pomodorini ciliegino	250 g
+Cipolle bianche	140 g
+Acqua	300 g
+Polpa di pomodoro	210 g
+Basilico	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

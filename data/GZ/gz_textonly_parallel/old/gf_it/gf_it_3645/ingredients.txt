@@ -1,0 +1,22 @@
+ingredient	quantity
+Lenticchie secche	170 g
+Patate	200 g
+Uova medio	1
+Parmigiano Reggiano DOP da grattugiare	20 g
+Pangrattato	20 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Rana pescatrice	500 g
+Marsala	160 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Succo d'arancia	40 g
+Panna fresca liquida	20 g
+Scalogno	10 g
+Olio extravergine d'oliva	20 g
+Sale fino	q.b.
+Salvia	12 foglie
+Olio extravergine d'oliva	q.b.
+Scorza d'arancia	q.b.
+Pepe nero	q.b.

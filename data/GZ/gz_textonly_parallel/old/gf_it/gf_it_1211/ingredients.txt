@@ -1,0 +1,13 @@
+ingredient	quantity
+Pane casereccio	400 g
+Latte intero	400 g
+Uva passa	100 g
+Scorza di limone	1
+Burro a temperatura ambiente	100 g
+Zucchero	100 g
+Pangrattato	30 g
+Uova	1
+Grappa	20 g
+Pinoli	50 g
+Farina 00	100 g
+Acqua	q.b.

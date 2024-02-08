@@ -1,0 +1,15 @@
+ingredient	quantity
+Salmone affumicato norvegese	100 g
+Burro freddo	50 g
+Farina 00	50 g
+Grana Padano DOP grattugiato	20 g
+Timo	q.b.
+Rosmarino	q.b.
+Sale fino	1 pizzico
+Robiola	180 g
+Yogurt greco	180 g
+Aneto	q.b.
+Sale fino	1 pizzico
+Pepe nero	1 pizzico
+Mandorle in scaglie	10 g
+Aneto	5 g

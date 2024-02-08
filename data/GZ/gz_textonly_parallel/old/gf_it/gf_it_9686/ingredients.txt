@@ -1,0 +1,12 @@
+ingredient	quantity
+Fiocchi di avena biologici	50 g
+Lievito di birra secco	4 g
+Farina 1	335 g
+Farina integrale	150 g
+Olio extravergine d'oliva	30 g
+Sale fino	12 g
+Acqua a temperatura ambiente	415 g
+Fiocchi di sale	q.b.
+Acqua	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.

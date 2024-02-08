@@ -1,0 +1,14 @@
+ingredient	quantity
+Uova medie	4
+Zucchero	115 g
+Farina 00	80 g
+Scorza di limone	1
+Latte intero	200 g
+Amido di mais (maizena)	25 g
+Succo di limone	150 g
+Scorza di limone	2
+Zucchero	80 g
+Tuorli	3
+Gelatina in fogli	5 g
+Panna fresca liquida	250 g
+Zucchero a velo	20 g

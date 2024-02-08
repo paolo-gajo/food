@@ -1,0 +1,9 @@
+ingredient	quantity
+Farina 00	175 g
+Burro a temp ambiente	175 g
+Zucchero	175 g
+Tuorli	4
+Uova	1
+Mandorle pelate	50 g
+Lievito in polvere per dolci	5 g
+Burro	q.b.

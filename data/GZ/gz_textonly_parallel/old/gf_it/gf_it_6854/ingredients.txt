@@ -1,0 +1,19 @@
+ingredient	quantity
+Lasagne ricce 8 sfoglie	250 g
+Passata di pomodoro	300 g
+Cipolle dorate	30 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Spinaci già puliti	250 g
+Ricotta vaccina	350 g
+Grana Padano DOP da grattugiare	40 g
+Aglio	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.
+Olio extravergine d'oliva	q.b.
+Mozzarella	70 g
+Grana Padano DOP da grattugiare	10 g
+Pepe nero	q.b.
+Sale fino	q.b.
+Basilico	q.b.

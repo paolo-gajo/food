@@ -1,0 +1,5 @@
+ingredient	quantity
+Fragole	125 g
+Lamponi	60 g
+Albumi	100 g
+Zucchero	125 g

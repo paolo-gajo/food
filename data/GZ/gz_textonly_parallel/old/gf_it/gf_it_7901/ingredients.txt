@@ -1,0 +1,12 @@
+ingredient	quantity
+Pavesini	30
+Panna fresca liquida	150 ml
+Yogurt greco	125 g
+Zucchero a velo	50 g
+Gelatina in fogli	6 g
+Gocce di cioccolato fondente	200 g
+Mirtilli	100 g
+Melone cantalupo polpa	100 g
+Lamponi	70 g
+Gelatina in fogli	5 g
+Coloranti alimentari liquido arancione (facoltativo)	q.b.

@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina Manitoba	100 g
+Acqua	100 g
+Lievito di birra fresco	1 g
+Farina Manitoba	200 g
+Farina 00	200 g
+Acqua	200 g
+Lievito di birra fresco	4 g
+Malto	1 cucchiaino
+Olio extravergine d'oliva	20 g
+Sale fino	10 g
+Pomodori pelati	250 g
+Prosciutto crudo	120 g
+Gorgonzola	80 g
+Olio extravergine d'oliva	10 g
+Sale fino	1 cucchiaino

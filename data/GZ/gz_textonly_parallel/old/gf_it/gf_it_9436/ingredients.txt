@@ -1,0 +1,22 @@
+ingredient	quantity
+Manzo macinato	600 g
+Mortadella a cubetti	220 g
+Pancetta dolce a cubetti	100 g
+Pane raffermo	200 g
+Parmigiano Reggiano DOP da grattugiare	120 g
+Pecorino da grattugiare	100 g
+Uova sode	4
+Uova medie	4
+Aglio	1 spicchio
+Pangrattato	1 cucchiaio
+Prezzemolo da tritare	q.b.
+Maggiorana da tritare	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.
+Burro	150 g
+Farina 00	300 g
+Acqua ghiacciata	105 ml
+Sale fino	q.b.
+Uova	1
+Latte intero	1 cucchiaio

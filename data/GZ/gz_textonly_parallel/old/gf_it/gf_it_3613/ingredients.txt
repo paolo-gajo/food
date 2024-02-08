@@ -1,0 +1,9 @@
+ingredient	quantity
+Ricotta vaccina	250 g
+Farina	300 g
+Burro	175 g
+Uova	1
+Groviera	100 g
+Taleggio	100 g
+Prosciutto cotto di praga	100 g
+Pere	2

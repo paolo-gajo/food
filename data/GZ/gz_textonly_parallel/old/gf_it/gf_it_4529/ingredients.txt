@@ -1,0 +1,12 @@
+ingredient	quantity
+Spaghetti	400 g
+Pomodorini ciliegino	300 g
+Pomodori piccadilly	220 g
+Pomodori San Marzano	200 g
+Scalogno	40 g
+Origano	4 rametti
+Basilico	4 foglie
+Zucchero	2 cucchiaini
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.
+Parmigiano Reggiano DOP	q.b.

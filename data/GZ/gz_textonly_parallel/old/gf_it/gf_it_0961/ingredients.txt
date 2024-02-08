@@ -1,0 +1,16 @@
+ingredient	quantity
+Ricotta vaccina	200 g
+Farina 00	200 g
+Zucchero	200 g
+Burro	200 g
+Uova	3
+Lievito in polvere per dolci	10 g
+Sale fino	1 pizzico
+Scorza d'arancia	1
+Rum	30 g
+Pistacchi sgusciati	100 g
+Mandorle pelate	100 g
+Panna fresca liquida	200 g
+Cioccolato fondente	140 g
+Burro	20 g
+Granella di pistacchi	q.b.

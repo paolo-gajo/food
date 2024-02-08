@@ -1,0 +1,17 @@
+ingredient	quantity
+Galletto intero	500 g
+Sale grosso	2 kg
+Rosmarino	20 g
+Maggiorana	15 g
+Prezzemolo	10 g
+Timo	10 g
+Salvia	10 g
+Alloro	10 g
+Pepe bianco in grani	20 g
+Pepe rosa in grani	10 g
+Pomodori secchi sott'olio	40 g
+Prezzemolo	10 g
+Aglio	2 spicchi
+Limoni	1 fetta
+Olio extravergine d'oliva	10 g
+Paprika dolce	5 g

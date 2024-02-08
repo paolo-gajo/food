@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina di segale	350 g
+Farina Manitoba	150 g
+Acqua tiepida	400 ml
+Lievito di birra secco	4 g
+Malto	1 cucchiaino
+Sale fino	10 g

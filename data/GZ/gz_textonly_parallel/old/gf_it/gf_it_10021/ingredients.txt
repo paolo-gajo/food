@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina Manitoba	200 g
+Acqua	200 g
+Lievito di birra fresco	3 g
+Farina 00	800 g
+Acqua	360 g
+Malto	8 g
+Lievito di birra fresco	10 g
+Olio extravergine d'oliva	30 g
+Sale fino	30 g
+Basilico	42 g
+Olio extravergine d'oliva	40 g
+Farina 00	35 g
+Paprika in polvere	10 g
+Acqua	20 g
+Farina 00	15 g

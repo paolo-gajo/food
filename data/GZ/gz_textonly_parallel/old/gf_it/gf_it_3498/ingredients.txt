@@ -1,0 +1,17 @@
+ingredient	quantity
+Riso Roma	350 g
+Zafferano (1 bustina)	0,125 g
+Acqua	1 l
+Burro	20 g
+Parmigiano Reggiano DOP da grattugiare	30 g
+Sale fino	q.b.
+Olio extravergine d'oliva per ungere il vassoio	q.b.
+Spinaci	500 g
+Caciocavallo	250 g
+Prosciutto cotto a fette	120 g
+Acqua	200 g
+Sale fino	q.b.
+Farina 00	80 g
+Acqua	110 g
+Pangrattato	q.b.
+Olio di semi	1 l

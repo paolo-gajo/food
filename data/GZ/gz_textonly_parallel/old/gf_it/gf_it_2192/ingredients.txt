@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina 00	150 g
+Uova ( 1 uovo medio)	65 g
+Lievito in polvere per dolci	5 g
+Zucchero	40 g
+Burro freddo	50 g
+Tuorli	3
+Latte intero	200 g
+Panna fresca liquida	50 g
+Amido di mais (maizena)	20 g
+Zucchero	60 g
+Succo d'arancia	80 g
+Scorza d'arancia	1
+Arance	1
+Zucchero a velo	q.b.
+Zucchero	q.b.

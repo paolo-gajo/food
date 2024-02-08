@@ -1,0 +1,8 @@
+ingredient	quantity
+Spaghetti	320 g
+Bottarga di muggine	25 g
+Olio extravergine d'oliva	40 g
+Scalogno	35 g
+Scorza di limone	1
+Pangrattato	40 g
+Olio extravergine d'oliva	20 g

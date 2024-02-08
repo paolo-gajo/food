@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina 00	200 g
+Cioccolato fondente	200 g
+Zucchero	280 g
+Aroma alla mandorla amare	2 g
+Uova medie	5
+Burro	200 g

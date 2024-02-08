@@ -1,0 +1,8 @@
+ingredient	quantity
+Latte intero	500 ml
+Panna fresca liquida	200 g
+Pasta di nocciole	180 g
+Zucchero	125 g
+Farina 00	35 g
+Amido di mais (maizena)	15 g
+Tuorli	4

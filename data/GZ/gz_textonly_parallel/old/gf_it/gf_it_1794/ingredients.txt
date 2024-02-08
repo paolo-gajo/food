@@ -1,0 +1,9 @@
+ingredient	quantity
+Pere coscia	4
+Vino rosso	300 ml
+Acqua	200 ml
+Zucchero	200 g
+Chiodi di garofano	3
+Anice stellato	2
+Cannella in stecche	1
+Cardamomo	2 bacche

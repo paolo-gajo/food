@@ -1,0 +1,20 @@
+ingredient	quantity
+Zucchero	200 g
+Farina 00	130 g
+Fecola di patate	50 g
+Cacao amaro in polvere	30 g
+Miele	15 g
+Uova	3
+Tuorli	8
+Cioccolato bianco	500 g
+Latte intero	500 ml
+Zucchero	50 g
+Farina 00	30 g
+Tuorli	4
+Panna fresca liquida	1 l
+Zucchero a velo	40 g
+Baccello di vaniglia i semi	1
+Coloranti alimentari giallo e blu	q.b.
+Rose in pasta di zucchero	q.b.
+Fiori in ostia	q.b.
+Decorazione alimentare palline di zucchero colorate	q.b.

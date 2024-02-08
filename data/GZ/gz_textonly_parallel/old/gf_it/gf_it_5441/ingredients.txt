@@ -1,0 +1,14 @@
+ingredient	quantity
+Albumi	50 g
+Farina di mandorle	50 g
+Zucchero a velo	100 g
+Acqua	50 g
+Zucchero	100 g
+Aneto (secco)	1 cucchiaino
+Sale fino	q.b.
+Pepe nero	q.b.
+Salmone affumicato	200 g
+Robiola	200 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Aneto (fresco)	1 pizzico

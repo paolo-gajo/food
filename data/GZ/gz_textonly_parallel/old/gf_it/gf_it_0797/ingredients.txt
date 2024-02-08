@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	250 g
+Uova	2
+Tuorli	1
+Semola di grano duro rimacinata	q.b.
+Spinaci	250 g
+Ricotta	125 g
+Grana Padano DOP da grattugiare	50 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Burro	40 g
+Salvia	5 foglie

@@ -1,0 +1,11 @@
+ingredient	quantity
+Rucola	80 g
+Avocado maturo	1
+Pomodorini datterini	200 g
+Semi di zucca	20 g
+Olive taggiasche	50 g
+Succo di limone	1
+Peperoncino fresco	2
+Olio extravergine d'oliva	40 g
+Sale fino	q.b.
+Pepe nero (facoltativo)	q.b.

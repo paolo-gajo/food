@@ -1,0 +1,8 @@
+ingredient	quantity
+Ditaloni Rigati	200 g
+Zucca	600 g
+Acqua	125 ml
+Latte intero	600 ml
+Grana Padano DOP	100 g
+Sale fino	q.b.
+Pepe nero	q.b.

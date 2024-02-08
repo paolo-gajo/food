@@ -1,0 +1,14 @@
+ingredient	quantity
+Zucca	600 g
+Zucchero	180 g
+Farina 00	300 g
+Farina di nocciole	50 g
+Olio di semi	100 g
+Uova	3
+Cioccolato fondente	100 g
+Estratto di vaniglia	1 cucchiaino
+Sale fino	1 pizzico
+Lievito in polvere per dolci	10 g
+Cioccolato fondente	240 g
+Panna fresca liquida	120 ml
+Alchechengi	75 g

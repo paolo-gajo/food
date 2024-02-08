@@ -1,0 +1,12 @@
+ingredient	quantity
+Burro a temperatura ambiente	85 g
+Zucchero	100 g
+Uova (1 medio)	55 g
+Farina 00	300 g
+Sale fino	1 g
+Uvetta	230 g
+Arancia candita	80 g
+Cedro candito	80 g
+Pinoli	20 g
+Latte intero	80 g
+Lievito in polvere per dolci	10 g

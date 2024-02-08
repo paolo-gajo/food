@@ -1,0 +1,12 @@
+ingredient	quantity
+Manzo macinato	500 g
+Pane raffermo	130 g
+Parmigiano Reggiano DOP da grattugiare	50 g
+Uova medie	2
+Sale fino	3 g
+Pepe nero	3 g
+Provola affumicata	50 g
+Prezzemolo	1 ciuffo
+Timo	2 rametti
+Pangrattato	q.b.
+Olio di semi	q.b.

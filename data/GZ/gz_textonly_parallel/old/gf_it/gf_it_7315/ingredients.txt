@@ -1,0 +1,31 @@
+ingredient	quantity
+Farina 00	125 g
+Farina di grano saraceno	125 g
+Strutto	63 g
+Acqua (a temperatura ambiente)	50 g
+Sale fino	8 g
+Lievito istantaneo per preparazioni salate	3,8 g
+Miele	2,5 g
+Zucchero	7,5 g
+Latte intero (a temperatura ambiente)	53 g
+Petto di pollo	600 g
+Olio extravergine d'oliva	40 g
+Rosmarino	2 g
+Maggiorana	2 g
+Finocchietto selvatico	2 g
+Paprika affumicata	2 g
+Peperoncino in polvere	2 g
+Origano	2 g
+Zucchero di canna	2 g
+Sale fino	q.b.
+Yogurt greco	150 g
+Radicchio	100 g
+Erba cipollina	2 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Patate novelle	600 g
+Olio extravergine d'oliva	30 g
+Rosmarino	2 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Ketchup	100 g

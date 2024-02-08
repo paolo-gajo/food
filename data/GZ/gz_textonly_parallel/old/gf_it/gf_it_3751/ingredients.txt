@@ -1,0 +1,9 @@
+ingredient	quantity
+Risotto alla parmigiana	500 g
+Scamorza (provola)	200 g
+Prosciutto cotto	200 g
+Farina 00	100 g
+Pangrattato	250 g
+Acqua (fredda)	150 g
+Sale fino	q.b.
+Olio di semi di arachide	q.b.

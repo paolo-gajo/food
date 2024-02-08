@@ -1,0 +1,8 @@
+ingredient	quantity
+Uova medie	4
+Zucchero	115 g
+Farina 00	80 g
+Estratto di vaniglia	1 cucchiaino
+Nutella	350 g
+Zucchero a velo	q.b.
+Cacao amaro in polvere	q.b.

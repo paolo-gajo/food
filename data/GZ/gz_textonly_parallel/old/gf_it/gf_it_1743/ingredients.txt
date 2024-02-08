@@ -1,0 +1,10 @@
+ingredient	quantity
+Broccoli	200 g
+Patate	120 g
+Ricotta vaccina	200 g
+Salsiccia	200 g
+Tuorli	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Pasta Sfoglia	230 g
+Burro	30 g

@@ -1,0 +1,17 @@
+ingredient	quantity
+Farina Manitoba	150 g
+Lievito di birra secco	4 g
+Zucchero	5 g
+Acqua	80 g
+Farina Manitoba	400 g
+Zucchero	90 g
+Latte intero	150 g
+Tuorli (circa 3)	65 g
+Scorza d'arancia	1
+Sale fino	5 g
+Burro morbido	120 g
+Confettura d'arance	200 g
+Uvetta	200 g
+Rum	100 g
+Miele	q.b.
+Mandorle in scaglie	20 g

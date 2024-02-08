@@ -1,0 +1,5 @@
+ingredient	quantity
+Cioccolato fondente	300 g
+Cioccolato bianco	500 g
+Nocciole intere spellate	300 g
+Crema spalmabile alle nocciole	400 g

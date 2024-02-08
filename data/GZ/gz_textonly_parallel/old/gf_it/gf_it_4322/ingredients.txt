@@ -1,0 +1,18 @@
+ingredient	quantity
+Lasagne all'uovo	250 g
+Zucchine	300 g
+Parmigiano Reggiano DOP da grattugiare	q.b.
+Salsiccia	320 g
+Sedano	1 costa
+Carote	1
+Cipolle	1
+Vino rosso	50 ml
+Acqua	50 ml
+Rosmarino da tritare	1 rametto
+Aglio	1 spicchio
+Pepe nero	q.b.
+Sale fino	q.b.
+Latte intero	500 ml
+Parmigiano Reggiano DOP da grattugiare	200 g
+Burro	50 g
+Farina 00	50 g

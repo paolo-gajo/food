@@ -1,0 +1,13 @@
+ingredient	quantity
+Acqua	32 g
+Farina 00	50 g
+Lievito di birra fresco	1 g
+Sale fino ¼	cucchiaino
+Farina integrale	60 g
+Farina 00	200 g
+Acqua	150 g
+Lievito di birra fresco	5 g
+Sale fino	10 g
+Nocciole tritate	60 g
+Uova	1
+Granella di nocciole	100 g

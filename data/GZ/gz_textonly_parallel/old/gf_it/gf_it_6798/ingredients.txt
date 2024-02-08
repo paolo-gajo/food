@@ -1,0 +1,15 @@
+ingredient	quantity
+Lasagne all'uovo	500 g
+Frattaglie di pollo	350 g
+Cipolle	1
+Carote	1
+Sedano	1 costa
+Passata di pomodoro	300 g
+Parmigiano Reggiano DOP da grattugiare	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Maiale polpa	200 g
+Manzo polpa	200 g
+Pancetta	100 g
+Brodo di carne	200 ml

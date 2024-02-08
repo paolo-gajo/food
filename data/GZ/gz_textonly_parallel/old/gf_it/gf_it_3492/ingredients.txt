@@ -1,0 +1,3 @@
+ingredient	quantity
+Panna fresca liquida	600 g
+Succo di limone	15 g

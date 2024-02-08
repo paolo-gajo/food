@@ -1,0 +1,9 @@
+ingredient	quantity
+Pane senza glutine ai cereali	6 fette
+Peperoni rossi	400 g
+Avocado	250 g
+Stracciatella	150 g
+Limoni	1
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

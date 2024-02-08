@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	500 g
+Zucchero	300 g
+Burro a temperatura ambiente	250 g
+Latte intero a temperatura ambiente	250 g
+Uova (circa 5 medie) a temperatura ambiente	275 g
+Uvetta	75 g
+Arancia candita	50 g
+Arance (la scorza e il succo)	1
+Scorza di limone	1
+Baccello di vaniglia	1
+Lievito in polvere per dolci	16 g
+Burro	q.b.
+Farina 00	q.b.
+Zucchero a velo	q.b.

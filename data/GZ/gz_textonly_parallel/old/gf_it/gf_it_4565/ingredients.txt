@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	250 g
+Uova medie	3
+Acqua	150 g
+Noce moscata da grattugiare	q.b.
+Sale fino	1 pizzico
+Pomodorini ciliegino	500 g
+Scorza di limone	10 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	30 g
+Basilico	4 foglie
+Sale fino	q.b.

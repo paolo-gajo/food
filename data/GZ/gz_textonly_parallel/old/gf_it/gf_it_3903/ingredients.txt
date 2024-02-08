@@ -1,0 +1,11 @@
+ingredient	quantity
+Pancetta affumicata ( 1 fetta spessa)	100 g
+Asiago	150 g
+Funghi champignon	250 g
+Uova	6
+Panna fresca liquida	200 g
+Latte intero	400 g
+Zafferano (0,1 g)	1 bustina
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

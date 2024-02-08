@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina Manitoba	100 g
+Acqua	100 g
+Lievito di birra secco	16 g
+Zucchero	160 g
+Farina 00	300 g
+Uova	1
+Tuorli	4
+Burro	135 g
+Sale fino	1 pizzico
+Scorza di limone	1
+Scorza d'arancia	1
+Tuorli	1
+Latte intero	20 g

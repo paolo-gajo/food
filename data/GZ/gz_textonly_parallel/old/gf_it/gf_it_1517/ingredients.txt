@@ -1,0 +1,21 @@
+ingredient	quantity
+Burro	100 g
+Farina 00	400 g
+Zucchero	130 g
+Tuorli	4
+Albumi	2
+Lievito in polvere per dolci	5 g
+Scorza di limone (non trattata)	1
+Sale fino	1 pizzico
+Panna fresca liquida	25 g
+Latte intero	100 g
+Zucchero	35 g
+Amido di riso	15 g
+Tuorli	2
+Baccello di vaniglia mezza	bacca
+Ricotta di pecora	800 g
+Zucchero	280 g
+Visciole	1 kg
+Zucchero semolato	100 gr
+Uova	1
+Panna fresca liquida	1 cucchiaio

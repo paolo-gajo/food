@@ -1,0 +1,14 @@
+ingredient	quantity
+Baccalà dissalato	500 g
+Peperoni verdi	1
+Peperoni rossi	1
+Peperoni gialli	1
+Cipolle rosse	140 g
+Pomodorini ciliegino	120 g
+Vino bianco	150 g
+Acqua	150 g
+Concentrato di pomodoro	20 g
+Basilico	q.b.
+Menta	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

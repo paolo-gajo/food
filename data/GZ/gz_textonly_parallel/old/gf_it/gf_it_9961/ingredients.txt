@@ -1,0 +1,12 @@
+ingredient	quantity
+Merluzzo	300 g
+Maggiorana	3 rametti
+Timo	2 rametti
+Rosmarino	2 rametti
+Salvia	2 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Melagrana	350 g
+Acqua	230 g
+Fecola di patate	25 g

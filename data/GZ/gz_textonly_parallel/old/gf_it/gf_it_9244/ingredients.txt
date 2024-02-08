@@ -1,0 +1,14 @@
+ingredient	quantity
+Biscotti Digestive	150 g
+Burro	60 g
+Zucchero di canna	15 g
+Caffè in polvere	5 g
+Formaggio fresco spalmabile	150 g
+Panna fresca liquida	75 ml
+Ricotta vaccina	125 g
+Zucchero a velo	25 g
+Caffè	1 cucchiaio
+Gelatina in fogli	5 g
+Caffè	125 ml
+Zucchero	15 g
+Gelatina in fogli	5 g

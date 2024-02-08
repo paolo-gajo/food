@@ -1,0 +1,16 @@
+ingredient	quantity
+Mozzarella (per pizza)	240 g
+Farina 00	100 g
+Uova medie	3
+Pangrattato	100 g
+Corn flakes (non zuccherati)	80 g
+Sale fino	1 cucchiaino
+Pomodori pelati	350 g
+Cipolle bianche	1
+Panna fresca liquida	100 g
+Aglio	2 spicchi
+Peperoncino fresco	2
+Sale fino	1 cucchiaino
+Zucchero di canna	1 cucchiaino
+Olio extravergine d'oliva	10 g
+Olio di semi di arachide	q.b.

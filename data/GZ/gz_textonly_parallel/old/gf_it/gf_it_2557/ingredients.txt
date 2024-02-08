@@ -1,0 +1,9 @@
+ingredient	quantity
+Costolette di vitello senza osso	800 g
+Prosciutto cotto a fette	150 g
+Fontina	100 g
+Uova	2
+Pangrattato	150 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Burro chiarificato	200 g

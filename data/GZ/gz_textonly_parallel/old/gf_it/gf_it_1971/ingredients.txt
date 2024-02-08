@@ -1,0 +1,5 @@
+ingredient	quantity
+Zucchero	100 g
+Acqua	25 g
+Panna fresca liquida a temperatura ambiente	50 g
+Burro a temperatura ambiente	10 g

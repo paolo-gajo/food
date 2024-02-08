@@ -1,0 +1,16 @@
+ingredient	quantity
+Lasagne Sottili all'uovo	500 g
+Gamberi	800 g
+Uova	4
+Burro	30 g
+Aglio	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.
+Asparagi	1 kg
+Latte intero	750 ml
+Parmigiano Reggiano DOP da grattugiare	100 g
+Farina 00	70 g
+Burro	60 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.

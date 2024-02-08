@@ -1,0 +1,4 @@
+ingredient	quantity
+Acqua tiepida	200 g
+Semola di grano duro rimacinata	400 g
+Sale fino	q.b.

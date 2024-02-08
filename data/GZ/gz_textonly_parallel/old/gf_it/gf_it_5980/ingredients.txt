@@ -1,0 +1,5 @@
+ingredient	quantity
+Burro morbido, a pomata	50 g
+Zucchero a velo	60 g
+Albumi	50 g
+Farina 0	50 g

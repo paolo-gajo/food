@@ -1,0 +1,9 @@
+ingredient	quantity
+Pasta Sfoglia (rotonda integrale)	1 rotolo
+Salmone affumicato	100 g
+Brie	120 g
+Scorza d'arancia	1
+Tuorli	1
+Latte intero	2 cucchiai
+Semi di sesamo	q.b.
+Semi di papavero	q.b.

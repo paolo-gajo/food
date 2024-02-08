@@ -1,0 +1,15 @@
+ingredient	quantity
+Uova medie	3
+Yogurt greco 0% di grassi	150 g
+Grana Padano DOP	25 g
+Latte intero	80 g
+Olio di semi di girasole	80 g
+Farina 00	300 g
+Lievito istantaneo per preparazioni salate	16 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Mortadella (fetta unica)	80 g
+Salame napoletano (pezzo unico)	80 g
+Provolone	80 g
+Olive nere denocciolate	50 g
+Olive verdi denocciolate	50 g

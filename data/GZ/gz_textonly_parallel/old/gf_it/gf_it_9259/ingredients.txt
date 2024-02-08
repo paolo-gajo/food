@@ -1,0 +1,15 @@
+ingredient	quantity
+Burro (morbido)	220 g
+Zucchero	210 g
+Farina 00	290 g
+Uova (a temperatura ambiente)	4
+Scorza di limone	1
+Succo di limone	40 g
+Mirtilli	80 g
+Lievito in polvere per dolci	5 g
+Sale fino	1 pizzico
+Zucchero a velo	200 g
+Succo di limone	30 g
+Menta	q.b.
+Scorza di limone	q.b.
+Mirtilli	q.b.

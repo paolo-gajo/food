@@ -1,0 +1,11 @@
+ingredient	quantity
+Grana Padano DOP da grattugiare	150 g
+Ricotta vaccina	650 g
+Granella di pistacchi	50 g
+Erba cipollina	q.b.
+Scorza di limone	1
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Granella di pistacchi	q.b.
+Granella di nocciole	q.b.

@@ -1,0 +1,14 @@
+ingredient	quantity
+Acqua	160 g
+Farina 00	250 g
+Lievito di birra secco	3 g
+Strutto a temperatura ambiente	125 g
+Farina 00	250 g
+Acqua	130 g
+Prosciutto crudo	120 g
+Pancetta affumicata	80 g
+Lievito di birra secco	2 g
+Sale fino	5 g
+Zucchero	2,5 g
+Olio extravergine d'oliva	50 g
+Acqua	35 g

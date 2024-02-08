@@ -1,0 +1,16 @@
+ingredient	quantity
+Burro	50 g
+Farina 00	65 g
+Acqua	100 ml
+Uova medie	2
+Sale fino	1 pizzico
+Ricotta vaccina	250 g
+Prosciutto cotto	100 g
+Panna fresca liquida	100 ml
+Aneto	q.b.
+Sale fino	1 pizzico
+Latte intero	200 ml
+Groviera da grattugiare	80 g
+Farina 00	20 g
+Burro	20 g
+Semi di papavero neri	q.b.

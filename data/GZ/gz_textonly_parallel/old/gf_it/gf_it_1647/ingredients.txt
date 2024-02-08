@@ -1,0 +1,2 @@
+ingredient	quantity
+Pomodori San Marzano	3 kg

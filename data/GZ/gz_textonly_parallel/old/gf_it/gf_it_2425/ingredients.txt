@@ -1,0 +1,18 @@
+ingredient	quantity
+Farina 00	200 g
+Uova medie	2
+Ricotta vaccina	100 g
+Spinaci lessati	100 g
+Tuorli	4
+Albumi per spennellare	1
+Pecorino	20 g
+Grana Padano DOP	20 g
+Cipolle piccola	1
+Olio extravergine d'oliva	q.b.
+Noce moscata	q.b.
+Burro	15 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Salvia	1 mazzetto
+Burro	100 g
+Grana Padano DOP	80 g

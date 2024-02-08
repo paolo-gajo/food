@@ -1,0 +1,19 @@
+ingredient	quantity
+Farina di grano duro	300 g
+Farina 0	200 g
+Acqua	390 g
+Lievito di birra fresco	2 g
+Sale fino	10 g
+Carne di suino macinata	400 g
+Passata di pomodoro	500 g
+Uova	2
+Pane grattugiato	50 g
+Aglio	1 spicchio
+Prezzemolo	1 rametto
+Grana Padano DOP	15 g
+Olio extravergine d'oliva	20 g
+Cipolle rosse	25 g
+Sale fino	q.b.
+Basilico	q.b.
+Basilico	q.b.
+Grana Padano DOP	q.b.

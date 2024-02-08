@@ -1,0 +1,13 @@
+ingredient	quantity
+Spaghetti	500 g
+Parmigiano Reggiano DOP	100 g
+Latte intero	100 g
+Uova	8
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Passata di pomodoro	700 g
+Cipolle bianche	1
+Basilico	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.

@@ -1,0 +1,21 @@
+ingredient	quantity
+Burro (freddo ma plastico)	125 g
+Zucchero	125 g
+Farina 00	250 g
+Baccello di vaniglia	½
+Scorza di limone verde	½
+Scorza d'arancia	½
+Uova	50 g
+Ammoniaca per dolci	2 g
+Miele	10 g
+Acqua	250 g
+Semolino	75 g
+Ricotta di bufala	250 g
+Zucchero	125 g
+Uova	60 g
+Arancia candita	50 g
+Scorza d'arancia	½
+Scorza di limone verde	½
+Cannella in polvere	1 g
+Baccello di vaniglia	½
+Uova	1

@@ -1,0 +1,11 @@
+ingredient	quantity
+Biscotti secchi	180 g
+Burro fuso	100 g
+Yogurt greco	500 g
+Mascarpone	500 g
+Gelatina in fogli	12 g
+Latte intero	60 g
+Zucchero a velo	100 g
+Scorza di limone	1
+Albicocche sode e dolci	300 g
+Confettura di albicocche per spennellare	40 g

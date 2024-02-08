@@ -1,0 +1,10 @@
+ingredient	quantity
+Bruscandoli	400 g
+Uova	6
+Montasio	120 g
+Scalogno	1
+Rosmarino	3 rametti
+Brodo vegetale	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

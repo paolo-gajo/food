@@ -1,0 +1,15 @@
+ingredient	quantity
+Spaghetti di soia	200 g
+Gamberi	350 g
+Peperoni rossi	150 g
+Peperoni gialli	150 g
+Asparagi	10
+Cipollotto fresco	1 grande
+Aglio	2 spicchi
+Zucchero di canna	1 cucchiaino
+Olio di semi di girasole	4 cucchiai
+Salsa di soia	4 cucchiai
+Zenzero fresco	10 g
+Aceto di mele	1 cucchiaio
+Brodo vegetale	q.b.
+Succo d'arancia	1

@@ -1,0 +1,4 @@
+ingredient	quantity
+Parmigiano Reggiano DOP	250 g
+Panna fresca liquida	280 g
+Pepe nero	q.b.

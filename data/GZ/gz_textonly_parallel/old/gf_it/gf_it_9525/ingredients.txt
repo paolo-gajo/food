@@ -1,0 +1,20 @@
+ingredient	quantity
+Farina 00	400 g
+Uova	4
+Paprika piccante	q.b.
+Ricotta mista	300 g
+Salsiccia	250 g
+Pisellini	150 g
+Carote	100 g
+Cipolle	100 g
+Parmigiano Reggiano DOP da grattugiare	60 g
+Sedano	1 costa
+Aglio	1 spicchio
+Latte intero	100 ml
+Vino bianco	30 ml
+Olio extravergine d'oliva	q.b.
+Pangrattato	q.b.
+Timo	q.b.
+Noce moscata	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.

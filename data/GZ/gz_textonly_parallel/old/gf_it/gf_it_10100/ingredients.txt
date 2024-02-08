@@ -1,0 +1,11 @@
+ingredient	quantity
+Tranci di salmone	150 g
+Broccoli	500 g
+Patate	400 g
+Pangrattato	120 g
+Parmigiano Reggiano DOP	40 g
+Farina 00	20 g
+Pangrattato	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

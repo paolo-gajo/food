@@ -1,0 +1,4 @@
+ingredient	quantity
+Limoni a persona	3 spicchi
+Pepe bianco	q.b.
+Ostriche	12

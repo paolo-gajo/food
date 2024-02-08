@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	200 g
+Burro	100 g
+Acqua freddissima	50 g
+Sale fino pizzico	1
+Caprino	200 g
+Erbette	150 g
+Pancetta a cubetti	90 g
+Prezzemolo da tritare	q.b.
+Scorza di limone	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.

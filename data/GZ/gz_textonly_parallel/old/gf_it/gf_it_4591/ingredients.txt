@@ -1,0 +1,13 @@
+ingredient	quantity
+Riso Carnaroli	320 g
+Gamberi	600 g
+Liquirizia in polvere	4 g
+Scalogno	40 g
+Olio extravergine d'oliva	25 g
+Vino bianco	70 g
+Pecorino	15 g
+Burro	15 g
+Origano	q.b.
+Acqua	1,2 l
+Sale grosso	10 g
+Pepe nero	q.b.

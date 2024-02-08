@@ -1,0 +1,12 @@
+ingredient	quantity
+Orata	900 g
+Patate	400 g
+Aglio	2 spicchi
+Rosmarino	1 rametto
+Timo	1 rametto
+Origano secco	1 pizzico
+Limoni	2 fette
+Fiocchi di sale	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	40 g

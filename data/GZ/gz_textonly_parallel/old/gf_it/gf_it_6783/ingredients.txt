@@ -1,0 +1,13 @@
+ingredient	quantity
+Maiale filetto	1 kg
+Cipolle dorate	100 g
+Sedano	60 g
+Carote	100 g
+Rosmarino	4 rametti
+Timo	4 rametti
+Succo d'arancia	1
+Aglio	1 spicchio
+Pepe di Kampot	q.b.
+Sale fino	10 g
+Olio extravergine d'oliva	20 g
+Brodo vegetale	150 g

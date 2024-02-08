@@ -1,0 +1,12 @@
+ingredient	quantity
+Acqua	670 g
+Farina 00	600 g
+Lievito di birra fresco (circa 5 grammi se disidratato)	20 g
+Sale fino	10 g
+Zucchero	10 g
+Baccalà già dissalato	650 g
+Cavolfiore	750 g
+Olio di semi di arachide	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Prezzemolo	q.b.

@@ -1,0 +1,9 @@
+ingredient	quantity
+Uova	4
+Latte di cocco	150 g
+Cocco rapè	150 g
+Farina 00	250 g
+Zucchero	200 g
+Lievito in polvere per dolci	16 g
+Zucchero a velo	q.b.
+Cocco rapè	q.b.

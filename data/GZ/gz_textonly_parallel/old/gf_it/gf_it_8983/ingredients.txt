@@ -1,0 +1,9 @@
+ingredient	quantity
+Farina 00	140 g
+Zucchero	190 g
+Burro fuso	170 g
+Uova (circa 4 medie) a temperatura ambiente	220 g
+Fecola di patate	60 g
+Panna fresca liquida a temperatura ambiente	30 g
+Cacao amaro in polvere	20 g
+Lievito in polvere per dolci	12 g

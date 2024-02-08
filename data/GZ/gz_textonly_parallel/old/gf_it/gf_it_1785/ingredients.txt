@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina 00	200 g
+Uova (almeno 70 gr l'una)	2
+Patate	330 g
+Salsiccia	130 g
+Grana Padano DOP da grattugiare	50 g
+Timo	6 g
+Menta	6 g
+Erba cipollina	6 g
+Prezzemolo	6 g
+Aglio	2 spicchi
+Noce moscata	q.b.
+Sale fino	q.b.
+Acqua	q.b.
+Burro	40 g
+Salvia	6 foglie

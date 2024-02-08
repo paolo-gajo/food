@@ -1,0 +1,20 @@
+ingredient	quantity
+Farina 00	300 g
+Uova medie	3
+Costolette di agnello	300 g
+Costine di maiale	300 g
+Manzo biancostato	300 g
+Sedano	1 costa
+Carote	1
+Cipolle bianche	1
+Pomodori pelati	700 g
+Vino bianco	50 ml
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Carne bovina macinata	300 g
+Uova	1
+Parmigiano Reggiano DOP da grattugiare	20 g
+Noce moscata	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.

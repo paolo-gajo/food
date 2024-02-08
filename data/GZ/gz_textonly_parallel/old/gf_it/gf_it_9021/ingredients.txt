@@ -1,0 +1,14 @@
+ingredient	quantity
+Burro	250 g
+Farina 00	500 g
+Uova medie	6
+Zucchero	300 g
+Cacao amaro in polvere	30 g
+Latte intero	300 ml
+Gocce di cioccolato	50 g
+Scorza d'arancia (non trattata)	1
+Lievito in polvere per dolci	16 g
+Sale fino	1 pizzico
+Cioccolato fondente	140 g
+Panna fresca liquida	140 ml
+Gocce di cioccolato bianco	30 g

@@ -1,0 +1,11 @@
+ingredient	quantity
+Funghi champignon	250 g
+Gherigli di noci	40 g
+Vino bianco	30 g
+Robiola	100 g
+Scalogno	50 g
+Timo	q.b.
+Sale	q.b.
+Pepe	q.b.
+Baguette (o pane toscano)	200 g
+Olio extravergine d'oliva	15 g

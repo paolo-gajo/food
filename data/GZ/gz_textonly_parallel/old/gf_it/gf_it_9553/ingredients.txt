@@ -1,0 +1,20 @@
+ingredient	quantity
+Pollo intero (disossato)	2 kg
+Mele renette	2
+Burro	50 g
+Vino bianco	100 ml
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Brodo vegetale	q.b.
+Maiale macinato	200 g
+Pancetta dolce a cubetti	100 g
+Luganega	50 g
+Cipolle media	1
+Carote media	1
+Sedano	1 costa
+Aglio	1 spicchio
+Pangrattato	30 g
+Parmigiano Reggiano DOP	20 g
+Uova medio	1
+Noce moscata	q.b.
+Sale fino	q.b.

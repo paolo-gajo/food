@@ -1,0 +1,22 @@
+ingredient	quantity
+Farina 00	50 g
+Latte intero	40 ml
+Lievito di birra secco	4 g
+Farina Manitoba	180 g
+Farina 00	100 g
+Latte intero	150 ml
+Burro morbido	60 g
+Zucchero	40 g
+Uova medio	1
+Sale fino	4 g
+Latte intero	750 ml
+Panna fresca liquida	350 ml
+Zucchero	225 g
+Farina 00	75 g
+Zucchero a velo	20 g
+Gelatina in fogli	10 g
+Tuorli	9
+Baccello di vaniglia	1
+Sale fino	q.b.
+Albumi	1
+Granella di zucchero	q.b.

@@ -1,0 +1,13 @@
+ingredient	quantity
+Pasta Sfoglia (rotonda)	1 rotolo
+Patate	450 g
+Mortadella	300 g
+Emmentaler	230 g
+Panna fresca liquida	250 g
+Uova (circa 3 medie)	165 g
+Pecorino	60 g
+Parmigiano Reggiano DOP	30 g
+Timo	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

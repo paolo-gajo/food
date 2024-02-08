@@ -1,0 +1,13 @@
+ingredient	quantity
+Spaghetti	320 g
+Baccalà (peso da dissalare)	400 g
+Cipolle rosse di Tropea	60 g
+Olive verdi denocciolate	80 g
+Capperi sott'aceto	50 g
+Olio extravergine d'oliva	50 g
+Vino bianco	50 g
+Prezzemolo	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Pane di mollica	50 g
+Olio extravergine d'oliva	50 g

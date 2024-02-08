@@ -1,0 +1,14 @@
+ingredient	quantity
+Semola	200 g
+Acqua	100 g
+Strutto	30 g
+Ricotta di pecora	500 g
+Zucchero	100 g
+Semola	60 g
+Tuorli (circa 2)	26 g
+Zafferano in polvere	0,25 g
+Scorza di limone	1
+Scorza d'arancia	1
+Tuorli	1
+Latte intero	q.b.
+Zucchero a velo	q.b.

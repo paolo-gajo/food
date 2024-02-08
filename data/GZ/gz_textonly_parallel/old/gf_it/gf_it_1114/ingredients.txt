@@ -1,0 +1,13 @@
+ingredient	quantity
+Riso Carnaroli	320 g
+Gamberi code	150 g
+Seppie pulite	250 g
+Nero di seppia	10 g
+Scalogno	60 g
+Olio extravergine d'oliva	70 g
+Vino bianco	60 g
+Grana Padano DOP da grattugiare	40 g
+Prezzemolo da tritare	1 ciuffo
+Brodo vegetale	1 l
+Sale fino	q.b.
+Pepe nero	q.b.

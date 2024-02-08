@@ -1,0 +1,18 @@
+ingredient	quantity
+Farina 00	200 g
+Uova (grandi)	2
+Burrata	320 g
+Carciofi	4
+Olio extravergine d'oliva	20 g
+Aglio	1 spicchio
+Timo	2 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Acqua	q.b.
+Succo di limone	q.b.
+Pomodorini ciliegino	1 kg
+Olio extravergine d'oliva	20 g
+Sale fino	1 pizzico
+Basilico	2 foglie
+Aglio	1 spicchio
+Erba cipollina	q.b.

@@ -1,0 +1,9 @@
+ingredient	quantity
+Uova	2
+Farina di grano saraceno	180 g
+Farina 00	100 g
+Latte intero	250 ml
+Acqua	250 ml
+Olio extravergine d'oliva	1 cucchiaio
+Sale fino	q.b.
+Burro per ungere la padella	q.b.

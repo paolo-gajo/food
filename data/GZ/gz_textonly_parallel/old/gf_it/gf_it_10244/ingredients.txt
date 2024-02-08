@@ -1,0 +1,16 @@
+ingredient	quantity
+Scamorza (provola) dolce	200 g
+Edamer	200 g
+Pancarrè	12 fette
+Carote	150 g
+Zucchine	150 g
+Pisellini	85 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	20 g
+Latte intero	500 g
+Burro	40 g
+Farina	25 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata (da grattugiare)	q.b.

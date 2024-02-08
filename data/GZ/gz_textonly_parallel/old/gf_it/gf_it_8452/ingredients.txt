@@ -1,0 +1,10 @@
+ingredient	quantity
+Uova a temperatura ambiente	3
+Burro a temperatura ambiente	180 g
+Farina 00	300 g
+Zucchero	180 g
+Latte intero a temperatura ambiente	150 g
+Sale	1 pizzico
+Lievito in polvere per dolci	10 g
+Scorza di limone	2
+Baccello di vaniglia	1

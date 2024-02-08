@@ -1,0 +1,24 @@
+ingredient	quantity
+Parmigiano Reggiano DOP	100 g
+Farina 00	130 g
+Burro freddo	100 g
+Latte intero	30 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Zenzero in polvere	1 cucchiaino
+Cumino	½ cucchiaino
+Noce moscata	q.b.
+Rosmarino	q.b.
+Tuorli per spennellare	1
+Latte intero per spennellare	1 cucchiaio
+Acqua	200 g
+Zucchero	80 g
+Scorza d'arancia	1
+Zenzero fresco	1
+Rosmarino	1 rametto
+Cannella in stecche	2
+Pepe nero in grani	q.b.
+Anice stellato	3
+Succo d'arancia	200 g
+Aperol	280 g
+Prosecco	400 g

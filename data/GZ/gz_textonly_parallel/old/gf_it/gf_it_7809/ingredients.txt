@@ -1,0 +1,16 @@
+ingredient	quantity
+Burro	100 g
+Farina 00	200 g
+Acqua	70 g
+Timo	2 rametti
+Sale fino	q.b.
+Funghi porcini	380 g
+Emmentaler a fette	180 g
+Scalogno	1
+Timo	2 rametti
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	1
+Latte intero	12 g
+Semi di papavero	q.b.

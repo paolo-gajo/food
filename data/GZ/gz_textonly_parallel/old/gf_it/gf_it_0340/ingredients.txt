@@ -1,0 +1,12 @@
+ingredient	quantity
+Wurstel (grandi)	6
+Farina 00 (per infarinare)	50 g
+Farina di mais	150 g
+Farina 00	65 g
+Uova	1
+Latte intero	200 g
+Bicarbonato	5 g
+Zucchero	15 g
+Paprika dolce	1 pizzico
+Sale fino	1 pizzico
+Olio di semi	1,5 l

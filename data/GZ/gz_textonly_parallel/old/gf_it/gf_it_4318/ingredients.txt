@@ -1,0 +1,13 @@
+ingredient	quantity
+Cozze	500 g
+Vongole	500 g
+Gamberi	80 g
+Polpo	500 g
+Seppie	200 g
+Coda di rospo polpa	250 g
+Riso Carnaroli	320 g
+Prezzemolo	30 g
+Pomodorini ciliegino	150 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

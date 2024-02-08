@@ -1,0 +1,5 @@
+ingredient	quantity
+Banane	300 g
+Ghiaccio	60 g
+Cannella in stecche	2 g
+Latte intero	150 g

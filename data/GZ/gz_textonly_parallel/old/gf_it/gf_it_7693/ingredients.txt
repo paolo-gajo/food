@@ -1,0 +1,16 @@
+ingredient	quantity
+Uova	12
+Formaggio fresco spalmabile	80 g
+Spinaci	200 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	15 g
+Formaggio fresco spalmabile	100 g
+Barbabietole precotte	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Formaggio fresco spalmabile	130 g
+Concentrato di pomodoro doppio	30 g
+Paprika affumicata	1 pizzico
+Sale fino	q.b.
+Pepe nero	q.b.

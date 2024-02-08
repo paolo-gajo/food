@@ -1,0 +1,5 @@
+ingredient	quantity
+Uova	5
+Zucchero	150 g
+Baccello di vaniglia	1
+Amido di mais (maizena) senza glutine	150 g

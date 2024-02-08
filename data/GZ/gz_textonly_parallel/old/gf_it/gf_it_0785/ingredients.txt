@@ -1,0 +1,11 @@
+ingredient	quantity
+Broccoli	450 g
+Porri	1
+Patate	400 g
+Burro	30 g
+Brodo vegetale	700 ml
+Timo	2 rametti
+Sale fino	q.b.
+Pepe bianco	q.b.
+Pane	2 fette
+Olio extravergine d'oliva	q.b.

@@ -1,0 +1,26 @@
+ingredient	quantity
+Farina Manitoba	100 g
+Latte intero a temperatura ambiente	30 g
+Acqua a temperatura ambiente	70 g
+Lievito di birra fresco	10 g
+Farina Manitoba	100 g
+Zucchero	15 g
+Burro (morbido, a temperatura ambiente)	15 g
+Uova (1 grande) a temperatura ambiente	60 g
+Farina Manitoba	180 g
+Zucchero	85 g
+Uova (1 grande) a temperatura ambiente	60 g
+Burro (morbido, a temperatura ambiente)	55 g
+Sale fino	4 g
+Arancia candita	35 g
+Uvetta	70 g
+Pasta di arance	35 g
+Baccello di vaniglia i semi	1
+Amido di mais (maizena)	8 g
+Mandorle pelate	40 g
+Albumi	50 g
+Farina di mais fioretto	15 g
+Nocciole intere spellate	40 g
+Zucchero di canna	50 g
+Granella di zucchero	20 g
+Mandorle	20 g

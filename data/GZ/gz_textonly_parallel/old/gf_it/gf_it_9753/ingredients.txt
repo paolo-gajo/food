@@ -1,0 +1,19 @@
+ingredient	quantity
+Verza	16 foglie
+Provola	350 g
+Grana Padano DOP	50 g
+Sedano	1 costa
+Cipolle bianche	1
+Carote	1
+Aglio	1 spicchio
+Manzo macinato	300 g
+Passata di pomodoro	700 g
+Acqua	300 g
+Vino rosso	60 g
+Rosmarino tritato	1 rametto
+Sale fino	q.b.
+Burro	100 g
+Latte intero	1 l
+Farina 00	100 g
+Noce moscata	q.b.
+Sale fino	q.b.

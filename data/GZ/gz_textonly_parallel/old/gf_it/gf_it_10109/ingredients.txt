@@ -1,0 +1,20 @@
+ingredient	quantity
+Lasagne Verdi all'uovo	500 g
+Sgombro	900 g
+Aglio	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.
+Funghi finferli (gallinacci)	600 g
+Porri	150 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Sedano	50 g
+Carote	50 g
+Cipolle bianche	50 g
+Pepe nero in grani	6
+Alloro	1 foglia
+Olio extravergine d'oliva	60 g
+Vino bianco	50 g
+Acqua	1 l
+Olio extravergine d'oliva	100 g
+Farina 00	100 g

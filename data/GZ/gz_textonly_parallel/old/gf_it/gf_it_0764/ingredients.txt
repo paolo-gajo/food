@@ -1,0 +1,13 @@
+ingredient	quantity
+Lonza di maiale	800 g
+Patate	450 g
+Sedano	1 costa
+Carote	1
+Cipolle bianche	1
+Rosmarino	2 rametti
+Burro	20 g
+Birra scura	800 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Farina 00 (per infarinare)	50 g
+Aglio	1 spicchio

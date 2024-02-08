@@ -1,0 +1,5 @@
+ingredient	quantity
+Pasta Sfoglia rettangolare	230 g
+Marmellata di arance	350 g
+Zucchero di canna	70 g
+Tuorli	1

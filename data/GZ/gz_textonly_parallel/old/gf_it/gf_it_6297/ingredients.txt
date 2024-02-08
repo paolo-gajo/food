@@ -1,0 +1,9 @@
+ingredient	quantity
+Mele Fuji	400 g
+Yogurt greco	250 g
+Farina 00	250 g
+Zucchero	125 g
+Latte intero	150 g
+Lievito in polvere per dolci	16 g
+Cannella in polvere	2 g
+Zucchero a velo per spolverizzare la superficie	q.b.

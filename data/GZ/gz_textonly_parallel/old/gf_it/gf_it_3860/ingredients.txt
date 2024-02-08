@@ -1,0 +1,14 @@
+ingredient	quantity
+Cellentani	500 g
+Panna fresca liquida	400 g
+Latte intero	300 g
+Cheddar	300 g
+Provolone	200 g
+Edamer	150 g
+Grana Padano DOP	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Farina 00	100 g
+Uova	4
+Pangrattato	100 g
+Olio di semi di arachide	q.b.

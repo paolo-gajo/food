@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	500 g
+Burro (freddo di frigo)	250 g
+Uova (circa 2 a temperatura ambiente)	110 g
+Tuorli (circa 2 a temperatura ambiente)	30 g
+Zucchero	180 g
+Cacao amaro in polvere	10 g
+Latte intero	740 g
+Tuorli (circa 7)	120 g
+Farina 00	80 g
+Scorza di limone	1
+Zucchero	300 g
+Cioccolato fondente	100 g

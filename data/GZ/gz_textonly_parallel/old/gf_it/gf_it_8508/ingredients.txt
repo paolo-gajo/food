@@ -1,0 +1,22 @@
+ingredient	quantity
+Latte intero tiepido	18 g
+Acqua tiepida	18 g
+Farina 00	70 g
+Burro	4 g
+Olio extravergine d'oliva	4 g
+Sale fino	2 g
+Zucchero	2 g
+Malto	2 g
+Lievito di birra secco	1 g
+Latte intero tiepido	125 g
+Acqua tiepida	125 g
+Farina 00	500 g
+Burro	25 g
+Olio extravergine d'oliva	25 g
+Malto	15 g
+Zucchero	10 g
+Sale fino	10 g
+Lievito di birra secco	3 g
+Uova	1
+Semi di sesamo	q.b.
+Semi di papavero	q.b.

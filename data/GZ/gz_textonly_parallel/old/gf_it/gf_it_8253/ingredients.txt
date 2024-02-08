@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina 00	500 g
+Acqua a temperatura ambiente	300 g
+Olio extravergine d'oliva	20 g
+Sale fino	5 g
+Lievito di birra fresco	4 g
+Fiocchi di sale	q.b.
+Rosmarino	q.b.
+Olio extravergine d'oliva	30 g
+Acqua	15 g
+Olio extravergine d'oliva	q.b.

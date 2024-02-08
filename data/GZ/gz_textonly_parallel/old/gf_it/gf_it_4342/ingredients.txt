@@ -1,0 +1,10 @@
+ingredient	quantity
+Rigatoni	320 g
+Polpo	800 g
+Cipolle dorate	2 kg
+Sedano	1 costa
+Carote (media)	1
+Aglio	1 spicchio
+Vino bianco	200 g
+Olio extravergine d'oliva	q.b.
+Pecorino toscano (stagionato, da grattugiare)	q.b.

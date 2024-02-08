@@ -1,0 +1,24 @@
+ingredient	quantity
+Farina Manitoba	300 g
+Farina 00	200 g
+Burro	150 g
+Uova	150 g
+Acqua	100 g
+Zucchero	90 g
+Miele	8 g
+Lievito di birra secco	4 g
+Baccello di vaniglia i semi	½
+Sale fino	1 pizzico
+Farina 00	138 g
+Acqua	126 g
+Burro	126 g
+Farina Manitoba	76 g
+Sale fino	4 g
+Confettura di albicocche	200 g
+Uvetta	100 g
+Arancia candita	100 g
+Succo d'arancia	1
+Rum	1 cucchiaino
+Zucchero	90 g
+Acqua	80 g
+Uova medio	1

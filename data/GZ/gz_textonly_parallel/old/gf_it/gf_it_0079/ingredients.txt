@@ -1,0 +1,8 @@
+ingredient	quantity
+Acqua	180 g
+Farina 00	240 g
+Zucchero a velo	150 g
+Uova	2
+Lievito in polvere per dolci	3 g
+Miele	20 g
+Olio di semi	q.b.

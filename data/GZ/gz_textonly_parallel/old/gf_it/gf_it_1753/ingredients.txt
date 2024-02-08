@@ -1,0 +1,8 @@
+ingredient	quantity
+Rana pescatrice	800 g
+Pomodorini ciliegino	500 g
+Aglio	1 spicchio
+Basilico	q.b.
+Olio extravergine d'oliva	30 g
+Sale fino	q.b.
+Pepe nero	q.b.

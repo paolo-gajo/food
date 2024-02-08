@@ -1,0 +1,10 @@
+ingredient	quantity
+Uova (circa 6) a temperatura ambiente	330 g
+Zucchero	50 g
+Sale fino	5 g
+Farina 00	160 g
+Prosciutto cotto	150 g
+Lattuga romana	40 g
+Pomodori ramati	300 g
+Maionese	150 g
+Emmentaler	100 g

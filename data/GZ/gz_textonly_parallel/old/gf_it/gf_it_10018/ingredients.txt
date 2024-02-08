@@ -1,0 +1,15 @@
+ingredient	quantity
+Rigatoni	300 g
+Manzo macinato	350 g
+Carote	60 g
+Sedano	60 g
+Birra scura	200 g
+Melanzane	900 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Burro	20 g
+Passata di pomodoro	700 g
+Ricotta salata	50 g
+Cipolle dorate	60 g
+Olio extravergine d'oliva	50 g
+Burro	15 g

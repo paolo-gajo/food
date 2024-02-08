@@ -1,0 +1,8 @@
+ingredient	quantity
+Mele Evelina	1
+Speck	15 fette
+Salvia	10 foglie
+Olio extravergine d'oliva	40 g
+Timo	2 rametti
+Rosmarino	1 rametto
+Aglio	1 spicchio

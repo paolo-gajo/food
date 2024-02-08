@@ -1,0 +1,9 @@
+ingredient	quantity
+Lime	6
+Miele	2 cucchiai
+Semi di papavero	2 cucchiaini
+Amido di mais (maizena)	1 cucchiaino
+Acqua	1 bicchiere
+Olio extravergine d'oliva	4 cucchiai
+Mazzancolle	32
+Vino bianco	1 bicchiere

@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	150 g
+Uova (1 medio)	55 g
+Acqua	30 g
+Olio extravergine d'oliva	20 g
+Farina di mais fioretto	10 g
+Cipolle bianche	400 g
+Mele Red Delicious	280 g
+Speck	120 g
+Pangrattato	50 g
+Timo	3 g
+Rosmarino	3 g
+Salvia	3 g
+Olio extravergine d'oliva	q.b.
+Burro fuso	40 g

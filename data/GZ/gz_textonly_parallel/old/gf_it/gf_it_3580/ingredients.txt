@@ -1,0 +1,19 @@
+ingredient	quantity
+Burro freddo	35 g
+Farina 00	35 g
+Gherigli di noci	35 g
+Parmigiano Reggiano DOP da grattugiare	35 g
+Rosmarino	q.b.
+Melanzane	240 g
+Zucchine	120 g
+Peperoni rossi	100 g
+Carote	90 g
+Pisellini	50 g
+Olio extravergine d'oliva	q.b.
+Maggiorana	q.b.
+Sale fino	q.b.
+Yogurt greco	250 g
+Cipolle rosse di Tropea media	1
+Burro	30 g
+Zucchero di canna	q.b.
+Sale fino	q.b.

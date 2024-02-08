@@ -1,0 +1,12 @@
+ingredient	quantity
+Patate	800 g
+Speck	100 g
+Uova medie	2
+Grana Padano DOP da grattugiare	100 g
+Prezzemolo	q.b.
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova medio	1
+Pangrattato	q.b.
+Olio di semi di arachide	q.b.

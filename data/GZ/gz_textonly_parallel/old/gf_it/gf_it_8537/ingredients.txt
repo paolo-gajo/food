@@ -1,0 +1,10 @@
+ingredient	quantity
+Burro	125 g
+Farina 00	250 g
+Tuorli	2
+Zucchero a velo	100 g
+Baccello di vaniglia i semi diun	baccello
+Sale fino	1 pizzico
+Confettura di fragole	100 g
+Confettura di albicocche	100 g
+Confettura di mirtilli	100 g

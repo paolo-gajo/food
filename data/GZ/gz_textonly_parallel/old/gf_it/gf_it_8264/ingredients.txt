@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina 0	470 g
+Lievito di birra secco	5 g
+Zucchero	16 g
+Acqua a temperatura ambiente	230 g
+Latte intero	115 g
+Olio extravergine d'oliva	45 g
+Sale fino	12 g
+Rosmarino	q.b.
+Fiocchi di sale	q.b.
+Olio extravergine d'oliva	40 g

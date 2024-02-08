@@ -1,0 +1,16 @@
+ingredient	quantity
+Arista	1,8 kg
+Birra chiara	1 l
+Cipolle	1
+Carote	1
+Sedano	2 coste
+Aglio	1 spicchio
+Sale fino	q.b.
+Olio extravergine d'oliva	4 cucchiai
+Salvia	3 foglie
+Rosmarino	1 rametto
+Semi di finocchio	1 cucchiaino
+Bacche di ginepro	q.b.
+Pepe nero in grani	q.b.
+Pancetta a fette	50 g
+Farina 00	1 cucchiaio

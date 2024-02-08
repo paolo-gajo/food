@@ -1,0 +1,13 @@
+ingredient	quantity
+Burro	180 g
+Zucchero	200 g
+Uova a temperatura ambiente	2
+Farina 00	400 g
+Lievito in polvere per dolci	16 g
+Bicarbonato	1 cucchiaino
+Latte intero a temperatura ambiente	250 g
+Baccello di vaniglia	1
+Sale fino	1 pizzico
+Cioccolato fondente	120 g
+Cioccolato fondente	60 g
+Panna fresca liquida	60 g

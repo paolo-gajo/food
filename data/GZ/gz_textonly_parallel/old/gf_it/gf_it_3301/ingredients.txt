@@ -1,0 +1,22 @@
+ingredient	quantity
+Farina di mais bramata	200 g
+Acqua	800 ml
+Parmigiano Reggiano DOP da grattugiare	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Funghi porcini	250 g
+Funghi champignon	250 g
+Luganega	450 g
+Vino bianco secco	50 g
+Burro	40 g
+Aglio	1 spicchio
+Timo	3 rametti
+Rosmarino	3 rametti
+Noce moscata	q.b.
+Latte intero	400 ml
+Burro	40 g
+Farina 00	40 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,15 @@
+ingredient	quantity
+Pipe Rigate	320 g
+Ceci precotti	500 g
+Cipolle dorate	50 g
+Sedano	50 g
+Aglio	1 spicchio
+Sale fino	1 pizzico
+Pepe nero	q.b.
+Pancetta affumicata	100 g
+Olio extravergine d'oliva	40 g
+Passata di pomodoro	250 g
+Rosmarino	1 rametto
+Carote	50 g
+Vino bianco	50 g
+Concentrato di pomodoro	8 g

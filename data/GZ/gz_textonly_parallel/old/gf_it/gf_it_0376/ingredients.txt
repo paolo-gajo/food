@@ -1,0 +1,17 @@
+ingredient	quantity
+Biscotti secchi	180 g
+Burro	100 g
+Caffè solubile	1 cucchiaio
+Zucchero	1 cucchiaio
+Acqua calda	50 ml
+Formaggio fresco spalmabile	500 g
+Zucchero	120 g
+Panna fresca liquida	200 ml
+Acqua calda	50 ml
+Caffè solubile	2 cucchiai
+Gelatina in fogli	10 g
+Formaggio fresco spalmabile	200 g
+Zucchero a velo	2 cucchiai
+Acqua calda	1 cucchiaio
+Caffè solubile	½ cucchiaio
+Chicchi di caffè	q.b.

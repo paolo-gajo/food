@@ -1,0 +1,9 @@
+ingredient	quantity
+La Bottega di Olivia&Marino spianatine con pomodorino scarpariello e basilico	12
+Fave	250 g
+Zucchine	50 g
+Aglio	1 spicchio
+Prezzemolo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,8 @@
+ingredient	quantity
+Salmone affumicato	200 g
+Pompelmi rosa	2
+Insalata mista	60 g
+Olio extravergine d'oliva	50 g
+Sale fino	q.b.
+Riso per sushi	250 g
+Aceto di riso	30 g

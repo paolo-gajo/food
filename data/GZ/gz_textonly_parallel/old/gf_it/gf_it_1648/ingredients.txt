@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina 00	400 g
+Uova (circa 4)	220 g
+Maiale (trito)	150 g
+Vitello (trito)	100 g
+Petto di pollo	100 g
+Parmigiano Reggiano DOP grattugiato	50 g
+Olio extravergine d'oliva	30 g
+Cipolle dorate	60 g
+Sedano	50 g
+Carote	60 g
+Vino rosso	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.
+Uova (1)	55 g

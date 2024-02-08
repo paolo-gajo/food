@@ -1,0 +1,16 @@
+ingredient	quantity
+Pollo	1 kg
+Bietole	200 g
+Prezzemolo	20 g
+Farina 00	100 g
+Latte intero	90 ml
+Scalogno	1
+Erba cipollina fili	6
+Salvia	5 foglie
+Maggiorana	5 rametti
+Timo	4 rametti
+Rosmarino	2 rametti
+Aglio	1
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

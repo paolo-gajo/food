@@ -1,0 +1,13 @@
+ingredient	quantity
+Carne di suino macinata	500 g
+Mortadella	50 g
+Parmigiano Reggiano DOP	50 g
+Latte intero	50 g
+Pangrattato	30 g
+Uova (medio)	1
+Vino bianco	70 g
+Prezzemolo	1 ciuffo
+Farina 00	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	30 g

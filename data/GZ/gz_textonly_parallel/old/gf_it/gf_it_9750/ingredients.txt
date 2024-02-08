@@ -1,0 +1,21 @@
+ingredient	quantity
+Stinco di maiale affumicato	1,2 kg
+Vino rosso	60 g
+Olio extravergine d'oliva	60 g
+Sedano	50 g
+Carote	50 g
+Cipolle	50 g
+Bacche di ginepro	6
+Alloro	2 foglie
+Rosmarino	1 rametto
+Patate	1 kg
+Olio extravergine d'oliva	30 g
+Rosmarino	2 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Crauti al naturale	400 g
+Speck	100 g
+Cipolle	50 g
+Olio extravergine d'oliva	30 g
+Burro	10 g
+Sale fino	q.b.

@@ -1,0 +1,18 @@
+ingredient	quantity
+Farina 00	430 g
+Burro morbido	60 g
+Zucchero	50 g
+Latte intero	50 g
+Acqua	50 ml
+Uova (circa 3)	160 g
+Estratto di caffè	10 g
+Lievito di birra secco	3 g
+Cardamomo	1 pizzico
+Sale fino	1 cucchiaino
+Burro ammorbidito	100 g
+Zucchero di canna	100 g
+Farina 00	35 g
+Estratto di caffè	10 g
+Cannella in polvere	1 pizzico
+Zucchero	350 g
+Acqua	150 g

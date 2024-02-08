@@ -1,0 +1,9 @@
+ingredient	quantity
+Uova medie	2
+Farina 00	133 g
+Zucchero	50 g
+Burro	45 g
+Acqua	167 g
+Nutella®	300 g
+Codette colorate	q.b.
+Zucchero a velo	q.b.

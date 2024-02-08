@@ -1,0 +1,9 @@
+ingredient	quantity
+Farina 00	400 g
+Uova medie	2
+Tuorli	2
+Burro freddo	130 g
+Zucchero a velo	100 g
+Sale fino	1 pizzico
+Confettura di albicocche	200 g
+Zucchero a velo	q.b.

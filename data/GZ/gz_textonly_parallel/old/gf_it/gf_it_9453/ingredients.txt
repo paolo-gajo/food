@@ -1,0 +1,16 @@
+ingredient	quantity
+Burro freddo	125 g
+Farina 00	250 g
+Zucchero a velo	100 g
+Tuorli	2
+Scorza di limone non trattato	1
+Ciliegie	1,2 kg
+Baccello di vaniglia	1
+Zucchero	200 g
+Limoni scorza e succo (100 g)	2
+Farina di farro	70 g
+Farina di mandorle	100 g
+Mandorle non pelate	70 g
+Burro morbido	125 g
+Zucchero	100 g
+Uova medie	5

@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina di mandorle	30 g
+Farina 00	125 g
+Burro	70 g
+Zucchero a velo	50 g
+Uova	1
+Sale fino	1 pizzico
+Scorza d'arancia	½
+Birra chiara aromatica	750 ml
+Zucchero	225 g
+Farina 00	75 g
+Tuorli	9
+Frutti della passione	2
+Menta	q.b.
+Mandorle in scaglie	q.b.

@@ -1,0 +1,8 @@
+ingredient	quantity
+Uova	8
+Peperoni verdi	mezzo
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	2 cucchiai
+Peperoni rossi	mezzo
+Peperoni gialli	mezzo

@@ -1,0 +1,4 @@
+ingredient	quantity
+Fichi medi	8
+Prosciutto crudo	8 fette
+Zucchero di canna	30 g

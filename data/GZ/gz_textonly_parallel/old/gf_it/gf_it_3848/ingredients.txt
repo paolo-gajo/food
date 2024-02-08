@@ -1,0 +1,9 @@
+ingredient	quantity
+Sfoglie alle olive	12
+Carciofi	250 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	1 cucchiaio
+Salame Sant'Olcese	12 fette
+Basilico	10 foglie
+Pepe nero	q.b.
+Sale fino	q.b.

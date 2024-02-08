@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina 00	200 g
+Burro (freddo di frigo)	100 g
+Acqua (ghiacciata)	50 g
+Timo rametti	2
+Sale fino	q.b.
+Piselli secchi	100 g
+Lenticchie secche	100 g
+Carote	130 g
+Sedano	60 g
+Scalogno	60 g
+Acqua	1 l
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Uova (circa 3 medie)	185 g
+Panna fresca liquida	210 g
+Grana Padano DOP	80 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Carote	280 g
+Timo	q.b.

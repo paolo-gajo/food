@@ -1,0 +1,8 @@
+ingredient	quantity
+Farina di castagne	300 g
+Farina 00	150 g
+Sale fino	q.b.
+Acqua	300 ml
+Burro	120 g
+Salvia	5 foglie
+Ricotta salata	q.b.

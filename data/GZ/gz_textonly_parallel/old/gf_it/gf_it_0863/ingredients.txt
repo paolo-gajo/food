@@ -1,0 +1,14 @@
+ingredient	quantity
+Coniglio	1 kg
+Olio extravergine d'oliva	5 cucchiai
+Cipolle bianche	1
+Alloro	2 foglie
+Salvia	4 foglie
+Rosmarino	2 rametti
+Peperoncino fresco	1
+Aglio	2 spicchi
+Passata di pomodoro	400 g
+Vino bianco	200 ml
+Sale fino	q.b.
+Pepe nero	q.b.
+Brodo vegetale	500 ml

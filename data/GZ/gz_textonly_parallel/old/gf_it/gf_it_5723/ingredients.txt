@@ -1,0 +1,12 @@
+ingredient	quantity
+Uova	125 g
+Zucchero	75 g
+Fecola di patate	25 g
+Farina 00	35 g
+Cacao amaro in polvere	15 g
+Cioccolato fondente al 55%	75 g
+Panna fresca liquida	75 g
+Lamponi	100 g
+Miele millefiori	15 g
+Cioccolato bianco	400 g
+Coloranti alimentari liposolubili	q.b.

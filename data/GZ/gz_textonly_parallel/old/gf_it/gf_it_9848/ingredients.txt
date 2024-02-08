@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina Manitoba	600 g
+Lievito di birra fresco	12 g
+Zucchero	45 g
+Olio extravergine d'oliva	60 ml
+Latte in polvere	40 g
+Acqua tiepida	400 ml
+Sale fino	5 g
+Uova	1
+Zucchero	30 g
+Semi di sesamo	25 g
+Semi di sesamo nero	25 g

@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina 00	250 g
+Biscotti secchi	100 g
+Amaretti	100 g
+Savoiardi	300 g
+Zucchero	300 g
+Cacao amaro in polvere	50 g
+Mandorle	120 g
+Fichi secchi	120 g
+Uvetta	120 g
+Albumi (di uova medie)	6
+Vin santo	100 ml
+Cannella in polvere	1 cucchiaino
+Noce moscata da grattugiare	q.b.
+Lievito in polvere per dolci	10 g
+Zucchero a velo	q.b.

@@ -1,0 +1,30 @@
+ingredient	quantity
+Aglio	1 spicchio
+Peperoncino fresco	1
+Prezzemolo	5 rametti
+Sedano	1 costa
+Olio extravergine d'oliva	50 ml
+Cipolle dorate	1
+Pomodori pelati	200 g
+Coda di rospo	750 g
+Scorfano	850 g
+Calamari	450 g
+Scampi	400 g
+Polpo	650 g
+Seppie	300 g
+Cozze	1 kg
+Vino bianco	100 ml
+Sale fino	q.b.
+Pepe nero	q.b.
+Sedano	1 costa
+Cipolle dorate	1
+Aglio	1 spicchio
+Pepe nero in grani	5
+Prezzemolo	1 mazzetto
+Vino bianco	80 ml
+Acqua	2 l
+Scorfano scarti	q.b.
+Scampi scarti	q.b.
+Coda di rospo scarti	q.b.
+Pane	200 g
+Aglio	1 spicchio

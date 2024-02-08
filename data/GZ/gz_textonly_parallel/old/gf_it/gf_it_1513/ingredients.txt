@@ -1,0 +1,12 @@
+ingredient	quantity
+Spaghetti	320 g
+Vongole veraci	1 kg
+Fiori di zucca	200 g
+Zafferano in pistilli	0,2 g
+Vino bianco	65 g
+Aglio	3 spicchi
+Prezzemolo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Sale grosso	2 cucchiai

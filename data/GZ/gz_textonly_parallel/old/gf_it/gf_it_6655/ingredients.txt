@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	180 g
+Farina di mandorle	50 g
+Succo di limone	100 g
+Scorza di limone	1
+Burro	90 g
+Latte intero (a temperatura ambiente)	50 g
+Zucchero di canna	180 g
+Amido di mais (maizena)	50 g
+Lievito in polvere per dolci	8 g

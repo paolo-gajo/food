@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	200 g
+Burro	100 g
+Acqua	50 g
+Sale fino	1 pizzico
+Mele Granny Smith	300 g
+Burro	60 g
+Zucchero	60 g
+Scorza d'arancia	½
+Succo d'arancia	60 g
+Cannella in polvere ¼	cucchiaino
+Zucchero di canna	q.b.
+Burro	q.b.

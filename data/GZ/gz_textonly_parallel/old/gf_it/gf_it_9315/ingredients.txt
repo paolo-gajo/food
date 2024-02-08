@@ -1,0 +1,22 @@
+ingredient	quantity
+Farina 00	230 g
+Farina di nocciole	70 g
+Zucchero a velo	140 g
+Burro freddo di frigo	115 g
+Pasta di nocciole	30 g
+Cacao amaro in polvere	10 g
+Uova	1
+Baccello di vaniglia	1
+Sale fino	1 pizzico
+Ricotta vaccina	250 g
+Grano per pastiera	250 g
+Zucchero	350 g
+Burro	30 g
+Gocce di cioccolato fondente	50 g
+Cedro	50 g
+Latte intero	200 ml
+Acqua di fiori d'arancio	25 ml
+Uova	3
+Baccello di vaniglia	1
+Scorza di limone non trattato	1
+Scorza d'arancia non trattata	1

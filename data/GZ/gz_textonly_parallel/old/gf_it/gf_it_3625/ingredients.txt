@@ -1,0 +1,10 @@
+ingredient	quantity
+Tofu	320 g
+Melanzane lunghe	290 g
+Basilico	15 g
+Pomodori pizzutelli	220 g
+Olio extravergine d'oliva	40 g
+Salsa di soia	10 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di semi di arachide	q.b.

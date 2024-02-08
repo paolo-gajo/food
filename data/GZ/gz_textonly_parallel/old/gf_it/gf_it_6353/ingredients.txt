@@ -1,0 +1,20 @@
+ingredient	quantity
+Acqua (naturale, in bottiglia)	100 g
+Lievito di birra fresco	5 g
+Farina 0 (Forza = W 320)	100 g
+Farina 0 con W	320400 g
+Zucchero	55 g
+Lievito di birra fresco	8 g
+Miele	10 g
+Latte intero (fresco, freddo di frigo)	175 g
+Uova (circa 2 medie, a temperatura ambiente)	125 g
+Scorza d'arancia	1
+Olio extravergine d'oliva	75 g
+Sale fino	10 g
+Uvetta	90 g
+Pinoli	50 g
+Baccello di vaniglia	1
+Uova	q.b.
+Latte intero	q.b.
+Panna fresca liquida	400 g
+Zucchero a velo	q.b.

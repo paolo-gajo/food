@@ -1,0 +1,14 @@
+ingredient	quantity
+Latte intero	130 g
+Acqua	110 g
+Burro	90 g
+Farina 00	150 g
+Zucchero	15 g
+Uova (circa 4 medie)	225 g
+Sale fino	1 pizzico
+Zucchero	80 g
+Farina 00	80 g
+Burro	60 g
+Panna fresca liquida	300 g
+Zucchero a velo	60 g
+Baccello di vaniglia	½

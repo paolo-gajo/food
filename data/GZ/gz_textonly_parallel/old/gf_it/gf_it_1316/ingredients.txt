@@ -1,0 +1,13 @@
+ingredient	quantity
+Pasta Sfoglia	230 g
+Zucchero a velo	50 g
+Fragole	80 g
+Cioccolato fondente	80 g
+Cioccolato bianco	80 g
+Latte intero fresc	250 g
+Panna fresca liquida	180 g
+Tuorli	3
+Amido di mais (maizena)	25 g
+Zucchero	75 g
+Baccello di vaniglia	1
+Gelatina in fogli	2 g

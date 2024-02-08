@@ -1,0 +1,11 @@
+ingredient	quantity
+Tuorli	4
+Burro chiarificato	300 g
+Acqua	70 ml
+Vino bianco secco	50 ml
+Aceto di vino bianco	10 ml
+Scalogno	1
+Dragoncello	2 rametti
+Sale fino	q.b.
+Pepe bianco macinato	q.b.
+Succo di limone (facoltativo)	q.b.

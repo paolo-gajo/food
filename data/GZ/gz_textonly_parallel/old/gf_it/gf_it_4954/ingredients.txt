@@ -1,0 +1,20 @@
+ingredient	quantity
+Farina Manitoba	125 g
+Farina 00	125 g
+Acqua tiepida	150 g
+Olio extravergine d'oliva	15 g
+Malto	6 g
+Sale fino	6 g
+Lievito di birra secco	3 g
+Olio extravergine d'oliva	q.b.
+Acqua	q.b.
+Pomodori secchi sott'olio	150 g
+Ceci precotti	100 g
+Tahina	12 g
+Olio extravergine d'oliva	20 g
+Coriandolo	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Pomodori secchi sott'olio	4
+Peperoncino fresco rosso	1
+Rucola	q.b.

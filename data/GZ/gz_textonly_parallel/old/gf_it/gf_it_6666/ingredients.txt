@@ -1,0 +1,16 @@
+ingredient	quantity
+Lasagne all'uovo fresche	250 g
+Carciofi	12
+Scamorza (provola)	400 g
+Taleggio	200 g
+Grana Padano DOP	250 g
+Vino bianco	1 bicchiere
+Olio extravergine d'oliva	4 cucchiai
+Scalogno	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Latte intero	1 l
+Farina 00	80 g
+Burro	100 g
+Sale fino	q.b.
+Noce moscata	q.b.

@@ -1,0 +1,6 @@
+ingredient	quantity
+Panettone	4 fette
+Gorgonzola	100 g
+Mascarpone	120 g
+Ribes	4 rametti
+Glassa di aceto balsamico	q.b.

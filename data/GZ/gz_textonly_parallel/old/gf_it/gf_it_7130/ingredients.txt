@@ -1,0 +1,10 @@
+ingredient	quantity
+Pasta Sfoglia tonda	230 g
+Caprino	80 g
+Miele di castagno	60 g
+Timo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Tuorli	1
+Latte intero	1 cucchiaio

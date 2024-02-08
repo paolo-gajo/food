@@ -1,0 +1,5 @@
+ingredient	quantity
+Banane	400 g
+Zucchero	100 g
+Burro	30 g
+Acqua	q.b.

@@ -1,0 +1,8 @@
+ingredient	quantity
+Mele Fuji	320 g
+Pasta Sfoglia rettangolare	460 g
+Culatello in fette sottili	100 g
+Zucchero di canna	50 g
+Succo d'arancia	50 g
+Granella di nocciole	50 g
+Uova medio per spennellare	1

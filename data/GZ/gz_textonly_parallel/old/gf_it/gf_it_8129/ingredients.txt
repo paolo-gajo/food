@@ -1,0 +1,17 @@
+ingredient	quantity
+Burro freddo	100 g
+Farina 00	200 g
+Acqua ghiacciata	50 g
+Sale fino	q.b.
+Zucchine trombetta	600 g
+Porri	50 g
+Ricotta vaccina	300 g
+Grana Padano DOP da grattugiare	100 g
+Panna fresca liquida	200 g
+Uova (circa 3 medie)	160 g
+Maggiorana	3 rametti
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Burro	q.b.
+Farina 00	q.b.

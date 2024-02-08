@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	200 g
+Farina di grano saraceno	200 g
+Uova medie	4
+Patate	2
+Verza	½
+Aglio	2 spicchi
+Burro	30 g
+Salvia	q.b.
+Sale fino	q.b.
+Acqua	q.b.
+Valtellina Casera	100 g
+Burro	50 g
+Salvia	q.b.
+Pepe nero	q.b.

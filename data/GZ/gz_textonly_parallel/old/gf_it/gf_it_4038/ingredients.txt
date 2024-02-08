@@ -1,0 +1,18 @@
+ingredient	quantity
+Farina 00	300 g
+Acqua	290 g
+Semola di grano duro rimacinata	200 g
+Olio extravergine d'oliva circa	15 g
+Sale fino	q.b.
+Patate a pasta gialla	1 kg
+Pecorino sardo	100 g
+Olio extravergine d'oliva	80 g
+Aglio	1 spicchio
+Menta	14 foglie
+Sale fino	q.b.
+Pepe nero	q.b.
+Passata di pomodoro	500 g
+Olio extravergine d'oliva	30
+Basilico	3 foglie
+Aglio	1 spicchio
+Sale fino	q.b.

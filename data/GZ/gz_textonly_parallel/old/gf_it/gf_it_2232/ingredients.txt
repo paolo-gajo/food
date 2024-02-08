@@ -1,0 +1,12 @@
+ingredient	quantity
+Latte intero	125 ml
+Farina 00	65 g
+Uova	1
+Burro	10 g
+Parmigiano Reggiano DOP	10 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Zucchine	400 g
+Primosale	250 g
+Prosciutto cotto	150 g
+Sale fino	q.b.

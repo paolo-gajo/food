@@ -1,0 +1,9 @@
+ingredient	quantity
+Burro freddo	100 g
+Farina 0	200 g
+Acqua fredda	60 g
+Bresaola	120 g
+Robiola	180 g
+Pistacchi sgusciati	80 g
+Uova	1
+Granella di pistacchi	q.b.

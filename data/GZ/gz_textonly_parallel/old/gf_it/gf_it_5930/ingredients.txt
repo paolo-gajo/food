@@ -1,0 +1,12 @@
+ingredient	quantity
+Melanzane	700 g
+Maiale carne trita	300 g
+Passata di pomodoro	300 g
+Cipolle	1
+Pane raffermo	50 g
+Vino bianco	60 g
+Olio extravergine d'oliva	q.b.
+Basilico	6 foglie
+Pepe nero	1 pizzico
+Sale fino	1 pizzico
+Caciocavallo	175 g

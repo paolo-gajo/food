@@ -1,0 +1,11 @@
+ingredient	quantity
+Panna fresca liquida	400 ml
+Latte di cocco	400 ml
+Gelatina in fogli	10 g
+Zucchero	120 g
+Lamponi	200 g
+Zucchero a velo	20 g
+Succo di limone	20 ml
+Lamponi	6
+Menta	12 foglie
+Cocco rapè a	piacere

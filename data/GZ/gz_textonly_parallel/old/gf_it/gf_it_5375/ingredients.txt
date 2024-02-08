@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina 0	250 g
+Farina 00	500 g
+Latte intero	300 g
+Acqua	200 g
+Strutto	60 g
+Olio extravergine d'oliva	50 g
+Lievito di birra secco (o fresco 11 g)	3 g
+Sale fino	1 cucchiaino
+Crescenza	300 g
+Prosciutto crudo	200 g

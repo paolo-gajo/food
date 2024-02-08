@@ -1,0 +1,9 @@
+ingredient	quantity
+Cioccolato fondente	340 g
+Zucchero	200 g
+Burro	170 g
+Cacao amaro in polvere	150 g
+Uova medie	3
+Estratto di vaniglia	5 g
+Sale fino	3 g
+Zucchero a velo	q.b.

@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina Manitoba	100 g
+Farina integrale	50 g
+Farina 00	300 g
+Acqua a temperatura ambiente	250 g
+Olio di riso	40 g
+Zucchero	60 g
+Lievito di birra fresco	10 g
+Baccello di vaniglia	1
+Sale fino	5 g
+Margarina vegetale (in panetto)	250 g
+Acqua	100 g
+Zucchero	100 g

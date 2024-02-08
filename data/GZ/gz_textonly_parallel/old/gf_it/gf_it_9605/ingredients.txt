@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina 0	175 g
+Farina Manitoba	175 g
+Yogurt	100 g
+Latte intero tiepido	70 g
+Gocce di cioccolato fondente	70 g
+Zucchero	50 g
+Olio di semi di girasole	40 g
+Miele	1 cucchiaino
+Uova medio	1
+Tuorli	1
+Lievito di birra secco	3 g
+Sale fino	4 g
+Scorza d'arancia non trattato	1
+Uova	1
+Latte intero	1 cucchiaio

@@ -1,0 +1,4 @@
+ingredient	quantity
+Albumi	100 g
+Zucchero a velo	220 g
+Coloranti alimentari in gel, colori a piacere	q.b.

@@ -1,0 +1,20 @@
+ingredient	quantity
+Farina 0	250 g
+Miele	10 g
+Sale	1 pizzico
+Birra	150 ml
+Lievito di birra fresco	18 g
+Timo	1 cucchiaio
+Parmigiano Reggiano DOP grattugiato	1 cucchiaio
+Sale fino	q.b.
+Pepe nero	q.b.
+Robiola	100 g
+Triplo concentrato di pomodoro	1 cucchiaio
+Zucchine	1
+Carote	1
+Zucca polpa	100 g
+Cipolle rosse di Tropea	1
+Peperoni rossi	1/2
+Uova per spennellare	1
+Olio extravergine d'oliva	q.b.
+Peperoni gialli	1/2

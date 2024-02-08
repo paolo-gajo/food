@@ -1,0 +1,5 @@
+ingredient	quantity
+Flour 00	4 cups	(550 g)
+Dry white wine	1 cup	(200 g)
+Extra virgin olive oil	½ cup	(120 g)
+Fine salt	2 tsp	(10 g)

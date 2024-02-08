@@ -1,0 +1,12 @@
+ingredient	quantity
+Biscotti secchi	325 g
+Latte intero a temperatura ambiente	250 g
+Panna fresca liquida	200 g
+Zucchero	20 g
+Cacao amaro in polvere	5 cucchiai
+Tuorli	6
+Amido di mais (maizena)	70 g
+Baccello di vaniglia	1
+Zucchero	220 g
+Latte intero	630 g
+Panna fresca liquida	150 g

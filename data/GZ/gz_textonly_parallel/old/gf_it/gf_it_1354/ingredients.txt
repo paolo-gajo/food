@@ -1,0 +1,11 @@
+ingredient	quantity
+Burro fuso tiepido	25 g
+Farina 00	125 g
+Uova	2
+Latte intero	200 g
+Lievito in polvere per dolci	6 g
+Zucchero	15 g
+Nutella®	300 g
+Lamponi	q.b.
+Mirtilli	q.b.
+Ribes rosso	q.b.

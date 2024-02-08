@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	250 g
+Zucchero	20 g
+Sale fino	3 g
+Lievito di birra fresco	8 g
+Acqua	50 g
+Uova ( 1 uovo)	60 g
+Burro morbido	20 g
+Tuorli	1
+Latte intero	50 g

@@ -1,0 +1,14 @@
+ingredient	quantity
+Biscotti Digestive	255 g
+Burro	100 g
+Cioccolato fondente	100 g
+Ricotta vaccina	750 g
+Formaggio fresco spalmabile	250 g
+Cioccolato bianco	250 g
+Panna fresca liquida	150 g
+Zucchero a velo	50 g
+Gelatina	15 g
+Lamponi	300 g
+Zucchero a velo	20 g
+Lamponi	300 g
+Cioccolato bianco	100 g

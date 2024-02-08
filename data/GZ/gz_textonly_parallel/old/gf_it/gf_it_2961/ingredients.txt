@@ -1,0 +1,16 @@
+ingredient	quantity
+Manzo	500 g
+Pecorino da grattugiare	80 g
+Uova grandi	2
+Grana Padano DOP da grattugiare	80 g
+Prezzemolo da tritare	3 cucchiai
+Aglio	1 spicchio
+Pepe nero	q.b.
+Sale fino	q.b.
+Pane casereccio	250 g
+Mortadella (2 fette)	150 g
+Salsiccia fresca	100 g
+Finocchietto selvatico	q.b.
+Noce moscata	q.b.
+Pangrattato	q.b.
+Olio di semi di arachide	q.b.

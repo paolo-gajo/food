@@ -1,0 +1,17 @@
+ingredient	quantity
+Vitello macinato	600 g
+Acqua	1,5 l
+Cipollotto fresco	50 g
+Pane raffermo mollica	50 g
+Brodo vegetale	50 ml
+Uova	2
+Aglio	½ spicchio
+Timo	20 rametti
+Alloro	3 foglie
+Pepe nero in grani	15
+Erba cipollina	5 g
+Prezzemolo	5 g
+Maggiorana	5 g
+Finocchietto selvatico	5 g
+Sale fino	q.b.
+Pepe nero	q.b.

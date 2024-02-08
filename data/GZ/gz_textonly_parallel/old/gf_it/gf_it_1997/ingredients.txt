@@ -1,0 +1,8 @@
+ingredient	quantity
+Mandorle	100 g
+Burro	150 g
+Zucchero	100 g
+Farina 00	250 g
+Uova (medio)	1
+Baccello di vaniglia	1
+Zucchero a velo	q.b.

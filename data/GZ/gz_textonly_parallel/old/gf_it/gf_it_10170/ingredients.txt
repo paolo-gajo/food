@@ -1,0 +1,14 @@
+ingredient	quantity
+Stracchino consistenza media	400 g
+Basilico	q.b.
+Pomodorini ciliegino	350 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Zucchero	q.b.
+Pepe nero	q.b.
+Basilico	35 g
+Acqua	100 g
+Olio di semi di mais	25 g
+Burro fuso	15 g
+Sale fino	q.b.
+Amido di mais (maizena)	20 g

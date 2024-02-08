@@ -1,0 +1,15 @@
+ingredient	quantity
+Noodles	360 g
+Lonza di maiale filetto intero	250 g
+Uova medie	4
+Cipollotto fresco	6
+Acqua	800 ml
+Miso	15 g
+Salsa di soia	15 g
+Sake	10 g
+Olio di sesamo	10 g
+Naruto	1 panetto
+Aglio in polvere	1 cucchiaino
+Zenzero fresco	q.b.
+Olio di oliva	q.b.
+Sale fino	q.b.

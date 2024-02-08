@@ -1,0 +1,18 @@
+ingredient	quantity
+Albumi	300 g
+Zucchero	600 g
+Acqua	120 g
+Panna fresca liquida	250 g
+Fragole	200 g
+Albumi	50 g
+Zucchero	100 g
+Acqua	30 g
+Tuorli	2
+Amido di mais (maizena)	15 g
+Zucchero	45 g
+Baccello di vaniglia	1
+Panna fresca liquida	35 g
+Latte intero	135 g
+Panna fresca liquida	150 g
+Meringhe sbriciolata (una parte di quella preparata)	q.b.
+Fragole	50 g

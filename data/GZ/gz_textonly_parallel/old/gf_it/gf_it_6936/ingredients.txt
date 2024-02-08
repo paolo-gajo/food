@@ -1,0 +1,8 @@
+ingredient	quantity
+Patate piccole	8
+Pancetta affumicata	70 g
+Prezzemolo tritato	2 cucchiai
+Cheddar	120 g
+Burro	50 g
+Sale fino	q.b.
+Pepe nero	q.b.

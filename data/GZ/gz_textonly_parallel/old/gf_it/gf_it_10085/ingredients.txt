@@ -1,0 +1,20 @@
+ingredient	quantity
+Lasagne all'uovo	15
+Zucchine	200 g
+Carote	200 g
+Melanzane	200 g
+Porri	1
+Funghi champignon	150 g
+Pisellini	120 g
+Olio extravergine d'oliva	30 g
+Timo	2 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Prosciutto cotto (una sola fetta)	200 g
+Parmigiano Reggiano DOP (da grattugiare)	100 g
+Olio extravergine d'oliva (per spennellare)	q.b.
+Latte intero	500 g
+Fontina	300 g
+Burro	50 g
+Farina 00	50 g
+Noce moscata (da grattugiare)	q.b.

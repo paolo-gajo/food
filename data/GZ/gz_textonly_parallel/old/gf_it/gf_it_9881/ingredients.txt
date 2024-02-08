@@ -1,0 +1,12 @@
+ingredient	quantity
+Lasagne Sottili all'uovo	250 g
+Grana Padano DOP da grattugiare	50 g
+Speck	300 g
+Castagne	1 kg
+Latte intero	500 ml
+Noce moscata da grattugiare	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Radicchio	800 g
+Scalogno	80 g
+Vino bianco	30 ml

@@ -1,0 +1,9 @@
+ingredient	quantity
+Mozzarella	500 g
+Uova medie	2
+Latte intero	20 ml
+Pepe nero	q.b.
+Sale fino	q.b.
+Pangrattato	q.b.
+Farina 00	q.b.
+Olio di semi di arachide	q.b.

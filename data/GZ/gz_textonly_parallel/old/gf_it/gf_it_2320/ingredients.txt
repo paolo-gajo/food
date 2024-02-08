@@ -1,0 +1,12 @@
+ingredient	quantity
+Zucchero	400 g
+Senape essenza	10 gocce
+Mele	100 g
+Pere	100 g
+Ananas	100 g
+Ciliegie	100 g
+Albicocche	100 g
+Pesche	100 g
+Fichi	50 g
+Mandarini	100 g
+Arance	50 g

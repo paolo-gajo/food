@@ -1,0 +1,14 @@
+ingredient	quantity
+Gallinella (filetti puliti)	400 g
+Pomodorini ciliegino	300 g
+Carote	100 g
+Sedano	100 g
+Cipollotti	50 g
+Vino bianco	20 g
+Acqua	300 g
+Aglio	1 spicchio
+Peperoncino fresco	1
+Timo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

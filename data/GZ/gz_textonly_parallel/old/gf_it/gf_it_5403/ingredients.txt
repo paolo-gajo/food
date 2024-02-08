@@ -1,0 +1,11 @@
+ingredient	quantity
+Capesante	8
+Funghi champignon	250 g
+Prezzemolo	20 g
+Burro	20 g
+Vino bianco secco	50 g
+Panna fresca liquida	150 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.

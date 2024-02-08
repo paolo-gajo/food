@@ -1,0 +1,4 @@
+ingredient	quantity
+Mandorle	150 g
+Zucchero	120 g
+Acqua	35 g

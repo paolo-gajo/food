@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	210 g
+Olio di semi di arachide	60 g
+Olio extravergine d'oliva	30 g
+Zucchero	170 g
+Uova	1
+Caffè forte	30 g
+Sale fino	1 pizzico
+Bicarbonato	3 g
+Cioccolato fondente	150 g

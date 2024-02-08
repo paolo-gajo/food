@@ -1,0 +1,13 @@
+ingredient	quantity
+Baccalà dissalato	500 g
+Cipolle dorate	200 g
+Farina 00	100 g
+Passata di pomodoro	600 g
+Olio extravergine d'oliva	40 g
+Capperi sotto sale (da dissalare)	30 g
+Olive taggiasche	60 g
+Origano secco	1 cucchiaio
+Vino bianco	40 g
+Pepe nero	q.b.
+Sale fino	q.b.
+Prezzemolo	q.b.

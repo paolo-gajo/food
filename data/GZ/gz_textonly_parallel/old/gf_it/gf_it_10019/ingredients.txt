@@ -1,0 +1,16 @@
+ingredient	quantity
+Caffè	60 g
+Mascarpone	500 g
+Panna fresca liquida	200 g
+Zucchero a velo	50 g
+Gelatina in fogli	5 g
+Acqua	25 g
+Albumi	80 g
+Cacao amaro in polvere	15 g
+Farina di mandorle	90 g
+Zucchero a velo	90 g
+Zucchero	100 g
+Panna fresca liquida	100 g
+Cioccolato fondente	125 g
+Caffè solubile	2 cucchiaini
+Cioccolato fondente	q.b.

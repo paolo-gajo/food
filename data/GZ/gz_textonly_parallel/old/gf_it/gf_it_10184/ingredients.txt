@@ -1,0 +1,21 @@
+ingredient	quantity
+Albumi	100 g
+Tuorli	50 g
+Zucchero	100 g
+Farina 00	80 g
+Cacao amaro in polvere	20 g
+Latte intero	100 g
+Panna fresca liquida	25 g
+Zucchero	35 g
+Tuorli	2
+Amido di mais (maizena)	12 g
+Cioccolato fondente	40 g
+Acqua	150 g
+Panna fresca liquida	120 g
+Zucchero	175 g
+Cacao amaro in polvere	65 g
+Gelatina in fogli	6 g
+Cioccolato fondente al 70% sfoglie	q.b.
+Cioccolato bianco	240 g
+Cioccolato al latte	240 g
+Tartufi di cioccolato (al latte)	q.b.

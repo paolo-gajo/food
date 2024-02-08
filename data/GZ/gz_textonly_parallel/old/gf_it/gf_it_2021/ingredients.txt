@@ -1,0 +1,25 @@
+ingredient	quantity
+Sottofesa di vitello	1,2 kg
+Carote	1
+Sedano	1 costa
+Cipolle	1
+Vino bianco	100 g
+Olio extravergine d'oliva	30 g
+Rosmarino	1 rametto
+Acqua calda	150 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Spinaci	300 g
+Pane mollica	50 g
+Prosciutto cotto	150 g
+Uova	1
+Grana Padano DOP	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	20 g
+Aglio	1 spicchio
+Patate	1 kg
+Olio extravergine d'oliva	40 g
+Aglio	1 spicchio
+Rosmarino	1 rametto
+Sale fino	q.b.

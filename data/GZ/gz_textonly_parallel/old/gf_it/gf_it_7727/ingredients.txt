@@ -1,0 +1,7 @@
+ingredient	quantity
+Pasta kataifi	250 g
+Acqua	150 g
+Zucchero	230 g
+Nutella®	330 g
+Granella di pistacchi	q.b.
+Melagrana	q.b.

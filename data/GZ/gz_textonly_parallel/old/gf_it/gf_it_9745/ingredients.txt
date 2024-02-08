@@ -1,0 +1,22 @@
+ingredient	quantity
+Uova medie	2
+Farina 00	200 g
+Melanzane	1
+Patate media	1
+Zucchine media	1
+Carote media	1
+Cipolle media	1
+Pomodorini ciliegino	10
+Funghi champignon	4
+Sedano	1 costa
+Peperoni rossi	½
+Peperoni gialli	½
+Porri	½
+Aglio	1 spicchio
+Concentrato di pomodoro	1 cucchiaio
+Parmigiano Reggiano DOP da grattugiare	q.b.
+Latte intero	300 ml
+Burro	25 g
+Farina 00	25 g
+Sale fino	q.b.
+Noce moscata	q.b.

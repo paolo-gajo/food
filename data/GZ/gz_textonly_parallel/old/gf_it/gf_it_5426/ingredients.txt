@@ -1,0 +1,8 @@
+ingredient	quantity
+Succo d'arancia	300 ml
+Scorza d'arancia biologica	1
+Pectina	5 g
+Zucchero	250 g
+Succo di limone	1 cucchiaino
+Burro per la teglia	q.b.
+Zucchero	q.b.

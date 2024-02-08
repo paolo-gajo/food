@@ -1,0 +1,9 @@
+ingredient	quantity
+Caffè	60 ml
+Tuorli (circa 5 tuorli)	80 g
+Zucchero	80 g
+Panna fresca liquida	350 ml
+Mascarpone	100 g
+Panna fresca liquida	q.b.
+Chicchi di caffè	q.b.
+Cioccolato fondente	50 g

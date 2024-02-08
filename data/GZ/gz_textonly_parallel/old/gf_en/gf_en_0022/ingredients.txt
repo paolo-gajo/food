@@ -1,0 +1,5 @@
+ingredient	quantity
+Eggs	2	-cold
+Flour 00	1 &frac13 cup	(150 g)
+Whole milk	¾ cup	(200 g)	- cold
+Fine salt	to taste

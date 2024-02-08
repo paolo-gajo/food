@@ -1,0 +1,29 @@
+ingredient	quantity
+Manzo noce o fesa	1,5 kg
+Vino rosso Borgogna	1 l
+Pancetta (tesa) con cotenna	200 g
+Carote	200 g
+Cipolle	200 g
+Farina 00	30 g
+Concentrato di pomodoro	25 g
+Brodo di manzo	1 l
+Olio extravergine d'oliva	50 ml
+Aglio	2 spicchi
+Timo	3 rametti
+Alloro	3 foglie
+Rosmarino	1 rametto
+Pepe nero	q.b.
+Sale fino	q.b.
+Cipolline	300 g
+Brodo di manzo	100 ml
+Alloro	1 foglia
+Burro	10 g
+Olio extravergine d'oliva	1 cucchiaio
+Sale fino	q.b.
+Pepe nero	q.b.
+Funghi champignon	500 g
+Olio extravergine d'oliva	2 cucchiai
+Aglio	1 spicchio
+Prezzemolo da tritare	1 cucchiaio
+Sale fino	q.b.
+Pepe nero	q.b.

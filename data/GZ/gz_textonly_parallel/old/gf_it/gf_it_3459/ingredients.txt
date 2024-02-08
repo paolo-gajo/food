@@ -1,0 +1,9 @@
+ingredient	quantity
+Fave da pulire	200 g
+Pisellini da pulire	200 g
+Fagiolini	200 g
+Uova	5
+Pecorino da grattugiare	40 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Brodo vegetale	q.b.

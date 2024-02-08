@@ -1,0 +1,13 @@
+ingredient	quantity
+Biscotti secchi al cioccolato	160 g
+Burro	80 g
+Cioccolato fondente	200 g
+Cacao amaro in polvere	20 g
+Ricotta di bufala	250 g
+Formaggio fresco spalmabile	250 g
+Amido di mais (maizena)	50 g
+Zucchero	120 g
+Uova medie	2
+Baccello di vaniglia	½
+Latte intero	200 ml
+Panna fresca liquida	150 ml

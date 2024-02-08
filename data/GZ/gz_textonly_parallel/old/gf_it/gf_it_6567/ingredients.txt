@@ -1,0 +1,20 @@
+ingredient	quantity
+Cannelloni all'uovo	24
+Manzo trita	500 g
+Carote	1
+Sedano	1 costa
+Cipolle	1
+Aglio	1 spicchio
+Vino bianco	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	30 g
+Brodo vegetale	300 g
+Rosmarino	1 rametto
+Timo	1 rametto
+Latte intero	1 l
+Farina 00	60 g
+Sale fino	q.b.
+Noce moscata	q.b.
+Burro	80 g
+Grana Padano DOP	150 g

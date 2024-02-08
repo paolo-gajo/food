@@ -1,0 +1,9 @@
+ingredient	quantity
+Farina 00	1 kg
+Acqua tiepida	600 g
+Olio extravergine d'oliva	60 g
+Zucchero	25 g
+Sale fino	25 g
+Lievito di birra fresco	8 g
+Tuorli	1
+Acqua	q.b.

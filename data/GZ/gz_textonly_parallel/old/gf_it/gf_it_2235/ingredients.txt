@@ -1,0 +1,4 @@
+ingredient	quantity
+Cocomero (anguria)	1 kg
+Succo d'arancia	70 g
+Zucchero	180 g

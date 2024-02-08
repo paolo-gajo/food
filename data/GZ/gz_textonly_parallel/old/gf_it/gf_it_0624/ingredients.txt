@@ -1,0 +1,9 @@
+ingredient	quantity
+Melanzane	1 kg
+Mandorle pelate	60 g
+Grana Padano DOP grattugiato	20 g
+Olio extravergine d'oliva	50 g
+Scorza di limone	1
+Menta	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,9 @@
+ingredient	quantity
+Gamberi da pulire	500 g
+Carote	100 g
+Zucchine	100 g
+Acqua gassata ghiacciata	300 g
+Farina di riso	100 g
+Farina 00	100 g
+Ghiaccio	q.b.
+Olio di semi di girasole	q.b.

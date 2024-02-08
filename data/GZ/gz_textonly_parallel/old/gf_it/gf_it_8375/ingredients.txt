@@ -1,0 +1,5 @@
+ingredient	quantity
+Farina 00	550 g
+Vino bianco secco	200 g
+Olio extravergine d'oliva	120 g
+Sale fino	10 g

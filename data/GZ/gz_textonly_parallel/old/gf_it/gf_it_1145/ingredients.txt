@@ -1,0 +1,17 @@
+ingredient	quantity
+Riso Roma	320 g
+Zucchine	300 g
+Gamberi	450 g
+Cipolle bianche	80 g
+Grana Padano DOP (da grattugiare)	60 g
+Erba cipollina	q.b.
+Burro	20 g
+Olio extravergine d'oliva	q.b.
+Vino bianco	50 g
+Aglio	1 spicchio
+Sale fino	q.b.
+Sedano	80 g
+Carote	100 g
+Cipolle bianche	100 g
+Acqua	1 l
+Sale fino	q.b.

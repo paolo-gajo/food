@@ -1,0 +1,12 @@
+ingredient	quantity
+Dischetti di pasta	16
+Olio extravergine d'oliva	q.b.
+Tuorli	1
+Rucola	100 g
+Barbabietole	70 g
+Noci	50 g
+Ravanelli	100 g
+Olio extravergine d'oliva	q.b.
+Aceto balsamico	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	250 g
+Semolino	50 g
+Latte intero	250 g
+Zucchero	200 g
+Olio di semi di girasole	120 g
+Lievito in polvere per dolci	16 g
+Curcuma in polvere	8 g
+Tahina	q.b.
+Pinoli	q.b.

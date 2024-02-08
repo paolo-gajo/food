@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	200 g
+Farina di mais fioretto	200 g
+Mandorle pelate	100 g
+Mandorle	50 g
+Burro freddo	200 g
+Parmigiano Reggiano DOP	200 g
+Tuorli	37 g
+Scorza di limone	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Prosciutto cotto	200 g
+Scamorza (provola)	180 g
+Parmigiano Reggiano DOP	30 g
+Pepe nero	q.b.

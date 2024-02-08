@@ -1,0 +1,14 @@
+ingredient	quantity
+Patate	900 g
+Cipolle dorate	300 g
+Burro	10 g
+Olio extravergine d'oliva	10 g
+Prezzemolo	q.b.
+Latte intero	500 ml
+Burro	50 g
+Farina 00	25 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Pangrattato	20 g
+Burro	q.b.

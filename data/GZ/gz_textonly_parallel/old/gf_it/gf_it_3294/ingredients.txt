@@ -1,0 +1,23 @@
+ingredient	quantity
+Riso Carnaroli	300 g
+Scalogno	50 g
+Olio extravergine d'oliva	30 g
+Vino bianco	50 g
+Brodo vegetale	800 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Zafferano	1 bustina
+Grana Padano DOP	65 g
+Burro	15 g
+Farina 00	15 g
+Latte intero	150 g
+Sale fino	q.b.
+Noce moscata da grattugiare	q.b.
+Granella di pistacchi	30 g
+Caciocavallo	55 g
+Farina 00	130 g
+Acqua	195 g
+Sale fino	q.b.
+Pangrattato	150 g
+Olio di semi di arachide	800 g
+Farina di pistacchi	10 g

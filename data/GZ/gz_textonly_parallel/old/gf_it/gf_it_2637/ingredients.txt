@@ -1,0 +1,16 @@
+ingredient	quantity
+Filetto di manzo Chauteaubriand	500 g
+Burro	70 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Tuorli	4
+Burro chiarificato	300 g
+Scalogno	1
+Acqua	70 ml
+Vino bianco secco	50 ml
+Aceto di vino bianco	10 ml
+Dragoncello da tritare	q.b.
+Pepe bianco macinato	q.b.
+Sale fino	q.b.
+Succo di limone (facoltativo)	q.b.

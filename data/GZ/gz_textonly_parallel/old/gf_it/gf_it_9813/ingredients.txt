@@ -1,0 +1,15 @@
+ingredient	quantity
+Burro	100 g
+Farina 00	180 g
+Farina di mandorle	40 g
+Zucchero di canna integrale (fine)	80 g
+Uova (1 medio)	55 g
+Tè verde Matcha	10 g
+Latte intero	500 g
+Tuorli (di circa 4-5 uova medie)	70 g
+Zucchero	50 g
+Amido di mais (maizena)	50 g
+Miele millefiori	10 g
+Mirtilli	q.b.
+More	q.b.
+Menta	q.b.

@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina di teff	60 g
+Farina di mais fioretto	35 g
+Acqua	170 g
+Olio extravergine d'oliva	45 g
+Semi di girasole	30 g
+Semi di zucca	30 g
+Semi di sesamo	30 g
+Semi di lino	30 g
+Sale fino	5 g
+Sale grosso	q.b.

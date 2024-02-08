@@ -1,0 +1,12 @@
+ingredient	quantity
+Troccoli	400 g
+Pistacchi già sgusciati	60 g
+Burrata	50 g
+Scorza di limone	q.b.
+Fave già sgranate (1 kg da sgranare)	150 g
+Pecorino romano grattugiato	70 g
+Basilico	20 g
+Olio extravergine d'oliva	70 g
+Timo	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.

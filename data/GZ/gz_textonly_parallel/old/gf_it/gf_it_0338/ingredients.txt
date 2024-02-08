@@ -1,0 +1,14 @@
+ingredient	quantity
+Biscotti Digestive	180 g
+Burro	100 g
+Ricotta vaccina	750 g
+Formaggio fresco spalmabile	250 g
+Zucchero a velo	50 g
+Ciliegie ( + 50 g  di sciroppo ottenuto dalla cottura)	20
+Gelatina in fogli	10 g
+Baccello di vaniglia	1
+Ciliegie (+ 300 g di sciroppo ottenuto dalla cottura)	780 g
+Zucchero semolato	200 g
+Succo di limone	70 g
+Scorza di limone	1
+Gelatina in fogli	10 g

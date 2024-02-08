@@ -1,0 +1,8 @@
+ingredient	quantity
+Latte intero	250 ml
+Panna fresca liquida	180 g
+Tuorli	3
+Zucchero	75 g
+Farina 00	25 g
+Zucchero a velo	20 g
+Baccello di vaniglia	½

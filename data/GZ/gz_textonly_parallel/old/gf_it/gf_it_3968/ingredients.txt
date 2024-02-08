@@ -1,0 +1,17 @@
+ingredient	quantity
+Cous cous precotto	200 g
+Brodo vegetale bollente	220 g
+Olio extravergine d'oliva	10 g
+Sale fino	1 pizzico
+Petto di pollo	800 g
+Zucchine	200 g
+Peperoni rossi	100 g
+Carote	140 g
+Pisellini	100 g
+Scalogno	1
+Pepe nero	q.b.
+Sale fino	q.b.
+Paprika dolce	q.b.
+Brodo vegetale	q.b.
+Olio extravergine d'oliva	q.b.
+Scorza di limone	1

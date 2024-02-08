@@ -1,0 +1,20 @@
+ingredient	quantity
+Rombo	1,5 kg
+Pane mollica	130 g
+Acciughe sott'olio	2 filetti
+Succo di limone	½
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Prezzemolo	q.b.
+Basilico	q.b.
+Timo	q.b.
+Rosmarino	q.b.
+Menta	q.b.
+Carote	120 g
+Zucchine	150 g
+Cavolfiore verde	120 g
+Fagiolini	50 g
+Alloro	2 foglie
+Prezzemolo	q.b.
+Sale fino	q.b.

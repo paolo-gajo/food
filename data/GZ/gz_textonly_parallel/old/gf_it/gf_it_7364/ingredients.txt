@@ -1,0 +1,9 @@
+ingredient	quantity
+Farina 00	500 g
+Olio extravergine d'oliva	120 g
+Lievito di birra secco	4 g
+Sale fino	10 g
+Acqua	180 ml
+Olio extravergine d'oliva	3 cucchiai
+Acqua	2 cucchiai
+Sale fino	q.b.

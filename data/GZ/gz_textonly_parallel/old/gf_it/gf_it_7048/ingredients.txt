@@ -1,0 +1,12 @@
+ingredient	quantity
+Uova	1
+Pasta Sfoglia rotolo	1
+Gamberi	80 g
+Burro	10 g
+Brandy	q.b.
+Passata di pomodoro	1 cucchiaio
+Robiola	80 g
+Timo	q.b.
+Formaggio fresco spalmabile	100 g
+Panna fresca liquida	1 cucchiaino
+Olive verdi	8

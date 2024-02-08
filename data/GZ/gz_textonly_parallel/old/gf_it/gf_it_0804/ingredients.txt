@@ -1,0 +1,12 @@
+ingredient	quantity
+Burro	100 g
+Miele	50 g
+Uova medie	2
+Cannella in polvere	1 cucchiaino
+Chiodi di garofano macinati	½ cucchiaino
+Zucchero	150 g
+Lievito in polvere per dolci	5 g
+Farina 00	350 g
+Acqua	q.b.
+Zucchero a velo	q.b.
+Codetta	q.b.

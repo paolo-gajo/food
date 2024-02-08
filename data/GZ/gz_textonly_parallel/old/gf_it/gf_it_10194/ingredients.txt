@@ -1,0 +1,11 @@
+ingredient	quantity
+Fasolari	20
+Pangrattato	90 g
+Grana Padano DOP da grattugiare	30 g
+Prezzemolo	10 g
+Basilico	10 g
+Menta	8 g
+Erba cipollina	8 g
+Scorza di limone non trattato	1
+Olio extravergine d'oliva	10 ml
+Aglio	1 spicchio

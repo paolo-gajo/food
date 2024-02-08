@@ -1,0 +1,16 @@
+ingredient	quantity
+Peperoni (4 peperoni da 200 g ciascuno)	800 g
+Vitello macinato	300 g
+Salsiccia	150 g
+Pane raffermo mollica	100 g
+Parmigiano Reggiano DOP da grattugiare	50 g
+Pecorino da grattugiare	50 g
+Latte intero	150 g
+Uova	2
+Aglio	1 spicchio
+Prezzemolo da tritare	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Pangrattato	15 g
+Parmigiano Reggiano DOP da grattugiare	15 g
+Olio extravergine d'oliva	20 g

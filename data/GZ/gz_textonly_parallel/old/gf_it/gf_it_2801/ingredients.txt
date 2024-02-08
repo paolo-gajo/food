@@ -1,0 +1,7 @@
+ingredient	quantity
+Ricotta vaccina	150 g
+Farina 00	300 g
+Zucchero	150 g
+Tuorli	60 g
+Albumi	25 g
+Sale fino	1 pizzico

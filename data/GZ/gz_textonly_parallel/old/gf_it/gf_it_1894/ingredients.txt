@@ -1,0 +1,12 @@
+ingredient	quantity
+Uova	5
+Farina 00	200 g
+Zucchero	170 g
+Lievito in polvere per dolci	16 g
+Baccello di vaniglia	1
+Sale fino	1 pizzico
+Latte intero	300 ml
+Latte condensato	300 ml
+Panna fresca liquida	300 ml
+Panna fresca liquida	300 ml
+Zucchero a velo	70 g

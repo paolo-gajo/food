@@ -1,0 +1,14 @@
+ingredient	quantity
+Burro freddo	100 g
+Farina 00	200 g
+Acqua fredda	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Spinaci	550 g
+Cipollotto fresco (circa 2)	30 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Uova	3
+Panna fresca liquida	200 g
+Caciocavallo	80 g
+Timo	q.b.

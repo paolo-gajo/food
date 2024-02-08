@@ -1,0 +1,21 @@
+ingredient	quantity
+Costine di maiale	1,4 kg
+Vino rosso	750 g
+Olio extravergine d'oliva	80 g
+Scalogno	100 g
+Rosmarino	6 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Passata di pomodoro	250 g
+Concentrato di pomodoro	10 g
+Cipolle bianche	80 g
+Aglio	1 spicchio
+Aceto di vino bianco	60 g
+Zucchero di canna	50 g
+Senape	50 g
+Peperoncino fresco	10 g
+Olio extravergine d'oliva	60 g
+Salsa Worcestershire	10 g
+Tabasco®	10 g
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,9 @@
+ingredient	quantity
+Riso vialone nano	320 g
+Scalogno	1
+Passata di pomodoro	200 g
+Mozzarella (per pizza)	120 g
+Maggiorana	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Brodo vegetale caldo	1,5 l

@@ -1,0 +1,4 @@
+ingredient	quantity
+Patate (per frittura)	1 kg
+Strutto	1,5 kg
+Sale fino	q.b.

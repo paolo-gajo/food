@@ -1,0 +1,24 @@
+ingredient	quantity
+Rigatoni	400 g
+Cipolle rosse	1
+Olio extravergine d'oliva	q.b.
+Salsiccia	300 g
+Brodo vegetale	100 ml
+Fiordilatte	300 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Tuorli	1
+Panna fresca liquida	2 cucchiai
+Grana Padano DOP da grattugiare	50 g
+Piselli surgelati	300 g
+Passata di pomodoro	500 ml
+Burro	200 g
+Acqua ghiacciata	140 ml
+Farina 00	400 g
+Maiale macinato	300 g
+Uova medie	2
+Pane (mollica sbriciolata)	50 g
+Prezzemolo da tritare	1 ciuffo
+Grana Padano DOP da grattugiare	100 g
+Sale fino	q.b.
+Pepe nero	q.b.

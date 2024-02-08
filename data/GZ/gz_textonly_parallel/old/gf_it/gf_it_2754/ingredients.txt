@@ -1,0 +1,9 @@
+ingredient	quantity
+Riso per sushi	200 g
+Avocado	80 g
+Acqua	300 g
+Barbabietole precotte (già pelate)	100 g
+Cetrioli	150 g
+Radicchio	20 g
+Alga nori	1 foglia
+Aceto di riso	25 g

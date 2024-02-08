@@ -1,0 +1,19 @@
+ingredient	quantity
+Fusi di pollo (4 fusi)	500 g
+Vino bianco	50 g
+Olio extravergine d'oliva	40 g
+Sale fino	10 g
+Paprika dolce	q.b.
+Pepe nero in grani	q.b.
+Pepe rosa in grani	q.b.
+Pepe bianco in grani	q.b.
+Bacche di ginepro	q.b.
+Prezzemolo	q.b.
+Salvia	q.b.
+Rosmarino	q.b.
+Timo	q.b.
+Mele Fuji (circa 2)	500 g
+Zucchero di canna	5 g
+Sale fino	5 g
+Acqua	50 g
+Succo di limone	½

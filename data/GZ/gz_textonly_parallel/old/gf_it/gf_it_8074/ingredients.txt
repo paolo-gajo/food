@@ -1,0 +1,10 @@
+ingredient	quantity
+Lasagne sfoglie fresche	8
+Funghi pioppini	200 g
+Pancetta affumicata a cubetti	100 g
+Asiago	100 g
+Aglio	1 spicchio
+Rosmarino	1 rametto
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

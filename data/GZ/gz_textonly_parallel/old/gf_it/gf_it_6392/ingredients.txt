@@ -1,0 +1,12 @@
+ingredient	quantity
+Cozze	500 g
+Patate	500 g
+Aglio	1 spicchio
+Pangrattato	50 g
+Prezzemolo	25 g
+Acqua	300 g
+Riso Carnaroli	300 g
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Parmigiano Reggiano DOP da grattugiare	50 g

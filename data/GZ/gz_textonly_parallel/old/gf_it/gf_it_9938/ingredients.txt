@@ -1,0 +1,19 @@
+ingredient	quantity
+Farina di mandorle	100 g
+Burro morbido	100 g
+Uova a temperatura ambiente (circa 2 medie)	110 g
+Zucchero di canna	70 g
+Sale fino	2 g
+Panna fresca liquida	90 g
+Tè verde in foglie	6 g
+Farina di riso	50 g
+Lievito in polvere per dolci	3 g
+Cioccolato fondente al 55%	120 g
+Panna fresca liquida	120 g
+Cioccolato bianco	150 g
+Panna fresca liquida	450 g
+Tè verde	12 g
+Gelatina in fogli	8 g
+Mandorle	50 g
+Zucchero	50 g
+Acqua	20 g

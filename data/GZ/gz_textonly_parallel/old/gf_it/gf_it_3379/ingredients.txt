@@ -1,0 +1,17 @@
+ingredient	quantity
+Farina di ceci	100 g
+Acqua	250 g
+Olio extravergine d'oliva	1 cucchiaio
+Sale fino	1 pizzico
+Baccalà dissalato	600 g
+Latte intero	300 g
+Crescenza	100 g
+Aglio	1 spicchio
+Salvia	1 foglia
+Alloro	1 foglia
+Prezzemolo	5 g
+Erba cipollina	q.b.
+Sale fino	1 pizzico
+Pepe nero	1 cucchiaino
+Noce moscata	1 cucchiaino
+Olio extravergine d'oliva	q.b.

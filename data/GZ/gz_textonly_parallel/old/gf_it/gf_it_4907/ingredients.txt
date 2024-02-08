@@ -1,0 +1,20 @@
+ingredient	quantity
+Acqua	300 ml
+Farina 0	500 g
+Lievito di birra fresco	25 g
+Sale fino	10 g
+Zucchero	1 cucchiaino
+Olio extravergine d'oliva	30 g
+Passata di pomodoro	100 g
+Mozzarella	60 g
+Prosciutto cotto	60 g
+Sale fino	q.b.
+Olio extravergine d'oliva	10 g
+Mozzarella	60 g
+Zucchine	50 g
+Peperoni rossi	50 g
+Melanzane	50 g
+Carote	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	10 g

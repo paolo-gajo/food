@@ -1,0 +1,9 @@
+ingredient	quantity
+Melanzane	600 g
+Tahina	50 g
+Succo di limone	1
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Menta	q.b.

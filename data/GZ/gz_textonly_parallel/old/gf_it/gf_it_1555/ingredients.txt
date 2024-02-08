@@ -1,0 +1,17 @@
+ingredient	quantity
+Lenticchie secche	100 g
+Ceci secchi	100 g
+Fave secche	100 g
+Orzo	100 g
+Fagioli borlotti secchi	50 g
+Fagioli rossi secchi	50 g
+Fagioli cannellini secchi	50 g
+Brodo vegetale	1 l
+Sedano	1 costa
+Carote	1
+Cipolle bianche	1
+Aglio	1 spicchio
+Alloro	1 foglia
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

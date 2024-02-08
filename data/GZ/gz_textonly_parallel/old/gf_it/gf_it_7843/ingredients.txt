@@ -1,0 +1,18 @@
+ingredient	quantity
+Dischetti di pasta	6
+Mozzarella	125 g
+Prosciutto cotto	100 g
+Dischetti di pasta	4
+Spinaci (freschi)	70 g
+Feta	30 g
+Olio extravergine d'oliva	10 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Dischetti di pasta	1
+Wurstel (piccoli)	6
+Semi di papavero	q.b.
+Uova	1
+Dischetti di pasta	4
+Passata di pomodoro	100 g
+Scamorza (provola) (affumicata)	100 g
+Acciughe sott'olio	4

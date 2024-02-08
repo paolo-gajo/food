@@ -1,0 +1,10 @@
+ingredient	quantity
+Paccheri	320 g
+Melanzane	250 g
+Ricotta vaccina	150 g
+Passata di pomodoro	200 g
+Cipolle	½
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Basilico	q.b.

@@ -1,0 +1,16 @@
+ingredient	quantity
+Cous cous precotto	100 g
+Calamari	500 g
+Carote	1
+Zucchine piccola	1
+Cipollotto fresco piccolo	1
+Peperoni rossi	½
+Aglio	1 spicchio
+Acqua	100 ml
+Vino bianco secco	1 bicchiere
+Scorza di lime	1
+Olio extravergine d'oliva	4 cucchiai
+Menta	q.b.
+Timo	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.

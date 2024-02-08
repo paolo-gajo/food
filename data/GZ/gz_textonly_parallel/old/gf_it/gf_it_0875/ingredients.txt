@@ -1,0 +1,9 @@
+ingredient	quantity
+Amaretti	100 g
+Cacao amaro in polvere	50 g
+Tuorli medie	10
+Rum	100 ml
+Latte intero fresco	700 ml
+Zucchero	150 g
+Zucchero	100 g
+Amaretti per decorare	q.b.

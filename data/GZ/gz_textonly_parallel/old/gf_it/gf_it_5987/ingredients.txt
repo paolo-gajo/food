@@ -1,0 +1,10 @@
+ingredient	quantity
+Cioccolato fondente	330 g
+Farina 00	240 g
+Yogurt greco	180 g
+Scorza d'arancia (non trattata)	1
+Uova	3
+Tuorli	1
+Zucchero	175 g
+Olio di semi	100 g
+Lievito in polvere per dolci	16 g

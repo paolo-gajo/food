@@ -1,0 +1,13 @@
+ingredient	quantity
+Arista	800 g
+Mele Fuji	2
+Scalogno	3
+Maggiorana	q.b.
+Parmigiano Reggiano DOP	40 g
+Pangrattato	40 g
+Vino bianco secco	130 g
+Senape di Digione	35
+Olio extravergine d'oliva	q.b.
+Amido di mais (maizena)	½ cucchiaino
+Sale fino	q.b.
+Pepe nero	q.b.

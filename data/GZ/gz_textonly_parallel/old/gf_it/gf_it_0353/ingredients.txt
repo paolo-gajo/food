@@ -1,0 +1,10 @@
+ingredient	quantity
+Fiori di zucca	12
+Ricotta vaccina	300 g
+Nduja	60 g
+Stracciatella	150 g
+Origano	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.
+Pangrattato	20 g
+Pecorino grattugiato	20 g

@@ -1,0 +1,10 @@
+ingredient	quantity
+Fragole	700 g
+Panna fresca liquida	300 ml
+Succo di limone	1
+Gelatina in fogli	12 g
+Albumi	80 g
+Zucchero	160 g
+Acqua	60 ml
+Succo di limone qualche	goccia
+Sale fino	1 pizzico

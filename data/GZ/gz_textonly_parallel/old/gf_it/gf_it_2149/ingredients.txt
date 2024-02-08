@@ -1,0 +1,2 @@
+ingredient	quantity
+Burro	1 kg

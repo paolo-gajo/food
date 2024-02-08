@@ -1,0 +1,5 @@
+ingredient	quantity
+Semi di sesamo	250 g
+Miele millefiori	200 g
+Zucchero	50
+Mandorle	24

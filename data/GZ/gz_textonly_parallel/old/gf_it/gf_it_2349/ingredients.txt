@@ -1,0 +1,5 @@
+ingredient	quantity
+Mele verdi	230 g
+Succo di limone	30 g
+Acqua	300 g
+Zucchero	80 g

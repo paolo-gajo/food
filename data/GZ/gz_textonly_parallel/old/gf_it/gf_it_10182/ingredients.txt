@@ -1,0 +1,17 @@
+ingredient	quantity
+Latte condensato	100 g
+Burro (ammorbidito)	140 g
+Zucchero	180 g
+Farina 00	400 g
+Uova	1
+Tuorli	1
+Lievito in polvere per dolci	8 g
+Sale fino	1 spicchio
+Mele renette	3
+Zucchero	150 g
+Burro	50 g
+Acqua	50 ml
+Latte intero	1 l
+Panna fresca liquida	250 g
+Latte condensato	500 g
+Cannella in stecche	2

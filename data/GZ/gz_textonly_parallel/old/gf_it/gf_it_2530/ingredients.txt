@@ -1,0 +1,14 @@
+ingredient	quantity
+Biscotti all'avena senza glutine	260 g
+Burro	140 g
+Formaggio fresco spalmabile senza glutine	250 g
+Robiola	400 g
+Panna fresca liquida	100 g
+Zucchero	100 g
+Gelatina in fogli senza glutine	9 g
+Fragole	500 g
+Zucchero	100 g
+Gelatina in fogli senza glutine	7 g
+Scorza di limone	1
+Succo di limone	35 g
+Menta	q.b.

@@ -1,0 +1,11 @@
+ingredient	quantity
+Speck in una fetta unica	100 g
+Fusilli	400 g
+Gorgonzola dolce	80 g
+Taleggio	80 g
+Parmigiano Reggiano DOP da grattugiare	100 g
+Groviera da grattugiare	100 g
+Latte intero	150 g
+Panna fresca liquida	50 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

@@ -1,0 +1,8 @@
+ingredient	quantity
+Mezze Penne Rigate	320 g
+Carciofi	4
+Pomodori datterini pelati	400 g
+Acqua	100 g
+Aglio	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.

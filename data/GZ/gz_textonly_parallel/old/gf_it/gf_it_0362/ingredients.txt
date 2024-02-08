@@ -1,0 +1,5 @@
+ingredient	quantity
+Uova fredde	2
+Farina 00	150 g
+Latte intero freddo	200 g
+Sale fino	q.b.

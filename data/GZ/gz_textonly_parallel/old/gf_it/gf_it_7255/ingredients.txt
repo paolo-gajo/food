@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina Manitoba	200 g
+Farina 00	300 g
+Acqua a temperatura ambiente	300 g
+Olio extravergine d'oliva	40 g
+Lievito di birra secco	4 g
+Sale fino	8 g
+Zucchero	5 g
+Stracchino	250 g
+Cipolle rosse	250 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

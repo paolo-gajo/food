@@ -1,0 +1,13 @@
+ingredient	quantity
+Burro temperatura ambiente 	140 g
+Farina 00	300 g
+Fecola di patate	100 g
+Zucchero	220 g
+Baccello di vaniglia	1
+Lievito in polvere per dolci	1 bustina
+Latte intero	100 ml
+Scorza di limone	1
+Scorza d'arancia	1
+Uova medie 	4
+Coloranti alimentari misti	q.b.
+Zucchero a velo	q.b.

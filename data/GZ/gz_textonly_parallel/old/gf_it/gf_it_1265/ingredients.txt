@@ -1,0 +1,10 @@
+ingredient	quantity
+Vino bianco prosecco	1250 g
+Melone (circa 1)	1 kg
+Pesche noci (circa 2)	400 g
+Limoni (circa 2)	350 g
+Arance (circa 2)	600 g
+Zucchero	120 g
+Chiodi di garofano	6
+Cannella in stecche	3
+Vodka secca	70 g

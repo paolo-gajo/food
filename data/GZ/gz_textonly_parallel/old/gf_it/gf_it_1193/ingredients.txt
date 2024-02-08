@@ -1,0 +1,9 @@
+ingredient	quantity
+Acqua	85 g
+Gelatina in fogli	17 g
+Acqua	80 g
+Zucchero	220 g
+Glucosio	90 g
+Albumi	100 g
+Amido di mais (maizena)	80 g
+Zucchero a velo	120 g

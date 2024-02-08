@@ -1,0 +1,6 @@
+ingredient	quantity
+Menta	50 g
+Cioccolato fondente	100 g
+Latte intero	240 g
+Zucchero	125 g
+Panna fresca liquida	250 g

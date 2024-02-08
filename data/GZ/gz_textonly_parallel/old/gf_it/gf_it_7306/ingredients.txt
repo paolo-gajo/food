@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	150 g
+Farina Manitoba	100 g
+Acqua (a temperatura ambiente)	150 g
+Lievito di birra fresco	2,5 g
+Sale fino	5 g
+Olio extravergine d'oliva	18 g
+Pomodorini ciliegino	400 g
+Rucola	50 g
+Parmigiano Reggiano DOP	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

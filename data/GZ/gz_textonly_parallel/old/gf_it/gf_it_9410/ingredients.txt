@@ -1,0 +1,10 @@
+ingredient	quantity
+Zucchero di canna	200 g
+Bicarbonato	1 g
+Burro freddo a pezzetti	100 g
+Farina 00	250 g
+Acqua	52 g
+Noce moscata	1 pizzico
+Pepe nero macinato	1 pizzico
+Chiodi di garofano in polvere	2 g
+Cannella in polvere	10 g

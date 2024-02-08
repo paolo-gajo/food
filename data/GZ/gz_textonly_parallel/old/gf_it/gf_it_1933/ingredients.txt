@@ -1,0 +1,9 @@
+ingredient	quantity
+Panna fresca liquida	600 g
+Zucchero a velo	160 g
+Gelatina in fogli	6 g
+Baccello di vaniglia	1
+Lamponi	200 g
+Zucchero a velo	50 g
+Succo di limone	20 g
+Lamponi	30 g

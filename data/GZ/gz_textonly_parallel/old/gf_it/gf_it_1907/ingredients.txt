@@ -1,0 +1,13 @@
+ingredient	quantity
+Uova	6
+Patate	630 g
+Peperoni rossi	110 g
+Peperoni gialli	110 g
+Peperoni verdi	110 g
+Maggiorana	1 rametto
+Timo	2 rametti
+Scalogno	1
+Olio extravergine d'oliva	30 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Brodo vegetale	50 ml

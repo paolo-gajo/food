@@ -1,0 +1,10 @@
+ingredient	quantity
+Pasta Sfoglia (rettangolare)	1 rotolo
+Zucchine	320 g
+Prosciutto cotto a fette sottili	100 g
+Scamorza (provola) a fette sottili	100 g
+Semi di girasole	15 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Timo	q.b.

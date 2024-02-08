@@ -1,0 +1,17 @@
+ingredient	quantity
+Lasagne all'uovo	250 g
+Radicchio trevigiano	350 g
+Manzo macinato	500 g
+Cipolle	½
+Carote	1
+Sedano	1 costa
+Aglio	1 spicchio
+Vino rosso	80 ml
+Sale fino	5 g
+Timo	2 g
+Salvia	2 g
+Rosmarino	2 g
+Latte intero	500 ml
+Montasio	200 g
+Burro	30 g
+Farina 00	30 g

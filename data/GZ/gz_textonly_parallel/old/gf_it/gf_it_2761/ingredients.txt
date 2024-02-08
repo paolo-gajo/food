@@ -1,0 +1,21 @@
+ingredient	quantity
+Petto di pollo	800 g
+Brodo	300 ml
+Cipolle rosse	½
+Rosmarino da tritare	1 rametto
+Salvia da tritare	2 foglie
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Yogurt greco	200 g
+Cipolle rosse	½
+Peperoncino fresco	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Aglio (facoltativo)	1 spicchio
+Patate	500 g
+Prezzemolo da tritare	q.b.
+Olio extravergine d'oliva	3 cucchiai
+Sale fino	q.b.
+Pepe nero	q.b.

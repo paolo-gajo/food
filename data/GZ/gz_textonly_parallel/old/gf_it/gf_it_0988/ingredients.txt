@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	300 g
+Zucchero	75 g
+Latte intero	250 ml
+Burro	100 g
+Uova	2
+Sale fino	2 pizzichi
+Baccello di vaniglia	1
+Lievito in polvere per dolci	10 g
+Zucchero a velo	q.b.

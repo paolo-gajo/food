@@ -1,0 +1,9 @@
+ingredient	quantity
+Zucchine	1 kg
+Aceto di vino bianco	200 ml
+Olio extravergine d'oliva	150 ml
+Zucchero	150 g
+Basilico	1 foglia
+Bacche di ginepro	5 bacche
+Alloro	3 foglie
+Pepe nero in grani	5

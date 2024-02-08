@@ -1,0 +1,24 @@
+ingredient	quantity
+Farina Manitoba	125 g
+Farina 00	125 g
+Acqua	150 g
+Olio extravergine d'oliva	15 g
+Sale fino	6 g
+Malto	1 cucchiaino
+Lievito di birra secco	3 g
+Petto di pollo	1 kg
+Paprika	1 cucchiaino
+Rosmarino	q.b.
+Origano fresco	q.b.
+Olio extravergine d'oliva	5 cucchiai
+Sale fino	q.b.
+Pepe nero	q.b.
+Melanzane lunghe	100 g
+Olio di semi	q.b.
+Sale fino	q.b.
+Pomodori perini	200 g
+Spinacini	20 g
+Yogurt greco	200 g
+Scorza di limone	1
+Succo di limone	½
+Erba cipollina	q.b.

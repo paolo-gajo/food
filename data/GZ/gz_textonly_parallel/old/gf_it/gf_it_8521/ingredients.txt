@@ -1,0 +1,11 @@
+ingredient	quantity
+Zucchero	125 g
+Farina 00	300 g
+Uova	2
+Scorza di limone	1
+Burro fuso	80 g
+Lievito in polvere per dolci	8 g
+Sale fino	1 pizzico
+Latte intero	q.b.
+Zucchero	1 cucchiaio
+Granella di zucchero	1 cucchiaio

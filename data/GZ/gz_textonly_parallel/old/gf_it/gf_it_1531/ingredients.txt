@@ -1,0 +1,7 @@
+ingredient	quantity
+Yogurt	500 ml
+Panna fresca liquida	125 ml
+Latte intero	125 ml
+Zucchero	120 g
+Glucosio	10 g
+Farina di semi di carrube	5 g

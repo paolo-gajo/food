@@ -1,0 +1,10 @@
+ingredient	quantity
+Uova medie	5
+Tranci di salmone	200 g
+Provola	120 g
+Taccole	100 g
+Latte intero	2 cucchiai
+Timo	2 rametti
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

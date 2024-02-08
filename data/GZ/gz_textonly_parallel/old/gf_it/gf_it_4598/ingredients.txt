@@ -1,0 +1,9 @@
+ingredient	quantity
+Spaghetti Bio	320 g
+Cavolo cappuccio	200 g
+Cavolo rosso	200 g
+Pancetta affumicata tesa, a fette sottili	160 g
+Stracchino	200 g
+Origano	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina 00	300 g
+Burro	50 g
+Brandy	25 ml
+Acqua calda	50 g
+Arance	½
+Sale fino	q.b.
+Zucchero	125 g
+Acqua	75 g
+Limoni	½
+Ceci precotti	250 g
+Mandorle pelate	150 g
+Tuorli	2
+Cannella in polvere	q.b.
+Olio di semi di arachide	q.b.
+Zucchero	q.b.

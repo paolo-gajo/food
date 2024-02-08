@@ -1,0 +1,5 @@
+ingredient	quantity
+Patate rosse	750 g
+Burro	55 g
+Sale fino	q.b.
+Pepe nero	q.b.

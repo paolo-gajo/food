@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina di grano arso	125 g
+Semola di grano duro rimacinata	375 g
+Patate	200 g
+Sale fino	25 g
+Lievito di birra secco	5 g
+Acqua	400 g
+Olio extravergine d'oliva	50 g
+Pomodori di Pachino	300 g
+Olio extravergine d'oliva	20 g
+Origano	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.

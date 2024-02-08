@@ -1,0 +1,16 @@
+ingredient	quantity
+Ceci secchi	250 g
+Scalogno	60 g
+Senape in grani	60 g
+Timo	2 rametti
+Rosmarino	2 rametti
+Uova	1
+Olio extravergine d'oliva	60 g
+Scamorza (provola)	130 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	1
+Latte intero	15 g
+Pangrattato	q.b.
+Sale fino	q.b.
+Olio di semi di arachide per friggere	q.b.

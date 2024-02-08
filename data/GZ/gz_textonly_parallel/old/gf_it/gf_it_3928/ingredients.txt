@@ -1,0 +1,8 @@
+ingredient	quantity
+Farfalle	320 g
+Zucchine	650 g
+Basilico	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	20 g
+Pepe nero	q.b.
+Aglio	1 spicchio

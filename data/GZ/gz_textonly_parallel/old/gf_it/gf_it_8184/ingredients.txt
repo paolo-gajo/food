@@ -1,0 +1,13 @@
+ingredient	quantity
+Patate	250 g
+Farina 00	200 g
+Provola affumicata	100 g
+Latte intero a temperatura ambiente	100 g
+Uova a temperatura ambiente	175 g
+Grana Padano DOP da grattugiare	80 g
+Acqua a temperatura ambiente	50 g
+Lievito istantaneo per preparazioni salate	16 g
+Timo	q.b.
+Sale fino	4 g
+Olio extravergine d'oliva	q.b.
+Semi di papavero	q.b.

@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	500 g
+Zucchero	300 g
+Acqua	250 g
+Granella di mandorle	150 g
+Cacao amaro in polvere	30 g
+Scorza d'arancia	1
+Pisto	5 g
+Ammoniaca per dolci	3 g
+Cioccolato fondente	500 g

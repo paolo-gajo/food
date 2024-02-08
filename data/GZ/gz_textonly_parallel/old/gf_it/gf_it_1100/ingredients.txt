@@ -1,0 +1,8 @@
+ingredient	quantity
+Carote	800 g
+Latte intero	300 ml
+Sale fino	q.b.
+Acqua	150 ml
+Burro	30 g
+Farina 00	20 g
+Noce moscata in polvere¾	cucchiaino

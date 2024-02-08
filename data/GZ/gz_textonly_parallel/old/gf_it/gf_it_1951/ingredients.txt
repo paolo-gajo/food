@@ -1,0 +1,21 @@
+ingredient	quantity
+Farfalle	320 g
+Taccole	250 g
+Salmone norvegese	180 g
+Aglio	1 spicchio
+Olio di oliva extravergine	30 g
+Finocchietto selvatico	4 rametti
+Pomodorini ciliegino	350 g
+Zucchero	15 g
+Olio extravergine d'oliva	35 g
+Timo	4 rametti
+Origano (secco)	1 pizzico
+Aglio	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.
+Rucola	150 g
+Parmigiano Reggiano DOP (da grattugiare)	60 g
+Pecorino (da grattugiare)	60 g
+Olio extravergine d'oliva	125 g
+Sale fino	1 pizzico
+Pinoli	60 g

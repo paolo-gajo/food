@@ -1,0 +1,19 @@
+ingredient	quantity
+Petto di pollo	250 g
+Piadine	4
+Pomodori ramati	160 g
+Lattuga	8 foglie
+Olio extravergine d'oliva	1 cucchiaio
+Sale fino	q.b.
+Pepe nero	q.b.
+Cavolo cappuccio	150 g
+Carote	50 g
+Cipollotto fresco	½
+Yogurt magro	90 g
+Aceto di vino bianco	1 cucchiaio
+Zucchero	1 cucchiaino
+Maionese	2 cucchiai
+Erba cipollina tritata	1 cucchiaino
+Senape	1 cucchiaio
+Sale fino	q.b.
+Pepe nero	q.b.

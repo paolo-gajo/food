@@ -1,0 +1,10 @@
+ingredient	quantity
+Uova medie	2
+Tuorli	1
+Farina 00	300 g
+Zucchero	80 g
+Olio extravergine d'oliva	50 ml
+Ricotta di pecora	400 g
+Zucchero	100 g
+Uova medie	4
+Scorza di limone	1

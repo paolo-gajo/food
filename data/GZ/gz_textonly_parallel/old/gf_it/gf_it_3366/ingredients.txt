@@ -1,0 +1,11 @@
+ingredient	quantity
+Topinambur	1 kg
+Patate	350 g
+Uova medie	3
+Aglio	1 spicchio
+Rosmarino	1 rametto
+Acqua	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Erba cipollina	q.b.
+Olio extravergine d'oliva	q.b.

@@ -1,0 +1,6 @@
+ingredient	quantity
+Farina 00	500 g
+Strutto	125 g
+Acqua a temperatura ambiente	170 g
+Sale fino	15 g
+Bicarbonato	1,5 cucchiaini

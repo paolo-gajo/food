@@ -1,0 +1,10 @@
+ingredient	quantity
+Pasta Sfoglia (1 rotolo)	230 g
+Groviera	100 g
+Porri	170 g
+Burro	50 g
+Speck	100 g
+Pepe nero	q.b.
+Sale fino	q.b.
+Tuorli	1
+Panna fresca liquida	1 cucchiaio

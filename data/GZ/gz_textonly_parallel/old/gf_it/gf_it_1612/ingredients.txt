@@ -1,0 +1,25 @@
+ingredient	quantity
+Farina 00	845 g
+Uova	2
+Tuorli	1
+Burro	275 g
+Zucchero	400 g
+Miele	125 g
+Cannella in polvere	10 g
+Chiodi di garofano da ridurre in polvere	3
+Noce moscata	3 g
+Zenzero in polvere	7 g
+Sale fino	1 pizzico
+Bicarbonato	10 g
+Mandorle	300 g
+Zucchero	350 g
+Acqua	60 g
+Succo di limone	1 cucchiaino
+Albumi (circa 3)	100 g
+Zucchero a velo	600 g
+Cioccolatini tipo cremini	q.b.
+Smarties rossi e verdi	q.b.
+Palline colorate	q.b.
+Cioccolato in sfoglie	q.b.
+Decorazione alimentare foglioline di zucchero	q.b.
+Torrone bianco	q.b.

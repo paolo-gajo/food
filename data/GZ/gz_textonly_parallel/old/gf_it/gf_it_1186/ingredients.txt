@@ -1,0 +1,9 @@
+ingredient	quantity
+Rana pescatrice	850 g
+Pomodori piccadilly	500 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	50 g
+Olive taggiasche	180 g
+Basilico	4 foglie
+Pepe nero	q.b.
+Sale fino	q.b.

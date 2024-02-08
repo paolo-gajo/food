@@ -1,0 +1,11 @@
+ingredient	quantity
+La Bottega di Olivia&Marino sfoglie croccanti al forno	12
+Bresaola in fette sottili	100 g
+Aceto di vino rosso	1 cucchiaio
+Olio extravergine d'oliva	1 cucchiaio
+Timo	q.b.
+Salvia	q.b.
+Erba cipollina	q.b.
+Rosmarino	q.b.
+Sale fino	q.b.
+Succo di limone (facoltativo)	q.b.

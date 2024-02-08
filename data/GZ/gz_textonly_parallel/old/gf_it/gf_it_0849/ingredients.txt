@@ -1,0 +1,8 @@
+ingredient	quantity
+Farina 00	250 g
+Uova medie	3
+Acqua a temperatura ambiente	150 g
+Sale fino	q.b.
+Noce moscata	q.b.
+Erba cipollina	q.b.
+Burro	55 g

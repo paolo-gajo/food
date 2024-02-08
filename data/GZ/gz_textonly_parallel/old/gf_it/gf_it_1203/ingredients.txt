@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	300 g
+Zucchero a velo	150 g
+Olio extravergine d'oliva	90 g
+Uova medie	2
+Lievito in polvere per dolci	8 g
+Baccello di vaniglia	1
+Scorza di limone non trattato	1
+Farina di mandorle	300 g
+Burro	240 g
+Zucchero	240 g
+Uova medie	4
+Scorza di limone non trattato	1
+Uova	1
+Zucchero di canna	q.b.

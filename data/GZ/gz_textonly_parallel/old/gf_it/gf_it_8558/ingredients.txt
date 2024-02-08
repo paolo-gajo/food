@@ -1,0 +1,5 @@
+ingredient	quantity
+Zucchero	250 g
+Acqua	50 ml
+Albumi a temperatura ambiente	125 g
+Sale fino	1 pizzico

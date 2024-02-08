@@ -1,0 +1,19 @@
+ingredient	quantity
+Lasagne all'uovo	250 g
+Grana Padano DOP da grattugiare	5 cucchiai
+Timo fresco	q.b.
+Origano fresco	q.b.
+Latte intero	1 l
+Burro	100 g
+Farina 00	100 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Salsiccia (di suino)	800 g
+Passata di pomodoro	450 g
+Sedano	1 costa
+Cipolle	1
+Carote	1
+Vino rosso	1 bicchiere
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,12 @@
+ingredient	quantity
+Sedano	2
+Carote	2
+Finocchi	1
+Peperoni gialli	1/2
+Peperoni rossi	1/2
+Radicchio trevisano piccolo	1
+Ravanelli	12
+Olio extravergine d'oliva	q.b.
+Succo di limone	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.

@@ -1,0 +1,13 @@
+ingredient	quantity
+Latte intero	300 g
+Cioccolato fondente	200 g
+Zucchero	50 g
+Panna fresca liquida	100 g
+Latte intero	300 g
+Panna fresca liquida	100 g
+Zucchero	100 g
+Pasta di nocciole	70 g
+Panna fresca liquida	100 g
+Glucosio	10 g
+Cioccolato fondente	100 g
+Cacao amaro in polvere	100 g

@@ -1,0 +1,23 @@
+ingredient	quantity
+Coniglio	1,2 kg
+Cipolle bianche	2
+Sedano	1 costa
+Carote	1
+Aglio	2 spicchi
+Rosmarino	2 rametti
+Chiodi di garofano	4
+Pepe nero in grani	6
+Salvia	4 foglie
+Alloro	2 foglie
+Prezzemolo	3 ciuffi
+Timo	2 rametti
+Basilico	4 foglie
+Cannella in stecche	1
+Vino rosso	1 l
+Sale fino	q.b.
+Olio extravergine d'oliva	6 cucchiai
+Farina 00	2 cucchiai
+Acqua	2 l
+Sale grosso	q.b.
+Olio extravergine d'oliva	1 cucchiaio
+Farina istantanea per polenta	500 g

@@ -1,0 +1,10 @@
+ingredient	quantity
+Riso Carnaroli	320 g
+Zucchine	400 g
+Scamorza affumicata	100 g
+Cipollotto fresco	1
+Brodo vegetale	1 l
+Prezzemolo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

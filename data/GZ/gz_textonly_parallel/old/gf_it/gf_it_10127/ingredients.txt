@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina 00	250 g
+Burro	125 g
+Sale fino	q.b.
+Acqua	2 cucchiai
+Carciofi	550 g
+Salsiccia	300 g
+Scamorza affumicata	120 g
+Panna fresca liquida	100 ml
+Uova (medie)	3
+Parmigiano Reggiano DOP (da grattugiare)	30 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

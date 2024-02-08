@@ -1,0 +1,10 @@
+ingredient	quantity
+Latte intero	500 ml
+Zucchero	200 g
+Farina 00	150 g
+Burro	50 g
+Rum	100 ml
+Uova	2
+Baccello di vaniglia	1
+Sale fino	5 g
+Burro	q.b.

@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina 00	270 g
+Zucchero	170 g
+Uova medie	3
+Latte intero	50 g
+Scorza di limone	½
+Olio di semi di girasole	50 g
+Lievito in polvere per dolci	8 g
+Latte intero	125 g
+Uova	1
+Zucchero	65 g
+Farina 00	25 g
+Scorza di limone	½
+Pinoli	40 g

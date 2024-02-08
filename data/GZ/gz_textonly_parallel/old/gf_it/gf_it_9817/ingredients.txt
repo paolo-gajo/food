@@ -1,0 +1,20 @@
+ingredient	quantity
+Farina Manitoba	250 g
+Latte intero (tiepido)	150 ml
+Lievito di birra secco	2 g
+Miele millefiori	5 g
+Sale fino	1 pizzico
+Olio extravergine d'oliva	2 g
+Scorza di limone (non trattata)	1
+Latte intero	125 ml
+Amido di mais (maizena)	12 g
+Zucchero	25 g
+Baccello di vaniglia	½
+Miele millefiori	3 g
+Panna fresca liquida	50 g
+Confettura di fragole	250 g
+Pesche	50 g
+Mele verdi	50 g
+Mirtilli	25 g
+Fragole	60 g
+Menta	5 foglie

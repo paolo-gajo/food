@@ -1,0 +1,13 @@
+ingredient	quantity
+Granella di pistacchi	150 g
+Pasta di pistacchi	40 g
+Nesquik	50 g
+Farina 00	200 g
+Zucchero	200 g
+Burro	200 g
+Yogurt bianco naturale	120 g
+Uova	3
+Lievito in polvere per dolci	10 g
+Baccello di vaniglia	1
+Sale fino	1 pizzico
+Burro	q.b.

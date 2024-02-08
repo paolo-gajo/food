@@ -1,0 +1,16 @@
+ingredient	quantity
+Spinaci	500 g
+Uova	4
+Noce moscata	2 g
+Sale fino	q.b.
+Pinoli	20 g
+Pangrattato	q.b.
+Olio di semi	q.b.
+Parmigiano Reggiano DOP da grattugiare	100 g
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Latte intero	1 cucchiaio
+Latte intero	250 ml
+Burro	15 g
+Parmigiano Reggiano DOP da grattugiare	25 g
+Farina 00	25 g

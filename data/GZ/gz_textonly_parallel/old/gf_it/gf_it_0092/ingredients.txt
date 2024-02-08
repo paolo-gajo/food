@@ -1,0 +1,7 @@
+ingredient	quantity
+Melanzane	550 g
+Pomodori ramati	550 g
+Basilico	6 foglie
+Aglio	1 spicchio
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.

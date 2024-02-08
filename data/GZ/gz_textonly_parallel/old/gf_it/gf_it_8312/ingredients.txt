@@ -1,0 +1,16 @@
+ingredient	quantity
+Albumi (circa 3 medi) a temperatura ambiente	100 g
+Zucchero	200 g
+Amido di mais (maizena)	20 g
+Succo di limone	10 g
+Estratto di vaniglia	q.b.
+Panna fresca liquida	200 g
+Zucchero a velo	20 g
+Kiwi	1
+Fragole	q.b.
+Lamponi	q.b.
+More	q.b.
+Mirtilli	q.b.
+Ribes rosso	q.b.
+Menta	q.b.
+Zucchero a velo	q.b.

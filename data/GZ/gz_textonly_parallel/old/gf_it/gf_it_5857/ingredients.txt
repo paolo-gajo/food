@@ -1,0 +1,15 @@
+ingredient	quantity
+Cavolo nero	300 g
+Porri	1
+Uova	3
+Edamer	200 g
+Parmigiano Reggiano DOP	80 g
+Acqua	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Timo	2 rametti
+Farina 00	200 g
+Burro	100 g
+Acqua ghiacciata	50 g
+Sale fino	1 pizzico

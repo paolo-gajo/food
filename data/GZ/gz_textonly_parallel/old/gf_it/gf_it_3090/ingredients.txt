@@ -1,0 +1,20 @@
+ingredient	quantity
+Salmone affumicato	250 g
+Asparagi	400 g
+Porri	250 g
+Panna fresca liquida	50 ml
+Burro	50 g
+Olio extravergine d'oliva	2 cucchiai
+Sale fino	q.b.
+Pepe nero	q.b.
+Latte intero	200 ml
+Farina 00	20 g
+Burro	20 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Latte intero	2 cucchiai
+Tuorli	1
+Farina 00	200 g
+Burro	100 g
+Acqua ghiacciata	70 ml
+Sale fino	q.b.

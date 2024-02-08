@@ -1,0 +1,12 @@
+ingredient	quantity
+Verza	900 g
+Porri	100 g
+Zucchine	200 g
+Carote	150 g
+Zucca mantovana	250 g
+Noci (sgusciate)	80 g
+Pancetta affumicata	100 g
+Olio extravergine d'oliva	30 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Porri	q.b.

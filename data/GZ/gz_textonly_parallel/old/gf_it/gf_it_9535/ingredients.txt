@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina Manitoba	350 g
+Farina 00	300 g
+Burro ammorbidito	90 g
+Zucchero	65 g
+Uvetta	100 g
+Latte intero tiepido	200 ml
+Acqua tiepida	200 ml
+Uova	1
+Lievito di birra secco	5 g
+Cannella in polvere	½ cucchiaino
+Arance scorza e succo	1
+Zenzero in polvere	½ cucchiaino
+Noce moscata	q.b.
+Sale fino	2 g
+Uova	1
+Zucchero	65 g
+Acqua	30 g
+Acqua	40 g
+Farina 00	40 g
+Estratto di mandorla	½ cucchiaino

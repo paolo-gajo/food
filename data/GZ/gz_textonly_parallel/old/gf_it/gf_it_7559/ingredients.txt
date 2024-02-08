@@ -1,0 +1,12 @@
+ingredient	quantity
+Uova	6
+Latte intero a temperatura ambiente	250 g
+Farina 00	50 g
+Parmigiano Reggiano DOP da grattugiare	50 g
+Burro	45 g
+Sale fino	1 cucchiaino
+Pepe nero	1 cucchiaino
+Pangrattato	100 g
+Farina 00	50 g
+Uova	2
+Olio di semi di arachide	q.b.

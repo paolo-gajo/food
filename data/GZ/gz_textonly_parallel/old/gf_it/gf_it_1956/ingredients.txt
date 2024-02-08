@@ -1,0 +1,12 @@
+ingredient	quantity
+Riso Basmati	300 g
+Mango (polpa)	250 g
+Ananas baby (polpa)	200 g
+Pisellini	150 g
+Cipolle rosse	40 g
+Feta	150 g
+Olio extravergine d'oliva	25 g
+Erba cipollina	q.b.
+Pepe nero	q.b.
+Menta	q.b.
+Sale fino	q.b.

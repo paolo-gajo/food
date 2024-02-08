@@ -1,0 +1,9 @@
+ingredient	quantity
+Pomodori verdi medi	4
+Uova	2
+Farina 00	80 g
+Farina di mais fioretto	80 g
+Zucchero	10 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di semi di arachide	350 g

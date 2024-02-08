@@ -1,0 +1,14 @@
+ingredient	quantity
+Patate	600 g
+Salmone affumicato	200 g
+Aglio	1 spicchio
+Uova	2
+Erba cipollina	10 rametti
+Prezzemolo	3 rametti
+Rosmarino	1 rametto
+Salvia	3 foglie
+Burro	10 g
+Pangrattato	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

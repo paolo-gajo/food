@@ -1,0 +1,11 @@
+ingredient	quantity
+Seppie	4
+Pomodorini ciliegino	400 g
+Pane (mollica)	50
+Basilico	6 foglie
+Vino bianco	50 ml
+Brodo vegetale	80 ml
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	100 g
+Farina di mandorle	100 g
+Farina di mais fioretto	100 g
+Zucchero	100 g
+Burro	100 g
+Tuorli	3
+Fiocchi di sale	1 cucchiaino
+Cardamomo in polvere	1 cucchiaino
+Ciliegie	100 g
+Cioccolato fondente	80 g
+Confettura di ciliegie	50 g

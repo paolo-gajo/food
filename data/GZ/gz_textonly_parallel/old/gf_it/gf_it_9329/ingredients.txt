@@ -1,0 +1,16 @@
+ingredient	quantity
+Cioccolato bianco	400 g
+Burro	160 g
+Latte intero	160 g
+Zucchero	400 g
+Uova 5 intere+1 tuorlo (a temperatura ambiente)	300 g
+Farina 00	420 g
+Lievito in polvere per dolci	16 g
+Baccello di vaniglia	1
+Cioccolato fondente	550 g
+Panna fresca liquida	550 g
+Pasta di zucchero	1,3 kg
+Zucchero	q.b.
+Matite alimentari brillanti, color madreperla	q.b.
+Zuccheri glitterati blu	q.b.
+Colla alimentare	q.b.

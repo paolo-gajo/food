@@ -1,0 +1,14 @@
+ingredient	quantity
+Spinaci	650 g
+Pane (raffermo o secco)	80 g
+Latte intero	400 g
+Olio extravergine d'oliva	40 g
+Uova (medie)	2
+Farina 00	160 g
+Pangrattato	40 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.
+Burro	80 g
+Salvia	q.b.
+Trentingrana	100 g

@@ -1,0 +1,18 @@
+ingredient	quantity
+Cozze	1 kg
+Vongole	750 g
+Gamberi da pulire	500 g
+Polpo da pulire	700 g
+Calamari grandi da pulire	400 g
+Carote	2
+Sedano	2 coste
+Alloro	4 foglie
+Prezzemolo	q.b.
+Aglio	1 spicchio
+Pepe rosa in grani	2
+Pepe nero in grani	2
+Succo di limone	40 g
+Olio extravergine d'oliva	40 g
+Prezzemolo	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

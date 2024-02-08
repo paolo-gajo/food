@@ -1,0 +1,14 @@
+ingredient	quantity
+Biscotti Digestive	240 g
+Burro	160 g
+Menta	q.b.
+Formaggio fresco spalmabile	450 g
+Panna fresca liquida	300 g
+Yogurt greco	150 g
+Zucchero a velo	50 g
+Gelatina in fogli	14 g
+Gocce di cioccolato	50 g
+Cocomero (anguria)	1,2 kg
+Amido di mais (maizena)	35 g
+Zucchero	25 g
+Cannella in polvere punta di un cucchiaino	1

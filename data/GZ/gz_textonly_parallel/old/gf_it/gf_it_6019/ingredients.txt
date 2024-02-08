@@ -1,0 +1,18 @@
+ingredient	quantity
+Farina 00	200 g
+Uova medie	2
+Spinaci	450 g
+Ricotta vaccina	300 g
+Uova medie	2
+Aglio	1 spicchio
+Olio extravergine d'oliva	15 g
+Parmigiano Reggiano DOP grattugiato	100 g
+Noce moscata in polvere	1 pizzico
+Pepe nero	q.b.
+Sale fino	q.b.
+Latte intero	1 l
+Farina 00	100
+Burro	100 g
+Sale fino	1 pizzico
+Noce moscata	q.b.
+Pepe nero	1 pizzico

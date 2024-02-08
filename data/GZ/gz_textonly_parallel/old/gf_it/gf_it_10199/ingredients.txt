@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	250 g
+Burro	125
+Zucchero	90 g
+Miele millefiori	15 g
+Uova (circa 1 medio)	55 g
+Rabarbaro	700 g
+Lamponi	250 g
+Zucchero	400 g
+Succo di limone	40 g
+Zucchero	100 g
+Albumi	50 g
+Acqua	30 g

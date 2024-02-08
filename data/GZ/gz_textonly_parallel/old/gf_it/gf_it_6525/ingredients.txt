@@ -1,0 +1,11 @@
+ingredient	quantity
+Petto di pollo sottili	8 fette
+Fontina	100 g
+Speck	8 fette
+Sale fino	q.b.
+Uova	2
+Pangrattato	q.b.
+Patate	1 kg
+Pangrattato	120 g
+Rosmarino	q.b.
+Sale fino	q.b.

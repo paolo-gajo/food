@@ -1,0 +1,9 @@
+ingredient	quantity
+Penne Rigate Senza Glutine	320 g
+Rana pescatrice	600 g
+Pomodorini ciliegino	500 g
+Aglio	1 spicchio
+Basilico	3 foglie
+Olio extravergine d'oliva	30 g
+Sale fino	q.b.
+Pepe nero	q.b.

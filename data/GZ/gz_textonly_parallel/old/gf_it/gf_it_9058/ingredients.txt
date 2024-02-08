@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina Manitoba	100 g
+Acqua a temperatura ambiente	100 g
+Lievito di birra fresco	10 g
+Semola di grano duro rimacinata	400 g
+Acqua	280 g
+Sale fino	15 g
+Passata di pomodoro	200 g
+Mozzarella per pizza	300 g
+Prosciutto crudo	q.b.
+Rucola	q.b.
+Olio extravergine d'oliva	20 g
+Sale fino	q.b.

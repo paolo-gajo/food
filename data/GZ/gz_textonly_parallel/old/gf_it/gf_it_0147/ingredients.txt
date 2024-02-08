@@ -1,0 +1,13 @@
+ingredient	quantity
+Melanzane	80 g
+Zucchine	160 g
+Patate rosse	190 g
+Peperoni	300 g
+Scamorza affumicata	260 g
+Parmigiano Reggiano DOP	100 g
+Pangrattato	120 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Burro	q.b.
+Pangrattato	q.b.

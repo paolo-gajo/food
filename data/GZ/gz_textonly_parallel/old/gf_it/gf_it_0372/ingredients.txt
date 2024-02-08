@@ -1,0 +1,6 @@
+ingredient	quantity
+Aperol	60 ml
+Prosecco	90 ml
+Soda (una spruzzata)	q.b.
+Arance	½ fetta
+Ghiaccio	q.b.

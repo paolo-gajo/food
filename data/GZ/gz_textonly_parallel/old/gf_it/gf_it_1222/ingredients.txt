@@ -1,0 +1,10 @@
+ingredient	quantity
+Pesche	1
+Yogurt alla frutta (alla pesca)	250 g
+Zucchero	120 g
+Farina 00	375 g
+Uova	3
+Olio di semi	60 ml
+Lievito in polvere per dolci	16 g
+Zucchero a velo	q.b.
+Burro	q.b.

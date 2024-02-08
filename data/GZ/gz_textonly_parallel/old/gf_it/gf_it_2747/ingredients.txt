@@ -1,0 +1,7 @@
+ingredient	quantity
+Latte intero	200 g
+Farina 00	200 g
+Olio di semi	140 g
+Uova (circa 4)	240 g
+Sale fino	q.b.
+Pepe nero	q.b.

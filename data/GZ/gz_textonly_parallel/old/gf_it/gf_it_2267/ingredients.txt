@@ -1,0 +1,12 @@
+ingredient	quantity
+Carne bovina sottofesa di vitello	1 kg
+Panna fresca liquida	250 ml
+Brodo di carne	q.b.
+Burro	60 g
+Aceto di vino bianco	6 cucchiai
+Pancetta a fette	100 g
+Cipolle	1
+Noce moscata	q.b.
+Rosmarino	1 rametto
+Sale fino	q.b.
+Pepe nero	q.b.

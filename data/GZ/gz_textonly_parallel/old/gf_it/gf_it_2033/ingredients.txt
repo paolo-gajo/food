@@ -1,0 +1,11 @@
+ingredient	quantity
+Savoiardi	17
+Mascarpone	225 g
+Panna fresca liquida	300 g
+Limoni	250 g
+Zucchero	125 g
+Panna fresca liquida	150 g
+Acqua	150 g
+Zucchero	75 g
+Limoni	3 fette
+Limoni	2 foglie

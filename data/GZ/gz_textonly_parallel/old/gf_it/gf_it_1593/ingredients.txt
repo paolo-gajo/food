@@ -1,0 +1,17 @@
+ingredient	quantity
+Tonno sott'olio	320 g
+Ricotta di bufala	180 g
+Uova	1
+Grana Padano DOP	25 g
+Pangrattato	20 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Timo	q.b.
+Maggiorana	q.b.
+Peperoni rossi	350 g
+Peperoni gialli	350 g
+Olive nere denocciolate	12
+Olio extravergine d'oliva	30 g
+Sale fino	q.b.
+Aglio 1/	2 spicchio
+Timo	q.b.

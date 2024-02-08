@@ -1,0 +1,8 @@
+ingredient	quantity
+Pasta Sfoglia rettangolare	230 g
+Barbabietole precotte	210 g
+Gorgonzola dolce	150 g
+Timo	3 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	1

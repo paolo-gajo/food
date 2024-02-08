@@ -1,0 +1,9 @@
+ingredient	quantity
+Salsiccia (salamelle, 4)	660 g
+Cipolle bianche	1
+Concentrato di pomodoro	230 g
+Acqua	500 g
+Alloro	2 foglie
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

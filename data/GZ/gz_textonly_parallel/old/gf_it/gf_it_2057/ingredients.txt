@@ -1,0 +1,17 @@
+ingredient	quantity
+Acqua	100 g
+Burro	50 g
+Farina 00 (W=220)	65 g
+Uova	105 g
+Zucchero	1 cucchiaino
+Sale	1 pizzico
+Latte intero	250 g
+Panna fresca liquida	250 g
+Zucchero	100 g
+Baccello di vaniglia	1
+Farina 00	20 g
+Amido di mais (maizena)	20 g
+Cioccolato fondente	100 g
+Tuorli	125 g
+Cioccolato bianco	150 g
+Panna fresca liquida	600 g

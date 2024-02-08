@@ -1,0 +1,9 @@
+ingredient	quantity
+Friselle	4
+Sedano	60 g
+Pomodorini ciliegino	125 g
+Cipolle rosse di Tropea	50 g
+Cetrioli bianchi piccoli	80 g
+Olio extravergine d'oliva	40 g
+Acqua	100 g
+Sale fino	q.b.

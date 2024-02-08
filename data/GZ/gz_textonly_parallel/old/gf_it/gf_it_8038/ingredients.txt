@@ -1,0 +1,11 @@
+ingredient	quantity
+Cioccolato fondente in barretta	300 g
+Biscotti secchi	110 g
+Confettini colorati verdi	50 g
+Cioccolato bianco	50 g
+Cioccolato fondente in barretta	300 g
+Arachidi salate tostate	80 g
+Burro di arachidi	50 g
+Cioccolato bianco in barretta	300 g
+Pistacchi tostati salati	80 g
+Mirtilli rossi essiccati	80 g

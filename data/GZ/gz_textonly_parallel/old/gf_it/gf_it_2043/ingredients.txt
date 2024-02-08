@@ -1,0 +1,4 @@
+ingredient	quantity
+Farina per chapati	260 g
+Acqua a temperatura ambiente	180 ml
+Sale fino	½ cucchiaino

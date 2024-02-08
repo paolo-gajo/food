@@ -1,0 +1,21 @@
+ingredient	quantity
+Olio extravergine d'oliva	70 ml
+Aceto di vino bianco	60 ml
+Acqua (o fumetto di pesce)	500 ml
+Cipolle da tritare	50 g
+Aglio	1 spicchio
+Pepe nero	q.b.
+Sale fino	q.b.
+Pomodori doppio	80 g
+Seppie	200 g
+Calamari	200 g
+Scampi	200 g
+Gamberi	200 g
+Pesce di mare spinarolo	300 g
+Coda di rospo	250 g
+Canocchie	200 g
+Gallinella	150 g
+Nasello	200 g
+Sogliola	300 g
+Triglie	150 g
+Pane toscano	6 fette

@@ -1,0 +1,16 @@
+ingredient	quantity
+Peperoni gialli	1
+Peperoni rossi	1
+Pomodori cuore di bue	100 g
+Pomodorini datterini	60 g
+Peperoncino fresco	1
+Acciughe (alici) sottolio	12 g
+Tonno sott'olio	180 g
+Olive nere denocciolate	80 g
+Mozzarella	200 g
+Basilico	qualche
+Scarola (indivia)	100 g
+Olio extravergine d'oliva	50 g
+Aceto di mele	10 g
+Sale fino	q.b.
+Pepe nero	q.b.

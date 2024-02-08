@@ -1,0 +1,11 @@
+ingredient	quantity
+Broccoli	1 kg
+Cipolle	50 g
+Olio extravergine d'oliva	60 g
+Acciughe sott'olio filetti	20 g
+Prezzemolo	q.b.
+Pecorino fresco grattugiato	150 g
+Vino rosso	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Aglio	1 spicchio

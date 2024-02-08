@@ -1,0 +1,4 @@
+ingredient	quantity
+Cioccolato fondente	150 g
+Latte intero	100 g
+Glucosio	30 g

@@ -1,0 +1,22 @@
+ingredient	quantity
+Zucchero	220 g
+Farina di nocciole	150 g
+Farina 00	75 g
+Fecola di patate	75 g
+Burro	250 g
+Uova medie	6
+Caffè solubile	10 g
+Lievito in polvere per dolci	16 g
+Latte intero	500 ml
+Burro	250 g
+Zucchero	200 g
+Tuorli	4
+Gelatina in fogli	20 g
+Panna fresca liquida	500 ml
+Zucchero a velo	50 g
+Caffè solubile	20 g
+Caffè solubile	10 g
+Acqua calda	100 ml
+Zucchero	q.b.
+Granella di nocciole	q.b.
+Chicchi di caffè	q.b.

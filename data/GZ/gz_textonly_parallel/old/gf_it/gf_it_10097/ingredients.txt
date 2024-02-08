@@ -1,0 +1,24 @@
+ingredient	quantity
+Farina Manitoba	250 g
+Farina 00	250 g
+Acqua	300 ml
+Olio extravergine d'oliva	50 g
+Lievito di birra fresco	12 g
+Sale fino	8 g
+Malto	1 cucchiaino
+Maiale macinato	250 g
+Manzo macinato	250 g
+Brodo vegetale	200 ml
+Vino rosso	100 ml
+Concentrato di pomodoro	50 g
+Burro	30 g
+Carote	1
+Cipolle	1
+Sedano	½ costa
+Latte intero	500 ml
+Burro	50 g
+Farina 00	50 g
+Sale fino	1 pizzico
+Noce moscata	q.b.
+Uova	1
+Semi di sesamo	q.b.

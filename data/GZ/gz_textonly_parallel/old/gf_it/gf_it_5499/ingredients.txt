@@ -1,0 +1,10 @@
+ingredient	quantity
+Cioccolato fondente	170 g
+Zucchero di canna	145 g
+Farina 00	125 g
+Burro	100 g
+Uova	2
+Estratto di vaniglia	3 g
+Lievito in polvere per dolci	4,5 g
+Sale grosso	5 g
+Zucchero a velo	60 g

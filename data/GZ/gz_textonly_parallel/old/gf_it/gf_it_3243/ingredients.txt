@@ -1,0 +1,18 @@
+ingredient	quantity
+Cipolle gialle	4
+Bacche di ginepro	8 g
+Pepe nero in grani	8 g
+Alloro	4 foglie
+Prezzemolo gambi	q.b.
+Olio extravergine d'oliva	q.b.
+Burro	15 g
+Funghi champignon	130 g
+Zucchine	100 g
+Patate	80 g
+Carote	60 g
+Grana Padano DOP da grattugiare	40 g
+Burro	15 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Prezzemolo	q.b.

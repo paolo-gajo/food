@@ -1,0 +1,13 @@
+ingredient	quantity
+Patate	500 g
+Zucchine	270 g
+Grana Padano DOP (Riserva oltre 20 mesi)	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Rosmarino	q.b.
+Timo	q.b.
+Origano fresco	q.b.
+Olio extravergine d'oliva	q.b.
+Grana Padano DOP (Riserva oltre 20  mesi)	100 g
+Latte intero	90 g
+Origano fresco	q.b.

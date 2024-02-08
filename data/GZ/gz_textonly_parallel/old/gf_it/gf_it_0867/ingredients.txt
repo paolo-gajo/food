@@ -1,0 +1,5 @@
+ingredient	quantity
+Acqua	130 g
+Farina 00	125 g
+Semola di grano duro rimacinata	125 g
+Olio extravergine d'oliva	1 cucchiaio

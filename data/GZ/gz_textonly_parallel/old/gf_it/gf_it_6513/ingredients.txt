@@ -1,0 +1,17 @@
+ingredient	quantity
+Capretto	1 kg
+Vino bianco	750 g
+Acqua	400 g
+Cipolle bianche	100 g
+Carote	180 g
+Sedano	180 g
+Aceto di vino bianco	10 g
+Patate	500 g
+Olio extravergine d'oliva	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Rosmarino	1 rametto
+Salvia	1 rametto
+Alloro	3 foglie
+Ginepro	2 bacche
+Pepe nero in grani	2

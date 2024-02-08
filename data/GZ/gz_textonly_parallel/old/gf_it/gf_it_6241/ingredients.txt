@@ -1,0 +1,15 @@
+ingredient	quantity
+Rigatoni	500 g
+Passata di pomodoro	800 g
+Provola	200 g
+Parmigiano Reggiano DOP da grattugiare	200 g
+Mortadella	160 g
+Salame	130 g
+Mozzarella	130 g
+Uova	4
+Cipolle piccola	1
+Aglio	1 spicchio
+Basilico	q.b.
+Timo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	1 pizzico

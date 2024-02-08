@@ -1,0 +1,15 @@
+ingredient	quantity
+Biscotti secchi	180 g
+Burro	100 g
+Pere	400 g
+Formaggio fresco spalmabile	300 g
+Cioccolato fondente	300 g
+Zucchero a velo	100 g
+Amido di mais (maizena)	80 g
+Latte intero	50 ml
+Uova medie	3
+Acqua	4 cucchiai
+Zucchero	1 cucchiaio
+Cannella in polvere	1 pizzico
+Succo di limone	½
+Pere	1

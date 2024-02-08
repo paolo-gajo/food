@@ -1,0 +1,10 @@
+ingredient	quantity
+Cioccolato fondente	130 g
+Burro	20 g
+Biscotti Digestive	75 g
+Mix di frutta secca/essiccata (esotica: ananas, mango e papaia)	50 g
+Datteri denocciolati	50 g
+Zenzero candito	10 g
+Cocco disidratato	10 g
+Rum	10 g
+Zucchero a velo	q.b.

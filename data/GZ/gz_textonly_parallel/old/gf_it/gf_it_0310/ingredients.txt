@@ -1,0 +1,10 @@
+ingredient	quantity
+Fegato di vitello	500 g
+Cipolle bianche	2
+Salvia	6 foglie
+Olio extravergine d'oliva	50 g
+Burro	15 g
+Aceto di vino bianco	10 g
+Pepe nero	q.b.
+Sale fino	q.b.
+Acqua	q.b.

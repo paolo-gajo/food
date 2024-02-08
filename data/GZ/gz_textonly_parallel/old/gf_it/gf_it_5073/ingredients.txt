@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina Manitoba	250 g
+Farina 00	250 g
+Lievito di birra secco	4 g
+Uvetta	200 g
+Zucchero	100 g
+Rosmarino	15 g
+Sale fino	10 g
+Acqua tiepida	170 g
+Tuorli	1
+Olio extravergine d'oliva	100 ml

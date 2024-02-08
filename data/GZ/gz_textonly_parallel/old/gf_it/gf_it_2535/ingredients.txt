@@ -1,0 +1,10 @@
+ingredient	quantity
+Manzo (tomahawk)	1,2 kg
+Sale grosso	50 g
+Burro chiarificato	50 g
+Aglio	2 spicchi
+Pepe nero in grani	10
+Bacche di ginepro	4
+Alloro	2 foglie
+Salvia	2 foglie
+Rosmarino	1 rametto

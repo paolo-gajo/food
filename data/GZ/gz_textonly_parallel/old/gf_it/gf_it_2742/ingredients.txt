@@ -1,0 +1,13 @@
+ingredient	quantity
+Agnello polpa	1 kg
+Uova	7
+Pecorino abruzzese da grattugiare	150 g
+Rosmarino	1 rametto
+Vino bianco secco	100 ml
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.
+Bacche di ginepro	4
+Timo	1 rametto
+Alloro	1 foglia
+Cipolle dorate	1

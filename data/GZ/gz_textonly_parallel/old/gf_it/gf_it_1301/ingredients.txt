@@ -1,0 +1,4 @@
+ingredient	quantity
+Zucchero	400 g
+Acqua	200 ml
+Baccello di vaniglia	1

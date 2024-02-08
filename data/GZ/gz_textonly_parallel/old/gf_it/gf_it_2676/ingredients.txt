@@ -1,0 +1,9 @@
+ingredient	quantity
+Patate	1 kg
+Pancetta (tesa)	100 g
+Cipolle bianche	1
+Olio extravergine d'oliva	20 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Brodo vegetale	200 g
+Burro	15 g

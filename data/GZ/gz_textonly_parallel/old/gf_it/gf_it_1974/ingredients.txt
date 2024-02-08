@@ -1,0 +1,11 @@
+ingredient	quantity
+Panna fresca liquida	300 ml
+Mascarpone	60 g
+Savoiardi	12
+Cacao amaro in polvere	q.b.
+Birra	60 ml
+Tuorli	6
+Zucchero	120 g
+Caffè	200 ml
+Zucchero	50 g
+Birra	200 ml

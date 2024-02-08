@@ -1,0 +1,12 @@
+ingredient	quantity
+Zucchine	800 g
+Cipollotto fresco	1
+Uova (medie)	2
+Mozzarella (per pizza)	200 g
+Scamorza affumicata	180 g
+Pecorino romano (da grattugiare)	80 g
+Pancetta	100 g
+Pangrattato	80 g
+Sale fino	q.b.
+Burro	q.b.
+Pangrattato	q.b.

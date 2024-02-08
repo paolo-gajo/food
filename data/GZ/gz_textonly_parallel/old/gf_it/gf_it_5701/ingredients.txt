@@ -1,0 +1,8 @@
+ingredient	quantity
+Sfoglie alle olive	12
+Fave sgusciate	140 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Pecorino	25 g
+Salame felino	35 g

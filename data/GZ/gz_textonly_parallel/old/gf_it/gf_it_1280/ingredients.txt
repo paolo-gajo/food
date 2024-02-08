@@ -1,0 +1,6 @@
+ingredient	quantity
+Pesche gialle	500 g
+Zucchero	130 g
+Latte intero	70 g
+Panna fresca liquida	120 g
+Pesche gialle	1

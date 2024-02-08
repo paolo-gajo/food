@@ -1,0 +1,7 @@
+ingredient	quantity
+Dischetti di pasta	16
+Ricotta	250 g
+Cime di rapa (fresche)	200 g
+Peperoncino fresco	1
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina 0	200 g
+Farina 00	300 g
+Acqua a temperatura ambiente	330 g
+Lievito di birra secco	2 g
+Sale fino	10 g
+Farina 00	q.b.

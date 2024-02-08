@@ -1,0 +1,16 @@
+ingredient	quantity
+Uova	2
+Latte	300 g
+Farina 00	150 g
+Burro	40 g
+Sale fino	1 pizzico
+Porri	500 g
+Robiola	100 g
+Salmone	100 g
+Grana Padano DOP da grattugiare	50 g
+Noce moscata	q.b.
+Pepe	q.b.
+Latte	100 g
+Sale fino	q.b.
+Timo	3 rametti
+Aglio	1 spicchio

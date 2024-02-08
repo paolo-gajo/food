@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	400 g
+Acqua	200 g
+Sale fino	10 g
+Cozze	1 kg
+Pecorino romano da grattugiare	200 g
+Aglio	1 spicchio
+Vino bianco secco	100 g
+Pepe nero (macinato fresco)	1 cucchiaio
+Prezzemolo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

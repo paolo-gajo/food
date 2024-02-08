@@ -1,0 +1,11 @@
+ingredient	quantity
+Uova (medie)	3
+Zucchero	70 g
+Miele	1 cucchiaio
+Farina 00	70 g
+Farina di mandorle	45 g
+Confettura di frutti di bosco	200 g
+Cioccolato bianco	600 g
+Panna fresca liquida	320 g
+Sciroppo di glucosio	15 g
+Gelatina in fogli	8 g

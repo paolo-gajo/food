@@ -1,0 +1,17 @@
+ingredient	quantity
+Burro	100 g
+Farina 00	200 g
+Acqua ghiacciata	70 ml
+Timo	1 rametto
+Rosmarino	1 rametto
+Sale fino	q.b.
+Funghi porcini	350 g
+Funghi champignon	350 g
+Carote	1
+Prezzemolo	3 rametti
+Aglio	1 spicchio
+Burro	30 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Grana Padano DOP da grattugiare	q.b.
+Burro	q.b.

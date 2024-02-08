@@ -1,0 +1,7 @@
+ingredient	quantity
+Arance	1
+Prezzemolo da tritare	2 cucchiai
+Cozze	1 kg
+Vino bianco	80 ml
+Zenzero fresco	12 g
+Pepe nero	q.b.

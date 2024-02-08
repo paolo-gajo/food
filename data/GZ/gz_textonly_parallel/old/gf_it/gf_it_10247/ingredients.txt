@@ -1,0 +1,12 @@
+ingredient	quantity
+Braciole di maiale (4 pezzi)	600 g
+Zucca polpa	300 g
+Patate	300 g
+Alloro	5 g
+Rosmarino	5 g
+Maggiorana	5 g
+Origano	5 g
+Salvia	5 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

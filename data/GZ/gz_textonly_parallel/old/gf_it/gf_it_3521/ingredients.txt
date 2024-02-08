@@ -1,0 +1,16 @@
+ingredient	quantity
+Latte intero	250 g
+Farina 00	125 g
+Groviera da grattugiare	50 g
+Triplo concentrato di pomodoro	50 g
+Burro	25 g
+Uova medie	2
+Lievito in polvere per dolci	6 g
+Basilico	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Burro	q.b.
+Panna acida	100 g
+Menta	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

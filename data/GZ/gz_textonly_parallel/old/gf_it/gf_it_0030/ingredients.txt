@@ -1,0 +1,10 @@
+ingredient	quantity
+Melanzane	800 g
+Pangrattato	120 g
+Parmigiano Reggiano DOP grattugiato	120 g
+Uova medie	2
+Aglio	1 spicchio
+Pepe nero	q.b.
+Sale fino	q.b.
+Prezzemolo	q.b.
+Olio di semi per friggere	q.b.

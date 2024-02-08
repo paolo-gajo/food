@@ -1,0 +1,21 @@
+ingredient	quantity
+Burro freddo	100 g
+Farina 00	200 g
+Acqua ghiacciata	70 g
+Sale fino	1 pizzico
+Ricotta vaccina	350 g
+Gherigli di noci	30 g
+Mandorle	30 g
+Pistacchi	30 g
+Pancetta affumicata una sola fetta	200 g
+Erba cipollina	10 g
+Basilico	40 g
+Prezzemolo	10 g
+Maggiorana	15 g
+Aglio	8 g
+Olio extravergine d'oliva	230 g
+Uova	1
+Tuorli	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	1

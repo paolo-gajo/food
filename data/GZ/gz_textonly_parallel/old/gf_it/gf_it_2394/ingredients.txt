@@ -1,0 +1,5 @@
+ingredient	quantity
+Pere	1 kg
+Zenzero fresco	100 g
+Succo di limone	50 g
+Zucchero	350 g

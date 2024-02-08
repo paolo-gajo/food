@@ -1,0 +1,11 @@
+ingredient	quantity
+Cozze	1 kg
+Polpa di pomodoro	400 g
+Aglio	2 spicchi
+Peperoncino fresco	1
+Vino bianco	50 g
+Olio extravergine d'oliva	40 g
+Pepe nero	q.b.
+Sale fino	q.b.
+Prezzemolo	q.b.
+Pane pugliese	8 fette

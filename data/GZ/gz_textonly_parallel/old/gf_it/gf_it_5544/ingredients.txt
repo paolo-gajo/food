@@ -1,0 +1,8 @@
+ingredient	quantity
+Farina di mais	300 g
+Crescenza	300 g
+Filetto di salmone	250 g
+Acqua	1,6 l
+Pepe nero	q.b.
+Olio extravergine d'oliva	1 cucchiaio
+Sale grosso	1 cucchiaio

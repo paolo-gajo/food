@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	500 g
+Acqua tiepida	260 g
+Olio extravergine d'oliva	20 g
+Sale fino	q.b.
+Aceto di vino bianco	10 g
+Spinaci	700 g
+Cipollotto fresco da pulire	160 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	2
+Ricotta vaccina	300 g
+Burro fuso	270 g
+Amido di mais (maizena)	q.b.

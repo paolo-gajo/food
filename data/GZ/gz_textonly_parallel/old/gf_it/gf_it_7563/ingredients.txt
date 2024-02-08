@@ -1,0 +1,9 @@
+ingredient	quantity
+Riso per sushi	400 g
+Acqua	600 g
+Filetto di salmone	70 g
+Filetti di tonno	70 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Alga nori	1 foglio

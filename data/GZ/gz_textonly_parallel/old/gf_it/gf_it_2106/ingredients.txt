@@ -1,0 +1,12 @@
+ingredient	quantity
+Pere (peso pulito)	600 g
+Cioccolato fondente al 50%	150 g
+Farina 00	100 g
+Burro	100 g
+Uova (circa 3)	180 g
+Cannella in polvere	3 g
+Zucchero	130 g
+Latte intero	220 g
+Zucchero	40 g
+Succo di limone	30 g
+Cacao amaro in polvere	20 g

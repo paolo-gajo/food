@@ -1,0 +1,5 @@
+ingredient	quantity
+Burro freddo di frigo	100 g
+Farina 00	200 g
+Acqua ghiacciata	50 g
+Sale fino	1 pizzico

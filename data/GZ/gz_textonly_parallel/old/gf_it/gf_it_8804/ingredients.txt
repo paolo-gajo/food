@@ -1,0 +1,18 @@
+ingredient	quantity
+Farina 00	130 g
+Burro	100 g
+Acqua	200 ml
+Zucchero	6 g
+Uova medie	4
+Sale fino	1 pizzico
+Latte intero	250 ml
+Zucchero	75 g
+Farina 00	25 g
+Tuorli	3
+Baccello di vaniglia	½
+Zucchero	100 g
+Acqua	50 ml
+Zucchero	500 g
+Acqua	175 ml
+Glucosio	90 g
+Caramello	30 g

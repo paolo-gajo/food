@@ -1,0 +1,13 @@
+ingredient	quantity
+Pasta Sfoglia rotonda	230 g
+Cipolle rosse	180 g
+Melanzane lunghe	230 g
+Peperoni rossi	200 g
+Peperoni gialli	200 g
+Zucchine	130 g
+Pomodori perini	340 g
+Edamer da grattugiare	100 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Timo	4 rametti

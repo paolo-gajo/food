@@ -1,0 +1,13 @@
+ingredient	quantity
+Burro	100 g
+Farina 00	200 g
+Acqua ghiacciata	70 ml
+Concentrato di pomodoro	50 g
+Sale fino	q.b.
+Stracciatella	250 g
+Cipolle rosse di Tropea	2
+Acciughe sott'olio	6
+Frutti di cappero 	6
+Burro	40 g
+Zucchero di canna	2 cucchiai
+Sale fino	q.b.

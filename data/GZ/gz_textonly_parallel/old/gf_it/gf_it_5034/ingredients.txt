@@ -1,0 +1,7 @@
+ingredient	quantity
+Acqua a temperatura ambiente	205 g
+Farina 0	350 g
+Sale fino	6 g
+Lievito di birra secco	4 g
+Malto	10 g
+Semi di sesamo	q.b.

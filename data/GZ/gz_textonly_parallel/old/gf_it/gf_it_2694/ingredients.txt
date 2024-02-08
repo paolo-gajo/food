@@ -1,0 +1,9 @@
+ingredient	quantity
+Colomba	160 g
+Mascarpone	250 g
+Succo d'arancia	75 g
+Scorza d'arancia	1
+Uova	3
+Grand Marnier	20 g
+Cioccolato fondente	30 g
+Zucchero	60 g

@@ -1,0 +1,8 @@
+ingredient	quantity
+Peperoni rossi	1
+Peperoni gialli	1
+Erba cipollina	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.
+Caprino cilindrico	300 g
+Olio extravergine d'oliva	15 g

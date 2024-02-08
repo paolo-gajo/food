@@ -1,0 +1,18 @@
+ingredient	quantity
+Farina 00	120 g
+Fecola di patate	45 g
+Zucchero	100 g
+Lievito in polvere per dolci	4 g
+Burro	85 g
+Uova	2
+Yogurt bianco naturale	40 g
+Scorza di limone	1
+Latte intero	500 g
+Zucchero	50 g
+Farina di riso	30 g
+Albicocche	3
+Acqua	200 g
+Zucchero	200 g
+Gelatina preparato per torte	13 g
+Acqua	250 g
+Zucchero	3 cucchiai

@@ -1,0 +1,13 @@
+ingredient	quantity
+Burro (a temperatura ambiente)	250 g
+Farina di grano saraceno	250 g
+Zucchero	250 g
+Lievito in polvere per dolci	16 g
+Uova (medie, a temperatura ambiente)	5
+Baccello di vaniglia	1
+Latte intero (a temperatura ambiente)	250 ml
+Confettura di ribes	400 g
+Mandorle in scaglie	20 g
+Ribes	1 grappolo
+Zucchero a velo	20 g
+Panna fresca liquida	200 ml

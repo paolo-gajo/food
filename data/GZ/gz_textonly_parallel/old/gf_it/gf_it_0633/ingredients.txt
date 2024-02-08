@@ -1,0 +1,7 @@
+ingredient	quantity
+Glucosio	50 g
+Acqua	30 g
+Gelatina in fogli	5 g
+Coloranti alimentari in gel o in pasta	q.b.
+Zucchero a velo	500 g
+Glicerina	10 g

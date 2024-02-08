@@ -1,0 +1,22 @@
+ingredient	quantity
+Tortillas	4
+Petto di pollo a fette	400 g
+Lattuga	80 g
+Fagioli neri precotti	150 g
+Cheddar a fette	200 g
+Pomodori ramati	200 g
+Sale fino	1 pizzico
+Olio extravergine d'oliva	30 g
+Succo di lime	10 g
+Scorza di lime	1
+Sale fino	q.b.
+Peperoncino di Cayenna	1 g
+Miele	20 g
+Avocado maturo	1
+Scalogno	10 g
+Peperoncino fresco	10 g
+Pomodori ramati	150 g
+Succo di lime	10 g
+Olio extravergine d'oliva	20 g
+Sale fino	q.b.
+Pepe nero	q.b.

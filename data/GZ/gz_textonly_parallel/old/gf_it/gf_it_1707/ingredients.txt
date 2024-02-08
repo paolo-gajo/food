@@ -1,0 +1,15 @@
+ingredient	quantity
+Gnocchetti Sardi	400 g
+Passata di pomodoro	700 g
+Salsiccia	700 g
+Carote	100 g
+Sedano	70 g
+Cipolle bianche	100 g
+Vino rosso	120 ml
+Concentrato di pomodoro	1 cucchiaio
+Brodo vegetale	1 mestolo
+Zucchero	1 pizzico
+Origano	1 cucchiaino
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

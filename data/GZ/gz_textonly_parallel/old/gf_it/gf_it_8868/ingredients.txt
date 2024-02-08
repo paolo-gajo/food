@@ -1,0 +1,8 @@
+ingredient	quantity
+Pasta Sfoglia tonda	230 g
+Pomodorini datterini	140 g
+Mozzarella	150 g
+Origano	q.b.
+Basilico	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

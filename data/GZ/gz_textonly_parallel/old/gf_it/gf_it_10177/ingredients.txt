@@ -1,0 +1,20 @@
+ingredient	quantity
+Uova	6
+Farina 00	150 g
+Zucchero	150 g
+Baccello di vaniglia	1
+Sale fino	1 pizzico
+Latte intero	500 ml
+Fecola di patate	60 g
+Tuorli	6
+Baccello di vaniglia	1
+Zucchero	150 g
+Scorza d'arancia	1
+Zucchero a velo	200 g
+Acqua calda	q.b.
+Coloranti alimentari rosso	q.b.
+Uova	2 albumi
+Zucchero a velo	120 gr
+Succo d'arancia biologiche	2
+Zucchero	100 g
+Acqua	50 ml

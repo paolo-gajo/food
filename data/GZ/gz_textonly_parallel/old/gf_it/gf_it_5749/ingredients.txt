@@ -1,0 +1,10 @@
+ingredient	quantity
+La Bottega di Olivia&Marino spianatine con pomodorini scarpariello e basilico	12
+Carote	30 g
+Sedano	25 g
+Finocchi	25 g
+Asiago	25 g
+Zucchine	20 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

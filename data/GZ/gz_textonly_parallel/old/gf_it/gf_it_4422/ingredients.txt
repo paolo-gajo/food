@@ -1,0 +1,22 @@
+ingredient	quantity
+Farina 00	300 g
+Vino bianco	100 g
+Acqua a temperatura ambiente	95 g
+Sale fino	1 pizzico
+Bietole	400 g
+Borragine	400 g
+Ricotta vaccina	200 g
+Uova medie	2
+Grana Padano DOP da grattugiare	50 g
+Sale fino	1 pizzico
+Pepe	q.b.
+Maggiorana	q.b.
+Aglio	2 spicchi
+Olio extravergine d'oliva	40 g
+Noci	160 g
+Aglio	3 g
+Pinoli	20 g
+Parmigiano Reggiano DOP da grattugiare	30 g
+Maggiorana	4 g
+Pane mollica	30 g
+Latte intero a temperatura ambiente	160 g

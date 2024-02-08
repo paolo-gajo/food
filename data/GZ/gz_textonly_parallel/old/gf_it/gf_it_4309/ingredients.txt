@@ -1,0 +1,14 @@
+ingredient	quantity
+Orzo perlato	240 g
+Tranci di salmone	300 g
+Avocado	150 g
+Finocchi con la barbetta	90 g
+Spinacini	25 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Yogurt greco	250 g
+Olio extravergine d'oliva	10 g
+Arance	1
+Sale fino	q.b.
+Pepe nero	q.b.

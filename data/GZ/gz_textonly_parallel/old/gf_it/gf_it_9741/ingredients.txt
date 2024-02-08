@@ -1,0 +1,9 @@
+ingredient	quantity
+Farina di mais fioretto	80 g
+Farina 0	160 g
+Burro ammorbidito	80 g
+Zucchero	80 g
+Uova	1
+Succo d'arancia	100 g
+Scorza d'arancia	1
+Lievito in polvere per dolci	6 g

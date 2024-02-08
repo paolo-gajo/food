@@ -1,0 +1,12 @@
+ingredient	quantity
+Panettone (salato da 590 g)	1
+Chevre (formaggio di capra francese)	190 g
+Ricotta vaccina	130 g
+Prosciutto cotto a fette	150 g
+Bresaola a fette	150 g
+Latte intero	220 g
+Parmigiano Reggiano DOP	60 g
+Rosmarino	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

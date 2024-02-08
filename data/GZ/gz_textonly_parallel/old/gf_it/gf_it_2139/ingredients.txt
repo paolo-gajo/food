@@ -1,0 +1,10 @@
+ingredient	quantity
+Patate	1,2 kg
+Pancetta affumicata a fette	140 g
+Reblochon privato della scorza	300 g
+Burro	50 g
+Cipolle	1
+Panna fresca liquida (facoltativa)	70 ml
+Vino bianco secco	30 ml
+Sale fino	q.b.
+Pepe nero	q.b.

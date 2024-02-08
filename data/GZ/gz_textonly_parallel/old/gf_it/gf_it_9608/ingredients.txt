@@ -1,0 +1,10 @@
+ingredient	quantity
+Uova (medie)	6
+Farina 00	450 g
+Zucchero	210 g
+Olio di semi	80 g
+Nespole	220 g
+Latte intero	100 g
+Lievito in polvere per dolci	14 g
+Cannella in polvere	1 pizzico
+Nespole	7

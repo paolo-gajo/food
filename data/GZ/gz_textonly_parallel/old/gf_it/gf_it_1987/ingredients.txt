@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina Manitoba	500 g
+Acqua (a temperatura ambiente)	70 g
+Lievito di birra secco	6 g
+Latte intero (a temperatura ambiente)	180 g
+Malto	10 g
+Zucchero	60 g
+Uova medie	2
+Burro	60 g
+Nutella	360 g

@@ -1,0 +1,23 @@
+ingredient	quantity
+Latte intero	500 ml
+Farina 00	250 g
+Uova medie	3
+Zucchero	60 g
+Burro	40 g
+Scorza d'arancia	1
+Baccello di vaniglia i semi	½
+Sale fino	q.b.
+Yogurt greco	500 g
+Zucchero a velo	25 g
+Baccello di vaniglia i semi	½
+Yogurt greco	500 g
+Fragole	60 g
+Zucchero a velo	25 g
+Albicocche mature	5
+Pesche gialle	4
+Fragole	40 g
+Yogurt greco	100 g
+Panna fresca liquida	150 g
+Zucchero a velo	20 g
+Ciliegie	q.b.
+Fragole	q.b.

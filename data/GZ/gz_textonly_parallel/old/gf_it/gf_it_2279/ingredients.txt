@@ -1,0 +1,8 @@
+ingredient	quantity
+Tortiglioni Integrali	320 g
+Carciofi da pulire	4
+Salsiccia	450 g
+Vino bianco	20 g
+Prezzemolo	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

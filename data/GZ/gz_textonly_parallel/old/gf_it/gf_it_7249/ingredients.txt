@@ -1,0 +1,13 @@
+ingredient	quantity
+Semola	500 g
+Acqua	220 g
+Olio extravergine d'oliva	50 g
+Lievito di birra fresco	7 g
+Sale fino	6 g
+Caciocavallo	200 g
+Passata di pomodoro	250 g
+Cipolle bianche	60 g
+Prezzemolo	1 mazzetto
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

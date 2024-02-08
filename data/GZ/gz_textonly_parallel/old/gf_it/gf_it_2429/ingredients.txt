@@ -1,0 +1,4 @@
+ingredient	quantity
+Lamponi	500 g
+Zucchero	200 g
+Succo di limone	20 g

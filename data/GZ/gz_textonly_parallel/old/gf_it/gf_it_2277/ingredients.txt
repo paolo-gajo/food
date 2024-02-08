@@ -1,0 +1,10 @@
+ingredient	quantity
+Biscotti secchi al cioccolato	200 g
+Burro	100 g
+Formaggio fresco spalmabile	500 g
+Panna fresca liquida	200 ml
+Succo d'arancia	150 ml
+Zucchero	140 g
+Scorza d'arancia	15 g
+Gelatina in fogli	10 g
+Cannella in polvere	1 cucchiaino

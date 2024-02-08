@@ -1,0 +1,7 @@
+ingredient	quantity
+Latte intero	500 ml
+Zucchero	150 g
+Fecola di patate	35 g
+Farina 00	35 g
+Tuorli	6
+Scorza di limone	3

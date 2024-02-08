@@ -1,0 +1,11 @@
+ingredient	quantity
+Patate	300 g
+Farina di riso	250 g
+Farina di tapioca	40 g
+Lievito di birra fresco	6 g
+Acqua	145 g
+Sale fino	7 g
+Olio extravergine d'oliva	20 g
+Olio extravergine d'oliva più q.b. per la teglia	30 g
+Sale grosso	1 cucchiaio
+Rosmarino	1 rametto

@@ -1,0 +1,10 @@
+ingredient	quantity
+Fagiolini	600 g
+Pancetta	100 g
+Aglio	2 spicchi
+Pomodori pelati	800 g
+Prezzemolo	1 ciuffo
+Basilico	1 ciuffo
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

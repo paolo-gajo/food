@@ -1,0 +1,22 @@
+ingredient	quantity
+Farina integrale	125 g
+Farina Manitoba	125 g
+Farina 00	50 g
+Miele	20 g
+Lievito di birra fresco	7 g
+Uova (circa 1)	55 g
+Latte intero a temperatura ambiente	75 g
+Acqua a temperatura ambiente	75 g
+Burro	55 g
+Pancetta dolce	100 g
+Provolone	100 g
+Pomodori secchi	40 g
+Sale fino	7 g
+Erba cipollina	q.b.
+Prezzemolo	q.b.
+Origano	q.b.
+Albumi	37 g
+Parmigiano Reggiano DOP	40 g
+Pepe nero	q.b.
+Mandorle pelate	q.b.
+Arachidi	q.b.

@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina 0	350 g
+Zucchero a velo	100 g
+Tuorli	3
+Sale fino	q.b.
+Burro	200 g
+Baccello di vaniglia	1

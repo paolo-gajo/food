@@ -1,0 +1,20 @@
+ingredient	quantity
+Latte	120 ml
+Farina Manitoba	160 g
+Lievito di birra secco	4 g
+Panna fresca liquida	100 ml
+Farina Manitoba	400 g
+Uova (circa 9)	400 g
+Zucchero	50 g
+Sale fino	10 g
+Burro morbido	150 g
+Acqua	2 l
+Zucchero	800 g
+Scorza d'arancia	40 g
+Scorza di limone	20 g
+Rum	200 ml
+Panna fresca liquida	500 ml
+Confettura di albicocche	160 ml
+Zucchero a velo	100 g
+Fragole	3
+Kiwi	1

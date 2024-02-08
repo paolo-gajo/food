@@ -1,0 +1,14 @@
+ingredient	quantity
+Uova	5
+Miele	10 g
+Farina 00	100 g
+Zucchero	140 g
+Prugne	600 g
+Zucchero	50 g
+Latte intero	250 g
+Tuorli	3
+Amido di mais (maizena)	25 g
+Zucchero	75 g
+Baccello di vaniglia	1
+Gelatina in fogli	2,5 g
+Panna fresca liquida	250 g

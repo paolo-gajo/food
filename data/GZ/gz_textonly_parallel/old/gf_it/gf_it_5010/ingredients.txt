@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina di farro integrale	250 g
+Farina 00	250 g
+Acqua	350 g
+Lievito di birra fresco (1 se secco)	3 g
+Sale fino	q.b.
+Asparagi	300 g
+Asparagi selvatici o asparagina	200 g
+Grana Padano DOP	q.b.
+Timo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

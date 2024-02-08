@@ -1,0 +1,11 @@
+ingredient	quantity
+Avena	110 g
+Mandorle	35 g
+Gherigli di noci	35 g
+Nocciole	35 g
+Uva passa	40 g
+Bacche di Goji	20 g
+Miele millefiori	50 g
+Acqua	50 g
+Olio di semi di girasole	25 g
+Zucchero muscovado	1 cucchiaio

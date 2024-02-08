@@ -1,0 +1,3 @@
+ingredient	quantity
+Farina 0	400 g
+Uova medie	4

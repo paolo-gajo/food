@@ -1,0 +1,9 @@
+ingredient	quantity
+Biscotti Pan di stelle	450 g
+Panna fresca liquida	600 g
+Cioccolato fondente	100 g
+Zucchero a velo	80 g
+Latte intero	70 g
+Latte intero	q.b.
+Zucchero a velo	q.b.
+Cacao amaro in polvere	q.b.

@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	500 g
+Lievito di birra fresco	25 g
+Zucchero	100 g
+Strutto	100 g
+Anice nero	15 g
+Acqua	200 g
+Cannella in polvere	½ cucchiaino
+Sale fino	1 pizzico
+Ricotta vaccina	550 g
+Zucchero a velo	150 g
+Cannella in polvere	1 pizzico
+Gocce di cioccolato fondente	75 g
+Moscato	20 g
+Acqua	20 g

@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	210 g
+Parmigiano Reggiano DOP	50 g
+Burro	150 g
+Spinaci freschi	200 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Ricotta vaccina	200 g
+Salmone affumicato	100 g
+Aneto	q.b.
+Limoni	½
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

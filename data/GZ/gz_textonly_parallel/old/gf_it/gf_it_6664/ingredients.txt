@@ -1,0 +1,14 @@
+ingredient	quantity
+Latte intero	200 ml
+Farina 00	90 g
+Uova	4
+Aneto	2 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Zucchine baby	300 g
+Salmone affumicato	250 g
+Pisellini	100 g
+Fiori di zucca	4
+Cipollotto fresco	1
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.

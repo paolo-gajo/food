@@ -1,0 +1,10 @@
+ingredient	quantity
+Burro a temperatura ambiente	175 g
+Zucchero	150 g
+Tuorli (circa 6)	90 g
+Acqua	50 g
+Baccello di vaniglia	1
+Burro	300 g
+Zucchero	250 g
+Acqua	50 g
+Albumi	100 g

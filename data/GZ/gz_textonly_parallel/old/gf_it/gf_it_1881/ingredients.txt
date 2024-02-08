@@ -1,0 +1,13 @@
+ingredient	quantity
+Gelatina in fogli	6 g
+Latte intero fresco	300 g
+Panna fresca liquida	300 g
+Cioccolato bianco	100 g
+Zucchero	50 g
+Tuorli	3
+Baccello di vaniglia	1
+Gelatina in fogli in fogli	0,5 g
+Panna fresca liquida	100 g
+Sciroppo alla menta	10 g
+Menta	6 foglie
+Coloranti alimentari verde (facoltativo)	1 g

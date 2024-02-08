@@ -1,0 +1,12 @@
+ingredient	quantity
+Burro freddo	100 g
+Farina 00	200 g
+Acqua fredda	70 g
+Rucola	60 g
+Pomodori secchi	30 g
+Panna fresca liquida	70 g
+Uova	54 g
+Pecorino romano	40 g
+Scorza di limone	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

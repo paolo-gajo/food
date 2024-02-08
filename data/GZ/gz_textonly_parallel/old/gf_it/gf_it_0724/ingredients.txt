@@ -1,0 +1,4 @@
+ingredient	quantity
+Mandorle pelate	200 g
+Acqua	1 l
+Miele di acacia	85 g

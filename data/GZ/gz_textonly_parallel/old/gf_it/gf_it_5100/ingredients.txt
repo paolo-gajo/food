@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	250 g
+Acqua tiepida	115 g
+Grana Padano DOP da grattugiare	60 g
+Olio extravergine d'oliva	20 g
+Lievito di birra fresco	2 g
+Sale fino	5 g
+Semi di sesamo	q.b.
+Semi di zucca	q.b.
+Semi di lino	q.b.

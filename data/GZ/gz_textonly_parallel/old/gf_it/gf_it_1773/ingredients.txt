@@ -1,0 +1,10 @@
+ingredient	quantity
+Cavoli rossi	600 g
+Panna fresca liquida	50 g
+Scalogno	1
+Acqua	1,5 l
+Olio extravergine d'oliva	25 g
+Succo di limone	½
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

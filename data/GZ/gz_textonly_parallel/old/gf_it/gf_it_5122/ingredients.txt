@@ -1,0 +1,9 @@
+ingredient	quantity
+Farina integrale	300 g
+Farina 00	100 g
+Lievito di birra secco	7 g
+Acqua tiepida	250 g
+Olio extravergine d'oliva	1 cucchiaio
+Zucchero	10 g
+Sale fino	7 g
+Pinoli	50 g

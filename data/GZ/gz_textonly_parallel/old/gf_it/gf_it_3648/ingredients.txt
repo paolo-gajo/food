@@ -1,0 +1,12 @@
+ingredient	quantity
+Latte intero	300 ml
+Farina 00	180 g
+Burro	30 g
+Sale fino 1/	2 cucchiaino
+Caprino	120 g
+Erba cipollina tritata	2 cucchiai
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova piccole	2
+Pangrattato	q.b.
+Olio di semi di arachide	q.b.

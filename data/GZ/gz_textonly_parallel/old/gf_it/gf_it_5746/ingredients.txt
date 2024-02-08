@@ -1,0 +1,12 @@
+ingredient	quantity
+Zucchero a velo	70 g
+Farina di mandorle	30 g
+Farina 00	30 g
+Albumi	55 g
+Burro	55 g
+Scorza di limone	1
+Sciroppo alla fragola	200 g
+Gelatina in fogli	10 g
+Succo di limone	16 g
+Panna fresca liquida	q.b.
+Fiori di lavanda (disidratati)	q.b.

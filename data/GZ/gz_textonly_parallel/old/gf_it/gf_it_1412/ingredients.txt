@@ -1,0 +1,12 @@
+ingredient	quantity
+Carote da pulire	170 g
+Farina 00	160 g
+Farina di mandorle	50 g
+Uova (circa 2)	130 g
+Zucchero di canna	160 g
+Olio di semi di girasole	100 g
+Scorza di limone	1
+Scorza d'arancia	1
+Lievito in polvere per dolci	8 g
+Mandorle in scaglie	q.b.
+Zucchero a velo	q.b.

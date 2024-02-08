@@ -1,0 +1,12 @@
+ingredient	quantity
+Patate rosse	600 g
+Uova	1
+Grana Padano DOP	100 g
+Amido di mais (maizena)	200 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Salsiccia	360 g
+Mozzarella di bufala	550 g
+Vino bianco	50 g
+Scalogno	1
+Rosmarino	1 rametto

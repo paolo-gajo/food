@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina 0	500 g
+Acqua	310 g
+Olio extravergine d'oliva	25 g
+Sale fino	10 g
+Lievito di birra fresco	6 g
+Zucchero	5 g
+Pomodori pelati	800 g
+Prosciutto cotto a fette	150 g
+Caciocavallo	300 g
+Pasta Sfoglia (1 rotolo rettangolare)	230 g
+Panna fresca liquida	2 cucchiai
+Tuorli	1
+Olio extravergine d'oliva	q.b.

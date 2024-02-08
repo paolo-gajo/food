@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina 00	230 g
+Burro morbido	130 g
+Zucchero	120 g
+Cacao amaro in polvere	20 g
+Caffè	20 ml
+Caffè in polvere	5 g

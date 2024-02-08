@@ -1,0 +1,10 @@
+ingredient	quantity
+Burro	100 g
+Uova (1 medio circa)	70 g
+Farina 00	320 g
+Zucchero	90 g
+Limoni (non trattato)	1
+Arance (non trattato)	1
+Lievito in polvere per dolci	3 g
+Zucchero	60 g
+Zucchero a velo	q.b.

@@ -1,0 +1,13 @@
+ingredient	quantity
+Ananas pulito	650
+Uova (circa 3 medie a temperatura ambiente)	165 g
+Burro morbido	170 g
+Zucchero	200 g
+Farina 00	220 g
+Lievito in polvere per dolci	3 g
+Farina di mandorle	50 g
+Latte di mandorle a temperatura ambiente	140 g
+Sale fino	2 g
+Burro	30 g
+Zucchero	150 g
+Acqua	150 g

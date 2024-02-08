@@ -1,0 +1,10 @@
+ingredient	quantity
+Patate	800 g
+Basilico fresco	10 g
+Prezzemolo fresco	10 g
+Capperi sott'aceto	15 g
+Acciughe (alici) sott'olio	20 g
+Olio extravergine d'oliva	30 g
+Aceto di vino bianco	8 g
+Pepe nero	q.b.
+Origano essiccato	q.b.

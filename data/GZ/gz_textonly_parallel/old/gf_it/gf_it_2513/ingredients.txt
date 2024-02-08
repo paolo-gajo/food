@@ -1,0 +1,11 @@
+ingredient	quantity
+Paccheri	320 g
+Gamberi	12
+Guanciale	120 g
+Burrata	500 g
+Pomodori pelati	850 g
+Aglio	1 spicchio
+Basilico	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

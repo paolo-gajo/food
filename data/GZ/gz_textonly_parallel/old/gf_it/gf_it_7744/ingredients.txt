@@ -1,0 +1,10 @@
+ingredient	quantity
+Pane lungo per tramezzini 1 fetta	150 g
+Caprino	250 g
+Asparagi	240 g
+Peperoni gialli	1
+Peperoni rossi	1
+Basilico	10 foglie
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

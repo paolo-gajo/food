@@ -1,0 +1,11 @@
+ingredient	quantity
+Parmigiano Reggiano DOP da grattugiare	80 g
+Farina 00	100 g
+Farina di mandorle	100 g
+Burro freddo a cubetti	80 g
+Sale grosso	1 pizzico
+Vino bianco	20 ml
+Formaggio fresco	60 g
+Erba cipollina	3 fili
+Pepe nero	q.b.
+Sale fino	q.b.

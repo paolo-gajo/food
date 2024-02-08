@@ -1,0 +1,15 @@
+ingredient	quantity
+Cioccolato fondente	300 g
+Cacao amaro in polvere	20 g
+Farina 00	40 g
+Burro	160 g
+Uova	4
+Tuorli	2
+Zucchero a velo	180 g
+Scorza di limone	1
+Lamponi	125 g
+Zucchero	15 g
+Agar agar	1 g
+Burro	q.b.
+Zucchero a velo	q.b.
+Cacao amaro in polvere	q.b.

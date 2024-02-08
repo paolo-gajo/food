@@ -1,0 +1,13 @@
+ingredient	quantity
+Zucchero	200 g
+Acqua	50 g
+Zucchero a velo	200 g
+Farina di mandorle	200 g
+Albumi	150 g
+Coloranti alimentari in polvere, colori rosso e giallo	q.b.
+Basilico	45 g
+Formaggio fresco spalmabile	200 g
+Mozzarella	400 g
+Pomodorini ciliegino	100 g
+Sale fino	q.b.
+Pepe nero	q.b.

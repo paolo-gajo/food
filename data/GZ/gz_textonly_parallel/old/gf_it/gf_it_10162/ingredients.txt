@@ -1,0 +1,20 @@
+ingredient	quantity
+Tagliolini all'uovo	500 g
+Manzo macinato	500 g
+Asparagi	400 g
+Tilsit	100 g
+Mozzarella da tritare	25 g
+Provolone da grattugiare	25 g
+Cipolle	1
+Sedano	1
+Carote	1
+Brodo vegetale	200 ml
+Vino bianco	50 ml
+Rosmarino	2 rametti
+Pepe nero	q.b.
+Sale fino	q.b.
+Latte intero	250 g
+Tilsit	125 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

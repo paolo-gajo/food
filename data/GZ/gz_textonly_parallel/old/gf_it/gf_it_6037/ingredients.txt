@@ -1,0 +1,13 @@
+ingredient	quantity
+Zucchero	200 g
+Farina 00	300 g
+Burro (a temperatura ambiente)	150 g
+Latte intero (a temperatura ambiente)	170 g
+Uova (medie a temperatura ambiente)	4
+Baccello di vaniglia	1
+Sale fino	1 pizzico
+Lievito in polvere per dolci	8 g
+Farina 00	50 g
+Cacao amaro in polvere	10 g
+Burro	q.b.
+Farina 00	q.b.

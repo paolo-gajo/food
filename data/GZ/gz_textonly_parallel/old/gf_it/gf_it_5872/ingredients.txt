@@ -1,0 +1,20 @@
+ingredient	quantity
+Uova medie	4
+Zucca delica polpa	300 g
+Latte intero	200 ml
+Parmigiano Reggiano DOP da grattugiare	100 g
+Emmentaler da grattugiare	50 g
+Farina 00	40 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.
+Pomodorini ciliegino	280 g
+Olio extravergine d'oliva	20 g
+Zucchero	15 g
+Aglio	½ spicchio
+Timo	5 rametti
+Origano secco	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Burro ammorbidito	q.b.

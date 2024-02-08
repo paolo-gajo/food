@@ -1,0 +1,12 @@
+ingredient	quantity
+Penne Rigate	320 g
+Peperoni rossi	275 g
+Peperoni gialli	275 g
+Acciughe sott'olio	2
+Passata di pomodoro	200 g
+Basilico	q.b.
+Zucchero di canna	1 pizzico
+Cipolle bianche	80 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

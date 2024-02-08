@@ -1,0 +1,12 @@
+ingredient	quantity
+Uova	6
+Grana Padano DOP	50 g
+Latte intero	50 ml
+Piselli surgelati	100 g
+Carote	100 g
+Prosciutto cotto	80 g
+Prezzemolo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Scalogno	1

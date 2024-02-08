@@ -1,0 +1,12 @@
+ingredient	quantity
+Gorgonzola dolce	150 g
+Farina 00	250 g
+Parmigiano Reggiano DOP da grattugiare	100 g
+Gherigli di noci	60 g
+Pinoli	60 g
+Burro	50 g
+Uova medie	2
+Lievito in polvere per dolci	8 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.

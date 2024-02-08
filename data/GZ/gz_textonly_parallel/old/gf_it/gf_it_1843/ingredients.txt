@@ -1,0 +1,9 @@
+ingredient	quantity
+Petto di tacchino (a fette)	400 g
+Emmentaler	150 g
+Prosciutto cotto	120 g
+Uova	3
+Pangrattato	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di semi di arachide	q.b.

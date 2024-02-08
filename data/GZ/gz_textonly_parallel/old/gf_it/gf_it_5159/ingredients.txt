@@ -1,0 +1,10 @@
+ingredient	quantity
+Uova	120 g
+Farina 00	77 g
+Acqua	62 g
+Latte intero	62 g
+Burro	55 g
+Sale fino	2,5 g
+Zucchero	8 g
+Tuorli	1
+Acqua	q.b.

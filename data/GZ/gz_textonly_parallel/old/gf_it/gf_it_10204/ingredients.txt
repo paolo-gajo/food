@@ -1,0 +1,11 @@
+ingredient	quantity
+Patate	500 g
+Paprika dolce	5 g
+Paprika affumicata	5 g
+Grana Padano DOP	20 g
+Aglio in polvere	2 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Origano	q.b.
+Grana Padano DOP	q.b.

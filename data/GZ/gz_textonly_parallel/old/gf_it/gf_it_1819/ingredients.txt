@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina	200 g
+Burro	100 g
+Uova	1
+Zucchero	120 g
+Fragole	500 g
+Zucchero a velo	120 g
+Amido di mais (maizena)	25 g
+Burro	80 g
+Uova	2
+Acqua a temperatura ambiente	40 g
+Scorza di limone non trattato	1
+Cioccolato bianco	20 g
+Fragole	250 g

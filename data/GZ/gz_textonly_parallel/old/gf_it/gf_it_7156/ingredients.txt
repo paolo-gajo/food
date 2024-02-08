@@ -1,0 +1,14 @@
+ingredient	quantity
+Gamberi	12
+Daikon	80 g
+Carote	100 g
+Semi di papavero	q.b.
+Fiocchi di sale	q.b.
+Limoni	1
+Basilico	q.b.
+Olio extravergine d'oliva	q.b.
+Tuorli	1
+Aceto di riso	10 g
+Wasabi pasta	2 g
+Olio di semi di arachide	80 g
+Sale fino	q.b.

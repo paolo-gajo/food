@@ -1,0 +1,13 @@
+ingredient	quantity
+Fettine di manzo 150 g per fetta, di Paletta o Copertina	4
+Passata di pomodoro	700 g
+Vino rosso	50 g
+Cipolle dorate	60 g
+Uvetta	15 g
+Pinoli	10 g
+Pecorino romano	10 g
+Aglio spicchio	1
+Prezzemolo	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

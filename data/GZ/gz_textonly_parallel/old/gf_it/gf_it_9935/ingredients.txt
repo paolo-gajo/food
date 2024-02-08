@@ -1,0 +1,16 @@
+ingredient	quantity
+Patate	420 g
+Farina 00	220 g
+Burro	50 g
+Latte intero	160 g
+Timo	5 rametti
+Sale fino	1 pizzico
+Noce moscata da grattugiare	q.b.
+Lievito istantaneo per preparazioni salate	12 g
+Prosciutto crudo (a fette)	150 g
+Ricotta	250 g
+Mortadella (a fette)	150 g
+Zucchine	100 g
+Semi di sesamo	q.b.
+Semi di sesamo nero	q.b.
+Semi di papavero	q.b.

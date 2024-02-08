@@ -1,0 +1,7 @@
+ingredient	quantity
+Latte intero	400 g
+Farina 00	300 g
+Zucchero	60 g
+Lievito in polvere per dolci	10 g
+Burro	30 g
+Mirtilli	120 g

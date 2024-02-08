@@ -1,0 +1,9 @@
+ingredient	quantity
+Funghi champignon	250 g
+Edamer	100 g
+Prosciutto cotto	100 g
+Prezzemolo	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova medie	8
+Olio extravergine d'oliva	q.b.

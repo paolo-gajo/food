@@ -1,0 +1,5 @@
+ingredient	quantity
+Farina di frumento	330 g
+Acqua a temperatura ambiente	150 g
+Zucchero	80 g
+Lievito di birra secco	6 g

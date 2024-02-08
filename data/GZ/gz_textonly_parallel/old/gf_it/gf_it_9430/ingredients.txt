@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina integrale	400 g
+Farina 00	100 g
+Burro	200 g
+Zucchero di canna	150 g
+Uova (circa 2)	110 g
+Sale fino	1 pizzico
+Cannella in polvere	1 pizzico
+Confettura di pesche	250 g
+Zucchero di canna	25 g

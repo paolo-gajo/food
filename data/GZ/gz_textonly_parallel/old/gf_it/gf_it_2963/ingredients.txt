@@ -1,0 +1,15 @@
+ingredient	quantity
+Zucca polpa	500 g
+Parmigiano Reggiano DOP da grattugiare	100 g
+Latte intero	1 cucchiaio
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.
+Rosmarino	q.b.
+Noce moscata	q.b.
+Uova medie	4
+Caprino	240 g
+Panna fresca liquida	100 ml
+Pepe nero	q.b.
+Sale fino	1 pizzico
+Burro	q.b.

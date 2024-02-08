@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina 00	500 g
+Zucchero	40 g
+Latte intero	250 g
+Burro	60 g
+Uova medio	1
+Lievito di birra fresco	12 g
+Sale fino	q.b.
+Granella di nocciole	q.b.
+Granella di pistacchi	q.b.
+Granella di zucchero	q.b.

@@ -1,0 +1,6 @@
+ingredient	quantity
+Caffè	100 g
+Panna fresca liquida	125 g
+Latte intero	75 g
+Glucosio	60 g
+Zucchero	45 g

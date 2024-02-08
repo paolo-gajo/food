@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina integrale	60 g
+Fecola di patate	55 g
+Zucchero	100 g
+Uova	2
+Gocce di cioccolato fondente	30 g
+Yogurt greco	90 g
+Panna fresca liquida	150 g
+Zucchero a velo	15 g
+Mirtilli	120 g
+Lamponi	120 g
+Menta	q.b.

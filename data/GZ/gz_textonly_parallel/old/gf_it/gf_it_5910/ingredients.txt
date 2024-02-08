@@ -1,0 +1,13 @@
+ingredient	quantity
+Lievito istantaneo per preparazioni salate	15 g
+Farina 00	250 g
+Spinaci puliti	200 g
+Latte intero	170 g
+Parmigiano Reggiano DOP da grattugiare	50 g
+Olio extravergine d'oliva	20 g
+Uova	2
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	8
+Burro	q.b.
+Pangrattato	q.b.

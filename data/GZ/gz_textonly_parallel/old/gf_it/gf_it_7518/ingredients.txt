@@ -1,0 +1,11 @@
+ingredient	quantity
+Parmigiano Reggiano DOP grattugiaro	100 gr
+Farina 00	125 g
+Burro salato	80 g
+Sale fino	1 pizzico
+Pepe nero	1 pizzico
+Albumi	1
+Pinoli	q.b.
+Cumino	q.b.
+Sale affumicato	q.b.
+Pepe di Sichuan	q.b.

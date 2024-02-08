@@ -1,0 +1,12 @@
+ingredient	quantity
+Tofu	300 g
+Salsa di soia	50 g
+Rosmarino	q.b.
+Salvia	q.b.
+Farina 00	200 g
+Acqua	300 g
+Sale fino	½ cucchiaino
+Pangrattato	100 g
+Rosmarino da tritare	1 cucchiaino
+Sale fino	1 cucchiaino
+Olio di semi	q.b.

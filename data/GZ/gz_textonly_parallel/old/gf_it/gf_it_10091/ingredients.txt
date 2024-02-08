@@ -1,0 +1,15 @@
+ingredient	quantity
+Cardi	1 kg
+Pomodori pelati	500 g
+Vitello (macinato)	200 g
+Maiale (macinato)	200 g
+Sedano	50 g
+Carote	50 g
+Cipolle dorate	50 g
+Uova	4
+Farina 00	250
+Olio extravergine d'oliva	40 g
+Olio di semi di arachide per friggere	500 ml
+Parmigiano Reggiano DOP grattugiato	150 g
+Sale fino	q.b.
+Pepe nero	q.b.

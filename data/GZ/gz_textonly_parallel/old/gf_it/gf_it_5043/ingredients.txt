@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina 0	1 kg
+Acqua (tiepida)	600 g
+Lievito di birra secco	5 g
+Malto	10 g
+Olio extravergine d'oliva	100 g
+Sale	15 g

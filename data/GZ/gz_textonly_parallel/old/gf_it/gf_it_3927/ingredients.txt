@@ -1,0 +1,10 @@
+ingredient	quantity
+Riso Ribe	200 g
+Pisellini	50 g
+Prosciutto cotto	30 g
+Uova medie	2
+Acqua	q.b.
+Vino di riso	q.b.
+Olio di semi di arachide (o di girasole)	q.b.
+Erba cipollina	q.b.
+Sale fino	q.b.

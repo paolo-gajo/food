@@ -1,0 +1,11 @@
+ingredient	quantity
+Biscotti secchi	300 g
+Cacao amaro in polvere	50 g
+Zucchero	30 g
+Burro	100 g
+Latte intero freddo	100 g
+Ricotta vaccina (ben scolata)	200 g
+Gocce di cioccolato fondente	15 g
+Zucchero a velo	50 g
+Rum	1 cucchiaio
+Caffè (espresso)	30 ml

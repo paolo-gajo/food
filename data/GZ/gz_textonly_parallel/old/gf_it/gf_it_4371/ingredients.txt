@@ -1,0 +1,4 @@
+ingredient	quantity
+Semola di grano duro rimacinata	460 g
+Acqua	300 g
+Sale fino	8 g

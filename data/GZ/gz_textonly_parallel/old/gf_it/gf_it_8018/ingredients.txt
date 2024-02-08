@@ -1,0 +1,7 @@
+ingredient	quantity
+Albumi	150 g
+Zucchero	320 g
+Baccello di vaniglia	1
+Panna fresca liquida	250 g
+Castagne crema di marroni	1 vasetto
+Crema di marroni vasetto	1

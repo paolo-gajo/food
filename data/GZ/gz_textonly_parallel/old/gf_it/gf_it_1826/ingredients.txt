@@ -1,0 +1,12 @@
+ingredient	quantity
+Spaghetti alla Chitarra all'uovo	400 g
+Polpo	800 g
+Passata di pomodoro	150 g
+Sedano	2 coste
+Carote medie	2
+Aglio	2 spicchi
+Vino bianco secco	80 ml
+Sale fino	q.b.
+Pepe nero	q.b.
+Prezzemolo	q.b.
+Olio extravergine d'oliva	q.b.

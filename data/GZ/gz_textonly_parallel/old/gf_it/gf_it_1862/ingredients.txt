@@ -1,0 +1,16 @@
+ingredient	quantity
+Biscotti secchi	180 g
+Burro fuso	100 g
+Zucchero di canna	20 g
+Formaggio fresco spalmabile	480 g
+Mango polpa a pezzi	100 g
+Ananas polpa a pezzi	100 g
+Zucchero a velo	120 g
+Panna fresca liquida	100 g
+Gelatina in fogli	15 g
+Succo di ananas	200 ml
+Mango polpa	100 g
+Ananas polpa	100 g
+Gelatina in fogli	15 g
+Panna fresca liquida	100 ml
+Ananas	1 fetta

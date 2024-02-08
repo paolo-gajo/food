@@ -1,0 +1,18 @@
+ingredient	quantity
+Biscotti Digestive	100 g
+Burro	65 g
+Yogurt bianco naturale cremoso	250 g
+Panna fresca liquida	70 g
+Latte intero	35 g
+Gelatina in fogli	7 g
+Baccello di vaniglia	½
+Zucchero a velo	30 g
+Fragole (non molto grandi)	150 g
+Fragole	100 g
+Zucchero a velo	100 g
+Amido di mais (maizena)	10 g
+Succo di limone	½
+Fragole	q.b.
+Menta	q.b.
+Mirtilli	q.b.
+Lamponi	q.b.

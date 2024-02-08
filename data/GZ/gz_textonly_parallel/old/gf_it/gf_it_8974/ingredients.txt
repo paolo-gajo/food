@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina 00	250 g
+Zucchero	180 g
+Uova (1 medio)	55 g
+Olio di semi	25 g
+Latte intero	60 g
+Lievito in polvere per dolci	8 g
+Scorza di limone	1
+Tuorli (di circa 2 uova medie)	30 g
+Zucchero	60 g
+Latte intero	150 g
+Amido di mais (maizena)	20 g
+Panna fresca liquida	50 g
+Succo di limone	45 g
+Scorza di limone	1
+Acqua	55 g
+Zucchero	25 g
+Limoncello	55 g
+Zucchero	180 g
+Coloranti alimentari giallo in gel (opzionale)	q.b.
+Limoni le foglie	q.b.

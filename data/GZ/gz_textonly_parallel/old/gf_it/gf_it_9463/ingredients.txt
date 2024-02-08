@@ -1,0 +1,14 @@
+ingredient	quantity
+Nesquik	100 g
+Farina Manitoba	175 g
+Farina 00	120 g
+Latte intero	100 ml
+Burro	50 g
+Uova	1
+Zucchero	15 g
+Lievito di birra secco	4 g
+Sale fino	2 g
+Scorza d'arancia da grattugiare	1
+Marmellata di arance	150 g
+Gocce di cioccolato	80 g
+Uova	1

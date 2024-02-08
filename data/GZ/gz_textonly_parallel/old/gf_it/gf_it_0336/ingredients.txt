@@ -1,0 +1,31 @@
+ingredient	quantity
+Uova a temperatura ambiente	100 g
+Tuorli a temperatura ambiente	10 g
+Zucchero	60 g
+Farina 00	30 g
+Fecola di patate	30 g
+Baccello di vaniglia	¼
+Scorza di limone	½
+Panna fresca liquida	700 g
+Zucchero	70 g
+Scorza di limone	2
+Acqua	35 g
+Zucchero	35 g
+Limoncello	70 g
+Scorza di limone	1
+Tuorli	70 g
+Zucchero	70 g
+Succo di limone	70 g
+Burro cremoso	70 g
+Baccello di vaniglia	½
+Scorza di limone	1
+Latte intero	175 g
+Panna fresca liquida	75 g
+Tuorli	90 g
+Zucchero	75 g
+Amido di mais (maizena)	18 g
+Baccello di vaniglia	1
+Sale fino	q.b.
+Scorza di limone	3
+Limoncello	50 g
+Latte intero	q.b.

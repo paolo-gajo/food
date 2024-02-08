@@ -1,0 +1,13 @@
+ingredient	quantity
+Farfalle	320 g
+Pomodorini datterini	250 g
+Ravanelli	40 g
+Pesche	200 g
+Olive nere a rondelle	45 g
+Basilico	12 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Feta	100 g
+Olio extravergine d'oliva	20 g
+Aceto balsamico	5 g
+Senape	2 g

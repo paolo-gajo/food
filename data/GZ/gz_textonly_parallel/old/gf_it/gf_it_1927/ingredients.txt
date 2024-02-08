@@ -1,0 +1,7 @@
+ingredient	quantity
+Latte intero	240 g
+Zucchero	90 g
+Pasta di nocciole	70 g
+Panna fresca liquida	60
+Glucosio	35 g
+Granella di nocciole	q.b.

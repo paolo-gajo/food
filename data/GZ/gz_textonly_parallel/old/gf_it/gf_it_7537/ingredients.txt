@@ -1,0 +1,12 @@
+ingredient	quantity
+Acqua	80 g
+Farina 00	100 g
+Lievito di birra fresco (2,5 g se è disidratato)	8 g
+Zucchero	1 cucchiaino
+Farina 00	400 g
+Acqua	100 g
+Strutto	200 g
+Mandorle	150 g
+Pepe nero	4 cucchiaini
+Sale fino	8 g
+Mandorle	q.b.

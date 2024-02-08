@@ -1,0 +1,8 @@
+ingredient	quantity
+Fettine di manzo	300 g
+Passata di pomodoro	200 g
+Olio extravergine d'oliva	q.b.
+Origano	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Aglio	1 spicchio

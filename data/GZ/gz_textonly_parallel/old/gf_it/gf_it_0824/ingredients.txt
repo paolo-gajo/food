@@ -1,0 +1,8 @@
+ingredient	quantity
+Filetto di manzo	400 g
+Grana Padano DOP in scaglie	100 g
+Rucola	100 g
+Succo di limone	70 g
+Olio extravergine d'oliva	100 ml
+Sale fino	q.b.
+Pepe nero	q.b.

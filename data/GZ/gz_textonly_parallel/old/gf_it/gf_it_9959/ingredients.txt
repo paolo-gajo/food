@@ -1,0 +1,23 @@
+ingredient	quantity
+Cannelloni all'uovo	12
+Grana Padano DOP (da grattugiare)	60 g
+Sedano	80 g
+Carote	80 g
+Cipolle	80 g
+Maiale macinato	500 g
+Vino bianco	50 ml
+Alloro	2 foglie
+Semi di finocchio (da tritare)	6 g
+Paprika dolce	6 g
+Olio extravergine d'oliva	40 ml
+Sale fino	q.b.
+Pepe nero	q.b.
+Broccoli	500 g
+Olio di oliva	30 ml
+Sale fino	q.b.
+Pepe nero	q.b.
+Aglio fresco	1 spicchio
+Ricotta vaccina	500 g
+Latte intero	100 ml
+Noce moscata (da grattugiare)	q.b.
+Sale fino	q.b.

@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	220 g
+Ricotta vaccina	200 g
+Zucchero	150 g
+Latte intero	120 g
+Cacao amaro in polvere	25 g
+Uova medie	3
+Lievito in polvere per dolci	16 g
+Ricotta vaccina	250 g
+Zucchero	50 g
+Amido di mais (maizena)	20 g
+Uova medio	1
+Amarene sciroppate (peso sgocciolato)	150 g
+Burro	q.b.
+Farina 00	q.b.

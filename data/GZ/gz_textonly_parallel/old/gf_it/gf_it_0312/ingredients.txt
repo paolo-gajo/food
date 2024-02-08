@@ -1,0 +1,9 @@
+ingredient	quantity
+Spaghetti	320 g
+Tonno sott'olio (scolato)	150 g
+Pomodori pelati	400 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Basilico	q.b.
+Cipolle dorate	½

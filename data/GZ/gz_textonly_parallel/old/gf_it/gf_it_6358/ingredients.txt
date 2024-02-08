@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina 00	100 g
+Uova medie	5
+Zucchero	140 g
+Miele	10 g
+Sale fino	1 pizzico
+Baccello di vaniglia	1
+Panna fresca liquida	300 g
+Cioccolato fondente al	55%300 g
+Cioccolato fondente	300 g
+Zucchero a velo	q.b.

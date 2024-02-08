@@ -1,0 +1,20 @@
+ingredient	quantity
+Farina 00	400 g
+Uova grandi fresche possibilmente biologiche (circa 250 g)	4
+Burro	15 g
+Noce moscata	q.b.
+Maiale macinato	70 g
+Vitello	70 g
+Mortadella	70 g
+Parmigiano Reggiano DOP da grattugiare	150 g
+Prosciutto cotto in un'unica fetta	70 g
+Uova	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Prosciutto cotto in un'unica fetta	300 g
+Panna fresca liquida	400 g
+Burro	50 g
+Noce moscata	1 pizzico
+Parmigiano Reggiano DOP da grattugiare	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.

@@ -1,0 +1,8 @@
+ingredient	quantity
+Calamarata	320 g
+Guanciale	200 g
+Pisellini	300 g
+Porri	130 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

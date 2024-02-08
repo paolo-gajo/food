@@ -1,0 +1,32 @@
+ingredient	quantity
+Farina Manitoba	350 g
+Farina 00	300 g
+Burro (a temperatura ambiente)	150 g
+Lievito di birra secco	4 g
+Zucchero	20 g
+Grana Padano DOP (da grattugiare)	20 g
+Acqua	250 ml
+Latte intero	125 ml
+Sale fino	8 g
+Noce moscata (da grattugiare)	q.b.
+Uova (medie)	2
+Tuorli	1
+Formaggio fresco spalmabile	500 g
+Olio extravergine d'oliva	20 g
+Panna fresca liquida	40 g
+Grana Padano DOP da grattugiare	40 g
+Prosciutto crudo	100 g
+Basilico	10 foglie
+Sale fino	1 pizzico
+Pepe nero	1 pizzico
+Noce moscata da grattugiare	q.b.
+Prosciutto crudo	80 g
+Lattuga	4 foglie
+Pomodori ramati	1
+Burro	50 g
+Farina 00	50 g
+Latte intero	500 ml
+Fontina da grattugiare	100 g
+Sale fino	q.b.
+Peperoni rossi	1
+Peperoni verdi	1

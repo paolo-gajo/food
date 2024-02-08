@@ -1,0 +1,14 @@
+ingredient	quantity
+Mezze Penne Rigate	320 g
+Melanzane	300 g
+Zucchine	150 g
+Peperoni rossi	100 g
+Peperoni gialli	100 g
+Pomodori ramati	150 g
+Cipolle rosse	75 g
+Zucchero	25 g
+Aceto di vino bianco	25 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di semi	q.b.

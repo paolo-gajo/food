@@ -1,0 +1,5 @@
+ingredient	quantity
+Pomodori verdi marinda	1 kg
+Zucchero	500 g
+Scorza di limone	2
+Zenzero fresco	30 g

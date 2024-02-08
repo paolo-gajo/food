@@ -1,0 +1,6 @@
+ingredient	quantity
+Panna fresca liquida	250 ml
+Latte intero	75 ml
+Zucchero	75 g
+Tuorli	4
+Baccello di vaniglia	1

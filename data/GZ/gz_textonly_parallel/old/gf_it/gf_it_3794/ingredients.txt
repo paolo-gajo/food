@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	300 g
+Grana Padano DOP da grattugiare	100 g
+Olio extravergine d'oliva	75 g
+Olio di semi di mais	75 g
+Acqua fredda	50 g
+Sale fino	q.b.
+Pepe rosa in grani	q.b.
+Semi di finocchio	q.b.
+Peperoncino secco	q.b.
+Semi di papavero	q.b.
+Origano	q.b.
+Rosmarino	q.b.

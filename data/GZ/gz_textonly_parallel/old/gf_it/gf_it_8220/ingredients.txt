@@ -1,0 +1,16 @@
+ingredient	quantity
+Grana Padano DOP	50 g
+Pecorino da grattugiare	50 g
+Farina 00	130 g
+Burro freddo di frigo	100 g
+Latte intero freddo	30 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Ricotta vaccina	200 g
+Uova (circa 2)	110 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.
+Ortiche	400 g
+Acqua	150 g
+Olio extravergine d'oliva	30 g

@@ -1,0 +1,23 @@
+ingredient	quantity
+Petto di pollo	800 g
+Yogurt greco	250 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Pepe di Caienna	1 cucchiaino
+Curcuma in polvere	2 cucchiaini
+Paprika affumicata	2 cucchiaini
+Cannella in polvere	1 cucchiaino
+Cumino	2 cucchiaini
+Semi di coriandolo in polvere	1 cucchiaino
+Aglio	1 spicchio
+Zenzero fresco	q.b.
+Peperoncino fresco	1
+Cipolle bianche	1
+Coriandolo fresco	q.b.
+Olio extravergine d'oliva	10 g
+Riso Basmati	400 g
+Acqua	600 g
+Cannella in stecche	1
+Cardamomo	3 bacche
+Anice stellato	1
+Sale grosso	q.b.

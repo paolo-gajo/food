@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina Manitoba	300 g
+Farina 00	150 g
+Acqua	250 g
+Malto	12 g
+Lievito di birra fresco	12 g
+Sale fino	15 g
+Semola	q.b.
+Melanzane	400 g
+Pomodorini ciliegino	200 g
+Basilico	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Prosciutto cotto	150 g
+Scamorza affumicata	80 g

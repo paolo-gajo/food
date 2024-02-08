@@ -1,0 +1,20 @@
+ingredient	quantity
+Farina 00	200 g
+Zucchero	170 g
+Burro ammorbidito	170 g
+Uova medie	3
+Tuorli	1
+Lievito in polvere per dolci	8 g
+Estratto di vaniglia	1 cucchiaio
+Sale fino	1 pizzico
+Farina 00	75 g
+Farina di mandorle	75 g
+Zucchero di canna	75 g
+Burro freddo	75 g
+Sale fino	2 pizzichi
+Scorza di lime	1
+Pesche	200 g
+Albicocche	160 g
+Mirtilli	120 g
+Ribes	50 g
+Burro	q.b.

@@ -1,0 +1,16 @@
+ingredient	quantity
+Scampi	4
+Canocchie	8
+Gamberi	4
+Taccole	200 g
+Carote baby	200 g
+Broccoli romaneschi	200 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di semi	250 g
+Sale fino	1 pizzico
+Pepe nero	1 pizzico
+Tuorli	3
+Aceto di sidro	3 g
+Succo di mandarino	25 g
+Scorza d'arancia	1

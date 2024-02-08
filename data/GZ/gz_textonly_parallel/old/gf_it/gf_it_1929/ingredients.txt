@@ -1,0 +1,14 @@
+ingredient	quantity
+Uova	10
+Zucchero	300 g
+Farina 00	150 g
+Fecola di patate	100 g
+Cacao amaro in polvere	60 g
+Ricotta vaccina	300 g
+Zucchero a velo	150 g
+Panna fresca liquida	150 g
+Cioccolato fondente	100 g
+Baccello di vaniglia	½
+Sale fino	½ cucchiaino
+Fiori eduli	q.b.
+Zucchero a velo	q.b.

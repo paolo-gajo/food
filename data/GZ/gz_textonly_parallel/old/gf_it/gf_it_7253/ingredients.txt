@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	200 g
+Farina Manitoba	300 g
+Acqua fredda	340 g
+Lievito di birra fresco	3 g
+Sale fino	5 g
+Miele	5 g
+Olio extravergine d'oliva	20 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

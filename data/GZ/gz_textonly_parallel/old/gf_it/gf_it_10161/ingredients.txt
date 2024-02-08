@@ -1,0 +1,18 @@
+ingredient	quantity
+Zucchero	160 g
+Burro freddo	110 g
+Farina 00	350 g
+Miele	50 g
+Uova	1
+Zenzero in polvere	5 g
+Cannella in polvere	5 g
+Chiodi di garofano macinati	1 pizzico
+Noce moscata da grattugiare	1 pizzico
+Bicarbonato	1 pizzico
+Sale fino	1 pizzico
+Nutella®	150 g
+Panna fresca liquida	250 g
+Mascarpone	125 g
+Zucchero a velo	20 g
+Ribes rosso	q.b.
+Rosmarino	q.b.

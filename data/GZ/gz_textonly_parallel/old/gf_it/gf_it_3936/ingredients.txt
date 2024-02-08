@@ -1,0 +1,16 @@
+ingredient	quantity
+Riso Bomba	400 g
+Cozze	1 kg
+Calamari (da pulire)	500 g
+Scampi	8
+Gamberi	8
+Cipolle	80 g
+Aglio	1 spicchio
+Fumetto di crostacei	750 g
+Passata di pomodoro	200 g
+Zafferano (2 bustine)	0,25 g
+Paprika dolce	5 g
+Peperoncino dolce	1
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

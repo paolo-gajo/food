@@ -1,0 +1,14 @@
+ingredient	quantity
+Latte intero a temperatura ambiente	140 g
+Farina 00	400 g
+Acqua a temperatura ambiente	80 g
+Lievito di birra secco	4 g
+Sale fino	10 g
+Olio extravergine d'oliva	20 g
+Bietole rosse	500 g
+Prosciutto cotto	140 g
+Edamer	150 g
+Olio extravergine d'oliva	20 g
+Aglio	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.

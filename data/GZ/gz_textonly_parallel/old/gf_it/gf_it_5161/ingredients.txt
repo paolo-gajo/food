@@ -1,0 +1,10 @@
+ingredient	quantity
+Fiocchi di avena	300 g
+Zucchero	125 g
+Burro	125 g
+Mandorle	50 g
+Uova	1
+Tuorli	1
+Cannella in polvere	1 cucchiaino
+Scorza di limone non trattato	1
+Lievito in polvere per dolci	8 g

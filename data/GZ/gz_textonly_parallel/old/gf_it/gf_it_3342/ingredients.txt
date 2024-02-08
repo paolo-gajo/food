@@ -1,0 +1,10 @@
+ingredient	quantity
+Semola	15 g
+Farina 00	500 g
+Acqua	350 ml
+Lievito di birra secco	4 g
+Malto	1 cucchiaino
+Sale fino	8 g
+Olio extravergine d'oliva	20 ml
+Crema di pomodorini	100 g
+Olio extravergine d'oliva	15 ml

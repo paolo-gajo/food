@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina 00	300 g
+Farina di mandorle	100 g
+Zucca butternut	500 g
+Latte intero a temperatura ambiente	100 g
+Uova (circa 2 medie) a temperatura ambiente	110 g
+Zucchero di canna	200 g
+Olio di semi	100 g
+Lievito in polvere per dolci	16 g
+Cioccolato fondente al 55%	100 g
+Confettura di fragole	120 g
+Formaggio fresco spalmabile	250 g
+Panna fresca liquida	200 g
+Miele millefiori	50 g
+Cioccolato bianco	200 g
+Panna fresca liquida	150 g
+Coloranti alimentari (verde in polvere, liposolubile)	½ cucchiaino
+Albumi	100 g
+Zucchero	200 g
+Acqua	50 g
+Cioccolato fondente	20 g

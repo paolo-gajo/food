@@ -1,0 +1,8 @@
+ingredient	quantity
+Uova medie	6
+Timo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Mozzarella	200 g
+Speck (a fette sottili)	100 g

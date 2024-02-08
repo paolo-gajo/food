@@ -1,0 +1,21 @@
+ingredient	quantity
+Strutto	75 g
+Farina 00	500 g
+Bicarbonato	2 g
+Sale fino	6 g
+Acqua (tiepida)	200 ml
+Spinaci	250 g
+Bietole	250 g
+Cipolle bianche (grossa)	1
+Olio extravergine d'oliva	20 g
+Sale fino	1 pizzico
+Pepe nero	q.b.
+Patate	400 g
+Luganega	200 g
+Sale fino	1 pizzico
+Pepe nero	q.b.
+Mozzarella	125 g
+Passata di pomodoro	200 ml
+Olio extravergine d'oliva	20 g
+Origano	1 spicchio
+Sale fino	1 pizzico

@@ -1,0 +1,17 @@
+ingredient	quantity
+Farina 00	200 g
+Burro freddo	100 g
+Acqua ghiacciata	50 g
+Sale fino	q.b.
+Avocado maturi	300 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Succo di limone	50 g
+Salmone affumicato	100 g
+Carne salada	100 g
+Grana Padano DOP in scaglie	20 g
+Puntarelle	130 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Aglio	1 spicchio

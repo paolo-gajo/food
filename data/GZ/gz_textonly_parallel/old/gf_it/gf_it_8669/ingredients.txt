@@ -1,0 +1,10 @@
+ingredient	quantity
+Lievito madre	70 g
+Farina 0	80 g
+Acqua a temperatura ambiente	50 ml
+Farina 0	90 g
+Acqua a temperatura ambiente	50 ml
+Semola di grano duro rimacinata	400 g
+Acqua a temperatura ambiente	550 ml
+Sale fino	25 g
+Farina 0	450 g

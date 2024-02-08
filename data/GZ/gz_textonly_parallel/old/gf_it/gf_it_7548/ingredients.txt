@@ -1,0 +1,14 @@
+ingredient	quantity
+Riso nero Venere	200 g
+Pesce spada	250 g
+Scorza di limone	1
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.
+Porri	100 g
+Zenzero fresco	20 g
+Basilico	15 g
+Olio extravergine d'oliva	30 g
+Sale fino	q.b.
+Menta	q.b.
+Olio extravergine d'oliva	q.b.

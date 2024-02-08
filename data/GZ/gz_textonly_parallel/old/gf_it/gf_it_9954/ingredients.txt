@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina di lupini	50 g
+Farina di ceci	100 g
+Farina di riso senza glutine	100 g
+Acqua	150 g
+Olio di semi	50 g
+Sale fino	2 g
+Sale grosso	q.b.
+Semi di sesamo	q.b.
+Acqua	q.b.

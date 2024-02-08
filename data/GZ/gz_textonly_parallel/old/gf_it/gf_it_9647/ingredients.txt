@@ -1,0 +1,16 @@
+ingredient	quantity
+Zucchero	120 g
+Farina 00	120 g
+Uova	4
+Tuorli	1
+Pasta di nocciole	150 g
+Cioccolato fondente	110 g
+Latte intero	375 ml
+Burro	190 g
+Zucchero	150 g
+Tuorli	3
+Panna fresca liquida	500 g
+Gelatina in fogli	9 g
+Nocciole	q.b.
+Granella di nocciole	q.b.
+Cioccolato (facoltativo)	q.b.

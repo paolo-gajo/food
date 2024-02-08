@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	100 g
+Farina integrale	200 g
+Farina di ceci	100 g
+Acqua	150 g
+Yogurt	50 g
+Spinaci lessati	50 g
+Sale fino	1 cucchiaino
+Peperoncino in polvere	1 cucchiaino
+Curcuma in polvere	1 cucchiaino
+Fieno greco in polvere	1 cucchiaino
+Cumino in polvere	1 cucchiaino
+Olio extravergine d'oliva	1 cucchiaio

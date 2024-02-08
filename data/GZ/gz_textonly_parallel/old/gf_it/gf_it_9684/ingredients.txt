@@ -1,0 +1,15 @@
+ingredient	quantity
+Uova	3
+Tuorli	1
+Miele	20 g
+Zucchero	90 g
+Farina 00	80 g
+Fecola di patate	20 g
+Cannella in polvere	1 pizzico
+Noce moscata da grattugiare	q.b.
+Zucca (purea cotta)	250 g
+Ricotta vaccina	400 g
+Zucchero a velo	100 g
+Scorza d'arancia	1
+Gocce di cioccolato	70 g
+Cacao amaro in polvere	q.b.

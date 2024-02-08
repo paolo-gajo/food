@@ -1,0 +1,16 @@
+ingredient	quantity
+Zucchero	200 g
+Farina 00	175 g
+Latte intero a temperatura ambiente	140 g
+Burro a temperatura ambiente	115 g
+Amido di mais (maizena)	15 g
+Uova a temperatura ambiente	2
+Scorza di limone	2
+Succo di limone	45 g
+Semi di papavero	10 g
+Lievito in polvere per dolci	4 g
+Sale fino	1 pizzico
+Zucchero a velo	155 g
+Succo di limone	25 g
+Burro	q.b.
+Farina 00	q.b.

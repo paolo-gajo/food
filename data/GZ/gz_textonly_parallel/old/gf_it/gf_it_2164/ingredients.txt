@@ -1,0 +1,8 @@
+ingredient	quantity
+Latte	300 ml
+Panna fresca liquida	125 g
+Baccello di vaniglia	1
+Zucchero	125 g
+Cioccolato fondente	200 g
+Cioccolato bianco	200 g
+Granella di nocciole	q.b.

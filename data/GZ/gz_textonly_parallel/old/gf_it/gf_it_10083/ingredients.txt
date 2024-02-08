@@ -1,0 +1,15 @@
+ingredient	quantity
+Spaghetti Quadrati	320 g
+Verza	700 g
+Sale fino	q.b.
+Pepe nero	1 pizzico
+Scalogno	50 g
+Pancetta affumicata	80 g
+Olio extravergine d'oliva	50 g
+Grana Padano DOP grattugiato	20 g
+Olio extravergine d'oliva	10 g
+Taleggio	200 g
+Latte intero	100 g
+Burro	30 g
+Farina 00	30 g
+Noce moscata	1 pizzico

@@ -1,0 +1,13 @@
+ingredient	quantity
+Uova medie	8
+Parmigiano Reggiano DOP	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di semi per la pirofila	q.b.
+Scamorza affumicata	100 g
+Radicchio di Chioggia	100 g
+Gherigli di noci	25 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Parmigiano Reggiano DOP	15 g

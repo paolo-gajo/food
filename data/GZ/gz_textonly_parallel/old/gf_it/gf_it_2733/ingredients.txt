@@ -1,0 +1,5 @@
+ingredient	quantity
+Uova medie	8
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

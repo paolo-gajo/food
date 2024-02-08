@@ -1,0 +1,9 @@
+ingredient	quantity
+Riso nishiki (per sushi, cotto)	120 g
+Alga nori (da 19x21 cm)	1
+Maionese	q.b.
+Avocado	20 g
+Semi di sesamo misti	q.b.
+Polpa di granchio (king crab, già cotta)	15 g
+Zenzero sott'aceto	q.b.
+Wasabi	q.b.

@@ -1,0 +1,9 @@
+ingredient	quantity
+Latte intero	75 g
+Farina 00	200 g
+Parmigiano Reggiano DOP	50 g
+Olio di semi di mais	15 g
+Olive verdi	15 g
+Uova medie	2
+Sale fino	5 g
+Lievito istantaneo per preparazioni salate	2 g

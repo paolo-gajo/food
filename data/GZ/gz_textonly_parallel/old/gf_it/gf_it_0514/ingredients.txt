@@ -1,0 +1,9 @@
+ingredient	quantity
+Peperoni rossi	2
+Peperoni gialli	2
+Olio extravergine d'oliva	q.b.
+Pane raffermo mollica	q.b.
+Pecorino da grattugiare	40 g
+Capperi	1 cucchiaio
+Origano	q.b.
+Aglio	1 spicchio

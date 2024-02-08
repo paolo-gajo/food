@@ -1,0 +1,15 @@
+ingredient	quantity
+Tuorli	100 g
+Albumi	225 g
+Cacao amaro in polvere	90 g
+Zucchero a velo	300 g
+Fecola di patate	30 g
+Zucchero	q.b.
+Cioccolato fondente al 60% di fave africane	200 g
+Panna fresca liquida	400 g
+Frutto della passione	4
+Mango	1
+Scorza di lime	1
+Succo di lime	½
+Menta	q.b.
+Granella di cioccolato	q.b.

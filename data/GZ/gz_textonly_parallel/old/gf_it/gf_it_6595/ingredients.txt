@@ -1,0 +1,12 @@
+ingredient	quantity
+Acqua	200 ml
+Farina 00	125 g
+Burro	80 g
+Uova medie	3
+Zucchero	1 cucchiaino
+Sale fino	2 g
+Cioccolato gianduia	800 g
+Panna fresca liquida	600 ml
+Ghiaccio	q.b.
+Uova	1
+Mandorle in scaglie	q.b.

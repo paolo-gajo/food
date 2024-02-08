@@ -1,0 +1,12 @@
+ingredient	quantity
+Dischetti di pasta	16
+Carote	60 g
+Zucchine	60 g
+Melanzane	60 g
+Mazzancolle	150 g
+Germogli di soia	70 g
+Cavolo cappuccio	4 foglie
+Salsa di soia	30 g
+Olio extravergine d'oliva	20 g
+Sale fino	q.b.
+Pepe nero	q.b.

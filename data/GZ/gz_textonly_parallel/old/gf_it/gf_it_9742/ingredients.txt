@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina 0	750 g
+Acqua (a temperatura ambiente)	440 g
+Sale fino	20 g
+Lievito di birra secco	3 g
+Polpa di pomodoro	600 g
+Salame piccante	200 g
+Mozzarella	750 g
+Origano	q.b.
+Olio extravergine d'oliva	30 g
+Sale fino	10 g

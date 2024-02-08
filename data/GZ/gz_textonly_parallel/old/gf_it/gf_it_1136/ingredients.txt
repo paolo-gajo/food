@@ -1,0 +1,27 @@
+ingredient	quantity
+Manzo macinato	500 g
+Maiale macinato	300 g
+Pane mollica	100 g
+Uova	1
+Parmigiano Reggiano DOP (da grattugiare)	100 g
+Prezzemolo (da tritare)	1 cucchiaio
+Aglio	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata (da grattugiare)	q.b.
+Peperoncino in polvere	q.b.
+Caciocavallo	100 g
+Spinaci	250 g
+Aglio	1 spicchio
+Pangrattato	10 g
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.
+Carote	350 g
+Patate	450 g
+Carciofi	4
+Olio extravergine d'oliva	q.b.
+Aglio	1 spicchio
+Timo	1 rametto
+Rosmarino	1 rametto
+Sale fino	q.b.
+Pepe nero	q.b.

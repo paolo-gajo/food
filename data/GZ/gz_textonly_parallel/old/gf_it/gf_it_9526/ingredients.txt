@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina Manitoba	200 g
+Acqua	110 ml
+Olio extravergine d'oliva	60 g
+Sale fino	5 g
+Semi di papavero	q.b.
+Semi di sesamo	q.b.

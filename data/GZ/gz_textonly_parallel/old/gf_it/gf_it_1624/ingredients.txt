@@ -1,0 +1,9 @@
+ingredient	quantity
+Fiocchi di avena	140 g
+Latte intero	200 g
+Acqua	220 g
+Mele Fuji	1
+Granella di nocciole	20 g
+Miele di acacia	70 g
+Cannella in polvere	2 pizzichi
+Sale	1 pizzico

@@ -1,0 +1,9 @@
+ingredient	quantity
+Semola di grano duro rimacinata	150 g
+Acqua	75 g
+Lievito di birra fresco	1,5 g
+Semola di grano duro rimacinata	600 g
+Farina 0	100 g
+Acqua	520 g
+Lievito di birra fresco	4 g
+Sale fino	20 g

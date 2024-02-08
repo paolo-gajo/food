@@ -1,0 +1,11 @@
+ingredient	quantity
+Ditaloni Rigati	320 g
+Patate	500 g
+Ceci secchi	250 g
+Scalogno	1
+Brodo vegetale	q.b.
+Rosmarino	1 rametto
+Sale fino	q.b.
+Pepe nero	q.b.
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.

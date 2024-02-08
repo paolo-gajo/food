@@ -1,0 +1,8 @@
+ingredient	quantity
+Rucola	100 g
+Pere Williams	2
+Grana Padano DOP	100 g
+Gherigli di noci	50 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Aceto balsamico	q.b.

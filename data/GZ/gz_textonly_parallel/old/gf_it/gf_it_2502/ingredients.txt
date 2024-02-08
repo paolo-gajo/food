@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina 0	1 kg
+Acqua	600 g
+Lievito di birra secco	7 g
+Sale fino	20 g
+Olio extravergine d'oliva	60 g
+Passata di pomodoro	700 g
+Aglio	4 spicchi
+Origano (secco)	20 g
+Sale fino	q.b.
+Pepe nero	q.b.

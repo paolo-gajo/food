@@ -1,0 +1,12 @@
+ingredient	quantity
+Paccheri	400 g
+Melanzane	450 g
+Cozze	1 kg
+Pomodorini ciliegino	400 g
+Sale fino	q.b.
+Olio extravergine d'oliva	4 cucchiai
+Cipollotto fresco	1
+Aglio	2 spicchi
+Prezzemolo da tritare	20 g
+Mozzarella di bufala	200 g
+Vino bianco	100 ml

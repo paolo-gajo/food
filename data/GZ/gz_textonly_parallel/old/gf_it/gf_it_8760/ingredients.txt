@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina 00	180 g
+Farina di nocciole	30 g
+Latte intero a temperatura ambiente	110 g
+Burro a temperatura ambiente	100 g
+Zucchero	90 g
+Uova (circa 1 medio)	55 g
+Lievito in polvere per dolci	8 g
+Sale fino	1 pizzico
+Latte intero	250 g
+Cioccolato bianco	200 g
+Tuorli (2 medi)	50 g
+Zucchero	40 g
+Amido di mais (maizena)	20 g
+Limoncello	15 g
+Acqua	120 g
+Limoncello	20 g
+Zucchero	10 g
+Fragole	500 g
+Gocce di cioccolato bianco	q.b.
+Menta	q.b.

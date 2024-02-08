@@ -1,0 +1,9 @@
+ingredient	quantity
+Riso Carnaroli	300 g
+Latte intero	1 l
+Zucchero	90 g
+Scorza di limone	1
+Baccello di vaniglia	½
+Sale fino	1 pizzico
+Cacao amaro in polvere	q.b.
+Cannella in polvere	q.b.

@@ -1,0 +1,21 @@
+ingredient	quantity
+Avocado	1
+Pane per tramezzini	4 fette
+Succo di lime	2
+Cipolle rosse	½
+Peperoncino fresco piccolo	1
+Coriandolo	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	10 g
+Pancetta coppata	8 fette
+Cavoletti di Bruxelles	20 g
+Semi di papavero	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.
+Uova	1
+Senape	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.
+Fragole	1
+Mascarpone	10 g
+Miele millefiori	q.b.

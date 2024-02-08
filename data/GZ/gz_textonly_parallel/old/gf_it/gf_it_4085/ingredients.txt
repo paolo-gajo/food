@@ -1,0 +1,8 @@
+ingredient	quantity
+Basilico	50 g
+Pomodori perini maturi	250 g
+Mandorle	50 g
+Pecorino grattugiato	1 cucchiaio
+Aglio rosso	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.

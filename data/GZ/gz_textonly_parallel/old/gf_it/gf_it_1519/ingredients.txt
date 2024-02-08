@@ -1,0 +1,19 @@
+ingredient	quantity
+Baguette	8 fette
+Filetto di salmone	260 g
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	50 g
+Succo di limone	45 g
+Aceto di vino bianco	30 g
+Aneto	3 rametti
+Pepe rosa	q.b.
+Sale fino	q.b.
+Olio di semi	50 g
+Latte di soia	25 g
+Aceto di vino bianco	1 cucchiaino
+Sale fino	q.b.
+Rucola	20 g
+Scorza di limone	1
+Pepe rosa	q.b.

@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina 0	300 g
+Acqua	200 ml
+Lievito di birra secco (oppure 11 g se fresco)	3 g
+Sale	8 g
+Zucchero	1 pizzico
+Olio di semi di arachide per friggere	1 l

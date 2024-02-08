@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina Manitoba	600 g
+Farina 00	400 g
+Latte intero	500 ml
+Burro	70 g
+Miele di acacia	70 g
+Lievito di birra fresco (altrimenti 7 g di lievito di birra secco)	25 g
+Zucchero	160 g
+Sale fino	1 pizzico
+Uova medio	1
+Latte intero	15 ml
+Zucchero a velo	q.b.
+Granella di zucchero	q.b.

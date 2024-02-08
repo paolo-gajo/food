@@ -1,0 +1,9 @@
+ingredient	quantity
+Semola di grano duro rimacinata	100 g
+Acqua tiepida	70 g
+Lievito di birra secco	3 g
+Semola di grano duro rimacinata	250 g
+Acqua tiepida	150 g
+Lievito di birra secco	1 g
+Sale fino	6 g
+Semi di sesamo	q.b.

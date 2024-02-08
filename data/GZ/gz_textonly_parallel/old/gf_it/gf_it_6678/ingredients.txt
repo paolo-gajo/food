@@ -1,0 +1,10 @@
+ingredient	quantity
+Patate	1 kg
+Aglio	1 spicchio
+Rosmarino	2 rametti
+Pane mollica	50 g
+Pangrattato	20 g
+Salvia	3 foglie
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.

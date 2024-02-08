@@ -1,0 +1,13 @@
+ingredient	quantity
+Patate rosse	900 g
+Salsiccia	650 g
+Cipolle bianche	100 g
+Rosmarino	3 rametti
+Salvia	6 foglie
+Vino bianco	20 g
+Parmigiano Reggiano DOP da grattugiare	120 g
+Robiola	200 g
+Olio extravergine d'oliva	q.b.
+Pangrattato	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,9 @@
+ingredient	quantity
+Mele Fuji	2
+Pane raffermo	110 g
+Asiago	85 g
+Speck sottili (circa 65 g)	8 fette
+Uova medie	4
+Timo	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,11 @@
+ingredient	quantity
+Maiale macinato	300 g
+Manzo macinato	300 g
+Pane integrale mollica	65 g
+Grana Padano DOP (da grattugiare)	50 g
+Semi di sesamo	50 g
+Semi di sesamo nero	25 g
+Uova	1
+Aneto fresco	1 pizzico
+Sale fino	q.b.
+Pepe nero	q.b.

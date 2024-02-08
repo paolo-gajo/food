@@ -1,0 +1,12 @@
+ingredient	quantity
+Zucchero	100 g
+Farina 00	95 g
+Farina integrale	105 g
+Uova (medie)	2
+Yogurt greco	160 g
+Scorza di limone	1
+Lievito in polvere per dolci	10 g
+Banane	5
+Zucchero	120 g
+Burro	40 g
+Acqua	30 g

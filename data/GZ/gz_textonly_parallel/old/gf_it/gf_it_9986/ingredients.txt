@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina Manitoba	135 g
+Lievito di birra secco	4 g
+Acqua	80 ml
+Farina Manitoba	400 g
+Zucchero	75 g
+Miele	1 cucchiaino
+Sale fino	5 g
+Burro	120 g
+Tuorli	3
+Baccello di vaniglia	1
+Albicocche sciroppate al moscato	100 g
+Confettura di albicocche	100 g
+Uva passa	100 g
+Mandorle in scaglie	20 g

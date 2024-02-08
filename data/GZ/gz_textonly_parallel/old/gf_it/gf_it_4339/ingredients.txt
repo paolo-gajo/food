@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina 00	200 g
+Uova	2
+Patate	150 g
+Ricotta vaccina	50 g
+Pancetta affumicata	30 g
+Parmigiano Reggiano DOP (da grattuggiare)	50 g
+Uova (piccolo)	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Burro	80 g
+Salvia	16 foglie
+Sale fino	q.b.
+Pepe nero	q.b.

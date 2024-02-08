@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	240 g
+Uova ( 3 medie)	160 g
+Burro morbido	115 g
+Yogurt greco	250 g
+Zucchero di canna	155 g
+Scorza di limone	1
+Baccello di vaniglia	1
+Sale fino	1 pizzico
+Lievito in polvere per dolci	16 g
+Mirtilli	400 g
+Zucchero di canna	25 g

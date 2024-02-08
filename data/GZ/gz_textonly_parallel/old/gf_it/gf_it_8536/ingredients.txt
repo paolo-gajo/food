@@ -1,0 +1,24 @@
+ingredient	quantity
+Farina Manitoba	250 g
+Lievito madre (rinfrescato tre volte nell'arco della giornata)	65 g
+Acqua (temperatura ambiente)	125 g
+Burro morbido	70 g
+Zucchero	65 g
+Malto	2 g
+Tuorli	50 g
+Farina Manitoba	62 g
+Zucchero	50 g
+Burro morbido	40 g
+Tuorli	50 g
+Uvetta sultanina	150 g
+Sale fino	2 g
+Baccello di vaniglia	1
+Miele di acacia	16 g
+Cedro candito	30 g
+Arancia candita	70 g
+Pasta di arance	75 g
+Pasta di mandarini	30 g
+Pasta di limoni	20 g
+Burro	20 g
+Mandarini (o arance o limoni)	250 g
+Zucchero	125 g

@@ -1,0 +1,29 @@
+ingredient	quantity
+Edamer a fette	60 g
+Pane per tramezzini	170 g
+Olive nere denocciolate	50 g
+Insalata riccia	30 g
+Pomodori ramati	80 g
+Prosciutto cotto a fettine	60 g
+Maionese	50 g
+Capperi	40 g
+Insalata riccia	30 g
+Pomodori ramati	80 g
+Olive verdi denocciolate	12
+Pane per tramezzini	170 g
+Tonno sott'olio	150 g
+Maionese	50 g
+Pane per tramezzini	170 g
+Edamer a fette	50 g
+Pomodori ramati	80 g
+Insalata riccia	30 g
+Uova medio	1
+Cetriolini sottaceto	30 g
+Maionese	50 g
+Uova di lompo (succedaneo caviale) nero	15 g
+Uova medio	1
+Insalata riccia	30 g
+Pomodori ramati	80 g
+Pane per tramezzini	170 g
+Salmone affumicato a fette	100 g
+Maionese	50 g

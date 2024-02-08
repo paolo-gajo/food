@@ -1,0 +1,19 @@
+ingredient	quantity
+Patate	650 g
+Cipolle rosse	140 g
+Pangrattato	60 g
+Grana Padano DOP da grattugiare	50 g
+Uova	1
+Acqua	40 g
+Olio extravergine d'oliva	20 g
+Timo	2 rametti
+Salvia	2 rametti
+Rosmarino	2 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Verza	80 g
+Spinacini	40 g
+Mele verdi	80 g
+Yogurt greco	100 g
+Olio extravergine d'oliva	10 g
+Tabasco® qualche	goccia

@@ -1,0 +1,10 @@
+ingredient	quantity
+Peperoni rossi	1 kg
+Latte intero	120
+Tuorli (circa 2 di uova medie)	36 g
+Gelatina in fogli	10 g
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.
+Robiola	150 g
+Pepe bianco	q.b.

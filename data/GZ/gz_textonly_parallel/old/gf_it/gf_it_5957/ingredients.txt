@@ -1,0 +1,9 @@
+ingredient	quantity
+Pasta Sfoglia rettangolare	230 g
+Melanzane lunghe	400 g
+Scamorza (provola) dolce	250 g
+Parmigiano Reggiano DOP	100 g
+Pomodori secchi sott'olio	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

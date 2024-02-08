@@ -1,0 +1,12 @@
+ingredient	quantity
+Fettuccine all'uovo	250 g
+Cipolle rosse	80 g
+Carciofi	4
+Pancetta affumicata	150 g
+Vino bianco	40 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	30 g
+Zafferano 1 bustina	0,125 g
+Timo	3 rametti
+Limoni	1

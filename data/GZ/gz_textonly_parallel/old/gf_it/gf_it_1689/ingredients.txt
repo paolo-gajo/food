@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	200 g
+Burro	100 g
+Acqua ghiacciata	70 ml
+Melanzane	380 g
+Carote	100 g
+Zucchine	150 g
+Peperoni	200 g
+Cipolle	1
+Emmentaler	50 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Uova	1
+Brodo vegetale	q.b.
+Pepe nero	q.b.

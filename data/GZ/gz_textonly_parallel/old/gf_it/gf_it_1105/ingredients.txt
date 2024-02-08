@@ -1,0 +1,15 @@
+ingredient	quantity
+Biscotti secchi	400 g
+Burro	170 g
+Frutti di bosco disidratati	15 g
+Sale fino	3 g
+Zucchero	100 g
+Albumi a temperatura ambiente	50 g
+Acqua	30 g
+Panna fresca liquida	190 g
+Lamponi	40 g
+Gelatina in fogli	4 g
+Nutella®	150 g
+Frutti di bosco	q.b.
+Fragole	q.b.
+Menta	q.b.

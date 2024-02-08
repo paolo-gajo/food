@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	500 g
+Zucchero	300 g
+Burro	250 g
+Latte intero	250 ml
+Caffè solubile	100 g
+Uova medie	5
+Lievito in polvere per dolci	1 bustina
+Estratto di vaniglia	1 cucchiaino
+Sale fino	1 pizzico
+Burro	q.b.
+Farina 00	q.b.
+Zucchero a velo (facoltativo)	q.b.

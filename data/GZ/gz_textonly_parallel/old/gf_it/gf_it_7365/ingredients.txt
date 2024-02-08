@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina Manitoba	100 g
+Acqua	75 g
+Lievito di birra fresco	3 g
+Sale fino	3 g
+Farina Manitoba	500 g
+Acqua	320 g
+Malto	10 g
+Lievito di birra fresco	12 g
+Olio di semi di mais	30 g
+Sale fino	12 g
+Olive verdi denocciolate	200 g

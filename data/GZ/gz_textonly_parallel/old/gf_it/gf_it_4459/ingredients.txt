@@ -1,0 +1,4 @@
+ingredient	quantity
+Patate a pasta gialla	1 kg
+Farina di ceci	300 g
+Uova ( circa 1)	55 g

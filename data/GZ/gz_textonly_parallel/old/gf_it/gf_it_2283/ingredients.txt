@@ -1,0 +1,12 @@
+ingredient	quantity
+Spaghetti Senza Glutine	320 g
+Taccole	250 g
+Asparagi	470 g
+Carote	200 g
+Pisellini	400 g
+Tuorli	5
+Parmigiano Reggiano DOP da grattugiare	50 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	20 g
+Sale fino	q.b.
+Pepe nero	q.b.

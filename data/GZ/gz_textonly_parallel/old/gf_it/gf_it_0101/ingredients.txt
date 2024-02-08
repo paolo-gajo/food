@@ -1,0 +1,13 @@
+ingredient	quantity
+Pollo intero da	1,3 kg
+Pomodori pelati	400 g
+Cipolle dorate	1
+Carote	1
+Sedano	1 costa
+Aglio	1 spicchio
+Vino rosso	100 g
+Olio extravergine d'oliva	q.b.
+Rosmarino	1 rametto
+Prezzemolo tritato	1 ciuffo
+Sale fino	q.b.
+Pepe nero	q.b.

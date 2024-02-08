@@ -1,0 +1,20 @@
+ingredient	quantity
+Quaglia	4
+Salvia	6 foglie
+Rosmarino	1 rametto
+Sale fino	q.b.
+Pepe nero	q.b.
+Sedano	2 coste
+Carote	2
+Cipolle	1
+Vino rosso	250 ml
+Brodo di carne	200 ml
+Pancetta	250 g
+Aromi per arrosto in polvere	q.b.
+Olio extravergine d'oliva	5 cucchiai
+Aglio	1 spicchio
+Riso Basmati	300 g
+Burro	100 g
+Chiodi di garofano	4
+Cipolle	1
+Acqua calda salata	500 ml

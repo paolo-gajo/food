@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	210 g
+Acqua tiepida	70 g
+Strutto	50 g
+Aceto di vino bianco	3 g
+Sale fino	1 pizzico
+Porri	200 g
+Gorgonzola piccante	100 g
+Gorgonzola dolce	85 g
+Formaggio latteria tipo Branzi	65 g
+Olio extravergine d'oliva	15 g
+Sale fino	q.b.
+Olio di semi di girasole	q.b.

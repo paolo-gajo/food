@@ -1,0 +1,10 @@
+ingredient	quantity
+Scampi	2 kg
+Pomodorini ciliegino	12
+Basilico	20 foglie
+Menta	20 foglie
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Scorza di limone	1

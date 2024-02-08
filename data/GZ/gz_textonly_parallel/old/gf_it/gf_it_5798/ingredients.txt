@@ -1,0 +1,15 @@
+ingredient	quantity
+Radicchio tardivo	200 g
+Spinaci freschi	200 g
+Emmentaler	100 g
+Mozzarella	200 g
+Ricotta	150 g
+Prosciutto cotto	100 g
+Pasta Sfoglia (2 rettangolari da 230 g l'una)	460 g
+Olio extravergine d'oliva	30 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Timo	q.b.
+Aglio	2 spicchi
+Noce moscata (da grattugiare)	q.b.
+Uova	1

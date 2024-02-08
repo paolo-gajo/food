@@ -1,0 +1,4 @@
+ingredient	quantity
+Cioccolato fondente al 55%	400 g
+Panna fresca liquida	250 g
+Burro morbido	70 g

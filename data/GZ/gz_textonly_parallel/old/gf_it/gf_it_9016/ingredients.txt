@@ -1,0 +1,20 @@
+ingredient	quantity
+Farina Manitoba	550 g
+Latte intero	230 g
+Olio extravergine d'oliva	50 g
+Zucchero	30 g
+Sale fino	10 g
+Uova (circa 1)	65 g
+Lievito di birra secco	4 g
+Spinaci	50 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	5 g
+Ricotta	50 g
+Sale fino	q.b.
+Pomodori secchi sott'olio	50 g
+Ricotta salata	40 g
+Funghi champignon	80 g
+Caciotta romana	50 g
+Olio extravergine d'oliva	10 g
+Sale fino	q.b.
+Pepe nero	q.b.

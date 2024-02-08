@@ -1,0 +1,17 @@
+ingredient	quantity
+Latte intero a temperatura ambiente	140 g
+Farina 00	400 g
+Lievito di birra secco	4 g
+Acqua a temperatura ambiente	60 g
+Sale fino	10 g
+Olio extravergine d'oliva	20 g
+Asparagi	650 g
+Uova medie	4
+Grana Padano DOP da grattugiare	120 g
+Panna fresca liquida	150 g
+Scamorza (provola) dolce	130 g
+Mandorle	50 g
+Timo limonato	q.b.
+Olio extravergine d'oliva per ungere la teglia	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

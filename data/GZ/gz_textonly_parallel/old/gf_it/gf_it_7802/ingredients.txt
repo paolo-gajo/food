@@ -1,0 +1,12 @@
+ingredient	quantity
+Pecorino romano	200 g
+Uova bio	1
+Farina di riso	q.b.
+Olio di semi	q.b.
+Fave sgranate	400 g
+Aglio senz'anima	½ spicchio
+Olio extravergine d'oliva	20 g
+Succo di limone	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Acqua	q.b.

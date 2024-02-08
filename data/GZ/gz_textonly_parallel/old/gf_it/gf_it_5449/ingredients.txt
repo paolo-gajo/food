@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina di farro	250 g
+Vino bianco secco	80 g
+Olio extravergine d'oliva	50 g
+Burro freddo di frigo	25 g
+Timo	3 rametti
+Sale fino	6 g
+Acqua	q.b.
+Sale grosso (facoltativo)	8 g
+Semi di papavero	5 g
+Semi di girasole	5 g
+Semi di lino	5 g

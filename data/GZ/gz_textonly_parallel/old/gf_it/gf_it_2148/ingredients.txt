@@ -1,0 +1,13 @@
+ingredient	quantity
+Cioccolato fondente	200 g
+Biscotti secchi	200 g
+Burro	150 g
+Uova medie	2
+Zucchero	100 g
+Cioccolato bianco	80 g
+Biscotti secchi	80 g
+Burro morbido	60 g
+Latte condensato	50 g
+Panna fresca liquida	50 ml
+Zucchero	20 g
+Tuorli	1

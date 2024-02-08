@@ -1,0 +1,8 @@
+ingredient	quantity
+Mozzarella	200 g
+Uova medie	2
+Sale fino	q.b.
+Pepe nero	q.b.
+Pancarrè (8 fette)	140 g
+Latte intero	50 g
+Pangrattato	q.b.

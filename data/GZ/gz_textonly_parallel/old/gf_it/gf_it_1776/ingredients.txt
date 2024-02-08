@@ -1,0 +1,4 @@
+ingredient	quantity
+Caffè della moka o espresso	450 g
+Zucchero	450 g
+Alcol puro	250 g

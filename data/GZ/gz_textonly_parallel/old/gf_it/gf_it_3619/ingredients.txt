@@ -1,0 +1,5 @@
+ingredient	quantity
+Fave fresche	2 kg
+Pecorino romano	320 g
+Pancetta dolce	320 g
+Pane casereccio	500 g

@@ -1,0 +1,12 @@
+ingredient	quantity
+Pasta fillo	270 g
+Gamberi	450 g
+Spinaci	300 g
+Pinoli	30 g
+Burro	30 g
+Tuorli	2
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Semi di papavero	q.b.
+Aglio (facoltativo)	1 spicchio

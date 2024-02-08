@@ -1,0 +1,10 @@
+ingredient	quantity
+Uova	1
+Farina 00	320 g
+Zucchero	100 g
+Uvetta	50 g
+Limoni	1
+Limoncello	20 g
+Burro a temperatura ambiente	100 g
+Lievito in polvere per dolci	3 g
+Zucchero a velo	q.b.

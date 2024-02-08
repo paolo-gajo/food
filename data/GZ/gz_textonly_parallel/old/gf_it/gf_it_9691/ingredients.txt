@@ -1,0 +1,14 @@
+ingredient	quantity
+Riso Carnaroli	500 g
+Fiori di zucca	200 g
+Gamberi	500 g
+Mozzarella	200 g
+Acqua	500 ml
+Birra analcolica	330 ml
+Burro	40 g
+Cipolle	½
+Aglio	1 spicchio
+Timo	5 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

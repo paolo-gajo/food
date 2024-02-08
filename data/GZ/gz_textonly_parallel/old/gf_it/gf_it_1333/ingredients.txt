@@ -1,0 +1,8 @@
+ingredient	quantity
+Cioccolato fondente	250 g
+Biscotti secchi tipo Digestive	250 g
+Caffè della moka	70 g
+Zucchero a velo	75 g
+Burro ammorbidito	30 g
+Cacao amaro in polvere	10 g
+Zucchero a velo	q.b.

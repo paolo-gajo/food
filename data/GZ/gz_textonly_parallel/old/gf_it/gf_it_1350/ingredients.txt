@@ -1,0 +1,9 @@
+ingredient	quantity
+Albumi	4
+Sale fino	1 pizzico
+Zucchero	180 g
+Farina 00	240 g
+Lievito in polvere per dolci	1 bustina
+Cacao amaro in polvere	40 g
+Yogurt bianco naturale	350 g
+Olio di semi	100 g

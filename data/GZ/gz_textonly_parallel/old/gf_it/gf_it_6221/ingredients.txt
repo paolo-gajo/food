@@ -1,0 +1,10 @@
+ingredient	quantity
+Carne bovina macinata	1 kg
+Bacon a fette	240 g
+Uova	1
+Parmigiano Reggiano DOP da grattugiare	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Edamer	200 g
+Prosciutto cotto a fette	150 g
+Spinacini	80 g

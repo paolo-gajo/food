@@ -1,0 +1,11 @@
+ingredient	quantity
+Moscardini puliti	800 g
+Pisellini	250 g
+Vino bianco	100 g
+Peperoncino fresco piccolo	1
+Aglio	1 spicchio
+Menta	6 foglie
+Scorza di limone	1
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	250 g
+Lievito istantaneo per preparazioni salate	3 g
+Grana Padano DOP	70 g
+Spinaci	100 g
+Aglio	1 spicchio
+Uova	55 g
+Latte intero a temperatura ambiente	200 g
+Burro morbido	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Caprino	200 g
+Panna fresca liquida	200 g
+Erba cipollina	q.b.
+Pepe nero	q.b.

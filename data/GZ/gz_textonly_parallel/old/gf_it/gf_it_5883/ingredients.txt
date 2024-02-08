@@ -1,0 +1,16 @@
+ingredient	quantity
+Birra chiara fredda	140 ml
+Farina 00	400 g
+Burro	200 g
+Sale fino	1 pizzico
+Zucchine baby con i fiori	500 g
+Ricotta vaccina	400 g
+Luganega	250 g
+Parmigiano Reggiano DOP da grattugiare	80 g
+Uova medie	3
+Latte intero	30 ml
+Birra chiara	30 ml
+Maggiorana	4 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	1

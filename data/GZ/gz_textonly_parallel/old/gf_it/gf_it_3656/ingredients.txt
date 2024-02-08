@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	300 g
+Acqua	150 g
+Sale fino	10 g
+Lievito di birra fresco	2 g
+Olio extravergine d'oliva	15 g
+Patate	100 g
+Olio extravergine d'oliva	25 g
+Pepe nero	q.b.
+Sale fino	5 g
+Rosmarino	q.b.
+Sale grosso	q.b.

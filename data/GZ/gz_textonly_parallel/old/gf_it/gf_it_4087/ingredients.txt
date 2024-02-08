@@ -1,0 +1,10 @@
+ingredient	quantity
+Farfalle	320 g
+Filetto di salmone	300 g
+Pomodorini ciliegino	400 g
+Rucola	50 g
+Sale fino	q.b.
+Pepe nero	1 pizzico
+Pepe rosa	1 pizzico
+Olio extravergine d'oliva	40 g
+Basilico	8 g

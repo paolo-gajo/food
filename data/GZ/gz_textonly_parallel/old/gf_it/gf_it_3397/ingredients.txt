@@ -1,0 +1,15 @@
+ingredient	quantity
+Patate	300 g
+Tacchino al forno a fette	24
+Emmentaler sottili (circa 200 g)	12 fette
+Pancetta affumicata	50 g
+Ricotta vaccina	100 g
+Latte intero	180 ml
+Olio extravergine d'oliva	15 ml
+Noce moscata	q.b.
+Maggiorana	q.b.
+Sale fino	q.b.
+Pepe bianco	q.b.
+Porri foglie	2
+Carote	1
+Uova	1

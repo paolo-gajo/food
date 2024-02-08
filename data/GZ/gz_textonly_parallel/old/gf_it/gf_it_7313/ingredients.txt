@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 0	1 kg
+Acqua	600 g
+Lievito di birra secco (oppure 25 g di lievito fresco)	7 g
+Olio extravergine d'oliva	60 g
+Sale fino	20 g
+Pere Williams (circa 2)	400 g
+Brie	200 g
+Mozzarella	250 g
+Parmigiano Reggiano DOP	30 g

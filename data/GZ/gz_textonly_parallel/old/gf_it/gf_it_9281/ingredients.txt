@@ -1,0 +1,16 @@
+ingredient	quantity
+Farina 00	250 g
+Olio extravergine d'oliva	50 g
+Acqua	110 g
+Sale fino	q.b.
+Mele Golden	400 g
+Zucchero	60 g
+Uvetta	60 g
+Pinoli	80 g
+Gherigli di noci	50 g
+Cacao amaro in polvere	15 g
+Cannella in polvere	10 g
+Rum	90 g
+Scorza di limone	1
+Alchermes	q.b.
+Zucchero a velo	q.b.

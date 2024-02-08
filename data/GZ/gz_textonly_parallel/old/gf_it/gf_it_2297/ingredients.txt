@@ -1,0 +1,15 @@
+ingredient	quantity
+Ceci secchi	300 g
+Alloro	1 foglia
+Bicarbonato	1 pizzico
+Pomodori pelati	250 g
+Concentrato di pomodoro	10 g
+Aglio	1 spicchio
+Vino rosso corposo	50 g
+Peperoncino secco	1
+Salvia	q.b.
+Rosmarino	q.b.
+Origano	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

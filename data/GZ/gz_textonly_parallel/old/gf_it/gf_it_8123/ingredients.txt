@@ -1,0 +1,15 @@
+ingredient	quantity
+Burro	100 g
+Farina 00	200 g
+Acqua ghiacciata	70 ml
+Sale fino	1 pizzico
+Patate	1 kg
+Cipolle bianche medie	2
+Burro	100 g
+Sale fino	q.b.
+Pepe bianco	q.b.
+Panna fresca liquida	250 ml
+Uova medie	3
+Erba cipollina tritata	2 cucchiai
+Noce moscata grattugiata	½ cucchiaino
+Sale fino	q.b.

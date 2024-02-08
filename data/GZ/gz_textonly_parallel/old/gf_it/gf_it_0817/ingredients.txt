@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	250 g
+Burro freddo	125 g
+Zucchero a velo	100 g
+Tuorli	2
+Scorza di limone	2
+Latte intero	125 ml
+Zucchero	35 g
+Amido di mais (maizena)	10 g
+Farina 00	5 g
+Tuorli	2
+Scorza di limone	2
+Uova	1

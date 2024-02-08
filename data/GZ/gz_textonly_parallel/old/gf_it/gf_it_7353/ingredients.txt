@@ -1,0 +1,6 @@
+ingredient	quantity
+Farina 0 di media forza	500 g
+Acqua a temperatura ambiente	375 g
+Lievito di birra fresco	10 g
+Miele	10 g
+Sale fino	15 g

@@ -1,0 +1,17 @@
+ingredient	quantity
+Pancarrè	12 fette
+Ricotta	60 g
+Mascarpone	90 g
+Erba cipollina	1 mazzetto
+Prezzemolo	1 mazzetto
+Timo	1 mazzetto
+Aneto	1 ciuffo
+Pepe bianco	q.b.
+Sale fino	q.b.
+Prosciutto cotto	80 g
+Latte intero	q.b.
+Mascarpone	80 g
+Salmone affumicato	80 g
+Mascarpone	80 g
+Latte intero	q.b.
+Sale fino	q.b.

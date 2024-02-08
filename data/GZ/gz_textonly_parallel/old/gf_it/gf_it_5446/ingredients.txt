@@ -1,0 +1,8 @@
+ingredient	quantity
+Schiacciate al forno	12
+Mozzarella	120 g
+Basilico	12 foglie
+Passata di pomodoro	100 g
+Olio extravergine d'oliva	2 cucchiai
+Origano	q.b.
+Sale fino	q.b.

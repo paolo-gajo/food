@@ -1,0 +1,40 @@
+ingredient	quantity
+Farina Manitoba	150 g
+Farina 00	100 g
+Lievito di birra secco	2 g
+Zucchero	30 g
+Acqua (a temperatura ambiente)	50 g
+Sale fino	1 pizzico
+Uova (piccole)	2 g
+Burro (ammorbidito)	75 g
+Gamberi (code)	8
+Succo di limone	10 g
+Erba cipollina	2 fili
+Olio extravergine d'oliva	15 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Zucchine	50 g
+Gamberi (code)	4
+Sale fino	q.b.
+Pepe nero	q.b.
+Aceto di mele	10 g
+Timo	2 rametti
+Salsa di soia	15 g
+Miele	10 g
+Scorza di lime	1
+Succo di lime	10 g
+Gamberi (code)	4
+Pancetta (4 fette sottili)	40 g
+Basilico	30 g
+Olio extravergine d'oliva	15 g
+Succo di limone	10 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Tuorli	2
+Succo di limone	25 g
+Olio di semi	250 g
+Aceto di mele	1 cucchiaino
+Pepe nero	q.b.
+Sale fino	q.b.
+Paprika dolce	1 pizzico
+Zenzero in polvere	1 pizzico

@@ -1,0 +1,7 @@
+ingredient	quantity
+Zucca	1 kg
+Olio extravergine d'oliva	60 g
+Sale fino	1 pizzico
+Pepe nero	1 pizzico
+Rosmarino	6 g
+Ricotta affumicata	50 g

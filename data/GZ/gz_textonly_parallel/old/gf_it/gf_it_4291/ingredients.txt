@@ -1,0 +1,13 @@
+ingredient	quantity
+Orecchiette	320 g
+Yogurt greco	200 ml
+Zucchine	400 g
+Porri	150 g
+Pisellini	150 g
+Olio extravergine d'oliva	7 cucchiai
+Aglio	1 spicchio
+Basilico tritato	1 cucchiaio
+Prezzemolo tritato	2 cucchiai
+Sale fino	q.b.
+Pepe nero	q.b.
+Brodo vegetale	q.b.

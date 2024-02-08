@@ -1,0 +1,8 @@
+ingredient	quantity
+Biscotti Oreo®	16
+Burro morbido	50 g
+Formaggio fresco spalmabile	250 g
+Panna fresca liquida	250 g
+Zucchero a velo	40 g
+Biscotti Oreo	12
+Panna fresca liquida	100 g

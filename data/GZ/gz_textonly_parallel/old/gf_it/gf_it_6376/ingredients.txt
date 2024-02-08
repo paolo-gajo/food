@@ -1,0 +1,11 @@
+ingredient	quantity
+Uova medie ( a temperatura ambiente)	3
+Zucchero	100 g
+Scorza di limone	1
+Farina 00	90 g
+Latte intero	200 g
+Sale fino	1 pizzico
+Albicocche	400 g
+Brandy	20 g
+Burro	10 g
+Zucchero	30 g

@@ -1,0 +1,7 @@
+ingredient	quantity
+Patate	800 g
+Birra rossa	80 g
+Burro	40 g
+Rosmarino	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,14 @@
+ingredient	quantity
+Biscotti Digestive	150 g
+Burro	60 g
+Formaggio fresco spalmabile	125 g
+Ricotta	125 g
+Zucchero a velo	35 g
+Panna fresca liquida	100 g
+Gelatina in fogli	8 g
+Baccello di vaniglia	1
+Fragole	180 g
+Zucchero di canna	30 g
+Gelatina in fogli	4 g
+Fragole	2
+Menta	q.b.

@@ -1,0 +1,13 @@
+ingredient	quantity
+Carne bovina polpa di spalla	500 g
+Biancostato di manzo	400 g
+Carne bovina gli ossi	400 g
+Sedano	60 g
+Carote	100 g
+Cipolle dorate	100 g
+Pomodori ramati	150 g
+Acqua	4 l
+Olio extravergine d'oliva	40 g
+Chiodi di garofano	2
+Sale fino	q.b.
+Pepe	4

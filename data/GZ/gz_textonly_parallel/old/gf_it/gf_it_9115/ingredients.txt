@@ -1,0 +1,6 @@
+ingredient	quantity
+Farina Manitoba	185 g
+Farina integrale	185 g
+Latte intero	390 g
+Sale fino	9 g
+Bicarbonato	6 g

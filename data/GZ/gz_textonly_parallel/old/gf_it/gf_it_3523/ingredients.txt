@@ -1,0 +1,17 @@
+ingredient	quantity
+Farina 00	275 g
+Spinaci	150 g
+Latte intero	60 g
+Olio extravergine d'oliva	15 g
+Tuorli	1
+Lievito istantaneo per preparazioni salate	8 g
+Aglio	1 spicchio
+Sale fino	5 g
+Edamer	120 g
+Pomodori secchi sott'olio	90 g
+Latte intero	q.b.
+Semi di girasole	q.b.
+Semi di lino	q.b.
+Semi di zucca	q.b.
+Pomodori secchi sott'olio	q.b.
+Ricotta salata	q.b.

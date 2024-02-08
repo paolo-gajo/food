@@ -1,0 +1,11 @@
+ingredient	quantity
+Spaghetti	320 g
+Cozze	1 kg
+Fagioli cannellini precotti	250 g
+Vino bianco	½ bicchiere
+Aglio	1 spicchio
+Peperoncino fresco fresco	1
+Prezzemolo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

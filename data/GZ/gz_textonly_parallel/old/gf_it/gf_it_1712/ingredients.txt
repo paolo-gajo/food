@@ -1,0 +1,10 @@
+ingredient	quantity
+Carciofi	4
+Olio extravergine d'oliva	q.b.
+Vino bianco	45 g
+Aglio	1 spicchio
+Acqua	45 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Prezzemolo	q.b.
+Menta (facoltativo)	1 rametto

@@ -1,0 +1,9 @@
+ingredient	quantity
+Latte intero a temperatura ambiente	200 g
+Farina 00	100 g
+Burro	25 g
+Cacao amaro in polvere	15 g
+Zucchero	15 g
+Uova (circa 2 medie)	110 g
+Lievito in polvere per dolci	6 g
+Sciroppo di acero	q.b.

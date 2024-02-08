@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	300 g
+Burro	150 g
+Zucchero a velo	130 g
+Tuorli	2
+Castagne	800 g
+Acqua	260 g
+Zucchero	240 g
+Baccello di vaniglia	1
+Scorza di limone non trattato	½
+Uova	1
+Burro	q.b.
+Farina 00	q.b.

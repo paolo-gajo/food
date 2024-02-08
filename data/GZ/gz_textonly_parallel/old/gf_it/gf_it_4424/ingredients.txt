@@ -1,0 +1,17 @@
+ingredient	quantity
+Noodles	200 g
+Gamberi (da pulire)	550 g
+Petto di pollo	200 g
+Broccoletti	100 g
+Fagiolini	100 g
+Peperoni rossi	80 g
+Peperoni gialli	80 g
+Porri	40 g
+Aglio	2 spicchi
+Peperoncino fresco	1
+Semi di sesamo	1 cucchiaio
+Salsa di soia	50 g
+Olio di semi	20 g
+Acqua	20 g
+Sale fino	q.b.
+Pepe nero	q.b.

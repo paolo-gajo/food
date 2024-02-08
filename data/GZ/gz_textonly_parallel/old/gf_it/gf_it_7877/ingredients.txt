@@ -1,0 +1,10 @@
+ingredient	quantity
+La Bottega di Olivia&Marino sfoglie classiche	24
+Prosciutto cotto	60 g
+Groviera	90 g
+Latte intero	250 ml
+Burro	25 g
+Farina 00	25 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.

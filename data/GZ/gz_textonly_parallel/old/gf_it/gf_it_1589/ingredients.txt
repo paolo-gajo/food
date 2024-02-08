@@ -1,0 +1,10 @@
+ingredient	quantity
+Casarecce	320 g
+Salsiccia	250 g
+Stracchino	200 g
+Olio extravergine d'oliva	2 cucchiai
+Aglio	1 spicchio
+Pepe nero	q.b.
+Rosmarino da tritare	q.b.
+Timo	q.b.
+Salvia da tritare	q.b.

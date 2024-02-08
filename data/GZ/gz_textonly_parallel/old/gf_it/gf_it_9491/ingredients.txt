@@ -1,0 +1,13 @@
+ingredient	quantity
+Manzo macinato	300 g
+Maiale macinato	150 g
+Pane raffermo	100 g
+Uova (circa 1 medio)	55 g
+Parmigiano Reggiano DOP	30 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Passata di pomodoro	200 g
+Mozzarelline ciliegine	75 g
+Basilico	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

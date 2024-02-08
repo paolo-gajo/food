@@ -1,0 +1,12 @@
+ingredient	quantity
+Semolino	200 g
+Latte	500 g
+Zucchero	250 g
+Acqua	500 g
+Ricotta vaccina	350 g
+Uova (4 medie)	220 g
+Burro	40 g
+Scorza d'arancia	1
+Baccello di vaniglia	1
+Sale fino	1 pizzico
+Zucchero a velo	q.b.

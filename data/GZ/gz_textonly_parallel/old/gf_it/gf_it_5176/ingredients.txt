@@ -1,0 +1,4 @@
+ingredient	quantity
+Cioccolato al latte	550 g
+Riso soffiato	100 g
+Burro	20 g

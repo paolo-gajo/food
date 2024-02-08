@@ -1,0 +1,10 @@
+ingredient	quantity
+Mascarpone	400 g
+Tuorli	3
+Acqua	50 g
+Zucchero per lo sciroppo	125 g
+Fragole	400 g
+Savoiardi	8
+Zucchero	20 g
+Succo di limone	20 g
+Fragole	12

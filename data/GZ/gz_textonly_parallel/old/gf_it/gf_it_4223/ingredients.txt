@@ -1,0 +1,10 @@
+ingredient	quantity
+Acqua	1,5 l
+Sale grosso	q.b.
+Pepe nero	q.b.
+Scalogno	1
+Pecorino romano solo la crosta	q.b.
+Riso Carnaroli	320 g
+Pepe nero in grani	1 cucchiaio
+Pecorino romano	100 g
+Burro	45 g

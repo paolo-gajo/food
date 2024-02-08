@@ -1,0 +1,12 @@
+ingredient	quantity
+Spaghetti 5 cereali	320 g
+Melanzane	320 g
+Salsiccia	400 g
+Carote	120 g
+Sedano	60 g
+Porri	100 g
+Basilico	q.b.
+Paprika dolce	1 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

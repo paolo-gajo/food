@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina 00	200 g
+Burro freddo	100 g
+Acqua fredda	50 g
+Sale fino	q.b.
+Filetto di maiale	540 g
+Pancetta dolce tesa	60 g
+Senape di Digione	30 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Rosmarino	2 rametti
+Aglio	1 spicchio
+Uova	1

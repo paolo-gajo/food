@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	180 g
+Zucchero	160 g
+Uova circa 3 medie	155 g
+Burro	150 g
+Fecola di patate	50 g
+Succo di limone	25 g
+Scorza di limone	2
+Lievito in polvere per dolci	16 g
+Semi di papavero	7 g
+Burro	q.b.
+Farina 00	q.b.

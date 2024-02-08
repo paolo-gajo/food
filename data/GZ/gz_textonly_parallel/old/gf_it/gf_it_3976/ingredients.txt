@@ -1,0 +1,12 @@
+ingredient	quantity
+Quinoa	200 g
+Funghi champignon	100 g
+Peperoni rossi	70 g
+Peperoni gialli	70 g
+Zucchine	150 g
+Cipolle rosse	100 g
+Acqua	400 g
+Olio extravergine d'oliva	q.b.
+Menta	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

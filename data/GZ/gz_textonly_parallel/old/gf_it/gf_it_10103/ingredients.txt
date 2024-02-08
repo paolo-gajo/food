@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina Manitoba	500 g
+Lievito madre	80 g
+Latte intero	200 g
+Uova (1 piccolo)	50 g
+Zucchero	100 g
+Burro	85 g
+Sale fino	3 g
+Canditi	100 g
+Latte intero	q.b.
+Granella di zucchero	q.b.

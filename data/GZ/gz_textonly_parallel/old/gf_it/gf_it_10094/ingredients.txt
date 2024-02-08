@@ -1,0 +1,13 @@
+ingredient	quantity
+Ananas (intero)	1,3 kg
+Farina 00	270 g
+Burro	120 g
+Zucchero	125 g
+Latte	125 ml
+Sale fino	q.b.
+Uova (medie)	2
+Lievito in polvere per dolci	8 g
+Zucchero di canna	175 g
+Acqua	75 ml
+Burro	10 g
+Ciliegie sciroppate	12

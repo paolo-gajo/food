@@ -1,0 +1,8 @@
+ingredient	quantity
+Cipolle rosse di Tropea	4
+Rosmarino	q.b.
+Salvia	q.b.
+Timo	q.b.
+Sale grosso	5 g
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

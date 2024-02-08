@@ -1,0 +1,10 @@
+ingredient	quantity
+Petto di pollo	200 g
+Yogurt greco	200 g
+Curry	1 cucchiaio
+Pangrattato	q.b.
+Prezzemolo	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.
+Olio di semi di arachide (per friggere)	q.b.
+Fiocchi di sale	q.b.

@@ -1,0 +1,15 @@
+ingredient	quantity
+Uova (medie)	6
+Salmone affumicato norvegese	200 g
+Toma piemontese	100 g
+Spinaci	250 g
+Timo	3 rametti
+Aglio	1 spicchio
+Olio extravergine d'oliva	35 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Zafferano	1 bustina
+Pepe rosa in grani	q.b.
+Cipolle bianche	50 g
+Toma piemontese	200 g
+Brodo vegetale	150 g

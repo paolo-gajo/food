@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	300 g
+Bevanda alla mandorla	150 g
+Gocce di cioccolato fondente	100 g
+Burro morbido	100 g
+Zucchero	100 g
+Uova (circa 2 medie)	100 g
+Lievito in polvere per dolci	10 g
+Bicarbonato raso	1 cucchiaino
+Sale fino	1 pizzico

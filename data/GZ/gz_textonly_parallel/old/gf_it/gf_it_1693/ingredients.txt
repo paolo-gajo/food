@@ -1,0 +1,5 @@
+ingredient	quantity
+Liquirizia in polvere	100 g
+Zucchero di canna	500 g
+Acqua	500 g
+Alcol puro a 95°	500 g

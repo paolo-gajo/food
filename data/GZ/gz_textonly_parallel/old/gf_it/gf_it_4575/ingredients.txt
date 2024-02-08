@@ -1,0 +1,25 @@
+ingredient	quantity
+Lasagne all'uovo	500 g
+Braciole di maiale (coppa)	350 g
+Pancetta	250 g
+Salsiccia	250 g
+Braciole di maiale	250 g
+Cipolle	1
+Alloro	3 foglie
+Sale fino	q.b.
+Passata di pomodoro	1,5 l
+Chiodi di garofano macinati	1 pizzico
+Vino rosso	50 ml
+Olio extravergine d'oliva	30 ml
+Prezzemolo tritato	2 cucchiai
+Uova medie	2
+Parmigiano Reggiano DOP grattugiato	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di oliva per friggere 	q.b.
+Pane raffermo (solo mollica)	100 g
+Ricotta di pecora	500 g
+Parmigiano Reggiano DOP grattugiato	200 g
+Fiordilatte	400 g
+Provola	400 g
+Uova	4

@@ -1,0 +1,11 @@
+ingredient	quantity
+Patate	1 kg
+Farina 00	300 g
+Uova medio	1
+Sale fino	q.b.
+Rosmarino	20 g
+Semola	q.b.
+Speck	150 g
+Burro	30 g
+Parmigiano Reggiano DOP da grattugiare	200 g
+Panna fresca liquida	180 g

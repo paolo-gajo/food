@@ -1,0 +1,9 @@
+ingredient	quantity
+Rigatoni	320 g
+Broccoli romaneschi	1 kg
+Pancetta (tesa)	200 g
+Parmigiano Reggiano DOP grattugiato	80 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	60 g
+Sale fino	q.b.
+Pepe nero	q.b.

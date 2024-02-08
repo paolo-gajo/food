@@ -1,0 +1,8 @@
+ingredient	quantity
+Mozzarella (per pizza)	400 g
+Pane lungo per tramezzini	3 fette
+Acciughe sott'olio	120 g
+Latte intero	200 g
+Uova medie	3
+Pangrattato	q.b.
+Olio di semi di arachide	q.b.

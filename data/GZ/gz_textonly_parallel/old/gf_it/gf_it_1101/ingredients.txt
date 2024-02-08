@@ -1,0 +1,12 @@
+ingredient	quantity
+Pollo arrosto o allo spiedo	160 g
+Mozzarella fior di latte	30 g
+Pangrattato	20 g
+Parmigiano Reggiano DOP	20 g
+Uova	1
+Origano	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	1
+Pangrattato	q.b.
+Olio di semi per friggere	q.b.

@@ -1,0 +1,14 @@
+ingredient	quantity
+Capesante	4
+Pomodorini ciliegino	60 g
+Aglio	1 spicchio
+Parmigiano Reggiano DOP da grattugiare	30 g
+Brodo vegetale	250 ml
+Olio extravergine d'oliva	½ bicchiere
+Prezzemolo	q.b.
+Basilico	q.b.
+Timo	q.b.
+Maggiorana	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Pane raffermo mollica	60 g

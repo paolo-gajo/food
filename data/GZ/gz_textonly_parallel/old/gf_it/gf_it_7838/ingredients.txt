@@ -1,0 +1,9 @@
+ingredient	quantity
+Pasta Sfoglia rettangolare	230 g
+Cipolle rosse di Tropea	250 g
+Zucchero	50 g
+Zucchero di canna	50 g
+Vino bianco	25 ml
+Cognac	7,5 ml
+Alloro	1 foglia
+Uova	1

@@ -1,0 +1,13 @@
+ingredient	quantity
+Penne Rigate Bio	320 g
+Rucola	100 g
+Basilico	q.b.
+Olio extravergine d'oliva	q.b.
+Ceci precotti	250 g
+Porri	50 g
+Parmigiano Reggiano DOP	70 g
+Olio extravergine d'oliva	40 g
+Acqua	1 mestolo
+Basilico	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

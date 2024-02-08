@@ -1,0 +1,8 @@
+ingredient	quantity
+Petto di pollo intero	600 g
+Prosciutto cotto (2 fette)	50 g
+Groviera (2 pezzi)	40 g
+Uova	2
+Pangrattato	q.b.
+Sale fino	q.b.
+Olio di semi	q.b.

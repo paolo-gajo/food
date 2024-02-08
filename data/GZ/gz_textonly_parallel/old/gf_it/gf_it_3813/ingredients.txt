@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina 00	500 g
+Acqua a temperatura ambiente	300 g
+Lievito di birra secco	7 g
+Zucchero	3 g
+Sale	7 g
+Tomini (da 90 g ciascuno)	3
+Spinaci	500 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Fiocchi di sale	q.b.
+Olio di semi di arachide	q.b.

@@ -1,0 +1,12 @@
+ingredient	quantity
+Acqua	250 g
+Farina 00	415 g
+Sale fino	15 g
+Lievito di birra fresco	3 g
+Ricotta di bufala	350 g
+Acqua	70 g
+Fiordilatte	220 g
+Mortadella a fette spesse	120 g
+Pepe nero	q.b.
+Basilico	q.b.
+Olio di semi di arachide	q.b.

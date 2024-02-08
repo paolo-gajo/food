@@ -1,0 +1,4 @@
+ingredient	quantity
+Banane	340 g
+Succo di limone	25 g
+Acqua	200 g

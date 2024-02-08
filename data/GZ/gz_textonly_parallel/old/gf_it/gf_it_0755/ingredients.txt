@@ -1,0 +1,8 @@
+ingredient	quantity
+Pasta fillo fresca (rettangolare)	300 g
+Mandorle pelate	400 g
+Burro	300 g
+Cannella in polvere	8 g
+Miele millefiori	250 g
+Zucchero	200 g
+Acqua	200 g

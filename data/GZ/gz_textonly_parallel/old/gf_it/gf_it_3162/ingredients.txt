@@ -1,0 +1,13 @@
+ingredient	quantity
+Fave secche	500 g
+Acqua	35 g
+Farina 00	20 g
+Prezzemolo	10 g
+Cipolle	1
+Aglio	1 spicchio
+Sale fino	5 g
+Cardamomo	2 g
+Bicarbonato	2 g
+Cumino	1 g
+Pepe nero	q.b.
+Olio di semi di arachide	q.b.

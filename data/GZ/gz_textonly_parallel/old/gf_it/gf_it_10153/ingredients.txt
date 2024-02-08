@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	300 g
+Zucchero	190 g
+Uova a temperatura ambiente	3
+Baccello di vaniglia	½
+Latte intero a temperatura ambiente	100 ml
+Olio di semi di arachide	100 ml
+Lievito in polvere per dolci	16 g
+Cioccolato fondente	80 g
+Cioccolato bianco	80 g

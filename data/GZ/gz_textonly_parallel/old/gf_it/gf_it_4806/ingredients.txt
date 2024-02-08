@@ -1,0 +1,9 @@
+ingredient	quantity
+Valeriana (songino)	100 g
+Rucola	100 g
+Fragole	200 g
+Grana Padano DOP	100 g
+Aceto balsamico	40 g
+Olio extravergine d'oliva	50 g
+Sale fino	q.b.
+Pepe nero	q.b.

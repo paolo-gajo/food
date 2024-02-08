@@ -1,0 +1,5 @@
+ingredient	quantity
+La Bottega di Olivia&Marino spianatine	12
+Porri	40 g
+Burro	15 g
+Speck	90 g

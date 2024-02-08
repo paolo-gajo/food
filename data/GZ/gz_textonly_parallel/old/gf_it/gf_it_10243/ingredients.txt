@@ -1,0 +1,42 @@
+ingredient	quantity
+Lasagne all'uovo	500 g
+Coniglio disossato	800 g
+Pomodori di Pachino	500 g
+Olive taggiasche denocciolate	100 g
+Carote piccola	1
+Sedano	½ costa
+Cipolle	½
+Aglio	1 spicchio
+Vino bianco	60 ml
+Salvia	q.b.
+Rosmarino	q.b.
+Timo	q.b.
+Alloro	q.b.
+Parmigiano Reggiano DOP da grattugiare	q.b.
+Olio extravergine d'oliva	3 cucchiai
+Pepe nero	q.b.
+Sale fino	q.b.
+Vino bianco	500 ml
+Sedano	1 costa
+Cipolle	½
+Aglio	1 spicchio
+Timo	2 rametti
+Rosmarino	1 rametto
+Salvia	3 foglie
+Ginepro	4 bacche
+Pepe nero in grani	q.b.
+Carote piccola	1
+Cipolle	½
+Sedano	½ costa
+Sale fino	q.b.
+Funghi chiodini puliti	400 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	3 cucchiai
+Prezzemolo da tritare	2 cucchiai
+Sale fino	q.b.
+Latte intero	750 ml
+Farina 00	70 g
+Burro	50 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

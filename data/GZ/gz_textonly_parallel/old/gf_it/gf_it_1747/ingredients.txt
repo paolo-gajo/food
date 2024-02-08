@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	490 g
+Uova (3 uova medie)	170 g
+Zucchero	250 g
+Lievito in polvere per dolci	8 g
+Burro freddo	200 g
+Ricotta vaccina	200 g
+Mascarpone	200 g
+Latte intero	50 g
+Caffè	15 g
+Zucchero a velo	75 g
+Cioccolato fondente	50 g
+Zucchero a velo	q.b.

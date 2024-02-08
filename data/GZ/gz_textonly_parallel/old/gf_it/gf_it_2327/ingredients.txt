@@ -1,0 +1,11 @@
+ingredient	quantity
+Melanzane	1,2 kg
+Cioccolato fondente	200 g
+Cacao amaro in polvere	100 g
+Zucchero	500 g
+Farina 00	50 g
+Pinoli	100 g
+Mandorle in scaglie (o noci tritate)	100 g
+Cedro candito (o arancia candita)	100 g
+Acqua circa	550 ml
+Olio di semi di arachide	q.b.

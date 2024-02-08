@@ -1,0 +1,12 @@
+ingredient	quantity
+Carote intere	380 g
+Farina 0	250 g
+Zucchero	140 g
+Fecola di patate	50 g
+Olio di semi di girasole	80 g
+Succo d'arancia	60 g
+Acqua	60 g
+Lievito in polvere per dolci	10 g
+Burro	q.b.
+Farina 00	q.b.
+Zucchero a velo	q.b.

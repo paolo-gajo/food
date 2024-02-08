@@ -1,0 +1,12 @@
+ingredient	quantity
+Acqua	250 g
+Farina 00	400 g
+Olio extravergine d'oliva	40 g
+Lievito di birra fresco	12 g
+Sale fino	5 g
+More	500 g
+Gorgonzola	200 g
+Zucchero	4 cucchiai
+Rosmarino	q.b.
+Olio extravergine d'oliva	q.b.
+Sale di maldon	q.b.

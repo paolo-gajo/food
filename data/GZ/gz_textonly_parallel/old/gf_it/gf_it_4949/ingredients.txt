@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina Manitoba	160 g
+Latte intero	120 ml
+Lievito di birra secco	4 g
+Farina Manitoba	400 g
+Burro ammorbidito	150 g
+Panna fresca liquida	100 ml
+Uova (circa 8)	400 g
+Prosciutto cotto a dadini	150 g
+Salame a dadini	150 g
+Provola a dadini	150 g
+Olive di Gaeta denocciolate	80 g
+Fontina	100 g
+Pecorino da grattugiare	40 g
+Sale fino	10 g
+Zucchero	10 g
+Rosmarino	q.b.
+Timo	q.b.
+Origano	q.b.
+Erba cipollina	q.b.
+Burro	q.b.

@@ -1,0 +1,8 @@
+ingredient	quantity
+Spaghetti	500 g
+Pecorino (da grattugiare)	200 g
+Prezzemolo	1 ciuffo
+Peperoncino fresco	1
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Sale grosso	q.b.

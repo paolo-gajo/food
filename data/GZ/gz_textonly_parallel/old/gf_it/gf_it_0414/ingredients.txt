@@ -1,0 +1,9 @@
+ingredient	quantity
+Burro	500 g
+Farina 00	1 kg
+Tuorli	8
+Zucchero a velo	400 g
+Baccello di vaniglia	1
+Marmellata di prugne	100 g
+Nutella	100 g
+Confettura di albicocche	100 g

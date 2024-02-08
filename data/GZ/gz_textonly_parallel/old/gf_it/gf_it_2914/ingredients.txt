@@ -1,0 +1,9 @@
+ingredient	quantity
+Acqua fredda	240 g
+Farina 00	380 g
+Sale fino	8 g
+Lievito istantaneo per preparazioni salate	16 g
+Mozzarella (per pizza)	220 g
+Passata di pomodoro	130 g
+Olio extravergine d'oliva	q.b.
+Origano	q.b.

@@ -1,0 +1,13 @@
+ingredient	quantity
+Acqua a temperatura ambiente	250 g
+Farina 00	500 g
+Lievito di birra fresco	10 g
+Zucchero	12 g
+Olio extravergine d'oliva	60 g
+Sale fino	15 g
+Passata di pomodoro	350 g
+Mozzarella	250 g
+Sale fino	1 cucchiaino
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Origano	q.b.

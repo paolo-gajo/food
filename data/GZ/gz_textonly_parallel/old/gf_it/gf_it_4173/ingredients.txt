@@ -1,0 +1,9 @@
+ingredient	quantity
+Tortiglioni	360 g
+Melanzane	200 g
+Zucchine	200 g
+Peperoni rossi	250 g
+Peperoni gialli	250 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	40 g
+Primosale	120 g

@@ -1,0 +1,9 @@
+ingredient	quantity
+Linguine	320 g
+Seppie da pulire, con la sacca del nero	700 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	40 g
+Vino bianco	80 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Prezzemolo tritato	q.b.

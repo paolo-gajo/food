@@ -1,0 +1,16 @@
+ingredient	quantity
+Latte intero	500 ml
+Farina 00	250 g
+Zucchero	20 g
+Burro	30 g
+Lievito in polvere per dolci	8 g
+Uova	2
+Sale fino	q.b.
+Erba cipollina	q.b.
+Pepe nero	q.b.
+Prosciutto cotto	150 g
+Senape	3 cucchiai
+Insalata	q.b.
+Mozzarella	300 g
+Bresaola	150 g
+Pomodori piccadilly	4

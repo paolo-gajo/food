@@ -1,0 +1,19 @@
+ingredient	quantity
+Riso nero Venere	300 g
+Scalogno	1
+Vino bianco	50 ml
+Amido di riso	2 cucchiai
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Brodo di pesce	q.b.
+Pepe nero	q.b.
+Gamberi	200 g
+Scampi	200 g
+Triglie	200 g
+Pisellini	150 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Uova medie	2
+Semi di sesamo nero	q.b.
+Olio di semi di arachide	q.b.

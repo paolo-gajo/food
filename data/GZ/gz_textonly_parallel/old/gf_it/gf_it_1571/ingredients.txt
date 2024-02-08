@@ -1,0 +1,17 @@
+ingredient	quantity
+Aceto di vino bianco	1,5 l
+Carote	300 g
+Cipollotto fresco	200 g
+Peperoni rossi	300 g
+Peperoni verdi	300 g
+Peperoni gialli	300 g
+Zucchero	30 g
+Cavolfiore cimette	300 g
+Fagiolini	300 g
+Sedano	300 g
+Cetrioli	300 g
+Acqua	1,5 l
+Sale grosso	30 g
+Alloro	3 foglie
+Pepe nero in grani	10
+Bacche di ginepro	4

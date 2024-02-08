@@ -1,0 +1,6 @@
+ingredient	quantity
+Burro freddo di frigo	250 g
+Farina 00	300 g
+Zucchero	125 g
+Farina di mandorle	125 g
+Sale fino	5 g

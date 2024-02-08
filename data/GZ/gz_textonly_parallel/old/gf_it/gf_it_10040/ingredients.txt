@@ -1,0 +1,19 @@
+ingredient	quantity
+Lasagne all'uovo	220 g
+Zucca delica da pulire	580 g
+Mozzarella	120 g
+Grana Padano DOP (da grattugiare)	120 g
+Salsiccia	370 g
+Pomodori pelati	400 g
+Cipolle bianche	1
+Concentrato di pomodoro	60 g
+Vino bianco	120 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Prezzemolo	q.b.
+Burro	100 g
+Farina 00	100 g
+Latte intero	1 l
+Noce moscata	q.b.
+Sale fino	q.b.

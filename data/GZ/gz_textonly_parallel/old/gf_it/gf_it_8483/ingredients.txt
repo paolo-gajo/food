@@ -1,0 +1,12 @@
+ingredient	quantity
+Uova medie	5
+Spinaci puliti	500 g
+Ricotta vaccina	250 g
+Emmentaler	100 g
+Porri	150 g
+Grana Padano DOP	30 g
+Olio extravergine d'oliva	3 cucchiai
+Burro	q.b.
+Pangrattato	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

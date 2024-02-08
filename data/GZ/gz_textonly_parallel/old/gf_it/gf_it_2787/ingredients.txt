@@ -1,0 +1,9 @@
+ingredient	quantity
+Zucchero	160 g
+Scorza d'arancia	2
+Zucca polpa	500 g
+Uova medie	3
+Lievito in polvere per dolci	8 g
+Farina 0	250 g
+Olio di semi di girasole	q.b.
+Zucchero a velo	q.b.

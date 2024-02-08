@@ -1,0 +1,21 @@
+ingredient	quantity
+Melanzane	100 g
+Cipollotti di Tropea	100 g
+Sedano	40 g
+Pomodorini datterini	150 g
+Olive verdi denocciolate	60 g
+Capperi sotto sale	5 g
+Aglio	2 spicchi
+Olio extravergine d'oliva	30 g
+Aceto di mele	2 cucchiai
+Zucchero di canna	1 cucchiaino
+Sale fino	1 cucchiaino
+Pepe nero	1 cucchiaino
+Filetti di tonno	240 g
+Scorza di limone	1
+Fiocchi di sale	1 cucchiaino
+Yogurt greco	150 g
+Cetrioli	50 g
+Basilico	20 g
+Pistacchi	10 g
+Mandorle pelate	10 g

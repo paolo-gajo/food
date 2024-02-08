@@ -1,0 +1,10 @@
+ingredient	quantity
+Salmone affumicato	100 g
+Ricotta	250 g
+Panna fresca liquida	100 ml
+Aneto	6 foglie
+Sale fino	q.b.
+Pepe nero	q.b.
+Pane nero	7 fette
+Aneto	q.b.
+Uova di lompo (succedaneo caviale)	q.b.

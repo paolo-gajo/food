@@ -1,0 +1,20 @@
+ingredient	quantity
+Patate	1 kg
+Uova medie	4
+Parmigiano Reggiano DOP	65 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Salsiccia	250 g
+Funghi champignon	250 g
+Caciocavallo	150 g
+Vino bianco	60 g
+Aglio	1 spicchio
+Rosmarino da tritare	1 rametto
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Pangrattato	30 g
+Parmigiano Reggiano DOP	10 g
+Burro	q.b.
+Burro	q.b.
+Pangrattato	q.b.

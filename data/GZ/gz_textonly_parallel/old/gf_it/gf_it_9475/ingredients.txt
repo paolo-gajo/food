@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina 00	180 g
+Farina di nocciole	45 g
+Uova (circa 5)	230 g
+Burro a temperatura ambiente	190 g
+Zucchero	170 g
+Panna fresca liquida	150 g
+Cioccolato fondente	100 g
+Zucchero di canna	70 g
+Lievito in polvere per dolci	7 g
+Cacao amaro in polvere	40 g
+Latte intero	500 ml
+Panna fresca liquida	200 ml
+Pasta di nocciole	180 g
+Zucchero	125 g
+Amido di mais (maizena)	50 g
+Tuorli	4
+Gelatina in fogli	6 g
+Panna fresca liquida	200 ml
+Cioccolato fondente	q.b.
+Granella di nocciole	q.b.

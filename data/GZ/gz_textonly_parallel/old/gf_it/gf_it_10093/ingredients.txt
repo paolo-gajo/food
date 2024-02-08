@@ -1,0 +1,18 @@
+ingredient	quantity
+Lasagne all'uovo	500 g
+Agnello disossato	800 g
+Pomodori ramati	800 g
+Provola	300 g
+Vino rosso	200 ml
+Cipolle bianche	1
+Aglio	1 spicchio
+Rosmarino da tritare	1 rametto
+Salvia da tritare	4 foglie
+Alloro da tritare	2 foglie
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Sale fino	q.b.
+Latte intero	750 ml
+Farina 00	70 g
+Pecorino da grattugiare	60 g
+Burro	60 g

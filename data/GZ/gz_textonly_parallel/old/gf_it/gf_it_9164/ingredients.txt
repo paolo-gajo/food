@@ -1,0 +1,14 @@
+ingredient	quantity
+Mandorle non pelate	260 g
+Cedro candito a cubetti	160 g
+Arancia candita a cubetti	160 g
+Zucchero	300 g
+Miele	150 g
+Farina 00	160 g
+Noce moscata	0,4 g
+Chiodi di garofano macinati	0,4 g
+Coriandolo in polvere	0,4 g
+Cannella in polvere	2 g
+Zucchero a velo	10 g
+Ostia	1 foglio
+Zucchero a velo	q.b.

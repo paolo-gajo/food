@@ -1,0 +1,8 @@
+ingredient	quantity
+Salame piccante	100 g
+Acqua gassata	100 g
+Farina 00	75 g
+Lievito istantaneo per preparazioni salate	1 cucchiaino
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di semi di arachide	q.b.

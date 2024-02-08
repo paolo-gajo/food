@@ -1,0 +1,13 @@
+ingredient	quantity
+Pancarrè (senza crosta)	10 fette
+Asparagi	6
+Mazzancolle (code)	150 g
+Salmone affumicato	200 g
+Robiola	300 g
+Panna fresca liquida	250 g
+Erba cipollina	10 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Mazzancolle code	4
+Asparagi (punte)	4
+Erba cipollina	q.b.

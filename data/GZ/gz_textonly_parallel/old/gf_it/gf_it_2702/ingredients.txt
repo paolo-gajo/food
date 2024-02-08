@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	300 g
+Burro	30 g
+Uova medie (a temperatura ambiente)	2
+Zucchero	30 g
+Scorza d'arancia	1
+Scorza di limone	1
+Marsala	20 g
+Sale fino	1 pizzico
+Ricotta di pecora	300 g
+Cioccolato fondente	100 g
+Cannella in polvere	½ cucchiaino
+Zucchero	100 g
+Olio di semi	q.b.
+Zucchero a velo	q.b.

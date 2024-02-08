@@ -1,0 +1,15 @@
+ingredient	quantity
+Pasta Sfoglia rotoli da 230 g ciascuno	2
+Patate	200 g
+Funghi portobello	150 g
+Cavolo rosso	100 g
+Taleggio	200 g
+Fontina	100 g
+Aglio	1 spicchio
+Rosmarino rametto	1
+Salvia qualche	foglia
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova	1
+Latte intero	q.b.

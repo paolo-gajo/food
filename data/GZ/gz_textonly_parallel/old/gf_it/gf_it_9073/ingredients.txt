@@ -1,0 +1,14 @@
+ingredient	quantity
+Burro freddo di frigorifero	125 g
+Farina 00	250 g
+Tuorli	2
+Zucchero a velo	100 g
+Baccello di vaniglia	1
+Sale fino	1 pizzico
+Fichi neri	800 g
+Zucchero	50 g
+Vino rosso	30 g
+Amido di mais (maizena)	10 g
+Fichi neri	700 g
+Zucchero	50 g
+Burro	10 g

@@ -1,0 +1,5 @@
+ingredient	quantity
+Mele Red Delicious	500 g
+Zucchero	150 g
+Acqua	200 g
+Succo di limone	1

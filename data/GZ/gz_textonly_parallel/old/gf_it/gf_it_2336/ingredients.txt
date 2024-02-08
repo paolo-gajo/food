@@ -1,0 +1,3 @@
+ingredient	quantity
+Latte intero	1 l
+Zucchero	250 g

@@ -1,0 +1,16 @@
+ingredient	quantity
+Fusilli	320 g
+Zucchine	280 g
+Prosciutto cotto in un'unica fetta	200 g
+Pisellini	200 g
+Parmigiano Reggiano DOP da grattugiare	30 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	30 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Latte intero	500 g
+Ricotta vaccina	330 g
+Farina 00	50 g
+Burro	50 g
+Noce moscata	q.b.
+Sale fino	q.b.

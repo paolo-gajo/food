@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	280 g
+Burro	220 g
+Uova medie, a temperatura ambiente	6
+Lievito in polvere per dolci	2 g
+Zucchero	180 g
+Baccello di vaniglia	1
+Sale fino	1 cucchiaino
+Burro	q.b.
+Frutta fresca	q.b.
+Sciroppo di acero	q.b.
+Zucchero a velo	q.b.

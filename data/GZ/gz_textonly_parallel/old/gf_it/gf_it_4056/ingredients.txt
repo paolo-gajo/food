@@ -1,0 +1,22 @@
+ingredient	quantity
+Fagioli cannellini secchi	350 g
+Olio extravergine d'oliva	20 g
+Aglio	1 spicchio
+Rosmarino	1 rametto
+Acqua	2 l
+Sale fino	q.b.
+Pepe nero	q.b.
+Verza	250 g
+Cavolo nero	300 g
+Bietole	300 g
+Pane raffermo	220 g
+Olio extravergine d'oliva	25 g
+Pomodori pelati	180 g
+Patate	1
+Cipolle	80 g
+Carote	80 g
+Sedano	100 g
+Pepe nero	q.b.
+Sale fino	q.b.
+Peperoncino secco	q.b.
+Timo fresco	q.b.

@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	270 g
+Pisellini	250 g
+Burro fuso	165 g
+Uova (circa 4 medie)	220 g
+Latte intero	100 g
+Lievito istantaneo per preparazioni salate	16 g
+Sale fino	10 g
+Robiola	200 g
+Uova	1
+Sale fino	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,5 @@
+ingredient	quantity
+Patate novelle	12
+Pancetta affumicata fettine	24
+Emmentaler	100 g
+Olio extravergine d'oliva	q.b.

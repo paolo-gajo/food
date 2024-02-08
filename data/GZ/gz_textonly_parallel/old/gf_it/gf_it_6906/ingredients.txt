@@ -1,0 +1,16 @@
+ingredient	quantity
+Cipollotto fresco	1
+Mozzarella	150 g
+Uova medie	2
+Olio extravergine d'oliva	2 cucchiai
+Sale fino	q.b.
+Pepe nero	q.b.
+Carote	75 g
+Zucchine	75 g
+Asparagi	75 g
+Grana Padano DOP da grattugiare	100 g
+Peperoni rossi	35 g
+Patate	1 kg
+Peperoni gialli	35 g
+Burro	q.b.
+Pangrattato	2 cucchiai

@@ -1,0 +1,12 @@
+ingredient	quantity
+Panna fresca liquida	340 ml
+Chicchi di caffè	40 g
+Mascarpone	570 g
+Savoiardi	9
+Albumi	85 g
+Zucchero	270 g
+Acqua	60 ml
+Sale fino	1 pizzico
+Caffè	q.b.
+Zucchero	q.b.
+Cioccolato fondente	100 g

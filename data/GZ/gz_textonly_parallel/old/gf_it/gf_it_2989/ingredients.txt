@@ -1,0 +1,20 @@
+ingredient	quantity
+Zucchine	450 g
+Fecola di patate	100 g
+Parmigiano Reggiano DOP	50 g
+Uova	1
+Basilico	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Passata di pomodoro	120 g
+Melanzane	50 g
+Peperoni gialli	50 g
+Zucchine	60 g
+Mozzarella di bufala	100 g
+Pomodorini ciliegino	50 g
+Basilico	q.b.
+Cipolle rosse	½
+Scamorza affumicata	60 g
+Olive taggiasche	20 g
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.

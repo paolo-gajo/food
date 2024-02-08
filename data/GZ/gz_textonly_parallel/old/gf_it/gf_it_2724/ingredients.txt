@@ -1,0 +1,6 @@
+ingredient	quantity
+Ciliegie	500 g
+Porto	200 ml
+Cannella in stecche piccole	3
+Acqua	300 ml
+Zucchero	100 g

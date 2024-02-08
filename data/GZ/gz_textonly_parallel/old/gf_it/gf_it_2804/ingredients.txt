@@ -1,0 +1,10 @@
+ingredient	quantity
+Rana pescatrice	400 g
+Passata di pomodoro	500 g
+Vino bianco	50 g
+Scalogno	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Bicarbonato	1 pizzico
+Aglio	2 spicchi
+Prezzemolo tritato	q.b.

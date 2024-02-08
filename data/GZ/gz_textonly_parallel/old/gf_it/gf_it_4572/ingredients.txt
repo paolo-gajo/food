@@ -1,0 +1,17 @@
+ingredient	quantity
+Pesce Persico filetto	250 g
+Riso Carnaroli	320 g
+Carote	30 g
+Sedano	30 g
+Cipolle rosse	30 g
+Fumetto di pesce	1 l
+Vino bianco	60 g
+Salvia	q.b.
+Rosmarino	q.b.
+Timo	q.b.
+Olio extravergine d'oliva	45 g
+Aglio	1 spicchio
+Burro	15 g
+Pepe bianco	q.b.
+Scorza di limone (non trattata)	1
+Sale fino	q.b.

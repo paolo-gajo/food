@@ -1,0 +1,16 @@
+ingredient	quantity
+Patate	500 g
+Farina 00	175 g
+Sale fino	8 g
+Funghi orecchioni o ostrica (Pleurotus) (già puliti)	300 g
+Funghi champignon	300 g
+Valtellina Casera stagionato	150 g
+Prosciutto crudo fetta intera	100 g
+Grana Padano DOP da grattugiare	30 g
+Aglio	1 spicchio
+Peperoncino fresco	1
+Rosmarino	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Burro	q.b.
+Olio extravergine d'oliva	q.b.

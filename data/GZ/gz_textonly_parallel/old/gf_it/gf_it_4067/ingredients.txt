@@ -1,0 +1,18 @@
+ingredient	quantity
+Conchiglioni	300 g
+Passata di pomodoro	600 g
+Parmigiano Reggiano DOP da grattugiare	30
+Olio extravergine d'oliva	q.b.
+Cipolle dorate	60 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Carne di suino macinata	125 g
+Carne bovina macinata	125 g
+Ricotta vaccina	400 g
+Mozzarella	250 g
+Parmigiano Reggiano DOP	30 g
+Vino rosso	45 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Uova (1 medio)	55 g
+Aglio	1 spicchio

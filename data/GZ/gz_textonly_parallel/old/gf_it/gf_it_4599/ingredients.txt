@@ -1,0 +1,7 @@
+ingredient	quantity
+Spaghetti	320 g
+Peperoni rossi	300 g
+Peperoni gialli	300 g
+Olive nere denocciolate	65 g
+Capperi sott'olio	25 g
+Acciughe sott'olio	40 g

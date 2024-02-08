@@ -1,0 +1,4 @@
+ingredient	quantity
+Rose non trattate disvariati	colori
+Albumi	1
+Zucchero	q.b.

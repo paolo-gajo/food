@@ -1,0 +1,23 @@
+ingredient	quantity
+Zucca pulita	800 g
+Ceci secchi	200 g
+Olio extravergine d'oliva	50 g
+Paprika piccante	1 cucchiaino
+Curry	1 cucchiaino
+Curcuma in polvere	1 cucchiaino
+Cipolle rosse	80 g
+Aglio	1 spicchio
+Brodo vegetale	50 g
+Acqua	50 g
+Vino bianco	40 g
+Timo	4 rametti
+Sale fino	q.b.
+Pepe nero	q.b.
+Riso Basmati	240 g
+Cipolle	40 g
+Chiodi di garofano	9
+Olio extravergine d'oliva	40 g
+Acqua calda	600 g
+Cannella in stecche	1
+Sale fino	q.b.
+Pepe nero	q.b.

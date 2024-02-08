@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina 00	250 g
+Vino bianco secco	100 g
+Olio extravergine d'oliva	65 g
+Sale fino	5 g
+Zenzero in polvere	2 cucchiaini
+Curcuma in polvere	2 cucchiaini

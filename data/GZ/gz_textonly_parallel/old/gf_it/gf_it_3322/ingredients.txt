@@ -1,0 +1,12 @@
+ingredient	quantity
+Pasta fillo	5 fogli
+Cipolle	1/2
+Carne bovina trita	500 g
+Cannella in polvere	1 cucchiaino
+Zenzero fresco pezzettino	1
+Uova	2
+Prezzemolo tritato	2 cucchiai
+Pepe nero	q.b.
+Sale fino	q.b.
+Burro fuso	q.b.
+Olio extravergine d'oliva	q.b.

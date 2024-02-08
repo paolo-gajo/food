@@ -1,0 +1,12 @@
+ingredient	quantity
+Latte intero	200 ml
+Tuorli	3
+Zucchero	105 g
+Baccello di vaniglia	½
+Limoni	½
+Sale fino	1 pizzico
+Fragole	1,1 kg
+Gelatina in fogli	18 g
+Panna fresca liquida	500 ml
+Panna fresca liquida	150 ml
+Zucchero a velo	30 g

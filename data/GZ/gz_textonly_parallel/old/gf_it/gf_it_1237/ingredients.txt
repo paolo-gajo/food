@@ -1,0 +1,9 @@
+ingredient	quantity
+Uova medie	8
+Emmentaler	200 g
+Prosciutto cotto a fette	120 g
+Grana Padano DOP da grattugiare	50 g
+Erba cipollina	10 rametti
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

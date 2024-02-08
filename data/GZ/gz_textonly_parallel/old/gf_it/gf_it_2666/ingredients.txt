@@ -1,0 +1,10 @@
+ingredient	quantity
+Fesa di tacchino un pezzo intero	1 kg
+Cime di rapa	100 g
+Fontina	100 g
+Polpa di pomodoro	400 g
+Rosmarino	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.

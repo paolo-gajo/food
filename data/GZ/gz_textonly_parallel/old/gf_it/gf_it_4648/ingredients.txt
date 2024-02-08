@@ -1,0 +1,13 @@
+ingredient	quantity
+Fiori di zucca	12
+Speck a cubetti	100 g
+Mozzarella	100 g
+Zucchine (4 circa)	400 g
+Ricotta	100 g
+Uova	1
+Cipollotto fresco	1
+Grana Padano DOP	50 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Timo	q.b.

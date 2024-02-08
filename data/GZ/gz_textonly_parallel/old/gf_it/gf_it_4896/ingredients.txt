@@ -1,0 +1,12 @@
+ingredient	quantity
+Latte intero	230 g
+Farina Manitoba	550 g
+Olio extravergine d'oliva	50 g
+Zucchero	30 g
+Uova medio	1
+Sale fino	10 g
+Lievito di birra fresco	14 g
+Prosciutto cotto	120 g
+Scamorza (provola)	100 g
+Latte intero	20 g
+Tuorli	1

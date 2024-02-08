@@ -1,0 +1,11 @@
+ingredient	quantity
+Carote	250 g
+Farina 00	300 g
+Farina di mandorle	120 g
+Succo d'arancia	150 g
+Zucchero	200 g
+Uova (a temperatura ambiente)	110 g
+Olio di semi di girasole	100 g
+Scorza d'arancia	1
+Lievito in polvere per dolci	16 g
+Estratto di vaniglia	½ cucchiaino

@@ -1,0 +1,9 @@
+ingredient	quantity
+Spaghetti	320 g
+Ricci di mare	1 kg
+Zucchine	300 g
+Vino bianco	60 g
+Olio extravergine d'oliva	30 g
+Aglio	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.

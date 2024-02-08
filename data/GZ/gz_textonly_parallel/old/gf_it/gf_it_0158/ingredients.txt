@@ -1,0 +1,14 @@
+ingredient	quantity
+Spinaci	250 g
+Farina 00	250 g
+Uova piccole	3
+Acqua	100 g
+Noce moscata da grattugiare	q.b.
+Sale fino	q.b.
+Speck	100 g
+Panna fresca liquida	250 g
+Burro	30 g
+Pepe nero	q.b.
+Sale fino	q.b.
+Erba cipollina	3 g
+Olio extravergine d'oliva	q.b.

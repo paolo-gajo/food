@@ -1,0 +1,18 @@
+ingredient	quantity
+Patate	1 kg
+Burro fuso	60 g
+Tuorli	3
+Sale fino	q.b.
+Noce moscata	q.b.
+Grana Padano DOP (da grattugiare)	60 g
+Lenticchie secche	300 g
+Scalogno medio	1
+Carote media	1
+Sedano gambo	1
+Olio extravergine d'oliva	30 g
+Rosmarino	2 rametti
+Alloro	3 foglie
+Brodo vegetale	500 g
+Cotechino	300 g
+Carote media	1
+Sedano gambo	1

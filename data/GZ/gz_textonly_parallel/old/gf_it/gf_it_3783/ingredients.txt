@@ -1,0 +1,25 @@
+ingredient	quantity
+Farina Manitoba	180 g
+Farina 00	75 g
+Acqua	150 ml
+Olio extravergine d'oliva	15 g
+Malto	1 cucchiaino
+Lievito di birra secco	2 g
+Sale fino	5 g
+Luganega	250 g
+Parmigiano Reggiano DOP da grattugiare	60 g
+Vino rosso	15 ml
+Finocchietto selvatico	5 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.
+Funghi champignon	400 g
+Aglio	1 spicchio
+Grana Padano DOP da grattugiare	20 g
+Pangrattato	4 cucchiai
+Prezzemolo	1 ciuffo
+Origano	q.b.
+Erba cipollina	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

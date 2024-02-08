@@ -1,0 +1,15 @@
+ingredient	quantity
+Gamberi	36
+Miele millefiori	100 g
+Zenzero fresco	3 g
+Aglio	1 spicchio
+Lime	2
+Peperoncino	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio di semi di girasole	100 ml
+Latte di soia	50 ml
+Menta	8 foglie
+Succo di lime	1 cucchiaino
+Sale fino	q.b.
+Pepe nero	q.b.

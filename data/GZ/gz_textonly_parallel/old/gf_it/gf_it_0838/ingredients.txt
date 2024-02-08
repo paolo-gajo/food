@@ -1,0 +1,15 @@
+ingredient	quantity
+Riso Carnaroli	280 g
+Verza	6 foglie
+Salsiccia	350 g
+Sedano	40 g
+Carote	40 g
+Cipolle dorate	40 g
+Olio di oliva	50 g
+Burro	30 g
+Brodo vegetale	1 l
+Sale fino	q.b.
+Pepe nero	q.b.
+Grana Padano DOP grattugiato	80 g
+Timo	2 rametti
+Vino bianco	60 g

@@ -1,0 +1,14 @@
+ingredient	quantity
+Cous cous precotto	300 g
+Cozze	1 kg
+Vongole	1 kg
+Calamari	500 g
+Gamberi	400 g
+Olio extravergine d'oliva	50 g
+Vino bianco secco	40 g
+Aglio	3 spicchi
+Peperoncino fresco	2
+Sale fino	q.b.
+Pepe nero	q.b.
+Menta tritata al coltello	q.b.
+Pomodorini ciliegino	450 g

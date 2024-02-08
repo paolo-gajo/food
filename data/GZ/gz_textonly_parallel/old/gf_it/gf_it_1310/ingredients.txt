@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	150 g
+Farina Manitoba	350 g
+Burro a temperatura ambiente	150 g
+Latte intero	125 ml
+Uova	2
+Tuorli	1
+Lievito di birra secco	4 g
+Acqua	50 ml
+Zucchero	20 g
+Sale fino	8 g
+Uova	1

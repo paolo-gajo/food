@@ -1,0 +1,18 @@
+ingredient	quantity
+Farina Manitoba	250 g
+Acqua	160 g
+Lievito di birra secco	1 g
+Sale fino	5 g
+Zucchine	170 g
+Peperoni rossi	120 g
+Cipolle rosse di Tropea	130 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Fiori di zucca	6
+Ricotta vaccina	175 g
+Mozzarella	50 g
+Acciughe sott'olio	6 filetti
+Pangrattato	q.b.
+Pecorino romano	q.b.
+Olio extravergine d'oliva	q.b.

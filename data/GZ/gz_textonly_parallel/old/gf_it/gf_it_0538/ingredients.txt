@@ -1,0 +1,18 @@
+ingredient	quantity
+Tacos	8
+Salsiccia	500 g
+Peperoncino dolce lungo	10 g
+Paprika affumicata	1 cucchiaio
+Concentrato di pomodoro	1 cucchiaio
+Vino rosso	25 ml
+Olio extravergine d'oliva	10 g
+Pepe nero	q.b.
+Pomodorini datterini	150 g
+Cipollotto fresco	40 g
+Prezzemolo	1 mazzetto
+Succo di lime	½
+Olio extravergine d'oliva	10 g
+Sale fino	q.b.
+Panna acida	100 g
+Yogurt greco	50 g
+Scorza di lime	½

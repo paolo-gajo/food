@@ -1,0 +1,16 @@
+ingredient	quantity
+Acqua	500 g
+Farina 00	300 g
+Burro	200 g
+Latte condensato	50 g
+Pasta di pistacchi	40 g
+Cioccolato fondente	40 g
+Sale fino	10 g
+Uova	7
+Mascarpone	500 g
+Cioccolato fondente	100 g
+Latte condensato	100 g
+Panna fresca liquida	50 ml
+Gelatina in fogli	10 g
+Cioccolato bianco	q.b.
+Codette colorate	q.b.

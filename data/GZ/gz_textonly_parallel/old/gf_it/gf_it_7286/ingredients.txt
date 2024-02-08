@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina 0	375 g
+Acqua a temperatura ambiente	185 g
+Zucchero	55 g
+Olio di semi	45 g
+Lievito di birra secco	5 g
+Sale fino	5 g
+Scamorza (provola)	75 g
+Pisellini	60 g
+Pomodori secchi sott'olio	30 g
+Olive taggiasche denocciolate	30 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	1 cucchiaio
+Sale fino	1 pizzico

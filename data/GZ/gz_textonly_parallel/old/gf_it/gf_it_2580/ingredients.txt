@@ -1,0 +1,11 @@
+ingredient	quantity
+Spaghetti	400 g
+Friggitelli	350 g
+Salsiccia	200
+Pomodorini ciliegino	200 g
+Parmigiano Reggiano DOP (da grattugiare)	100 g
+Aglio	1 spicchio
+Basilico	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

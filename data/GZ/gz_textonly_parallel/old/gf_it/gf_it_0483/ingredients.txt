@@ -1,0 +1,18 @@
+ingredient	quantity
+Panini da hamburger	4
+Manzo spalla tritata	800 g
+Caciocavallo silano	130 g
+Pomodorini secchi sottolio	50 g
+Lattuga	q.b.
+Burro (per ungere i panini)	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Cipolle rosse di Tropea	150 g
+Acqua	150 g
+Zucchero di canna	30 g
+Tuorli (a temperatura ambiente)	1
+Succo di limone	10 g
+Scorza di limone	1
+Basilico	q.b.
+Olio di semi	150 g

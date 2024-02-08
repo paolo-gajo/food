@@ -1,0 +1,13 @@
+ingredient	quantity
+Cellentani	600 g
+Pangrattato	30 g
+Burro	30 g
+Burro	70 g
+Farina 00	100 g
+Latte intero	1 l
+Fontina	250 g
+Emmentaler	250 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Parmigiano Reggiano DOP grattugiato	100 g

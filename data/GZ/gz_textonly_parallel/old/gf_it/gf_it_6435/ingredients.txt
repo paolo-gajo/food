@@ -1,0 +1,15 @@
+ingredient	quantity
+Fragole	220 g
+Cioccolato bianco	150 g
+Farina	380 g
+Zucchero	150 g
+Burro	180 g
+Lievito in polvere per dolci	1 bustina
+Bicarbonato	½ cucchiaino
+Latte intero	200 ml
+Uova	3
+Sale fino	1 pizzico
+Baccello di vaniglia	1
+Farina 00	50 g
+Zucchero di canna	40 g
+Burro freddo da frigorifero	30 g

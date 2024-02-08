@@ -1,0 +1,19 @@
+ingredient	quantity
+Farina Manitoba	255 g
+Uova a temperatura ambiente	60 g
+Acqua a temperatura ambiente	54 g
+Burro a temperatura ambiente	40 g
+Zucchero	40 g
+Latte intero a temperatura ambiente	16 g
+Lievito di birra fresco	4 g
+Scorza di limone (piccolo)	1
+Sale fino	1 pizzico
+Latte intero	500 g
+Zucchero	150 g
+Amarene sciroppate	100 g
+Tuorli (circa 4)	75 g
+Farina 00	65 g
+Baccello di vaniglia	1
+Tuorli	1
+Latte intero	10 g
+Zucchero	20 g

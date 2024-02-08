@@ -1,0 +1,9 @@
+ingredient	quantity
+La Bottega di Olivia&Marino sfoglie classiche	12
+Carciofi medio	1
+Gamberetti sgusciati	80 g
+Aglio	1 spicchio
+Limoni	1
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

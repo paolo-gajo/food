@@ -1,0 +1,15 @@
+ingredient	quantity
+Latte intero	1 l
+Riso Carnaroli	160 g
+Zucchero	300 g
+Mandorle tritate	100 g
+Amaretti sbriciolati	100 g
+Cedro candito	100 g
+Panna fresca liquida	100 g
+Uova (circa 7)	385 g
+Tuorli (circa 3)	45 g
+Baccello di vaniglia	1
+Scorza di limone	1
+Zucchero	100 g
+Acqua	100 g
+Amaretto (liquore)	50 g

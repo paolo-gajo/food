@@ -1,0 +1,16 @@
+ingredient	quantity
+Strutto	150 g
+Farina 00	500 g
+Sale fino	1 cucchiaino
+Maiale	250 g
+Agnello	250 g
+Salsiccia	100 g
+Cipolle	1
+Lardo	q.b.
+Olive denocciolate	100 g
+Pomodori secchi sott'olio	100 g
+Zafferano	1 bustina
+Prezzemolo	1 ciuffo
+Aglio	1 spicchio
+Olio extravergine d'oliva mezzo	bicchiere
+Pepe nero	q.b.

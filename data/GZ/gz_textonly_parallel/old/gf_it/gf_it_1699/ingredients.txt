@@ -1,0 +1,9 @@
+ingredient	quantity
+Zucchero	190 g
+Farina 00	260 g
+Barbabietole precotte	400 g
+Cioccolato fondente	130 g
+Olio di semi di mais	230 g
+Uova	3
+Lievito in polvere per dolci	16 g
+Baccello di vaniglia	1

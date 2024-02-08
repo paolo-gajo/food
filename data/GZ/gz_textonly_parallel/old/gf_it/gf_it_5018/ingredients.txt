@@ -1,0 +1,20 @@
+ingredient	quantity
+Farina Manitoba	160 g
+Farina 00	200 g
+Acqua	230 g
+Olio extravergine d'oliva	30 g
+Sale fino	10 g
+Lievito di birra secco	7 g
+Zucchero	2 cucchiaini
+Spinaci	500 g
+Ricotta vaccina	250 g
+Aglio	1 spicchio
+Grana Padano DOP	80 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.
+Mandorle in scaglie	q.b.
+Grana Padano DOP	q.b.
+Olio extravergine d'oliva	q.b.
+Pepe nero	q.b.

@@ -1,0 +1,17 @@
+ingredient	quantity
+Latte intero	250 ml
+Farina Manitoba	125 g
+Lievito di birra fresco	7 g
+Malto	1 cucchiaino
+Farina Manitoba	325 g
+Gocce di cioccolato fondente	100 g
+Burro	75 g
+Zucchero	60 g
+Miele	40 g
+Scorza d'arancia	1
+Uova	1
+Sale fino	8 g
+Cioccolato fondente	250 g
+Panna fresca liquida	250 ml
+Scorza d'arancia	1
+Panna fresca liquida	q.b.

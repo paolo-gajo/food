@@ -1,0 +1,9 @@
+ingredient	quantity
+La Bottega di Olivia&Marino sfilati alle olive	10
+Songino	10 g
+Salame	1 fetta
+Speck	1 fetta
+Prosciutto cotto	1 fetta
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Fontina	1 fetta

@@ -1,0 +1,13 @@
+ingredient	quantity
+Passata di pomodoro	1,5 l
+Maiale macinato	500 g
+Vino rosso	350 ml
+Cipolle	120 g
+Sedano	120 g
+Carote	120 g
+Concentrato di pomodoro	180 ml
+Sale	q.b.
+Burro	50 g
+Pepe nero	q.b.
+Olio extravergine d'oliva	4 cucchiai
+Brodo di carne	100 ml

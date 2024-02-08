@@ -1,0 +1,7 @@
+ingredient	quantity
+Cioccolato fondente al 55%	140 g
+Panna fresca liquida	210 g
+Latte intero	90 g
+Glucosio	10 g
+Gelatina in fogli	2 g
+Baccello di vaniglia privato dei semi (facoltativo)	1

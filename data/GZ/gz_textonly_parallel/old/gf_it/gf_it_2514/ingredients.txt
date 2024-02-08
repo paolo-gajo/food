@@ -1,0 +1,16 @@
+ingredient	quantity
+Filetto di merluzzo pulito	300 g
+Gamberi	300 g
+Spinaci	30 g
+Uova	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	4 cucchiai
+Patate	300 g
+Pangrattato	70 g
+Yogurt greco	150 g
+Finocchietto selvatico	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Scorza di lime	1

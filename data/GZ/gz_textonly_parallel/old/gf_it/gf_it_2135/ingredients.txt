@@ -1,0 +1,3 @@
+ingredient	quantity
+Acqua	550 g
+Pasta di mandorle in panetto	230 g

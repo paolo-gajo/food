@@ -1,0 +1,11 @@
+ingredient	quantity
+Rigatoni	320 g
+Pomodori secchi sott'olio	40 g
+Melanzane	300 g
+Pinoli	60 g
+Peperoncino	1
+Olio extravergine d'oliva	40 g
+Basilico	20 foglie
+Ricotta salata	50 g
+Scalogno	40 g
+Sale fino	q.b.

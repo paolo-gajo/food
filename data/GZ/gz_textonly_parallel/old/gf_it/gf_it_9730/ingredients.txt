@@ -1,0 +1,23 @@
+ingredient	quantity
+Zucchero	150 g
+Farina 00	75 g
+Fecola di patate	75 g
+Uova	5
+Scorza d'arancia	1
+Zucchero	200 g
+Farina 00	130 g
+Fecola di patate	50 g
+Cacao amaro in polvere	30 g
+Miele	15 g
+Uova	3
+Tuorli	8
+Latte intero	1 l
+Panna fresca liquida	200 ml
+Zucchero	280 g
+Cioccolato fondente	150 g
+Amido di mais (maizena)	130 g
+Tuorli	12
+Scorza d'arancia	1
+Zucchero a velo	250 g
+Arancia candita	q.b.
+Acqua calda	q.b.

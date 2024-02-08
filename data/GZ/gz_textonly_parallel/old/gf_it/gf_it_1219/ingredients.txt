@@ -1,0 +1,10 @@
+ingredient	quantity
+Latte intero	250 g
+Tuorli	2
+Cioccolato bianco	250 g
+Farina 00	15 g
+Zucchero	50 g
+Latte condensato	60 g
+Farina 00	20 g
+Latte	250 g
+Cioccolato bianco	250 g

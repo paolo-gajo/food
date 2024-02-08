@@ -1,0 +1,12 @@
+ingredient	quantity
+Zucchine	650 g
+Manzo macinato	250 g
+Passata di pomodoro	500 g
+Acqua	50 g
+Scalogno	1
+Vino bianco	60 g
+Maggiorana	6 foglie
+Emmentaler	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

@@ -1,0 +1,12 @@
+ingredient	quantity
+Tortillas di mais	12
+Petto di pollo	700 g
+Passata di pomodoro	800 g
+Peperoncino verde dolce	3
+Peperoncino fresco	1
+Cheddar	200 g
+Panna acida	200 g
+Prezzemolo	1 rametto
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.

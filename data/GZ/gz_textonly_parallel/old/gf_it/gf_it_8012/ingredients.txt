@@ -1,0 +1,8 @@
+ingredient	quantity
+Dischetti di pasta	16
+Frutti di bosco (more, lamponi, mirtilli)	300 g
+Ricotta	300 g
+Zucchero a velo	100 g
+Baccello di vaniglia	1
+Uova	1
+Granella di pistacchi	30 g

@@ -1,0 +1,3 @@
+ingredient	quantity
+Olive nere	200 g
+Olio extravergine d'oliva	45 g

@@ -1,0 +1,16 @@
+ingredient	quantity
+Cioccolato fondente	115 g
+Farina di mandorle	115 g
+Zucchero a velo	115 g
+Burro morbido	115 g
+Albumi	100 g
+Tuorli	60 g
+Fecola di patate	20 g
+Lievito in polvere per dolci	3 g
+Peperoncino in polvere	2 cucchiaini
+Sale fino	1 pizzico
+Cacao amaro in polvere	10 g
+Yogurt greco	100 g
+Menta	q.b.
+Zucchero a velo	q.b.
+Lamponi	q.b.

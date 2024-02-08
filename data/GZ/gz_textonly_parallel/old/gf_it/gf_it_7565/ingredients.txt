@@ -1,0 +1,11 @@
+ingredient	quantity
+Cioccolato fondente	230 g
+Cioccolato al latte	200 g
+Burro	120 g
+Farina 00	140 g
+Lievito in polvere per dolci	5 g
+Sale grosso	1 pizzico
+Uova	2
+Tuorli	1
+Zucchero	150 g
+Baccello di vaniglia	1

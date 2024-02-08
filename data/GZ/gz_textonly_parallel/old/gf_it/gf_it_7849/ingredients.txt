@@ -1,0 +1,14 @@
+ingredient	quantity
+Farina 00	400 g
+Farina Manitoba	100 g
+Sale fino	10 g
+Olio extravergine d'oliva	40 g
+Zucchero	10 g
+Acqua	230 g
+Lievito di birra fresco	15 g
+Burro per sfogliare	250 g
+Pomodori secchi sott'olio sgocciolati	100 g
+Ricotta vaccina	200 g
+Tuorli	1
+Latte intero	20 g
+Basilico	q.b.

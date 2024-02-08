@@ -1,0 +1,13 @@
+ingredient	quantity
+Mele Fuji	1
+Pasta Sfoglia (2 rotoli rettangolari)	460 g
+Provola	150 g
+Uova	1
+Tuorli	1
+Panna fresca liquida	25 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Burro	q.b.
+Tuorli	1
+Latte intero	q.b.

@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina Manitoba	200 g
+Farina 00	100 g
+Acqua	300 ml
+Lievito di birra secco	2 g
+Farina Manitoba	400 g
+Farina 00	200 g
+Acqua	350 ml
+Lievito di birra secco	3 g
+Malto	10 g
+Sale fino	20 g
+Semola di grano duro rimacinata per la spianatoia	q.b.

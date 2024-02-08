@@ -1,0 +1,10 @@
+ingredient	quantity
+Biscotti Digestive	280 g
+Zucchero di canna	30 g
+Burro	170 g
+Yogurt bianco naturale cremoso	700 g
+Gelatina in fogli	20 g
+Latte intero	60 g
+Panna fresca liquida	300 ml
+Zucchero a velo	50 g
+Frutti di bosco	q.b.

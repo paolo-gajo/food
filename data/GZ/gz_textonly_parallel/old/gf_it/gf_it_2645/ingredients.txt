@@ -1,0 +1,6 @@
+ingredient	quantity
+Latte condensato	400 g
+Burro	10 g
+Cioccolato fondente	150 g
+Codette al cioccolato	q.b.
+Burro	q.b.

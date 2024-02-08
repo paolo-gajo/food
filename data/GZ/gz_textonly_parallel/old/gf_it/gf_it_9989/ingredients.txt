@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina Manitoba	150 g
+Lievito di birra secco	1,5 g
+Acqua a temperatura ambiente	150 g
+Carote	270 g
+Farina 00	370 g
+Acqua a temperatura ambiente	190 g
+Sale fino	10 g
+Lievito di birra secco	1,5 g
+Olio extravergine d'oliva	10 g
+Farina 00	50 g

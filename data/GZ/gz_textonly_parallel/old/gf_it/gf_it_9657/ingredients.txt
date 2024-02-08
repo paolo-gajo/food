@@ -1,0 +1,17 @@
+ingredient	quantity
+Zucchero	75 g
+Farina 00	65 g
+Latte intero	45 g
+Burro	40 g
+Cioccolato fondente	25 g
+Cacao amaro in polvere	20 g
+Frumina	10 g
+Uova medie	1
+Lievito in polvere per dolci	2 g
+Sale fino	1 pizzico
+Lamponi	175 g
+Ricotta vaccina	65 g
+Panna fresca liquida	65 ml
+Zucchero	25 g
+Zucchero a velo	15 g
+Gelatina in fogli	4 g

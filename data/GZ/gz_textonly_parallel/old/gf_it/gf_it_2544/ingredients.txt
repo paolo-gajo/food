@@ -1,0 +1,10 @@
+ingredient	quantity
+Cavolo nero	1,5 kg
+Patate	400 g
+Porri	2
+Brodo vegetale	1,2 l
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Pane	50 g
+Olio extravergine d'oliva	1 cucchiaio

@@ -1,0 +1,14 @@
+ingredient	quantity
+Nutella	250 g
+Farina 00	150 g
+Farina di nocciole	50 g
+Zucchero	100 g
+Latte intero	150 g
+Lievito in polvere per dolci	16 g
+Uova medie	4
+Burro (ammorbidito)	60 g
+Cacao amaro in polvere	50 g
+Caffè solubile (in granuli)	1 cucchiaino
+Sale fino	q.b.
+Nutella	200 g
+Mascarpone	300 g

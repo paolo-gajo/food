@@ -1,0 +1,5 @@
+ingredient	quantity
+Latte intero	1 l
+Zucchero	300 g
+Baccello di vaniglia	½ bacca
+Bicarbonato	½ cucchiaino

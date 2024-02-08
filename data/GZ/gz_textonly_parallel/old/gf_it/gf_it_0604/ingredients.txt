@@ -1,0 +1,9 @@
+ingredient	quantity
+Friggitelli	10
+Pangrattato	40 g
+Pomodori ramati (circa 1)	180 g
+Pomodori secchi sott'olio	40 g
+Parmigiano Reggiano DOP da grattugiare	30 g
+Basilico	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.

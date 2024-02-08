@@ -1,0 +1,11 @@
+ingredient	quantity
+Farina 00	250 g
+Acqua	125 g
+Lievito istantaneo per preparazioni salate	6 g
+Olio extravergine d'oliva	10 g
+Sale fino	1 cucchiaino
+Carote	100 g
+Zucchine	100 g
+Fontina	100 g
+Prosciutto cotto	100 g
+Panna fresca liquida	q.b.

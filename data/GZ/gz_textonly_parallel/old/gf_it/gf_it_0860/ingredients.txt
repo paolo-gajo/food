@@ -1,0 +1,8 @@
+ingredient	quantity
+Petto di pollo	8 fette
+Prosciutto cotto	120 g
+Spinaci	500 g
+Fontina	200 g
+Vino bianco	80 ml
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

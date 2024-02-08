@@ -1,0 +1,23 @@
+ingredient	quantity
+Burro	10 g
+Farina Manitoba	100 g
+Latte fresco	65 g
+Lievito di birra secco	1,5 g
+Sale	q.b.
+Zafferano	1 bustina
+Zucchero semolato	10 g
+Basilico fresco	6-7 foglie
+Burro	10 g
+Farina Manitoba	100 g
+Lievito di birra secco	1,5 g
+Sale	q.b.
+Zucchero semolato	10 g
+Latte fresco	55 g
+Burro	10 g
+Concentrato di pomodoro	40 g
+Farina Manitoba	100 g
+Latte fresco	65 g
+Lievito di birra secco	1,5 g
+Sale	q.b.
+Zucchero semolato	10 g
+Latte fresco	q.b.

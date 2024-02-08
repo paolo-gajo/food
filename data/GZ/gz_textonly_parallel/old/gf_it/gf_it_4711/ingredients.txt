@@ -1,0 +1,15 @@
+ingredient	quantity
+Salmone affumicato	260 g
+Pane di segale	350 g
+Spinaci	50 g
+Formaggio fresco spalmabile	250 g
+Aneto	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Scorza di limone	½
+Latte	1 cucchiaio
+Formaggio fresco spalmabile	300 g
+Salmone affumicato	100 g
+Latte	1 cucchiaio
+Uova di lompo (succedaneo caviale)	q.b.
+Aneto	q.b.

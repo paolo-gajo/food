@@ -1,0 +1,13 @@
+ingredient	quantity
+Petto di pollo	500 g
+Zucchine bianche	200
+Porri	1
+Brodo vegetale	200 g
+Panna fresca liquida	40 g
+Erba cipollina	q.b.
+Basilico	q.b.
+Vino bianco secco	200 g
+Olio extravergine d'oliva	q.b.
+Farina 00	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

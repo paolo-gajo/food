@@ -1,0 +1,14 @@
+ingredient	quantity
+Mele renette	750 g
+Farina 00	200 g
+Farina di riso	20 g
+Nocciole intere spellate	30 g
+Uvetta	70 g
+Lievito in polvere per dolci	12 g
+Olio di semi	90 g
+Zucchero di canna	100 g
+Succo d'arancia	90 g
+Latte di cocco	200 g
+Scorza di limone (facoltativa)	1
+Zucchero di canna	q.b.
+Nocciole intere spellate	q.b.

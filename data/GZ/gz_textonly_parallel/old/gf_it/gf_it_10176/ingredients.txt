@@ -1,0 +1,15 @@
+ingredient	quantity
+Cardi	800 g
+Prosciutto cotto a dadini	30 g
+Provola	30 g
+Parmigiano Reggiano DOP da grattugiare	100 g
+Cipolle bianche	1
+Aglio	1 spicchio
+Carote	1
+Uova	4
+Limoni	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Brodo vegetale	q.b.
+Olio extravergine d'oliva	q.b.
+Burro	q.b.

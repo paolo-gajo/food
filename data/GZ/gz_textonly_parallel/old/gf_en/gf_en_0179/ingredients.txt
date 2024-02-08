@@ -1,0 +1,4 @@
+ingredient	quantity
+Coffee	0.3 cup	(70 g)
+Sugar	3 tbsp	(40 g)
+Fresh liquid cream	1.3 cups	(300 g)

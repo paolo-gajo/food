@@ -1,0 +1,18 @@
+ingredient	quantity
+Cous cous precotto	190 g
+Brodo vegetale	380 g
+Sale fino	q.b.
+Olio extravergine d'oliva	20 g
+Taleggio	200 g
+Latte intero	200 g
+Grana Padano DOP grattugiato	100 g
+Pepe nero	q.b.
+Aglio	2 spicchi
+Sale grosso	1 pizzico
+Olio extravergine d'oliva	100 g
+Basilico	50 g
+Pecorino grattugiato	30 g
+Pinoli	15 g
+Parmigiano Reggiano DOP grattugiato	70 g
+Basilico	q.b.
+Pinoli	q.b.

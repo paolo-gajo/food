@@ -1,0 +1,10 @@
+ingredient	quantity
+Pomodori cuore di bue	6
+Vitello macinato	200 g
+Carote	100 g
+Porri	80 g
+Vino bianco	50 g
+Olio extravergine d'oliva	50 g
+Origano secco	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

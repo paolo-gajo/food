@@ -1,0 +1,8 @@
+ingredient	quantity
+Melanzane ovali nere	600 g
+Patate	600 g
+Mandorle tostate	80 g
+Olio extravergine d'oliva	80 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Basilico	q.b.

@@ -1,0 +1,12 @@
+ingredient	quantity
+Lonza di maiale	1,6 kg
+Prugne disidratate	320 g
+Aglio	2 spicchi
+Bacche di ginepro	3
+Vino rosato	500 g
+Salvia	q.b.
+Rosmarino	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Amido di mais (maizena)	7 g
+Olio extravergine d'oliva	q.b.

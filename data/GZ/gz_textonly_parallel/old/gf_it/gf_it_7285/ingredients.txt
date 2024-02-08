@@ -1,0 +1,9 @@
+ingredient	quantity
+Farina 00	400 g
+Acqua	200 ml
+Olio extravergine d'oliva	20 ml
+Lievito di birra secco	3 g
+Zucchero	1 pizzico
+Sale fino	5 g
+Salame a fette	150 g
+Formaggio a fette	200 g

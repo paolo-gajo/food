@@ -1,0 +1,6 @@
+ingredient	quantity
+Wurstel piccoli	12
+Tuorli	1
+Latte intero	1 cucchiaio
+Semi di papavero	q.b.
+Pasta Sfoglia	230 g

@@ -1,0 +1,10 @@
+ingredient	quantity
+Patate viola	1 kg
+Farina 00	300 g
+Uova	1
+Sale fino	q.b.
+Panna fresca liquida	500 ml
+Groviera	200 g
+Noce moscata	q.b.
+Pepe bianco	q.b.
+Sale fino	q.b.

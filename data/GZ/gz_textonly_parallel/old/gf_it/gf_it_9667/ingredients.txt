@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	500 g
+Burro	250 g
+Tuorli	4
+Zucchero a velo	200 g
+Sale fino	q.b.
+Essenza di vaniglia	q.b.
+Zucchero di canna	70 g
+Uova grande	1
+Marsala all'uovo	1 bicchierino
+Panna fresca liquida	180 ml
+Cannella in polvere	q.b.
+Noce moscata	q.b.
+Zenzero fresco da grattugiare	q.b.
+Zucca (già pulita)	800 g

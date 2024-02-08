@@ -1,0 +1,7 @@
+ingredient	quantity
+Zucchine	300 g
+Melanzane	450 g
+Peperoni	850 g
+Pomodori	200 g
+Sale fino	q.b.
+Pepe nero	q.b.

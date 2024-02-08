@@ -1,0 +1,9 @@
+ingredient	quantity
+Sedanini Rigati	320 g
+Pomodorini ciliegino	350 g
+Burrata	200 g
+Caciotta romana	200 g
+Sale fino	3 g
+Pepe nero	1 g
+Basilico	q.b.
+Olio extravergine d'oliva	40 g

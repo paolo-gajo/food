@@ -1,0 +1,9 @@
+ingredient	quantity
+Brodo vegetale	1 l
+Carciofi	700 g
+Porri	180 g
+Patate	300 g
+Olio extravergine d'oliva	50 g
+Timo	4 rametti
+Pane casereccio	4 fette
+Olio extravergine d'oliva	30 g

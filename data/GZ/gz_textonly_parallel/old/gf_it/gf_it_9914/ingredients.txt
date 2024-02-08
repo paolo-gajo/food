@@ -1,0 +1,15 @@
+ingredient	quantity
+Sedanini Rigati senza glutine	350 g
+Gorgonzola dolce	100 g
+Emmentaler	100 g
+Scamorza (provola)	100 g
+Grana Padano DOP (da grattugiare)	125 g
+Pancetta affumicata senza glutine	200 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Latte intero	500 g
+Amido di mais (maizena) senza glutine	50 g
+Burro	50 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.

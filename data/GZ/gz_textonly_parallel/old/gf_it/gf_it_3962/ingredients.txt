@@ -1,0 +1,11 @@
+ingredient	quantity
+Riso Carnaroli	320 g
+Zucca	600 g
+Cipolle ramate	100 g
+Brodo vegetale	1,5 l
+Parmigiano Reggiano DOP	80 g
+Vino bianco	60 g
+Burro	50 g
+Pepe nero	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	20 g

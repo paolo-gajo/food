@@ -1,0 +1,8 @@
+ingredient	quantity
+Indivia belga	12 foglie
+Caprino	180 g
+Erba cipollina	10 g
+Robiola	180 g
+Speck	30 g
+Gorgonzola	180 g
+Gherigli di noci in granella	30 g

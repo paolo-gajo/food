@@ -1,0 +1,9 @@
+ingredient	quantity
+Fusilli Bucati Corti	320 g
+Melanzane	350 g
+Zucchine bianche	350 g
+Primosale	170 g
+Sale fino	4 g
+Pepe nero	6 g
+Basilico	5 g
+Olio extravergine d'oliva	20 g

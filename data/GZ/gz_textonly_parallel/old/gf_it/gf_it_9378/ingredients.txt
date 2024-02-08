@@ -1,0 +1,16 @@
+ingredient	quantity
+Burro	300 g
+Farina 00	600 g
+Acqua fredda	q.b.
+Latte intero	1 l
+Farina 00	100 g
+Burro	100 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.
+Tortellini	500 g
+Porri	1
+Pisellini	200 g
+Prosciutto cotto	100 g
+Olio extravergine d'oliva	4 cucchiai
+Parmigiano Reggiano DOP	150 g

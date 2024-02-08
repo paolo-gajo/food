@@ -1,0 +1,21 @@
+ingredient	quantity
+Melanzane	1,5 kg
+Patate	500 g
+Agnello	500 g
+Carne di suino	500 g
+Cipolle medie	2
+Aglio	2 spicchi
+Olio extravergine d'oliva	5 cucchiai
+Sale fino	q.b.
+Pepe nero	q.b.
+Cannella in polvere	½ cucchiaino
+Vino rosso	1 bicchiere
+Pomodori ramati	500 g
+Pecorino da grattugiare	150 g
+Parmigiano Reggiano DOP da grattugiare	100 g
+Latte intero	1 l
+Burro	100 g
+Farina	100 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Olio di semi di arachide	q.b.

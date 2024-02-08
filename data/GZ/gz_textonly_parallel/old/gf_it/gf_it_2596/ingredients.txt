@@ -1,0 +1,21 @@
+ingredient	quantity
+Uova (a temperatura ambiente)	3
+Tuorli (a temperatura ambiente)	1
+Farina 00	75 g
+Miele	20 g
+Zucchero	90 g
+Latte intero	200 g
+Panna fresca liquida	50 g
+Baccello di vaniglia	1
+Tuorli	3
+Amido di mais (maizena)	30 g
+Zucchero	70 g
+Cioccolato fondente	30 g
+Panna fresca liquida	210 g
+Cioccolato fondente al 70%	240 g
+Zucchero	75 g
+Panna fresca liquida	150 g
+Cioccolato fondente al 70%	200 g
+Tartufi di cioccolato (fondenti)	1
+Cioccolato bianco	80 g
+Cioccolato fondente al 70% sfoglie	14

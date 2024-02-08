@@ -1,0 +1,10 @@
+ingredient	quantity
+Capesante	8
+Pane mollica	100 g
+Pepe nero	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	40 g
+Scorza di limone	1
+Prezzemolo	q.b.
+Timo	q.b.
+Maggiorana	q.b.

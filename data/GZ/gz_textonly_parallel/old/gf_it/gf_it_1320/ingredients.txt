@@ -1,0 +1,15 @@
+ingredient	quantity
+Riso Arborio	540 g
+Melanzane tonde	450 g
+Passata di pomodoro	520 g
+Acqua	700 g
+Caciocavallo	200 g
+Grana Padano DOP da grattugiare	120 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Pangrattato	q.b.
+Olio di semi di girasole per friggere	q.b.
+Caciocavallo	30 g
+Pepe nero	q.b.
+Basilico	q.b.

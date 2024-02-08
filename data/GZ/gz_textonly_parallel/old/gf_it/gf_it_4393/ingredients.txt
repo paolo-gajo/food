@@ -1,0 +1,13 @@
+ingredient	quantity
+Riso Carnaroli	320 g
+Pesce spada	300 g
+Gamberetti	200 g
+Porri	400 g
+Succo d'arancia (di circa 4-5 arance)	600 g
+Scorza d'arancia	1
+Spumante brut	400 g
+Peperoncino in polvere	q.b.
+Prezzemolo	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

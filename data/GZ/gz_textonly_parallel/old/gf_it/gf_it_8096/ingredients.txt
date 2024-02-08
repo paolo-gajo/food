@@ -1,0 +1,6 @@
+ingredient	quantity
+Acqua	900 ml
+Farina di ceci	300 g
+Olio extravergine d'oliva	50 g
+Sale fino	10 g
+Olio extravergine d'oliva	70 g

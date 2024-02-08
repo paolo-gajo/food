@@ -1,0 +1,22 @@
+ingredient	quantity
+Farina 00	400 g
+Farina Manitoba	100 g
+Latte intero a temperatura ambiente	250 g
+Zucchero	60 g
+Burro morbido	50 g
+Acqua	40 g
+Lievito di birra fresco	2 g
+Sale fino	7 g
+Burro morbido	250 g
+Baccello di vaniglia	1
+Farina 00	400 g
+Farina Manitoba	50 g
+Cacao amaro in polvere	50 g
+Latte intero a temperatura ambiente	250 g
+Lievito di birra fresco	10 g
+Zucchero	60 g
+Burro morbido	50 g
+Acqua	40 g
+Sale fino	7 g
+Acqua	100 g
+Zucchero	100 g

@@ -1,0 +1,9 @@
+ingredient	quantity
+Ziti	320 g
+Melanzane	300 g
+Caciocavallo silano	300 g
+Passata di pomodoro	350 g
+Basilico	4 foglie
+Sale fino	1 pizzico
+Pepe nero	1 pizzico
+Aglio	1 spicchio

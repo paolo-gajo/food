@@ -1,0 +1,4 @@
+ingredient	quantity
+Patate medie	4
+Sale fino	q.b.
+Olio di semi di arachide per friggere	q.b.

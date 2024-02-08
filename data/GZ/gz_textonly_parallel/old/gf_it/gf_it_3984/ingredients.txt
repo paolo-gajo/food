@@ -1,0 +1,21 @@
+ingredient	quantity
+Riso Carnaroli	320 g
+Scampi	1,2 kg
+Olio extravergine d'oliva	50 g
+Scalogno	60 g
+Aglio	1 spicchio
+Sale fino	q.b.
+Pepe nero	q.b.
+Panna fresca liquida	45 g
+Limoni	1
+Timo	q.b.
+Scalogno	40 g
+Brandy	30 g
+Olio extravergine d'oliva	30 g
+Prezzemolo	1 ciuffo
+Acqua	1,2 l
+Scampi testee	carapaci
+Aglio	1 spicchio
+Pepe in grani	q.b.
+Sale grosso	q.b.
+Concentrato di pomodoro	1 cucchiaio

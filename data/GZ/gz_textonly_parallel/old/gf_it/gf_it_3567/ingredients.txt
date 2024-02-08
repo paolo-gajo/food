@@ -1,0 +1,7 @@
+ingredient	quantity
+Uova	8
+Farina 00	250 g
+Burro freddo	250 g
+Fecola di patate	125 g
+Parmigiano Reggiano DOP da grattugiare	125 g
+Semi di chia	80 g

@@ -1,0 +1,15 @@
+ingredient	quantity
+Amaranto	25 g
+Farina di amaranto	100 g
+Farina integrale	100 g
+Farina 00	100 g
+Zucchero di canna	150 g
+Latte di riso	180 g
+Olio extravergine d'oliva	80 g
+Gocce di cioccolato	60 g
+Uova	1
+Tuorli	1
+Lievito in polvere per dolci	9 g
+Scorza d'arancia	1
+Sale fino	1 pizzico
+Gocce di cioccolato	20 g

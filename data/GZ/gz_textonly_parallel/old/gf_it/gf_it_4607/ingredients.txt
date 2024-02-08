@@ -1,0 +1,14 @@
+ingredient	quantity
+Farro	100 g
+Orzo perlato	100 g
+Riso Carnaroli	100 g
+Zafferano	1 bustina
+Brodo vegetale	1 l
+Scalogno	60 g
+Olio extravergine d'oliva	40 g
+Sale fino	1 pizzico
+Pepe nero	1 pizzico
+Peperoni rossi	150 g
+Peperoni gialli	150 g
+Tofu (1 panetto)	180 g
+Timo	4 rametti

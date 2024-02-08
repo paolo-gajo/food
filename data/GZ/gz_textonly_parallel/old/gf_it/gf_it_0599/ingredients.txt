@@ -1,0 +1,27 @@
+ingredient	quantity
+Tuorli	170 g
+Baccello di vaniglia	1
+Zucchero	150 g
+Albumi	150 g
+Fecola di patate	30 g
+Farina 00	50 g
+Zucchero a velo	q.b.
+Zucchero	q.b.
+Baccello di vaniglia	1
+Tuorli	100 g
+Zucchero	100 g
+Baccello di vaniglia	1
+Scorza di limone	½
+Amido di mais (maizena)	25 g
+Latte intero	250 g
+Acqua	100 g
+Caffè	100 g
+Zucchero	100 g
+Mascarpone	400 g
+Panna fresca liquida	400 g
+Gelatina in polvere	6 g
+Acqua bollente	30 g
+Burro	q.b.
+Zucchero	q.b.
+Cacao amaro in polvere	q.b.
+Cioccolato fondente quadratini	q.b.

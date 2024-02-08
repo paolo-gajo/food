@@ -1,0 +1,11 @@
+ingredient	quantity
+Mini Fusilli	280 g
+Pomodorini datterini	200 g
+Mozzarelline ciliegine	400 g
+Basilico	q.b.
+Zucchero	10 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Timo	q.b.
+Basilico	10 g
+Olio extravergine d'oliva	50 g

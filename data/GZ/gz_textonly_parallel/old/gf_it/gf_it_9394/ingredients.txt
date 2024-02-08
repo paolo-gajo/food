@@ -1,0 +1,8 @@
+ingredient	quantity
+Farina 00	250 g
+Zucchero a velo	125 g
+Tuorli	2
+Burro	125 g
+Sale fino	1 pizzico
+Cioccolato fondente	100 g
+Baccello di vaniglia	1

@@ -1,0 +1,17 @@
+ingredient	quantity
+Latte intero	150 g
+Farina Manitoba	250 g
+Miele di acacia	5 g
+Lievito di birra secco	2 g
+Olio extravergine d'oliva	2 g
+Sale grosso	2 g
+Scorza d'arancia	1
+Farina Manitoba	q.b.
+Confettura di ribes	150 g
+Pesche	200 g
+Fragole	200 g
+Albicocche	100 g
+Ciliegie	70 g
+Mirtilli	20 g
+Kiwi	1
+Menta	q.b.

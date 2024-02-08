@@ -1,0 +1,14 @@
+ingredient	quantity
+Salsiccia	650 g
+Passata di pomodoro	400 g
+Concentrato di pomodoro	1 cucchiaio
+Vino rosso	20 g
+Olio extravergine d'oliva	20 g
+Pepe nero	q.b.
+Farina di mais bramata	500 g
+Fontina	200 g
+Toma	200 g
+Acqua	2 l
+Grana Padano DOP da grattugiare	4 cucchiai
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.

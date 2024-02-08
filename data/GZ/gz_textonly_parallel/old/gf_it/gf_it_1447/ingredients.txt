@@ -1,0 +1,5 @@
+ingredient	quantity
+Patate farinose	700 g
+Spinaci	400 g
+Farina 00	100 g
+Sale fino	q.b.

@@ -1,0 +1,13 @@
+ingredient	quantity
+Porri	600 g
+Patate (gialle)	300 g
+Brodo vegetale	500 g
+Olio extravergine d'oliva	60 g
+Pepe nero	q.b.
+Timo	3 rametti
+Pane	100 g
+Rosmarino	q.b.
+Paprika dolce	q.b.
+Finocchietto selvatico	q.b.
+Origano	q.b.
+Timo	q.b.

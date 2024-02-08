@@ -1,0 +1,5 @@
+ingredient	quantity
+Farina Manitoba	500 g
+Acqua (fredda o temperatura ambiente)	250 g
+Lievito madre liquido (rinfrescato da almeno 4 ore)	100 g
+Sale fino	10 g

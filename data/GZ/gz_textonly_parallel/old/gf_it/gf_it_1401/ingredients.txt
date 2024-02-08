@@ -1,0 +1,13 @@
+ingredient	quantity
+Cialde da cannolo	250 g
+Burro	110 g
+Ricotta di pecora	750 g
+Panna fresca liquida	200 g
+Zucchero a velo	110 g
+Gocce di cioccolato fondente	100 g
+Gelatina in fogli	12 g
+Cialde da cannolo	2
+Mandorle	q.b.
+Pistacchi	q.b.
+Ciliegie candite	q.b.
+Scorza d'arancia candite	q.b.

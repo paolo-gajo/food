@@ -1,0 +1,4 @@
+ingredient	quantity
+Patate medio-grandi	8
+Pancetta	100 g
+Cheddar	100 g

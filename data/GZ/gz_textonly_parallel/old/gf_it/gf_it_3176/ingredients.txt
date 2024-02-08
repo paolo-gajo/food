@@ -1,0 +1,3 @@
+ingredient	quantity
+Wurstel di maiale	4
+Pasta per il pane	200 g

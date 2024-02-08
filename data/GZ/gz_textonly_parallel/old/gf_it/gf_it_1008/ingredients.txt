@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina di pistacchi	100 g
+Farina 00	250 g
+Zucchero	250 g
+Uova (medie)	3
+Pasta di pistacchi	60 g
+Latte intero	140 g
+Olio di semi	100 g
+Lievito in polvere per dolci	16 g
+Latte intero	500 g
+Amido di mais (maizena)	50 g
+Amido di riso	50 g
+Zucchero	200 g
+Pasta di pistacchi	100 g
+Cioccolato fondente (in scaglie)	60 g
+Cioccolato fondente	300 g
+Panna fresca liquida	250 g
+Glucosio	50 g
+Granella di pistacchi	q.b.
+Cioccolato fondente	q.b.
+Pistacchi sgusciati, non tostati né salati	30

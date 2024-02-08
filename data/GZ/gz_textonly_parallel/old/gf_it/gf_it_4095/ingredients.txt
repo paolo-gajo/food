@@ -1,0 +1,12 @@
+ingredient	quantity
+Funghi porcini	500 g
+Porri	80 g
+Brodo vegetale	700 g
+Patate	300 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	60 g
+Panini ai cereali	2
+Olio extravergine d'oliva	10 g
+Sale fino	1 pizzico
+Origano	1 pizzico

@@ -1,0 +1,33 @@
+ingredient	quantity
+Farina Manitoba	350 g
+Farina 00	300 g
+Zucchero	20 g
+Grana Padano DOP da grattugiare	20 g
+Latte intero	125 ml
+Uova medie	2
+Tuorli	1
+Burro	150 g
+Lievito di birra secco	4 g
+Acqua	250 ml
+Sale fino	q.b.
+Pepe nero	q.b.
+Noce moscata	q.b.
+Ricotta vaccina	500 g
+Porri	2
+Parmigiano Reggiano DOP da grattugiare	1 cucchiaio
+Panna fresca liquida	50 ml
+Gelatina in fogli	4 g
+Olio di oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Ricotta vaccina	250 g
+Prosciutto cotto	150 g
+Panna fresca liquida	25 ml
+Gelatina	2 g
+Noce moscata	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Prosciutto cotto di praga	4 fette
+Semi di papavero	q.b.
+Basilico	q.b.
+Uova	1

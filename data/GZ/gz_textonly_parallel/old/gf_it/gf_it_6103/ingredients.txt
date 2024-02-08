@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	210 g
+Uova (circa 4)	230 g
+Zucchero	165 g
+Nutella	80 g
+Burro	80 g
+Miele millefiori	40 g
+Cacao amaro in polvere	20 g
+Lievito in polvere per dolci	10 g
+Panna fresca liquida	360 g
+Nutella	40 g
+Zucchero a velo	35 g
+Baccello di vaniglia i semi	1
+Granella di nocciole	q.b.
+Nutella	q.b.

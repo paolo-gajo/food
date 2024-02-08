@@ -1,0 +1,15 @@
+ingredient	quantity
+Casarecce	320 g
+Pesce Persico filetto	200 g
+Acciughe sott'olio filetti	2
+Aglio	1 spicchio
+Olio extravergine d'oliva	20 g
+Peperoncino fresco	1
+Capperi sotto sale	10
+Pomodorini ciliegino	200 g
+Cipolle rosse	1
+Olive taggiasche denocciolate	20 g
+Scorza di limone	1
+Sale fino	q.b.
+Pepe nero	q.b.
+Basilico	q.b.

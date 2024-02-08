@@ -1,0 +1,16 @@
+ingredient	quantity
+Melanzane	1 kg
+Sale grosso	60 g
+Farina 00	200 g
+Pomodori pelati	500 g
+Aglio	1 spicchio
+Basilico	10 foglie
+Olio extravergine d'oliva	30 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Pecorino grattugiato	30 g
+Parmigiano Reggiano DOP grattugiato	30 g
+Pangrattato	60 g
+Olio extravergine d'oliva	20 g
+Basilico	5 foglie
+Olio di semi di arachide	1 l

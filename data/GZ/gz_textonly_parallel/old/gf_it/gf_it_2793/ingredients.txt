@@ -1,0 +1,9 @@
+ingredient	quantity
+Semolino	200 g
+Latte intero	1 l
+Zucchero	90 g
+Scorza di limone	1
+Pangrattato	150 g
+Uova	2
+Zucchero a velo	q.b.
+Olio di semi di arachide	q.b.

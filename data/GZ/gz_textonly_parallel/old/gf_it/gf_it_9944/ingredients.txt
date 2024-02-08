@@ -1,0 +1,15 @@
+ingredient	quantity
+Uova	110 g
+Farina 00	110 g
+Burro (a temperatura ambiente)	80 g
+Zucchero	80 g
+Lievito in polvere per dolci	3 g
+Farina di nocciole	30 g
+Latte intero	70 g
+Pere	120 g
+Cioccolato fondente	100 g
+Cardamomo cucchiaino in polvere	1
+Sale fino cucchiaino	1
+Zucchero	100 g
+Acqua	40 g
+Burro	10 g

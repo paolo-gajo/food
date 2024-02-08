@@ -1,0 +1,15 @@
+ingredient	quantity
+Petto di tacchino	1 kg
+Sale fino	q.b.
+Pepe nero	q.b.
+Rosmarino	3 rametti
+Timo	2 rametti
+Aneto	1 rametto
+Olio extravergine d'oliva	50 g
+Salsa di soia	150 g
+Miele	50 g
+Carote	2
+Cipollotto fresco	2
+Peperoni rossi	1
+Peperoni gialli	1
+Salsa di soia	q.b.

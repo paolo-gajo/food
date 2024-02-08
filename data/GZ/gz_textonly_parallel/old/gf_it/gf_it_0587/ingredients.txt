@@ -1,0 +1,12 @@
+ingredient	quantity
+Cioccolato fondente	150 g
+Zucchero a velo	90 g
+Burro	80 g
+Farina 00	20 g
+Cacao amaro in polvere	10 g
+Uova	2
+Tuorli	1
+Baccello di vaniglia (oppure vanillina)	1
+Cioccolato bianco	80 g
+Burro	q.b.
+Cacao amaro in polvere	q.b.

@@ -1,0 +1,8 @@
+ingredient	quantity
+Pesce spada	2 fette
+Pangrattato	150 g
+Pecorino (da grattugiare)	30 g
+Olio extravergine d'oliva	50 g
+Prezzemolo	1 ciuffo
+Sale fino	q.b.
+Pepe nero	q.b.

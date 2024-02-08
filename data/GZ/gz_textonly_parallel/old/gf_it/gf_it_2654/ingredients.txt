@@ -1,0 +1,13 @@
+ingredient	quantity
+Anatra polpa	600 g
+Brodo vegetale	700 g
+Carote media	1
+Sedano piccole	2 coste
+Cipolle dorate media	1
+Alloro	1 foglia
+Concentrato di pomodoro	10 g
+Bacche di ginepro	2
+Vino bianco	250 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

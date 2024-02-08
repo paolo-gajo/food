@@ -1,0 +1,21 @@
+ingredient	quantity
+Farina Manitoba	530 g
+Latte intero	230 g
+Burro fuso	50 g
+Zucchero	30 g
+Lievito di birra secco	4 g
+Uova (medio)	1
+Scorza di limone (non trattata)	1
+Baccello di vaniglia	1
+Sale fino	10 g
+Acqua	50 g
+Latte intero	200 g
+Panna fresca liquida	50 g
+Tuorli	3
+Zucchero	70 g
+Amido di mais (maizena)	25 g
+Scorza di limone (non trattato)	1
+Baccello di vaniglia	1
+Uova (medio)	1
+Latte intero	1 cucchiaio
+Zucchero a velo	20 g

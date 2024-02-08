@@ -1,0 +1,15 @@
+ingredient	quantity
+Noodles	250 g
+Gamberi puliti	250 g
+Carciofi già puliti	200 g
+Bietole	150 g
+Carote	140 g
+Cipollotto fresco	130 g
+Aglio	3 spicchi
+Peperoncino fresco	1
+Zenzero fresco	q.b.
+Anacardi	50 g
+Salsa di soia	50 g
+Olio di semi	q.b.
+Scorza di limone	1
+Basilico	q.b.

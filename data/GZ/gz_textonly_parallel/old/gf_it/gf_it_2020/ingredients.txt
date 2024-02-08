@@ -1,0 +1,15 @@
+ingredient	quantity
+Fusilli Bucati Corti	320 g
+Sedano	60 g
+Porri	100 g
+Carote	100 g
+Olio extravergine d'oliva	60 g
+Aglio	1 spicchio
+Melanzane	100 g
+Peperoni rossi	80 g
+Peperoni gialli	80 g
+Zucchine	100 g
+Pomodorini ciliegino	150 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Basilico	q.b.

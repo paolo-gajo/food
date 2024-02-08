@@ -1,0 +1,14 @@
+ingredient	quantity
+Cavolo cinese	1,8 kg
+Sale fino	35 g
+Daikon	350 g
+Cipollotto fresco	200 g
+Carote	150 g
+Aglio cinese	100 g
+Peperoncino secco da tritare	10 g
+Farina di riso	25 g
+Zucchero di canna	30 g
+Acqua	250 g
+Cipolle bianche	100 g
+Zenzero fresco	50 g
+Aglio	2 spicchi

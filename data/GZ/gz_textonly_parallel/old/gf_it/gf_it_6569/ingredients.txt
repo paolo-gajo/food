@@ -1,0 +1,7 @@
+ingredient	quantity
+Ricotta di pecora	200 g
+Semola di grano duro rimacinata	150 g
+Farina 00	100 g
+Acqua tiepida	150 g
+Lievito di birra fresco	7 g
+Sale fino	7 g

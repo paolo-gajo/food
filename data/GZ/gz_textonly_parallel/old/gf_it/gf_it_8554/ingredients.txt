@@ -1,0 +1,10 @@
+ingredient	quantity
+Farina 00	300 g
+Cacao amaro in polvere	30 g
+Fecola di patate	140 g
+Burro a temperatura ambiente	150 g
+Latte a temperatura ambiente	200 g
+Lievito in polvere per dolci	16 g
+Uova (medie) a temperatura ambiente	6
+Baccello di vaniglia	1
+Zucchero	220 g

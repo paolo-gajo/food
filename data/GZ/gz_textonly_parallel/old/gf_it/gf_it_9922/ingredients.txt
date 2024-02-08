@@ -1,0 +1,17 @@
+ingredient	quantity
+Uova (medie)	5
+Farina 00	280 g
+Lievito in polvere per dolci	6 g
+Sale fino	1 pizzico
+Burro (ammorbidito)	200 g
+Zucchero	250 g
+Pasta di pistacchi	100 g
+Latte intero	40 g
+Gocce di cioccolato fondente	50 g
+Arance succo e scorza	1
+Fecola di patate	80 g
+Farina 00	20 g
+Gocce di cioccolato fondente	50 g
+Cioccolato fondente al 70%	300 g
+Panna fresca liquida	170 g
+Granella di pistacchi	20 g

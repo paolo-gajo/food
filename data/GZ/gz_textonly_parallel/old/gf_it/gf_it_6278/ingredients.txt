@@ -1,0 +1,22 @@
+ingredient	quantity
+Tacos	8
+Manzo magatello	500 g
+Cipolle dorate	100 g
+Birra chiara	330 g
+Olio extravergine d'oliva	10 g
+Olio extravergine d'oliva	25 g
+Cumino in polvere	1 cucchiaio
+Coriandolo in polvere	1 cucchiaio
+Paprika affumicata	1 cucchiaio
+Sale fino	1 cucchiaio
+Pepe nero	1 cucchiaio
+Pomodori ramati	200 g
+Cipollotto fresco	40 g
+Peperoncino verde piccante	10 g
+Prezzemolo	1 mazzetto
+Olio extravergine d'oliva	40 g
+Succo di lime	20 g
+Sale fino	q.b.
+Panna acida	100 g
+Yogurt greco	50 g
+Tabasco®	q.b.

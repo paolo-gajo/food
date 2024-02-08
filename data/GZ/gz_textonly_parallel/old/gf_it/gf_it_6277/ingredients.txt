@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina 00	120 g
+Uova (medie, a temperatura ambiente)	5
+Cioccolato fondente	300 g
+Burro	300 g
+Zucchero	225 g
+Cacao amaro in polvere	75 g
+Sale fino	1 pizzico
+Nutella®	240 g
+Zucchero a velo	q.b.
+Ribes rosso	q.b.
+Mirtilli	q.b.
+Granella di pistacchi	q.b.

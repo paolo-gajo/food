@@ -1,0 +1,11 @@
+ingredient	quantity
+Spaghettini	320 g
+Gamberi	800 g
+Fumetto di crostacei realizzato con gli scarti dei gamberi	500 g
+Avocado	400 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	50 g
+Brandy	40 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Timo	q.b.

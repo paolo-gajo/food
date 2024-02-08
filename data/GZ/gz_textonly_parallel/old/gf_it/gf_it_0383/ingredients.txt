@@ -1,0 +1,10 @@
+ingredient	quantity
+Fettine di vitello	800 g
+Burro	100 g
+Vino bianco	50 ml
+Mozzarella	100 g
+Passata di pomodoro	500 g
+Basilico	5 foglie
+Farina 00	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

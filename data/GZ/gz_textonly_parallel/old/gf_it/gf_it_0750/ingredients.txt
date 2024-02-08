@@ -1,0 +1,7 @@
+ingredient	quantity
+Cipolle rosse di Tropea	1 kg
+Alloro	1 foglia
+Cognac	30 ml
+Zucchero	200 g
+Zucchero di canna	200 g
+Vino bianco	100 ml

@@ -1,0 +1,9 @@
+ingredient	quantity
+Cioccolato gianduia	260 g
+Panna fresca liquida	40 g
+Granella di nocciole	80 g
+Nocciole intere spellate	22
+Acqua	30 g
+Zucchero	70 g
+Panna fresca liquida	65 g
+Cioccolato gianduia	105 g

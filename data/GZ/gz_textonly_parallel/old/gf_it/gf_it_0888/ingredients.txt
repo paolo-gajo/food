@@ -1,0 +1,8 @@
+ingredient	quantity
+Patate	1 kg
+Paprika dolce	10 g
+Passata di pomodoro	2 cucchiai
+Aceto di vino rosso	2 cucchiai
+Olio extravergine d'oliva	6 cucchiai
+Pepe nero	q.b.
+Sale fino	q.b.

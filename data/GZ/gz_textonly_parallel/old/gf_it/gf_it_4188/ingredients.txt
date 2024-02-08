@@ -1,0 +1,7 @@
+ingredient	quantity
+Farina 00	300 g
+Acqua	450 g
+Sale fino	1 pizzico
+Basilico	40 g
+Parmigiano Reggiano DOP	50 g
+Olio extravergine d'oliva	30 g

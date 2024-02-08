@@ -1,0 +1,8 @@
+ingredient	quantity
+Latte intero	150 g
+Cioccolato fondente	140 g
+Amido di mais (maizena)	10 g
+Zucchero a velo	40 g
+Albumi	140 g
+Tuorli	2
+Zucchero	q.b.

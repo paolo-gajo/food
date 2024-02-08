@@ -1,0 +1,15 @@
+ingredient	quantity
+Salmone norvegese	800 g
+Farina di mais giallo	20 g
+Pangrattato	30 g
+Granella di pistacchi	10 g
+Senape gialla in polvere	3 g
+Pepe bianco	1 pizzico
+Paprika affumicata dolce	3 g
+Curry	3 g
+Latte di soia	50 g
+Olio di semi	100 g
+Sale fino	q.b.
+Pepe nero	1 pizzico
+Succo d'arancia	15 g
+Scorza d'arancia	1

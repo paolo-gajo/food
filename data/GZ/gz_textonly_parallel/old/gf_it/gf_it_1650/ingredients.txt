@@ -1,0 +1,11 @@
+ingredient	quantity
+Linguine	400 g
+Mandorle pelate	100 g
+Mandorle non pelate	50 g
+Olio extravergine d'oliva	40 g
+Limoni succo e scorza	1
+Basilico	5 foglie
+Menta	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Acqua calda	q.b.

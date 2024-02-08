@@ -1,0 +1,9 @@
+ingredient	quantity
+Zucchero	180 g
+Farina 00	160 g
+Latte intero	120 g
+Cioccolato bianco	75 g
+Olio di semi di girasole	50 g
+Cacao amaro in polvere	40 g
+Uova	2
+Lievito in polvere per dolci	6 g

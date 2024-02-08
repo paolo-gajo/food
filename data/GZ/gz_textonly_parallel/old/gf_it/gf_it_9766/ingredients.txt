@@ -1,0 +1,15 @@
+ingredient	quantity
+Cavolfiore	500 g
+Barbabietole	300 g
+Finocchi	500 g
+Zucca	400 g
+Verza ( le foglie intere)	q.b.
+Valtellina Casera	300 g
+Parmigiano Reggiano DOP	100 g
+Burro	50 g
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Salvia foglia	qualche
+Rosmarino	1 rametto
+Aglio	1 spicchio

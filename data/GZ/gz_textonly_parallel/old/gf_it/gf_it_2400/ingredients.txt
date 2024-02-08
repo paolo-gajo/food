@@ -1,0 +1,12 @@
+ingredient	quantity
+Farina 00	300 g
+Zucchero a velo	120 g
+Burro	120 g
+Cacao amaro in polvere	6 g
+Uova	1
+Tuorli	1
+Miele millefiori	30 g
+Latte intero	600 ml
+Panna fresca liquida	250 g
+Zucchero	250 g
+Baccello di vaniglia	1

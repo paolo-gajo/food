@@ -1,0 +1,8 @@
+ingredient	quantity
+Farina di ceci	500 g
+Acqua	1,5 l
+Sale fino	10 g
+Prezzemolo da tritare	10 g
+Panini al sesamo	10
+Olio di semi	q.b.
+Pepe nero	q.b.

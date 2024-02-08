@@ -1,0 +1,18 @@
+ingredient	quantity
+Spaghetti	320 g
+Gamberi le code	400 g
+Porri	160 g
+Zucchine	230 g
+Peperoncino fresco	1
+Germogli di soia	80 g
+Aglio	1 spicchio
+Olio extravergine d'oliva	10 g
+Sale fino	q.b.
+Pepe nero	1 pizzico
+Gamberi i carapaci	20 g
+Carote	1
+Cipolle bianche	1
+Sedano	1 costa
+Olio extravergine d'oliva	10 g
+Acqua	1,5 l
+Pepe nero in grani	q.b.

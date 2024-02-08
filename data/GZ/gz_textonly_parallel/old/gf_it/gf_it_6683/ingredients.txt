@@ -1,0 +1,15 @@
+ingredient	quantity
+Uova	210 g
+Farina 00	130 g
+Burro	100 g
+Acqua	200 g
+Zucchero	5 g
+Sale fino	1 pizzico
+Latte intero	600 ml
+Panna fresca liquida	150 ml
+Zucchero	210 g
+Amido di mais (maizena)	67,5 g
+Tuorli	6
+Baccello di vaniglia (grande)	1
+Zucchero	250 g
+Acqua	50 g

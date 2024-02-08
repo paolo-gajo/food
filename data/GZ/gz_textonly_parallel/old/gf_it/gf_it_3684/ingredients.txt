@@ -1,0 +1,10 @@
+ingredient	quantity
+Pane casereccio	5 fette
+Grana Padano DOP (in scaglie sottili)	40 g
+Fichi rossi	5
+Gherigli di noci	30 g
+Rosmarino	2 rametti
+Aceto balsamico	q.b.
+Pepe rosa	q.b.
+Sale fino	q.b.
+Olio extravergine d'oliva	q.b.

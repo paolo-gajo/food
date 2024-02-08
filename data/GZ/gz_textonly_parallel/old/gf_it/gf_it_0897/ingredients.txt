@@ -1,0 +1,9 @@
+ingredient	quantity
+Biscotti Digestive	180 g
+Burro	100 g
+Yogurt bianco naturale	500 g
+Panna fresca liquida	400 g
+Zucchero a velo	150 g
+Limoni non trattato	1
+Gelatina in fogli	12 g
+Cioccolato bianco	100 g

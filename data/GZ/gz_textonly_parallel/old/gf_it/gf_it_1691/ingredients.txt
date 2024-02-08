@@ -1,0 +1,10 @@
+ingredient	quantity
+Braciole di maiale	4
+Birra rossa	100 ml
+Olio extravergine d'oliva	40 g
+Burro	40 g
+Aglio	½
+Rosmarino	1 rametto
+Timo	2 rametti
+Scorza di limone	½
+Sale fino	q.b.

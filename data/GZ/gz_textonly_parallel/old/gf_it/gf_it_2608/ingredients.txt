@@ -1,0 +1,11 @@
+ingredient	quantity
+Rigatoni	320 g
+Acciughe sott'olio del Mar Cantabrico	6
+Pomodorini gialli datterini	500 g
+Aglio	1 spicchio
+Scalogno	1
+Prezzemolo	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	q.b.
+Stracciatella (di burrata fresca)	140 g

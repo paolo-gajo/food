@@ -1,0 +1,16 @@
+ingredient	quantity
+Sedano	100 g
+Carote	100 g
+Cipolle rosse	100 g
+Pisellini	150 g
+Cipollotto fresco	150 g
+Zucchine	300 g
+Patate	200 g
+Spinaci	200 g
+Grana Padano DOP	40 g
+Sale fino	q.b.
+Pepe nero	q.b.
+Olio extravergine d'oliva	50 g
+Acqua a temperatura ambiente	600 g
+Pane casereccio	200 g
+Olio extravergine d'oliva	20 g

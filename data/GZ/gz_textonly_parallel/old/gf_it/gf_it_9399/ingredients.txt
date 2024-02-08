@@ -1,0 +1,9 @@
+ingredient	quantity
+Mandorle armelline	40 g
+Mandorle dolci	60 g
+Zucchero	60 g
+Uova (circa 4 medie)	200 g
+Burro	80 g
+Farina 00	60 g
+Fecola di patate	60 g
+Cioccolato fondente	200 g

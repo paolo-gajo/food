@@ -1,0 +1,13 @@
+ingredient	quantity
+Farina Manitoba	500 g
+Latte intero tiepido	125 g
+Acqua tiepida	125 g
+Burro	60 g
+Olio extravergine d'oliva	40 g
+Lievito di birra secco	4 g
+Sale fino	10 g
+Zucchero	5 g
+Fontina in fette sottili	200 g
+Speck in fette sottili	150 g
+Uova	1
+Latte intero	1 cucchiaio

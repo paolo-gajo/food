@@ -1,0 +1,18 @@
+ingredient	quantity
+Barbabietole precotte	200 g
+Farina 0	300 g
+Farina integrale	180 g
+Acqua tiepida	240 g
+Lievito di birra fresco	10 g
+Sale fino	10 g
+Miele di acacia	5 g
+Olio extravergine d'oliva	40 g
+Peperoni gialli	350 g
+Melanzane	200 g
+Zucchine	180 g
+Pomodori	400 g
+Scamorza affumicata	180 g
+Basilico	q.b.
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

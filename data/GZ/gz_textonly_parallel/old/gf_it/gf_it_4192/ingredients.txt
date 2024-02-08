@@ -1,0 +1,14 @@
+ingredient	quantity
+Spaghetti Rigati	320 g
+Tonno	120 g
+Pomodorini ciliegino di vari colori	200 g
+Olive taggiasche snocciolate	20 g
+Aglio	1 spicchio
+Peperoncino fresco	1
+Olio extravergine d'oliva	3 cucchiai
+Scorza di limone	1
+Zucchero di canna	1 cucchiaino
+Basilico	q.b.
+Prezzemolo	q.b.
+Sale fino	q.b.
+Pepe nero	q.b.

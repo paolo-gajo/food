@@ -1,0 +1,11 @@
+ingredient	quantity
+Zucchero a velo	100 g
+Farina 00	250 g
+Tuorli	2
+Burro (freddo di frigo)	125 g
+Baccello di vaniglia	1
+Marzapane	125 g
+Coloranti alimentari giallo, blu, rosso	q.b.
+Colla alimentare	q.b.
+Matite alimentari brillanti, color madreperla	q.b.
+Confettini colorati al cioccolato	q.b.

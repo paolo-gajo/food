@@ -1,0 +1,9 @@
+ingredient	quantity
+Riso	320 g
+Ortiche	400 g
+Olio extravergine d'oliva	30 g
+Vino bianco	50 g
+Porri	100 g
+Brodo vegetale	1 l
+Burro	40 g
+Parmigiano Reggiano DOP da grattugiare	q.b.

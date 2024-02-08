@@ -1,0 +1,15 @@
+ingredient	quantity
+Farina 00	300 g
+Uova (circa 4 intere)	200 g
+Zucchero	125 g
+Latte parzialmente scremato	200 g
+Gocce di cioccolato fondente	100 g
+Mirtilli secchi	50 g
+Miele	25 g
+Lievito in polvere per dolci	16 g
+Olio di semi di girasole	50 g
+Fecola di patate	50 g
+Zucchero	15 g
+Albumi	35 g
+Mandorle	q.b.
+Granella di zucchero	q.b.

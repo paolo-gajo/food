@@ -1,0 +1,9 @@
+ingredient	quantity
+Riso Basmati	320 g
+Acqua	350 g
+Porri (da pulire)	230 g
+Pisellini	180 g
+Curry	5 g
+Peperoncino fresco piccoli	3
+Olio extravergine d'oliva	q.b.
+Sale fino	q.b.
