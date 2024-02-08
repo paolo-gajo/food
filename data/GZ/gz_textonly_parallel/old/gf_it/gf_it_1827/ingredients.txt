@@ -1,7 +1,0 @@
-ingredient	quantity
-Farina di riso senza glutine	200 g
-Latte intero	200 g
-Zucchero	50 g
-Uova medio	1
-Lievito in polvere per dolci senza glutine	5 g
-Olio extravergine d'oliva	q.b.

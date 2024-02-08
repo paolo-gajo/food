@@ -1,6 +1,0 @@
-ingredient	quantity
-Pan di Spagna	230 g
-Cioccolato fondente	200 g
-Lamponi	100 g
-Cioccolato bianco	450 g
-Coloranti alimentari (in polvere e liposolubili, colore rosso)	q.b.

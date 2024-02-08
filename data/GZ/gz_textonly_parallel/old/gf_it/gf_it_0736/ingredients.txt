@@ -1,9 +1,0 @@
-ingredient	quantity
-Vitello (da cui ottenere 8 fettine)	350 g
-Prezzemolo	10 g
-Burro	80 g
-Farina 00	q.b.
-Vino bianco secco	100 g
-Brodo vegetale	70 g
-Sale fino	q.b.
-Pepe nero	q.b.

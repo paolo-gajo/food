@@ -1,9 +1,0 @@
-ingredient	quantity
-Mezze Maniche Rigate	400 g
-Acciughe sotto sale	30 g
-Pomodorini ciliegino	120 g
-Aglio	1 spicchio
-Olio extravergine d'oliva	45 g
-Peperoncino fresco	q.b.
-Basilico	3 foglie
-Sale	q.b.

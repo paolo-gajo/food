@@ -1,7 +1,0 @@
-ingredient	quantity
-Primosale	650 g
-Farina 00	150 g
-Pangrattato	150 g
-Uova	2
-Sale fino	1 cucchiaino
-Olio di semi per friggere	q.b.

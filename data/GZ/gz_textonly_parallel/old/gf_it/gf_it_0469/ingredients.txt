@@ -1,7 +1,0 @@
-ingredient	quantity
-Latte intero	400 g
-Miele	1 cucchiaino
-Zucchero	80 g
-Baccello di vaniglia	1
-Amido di mais (maizena)	40 g
-Panna fresca liquida	150 g

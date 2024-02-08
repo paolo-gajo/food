@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucchero	170 g
-Acqua	50 g
-Tuorli (circa 5) a temperatura ambiente	75 g
-Savoiardi	26
-Mascarpone	500 g
-Caffè	300 g
-Baccello di vaniglia	1
-Cacao amaro in polvere	q.b.

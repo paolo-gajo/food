@@ -1,8 +1,0 @@
-ingredient	quantity
-Uova	6
-Pancetta	24 fette
-Parmigiano Reggiano DOP da grattugiare	3 cucchiai
-Panna fresca liquida	150 g
-Basilico	1 ciuffo
-Sale fino	q.b.
-Pepe nero	q.b.

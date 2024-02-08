@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	150 g
-Uova (circa 1 medio)	52 g
-Burro (a temperatura ambiente)	55 g
-Cacao amaro in polvere	30 g
-Zucchero	170 g
-Zucchero	60 g
-Panna fresca liquida	60 g
-Cioccolato fondente	80 g

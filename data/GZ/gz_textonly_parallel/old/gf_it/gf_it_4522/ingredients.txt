@@ -1,9 +1,0 @@
-ingredient	quantity
-Spaghetti	360 g
-Arance	600 g
-Acciughe sott'olio	40 g
-Pangrattato	30 g
-Menta	5 foglie
-Olio extravergine d'oliva	40 g
-Cointreau	40 g
-Aglio	1 spicchio

@@ -1,6 +1,0 @@
-ingredient	quantity
-Digestive biscuits	6 ½ oz	(180 g)
-Butter	0.3 cup	(80 g)
-Nutella	1 ¾ cup	(500 g)
-Cream cheese	1.1 lbs	(500 g)
-Chopped hazelnuts	0.3 cup	(30 g)

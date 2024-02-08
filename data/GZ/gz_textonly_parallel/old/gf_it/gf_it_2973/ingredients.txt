@@ -1,8 +1,0 @@
-ingredient	quantity
-Cetrioli grande	1
-Bresaola	12 fette
-Ricotta vaccina	200 g
-Scorza di limone	1
-Pepe nero	q.b.
-Sale fino	q.b.
-Menta	q.b.

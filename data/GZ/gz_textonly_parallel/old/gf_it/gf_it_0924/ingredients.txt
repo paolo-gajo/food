@@ -1,6 +1,0 @@
-ingredient	quantity
-Vodka	80 ml
-Cointreau	30 ml
-Succo di mirtillo rosso	60 ml
-Succo di lime	30 ml
-Lime	1 fetta

@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina integrale	160 g
-Acqua fredda	120 g
-Burro ammorbidito	40 g
-Lievito istantaneo per preparazioni salate	5 g
-Sale fino	1,5
-Farina integrale	q.b.
-Olio di semi di arachide	q.b.
-Sale fino	q.b.

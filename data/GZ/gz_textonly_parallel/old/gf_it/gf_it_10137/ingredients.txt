@@ -1,9 +1,0 @@
-ingredient	quantity
-Panna fresca liquida	300 ml
-Latte condensato	290 g
-Latte intero	250 ml
-Pasta di pinoli	60 g
-Uova medie	2
-Zucchero	100 g
-Acqua bollente	50 ml
-Pinoli da tritare	q.b.

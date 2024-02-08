@@ -1,5 +1,0 @@
-ingredient	quantity
-Limoni grandi, biologici non trattati	5
-Alcol puro a 95°	500 ml
-Zucchero	600 g
-Acqua	750 ml

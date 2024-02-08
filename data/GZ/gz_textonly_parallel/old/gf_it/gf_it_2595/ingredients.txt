@@ -1,8 +1,0 @@
-ingredient	quantity
-Cioccolato fondente (per formare gli involucri)	100 g
-Cioccolato al latte	120 g
-Mascarpone	250 g
-Rum	2 cucchiai
-Baccello di vaniglia	1
-Granella di pistacchi	20 g
-Granella di nocciole	20 g

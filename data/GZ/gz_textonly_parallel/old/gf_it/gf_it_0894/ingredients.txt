@@ -1,5 +1,0 @@
-ingredient	quantity
-Panna fresca liquida	170 g
-Latte intero	370 g
-Zucchero	140 g
-Baccello di vaniglia	1

@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	500 g
-Acqua	300 ml
-Lievito di birra secco	5 g
-Olio extravergine d'oliva	25 g
-Basilico	20 foglie
-Sale fino	10 g
-Olio extravergine d'oliva per spennellare	q.b.

@@ -1,4 +1,0 @@
-ingredient	quantity
-Latte di cocco	400 ml
-Zucchero	50 g
-Farina di riso	20 g

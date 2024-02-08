@@ -1,8 +1,0 @@
-ingredient	quantity
-Melanzane	380 g
-Patate	350 g
-Scamorza (provola)	120 g
-Timo	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Mirtilli	80 g
-More	80 g
-Ribes rosso	80 g
-Lamponi	80 g
-Ghiaccio	100 g
-Latte intero	50 g
-Zucchero	10 g
-Menta foglia	qualche

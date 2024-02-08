@@ -1,8 +1,0 @@
-ingredient	quantity
-Panna fresca liquida	550 g
-Zucchero	130 g
-Agar agar	4 g
-Fragole	400 g
-Zucchero	50 g
-Fragole	2
-Menta	q.b.

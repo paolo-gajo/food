@@ -1,5 +1,0 @@
-ingredient	quantity
-Ciliegie denocciolate	400 g
-Alcol puro 95°	400 g
-Acqua	520 g
-Zucchero	95 g

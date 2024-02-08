@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucchine	2
-Formaggio fresco spalmabile	120 g
-Salmone affumicato	100 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Menta	q.b.
-Pepe rosa in grani	q.b.

@@ -1,8 +1,0 @@
-ingredient	quantity
-Zucchero	200 g
-Mandorle	80 g
-Nocciole	80 g
-Farina 00	60 g
-Burro	60 g
-Albumi	4
-Baccello di vaniglia	1

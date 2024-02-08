@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	250 g
-Cacao amaro in polvere	50 g
-Zucchero	220 g
-Olio di semi di girasole	120 ml
-Acqua (a temperatura ambiente)	130 ml
-Uova (medie)	3
-Lievito in polvere per dolci	16 g
-Arance	1

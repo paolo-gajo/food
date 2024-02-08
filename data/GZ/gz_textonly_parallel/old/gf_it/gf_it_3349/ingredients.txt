@@ -1,7 +1,0 @@
-ingredient	quantity
-Melone medi	2
-Prosciutto fette sottili	12
-Menta	1 mazzetto
-Ribes	2 rametti
-Fiori eduli	q.b.
-Sedano (solo i filamenti)	1 costa

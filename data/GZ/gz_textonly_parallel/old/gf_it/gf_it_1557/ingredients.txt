@@ -1,8 +1,0 @@
-ingredient	quantity
-Burro	150 g
-Cioccolato fondente	180 g
-Zucchero	160 g
-Latte intero	800 ml
-Farina 00	80 g
-Panna fresca liquida	200 ml
-Fragole	200 g

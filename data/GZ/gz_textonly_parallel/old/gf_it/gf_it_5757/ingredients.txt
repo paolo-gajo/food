@@ -1,9 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfoglie classiche	12
-Stracchino	120 g
-Cipollotto fresco (facoltativo)	1
-Burro	20 g
-Pepe nero	q.b.
-Birra chiara	4 cucchiai
-Paprika dolce	q.b.
-Camembert	200 g

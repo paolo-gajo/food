@@ -1,9 +1,0 @@
-ingredient	quantity
-Fragole	200 g
-Melone polpa	100 g
-Succo di limone	1
-Ananas	150 g
-Kiwi	200 g
-Banane polpa	150 g
-Zucchero	40 g
-Menta	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Petto di pollo	500 g
-Parmigiano Reggiano DOP da grattugiare	50 g
-Uova	2
-Sale fino	q.b.
-Pepe nero	q.b.
-Pane raffermo mollica	100 g
-Parmigiano Reggiano DOP	20 g
-Olio di semi	q.b.

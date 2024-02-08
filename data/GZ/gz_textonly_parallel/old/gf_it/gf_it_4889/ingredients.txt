@@ -1,8 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfoglie croccanti cotte al forno	12
-Fave	100 g
-Pancetta	100 g
-Pecorino scaglie	50 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

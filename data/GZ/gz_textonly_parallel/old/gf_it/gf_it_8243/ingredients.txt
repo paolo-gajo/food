@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	195 g
-Burro (morbido)	100 g
-Bicarbonato	1 pizzico
-Uova (circa 1 medio, a temperatura ambiente)	55 g
-Zucchero di canna	100 g
-Zucchero	100 g
-Gocce di cioccolato fondente	200 g
-Sale fino	1 pizzico

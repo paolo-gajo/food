@@ -1,8 +1,0 @@
-ingredient	quantity
-Patate	1 kg
-Rosmarino	2 rametti
-Sale fino	q.b.
-Pancetta affumicata	100 g
-Brodo vegetale	150 ml
-Timo	2 rametti
-Olio extravergine d'oliva	50 ml

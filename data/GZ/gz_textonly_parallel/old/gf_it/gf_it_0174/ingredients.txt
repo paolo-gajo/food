@@ -1,9 +1,0 @@
-ingredient	quantity
-Acqua a temperatura ambiente	90 g
-Farina 00	120 g
-Zucchero a velo	75 g
-Uova	1
-Lievito in polvere per dolci	1,5 g
-Miele millefiori	10 g
-Olio di semi di arachide	q.b.
-Nutella®	90 g

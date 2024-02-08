@@ -1,6 +1,0 @@
-ingredient	quantity
-Mix di farine senza glutine (mix universale)	400 g
-Acqua	200 g
-Olio extravergine d'oliva	40 g
-Sale fino	30 g
-Bicarbonato	10 g

@@ -1,6 +1,0 @@
-ingredient	quantity
-Mascarpone	500 g
-Zucchero	125 g
-Tuorli a temperatura ambiente	4
-Acqua	50 g
-Cacao amaro in polvere	q.b.

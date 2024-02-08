@@ -1,7 +1,0 @@
-ingredient	quantity
-Patate gialle	500 g
-Cipolle bianche	200 g
-Uova medie	7
-Sale fino	q.b.
-Olio extravergine d'oliva	150 g
-Pepe nero	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Cioccolato fondente	200 g
-Nutella	120 g
-Granella di nocciole	30 g
-Panna fresca liquida	50 g
-Cocco rapè	40 g
-Nocciole	32
-Acqua	30 g
-Zucchero	70 g

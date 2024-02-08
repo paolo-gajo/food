@@ -1,5 +1,0 @@
-ingredient	quantity
-Acqua	1 l
-Zucchero	1 kg
-Scorza di mandarino non trattati	20
-Alcol puro per uso alimentare	1 l

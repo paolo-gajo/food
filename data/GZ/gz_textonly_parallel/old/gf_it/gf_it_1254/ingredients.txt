@@ -1,2 +1,0 @@
-ingredient	quantity
-Parmigiano Reggiano DOP	160 g

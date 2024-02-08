@@ -1,9 +1,0 @@
-ingredient	quantity
-Spaghetti	320 g
-Peperoncino fresco piccante	1
-Acciughe sotto sale filetti	4
-Sale fino	q.b.
-Aglio	1 spicchio
-Pane casereccio mollica	100 g
-Prezzemolo	1 ciuffo
-Olio extravergine d'oliva	100 ml

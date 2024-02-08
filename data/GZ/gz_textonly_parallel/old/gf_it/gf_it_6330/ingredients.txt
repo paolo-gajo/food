@@ -1,6 +1,0 @@
-ingredient	quantity
-Patate novelle	800 g
-Aglio	2 spicchi
-Sale fino	q.b.
-Rosmarino	2 rametti
-Olio extravergine d'oliva	50 ml

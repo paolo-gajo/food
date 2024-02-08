@@ -1,7 +1,0 @@
-ingredient	quantity
-Salmone affumicato	110 g
-Erba cipollina	5 g
-Formaggio fresco spalmabile (quark)	160 g
-Sale fino	1 pizzico
-La Bottega di Olivia&Marino sfoglie classiche	12
-Pepe bianco	1 pizzico

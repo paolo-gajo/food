@@ -1,7 +1,0 @@
-ingredient	quantity
-Panna fresca liquida	200 g
-Latte intero	150 g
-Tuorli (circa 3)	55 g
-Zucchero	60 g
-Gelatina in fogli	6 g
-Baccello di vaniglia	1

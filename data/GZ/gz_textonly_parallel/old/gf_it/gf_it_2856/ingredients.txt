@@ -1,5 +1,0 @@
-ingredient	quantity
-Cipolle rosse di Tropea	1 kg
-Zucchero	70 g
-Zucchero di canna	80 g
-Acqua	250 g

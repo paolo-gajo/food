@@ -1,6 +1,0 @@
-ingredient	quantity
-Peperoncino fresco rosso piccante	200 g
-Peperoni rossi	800 g
-Zucchero	500 g
-Sale fino	1 pizzico
-Vino rosso	50 ml

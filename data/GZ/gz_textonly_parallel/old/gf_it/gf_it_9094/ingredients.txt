@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	250 g
-Acqua tiepida	120 ml
-Burro a temp ambiente	120 g
-Zucchero	50 g
-Lievito di birra secco	2 g
-Sale fino	5 g
-Zucchero di canna	100 g

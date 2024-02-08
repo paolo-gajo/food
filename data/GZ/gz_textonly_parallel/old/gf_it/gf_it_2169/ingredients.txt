@@ -1,8 +1,0 @@
-ingredient	quantity
-Bicarbonato	5 g
-Burro a temperatura ambiente	230 g
-Farina 00	360 g
-Sale fino	3 g
-Uova medie	3
-Zucchero a velo	100 g
-Codette colorate	100 g

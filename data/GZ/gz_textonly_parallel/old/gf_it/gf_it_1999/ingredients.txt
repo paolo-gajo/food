@@ -1,5 +1,0 @@
-ingredient	quantity
-Uova a temperatura ambiente	3
-Farina di avena	250 g
-Latte intero a temperatura ambiente	500 g
-Burro	q.b.

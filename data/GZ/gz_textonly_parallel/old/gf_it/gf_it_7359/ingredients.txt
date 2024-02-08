@@ -1,3 +1,0 @@
-ingredient	quantity
-Acqua fredda	135 g
-Farina 00	300 g

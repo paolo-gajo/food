@@ -1,8 +1,0 @@
-ingredient	quantity
-Orzo perlato	150 g
-Farro perlato	150 g
-Rucola	30 g
-Pomodorini ciliegino	200 g
-Mozzarelline ciliegine	100 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

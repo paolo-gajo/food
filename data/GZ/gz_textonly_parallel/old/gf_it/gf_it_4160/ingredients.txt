@@ -1,7 +1,0 @@
-ingredient	quantity
-Semola di grano duro rimacinata	400 g
-Uova (circa 1)	50 g
-Latte intero	175 g
-Pecorino grattugiato	30 g
-Basilico	q.b.
-Olio extravergine d'oliva	10 g

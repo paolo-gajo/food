@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	250 g
-Cioccolato fondente	200 g
-Zucchero	100 g
-Burro freddo	120 g
-Tuorli (circa 2)	40 g
-Lievito in polvere per dolci	2 g
-Sale fino	1 pizzico

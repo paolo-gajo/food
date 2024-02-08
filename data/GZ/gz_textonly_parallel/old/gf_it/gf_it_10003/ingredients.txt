@@ -1,7 +1,0 @@
-ingredient	quantity
-Burro	80 g
-Farina 00	200 g
-Zucchero	80 g
-Lievito in polvere per dolci	2 g
-Latte intero	50 ml
-Cioccolato fondente	250 g

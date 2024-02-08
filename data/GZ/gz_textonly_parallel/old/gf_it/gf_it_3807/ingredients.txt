@@ -1,7 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfoglie alle olive	12
-Ricotta vaccina	135 g
-Sale fino	q.b.
-Santoreggia	4 ciuffi
-Peperoni rossi	1
-Peperoni gialli	1

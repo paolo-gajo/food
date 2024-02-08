@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	500 g
-Latte intero	250 ml
-Burro ammorbidito	25 g
-Zafferano	0,25 g
-Lievito di birra fresco	8 g
-Sale fino	10 g
-Crescenza	200 g
-Zafferano in pistilli	q.b.

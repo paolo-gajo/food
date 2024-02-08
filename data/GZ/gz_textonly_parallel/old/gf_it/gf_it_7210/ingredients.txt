@@ -1,8 +1,0 @@
-ingredient	quantity
-Panettone	80 g
-Culatello	80 g
-Robiola	50 g
-Scorza di limone	1
-Timo	2 rametti
-Olio extravergine d'oliva	10 g
-Pepe nero	1 cucchiaino

@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	150 g
-Cioccolato bianco	80 g
-Zucchero	120 g
-Burro	100 g
-Gocce di cioccolato fondente	50 g
-Uova (circa 2 medie) a temperatura ambiente	110 g
-Zucchero a velo	q.b.

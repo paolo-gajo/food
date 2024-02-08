@@ -1,7 +1,0 @@
-ingredient	quantity
-Basilico	60 g
-Pinoli	40 g
-Pecorino da grattugiare	20 g
-Olio extravergine d'oliva	180 g
-Sale fino	q.b.
-Parmigiano Reggiano DOP da grattugiare	20 g

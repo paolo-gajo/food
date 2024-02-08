@@ -1,6 +1,0 @@
-ingredient	quantity
-Pesche	2
-Banane	2
-Fragole	200 g
-Kiwi	2
-Latte intero	60 ml

@@ -1,9 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino schiacciate croccanti con olio extravergine d'oliva	12
-Tranci di salmone	30 g
-Cipollotto fresco	45 g
-Basilico	2 foglie
-Succo di limone	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	350 g
-Cacao amaro in polvere	50 g
-Zucchero	150 g
-Uova (circa 3 medie)	150 g
-Olio di semi	120 g
-Latte parzialmente scremato	220 g
-Lievito in polvere per dolci	16 g
-Zucchero a velo	q.b.

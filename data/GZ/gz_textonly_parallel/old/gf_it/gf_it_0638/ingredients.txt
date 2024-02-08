@@ -1,9 +1,0 @@
-ingredient	quantity
-Broccoli	600 g
-Parmigiano Reggiano DOP da grattugiare	25 g
-Pepe nero	q.b.
-Latte senza lattosio	500 g
-Farina 00	40 g
-Burro senza lattosio	50 g
-Noce moscata	q.b.
-Sale fino	q.b.

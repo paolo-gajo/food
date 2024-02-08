@@ -1,7 +1,0 @@
-ingredient	quantity
-Riso per minestre (tipo vialone nano)	,250 gr
-Prezzemolo 1grande	ciuffo
-Salvia	2 foglie
-Burro	30 g
-Sale	q.b.
-Brodo	1,5 l

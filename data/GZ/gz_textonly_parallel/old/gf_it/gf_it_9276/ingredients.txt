@@ -1,8 +1,0 @@
-ingredient	quantity
-Pasta fillo	240 g
-Salmone affumicato scozzese	100 g
-Olive nere denocciolate	30 g
-Feta	70 g
-Basilico	2 foglie
-Burro per spennellare	20 g
-Burrata	200 g

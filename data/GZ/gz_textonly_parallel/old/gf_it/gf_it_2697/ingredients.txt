@@ -1,4 +1,0 @@
-ingredient	quantity
-Ricotta di pecora	400 g
-Zucchero	100 g
-Estratto di vaniglia	8 gocce

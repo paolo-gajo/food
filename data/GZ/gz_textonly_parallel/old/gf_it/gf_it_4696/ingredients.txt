@@ -1,5 +1,0 @@
-ingredient	quantity
-Tonno filetto	400 g
-Noci	50 g
-Pistacchi non tostati e non salati	50 g
-Salsa di soia	80 g

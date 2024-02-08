@@ -1,6 +1,0 @@
-ingredient	quantity
-Peperoni rossi	1 kg
-Zucchero	200 g
-Aglio	2 spicchi
-Peperoncino secco	2
-Sale fino	5 g

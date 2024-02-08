@@ -1,9 +1,0 @@
-ingredient	quantity
-Patate	500 g
-Polpo	1,5 kg
-Sale grosso	q.b.
-Cipolle	½
-Prezzemolo da tritare	30 g
-Peperoncino in polvere dolce	q.b.
-Peperoncino in polvere piccante	q.b.
-Olio extravergine d'oliva	q.b.

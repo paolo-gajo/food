@@ -1,6 +1,0 @@
-ingredient	quantity
-Zucchine	770 g
-Farina 00	50 g
-Olio extravergine d'oliva	20 g
-Sale fino	10 g
-Origano (fresco)	1 rametto

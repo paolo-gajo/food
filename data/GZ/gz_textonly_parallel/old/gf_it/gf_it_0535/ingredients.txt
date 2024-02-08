@@ -1,5 +1,0 @@
-ingredient	quantity
-Albumi a temperatura ambiente	150 g
-Zucchero	200 g
-Granella di nocciole	300 g
-Baccello di vaniglia	1

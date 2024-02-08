@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	200 g
-Zucchero	100 g
-Burro (a temperatura ambiente)	100 g
-Latte intero	30 g
-Sale fino	1 pizzico
-Lievito in polvere per dolci	4 g
-Zucchero	20 g

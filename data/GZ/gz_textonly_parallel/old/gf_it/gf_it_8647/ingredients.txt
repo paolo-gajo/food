@@ -1,9 +1,0 @@
-ingredient	quantity
-Acqua a temperatura ambiente	150 g
-Farina 00	250 g
-Lievito di birra fresco	2,5 g
-Semola	50 g
-Lievito di birra fresco	1 g
-Acqua a temperatura ambiente	38 g
-Miele	5 g
-Sale fino	5 g

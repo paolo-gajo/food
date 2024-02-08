@@ -1,9 +1,0 @@
-ingredient	quantity
-Polpo da	1 kg
-Aglio	3 spicchi
-Vino rosso1/	2 litro
-Alloro qualche	foglia
-Peperoncino fresco	1
-Olio di oliva extravergine	6 cucchiai
-Prezzemolo tritato	3 cucchiai
-Sale	q.b.

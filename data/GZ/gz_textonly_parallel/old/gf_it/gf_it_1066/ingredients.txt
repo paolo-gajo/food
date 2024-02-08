@@ -1,9 +1,0 @@
-ingredient	quantity
-Erba cipollina da tritare	1 cucchiaio
-Riso Carnaroli	320 g
-Burro	50 g
-Mirtilli	200 g
-Vino rosso	1 bicchiere
-Brodo vegetale	1 l
-Mirtilli	50 g
-Erba cipollina	q.b.

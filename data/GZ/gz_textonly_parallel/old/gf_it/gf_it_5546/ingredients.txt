@@ -1,7 +1,0 @@
-ingredient	quantity
-Burro	175 g
-Farina	300 g
-Ricotta vaccina	250 g
-Uova	1
-Confettura di ciliegie	q.b.
-Nutella	q.b.

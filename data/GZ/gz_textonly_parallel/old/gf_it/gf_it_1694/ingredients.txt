@@ -1,5 +1,0 @@
-ingredient	quantity
-Farina 00	250 g
-Burro freddo	125 g
-Uova (1 medio)	52 g
-Sale grosso	5 g

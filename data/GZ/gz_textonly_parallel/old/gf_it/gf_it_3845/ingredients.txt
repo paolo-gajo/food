@@ -1,9 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfoglie con olio extravergine di oliva	12
-Cipolle rosse di Tropea piccola	1
-Pomodorini ciliegino	8
-Olio extravergine d'oliva	10 g
-Aceto di vino bianco	1 cucchiaino
-Sale fino	q.b.
-Pepe nero	q.b.
-Menta	q.b.

@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	300 g
-Zucchero	180 g
-Burro	100 g
-Fragole	240 g
-Uova (circa 2 medie)	110 g
-Lievito in polvere per dolci	16 g
-Succo di limone	½

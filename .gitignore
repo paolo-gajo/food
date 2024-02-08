@@ -13,5 +13,5 @@ models/
 # Allow
 !data/EW-TASTE*
 !data/SW-TASTE*
-!data/GZ*
+!data/GZ-GOLD-NER.json
 !data/TASTEset/utils/*

@@ -1,8 +1,0 @@
-ingredient	quantity
-Latte intero	500 g
-Zucchero	200 g
-Cacao amaro in polvere	70 g
-Cioccolato fondente	100 g
-Amido di mais (maizena)	40 g
-Burro	30 g
-Cannella in polvere	2 g

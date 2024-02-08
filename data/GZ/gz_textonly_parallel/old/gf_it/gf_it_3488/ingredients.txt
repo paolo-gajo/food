@@ -1,7 +1,0 @@
-ingredient	quantity
-Carote baby	600 g
-Aceto di mele	300 ml
-Olio extravergine d'oliva	300 ml
-Zucchero	10 g
-Sale fino	3 g
-Maggiorana	8 g

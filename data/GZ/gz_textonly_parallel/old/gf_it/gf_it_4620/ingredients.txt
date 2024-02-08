@@ -1,9 +1,0 @@
-ingredient	quantity
-Strozzapreti	320 g
-Funghi chiodini (freschi)	300 g
-Gorgonzola piccante	300 g
-Olio extravergine d'oliva extravergine	35 ml
-Latte intero	60 ml
-Timo	1 rametto
-Sale fino	q.b.
-Pepe nero	q.b.

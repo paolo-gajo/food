@@ -1,9 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia rotolo	1
-Semi di papavero bianco	3 g
-Semi di papavero nero	3 g
-Grana Padano DOP da grattugiare	50 g
-Uova	1
-Paprika	q.b.
-Sale fino	q.b.
-Latte intero	1 cucchiaio

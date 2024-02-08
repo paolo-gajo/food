@@ -1,6 +1,0 @@
-ingredient	quantity
-Farina 00	160 g
-Burro freddo	110 g
-Grana Padano DOP da grattugiare	100 g
-Uova (circa 1 )	55 g
-Basilico	20 g

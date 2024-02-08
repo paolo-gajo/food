@@ -1,9 +1,0 @@
-ingredient	quantity
-Coniglio in pezzi	1,5 kg
-Pomodori ramati	300 g
-Aglio	1 spicchio
-Olio extravergine d'oliva	50 g
-Vino bianco	60 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Basilico	3 foglie

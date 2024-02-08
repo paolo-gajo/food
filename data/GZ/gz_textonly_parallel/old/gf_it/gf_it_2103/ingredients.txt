@@ -1,7 +1,0 @@
-ingredient	quantity
-Controfiletto di manzo	600 g
-Maionese	q.b.
-Salsa cocktail	q.b.
-Salsa verde	q.b.
-Salsa rossa (salsa rubra)	q.b.
-Olio di semi	500 ml

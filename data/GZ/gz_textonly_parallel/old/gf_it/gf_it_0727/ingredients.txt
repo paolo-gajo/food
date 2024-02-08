@@ -1,5 +1,0 @@
-ingredient	quantity
-Calamari	800 g
-Farina 00	200 g
-Sale fino	q.b.
-Olio di semi di arachide	1 l

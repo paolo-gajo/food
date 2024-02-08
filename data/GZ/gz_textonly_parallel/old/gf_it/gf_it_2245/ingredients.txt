@@ -1,6 +1,0 @@
-ingredient	quantity
-Cicoria	1 kg
-Aglio	2 spicchi
-Peperoncino fresco	1
-Olio extravergine d'oliva	4 cucchiai
-Sale fino	q.b.

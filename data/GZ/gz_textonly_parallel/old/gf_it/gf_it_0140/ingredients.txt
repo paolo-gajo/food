@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	500 g
-Burro a temperatura ambiente	250 g
-Zucchero a velo	200 g
-Uova medie	2
-Lievito in polvere per dolci	8 g
-Scorza di limone non trattato	1
-Sale fino	1 pizzico

@@ -1,7 +1,0 @@
-ingredient	quantity
-Datteri	12
-Zucchero a velo	50 g
-Mascarpone	100 g
-Cannella in polvere	½ cucchiaino
-Gherigli di noci	12
-Rum	1 cucchiaio

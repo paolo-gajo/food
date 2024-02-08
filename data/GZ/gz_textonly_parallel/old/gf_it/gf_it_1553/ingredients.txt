@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	265 g
-Zucchero	135 g
-Uova (circa 2 medie) a temperatura ambiente	110 g
-Caffè a temperatura ambiente	135 g
-Burro morbido	125 g
-Lievito in polvere per dolci	10 g
-Sale fino	1 pizzico
-Bicarbonato	5 g

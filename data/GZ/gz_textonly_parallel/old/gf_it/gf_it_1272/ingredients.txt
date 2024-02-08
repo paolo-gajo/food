@@ -1,6 +1,0 @@
-ingredient	quantity
-Latte intero	600 ml
-Cioccolato fondente	100 g
-Panna fresca liquida	250 g
-Zucchero	250 g
-Baccello di vaniglia	1

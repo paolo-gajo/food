@@ -1,9 +1,0 @@
-ingredient	quantity
-Strutto	35 g
-Farina 0	500 g
-Zucchero	5 g
-Sale fino	15 g
-Acqua circa	125 g
-Latte intero	100 g
-Lievito istantaneo per preparazioni salate	12 g
-Olio di semi	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	370 g
-Farina di mandorle	20 g
-Cacao amaro in polvere	20 g
-Burro (freddo di frigo)	150 g
-Zucchero di canna	120 g
-Uova (1 medio a temperatura ambiente)	55 g
-Lievito in polvere per dolci	3 g
-Panna fresca liquida	100 g

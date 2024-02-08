@@ -1,4 +1,0 @@
-ingredient	quantity
-Rabarbaro	1,3 kg
-Zucchero	400 g
-Limoni	1

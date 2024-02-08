@@ -1,6 +1,0 @@
-ingredient	quantity
-Cioccolato fondente (al 55%)	450 g
-Burro (a temperatura ambiente)	220 g
-Uova ( circa 5 medie a temperatura ambiente)	245 g
-Panna fresca liquida	150 g
-Frutti di bosco	q.b.

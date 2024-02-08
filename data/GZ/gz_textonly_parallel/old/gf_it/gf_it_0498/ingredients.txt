@@ -1,9 +1,0 @@
-ingredient	quantity
-Scalogno	1
-Brodo vegetale	1 l
-Vino bianco secco	100 ml
-Burro	20 g
-Grana Padano DOP da grattugiare	30 g
-Pepe nero	q.b.
-Riso Carnaroli	350 g
-Gorgonzola	150 g

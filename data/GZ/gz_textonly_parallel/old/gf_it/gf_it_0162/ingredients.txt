@@ -1,6 +1,0 @@
-ingredient	quantity
-Spaghetti	320 g
-Aglio	3 spicchi
-Peperoncino fresco	3
-Olio extravergine d'oliva (di ottima qualità)	70 g
-Sale fino	q.b.

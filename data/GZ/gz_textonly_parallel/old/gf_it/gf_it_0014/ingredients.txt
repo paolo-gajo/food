@@ -1,7 +1,0 @@
-ingredient	quantity
-Cioccolato fondente	200 g
-Burro	100 g
-Uova medie	4
-Zucchero	150 g
-Farina 00	50 g
-Zucchero a velo	q.b.

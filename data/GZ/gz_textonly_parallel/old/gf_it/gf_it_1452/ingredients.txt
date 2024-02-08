@@ -1,8 +1,0 @@
-ingredient	quantity
-Pollo intero	1,5 kg
-Sale grosso	20 g
-Peperoncino di Cayenna	4 g
-Salvia	6 foglie
-Rosmarino	3 rametti
-Aglio	1 spicchio
-Olio extravergine d'oliva	q.b.

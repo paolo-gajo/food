@@ -1,9 +1,0 @@
-ingredient	quantity
-Spaghetti Integrali	320 g
-Melanzane	600 g
-Ricotta vaccina	30 g
-Pinoli	20 g
-Menta	8 foglie
-Olio extravergine d'oliva	50 g
-Sale fino	q.b.
-Pepe nero	q.b.

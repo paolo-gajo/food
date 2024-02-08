@@ -1,7 +1,0 @@
-ingredient	quantity
-Farina 1	400 g
-Lievito madre (rinfrescato il giorno prima)	90 g
-Acqua	300 g
-Sale fino	12 g
-Semi di zucca	30 g
-Farina 1	q.b.

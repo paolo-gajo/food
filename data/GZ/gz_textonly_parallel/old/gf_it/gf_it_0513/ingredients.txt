@@ -1,6 +1,0 @@
-ingredient	quantity
-Cozze	1,5 kg
-Aglio	2 spicchi
-Prezzemolo da tritare	1 ciuffo
-Vino bianco	50 ml
-Olio extravergine d'oliva	5 cucchiai

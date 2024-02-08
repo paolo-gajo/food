@@ -1,7 +1,0 @@
-ingredient	quantity
-Savoiardi	300 g
-Uova freschissime (circa 4 medie)	220 g
-Mascarpone	500 g
-Zucchero	100 g
-Caffè della moka già pronto (e zuccherato a piacere)	300 g
-Cacao amaro in polvere per la superficie	q.b.

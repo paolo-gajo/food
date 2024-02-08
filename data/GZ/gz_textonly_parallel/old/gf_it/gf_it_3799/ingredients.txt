@@ -1,7 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfilati rustici al forno con pomodorini	12
-Taleggio	100 g
-Latte intero	200 ml
-Noce moscata	q.b.
-Pepe nero	q.b.
-Sale fino	q.b.

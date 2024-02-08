@@ -1,7 +1,0 @@
-ingredient	quantity
-Patate	1 kg
-Farina 00	1 kg
-Lievito di birra fresco	25 g
-Acqua tiepida	280 g
-Sale fino	12 g
-Olio di semi di girasole	q.b.

@@ -1,4 +1,0 @@
-ingredient	quantity
-Melone giallo invernale	½
-Pancetta affumicata	150 g
-Arachidi salate tostate	50 g

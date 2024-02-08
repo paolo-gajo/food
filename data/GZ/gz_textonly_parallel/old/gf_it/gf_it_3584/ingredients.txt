@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucca violina (da pulire)	600 g
-Acqua	200 g
-Timo	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Gamberi rossi	12
-Succo d'arancia	1
-Olio extravergine d'oliva	q.b.

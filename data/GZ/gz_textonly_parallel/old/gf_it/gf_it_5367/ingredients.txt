@@ -1,9 +1,0 @@
-ingredient	quantity
-Patate	300 g
-Zucchine	200 g
-Scamorza affumicata	150 g
-Aglio	1 spicchio
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Origano	q.b.
-Burro fuso	q.b.

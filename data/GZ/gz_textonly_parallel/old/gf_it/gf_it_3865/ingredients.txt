@@ -1,8 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfoglie alle olive	12
-Cipolline sott'aceto	24
-Zucchero	30 g
-Raspadura	20 g
-Burro	20 g
-Salsa di soia	3 g
-Erba cipollina	q.b.

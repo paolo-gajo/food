@@ -1,9 +1,0 @@
-ingredient	quantity
-Pollo intero	1 kg
-Sale grosso	50 g
-Aglio	2 spicchi
-Salvia	5 foglie
-Alloro	2 foglie
-Rosmarino	2 rametti
-Origano	1 rametto
-Olio extravergine d'oliva	q.b.

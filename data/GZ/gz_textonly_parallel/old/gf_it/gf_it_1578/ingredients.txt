@@ -1,9 +1,0 @@
-ingredient	quantity
-Astice	1,2 kg
-Pomodorini ciliegino	250 g
-Cipolle rosse	1
-Succo di limone di	mezzo
-Olio extravergine d'oliva	150 g
-Aceto di vino bianco	1 cucchiaio
-Sale fino	q.b.
-Pepe nero	q.b.

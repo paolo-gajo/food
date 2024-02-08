@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucchero di canna	50 g
-Farina di nocciole	50 g
-Zenzero fresco	50 g
-Burro a temperatura ambiente	125 g
-Zucchero	65 g
-Tuorli	1
-Scorza di limone	1
-Farina 00	310 g

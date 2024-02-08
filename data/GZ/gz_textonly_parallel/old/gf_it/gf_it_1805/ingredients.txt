@@ -1,4 +1,0 @@
-ingredient	quantity
-Baccalà dissalato	650 g
-Farina 00	30 g
-Olio di semi	500 ml

@@ -1,6 +1,0 @@
-ingredient	quantity
-Spaghetti	0.7 lb	(320 g)
-Guanciale	5 oz	(150 g)
-Egg yolks	6	-average size
-Pecorino Romano cheese	½ cup	(50 g)
-Black pepper	to taste

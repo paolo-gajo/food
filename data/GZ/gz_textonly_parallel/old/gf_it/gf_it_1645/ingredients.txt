@@ -1,6 +1,0 @@
-ingredient	quantity
-Melone	1 kg
-Panna fresca liquida	200 g
-Latte intero	180 g
-Zucchero	100 g
-Uova	2

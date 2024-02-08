@@ -1,8 +1,0 @@
-ingredient	quantity
-Yogurt ai mirtilli rossi	250 g
-Farina 00	250 g
-Zucchero di canna	125 g
-Uova intere	3
-Burro	90 g
-Lievito in polvere per dolci	8 g
-Mirtilli rossi disidratati	100 g

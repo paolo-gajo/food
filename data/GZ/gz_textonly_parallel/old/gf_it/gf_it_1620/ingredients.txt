@@ -1,7 +1,0 @@
-ingredient	quantity
-Burro a temperatura ambiente	230 g
-Farina 00	320 g
-Zucchero	100 g
-Estratto di vaniglia	1 cucchiaino
-Sale fino	1 pizzico
-Zucchero	q.b.

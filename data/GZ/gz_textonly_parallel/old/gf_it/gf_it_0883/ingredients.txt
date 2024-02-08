@@ -1,8 +1,0 @@
-ingredient	quantity
-Latte intero	500 ml
-Zucchero	160 g
-Panna fresca liquida	150 ml
-Cacao amaro in polvere	50 g
-Tuorli (circa 6 tuorli)	120 g
-Glucosio	15 g
-Farina di semi di carrube	5 g

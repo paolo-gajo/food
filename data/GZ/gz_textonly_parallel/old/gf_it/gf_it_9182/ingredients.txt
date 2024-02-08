@@ -1,8 +1,0 @@
-ingredient	quantity
-Cosce di pollo	6
-Paprika dolce	10 g
-Paprika piccante	5 g
-Vino bianco	60 g
-Olio extravergine d'oliva	40 g
-Sale fino	30 g
-Pepe nero	q.b.

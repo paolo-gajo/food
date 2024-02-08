@@ -1,8 +1,0 @@
-ingredient	quantity
-Acqua a temperatura ambiente	133 g
-Farina 00	250 g
-Olio extravergine d'oliva	35 g
-Sale fino	6 g
-Patate	400 g
-Pancetta dolce	100 g
-Provola affumicata	110 g

@@ -1,9 +1,0 @@
-ingredient	quantity
-Petto di tacchino pezzo unico	500 g
-Pancetta affumicata	40 fette
-Salvia	30 foglie
-Senape forte	50 g
-Vino rosso	30 ml
-Burro	20 g
-Olio extravergine d'oliva	q.b.
-Sale fino (se necessario)	q.b.

@@ -1,8 +1,0 @@
-ingredient	quantity
-Finocchi	1,3 kg
-Pasta Sfoglia (1 rotolo rotondo)	230 g
-Burro	50 g
-Parmigiano Reggiano DOP	30 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Burro per la teglia	q.b.

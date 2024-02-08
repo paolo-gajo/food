@@ -1,7 +1,0 @@
-ingredient	quantity
-Manzo (taglio per roast-beef)	650 g
-Sale grosso grosso	2 kg
-Rosmarino	5 g
-Alloro	5 g
-Timo	5 g
-Acqua	30 g

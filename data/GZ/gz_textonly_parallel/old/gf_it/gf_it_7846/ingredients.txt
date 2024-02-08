@@ -1,7 +1,0 @@
-ingredient	quantity
-Albumi	150 g
-Zucchero	300 g
-Baccello di vaniglia	1
-Panna fresca liquida	250 ml
-Zucchero a velo	q.b.
-Frutti di bosco	q.b.

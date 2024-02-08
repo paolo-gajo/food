@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucchero	60 g
-Farina 00	500 g
-Acqua tiepida	500 g
-Lievito di birra secco	3 g
-Sale fino	2 g
-Uva sultanina	100 g
-Olio di semi	800 g
-Zucchero	150 g

@@ -1,9 +1,0 @@
-ingredient	quantity
-Burro	125 g
-Zucchero	125 g
-Farina di mandorle	125 g
-Farina 00	125 g
-Sale fino	1 pizzico
-Limoni (succo e scorza)	1
-Fragole	400 g
-Zucchero	200 g

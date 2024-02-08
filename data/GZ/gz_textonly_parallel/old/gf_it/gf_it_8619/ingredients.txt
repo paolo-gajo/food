@@ -1,9 +1,0 @@
-ingredient	quantity
-Burro	160 g
-Farina 00	100 g
-Farina Manitoba	75 g
-Acqua a temperatura ambiente	125 ml
-Sale fino	4 g
-Panna fresca liquida	500 ml
-Zucchero	160 g
-Tuorli	9

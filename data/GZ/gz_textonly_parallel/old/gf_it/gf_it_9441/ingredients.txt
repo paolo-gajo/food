@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	200 g
-Burro	100 g
-Acqua ghiacciata	70
-Cipolle rosse piccole	6
-Scalogno	5
-Zucchero di canna	1 cucchiaino
-Burro	15 g

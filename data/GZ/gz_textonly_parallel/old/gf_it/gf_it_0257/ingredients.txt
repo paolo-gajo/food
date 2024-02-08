@@ -1,9 +1,0 @@
-ingredient	quantity
-Luganega	500 g
-Patate	500 g
-Olio extravergine d'oliva	50 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Pomodori pelati tipo San Marzano	150 g
-Origano	q.b.
-Rosmarino	q.b.

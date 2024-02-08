@@ -1,8 +1,0 @@
-ingredient	quantity
-Penne Rigate	320 g
-Asparagi freschi	700 g
-Pepe nero	q.b.
-Sale fino	q.b.
-Parmigiano Reggiano DOP da grattugiare	20 g
-Scalogno	80 g
-Timo	3 g

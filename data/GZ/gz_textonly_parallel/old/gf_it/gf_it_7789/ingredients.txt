@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova	6
-Ravanelli	6
-Olive nere denocciolate	10
-Maionese	25 g
-Ketchup	15 g
-Rosmarino	2 rametti
-Erba cipollina	q.b.
-Insalata	q.b.

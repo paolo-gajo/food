@@ -1,7 +1,0 @@
-ingredient	quantity
-Zucchine tonde	200 g
-Scamorza (provola)	150 g
-Pasta Sfoglia (rettangolare)	230 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Albumi	1

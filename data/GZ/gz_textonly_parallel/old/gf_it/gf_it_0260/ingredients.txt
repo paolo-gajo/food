@@ -1,9 +1,0 @@
-ingredient	quantity
-Farfalle	320 g
-Zucchine	200 g
-Tuorli (freschissimi)	5
-Pecorino (da grattugiare)	100 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Pecorino in scaglie	q.b.

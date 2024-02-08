@@ -1,5 +1,0 @@
-ingredient	quantity
-Yogurt	250 g
-Succo di lime (circa 1)	13 g
-Melone polpa	420
-Pesche polpa	350 g

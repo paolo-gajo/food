@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	230 g
-Zucchero	180 g
-Uova (circa 3 medie)	180 g
-Latte intero	100 g
-Burro	50 g
-Yogurt	230 g
-Lievito in polvere per dolci	16 g

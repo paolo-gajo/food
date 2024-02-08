@@ -1,7 +1,0 @@
-ingredient	quantity
-Avena	250 g
-Pistacchi sgusciati	30 g
-Cranberry (mirtilli rossi disidratati)	25 g
-Miele	150 g
-Cioccolato bianco	250 g
-Olio di sesamo	8 g

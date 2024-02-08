@@ -1,4 +1,0 @@
-ingredient	quantity
-Sfoglie croccanti al forno	12
-Peperoncino verde piccante	1
-Groviera	60 g

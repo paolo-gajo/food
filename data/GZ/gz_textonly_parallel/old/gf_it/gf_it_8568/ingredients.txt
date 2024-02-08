@@ -1,6 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia rettangolare	320 g
-Mele Granny Smith	2
-Confettura di pesche	70 g
-Tuorli	1
-Acqua	30 g

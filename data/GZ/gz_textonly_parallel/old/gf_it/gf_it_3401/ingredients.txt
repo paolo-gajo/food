@@ -1,6 +1,0 @@
-ingredient	quantity
-Albicocche	1 kg
-Zucchero integrale di canna	250 g
-Cipollotti rossi	150 g
-Aceto di riso	50 g
-Peperoncini Jalapeno	1

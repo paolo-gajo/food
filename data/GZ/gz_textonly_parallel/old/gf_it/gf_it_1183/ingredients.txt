@@ -1,6 +1,0 @@
-ingredient	quantity
-Melone	1,2 kg
-Ananas	2 kg
-Mango	600 g
-Fragole	500 g
-More	500 g

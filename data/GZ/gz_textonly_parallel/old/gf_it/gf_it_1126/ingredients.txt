@@ -1,5 +1,0 @@
-ingredient	quantity
-Latte intero	500 ml
-Tuorli	100 g
-Zucchero	175 g
-Baccello di vaniglia	1

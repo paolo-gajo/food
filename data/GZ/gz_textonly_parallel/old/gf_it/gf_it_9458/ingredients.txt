@@ -1,9 +1,0 @@
-ingredient	quantity
-Semola di grano duro rimacinata	100 g
-Farina 00	150 g
-Acqua a temperatura ambiente	150 g
-Lievito di birra secco (se fresco 7 grammi)	2 g
-Olio extravergine d'oliva	15 g
-Pecorino romano	25 g
-Pepe nero in grani	1,5 g
-Sale fino	3 g

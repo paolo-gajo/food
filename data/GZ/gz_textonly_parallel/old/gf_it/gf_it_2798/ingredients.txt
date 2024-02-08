@@ -1,6 +1,0 @@
-ingredient	quantity
-Piadine	4
-Prosciutto crudo	250 g
-Brie	200 g
-Insalata	100 g
-Salsa cocktail	80 g

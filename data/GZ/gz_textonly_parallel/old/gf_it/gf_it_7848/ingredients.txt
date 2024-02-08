@@ -1,8 +1,0 @@
-ingredient	quantity
-Albicocche	6
-Pasta Sfoglia tonda	230 g
-Scamorza (provola)	30 g
-Tuorli	1
-Latte intero	10 g
-Semi di lino	1 cucchiaino
-Pepe rosa in grani	1 cucchiaino

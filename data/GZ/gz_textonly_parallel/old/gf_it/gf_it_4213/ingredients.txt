@@ -1,8 +1,0 @@
-ingredient	quantity
-Porri	250 g
-Patate	750 g
-Panna fresca liquida	200 g
-Brodo di carne	500 ml
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	3 cucchiai

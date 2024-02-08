@@ -1,6 +1,0 @@
-ingredient	quantity
-Farina di ceci	300 g
-Acqua	1 l
-Sale fino	5 g
-Pepe nero	q.b.
-Olio di semi di arachide per friggere	700 g

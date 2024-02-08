@@ -1,5 +1,0 @@
-ingredient	quantity
-Spaghetti	320 g
-Pepe nero in grani	q.b.
-Pecorino romano stagionatura media, da grattugiare	200 g
-Sale fino	q.b.

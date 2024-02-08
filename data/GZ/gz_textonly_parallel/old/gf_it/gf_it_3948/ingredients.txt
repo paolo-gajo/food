@@ -1,8 +1,0 @@
-ingredient	quantity
-Trofie	320 g
-Zucchine	650 g
-Pancetta affumicata	100 g
-Aglio	1 spicchio
-Olio extravergine d'oliva	60 g
-Sale fino	q.b.
-Pepe nero	q.b.

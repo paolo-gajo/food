@@ -1,8 +1,0 @@
-ingredient	quantity
-Penne Rigate	320 g
-Zafferano	1 bustina
-Grana Padano DOP da grattugiare	100 g
-Pancetta affumicata	150 g
-Panna fresca liquida	180 ml
-Pepe nero	q.b.
-Sale fino	q.b.

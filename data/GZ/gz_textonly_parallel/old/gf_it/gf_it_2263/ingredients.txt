@@ -1,8 +1,0 @@
-ingredient	quantity
-Lonza di maiale	800 g
-Rosmarino	1 rametto
-Sale fino	q.b.
-Succo di limone	350 ml
-Olio extravergine d'oliva	70 ml
-Pepe nero	q.b.
-Origano	q.b.

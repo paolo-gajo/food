@@ -1,7 +1,0 @@
-ingredient	quantity
-Yogurt magro bianco	125 g
-Farina 00	150 g
-Latte intero	200 g
-Uova (1 medio)	58 g
-Lievito in polvere per dolci	8 g
-Olio extravergine d'oliva per ungere la padella, facoltativo	q.b.

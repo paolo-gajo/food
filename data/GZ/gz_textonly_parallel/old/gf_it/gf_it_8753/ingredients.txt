@@ -1,8 +1,0 @@
-ingredient	quantity
-Mele Evelina	310 g
-Farina 00	300 g
-Yogurt greco	150 g
-Zucchero	120 g
-Uova (circa 4)	220 g
-Lievito in polvere per dolci	16 g
-Scorza di limone	1

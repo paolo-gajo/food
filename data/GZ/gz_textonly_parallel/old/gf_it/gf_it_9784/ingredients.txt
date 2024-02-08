@@ -1,9 +1,0 @@
-ingredient	quantity
-Merluzzo	300 g
-Zucca	150 g
-Porri	2 foglie
-Timo	q.b.
-Aneto	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	40 g

@@ -1,5 +1,0 @@
-ingredient	quantity
-Eggs	3	-medium
-Flour 00	2 cups	(250 g)
-Whole milk	2 cups	(500 ml)
-Butter	to taste	-to grease the crepe pan

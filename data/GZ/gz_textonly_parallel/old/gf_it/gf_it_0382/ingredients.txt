@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	300 g
-Uova (circa 4)	190 g
-Zucchero	170 g
-Yogurt greco	220 g
-Sale fino	1 pizzico
-Lievito in polvere per dolci	16 g
-Burro morbido	130 g
-Scorza di limone	1

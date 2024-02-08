@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina di grano saraceno	250 g
-Zucchero	150 g
-Uova	3
-Olio di semi di girasole	70 g
-Latte intero	50 g
-Lievito in polvere per dolci	1 bustina
-Gocce di cioccolato fondente	70 g

@@ -1,7 +1,0 @@
-ingredient	quantity
-Sfilati al pomodoro al forno	12
-Tonno sott'olio	100 g
-Formaggio fresco spalmabile	100 g
-Panna fresca liquida	2 cucchiai
-Aceto di vino bianco	1 cucchiaio
-Capperi	q.b.

@@ -1,7 +1,0 @@
-ingredient	quantity
-Farina 00	500 g
-Yogurt bianco naturale	250 g
-Acqua	100 g
-Sale fino	7 g
-Lievito di birra fresco	2 g
-Olio extravergine d'oliva	20 g

@@ -1,9 +1,0 @@
-ingredient	quantity
-Latte di mandorle	200 g
-Zucchero	200 g
-Farina 00	250 g
-Olio di semi	100 g
-Scorza di limone	1
-Lievito in polvere per dolci	6 g
-Zucchero a velo	q.b.
-Mandorle in scaglie	10 g

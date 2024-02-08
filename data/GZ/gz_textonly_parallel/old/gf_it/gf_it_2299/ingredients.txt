@@ -1,8 +1,0 @@
-ingredient	quantity
-Fiocchi di avena	140 g
-Latte intero	200 g
-Acqua	220 g
-Sale fino	1 pizzico
-Sciroppo di agave	70 g
-Mirtilli	30 g
-Pistacchi	20 g

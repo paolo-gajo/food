@@ -1,4 +1,0 @@
-ingredient	quantity
-Carciofi mammole	4
-Olio di semi per friggere	q.b.
-Sale fino	q.b.

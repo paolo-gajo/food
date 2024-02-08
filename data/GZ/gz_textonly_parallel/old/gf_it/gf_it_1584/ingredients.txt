@@ -1,6 +1,0 @@
-ingredient	quantity
-Burro chiarificato	100 g
-Tuorli	4
-Pepe bianco	q.b.
-Succo di limone	20 g
-Sale fino	q.b.

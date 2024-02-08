@@ -1,5 +1,0 @@
-ingredient	quantity
-Caffè espresso	100 g
-Zucchero di canna liquido	50 g
-Ghiaccio	200 g
-Ghiaccio	50 g

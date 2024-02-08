@@ -1,8 +1,0 @@
-ingredient	quantity
-Tuorli a temperatura ambiente	125 g
-Zucchero	185 g
-Albumi a temperatura ambiente	190 g
-Farina 00 (con W minore di 200)	150 g
-Fecola di patate	65 g
-Zucchero a velo	50 g
-Amido di mais (maizena)	5 g

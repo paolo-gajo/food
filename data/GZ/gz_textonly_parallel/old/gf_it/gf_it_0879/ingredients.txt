@@ -1,7 +1,0 @@
-ingredient	quantity
-Limoni	3
-Uova	3
-Tuorli	2
-Zucchero	220 g
-Burro	100 g
-Amido di mais (maizena)	30 g

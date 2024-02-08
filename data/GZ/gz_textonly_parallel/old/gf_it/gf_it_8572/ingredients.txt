@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	50 g
-Acqua	50 g
-Lievito di birra fresco	3 g
-Semola	300 g
-Farina 00	310 g
-Acqua	330 g
-Sale fino	10 g

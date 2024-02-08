@@ -1,6 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia rettangolare	230 g
-Confettura di lamponi	80 g
-Farina 00	q.b.
-Acqua	q.b.
-Tuorli	1

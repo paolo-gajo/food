@@ -1,8 +1,0 @@
-ingredient	quantity
-Feta	200 g
-Pomodori ramati	2
-Cipolle rosse	1
-Olive nere denocciolate	20 g
-Origano secco	q.b.
-Olio extravergine d'oliva	20 g
-Sale fino	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia (rettangolare)	250 g
-Tuorli	1
-Panna fresca liquida	10 g
-Salmone affumicato scozzese	100 g
-Robiola	200 g
-Aneto	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

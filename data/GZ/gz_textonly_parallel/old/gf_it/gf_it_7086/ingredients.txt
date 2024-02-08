@@ -1,7 +1,0 @@
-ingredient	quantity
-Patate americane	300 g
-Pesce spada affumicato a fette	80 g
-Stracchino	20 g
-Scorza di lime	1
-Pepe nero	q.b.
-Olio extravergine d'oliva	q.b.

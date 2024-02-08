@@ -1,6 +1,0 @@
-ingredient	quantity
-Zucca	550 g
-Patate	750 g
-Rosmarino	1 rametto
-Sale fino	q.b.
-Olio extravergine d'oliva	q.b.

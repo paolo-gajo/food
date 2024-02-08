@@ -1,4 +1,0 @@
-ingredient	quantity
-Zucchero a velo	100 g
-Acqua	q.b.
-Coloranti alimentari idrosolubili	q.b.

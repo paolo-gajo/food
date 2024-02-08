@@ -1,9 +1,0 @@
-ingredient	quantity
-Noci	160 g
-Olio extravergine d'oliva	70 g
-Aglio	1 spicchio
-Pinoli	20 g
-Parmigiano Reggiano DOP da grattugiare	30 g
-Latte intero	160 g
-Maggiorana	4 g
-Pane mollica	30 g

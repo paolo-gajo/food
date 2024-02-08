@@ -1,8 +1,0 @@
-ingredient	quantity
-Latte intero	330 g
-Panna fresca liquida	170 g
-Tuorli (circa 8)	140 g
-Baccello di vaniglia	1
-Scorza di limone non trattata	1
-Zucchero	100 g
-Sale fino	1 pizzico

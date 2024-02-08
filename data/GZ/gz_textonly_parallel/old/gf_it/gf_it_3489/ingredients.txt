@@ -1,8 +1,0 @@
-ingredient	quantity
-Pane integrale pagnotta	1
-Peperoni gialli	½
-Prosciutto cotto di praga	120 g
-Fontina	60 g
-Erba cipollina steli	2
-Pomodori secchi	4
-Burro	10 g

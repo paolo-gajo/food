@@ -1,8 +1,0 @@
-ingredient	quantity
-Cavoletti di Bruxelles	500 g
-Speck	120 g
-Scalogno	40 g
-Olio extravergine d'oliva	50 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Brodo vegetale	250 g

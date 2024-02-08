@@ -1,9 +1,0 @@
-ingredient	quantity
-Cioccolato fondente	120 g
-Tuorli	6
-Zucchero	100 g
-Mascarpone	400 g
-Savoiardi	16
-Caffè	300 g
-Zucchero	20 g
-Cacao amaro in polvere	q.b.

@@ -1,4 +1,0 @@
-ingredient	quantity
-Ciliegie	2 kg
-Zucchero (per 1 litro di acqua)	200 g
-Acqua	1 l

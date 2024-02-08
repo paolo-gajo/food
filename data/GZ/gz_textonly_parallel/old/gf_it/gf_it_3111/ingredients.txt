@@ -1,8 +1,0 @@
-ingredient	quantity
-Skuta	600 g
-Pasta fillo rettangolare	350 g
-Yogurt greco	125 g
-Uova medie	3
-Olio extravergine d'oliva	150 ml
-Sale fino	q.b.
-Uova	1

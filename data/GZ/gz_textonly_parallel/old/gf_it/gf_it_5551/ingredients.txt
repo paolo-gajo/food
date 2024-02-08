@@ -1,3 +1,0 @@
-ingredient	quantity
-Castagne	12
-Bacon	12 fette

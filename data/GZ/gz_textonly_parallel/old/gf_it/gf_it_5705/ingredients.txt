@@ -1,5 +1,0 @@
-ingredient	quantity
-Datteri freschi al naturale	8
-Ricotta di bufala	50 g
-Panna fresca liquida	250 ml
-Zucchero	4 cucchiaini

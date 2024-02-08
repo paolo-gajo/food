@@ -1,9 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfoglie classiche	12
-Spinaci	80 g
-Uvetta	15 g
-Pinoli	5 g
-Aglio	1 spicchio
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	q.b.

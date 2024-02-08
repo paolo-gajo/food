@@ -1,8 +1,0 @@
-ingredient	quantity
-Zucchine	400 g
-Provola affumicata	130 g
-Salame napoletano (14 fette)	70 g
-Uova	2
-Sale fino	q.b.
-Pepe nero	q.b.
-Farina 00	q.b.

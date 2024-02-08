@@ -1,8 +1,0 @@
-ingredient	quantity
-Ceci secchi	350 g
-Carote	2
-Sedano	2 coste
-Rosmarino	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Lenticchie secche umbre	200 g
-Pancetta affumicata	100 g
-Carote	100 g
-Cavoletti di Bruxelles	200 g
-Songino	100 g
-Olio extravergine d'oliva	50 g
-Sale fino	q.b.
-Pepe nero	q.b.

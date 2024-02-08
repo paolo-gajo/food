@@ -1,9 +1,0 @@
-ingredient	quantity
-Burro a temperatura ambiente	120 g
-Zucchero	120 g
-Farina 00	100 g
-Tè verde Matcha	20 g
-Uova (2 medie)	110 g
-Lievito in polvere per dolci	8 g
-Burro	10 g
-Farina 00	20 g

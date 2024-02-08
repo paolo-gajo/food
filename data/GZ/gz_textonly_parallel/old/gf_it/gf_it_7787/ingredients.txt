@@ -1,7 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino schiacciate	12
-Mortadella a fette	100 g
-Formaggio fresco spalmabile	70 g
-Panna fresca liquida	60 g
-Granella di pistacchi salati	10 g
-Pepe nero	q.b.

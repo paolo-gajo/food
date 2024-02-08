@@ -1,4 +1,0 @@
-ingredient	quantity
-Tuorli	90 g
-Zucchero	25 g
-Vin santo	75 g

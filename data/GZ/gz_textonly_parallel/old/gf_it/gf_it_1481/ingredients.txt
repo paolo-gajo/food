@@ -1,9 +1,0 @@
-ingredient	quantity
-Riso vialone nano	320 g
-Vino rosso Amarone della Valpolicella	350 ml
-Monte Veronese da grattugiare	60 g
-Scalogno	50 g
-Burro	60 g
-Midollo di bue	60 g
-Brodo di carne	1 l
-Sale fino	q.b.

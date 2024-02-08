@@ -1,5 +1,0 @@
-ingredient	quantity
-Uova medie	3
-Farina 00	250 g
-Latte intero	500 ml
-Burro per ungere la crepiera	q.b.

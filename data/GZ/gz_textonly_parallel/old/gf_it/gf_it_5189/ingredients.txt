@@ -1,7 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia	460 g
-Mele Fuji	2
-Confettura di albicocche	100 g
-Zucchero a velo per spolverizzare	q.b.
-Zucchero di canna	q.b.
-Burro morbido	q.b.

@@ -1,5 +1,0 @@
-ingredient	quantity
-Farina 00	350 g
-Acqua	175 g
-Olio extravergine d'oliva	35 g
-Sale fino	1 pizzico

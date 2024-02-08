@@ -1,8 +1,0 @@
-ingredient	quantity
-Lievito di birra secco	1 g
-Acqua	450 g
-Sale fino	15 g
-Farina 00	600 g
-Malto ( o  zucchero)	1 cucchiaino
-Farina di mais	q.b.
-Olio extravergine d'oliva	q.b.

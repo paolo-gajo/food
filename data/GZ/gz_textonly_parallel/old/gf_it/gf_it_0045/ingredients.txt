@@ -1,9 +1,0 @@
-ingredient	quantity
-Mezze Penne Rigate Integrali	320 g
-Prosciutto cotto a fette	100 g
-Panna fresca liquida	300 g
-Passata di pomodoro	25 g
-Prezzemolo	q.b.
-Sale fino	q.b.
-Olio extravergine d'oliva	q.b.
-Pepe nero	q.b.

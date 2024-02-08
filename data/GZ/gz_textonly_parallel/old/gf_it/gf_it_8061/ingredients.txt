@@ -1,8 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino schiacciate	12
-Patate piccole	150 g
-Fontina	72 g
-Rosmarino	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	q.b.

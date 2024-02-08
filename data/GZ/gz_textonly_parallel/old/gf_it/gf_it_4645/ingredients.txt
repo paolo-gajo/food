@@ -1,7 +1,0 @@
-ingredient	quantity
-Mozzarella (e la sua acqua di conservazione)	600 g
-Prosciutto crudo	90 g
-Pomodori ramati	200 g
-Rucola	20 g
-Acqua	100 g
-Sale fino	q.b.

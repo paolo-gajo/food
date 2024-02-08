@@ -1,9 +1,0 @@
-ingredient	quantity
-Spaghetti	320 g
-Melanzane tonde	4
-Pomodori pelati	500 g
-Ricotta salata	200 g
-Aglio	2 spicchi
-Basilico	12 foglie
-Sale fino	q.b.
-Olio extravergine d'oliva	q.b.

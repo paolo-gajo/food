@@ -1,9 +1,0 @@
-ingredient	quantity
-Vongole veraci	1 kg
-Spaghetti	320 g
-Nduja	40 g
-Aglio	1 spicchio
-Prezzemolo	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	q.b.

@@ -1,6 +1,0 @@
-ingredient	quantity
-Mandorle pelate	300 g
-Latte intero	400 g
-Panna fresca liquida	200 g
-Zucchero	150 g
-Gelatina in fogli	6 g

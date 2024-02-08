@@ -1,5 +1,0 @@
-ingredient	quantity
-Cioccolato bianco	235 g
-Gelatina in fogli	5 g
-Latte intero	125 g
-Panna fresca liquida	250 g

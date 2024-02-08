@@ -1,8 +1,0 @@
-ingredient	quantity
-Schiacciate al forno	8
-Mozzarella di bufala	300 g
-Pomodori San Marzano	3
-Olio extravergine d'oliva	2 cucchiai
-Basilico	16 foglie
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	200 g
-Fecola di patate	50 g
-Burro morbido	130 g
-Zucchero a velo	100 g
-Tuorli cotti (circa 5)	70 g
-Cioccolato fondente al 70%	20 g
-Zucchero a velo	q.b.

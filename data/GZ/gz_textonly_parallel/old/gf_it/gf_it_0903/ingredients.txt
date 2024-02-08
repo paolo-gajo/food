@@ -1,5 +1,0 @@
-ingredient	quantity
-Basilico	50 g
-Alcol puro gradazione 90°	250 ml
-Acqua	150 g
-Zucchero	200 g

@@ -1,9 +1,0 @@
-ingredient	quantity
-Olio extravergine d'oliva	130 g
-Farina 00	350 g
-Zucchero	180 g
-Uova (medie)	4
-Latte intero	50 g
-Lievito in polvere per dolci	16 g
-Sale fino	1 pizzico
-Scorza d'arancia	1

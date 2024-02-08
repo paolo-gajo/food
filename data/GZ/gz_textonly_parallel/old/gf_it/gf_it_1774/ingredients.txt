@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucchine	370 g
-Farina 00	250 g
-Birra fredda	155 g
-Acqua fredda	155 g
-Grana Padano DOP	50 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio di semi di arachide	300 g

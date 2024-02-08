@@ -1,4 +1,0 @@
-ingredient	quantity
-Spinaci	60 g
-Farina 00	300 g
-Uova medie	3

@@ -1,7 +1,0 @@
-ingredient	quantity
-Zucchine	800 g
-Aglio	2 spicchi
-Prezzemolo da tritare	2 cucchiai
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	40 g

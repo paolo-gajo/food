@@ -1,9 +1,0 @@
-ingredient	quantity
-Tagliatelle Senza Glutine	300 g
-Zucca da pulire	700 g
-Funghi champignon (qualità crema)	250 g
-Aglio	2 spicchi
-Olio extravergine d'oliva	2 cucchiai
-Rosmarino	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,8 +1,0 @@
-ingredient	quantity
-Spaghetti	320 g
-Sugo di pomodoro	300 g
-Aglio	1 spicchio
-Peperoncino secco	1
-Olio extravergine d'oliva	25 g
-Acqua calda e salata	q.b.
-Basilico	q.b.

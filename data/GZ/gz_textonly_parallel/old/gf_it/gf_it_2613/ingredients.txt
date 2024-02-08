@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina di grano saraceno	250 g
-Farina 00	250 g
-Acqua	300 ml
-Sale fino	1 pizzico
-Fontina	200 g
-Pepe nero	q.b.
-Sale fino	q.b.
-Latte intero	200 g

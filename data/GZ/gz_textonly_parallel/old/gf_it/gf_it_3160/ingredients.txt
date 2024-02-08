@@ -1,9 +1,0 @@
-ingredient	quantity
-Acciughe (alici)	600 g
-Patate	350 g
-Pomodori ramati	150 g
-Olio di oliva extravergine	30 g
-Timo	2 g
-Scorza di limone	1
-Sale fino	q.b.
-Pepe nero	q.b.

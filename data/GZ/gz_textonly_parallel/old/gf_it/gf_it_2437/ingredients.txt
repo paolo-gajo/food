@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	250 g
-Gocce di cioccolato fondente	115 g
-Latte di mandorle	100 g
-Burro a temperatura ambiente	130 g
-Zucchero	110 g
-Uova (circa 3 medie)	150 g
-Lievito in polvere per dolci	10 g
-Vanillina	1 bustina

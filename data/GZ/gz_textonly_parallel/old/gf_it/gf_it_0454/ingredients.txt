@@ -1,9 +1,0 @@
-ingredient	quantity
-Acqua	280 ml
-Lievito di birra fresco	15 g
-Sale fino	8 g
-Olio extravergine d'oliva	50 g
-Malto d'orzo	1 cucchiaino
-Semola	1 cucchiaio
-Farina 00	500 g
-Olio extravergine d'oliva	q.b.

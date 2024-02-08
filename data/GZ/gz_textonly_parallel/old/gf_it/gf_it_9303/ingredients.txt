@@ -1,8 +1,0 @@
-ingredient	quantity
-Salmone affumicato	250 g
-Ricotta vaccina	100 g
-Uova	4
-Pane	4 fette
-Aneto	q.b.
-Olio extravergine d'oliva	q.b.
-Pepe nero	q.b.

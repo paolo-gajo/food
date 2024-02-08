@@ -1,8 +1,0 @@
-ingredient	quantity
-Latte intero	800 g
-Amido di mais (maizena)	200 g
-Zucchero	150 g
-Scorza di limone	1
-Uova	4
-Pangrattato	200 g
-Olio di semi di arachide	q.b.

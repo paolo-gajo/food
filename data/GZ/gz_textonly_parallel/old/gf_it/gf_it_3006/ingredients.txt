@@ -1,7 +1,0 @@
-ingredient	quantity
-Vongole veraci	1,2 kg
-Prezzemolo da tritare	1 ciuffo
-Vino bianco	100 ml
-Olio extravergine d'oliva	4 cucchiai
-Sale fino	q.b.
-Aglio	2 spicchi

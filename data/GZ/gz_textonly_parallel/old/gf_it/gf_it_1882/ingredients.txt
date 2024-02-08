@@ -1,4 +1,0 @@
-ingredient	quantity
-Acqua	750 ml
-Zucchero	300 g
-Menta	100 g

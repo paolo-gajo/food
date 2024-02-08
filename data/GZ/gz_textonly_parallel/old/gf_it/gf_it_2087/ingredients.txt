@@ -1,7 +1,0 @@
-ingredient	quantity
-Merluzzo	500 g
-Farina 00	2 cucchiai
-Uova	2
-Sale fino	q.b.
-Pangrattato	150 g
-Olio di semi	q.b.

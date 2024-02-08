@@ -1,5 +1,0 @@
-ingredient	quantity
-Nutella	300 g
-Latte intero	300 g
-Panna fresca liquida	300 g
-Alcol puro a 95°	150 g

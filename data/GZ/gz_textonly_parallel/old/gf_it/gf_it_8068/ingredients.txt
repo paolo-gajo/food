@@ -1,7 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia rotolo rettangolare integrale da 230 g	1
-Uova	2
-Cannella in polvere	1 cucchiaino
-Cardamomo in polvere	1 cucchiaino
-Granella di zucchero	q.b.
-Farina 00	q.b.

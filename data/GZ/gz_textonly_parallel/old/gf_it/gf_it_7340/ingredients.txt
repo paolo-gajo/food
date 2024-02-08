@@ -1,7 +1,0 @@
-ingredient	quantity
-Farina Manitoba	150 g
-Farina 00	350 g
-Acqua a temperatura ambiente	350 g
-Lievito di birra fresco	7 g
-Sale fino	8 g
-Malto (o zucchero o miele nelle stesse dosi)	1 cucchiaino

@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	200 g
-Nutella	200 g
-Uova circa 3 medie	180 g
-Zucchero	160 g
-Latte intero a temperatura ambiente	200 g
-Lievito in polvere per dolci	16 g
-Panna fresca liquida	350 g
-Zucchero a velo vanigliato	100 g

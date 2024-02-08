@@ -1,9 +1,0 @@
-ingredient	quantity
-Riso vialone nano	320 g
-Spinaci freschi	200 g
-Scalogno	1
-Burro	40 g
-Brodo vegetale	1 l
-Sale fino	q.b.
-Pepe nero	q.b.
-Parmigiano Reggiano DOP da grattugiare	20 g

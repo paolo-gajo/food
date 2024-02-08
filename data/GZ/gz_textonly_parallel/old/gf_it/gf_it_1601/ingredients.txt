@@ -1,5 +1,0 @@
-ingredient	quantity
-Farina di mandorle	150 g
-Uova	2
-Burro	120 g
-Zucchero	120 g

@@ -1,6 +1,0 @@
-ingredient	quantity
-Fontina	400 g
-Latte intero	400 g
-Tuorli (di uova medie)	4
-Burro	30 g
-Pepe nero	q.b.

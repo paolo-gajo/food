@@ -1,7 +1,0 @@
-ingredient	quantity
-Pomodorini ciliegino	1 kg
-Zucchero di canna	100 g
-Aceto di mele	200 ml
-Cipolle bianche	1
-Chiodi di garofano	2
-Sale fino	10 g

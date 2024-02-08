@@ -1,7 +1,0 @@
-ingredient	quantity
-Riso nishiki (per sushi, cotto) 	144 g
-Branzino (spigola) (abbattuto)	40 g
-Filetto di salmone (abbattuto, pulito e rifilato)	65 g
-Filetti di tonno (abbattuto, pulito e rifilato)	50 g
-Wasabi	q.b.
-Zenzero sott'aceto	q.b.

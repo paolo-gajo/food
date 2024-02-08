@@ -1,7 +1,0 @@
-ingredient	quantity
-Finocchi (circa 2)	900 g
-Olio extravergine d'oliva	15 g
-Sale dell'Himalaya (rosa)	q.b.
-Pepe rosa	q.b.
-Maggiorana	q.b.
-Timo	q.b.

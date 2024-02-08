@@ -1,9 +1,0 @@
-ingredient	quantity
-Riso Carnaroli	320 g
-Tartufo bianco	10 g
-Brodo di carne	750 g
-Parmigiano Reggiano DOP da grattugiare	50 g
-Burro	50 g
-Olio extravergine d'oliva	q.b.
-Pepe nero	q.b.
-Sale fino	q.b.

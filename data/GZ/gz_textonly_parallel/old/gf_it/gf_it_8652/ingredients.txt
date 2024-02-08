@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova medie	5
-Burro a temperatura ambiente	100
-Latte di mandorle a temperatura ambiente	200 g
-Zucchero	150 g
-Farina 00	200 g
-Fecola di patate	50 g
-Lievito in polvere per dolci	8 g
-Amaretti	80 g

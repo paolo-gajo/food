@@ -1,6 +1,0 @@
-ingredient	quantity
-Caffè espresso	250 ml
-Acqua	250 ml
-Zucchero	70 g
-Panna fresca liquida	200 ml
-Zucchero a velo	30 g

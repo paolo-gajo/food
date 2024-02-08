@@ -1,6 +1,0 @@
-ingredient	quantity
-Cioccolato bianco	300 g
-Burro	200 g
-Farina 00	80 g
-Uova	4
-Zucchero	130 g

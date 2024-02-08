@@ -1,8 +1,0 @@
-ingredient	quantity
-Burro freddo	125 g
-Farina 00	250 g
-Zucchero	100 g
-Uova (circa 1 piccolo)	50 g
-Cannella in polvere raso	1 cucchiaino
-Miele millefiori	15 g
-Sale fino	1 pizzico

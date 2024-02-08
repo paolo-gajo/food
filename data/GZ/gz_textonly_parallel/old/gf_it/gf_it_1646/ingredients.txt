@@ -1,6 +1,0 @@
-ingredient	quantity
-Uova medie	4
-Grana Padano DOP (da grattugiare)	4 cucchiai
-Pepe nero	q.b.
-Asparagi	1,6 kg
-Burro	15 g

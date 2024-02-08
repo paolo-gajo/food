@@ -1,9 +1,0 @@
-ingredient	quantity
-Porri	220 g
-Prosciutto crudo	120 g
-Panna fresca liquida a temperatura ambiente	200 g
-Parmigiano Reggiano DOP	30 g
-Burro	20 g
-Farina 00	20 g
-Sale fino	q.b.
-Pepe nero	q.b.

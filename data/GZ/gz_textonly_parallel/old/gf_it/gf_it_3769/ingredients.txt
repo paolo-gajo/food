@@ -1,9 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino schiacciate croccanti con extravergine d'oliva	12
-Petto di pollo	100 g
-Peperoni rossi	70 g
-Paprika dolce	2 g
-Timo	1 rametto
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

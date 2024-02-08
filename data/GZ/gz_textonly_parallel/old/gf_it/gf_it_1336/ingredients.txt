@@ -1,9 +1,0 @@
-ingredient	quantity
-Fagioli borlotti	500 g
-Pomodorini ciliegino	150 g
-Basilico	9 foglie
-Scalogno	100 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	30 g
-Timo	3 rametti

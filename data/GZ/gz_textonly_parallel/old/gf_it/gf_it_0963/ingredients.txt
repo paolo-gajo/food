@@ -1,6 +1,0 @@
-ingredient	quantity
-Farina integrale	350 g
-Burro freddo	150 g
-Zucchero muscovado	150 g
-Scorza di limone	1
-Uova (circa 2)	110 g

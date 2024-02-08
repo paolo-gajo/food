@@ -1,9 +1,0 @@
-ingredient	quantity
-Lonza di maiale	1 kg
-Asparagi	250 g
-Mele Granny Smith	300 g
-Carote	150 g
-Olio extravergine d'oliva	35 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Acqua (per sfumare)	q.b.

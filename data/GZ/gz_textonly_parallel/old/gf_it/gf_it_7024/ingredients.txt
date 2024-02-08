@@ -1,7 +1,0 @@
-ingredient	quantity
-Cipolle rosse di Tropea	600 g
-Sale fino	2 cucchiai
-Farina 00	100 g
-Acqua	50 g
-Prezzemolo	q.b.
-Olio di semi di girasole per friggere	q.b.

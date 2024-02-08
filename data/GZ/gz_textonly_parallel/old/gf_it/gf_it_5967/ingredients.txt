@@ -1,8 +1,0 @@
-ingredient	quantity
-Melanzane	200 g
-Prosciutto cotto	100 g
-Caciocavallo	100 g
-Passata di pomodoro	200 g
-Olio extravergine d'oliva	10 g
-Sale fino	q.b.
-Pepe nero	q.b.

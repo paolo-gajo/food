@@ -1,7 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia (rettangolare)	230 g
-Triplo concentrato di pomodoro	20 g
-Origano	q.b.
-Timo	q.b.
-Semi di sesamo	q.b.
-Semi di papavero	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino schiacciate croccanti con olio extra vergine d'oliva	12
-Patate	150 g
-Asiago	30 g
-Curry	1 pizzico
-Prezzemolo	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	q.b.

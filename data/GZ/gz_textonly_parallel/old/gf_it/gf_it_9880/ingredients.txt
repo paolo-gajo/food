@@ -1,8 +1,0 @@
-ingredient	quantity
-Melanzane piccole	4
-Zucchine medie	2
-Pomodorini ciliegino	120 g
-Caciocavallo	200 g
-Menta	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

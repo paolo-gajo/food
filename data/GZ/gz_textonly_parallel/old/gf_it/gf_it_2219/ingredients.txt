@@ -1,7 +1,0 @@
-ingredient	quantity
-Tortiglioni	320 g
-Tuorli	5
-Asparagi	500 g
-Pecorino	100 g
-Sale fino	q.b.
-Pepe nero	q.b.

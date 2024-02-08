@@ -1,6 +1,0 @@
-ingredient	quantity
-Cocco rapè	200 g
-Cioccolato al latte	250 g
-Latte condensato	150 g
-Sale fino	1 pizzico
-Cocco rapè	q.b.

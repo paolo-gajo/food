@@ -1,7 +1,0 @@
-ingredient	quantity
-Barbabietole	200 g
-Patate	200 g
-Zucca	200 g
-Olio di oliva	q.b.
-Sale	q.b.
-Rosmarino qualche	rametto

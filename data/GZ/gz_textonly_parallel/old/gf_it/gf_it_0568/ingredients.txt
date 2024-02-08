@@ -1,7 +1,0 @@
-ingredient	quantity
-Pepe nero	q.b.
-Montasio stagionato o semistagionato	500 g
-Patate (peso da pulite)	500 g
-Cipolle (peso da mondate)	200 g
-Sale fino	q.b.
-Olio extravergine d'oliva	50 g

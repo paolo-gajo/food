@@ -1,9 +1,0 @@
-ingredient	quantity
-Salsiccia	400 g
-Pomodori pelati (varietà pizzutello)	550 g
-Bucatini	320 g
-Peperoncino fresco	½
-Scalogno	1
-Olio extravergine d'oliva	20 g
-Grana Padano DOP	50 g
-Origano fresco	q.b.

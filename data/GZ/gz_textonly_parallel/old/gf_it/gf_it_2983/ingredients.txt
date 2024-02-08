@@ -1,6 +1,0 @@
-ingredient	quantity
-Asparagi	800 g
-Pasta Sfoglia	250 g
-Prosciutto crudo	8 fette
-Grana Padano DOP a scaglie	30 g
-Uova	1

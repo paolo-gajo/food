@@ -1,9 +1,0 @@
-ingredient	quantity
-Ziti	320 g
-Pomodori pelati San Marzano	800 g
-Lardo di Colonnata	140 g
-Cipolle dorate	80 g
-Pecorino romano	q.b.
-Basilico	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

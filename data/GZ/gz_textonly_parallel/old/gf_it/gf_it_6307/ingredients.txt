@@ -1,8 +1,0 @@
-ingredient	quantity
-Nutella	200 g
-Farina 00	110 g
-Fecola di patate	110 g
-Uova (circa 3)	165 g
-Zucchero	100 g
-Latte intero	100 g
-Lievito in polvere per dolci	12 g

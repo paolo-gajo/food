@@ -1,9 +1,0 @@
-ingredient	quantity
-Riso Carnaroli	320 g
-Radicchio di Chioggia	400 g
-Salsiccia	250 g
-Cipolle di Chioggia	½
-Birra rossa	1 bicchiere
-Burro	20 g
-Brodo vegetale	q.b.
-Olio extravergine d'oliva	2 cucchiai

@@ -1,7 +1,0 @@
-ingredient	quantity
-Riso nishiki	500 g
-Acqua	500 g
-Aceto di riso	75 g
-Sale fino	19 g
-Zucchero	30 g
-Alga kombu	5 g

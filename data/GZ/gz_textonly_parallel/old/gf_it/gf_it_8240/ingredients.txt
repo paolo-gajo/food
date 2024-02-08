@@ -1,8 +1,0 @@
-ingredient	quantity
-Burro freddo	110 g
-Farina 00	215 g
-Tuorli	3
-Zucchero a velo	85 g
-Nutella	400 g
-Burro di cacao	90 g
-Panna fresca liquida per spennellare	q.b.

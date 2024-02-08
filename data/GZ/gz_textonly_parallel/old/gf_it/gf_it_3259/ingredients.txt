@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova	6
-Tonno sott'olio	90 g
-Acciughe (alici) sott'olio	25 g
-Olive nere denocciolate	25 g
-Capperi sott'aceto sgocciolati	2 g
-Peperoncino fresco	1
-Paprika dolce	1 pizzico
-Prezzemolo	3 g

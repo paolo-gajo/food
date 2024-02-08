@@ -1,8 +1,0 @@
-ingredient	quantity
-Fiocchi di avena	140 g
-Latte intero	220 g
-Acqua	200 g
-Sale fino	q.b.
-Miele millefiori	q.b.
-Fragole	q.b.
-Mandorle in scaglie	q.b.

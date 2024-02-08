@@ -1,6 +1,0 @@
-ingredient	quantity
-Succo d'arancia	180 ml
-Tequila bianca	90 ml
-Sciroppo di granatina	30 ml
-Arance	½ fetta
-Ciliegie candite	1

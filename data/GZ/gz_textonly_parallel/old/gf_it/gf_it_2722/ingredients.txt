@@ -1,9 +1,0 @@
-ingredient	quantity
-Spaghetti	400 g
-Pomodori pelati	600 g
-Pancetta (tesa)	150 g
-Cipolle bianche	100 g
-Pecorino romano da grattugiare	30 g
-Maggiorana	1 rametto
-Sale fino	q.b.
-Pepe nero	q.b.

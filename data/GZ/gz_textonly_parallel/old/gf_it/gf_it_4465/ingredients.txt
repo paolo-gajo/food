@@ -1,6 +1,0 @@
-ingredient	quantity
-Cellentani	320 g
-Gorgonzola	300 g
-Gherigli di noci	50 g
-Latte intero	50 g
-Grana Padano DOP grattugiato	50 g

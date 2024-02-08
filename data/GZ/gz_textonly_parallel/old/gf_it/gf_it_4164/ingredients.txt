@@ -1,8 +1,0 @@
-ingredient	quantity
-Pomodori San Marzano	1,5 kg
-Olio extravergine d'oliva	30 g
-Basilico	5 foglie
-Aglio	1 spicchio
-Sale fino	q.b.
-Panna fresca liquida	q.b.
-Basilico	q.b.

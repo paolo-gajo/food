@@ -1,9 +1,0 @@
-ingredient	quantity
-Ananas (5 fette)	450 g
-Farina 00	135 g
-Burro (freddo di frigo)	65 g
-Acqua (fredda)	45 g
-Zucchero	100 g
-Acqua	35 g
-Burro a temperatura ambiente	5 g
-Gelato al fiordilatte	4 palline

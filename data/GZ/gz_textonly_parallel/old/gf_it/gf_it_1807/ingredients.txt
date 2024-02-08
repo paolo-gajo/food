@@ -1,8 +1,0 @@
-ingredient	quantity
-Linguine	320 g
-Salmone affumicato	200 g
-Zucchine	400 g
-Panna fresca liquida	200 ml
-Aglio	2 spicchi
-Pepe nero	1 pizzico
-Sale fino	q.b.

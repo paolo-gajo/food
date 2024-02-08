@@ -1,7 +1,0 @@
-ingredient	quantity
-Uova medie	3
-Farina 00	250 g
-Latte intero	500 ml
-Burro	q.b.
-Nutella	q.b.
-Zucchero a velo	q.b.

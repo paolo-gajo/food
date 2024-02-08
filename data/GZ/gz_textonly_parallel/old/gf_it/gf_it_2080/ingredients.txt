@@ -1,8 +1,0 @@
-ingredient	quantity
-Acai in polvere	5 g
-Yogurt greco	250 g
-Latte di cocco	30 g
-Miele	15 g
-Cocco fresco	35 g
-Banane baby	1
-Corn flakes	30 g

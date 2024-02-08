@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	300 g
-Farina di mandorle	120 g
-Zucchero	120 g
-Burro	180 g
-Tuorli	2
-Baccello di vaniglia	1
-Albumi	1
-Zucchero a velo	120 g

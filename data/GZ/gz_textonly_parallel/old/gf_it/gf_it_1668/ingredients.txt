@@ -1,9 +1,0 @@
-ingredient	quantity
-Fragole	400 g
-Acqua	500 g
-Zucchero	120 g
-Succo di limone	30 g
-Panna fresca liquida	q.b.
-Zucchero a velo	q.b.
-Menta fresca	q.b.
-Fragole intere	q.b.

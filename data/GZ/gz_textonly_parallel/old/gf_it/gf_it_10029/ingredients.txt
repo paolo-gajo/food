@@ -1,6 +1,0 @@
-ingredient	quantity
-Mele Fuji (4 medie)	920 g
-Amaretti	8
-Arance	1
-Granella di nocciole	50 g
-Miele millefiori	q.b.

@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina integrale	300 g
-Farina di farro	160 g
-Farina di grano saraceno	40 g
-Gherigli di noci	100 g
-Acqua tiepida	340 g
-Lievito di birra secco	3 g
-Sale fino	10 g

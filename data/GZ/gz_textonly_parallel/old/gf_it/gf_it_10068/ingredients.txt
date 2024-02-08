@@ -1,8 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia rettangolare	230 g
-Mele Evelina	1
-Zucchero	q.b.
-Latte intero	250 g
-Zucchero	75 g
-Amido di mais (maizena)	35 g
-Tuorli	2

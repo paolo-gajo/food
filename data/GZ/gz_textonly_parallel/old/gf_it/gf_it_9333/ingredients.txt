@@ -1,6 +1,0 @@
-ingredient	quantity
-Lievito madre liquido (rinfrescato da 4 ore)	100 g
-Acqua	375 g
-Farina 2 di grano tenero	450 g
-Farina di segale	50 g
-Sale fino	10 g

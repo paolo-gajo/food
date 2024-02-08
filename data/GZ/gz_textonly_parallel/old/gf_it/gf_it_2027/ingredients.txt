@@ -1,6 +1,0 @@
-ingredient	quantity
-Vermicelli	320 g
-Mascarpone	250 g
-Lime succo e scorza	1
-Pepe rosa	q.b.
-Grana Padano DOP (da grattugiare)	60 g

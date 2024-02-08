@@ -1,6 +1,0 @@
-ingredient	quantity
-Kiwi green	150 g
-Salmone (abbattuto)	80 g
-Alga nori	4 fogli
-Riso per sushi	250 g
-Condimento per sushi	50 ml

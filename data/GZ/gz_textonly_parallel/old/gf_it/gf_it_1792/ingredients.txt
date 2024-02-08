@@ -1,4 +1,0 @@
-ingredient	quantity
-Succo di limone	250 g
-Acqua	350 g
-Zucchero	150 g

@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	550 g
-Zucchero di canna	180 g
-Olio di semi di girasole	150 g
-Latte intero	120 g
-Uova (circa 3)	165 g
-Ammoniaca per dolci	10 g
-Baccello di vaniglia	½
-Zucchero	q.b.

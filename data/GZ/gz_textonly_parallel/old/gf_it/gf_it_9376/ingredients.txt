@@ -1,9 +1,0 @@
-ingredient	quantity
-Mele renette	450 g
-Farina 00	300 g
-Zucchero	250 g
-Mascarpone	100 g
-Olio di semi di girasole	100 g
-Uova (circa 2)	125 g
-Lievito in polvere per dolci	16 g
-Zucchero a velo	q.b.

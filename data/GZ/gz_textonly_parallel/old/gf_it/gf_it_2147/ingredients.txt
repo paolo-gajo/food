@@ -1,7 +1,0 @@
-ingredient	quantity
-Pesce spada	500
-Latte intero	250 g
-Pepe rosa in grani	5
-Pepe verde in grani	10
-Olio extravergine d'oliva	50 g
-Sale dell'Himalaya (rosa)	5 g

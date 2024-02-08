@@ -1,5 +1,0 @@
-ingredient	quantity
-Ribes rosso	500 g
-Mirtilli	500 g
-Zucchero	1 kg
-Preparato per confetture 1:1	40 g

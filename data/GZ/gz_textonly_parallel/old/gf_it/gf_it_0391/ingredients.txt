@@ -1,6 +1,0 @@
-ingredient	quantity
-Peperoni friggitelli	600 g
-Aglio	2 spicchi
-Olio extravergine d'oliva	25 g
-Acqua	25 g
-Sale fino	q.b.

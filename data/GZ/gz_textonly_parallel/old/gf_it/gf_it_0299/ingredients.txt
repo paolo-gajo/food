@@ -1,8 +1,0 @@
-ingredient	quantity
-Uova	6
-Patate	500 g
-Parmigiano Reggiano DOP	100 g
-Prezzemolo	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio di semi	q.b.

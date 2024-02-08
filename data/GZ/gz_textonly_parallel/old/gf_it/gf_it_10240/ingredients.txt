@@ -1,8 +1,0 @@
-ingredient	quantity
-Dischetti di pasta	16
-Tuorli	3
-Amido di mais (maizena)	45 g
-Zucchero	70 g
-Latte intero	200 g
-Amarene sciroppate	q.b.
-Menta	q.b.

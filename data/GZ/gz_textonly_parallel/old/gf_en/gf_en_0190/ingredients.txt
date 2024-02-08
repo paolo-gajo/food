@@ -1,8 +1,0 @@
-ingredient	quantity
-Egg whites	&frac23 cup	(135 g)	(about 4)
-Egg yolks	½ cup	(120 g)	(about 6)
-Sugar	&frac23 cup	(155 g)
-Butter	3 ¾ tbsp	(30 g)
-Unsweetened cocoa powder	3 ¾ tbsp	(30 g)
-Flour 00	1 ½ tbsp	(22 g)
-Potato starch	1 ½ tbsp	(22 g)

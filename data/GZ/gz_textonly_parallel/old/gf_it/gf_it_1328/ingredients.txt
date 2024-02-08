@@ -1,6 +1,0 @@
-ingredient	quantity
-Latte intero	500 ml
-Fragole	500 g
-Zucchero	150 g
-Panna fresca liquida	100 g
-Albumi medi	2

@@ -1,9 +1,0 @@
-ingredient	quantity
-Fagioli neri secchi	200 g
-Cipolle	100 g
-Burro	100 g
-Sale fino	q.b.
-Cumino in polvere la punta di	1 cucchiaino
-Coriandolo in polvere la punta di	1 cucchiaino
-Pepe nero	q.b.
-Aglio	2 spicchi

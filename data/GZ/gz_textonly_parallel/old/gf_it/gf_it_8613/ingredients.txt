@@ -1,8 +1,0 @@
-ingredient	quantity
-Petto di pollo intero	600 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Timo	2 rametti
-Senape	100 g
-Latte intero	20 g
-Rosmarino	3 rametti

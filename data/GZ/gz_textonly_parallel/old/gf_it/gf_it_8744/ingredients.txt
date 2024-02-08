@@ -1,7 +1,0 @@
-ingredient	quantity
-Cioccolato fondente	200 g
-Zucchero	150 g
-Burro	100 g
-Farina 00	60 g
-Caffè	30 ml
-Uova medie	3

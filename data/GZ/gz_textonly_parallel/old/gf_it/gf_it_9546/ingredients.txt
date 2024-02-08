@@ -1,9 +1,0 @@
-ingredient	quantity
-Latte intero	300 g
-Uova (circa 4 medie)	220 g
-Zucchero a velo	80 g
-Amido di mais (maizena)	60 g
-Baccello di vaniglia	1
-Sale fino	1 pizzico
-Burro	q.b.
-Zucchero	q.b.

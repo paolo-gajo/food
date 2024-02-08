@@ -1,7 +1,0 @@
-ingredient	quantity
-Asparagi	600 g
-Tuorli	4
-Burro	60 g
-Vino bianco	80 ml
-Sale fino	q.b.
-Pepe nero	q.b.

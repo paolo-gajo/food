@@ -1,8 +1,0 @@
-ingredient	quantity
-Yogurt greco	450 g
-Miele abbondante	1 cucchiaio
-Frutti di bosco (more, mirtilli, lamponi)	250 g
-Muesli croccante	100 g
-Zucchero	20 g
-Acqua	50 ml
-Amido di mais (maizena)	2 cucchiaini

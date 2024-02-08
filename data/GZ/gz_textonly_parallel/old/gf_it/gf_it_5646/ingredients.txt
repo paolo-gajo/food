@@ -1,9 +1,0 @@
-ingredient	quantity
-Sfoglie alle olive	12
-Capesante pulite	12
-Succo di limone	½
-Succo di pompelmo	½
-Asparagi	300 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Aglio	1 spicchio

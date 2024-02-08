@@ -1,8 +1,0 @@
-ingredient	quantity
-Patate	700 g
-Funghi champignon	350 g
-Vino bianco secco	50 g
-Sale grosso	1 cucchiaino
-Rosmarino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	q.b.

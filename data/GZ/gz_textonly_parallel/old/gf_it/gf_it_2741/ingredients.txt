@@ -1,9 +1,0 @@
-ingredient	quantity
-Stoccafisso (già ammollato)	600 g
-Patate	300 g
-Olio extravergine d'oliva	100 g
-Aglio	1 spicchio
-Prezzemolo	15 g
-Scorza di limone	1
-Sale fino	q.b.
-Pepe bianco	q.b.

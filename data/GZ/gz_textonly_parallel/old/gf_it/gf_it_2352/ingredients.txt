@@ -1,9 +1,0 @@
-ingredient	quantity
-Riso Carnaroli	280 g
-Guanciale	150 g
-Pomodori pelati (non sgocciolati)	400 g
-Pecorino romano da grattugiare	75 g
-Vino bianco secco	50 g
-Brodo vegetale	2 l
-Sale fino	q.b.
-Pepe nero	q.b.

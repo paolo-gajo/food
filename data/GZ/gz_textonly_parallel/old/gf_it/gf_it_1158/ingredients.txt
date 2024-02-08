@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova	2
-Zucchero	50 g
-Farina 00	50 g
-Zucchero	q.b.
-Cioccolato fondente	360 g
-Acqua	280 g
-Panna fresca liquida	100 g
-Cioccolato fondente al 70% sfoglie	q.b.

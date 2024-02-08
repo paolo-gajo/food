@@ -1,4 +1,0 @@
-ingredient	quantity
-Latte scremato	1 l
-Sale fino	6 g
-Aceto di vino bianco	17 g

@@ -1,8 +1,0 @@
-ingredient	quantity
-Zucchero	180 g
-Uova (medie)	3
-Farina 00	270 g
-Cioccolato fondente	150 g
-Lievito in polvere per dolci	10 g
-Panna fresca liquida	240 g
-Yogurt bianco naturale intero	60 g

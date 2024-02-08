@@ -1,7 +1,0 @@
-ingredient	quantity
-Sidro	750 ml
-Farina integrale	600 g
-Farina Manitoba	400 g
-Lievito di birra secco	7 g
-Sale fino	20 g
-Malto	1 cucchiaino

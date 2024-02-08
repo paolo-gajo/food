@@ -1,7 +1,0 @@
-ingredient	quantity
-Campari	30 ml
-Vermouth rosso	30 ml
-Soda (una spruzzata)	q.b.
-Arance	½ fetta
-Scorza di limone	1
-Ghiaccio	q.b.

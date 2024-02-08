@@ -1,7 +1,0 @@
-ingredient	quantity
-Schiacciate al forno	12
-Pecorino sardo	80 g
-Miele di corbezzolo	180 g
-Mirto	3 rametti
-Rosmarino	3 rametti
-Brodo vegetale	q.b.

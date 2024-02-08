@@ -1,5 +1,0 @@
-ingredient	quantity
-Cozze da pulire	2 kg
-Pepe nero da macinare al momento	q.b.
-Prezzemolo	q.b.
-Limoni	q.b.

@@ -1,7 +1,0 @@
-ingredient	quantity
-Pane tipo "francesino"	1
-Wurstel	1
-Patate fritte congelate	q.b.
-Scamorza (provola) fettine sottili	3
-Sale fino	q.b.
-Maionese (o ketchup)	q.b.

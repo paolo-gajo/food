@@ -1,9 +1,0 @@
-ingredient	quantity
-Gocce di cioccolato	100 g
-Farina 00	500 g
-Uova (medie)	2
-Zucchero di canna	200 g
-Baccello di vaniglia	1
-Bicarbonato	3 g
-Sale fino	1 pizzico
-Burro (ammorbidito)	180 g

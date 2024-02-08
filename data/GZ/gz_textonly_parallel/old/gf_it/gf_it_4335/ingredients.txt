@@ -1,4 +1,0 @@
-ingredient	quantity
-Farina 00	400 g
-Acqua tiepida	200 g
-Sale fino	q.b.

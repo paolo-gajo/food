@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina di mais	125 g
-Farina 00	125 g
-Farina integrale	70 g
-Acqua tiepida	250 ml
-Acqua bollente	150 ml
-Lievito di birra secco	3 g
-Bicarbonato	2 g

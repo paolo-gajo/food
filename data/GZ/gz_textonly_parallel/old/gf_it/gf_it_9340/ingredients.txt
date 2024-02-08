@@ -1,7 +1,0 @@
-ingredient	quantity
-Carciofi	1,6 kg
-Patate	700 g
-Olio extravergine d'oliva	60 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Rosmarino	q.b.

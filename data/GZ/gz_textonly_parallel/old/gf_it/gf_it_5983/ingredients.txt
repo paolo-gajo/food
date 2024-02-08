@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucchine	600 g
-Primosale	160 g
-Uova ( 1 medio)	55 g
-Pangrattato	130 g
-Noce moscata	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Timo	q.b.

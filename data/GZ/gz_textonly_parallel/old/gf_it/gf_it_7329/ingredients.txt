@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 0	500 g
-Acqua	250 g
-Acciughe sott'olio	30 g
-Lievito di birra fresco	12 g
-Zucchero	1 cucchiaino
-Sale fino	1 cucchiaino
-Olio di semi	q.b.

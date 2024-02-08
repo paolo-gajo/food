@@ -1,7 +1,0 @@
-ingredient	quantity
-Filetto di salmone (da tagliare in 8 fette)	300 g
-Melanzane	150 g
-Zucchine	200 g
-Robiola	100 g
-Miele millefiori	20 g
-Salsa di soia dolce	10 g

@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucchero	110 g
-Albumi (di due uova 2 medie)	75 g
-Farina 00	75 g
-Farina di riso	20 g
-Amido di mais (maizena)	13 g
-Olio extravergine d'oliva	15 g
-Essenza di vaniglia	1 goccia
-Acqua	1 goccia

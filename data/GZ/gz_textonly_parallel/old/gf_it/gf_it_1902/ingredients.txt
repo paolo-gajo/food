@@ -1,9 +1,0 @@
-ingredient	quantity
-Sovracosce di pollo	4
-Pane bianco in cassetta	200 g
-Prezzemolo tritato	3 cucchiai
-Aglio tritato	2 spicchi
-Scorza di limone	1 cucchiaio
-Olio extravergine d'oliva	4 cucchiai
-Pepe nero macinato	1 cucchiaino
-Sale fino	1 cucchiaino

@@ -1,9 +1,0 @@
-ingredient	quantity
-Tortillas di mais	8
-Petto di pollo	600 g
-Fontina	400 g
-Pomodori ramati	450 g
-Cipolle ramate	4
-Insalata	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

@@ -1,6 +1,0 @@
-ingredient	quantity
-Peperoni rossi	750 g
-Peperoni gialli	750 g
-Zucchero	125 g
-Sale fino	50 g
-Aceto di mele	1 l

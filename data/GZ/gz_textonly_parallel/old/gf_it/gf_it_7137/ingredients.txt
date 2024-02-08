@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova	4
-Pane casereccio	½ fetta
-Mascarpone	70 g
-Timo	3 rametti
-Zenzero fresco	1 cucchiaino
-Erba cipollina	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Schiacciate al forno	12
-Squacquerone	200 g
-Culatello	6 fette
-Panna fresca liquida	50 ml
-Pepe verde	1 cucchiaio
-Aceto balsamico di Modena	2 cucchiai
-Olio extravergine d'oliva	2 cucchiai
-Sale fino	q.b.

@@ -1,6 +1,0 @@
-ingredient	quantity
-Castagne	2 kg
-Zucchero	600 g
-Acqua	650 ml
-Scorza di limone non trattato	1
-Baccello di vaniglia	1

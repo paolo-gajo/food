@@ -1,8 +1,0 @@
-ingredient	quantity
-Ricotta vaccina	250 g
-Farina 00	250 g
-Zucchero	150 g
-Uova (circa uno medio)	55 g
-Lievito in polvere per dolci	8 g
-Scorza di limone	1
-Zucchero a velo per spolverizzare	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Biscotti Digestive	300 g
-Burro	100 g
-Ricotta vaccina	500 g
-Panna fresca liquida	230 g
-Zucchero a velo	200 g
-Gelatina in fogli	8 g
-Fragole essiccate	q.b.
-Menta	q.b.

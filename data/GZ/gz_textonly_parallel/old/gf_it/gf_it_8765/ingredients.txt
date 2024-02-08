@@ -1,7 +1,0 @@
-ingredient	quantity
-Zucchine	750 g
-Menta	6 foglie
-Aglio	1 spicchio
-Olio extravergine d'oliva	20 g
-Pangrattato	100 g
-Sale fino	10 g

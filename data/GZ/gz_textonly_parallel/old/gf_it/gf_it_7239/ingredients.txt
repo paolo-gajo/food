@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	350 g
-Acqua	205 g
-Lievito istantaneo per preparazioni salate	5 g
-Olio extravergine d'oliva	20 g
-Sale fino	10 g
-Provolone dolce	200 g
-Prosciutto cotto (a fette sottili)	200 g

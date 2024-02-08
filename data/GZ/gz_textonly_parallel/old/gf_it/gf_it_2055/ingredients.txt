@@ -1,7 +1,0 @@
-ingredient	quantity
-Fave fresche	2 kg
-Pecorino a scaglie	40 g
-Aceto balsamico	20 g
-Sale fino	2 g
-Pepe nero	1 g
-Olio extravergine d'oliva	40 g

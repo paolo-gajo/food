@@ -1,9 +1,0 @@
-ingredient	quantity
-Pere Williams	600 g
-Limoni scorza e succo	1
-Zucchero di canna	50 g
-Amaretti	60 g
-Confettura di pesche	100 g
-Cannella in polvere	1 pizzico
-Dischetti di pasta	16
-Uova	1

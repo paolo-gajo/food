@@ -1,6 +1,0 @@
-ingredient	quantity
-Uova	5
-Miele	10 g
-Farina	100 g
-Zucchero	140 g
-Vaniglia i semi di	1 bacca

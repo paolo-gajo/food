@@ -1,5 +1,0 @@
-ingredient	quantity
-Zucchine	570 g
-Sale grosso	30 g
-Farina 00	100 g
-Olio di semi di arachide	600 g

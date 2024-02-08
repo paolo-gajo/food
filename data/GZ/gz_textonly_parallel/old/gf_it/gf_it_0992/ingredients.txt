@@ -1,6 +1,0 @@
-ingredient	quantity
-Tequila (5/10)	70 ml
-Triple sec (3/10)	40 ml
-Succo di lime (2/10)	30 ml
-Sale fino	1 pizzico
-Lime	1 fetta

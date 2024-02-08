@@ -1,9 +1,0 @@
-ingredient	quantity
-Groviera	50 g
-Carote	100 g
-Sedano rapa	100 g
-Aceto di vino bianco	1 cucchiaio
-Senape	1 cucchiaino
-Sale fino	q.b.
-Prosciutto cotto (una sola fetta)	50 g
-Maionese	300 ml

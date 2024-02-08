@@ -1,5 +1,0 @@
-ingredient	quantity
-Patate	800 g
-Peperoni cruschi	100 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

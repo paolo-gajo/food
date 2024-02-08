@@ -1,7 +1,0 @@
-ingredient	quantity
-Farina 00	400 g
-Uova medie	4
-Acciughe (alici) filetti sott'olio	8
-Olio extravergine d'oliva	45 g
-Cipolle bianche	300 g
-Sale fino	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Dischetti di pasta	16
-Carote	150 g
-Zucchine	150 g
-Fagiolini	100 g
-Scamorza (provola) (dolce)	150 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio di semi	1 l

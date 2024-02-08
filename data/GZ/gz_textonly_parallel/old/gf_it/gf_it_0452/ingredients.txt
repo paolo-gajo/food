@@ -1,9 +1,0 @@
-ingredient	quantity
-Rigatoni	320 g
-Guanciale	200 g
-Salsiccia (solo di suino)	250 g
-Pecorino romano da grattugiare	60 g
-Pomodorini in scatola	350 g
-Olio extravergine d'oliva	q.b.
-Tuorli (di uova medie)	4
-Pecorino romano	40 g

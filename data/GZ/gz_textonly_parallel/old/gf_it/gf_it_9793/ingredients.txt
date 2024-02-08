@@ -1,7 +1,0 @@
-ingredient	quantity
-Mezze Penne Rigate Integrali	260 g
-Fichi neri	260 g
-Tomini	270 g
-Gherigli di noci	40 g
-Burro	25 g
-Pepe nero	q.b.

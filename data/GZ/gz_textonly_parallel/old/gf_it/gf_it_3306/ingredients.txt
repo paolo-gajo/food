@@ -1,7 +1,0 @@
-ingredient	quantity
-Acqua	200 g
-Farina 00	120 g
-Sale fino	q.b.
-Olio extravergine d'oliva	15 g
-Prosciutto crudo di Norcia	100 g
-Pecorino da grattugiare	90 g

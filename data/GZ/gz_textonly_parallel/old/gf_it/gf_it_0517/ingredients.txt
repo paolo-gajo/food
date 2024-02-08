@@ -1,9 +1,0 @@
-ingredient	quantity
-Fettine di vitello sottili	12
-Pancetta	12 fette
-Caciocavallo	150 g
-Prezzemolo	2 rametti
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Aglio	1 spicchio
-Pepe nero	q.b.

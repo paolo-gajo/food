@@ -1,4 +1,0 @@
-ingredient	quantity
-More	1 kg
-Zucchero	300 g
-Limoni (succo e scorza)	2

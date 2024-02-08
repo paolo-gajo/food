@@ -1,6 +1,0 @@
-ingredient	quantity
-Spaghetti	300 g
-Peperoni rossi	1 kg
-Baccalà precedentemente ammollato e senza pelle	300 g
-Scorza di limone	1
-Alloro	3 foglie

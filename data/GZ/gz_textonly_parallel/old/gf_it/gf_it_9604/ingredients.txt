@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina di mandorle	80 g
-Farina 00	250 g
-Strutto freddo	135 g
-Zucchero a velo	80 g
-Liquore all'anice	10 g
-Cannella in polvere	1 pizzico
-Sale fino	1 cucchiaino
-Zucchero a velo	q.b.

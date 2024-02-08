@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova medie	3
-Farina 00	200 g
-Amido di mais (maizena)	75 g
-Zucchero	200 g
-Olio di semi	100 g
-Panna fresca liquida	100 g
-Cioccolato fondente	150 g
-Lievito in polvere per dolci	16 g

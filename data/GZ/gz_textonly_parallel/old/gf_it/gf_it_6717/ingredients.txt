@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina di mais bramata	500 g
-Toma	200 g
-Fontina	200 g
-Burro	200 g
-Acqua	2 l
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

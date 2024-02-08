@@ -1,4 +1,0 @@
-ingredient	quantity
-Albicocche	2 kg
-Zucchero	500 g
-Succo di limone	1

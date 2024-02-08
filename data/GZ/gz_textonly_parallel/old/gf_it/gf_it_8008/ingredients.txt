@@ -1,7 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino spianatine	12
-Gamberetti precotti sgusciati	100 g
-Peperoncino fresco piccolo	1
-Aglio	1 spicchio
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

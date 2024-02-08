@@ -1,9 +1,0 @@
-ingredient	quantity
-Baguette (2 piccole)	250 g
-Stracapra	200 g
-Melanzane perlina	100 g
-Indivia belga	100 g
-Timo	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pomodorini ciliegino	60 g

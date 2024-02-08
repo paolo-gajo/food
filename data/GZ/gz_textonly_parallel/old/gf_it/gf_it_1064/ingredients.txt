@@ -1,6 +1,0 @@
-ingredient	quantity
-Succo di limone	400 ml
-Acqua	200 ml
-Zucchero	220 g
-Panna fresca liquida	180 ml
-Farina di semi di carrube	5 g

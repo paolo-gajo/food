@@ -1,8 +1,0 @@
-ingredient	quantity
-Mele stark	4
-Cannella in polvere	½ cucchiaino
-Coloranti alimentari rosso	q.b.
-Acqua	100 g
-Zucchero	500 g
-Cremor tartaro	½ cucchiaino
-Glucosio	250 g

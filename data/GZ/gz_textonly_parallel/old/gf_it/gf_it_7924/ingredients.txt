@@ -1,9 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia	230 g
-Pomodorini ciliegino	120 g
-Mozzarelline ciliegine	120 g
-Basilico	q.b.
-Origano	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Burro	q.b.

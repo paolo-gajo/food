@@ -1,6 +1,0 @@
-ingredient	quantity
-Cioccolato fondente	300 g
-Cioccolato al latte	300 g
-Panna fresca liquida	130 ml
-Burro (a temperatura ambiente)	30 g
-Rum 1/	2 bicchierino

@@ -1,6 +1,0 @@
-ingredient	quantity
-Bresaola	60 g
-Formaggio fresco spalmabile	300 g
-Erba cipollina	q.b.
-Pepe bianco	q.b.
-Rucola (o altra insalata)	10 g

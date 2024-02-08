@@ -1,9 +1,0 @@
-ingredient	quantity
-Pane casereccio	8 fette
-Emmentaler	50 g
-Edamer	50 g
-Panna fresca liquida	30 g
-Grana Padano DOP da grattugiare	10 g
-Rosmarino	1 rametto
-Pepe nero	2 pizzichi
-Burro	q.b.

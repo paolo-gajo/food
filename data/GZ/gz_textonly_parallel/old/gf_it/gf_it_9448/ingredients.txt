@@ -1,8 +1,0 @@
-ingredient	quantity
-Palamita	700 g
-Pomodorini datterini	180 g
-Aglio	1 spicchio
-Rosmarino	q.b.
-Sale fino	6 g
-Limoni (non trattati)	25 g
-Pepe nero	q.b.

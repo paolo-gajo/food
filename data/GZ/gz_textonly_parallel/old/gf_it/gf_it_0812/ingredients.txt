@@ -1,5 +1,0 @@
-ingredient	quantity
-Pomodori San Marzano	2 kg
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Zucchero	q.b.

@@ -1,7 +1,0 @@
-ingredient	quantity
-Zucchine	2
-Robiola	100 g
-Prosciutto crudo	120 g
-Erba cipollina	q.b.
-Pepe nero	q.b.
-Sale fino	q.b.

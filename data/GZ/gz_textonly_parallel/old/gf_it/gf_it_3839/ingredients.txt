@@ -1,7 +1,0 @@
-ingredient	quantity
-Parmigiano Reggiano DOP grattugiato	100 gr
-Sale	q.b.
-Burro salato morbido	80 gr
-Farina tipo	00125 gr
-Latte	q.b.
-Semi di sesamo nero	q.b.

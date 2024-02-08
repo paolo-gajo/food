@@ -1,8 +1,0 @@
-ingredient	quantity
-Pane bianco in cassetta	6 fette
-Bacon (60 g totali)	4 fette
-Tacchino a fette	300 g
-Pomodori ramati	200 g
-Lattuga	4 foglie
-Maionese	50 g
-Burro	15 g

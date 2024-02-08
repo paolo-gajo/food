@@ -1,8 +1,0 @@
-ingredient	quantity
-Tuorli	10
-Zucchero a velo	400 g
-Cognac	25 ml
-Marsala	25 ml
-Latte intero	300 ml
-Alcol puro	75 ml
-Baccello di vaniglia	1

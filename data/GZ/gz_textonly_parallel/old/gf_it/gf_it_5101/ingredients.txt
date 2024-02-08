@@ -1,8 +1,0 @@
-ingredient	quantity
-Pane toscano senza crosta	60 g
-Farina 00	500 g
-Lievito di birra secco	3,5 g
-Sale fino	15 g
-Zucchero	10 g
-Acqua	700 ml
-Olio di semi	q.b.

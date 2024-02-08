@@ -1,7 +1,0 @@
-ingredient	quantity
-Sfoglie alle olive	12
-Burro	60 g
-Basilico	5 g
-Erba cipollina	5 g
-Rosmarino	5 g
-Acciughe (alici)	12

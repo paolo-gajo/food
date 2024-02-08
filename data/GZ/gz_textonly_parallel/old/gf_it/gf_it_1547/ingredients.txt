@@ -1,6 +1,0 @@
-ingredient	quantity
-Olio di semi	90 g
-Farina 00	100 g
-Latte parzialmente scremato	1 l
-Noce moscata	q.b.
-Sale fino	q.b.

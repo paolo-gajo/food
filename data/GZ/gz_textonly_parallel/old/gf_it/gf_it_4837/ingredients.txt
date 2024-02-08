@@ -1,9 +1,0 @@
-ingredient	quantity
-Speck	12 fette
-Robiola	300 g
-Timo	6 rametti
-Basilico	6 foglie
-Paprika dolce	1 cucchiaino
-La Bottega di Olivia&Marino torcelli	12
-Erba cipollina steli	6
-Erba cipollina steli	12

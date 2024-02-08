@@ -1,9 +1,0 @@
-ingredient	quantity
-Ricotta di pecora	750 g
-Pasta di pistacchi	100 g
-Pasta fillo	240 g
-Gocce di cioccolato	80 g
-Zucchero a velo	350 g
-Albumi	1
-Burro	70 g
-Granella di pistacchi	q.b.

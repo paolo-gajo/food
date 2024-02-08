@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova (circa 4)	225 g
-Farina 00	500 g
-Zucchero	150 g
-Latte intero	220 g
-Liquore all'anice	30 g
-Scorza di limone	1
-Lievito in polvere per dolci	16 g
-Zucchero a velo	q.b.

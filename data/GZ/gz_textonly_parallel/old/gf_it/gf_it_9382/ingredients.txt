@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	200 g
-Uova (medie a temperatura ambiente)	3
-Zucchero	100 g
-Latte intero a temperatura ambiente	100 ml
-Caffè (espresso della moka)	25 ml
-Olio di semi di girasole	50 ml
-Lievito in polvere per dolci	8 g

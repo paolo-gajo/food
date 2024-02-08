@@ -1,9 +1,0 @@
-ingredient	quantity
-Pesce spada (a fette)	840 g
-Succo di lime	35 ml
-Zenzero fresco	10 g
-Pinoli	30 g
-Pane (mollica)	115 g
-Uvetta	30 g
-Alloro	15 foglie
-Olio extravergine d'oliva	40 ml

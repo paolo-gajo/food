@@ -1,6 +1,0 @@
-ingredient	quantity
-Lardo di Colonnata	200 g
-Filoncini di pane	1
-Pomodorini ciliegino	4
-Rosmarino	1 rametto
-Pepe nero	q.b.

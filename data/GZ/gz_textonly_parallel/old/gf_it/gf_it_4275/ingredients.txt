@@ -1,9 +1,0 @@
-ingredient	quantity
-Farfalle	320 g
-Panna fresca liquida	250 g
-Salmone (altrimenti 210 g senza pelle)	330 g
-Cipolle rosse	60 g
-Vino bianco	50 g
-Olio extravergine d'oliva	2 cucchiai
-Sale fino	q.b.
-Prezzemolo	q.b.

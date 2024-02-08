@@ -1,9 +1,0 @@
-ingredient	quantity
-Gamberi code	12
-Lardo	12 fette
-Rosmarino	2 rametti
-Fagioli cannellini precotti	250 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Paprika dolce	1 pizzico

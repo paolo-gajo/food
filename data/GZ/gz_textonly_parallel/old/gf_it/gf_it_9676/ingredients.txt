@@ -1,8 +1,0 @@
-ingredient	quantity
-Burro freddo	115 g
-Farina 00	200 g
-Zucchero di canna	100 g
-Panna fresca liquida	150 g
-Mandorle in scaglie	40 g
-Prugne varietà stanley	700 g
-Zucchero di canna	100 g

@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova	4
-Feta	150 g
-Olive nere denocciolate	50 g
-Pomodori piccadilly	8
-Grana Padano DOP (da grattugiare)	30 g
-Menta	3 foglie
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

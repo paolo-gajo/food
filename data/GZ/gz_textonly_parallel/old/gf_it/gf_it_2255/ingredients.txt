@@ -1,6 +1,0 @@
-ingredient	quantity
-Farina integrale	200 g
-Latte parzialmente scremato	250 g
-Zucchero di canna	80 g
-Uova grande	1
-Lievito in polvere per dolci	1 cucchiaino

@@ -1,9 +1,0 @@
-ingredient	quantity
-Latte intero	150 g
-Caffè della moka	50 g
-Farina 00	200 g
-Zucchero	180 g
-Burro	90 g
-Uova (circa 4 medie)	210 g
-Lievito in polvere per dolci	6 g
-Sale fino	1 pizzico

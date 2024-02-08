@@ -1,8 +1,0 @@
-ingredient	quantity
-Yogurt greco	125 g
-Panna fresca liquida	70 g
-Zucchero a velo	15 g
-Gelatina in fogli	5 g
-Cocomero (anguria) polpa	250 g
-Gelatina in fogli	8 g
-Gocce di cioccolato fondente	q.b.

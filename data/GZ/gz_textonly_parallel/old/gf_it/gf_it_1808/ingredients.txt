@@ -1,9 +1,0 @@
-ingredient	quantity
-Gocce di cioccolato	120 g
-Granella di nocciole	80 g
-Farina 00	350 g
-Latte condensato	170 g
-Burro (freddo di frigo)	225 g
-Zucchero a velo	150 g
-Baccello di vaniglia	1
-Sale fino	1 pizzico

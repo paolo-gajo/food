@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina di mais bramata	400 g
-Zucchero	200 g
-Uova medie	4
-Yogurt greco 0% di grassi	350 g
-Burro	110 g
-Lievito in polvere per dolci	12 g
-Scorza di limone	1
-Sale fino	q.b.

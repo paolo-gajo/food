@@ -1,7 +1,0 @@
-ingredient	quantity
-Uova	4
-Pisellini	750 g
-Cipolle bianche	60 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,4 +1,0 @@
-ingredient	quantity
-Melone cantalupo da 1,2 kg	1
-Rucola	15 g
-Feta	300 g

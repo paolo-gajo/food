@@ -1,7 +1,0 @@
-ingredient	quantity
-Patate gialle farinose	1 kg
-Latte intero	200 g
-Burro	30 g
-Parmigiano Reggiano DOP da grattugiare	30 g
-Sale fino	q.b.
-Noce moscata	q.b.

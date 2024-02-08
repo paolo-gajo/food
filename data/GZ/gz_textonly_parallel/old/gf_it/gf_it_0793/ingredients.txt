@@ -1,5 +1,0 @@
-ingredient	quantity
-Parmigiano Reggiano DOP da grattugiare	200 g
-Latte intero	500 g
-Farina 00	50 g
-Burro	50 g

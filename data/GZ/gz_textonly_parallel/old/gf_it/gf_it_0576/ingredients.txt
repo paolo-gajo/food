@@ -1,9 +1,0 @@
-ingredient	quantity
-Albumi (circa 2)	84 g
-Tuorli (circa 2)	34 g
-Farina 00	35 g
-Lievito in polvere per dolci	2 g
-Latte intero	25 g
-Zucchero	25 g
-Estratto di vaniglia	1 cucchiaino
-Burro	q.b.

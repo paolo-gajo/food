@@ -1,6 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia rettangolare	230 g
-Mortadella con pistacchi	70 g
-Emmentaler	60 g
-Uova (medio)	1
-Granella di pistacchi	35 g

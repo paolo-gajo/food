@@ -1,5 +1,0 @@
-ingredient	quantity
-Zucchero a velo	150 g
-Albumi	30 g
-Coloranti alimentari	q.b.
-Limoni qualche	goccia

@@ -1,9 +1,0 @@
-ingredient	quantity
-Cavatelli	320 g
-Zucca mantovana	450 g
-Pancetta dolce a cubetti	200 g
-Timo	2 rametti
-Alloro	1 foglia
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

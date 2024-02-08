@@ -1,5 +1,0 @@
-ingredient	quantity
-Pancetta	400 g
-Pasta per il pane	500 g
-Olio extravergine d'oliva	5 cucchiai
-Pepe nero	q.b.

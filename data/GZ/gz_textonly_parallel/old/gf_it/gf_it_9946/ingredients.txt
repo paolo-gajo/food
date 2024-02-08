@@ -1,9 +1,0 @@
-ingredient	quantity
-Cioccolato bianco	250 g
-Latte condensato	150 g
-Farina 00	100 g
-Burro	100 g
-Uova	2
-Panna fresca liquida	150 ml
-Maraschino	60 ml
-Burro	q.b.

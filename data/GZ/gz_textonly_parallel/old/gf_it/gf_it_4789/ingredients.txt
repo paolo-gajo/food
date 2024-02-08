@@ -1,7 +1,0 @@
-ingredient	quantity
-Ricotta di pecora compatta	350 g
-Uova medie	2
-Sale fino	q.b.
-Pepe nero	q.b.
-Pangrattato	q.b.
-Olio di semi di girasole alto oleico	q.b.

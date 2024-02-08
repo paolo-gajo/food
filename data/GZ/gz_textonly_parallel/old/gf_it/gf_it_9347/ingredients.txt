@@ -1,9 +1,0 @@
-ingredient	quantity
-Scamorza affumicata	500 g
-Pomodorini datterini	230 g
-Olive taggiasche	70 g
-Frutti di cappero 	30 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Rosmarino	4 rametti

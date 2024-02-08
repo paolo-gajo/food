@@ -1,6 +1,0 @@
-ingredient	quantity
-Olio extravergine d'oliva	30 g
-Farina 00	300 g
-Vino bianco secco	115 g
-Vincotto	300 g
-Olio di semi di arachide	1 l

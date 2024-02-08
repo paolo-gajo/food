@@ -1,8 +1,0 @@
-ingredient	quantity
-Carciofi	5
-Olio extravergine d'oliva	5 cucchiai
-Pecorino grattugiato	40 g
-Pangrattato	50 g
-Prezzemolo tritato	3 cucchiai
-Sale fino	q.b.
-Pepe nero	q.b.

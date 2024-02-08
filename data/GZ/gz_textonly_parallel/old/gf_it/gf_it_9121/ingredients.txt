@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucchine	160 g
-Gamberi	12
-Pangrattato	80 g
-Prezzemolo	1 ciuffo
-Scorza di limone (non trattato)	1
-Olio extravergine d'oliva	2 cucchiai
-Sale fino	q.b.
-Pepe nero	q.b.

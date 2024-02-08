@@ -1,5 +1,0 @@
-ingredient	quantity
-Fichi	1,2 kg
-Zucchero	500 g
-Limoni il succo (60 g) e la buccia (15 g)	1
-Acqua	80 g

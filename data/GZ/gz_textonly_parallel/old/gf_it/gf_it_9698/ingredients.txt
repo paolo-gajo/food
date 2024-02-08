@@ -1,6 +1,0 @@
-ingredient	quantity
-Albumi	100 g
-Coloranti alimentari rosso e verde	2 g
-Zucchero a velo	220 g
-Panna fresca liquida	60 g
-Cioccolato bianco	125 g

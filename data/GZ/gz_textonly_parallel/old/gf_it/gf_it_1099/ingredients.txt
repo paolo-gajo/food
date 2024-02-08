@@ -1,9 +1,0 @@
-ingredient	quantity
-Lamponi	150 g
-Mirtilli	100 g
-Fragole	350 g
-Latte intero	400 g
-Zucchero	150 g
-Panna fresca liquida	250 g
-Albumi (di uova medie)	2
-Succo di limone	1

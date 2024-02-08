@@ -1,8 +1,0 @@
-ingredient	quantity
-Uova (circa 1 medio)	50 g
-Zucchero	120 g
-Burro	60 g
-Acqua calda	120 g
-Amido di mais (maizena)	60 g
-Fecola di patate	60 g
-Farina di riso	60 g

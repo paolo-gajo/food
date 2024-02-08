@@ -1,9 +1,0 @@
-ingredient	quantity
-Finocchi ( da 850 g l'uno)	2
-Pangrattato	150 g
-Uova	3
-Sale fino	q.b.
-Pepe nero	q.b.
-Origano fresco	q.b.
-Grana Padano DOP grattugiato	20 g
-Olio di semi	q.b.

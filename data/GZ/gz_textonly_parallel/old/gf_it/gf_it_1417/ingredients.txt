@@ -1,9 +1,0 @@
-ingredient	quantity
-Caffè 2tazze da	caffè
-Ghiaccio vaschette	2
-Latte intero	250 ml
-Zucchero	3 cucchiai
-Cacao amaro in polvere	2 cucchiaini
-Panna fresca liquida	q.b.
-Chicchi di caffè	8
-Cacao amaro in polvere	q.b.

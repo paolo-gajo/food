@@ -1,6 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfoglie classiche al forno	12
-Cavolo nero	200 g
-Speck	70 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

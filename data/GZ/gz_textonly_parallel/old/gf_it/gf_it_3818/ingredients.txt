@@ -1,9 +1,0 @@
-ingredient	quantity
-Carciofi	600 g
-Ricotta di pecora	250 g
-Uova (medie)	2
-Parmigiano Reggiano DOP	100 g
-Pangrattato	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	q.b.

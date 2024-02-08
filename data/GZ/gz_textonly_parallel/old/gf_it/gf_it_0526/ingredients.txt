@@ -1,9 +1,0 @@
-ingredient	quantity
-Finocchi	840 g
-Arance	2
-Pinoli	50 g
-Uvetta	20 g
-Sale	q.b.
-Olio di oliva extravergine di oliva	50 g
-Aceto di mele	3 g
-Semi di zucca	8 g

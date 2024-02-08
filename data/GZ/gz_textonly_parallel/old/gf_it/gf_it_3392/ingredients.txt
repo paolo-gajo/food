@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova medie	8
-Mazzancolle	800 g
-Prezzemolo	4 rametti
-Scalogno	1
-Aglio	1 spicchio
-Olio extravergine d'oliva	20 g
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova grandi	6
-Barba di frate (agretti) da pulire	250 g
-Grana Padano DOP	30 g
-Speck	50 g
-Primosale	200 g
-Olio extravergine d'oliva	6 cucchiai
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Peperoni gialli	350 g
-Peperoni rossi	350 g
-Prezzemolo	1 ciuffo
-Aglio	1 spicchio
-Peperoncino fresco	1
-Pinoli	1 cucchiaio
-Acciughe sott'olio filetti	12
-Olio extravergine d'oliva	q.b.

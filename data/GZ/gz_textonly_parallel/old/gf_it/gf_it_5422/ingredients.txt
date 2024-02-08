@@ -1,9 +1,0 @@
-ingredient	quantity
-Patate rosse	1 kg
-Pecorino romano stagionato	100 g
-Pepe nero in grani	2 cucchiaini
-Pepe bianco in grani	2 cucchiaini
-Uova	1
-Uova	3
-Pangrattato	100 g
-Olio di semi	q.b.

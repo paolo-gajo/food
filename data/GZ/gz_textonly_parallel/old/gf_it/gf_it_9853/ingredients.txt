@@ -1,9 +1,0 @@
-ingredient	quantity
-Burro freddo	200 g
-Farina 00	250 g
-Farina di mandorle	170 g
-Cacao amaro in polvere	20 g
-Zucchero a velo	180 g
-Uova (1 intero)	55 g
-Zucchero	70 g
-Cannella in polvere	½ cucchiaino

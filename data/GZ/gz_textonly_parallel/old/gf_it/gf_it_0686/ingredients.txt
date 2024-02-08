@@ -1,8 +1,0 @@
-ingredient	quantity
-Uova (medie)	4
-Passata di pomodoro	500 g
-Cipolle dorate (piccola)	1
-Prezzemolo	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

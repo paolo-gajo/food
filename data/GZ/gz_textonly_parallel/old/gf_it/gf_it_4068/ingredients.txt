@@ -1,8 +1,0 @@
-ingredient	quantity
-Trofie	320 g
-Gorgonzola dolce	350 g
-Panna fresca liquida	150 g
-Gherigli di noci	100 g
-Timo	q.b.
-Pepe nero	q.b.
-Sale fino	q.b.

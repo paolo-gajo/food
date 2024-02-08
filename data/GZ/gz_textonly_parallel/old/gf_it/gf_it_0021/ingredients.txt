@@ -1,9 +1,0 @@
-ingredient	quantity
-Avocado maturo	1
-Peperoncino verde	1
-Pomodori ramati	1
-Olio extravergine d'oliva	20 g
-Succo di lime	10 g
-Scalogno	10 g
-Pepe nero	1 pizzico
-Sale fino	1 pizzico

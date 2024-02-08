@@ -1,9 +1,0 @@
-ingredient	quantity
-Stracchino	120 g
-Penne Rigate	320 g
-Bresaola	100 g
-Pomodorini ciliegino	8
-Rucola	40 g
-Latte intero	1 cucchiaio
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

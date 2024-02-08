@@ -1,6 +1,0 @@
-ingredient	quantity
-Strutto	2 cucchiaini
-Sale	1 cucchiaino
-Zucchero	1 cucchiaino
-Cipolle bianche	2,5 kg
-Pomodori pelati	200 g

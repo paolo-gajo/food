@@ -1,8 +1,0 @@
-ingredient	quantity
-Filetto di maiale	500 g
-Zenzero fresco	25 gr
-Salsa di soia	30 g
-Miele millefiori	2 cucchiai
-Olio di sesamo	2 cucchiai
-Peperoncino fresco	5 g
-Sale fino	q.b.

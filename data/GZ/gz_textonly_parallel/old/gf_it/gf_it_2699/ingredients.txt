@@ -1,8 +1,0 @@
-ingredient	quantity
-Acqua	450 ml
-Farina 00	500 g
-Sale fino	5 g
-Monte Veronese Stravecchio	75 g
-Grana Padano DOP	75 g
-Burro	150 g
-Salvia	q.b.

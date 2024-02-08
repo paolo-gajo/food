@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	300 g
-Zucchero a velo	110 g
-Uova	2
-Burro	110 g
-Scorza di limone	½
-Marmellata di arance	400 g
-Mango	500 g
-Gelatina (per lucidare)	20 g

@@ -1,8 +1,0 @@
-ingredient	quantity
-Latte	500 g
-Tuorli	4
-Zucchero	100 g
-Limoni	1
-Cannella in stecche	1
-Amido di mais (maizena)	25 g
-Zucchero di canna	q.b.

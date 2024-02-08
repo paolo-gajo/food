@@ -1,7 +1,0 @@
-ingredient	quantity
-Schiacciate al forno	12
-Bresaola	12 fette
-Robiola	200 g
-Erba cipollina	1 mazzetto
-Sale fino	q.b.
-Pepe nero	q.b.

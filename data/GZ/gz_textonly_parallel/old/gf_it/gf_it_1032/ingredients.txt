@@ -1,5 +1,0 @@
-ingredient	quantity
-Patate	800 g
-Olio extravergine d'oliva	140 ml
-Peperoni gialli	300 g
-Peperoni rossi	300 g

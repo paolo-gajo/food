@@ -1,5 +1,0 @@
-ingredient	quantity
-Farina di riso	150 g
-Uova	5
-Zucchero	150 g
-Baccello di vaniglia	1

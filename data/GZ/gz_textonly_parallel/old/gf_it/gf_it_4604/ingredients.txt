@@ -1,8 +1,0 @@
-ingredient	quantity
-Tagliolini all'uovo	250 g
-Filetto di salmone	400 g
-Vino bianco secco	60 g
-Cipollotto fresco	½
-Prezzemolo	1 ciuffo
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

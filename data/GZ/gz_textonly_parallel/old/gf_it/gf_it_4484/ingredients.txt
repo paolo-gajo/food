@@ -1,9 +1,0 @@
-ingredient	quantity
-Spaghetti	400 g
-Peperoni gialli	1,4 kg
-Tofu	250 g
-Paprika dolce	1 cucchiaio
-Ricotta salata	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

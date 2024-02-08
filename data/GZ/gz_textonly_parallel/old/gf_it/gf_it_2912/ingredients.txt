@@ -1,9 +1,0 @@
-ingredient	quantity
-Burro	120 g
-Farina 00	125 g
-Uova	2
-Zucchero	20 g
-Acqua	250 ml
-Sale fino	1 pizzico
-Olio di semi di arachide	q.b.
-Zucchero	q.b.

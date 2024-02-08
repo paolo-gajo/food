@@ -1,8 +1,0 @@
-ingredient	quantity
-Latte intero	600 ml
-Panna fresca liquida	250 ml
-Zucchero	250 g
-Gocce di cioccolato fondente	100 g
-Baccello di vaniglia	1
-Farina 00	360 g
-Lievito in polvere per dolci	1 bustina

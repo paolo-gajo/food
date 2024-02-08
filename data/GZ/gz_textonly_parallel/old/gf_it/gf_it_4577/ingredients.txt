@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	50 g
-Farina di grano saraceno	150 g
-Uova medie	3
-Acqua circa	100 ml
-Sale fino	q.b.
-Panna fresca liquida	250 ml
-Pancetta affumicata	130 g
-Pepe nero	q.b.

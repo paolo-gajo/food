@@ -1,9 +1,0 @@
-ingredient	quantity
-Acqua	250 g
-Olio di semi di girasole	30 g
-Farina 00	150 g
-Uova medio	1
-Sale fino	1 pizzico
-Olio di semi di girasole	q.b.
-Zucchero	100 g
-Cannella in polvere (facoltativa)	1 cucchiaino

@@ -1,9 +1,0 @@
-ingredient	quantity
-Calamari (da pulire)	1 kg
-Pane	220 g
-Succo di limone	60 g
-Scorza di limone	1
-Basilico	30 g
-Olio extravergine d'oliva	50 g
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,9 +1,0 @@
-ingredient	quantity
-Strutto	70 g
-Farina di grano duro	500 g
-Uova medio	1
-Acqua tiepida	250 g
-Pecorino fresco	500 g
-Acqua	70 g
-Scorza di limone	1
-Miele di castagno	q.b.

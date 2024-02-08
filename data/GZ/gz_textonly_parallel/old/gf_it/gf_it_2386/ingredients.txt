@@ -1,6 +1,0 @@
-ingredient	quantity
-Cioccolato bianco	200 g
-Latte condensato	250 g
-Farina 00	80 g
-Burro	100 g
-Uova	1

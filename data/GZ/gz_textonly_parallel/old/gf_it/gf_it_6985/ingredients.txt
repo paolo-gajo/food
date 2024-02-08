@@ -1,9 +1,0 @@
-ingredient	quantity
-Zucchine	800 g
-Basilico	4 foglie
-Menta	4 foglie
-Sale grosso	1 cucchiaio
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.
-Aglio	1 spicchio

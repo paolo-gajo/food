@@ -1,5 +1,0 @@
-ingredient	quantity
-Spinaci	1 kg
-Burro	100 g
-Pinoli	80 g
-Uva passa	100 g

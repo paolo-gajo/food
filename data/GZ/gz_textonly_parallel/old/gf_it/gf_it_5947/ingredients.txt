@@ -1,9 +1,0 @@
-ingredient	quantity
-Cioccolato fondente	150 g
-Cacao amaro in polvere	50 g
-Farina 00	180 g
-Zucchero semolato	180 g
-Uova medie, a temperatura ambiente	6
-Burro a temperatura ambiente	200 g
-Lievito in polvere per dolci	8 g
-Sale fino	1 pizzico

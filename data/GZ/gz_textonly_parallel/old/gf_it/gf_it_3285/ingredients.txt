@@ -1,9 +1,0 @@
-ingredient	quantity
-Funghi portobello	600 g
-Patate rosse	700 g
-Pasta di salame	130 g
-Pecorino da grattugiare	60 g
-Rosmarino	q.b.
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

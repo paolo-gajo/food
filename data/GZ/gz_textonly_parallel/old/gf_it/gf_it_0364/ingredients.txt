@@ -1,7 +1,0 @@
-ingredient	quantity
-Acqua naturale, a temperatura ambiente	330 g
-Farina 00	300 g
-Zucchero	200 g
-Lievito in polvere per dolci	16 g
-Olio di semi	90 g
-Baccello di vaniglia	1

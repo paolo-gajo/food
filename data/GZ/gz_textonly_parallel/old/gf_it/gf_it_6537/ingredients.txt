@@ -1,8 +1,0 @@
-ingredient	quantity
-Acqua	185 g
-Bicarbonato	30 g
-Sale fino	5 g
-Lievito di birra secco	2 g
-Burro a temperatura ambiente	15 g
-Farina 00	340 g
-Uova	1

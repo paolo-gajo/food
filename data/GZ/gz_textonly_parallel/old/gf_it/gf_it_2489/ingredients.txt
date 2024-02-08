@@ -1,9 +1,0 @@
-ingredient	quantity
-Tonno filetto	400 g
-Cavolo rosso	500 g
-Salsa di soia	50 g
-Aceto di vino bianco	100 g
-Sale fino	30 g
-Olio extravergine d'oliva	20 g
-Basilico	4 foglie
-Semi di sesamo	30 g

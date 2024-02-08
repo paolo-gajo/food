@@ -1,5 +1,0 @@
-ingredient	quantity
-Menta (piperita)	125 g
-Alcol puro	96%500 g
-Acqua	500 g
-Zucchero	300 g

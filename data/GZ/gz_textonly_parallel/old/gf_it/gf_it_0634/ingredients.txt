@@ -1,3 +1,0 @@
-ingredient	quantity
-Pomodori San Marzano	2 kg
-Basilico	q.b.

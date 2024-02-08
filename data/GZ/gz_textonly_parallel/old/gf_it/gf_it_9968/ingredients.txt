@@ -1,8 +1,0 @@
-ingredient	quantity
-Filetti di nasello	300 g
-Pompelmi rosa	300 g
-Quinoa	25 g
-Olive taggiasche denocciolate	60 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

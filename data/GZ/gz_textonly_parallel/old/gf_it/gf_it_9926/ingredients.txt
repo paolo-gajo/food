@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	190 g
-Uova (circa 5)	260 g
-Olio di semi	120 g
-Zucchero	180 g
-Lievito in polvere per dolci	10 g
-Amaretti	40 g
-Pere coscia mondate	400 g
-Zucchero a velo per guarnire	q.b.

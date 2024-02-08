@@ -1,6 +1,0 @@
-ingredient	quantity
-Panna fresca liquida	300 g
-Grana Padano DOP (Riserva oltre 20 mesi)	100 g
-Tuorli	3
-Noce moscata	q.b.
-Zucchero	1 cucchiaino

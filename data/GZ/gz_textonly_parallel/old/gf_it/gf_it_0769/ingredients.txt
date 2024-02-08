@@ -1,4 +1,0 @@
-ingredient	quantity
-Pesche gialle	1 kg
-Zucchero	250 g
-Succo di limone	50 g

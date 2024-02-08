@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	250 g
-Zucchero a velo	100 g
-Burro	125 g
-Uova	1
-Scorza di limone	½
-Confettura di ananas	145 g
-Zucchero a velo	q.b.

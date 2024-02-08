@@ -1,8 +1,0 @@
-ingredient	quantity
-Cozze	1 kg
-Vongole	1 kg
-Aglio	3 spicchi
-Olio extravergine d'oliva	½ bicchiere
-Pepe nero	q.b.
-Pomodorini ciliegino	100 g
-Prezzemolo da tritare	2 cucchiai

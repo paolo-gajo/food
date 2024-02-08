@@ -1,9 +1,0 @@
-ingredient	quantity
-Sale grosso	300 g
-Carote gli scarti	q.b.
-Zucchine gli scarti	q.b.
-Peperoni gli scarti	q.b.
-Cipolle le bucce	q.b.
-Patate le bucce	q.b.
-Cipollotto fresco gli scarti	q.b.
-Melanzane gli scarti	q.b.

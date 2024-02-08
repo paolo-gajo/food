@@ -1,9 +1,0 @@
-ingredient	quantity
-Confettura di albicocche	4 cucchiai
-Pan di Spagna	400 g
-Cioccolato bianco	200 g
-Cioccolato fondente	200 g
-Cocco rapè	q.b.
-Codette bianche	q.b.
-Granella di nocciole	q.b.
-Perline di zucchero colorate	q.b.

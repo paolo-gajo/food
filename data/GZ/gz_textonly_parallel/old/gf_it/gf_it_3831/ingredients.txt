@@ -1,6 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia	230 g
-Pancetta dolce	150 g
-Caprino vaccino	160 g
-Panna fresca liquida	120 g
-Prezzemolo	q.b.

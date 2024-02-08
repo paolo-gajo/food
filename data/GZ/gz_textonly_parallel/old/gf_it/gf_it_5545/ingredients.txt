@@ -1,9 +1,0 @@
-ingredient	quantity
-Pane di segale	2 fette
-Fichi (2)	190 g
-Ricotta di capra	100 g
-Panna fresca liquida	25 g
-Gherigli di noci	10 g
-Finocchietto selvatico	q.b.
-Sale fino	q.b.
-Pepe nero	q.b.

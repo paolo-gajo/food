@@ -1,5 +1,0 @@
-ingredient	quantity
-Fragole	250 g
-Latte intero	180 g
-Zucchero	5 g
-Ghiaccio	50 g

@@ -1,8 +1,0 @@
-ingredient	quantity
-Cioccolato fondente (al 55%)	200 g
-Burro (a temperatura ambiente)	100 g
-Biscotti secchi	100 g
-Zucchero	150 g
-Rum	10 g
-Cacao amaro in polvere	10 g
-Zucchero a velo	q.b.

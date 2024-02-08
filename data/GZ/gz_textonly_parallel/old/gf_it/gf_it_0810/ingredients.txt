@@ -1,6 +1,0 @@
-ingredient	quantity
-Vodka	50 ml
-Ghiaccio tritato grossolanamente	q.b.
-Fragole	50 g
-Lime	30 g
-Zucchero di canna	20 g

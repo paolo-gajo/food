@@ -1,9 +1,0 @@
-ingredient	quantity
-Sedanini Rigati	320 g
-Melanzane	350 g
-Pomodorini ciliegino	250 g
-Basilico qualche	foglia
-Cipollotto fresco	100 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Olio extravergine d'oliva	30 g

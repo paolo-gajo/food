@@ -1,9 +1,0 @@
-ingredient	quantity
-Pere abate	400 g
-Ricotta vaccina	350 g
-Farina 00	250 g
-Lievito in polvere per dolci	16 g
-Uova medie	3
-Zucchero	170 g
-Scorza di limone	1
-Baccello di vaniglia	1

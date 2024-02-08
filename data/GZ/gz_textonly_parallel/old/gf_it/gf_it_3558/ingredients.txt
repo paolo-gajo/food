@@ -1,7 +1,0 @@
-ingredient	quantity
-Acqua	300 g
-Farina 00	150 g
-Grana Padano DOP da grattugiare	90 g
-Fontina	70 g
-Burro	50 g
-Uova medie	4

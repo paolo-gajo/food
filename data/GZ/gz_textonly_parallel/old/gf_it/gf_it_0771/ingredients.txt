@@ -1,8 +1,0 @@
-ingredient	quantity
-Caffè	150 ml
-Panna fresca liquida	500 ml
-Zucchero	100 g
-Gelatina in fogli	8 g
-Baccello di vaniglia	½
-Cioccolato fondente	100 g
-Caffè	80 ml

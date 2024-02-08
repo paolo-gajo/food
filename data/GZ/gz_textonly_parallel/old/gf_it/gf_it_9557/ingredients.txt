@@ -1,9 +1,0 @@
-ingredient	quantity
-Pasta Sfoglia (2 rotoli)	460 g
-Confettura di fragole	40 g
-Cioccolato fondente	80 g
-Banane	1
-Fragole	150 g
-Uova	1
-Semi di zucca	20 g
-Granella di zucchero	q.b.

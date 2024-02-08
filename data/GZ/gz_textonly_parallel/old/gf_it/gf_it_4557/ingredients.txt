@@ -1,8 +1,0 @@
-ingredient	quantity
-Farro	120 g
-Broccoli puliti	300 g
-Gherigli di noci	50 g
-Pomodori secchi	30 g
-Olive nere denocciolate	50 g
-Gorgonzola	50 g
-Olio extravergine d'oliva	3 cucchiai

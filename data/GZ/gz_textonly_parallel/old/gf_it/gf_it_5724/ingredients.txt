@@ -1,6 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfoglie classiche	12
-Speck pezzo intero	50 g
-Pere Williams	100 g
-Acqua	40 ml
-Rosmarino	q.b.

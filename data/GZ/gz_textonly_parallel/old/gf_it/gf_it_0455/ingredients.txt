@@ -1,9 +1,0 @@
-ingredient	quantity
-Brodo vegetale	800 g
-Sale fino	q.b.
-Pepe nero	q.b.
-Noce moscata	1 pizzico
-Porri	130 g
-Zucca pulita	1 kg
-Panna fresca liquida	100 g
-Olio extravergine d'oliva	40 g

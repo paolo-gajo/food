@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 00	350 g
-Zucchero	220 g
-Burro a temperatura ambiente	120 g
-Amido di mais (maizena)	50 g
-Uova medie	4
-Limoni non trattati	2
-Lievito in polvere per dolci	16 g
-Burro	q.b.

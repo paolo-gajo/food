@@ -1,8 +1,0 @@
-ingredient	quantity
-Miele millefiori	500 g
-Farina 00	550 g
-Tuorli medi	3
-Lievito in polvere per dolci	8 g
-Miele millefiori	200 g
-Codetta	q.b.
-Farina 00	q.b.

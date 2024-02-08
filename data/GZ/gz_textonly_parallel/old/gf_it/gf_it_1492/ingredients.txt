@@ -1,9 +1,0 @@
-ingredient	quantity
-Nutella®	150 g
-Farina di riso	180 g
-Fecola di patate	20 g
-Zucchero a velo	50 g
-Burro freddo	75 g
-Uova piccolo	1
-Sale fino	1 pizzico
-Zucchero a velo	q.b.

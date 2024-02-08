@@ -1,8 +1,0 @@
-ingredient	quantity
-Mezzi Canneroni	350 g
-Caciocavallo silano	300 g
-Nduja stagionata	200 g
-Parmigiano Reggiano DOP grattugiato	50 g
-Pangrattato	15 g
-Olio extravergine d'oliva	30 g
-Origano	q.b.

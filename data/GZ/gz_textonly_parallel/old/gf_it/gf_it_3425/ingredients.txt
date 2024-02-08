@@ -1,8 +1,0 @@
-ingredient	quantity
-Fasolari	12
-Pane casereccio	100 g
-Prezzemolo da tritare	1 ciuffo
-Pepe nero	q.b.
-Grana Padano DOP (da grattugiare)	50 g
-Aglio	1 spicchio
-Olio extravergine d'oliva	2 cucchiai

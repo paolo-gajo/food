@@ -1,4 +1,0 @@
-ingredient	quantity
-Fragole	500 g
-Zucchero	140 g
-Succo di limone	50 g

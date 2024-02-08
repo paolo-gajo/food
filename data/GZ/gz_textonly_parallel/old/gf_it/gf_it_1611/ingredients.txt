@@ -1,8 +1,0 @@
-ingredient	quantity
-Arance tarocco	1,2 kg
-Cipolle rosse	80 g
-Olive nere	110 g
-Basilico	3 foglie
-Olio extravergine d'oliva	40 g
-Pepe nero	q.b.
-Sale fino	q.b.

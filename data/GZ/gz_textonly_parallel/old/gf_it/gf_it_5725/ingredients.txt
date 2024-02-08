@@ -1,7 +1,0 @@
-ingredient	quantity
-La Bottega di Olivia&Marino sfoglie classiche	12
-Scampi	600 g
-Aceto balsamico	15 g
-Pepe rosa in grani	1 g
-Olio extravergine d'oliva	q.b.
-Sale fino	q.b.

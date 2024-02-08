@@ -1,9 +1,0 @@
-ingredient	quantity
-Patate	500 g
-Farina 00	150 g
-Burro	40 g
-Uova	1
-Zucchero	5 g
-Sale fino	5 g
-Pepe nero	q.b.
-Olio extravergine d'oliva	700 g

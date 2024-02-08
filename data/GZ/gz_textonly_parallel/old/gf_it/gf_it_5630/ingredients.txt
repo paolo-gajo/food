@@ -1,8 +1,0 @@
-ingredient	quantity
-Pesce spada affumicato	100 g
-Menta	5 g
-La Bottega di Olivia&Marino spianantine	12
-Succo di limone	1
-Olio extravergine d'oliva	50 ml
-Sale fino	q.b.
-Pepe nero	q.b.

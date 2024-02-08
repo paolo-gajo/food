@@ -1,9 +1,0 @@
-ingredient	quantity
-Melanzane lunghe	800 g
-Pane francesini	4
-Aglio	3 g
-Menta	3 g
-Aceto di vino bianco	10 g
-Olio extravergine d'oliva	75 g
-Sale fino	q.b.
-Pepe nero	q.b.

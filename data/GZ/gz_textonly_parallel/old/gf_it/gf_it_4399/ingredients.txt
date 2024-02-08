@@ -1,9 +1,0 @@
-ingredient	quantity
-Gorgonzola piccante	150 gr
-Farina	300 g
-Patate farinose	1 kg
-Uova	1
-Sale	q.b.
-Salvia	1 rametto
-Burro	100 g
-Grana Padano DOP (da grattugiare)	50 g

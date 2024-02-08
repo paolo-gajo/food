@@ -1,6 +1,0 @@
-ingredient	quantity
-Fagiolini	300 g
-Farina 00	150 g
-Acqua	190 g
-Pangrattato	150 g
-Olio di semi di arachide (per friggere)	500 g

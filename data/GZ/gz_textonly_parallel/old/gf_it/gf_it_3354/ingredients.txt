@@ -1,5 +1,0 @@
-ingredient	quantity
-Ricciola	600 g
-Sale fino	150 g
-Zucchero di canna	150 g
-Aneto	1 ciuffo

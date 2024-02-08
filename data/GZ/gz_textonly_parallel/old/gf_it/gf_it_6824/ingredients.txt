@@ -1,5 +1,0 @@
-ingredient	quantity
-Uova	4
-Olio extravergine d'oliva	80 g
-Fiocchi di sale	q.b.
-Pepe nero	q.b.

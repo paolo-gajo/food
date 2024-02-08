@@ -1,8 +1,0 @@
-ingredient	quantity
-Semola di grano duro rimacinata	200 g
-Farina 00	400 g
-Acqua	400 g
-Lievito di birra secco	7 g
-Sale fino	16 g
-Scamorza affumicata	180 g
-Edamer	100 g

@@ -1,8 +1,0 @@
-ingredient	quantity
-Mandorle pelate	200 g
-Zucchero	140 g
-Zucchero a velo	125 g
-Albumi	50 g
-Mandorle armelline	15 g
-Ammoniaca per dolci	3 g
-Estratto di mandorla amaro (facoltativo)	q.b.

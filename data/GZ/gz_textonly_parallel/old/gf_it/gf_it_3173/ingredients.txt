@@ -1,6 +1,0 @@
-ingredient	quantity
-Melanzane	500 g
-Aceto di vino bianco	350 g
-Aglio	3 spicchi
-Olio extravergine d'oliva	400 g
-Acqua	350 g

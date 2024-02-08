@@ -1,9 +1,0 @@
-ingredient	quantity
-Burro a temperatura ambiente	80 g
-Farina 00	270 g
-Uova (3 intere a temperatura ambiente )	165 g
-Zucchero semolato	125 g
-Succo d'arancia	180 g
-Scorza d'arancia	2
-Lievito in polvere per dolci	10 g
-Zucchero a velo	q.b.

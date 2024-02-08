@@ -1,9 +1,0 @@
-ingredient	quantity
-Octopus	2 ¼ lbs	(1 kg)
-Potatoes	2 ¼ lbs	(1 kg)
-Bay leaves	2  leaves
-Parsley	1  bunch
-Black pepper	to taste
-Extra virgin olive oil	0.3 cup	(60 g)
-Fine salt	to taste
-Lemon juice	¼ cup	(60 g)

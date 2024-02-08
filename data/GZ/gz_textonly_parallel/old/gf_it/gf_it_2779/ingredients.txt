@@ -1,9 +1,0 @@
-ingredient	quantity
-Farina 0	385 g
-Birra rossa	250 g
-Lievito di birra fresco	4 g
-Sale fino	10 g
-Bicarbonato	1 cucchiaio
-Semi di finocchio	q.b.
-Semi di sesamo	q.b.
-Fiocchi di sale	q.b.

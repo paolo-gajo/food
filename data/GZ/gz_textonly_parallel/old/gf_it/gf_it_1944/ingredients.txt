@@ -1,8 +1,0 @@
-ingredient	quantity
-Colomba	440 g
-Latte intero	100 g
-Ricotta vaccina	250 g
-Zucchero a velo	10 g
-Uova 1 medio	50 g
-Cioccolato fondente	40 g
-Granella di nocciole	20 g

@@ -1,6 +1,0 @@
-ingredient	quantity
-Zucchero	100 g
-Acqua	40 g
-Cremor tartaro	1 pizzico
-Coloranti alimentari ¼	cucchiaino
-Aroma all'arancia	2 gocce

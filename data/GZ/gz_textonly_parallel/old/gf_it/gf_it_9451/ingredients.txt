@@ -1,9 +1,0 @@
-ingredient	quantity
-Uova (circa 2 medie)	110 g
-Farina 00	100 g
-Zucchero	70 g
-Lievito in polvere per dolci	4 g
-Panna fresca liquida	200 g
-Zucchero a velo	20 g
-Confettura di lamponi	100 g
-Cioccolato fondente	30 g

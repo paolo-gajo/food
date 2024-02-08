@@ -1,7 +1,0 @@
-ingredient	quantity
-Gamberoni	12
-Sale fino	q.b.
-Olio extravergine d'oliva	50 g
-Succo di limone	25 g
-Prezzemolo	1 ciuffo
-Aglio	1 spicchio

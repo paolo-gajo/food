@@ -1,4 +1,0 @@
-ingredient	quantity
-Prugne disidratate denocciolate	8
-Bacon	8 fette
-Salvia	8 foglie

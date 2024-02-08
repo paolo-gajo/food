@@ -1,7 +1,0 @@
-ingredient	quantity
-Uova	6
-Stracchino	100 g
-Prosciutto cotto	100 g
-Burro	40 g
-Sale fino	q.b.
-Pepe nero	q.b.

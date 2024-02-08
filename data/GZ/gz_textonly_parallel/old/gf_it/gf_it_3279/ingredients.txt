@@ -1,7 +1,0 @@
-ingredient	quantity
-Ortiche	400 g
-Uova	5
-Burro	40 g
-Parmigiano Reggiano DOP da grattugiare	40 g
-Sale fino	q.b.
-Pepe nero	q.b.

@@ -1,8 +1,0 @@
-ingredient	quantity
-Farina 00	500 g
-Burro	250 g
-Zucchero a velo	200 g
-Uova medie	2
-Scorza di limone non trattato	1
-Zucchero a velo	100 g
-Acqua	2 cucchiai

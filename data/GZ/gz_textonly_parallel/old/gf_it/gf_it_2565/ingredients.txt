@@ -1,5 +1,0 @@
-ingredient	quantity
-Acqua	1 l
-Zucchero	700 g
-Aperol	700 ml
-Arance non trattate	3
