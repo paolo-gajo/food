@@ -2,13 +2,13 @@ import os
 import json
 import pandas as pd
 from typing import List, Union
-from datasets import Dataset, DatasetDict
+from datasets import Dataset, DatasetDict, load_dataset
 from tqdm.auto import tqdm
 import random
 from torch.utils.data import DataLoader
 import uuid
 import torch
-from huggingface_hub import login, ModelCard, ModelCardData, HfApi, CommitOperationAdd
+from huggingface_hub import ModelCard, ModelCardData, DatasetCard, DatasetCardData
 from datetime import datetime
 import copy
 from transformers import AutoTokenizer
@@ -183,7 +183,8 @@ class TASTEset(DatasetDict):
     def __init__(self,
         input_data,
         *,
-        tokenizer,
+        tokenizer_name = '',
+        data_path = '',
         src_lang = 'en',
         shuffle_languages = ['it'],
         drop_duplicates = True,
@@ -235,72 +236,91 @@ class TASTEset(DatasetDict):
             aligned (`bool`, defaults to `True`):
                 If `True`, the output dataset will include answer data,
                 otherwise if `False` only 'query' and 'context' lines will be available for each sample.
-                Essentially, set to `False` to create an unannotated dataset,
-                `True` to make a training dataset when starting from an already annotated dataset.
+                Set to `False` to create an unannotated dataset, for annotation.
+                Set to `True` to make a training dataset when starting from an already annotated dataset.
             n_rows (`int`, defaults to `None`):
                 Defines how many lines are going to be kept in the dataset. Normally used to speed up testing.
             
         Returns:
             `TASTEset`: The raw dataset in the Hugging Face dictionary format.
         '''
-        self.name = 'tasteset'
-        self.data_path = input_data['path']
-        self.input_data = input_data['annotations']
-        self.tokenizer = tokenizer
-        if not hasattr(self.tokenizer, 'sep'):
-            self.tokenizer.sep = None
-        self.rm_char = [' ', ';']
-        self.shuffle_languages = shuffle_languages
-        if isinstance(self.shuffle_languages, str):
-            self.shuffle_languages = self.shuffle_languages.split()
-        self.src_lang = src_lang
-        self.drop_duplicates = drop_duplicates
-        self.src_context = src_context
-        self.shuffled_size = shuffled_size
-        self.unshuffled_size = unshuffled_size
-        self.dev_size = dev_size
-        self.samples = []
-        self.shuffled_samples = []
-        self.unshuffled_samples = []
-        self.debug_dump = debug_dump
-        self.aligned = aligned
-        if not self.aligned:
-            self.drop_duplicates = False
-            print("Input data is unaligned, setting 'drop_duplicates' to False.")
-        self.n_rows = n_rows
-        self.raw_data = self.prep_data()
+        self.name = 'TASTEset'
+        if isinstance(input_data, DatasetDict):
+            input_data.set_format('torch', columns = ['input_ids',
+                                'token_type_ids',
+                                'attention_mask',
+                                'start_positions',
+                                'end_positions']
+                                )
+            self['train'] = input_data['train']
+            self['dev'] = input_data['dev']
 
-        if self.aligned:
-            dataset = self.map(
-                lambda sample: self.qa_tokenize(sample, self.tokenizer),
-                batched = True,
-                batch_size = batch_size,
-                )
+        else:
+            self.input_data = input_data['annotations']
+            self.data_path = data_path
+            self.tokenizer_name = tokenizer_name
+            self.tokenizer = AutoTokenizer.from_pretrained(self.tokenizer_name)
+            self.rm_char = [' ', ';']
+            self.shuffle_languages = shuffle_languages
+            self.src_lang = src_lang
+            self.drop_duplicates = drop_duplicates
+            self.src_context = src_context
+            self.shuffled_size = shuffled_size
+            self.unshuffled_size = unshuffled_size
+            self.dev_size = dev_size
+            self.debug_dump = debug_dump
+            self.aligned = aligned
+            self.n_rows = n_rows
+            self.unshuffled_samples = []
+            self.shuffled_samples = []
+            if not hasattr(self.tokenizer, 'sep'):
+                self.tokenizer.sep = None
+
+            if isinstance(self.shuffle_languages, str):
+                self.shuffle_languages = self.shuffle_languages.split()
+
+            if not self.aligned:
+                self.drop_duplicates = False
+                print("Input data is unaligned, setting 'drop_duplicates' to False.")
             
-            for key in dataset.keys():
-                self[key] = dataset[key]
-            
-            self.set_format('torch', columns = ['input_ids',
-                                        'token_type_ids',
-                                        'attention_mask',
-                                        'start_positions',
-                                        'end_positions']
-                                        )
+            self.prep_data()
+
+            if self.aligned:
+                dataset = self.map(
+                    lambda sample: self.qa_tokenize(sample),
+                    batched = True,
+                    batch_size = batch_size,
+                    )
+                
+                for key in dataset.keys():
+                    self[key] = dataset[key]
+                
+                self.set_format('torch', columns = ['input_ids',
+                                            'token_type_ids',
+                                            'attention_mask',
+                                            'start_positions',
+                                            'end_positions']
+                                            )
         
     @classmethod
     def from_json(cls,
                   json_path,
-                  *,
-                  tokenizer,
+                  tokenizer_name,
                   **kwargs
-                  ) -> "TASTEset":
+                  ):
         input_data = json.load(open(json_path))
-        input_data['path'] = json_path
         return cls(
             input_data,
-            tokenizer = tokenizer,
+            data_path = json_path,
+            tokenizer_name = tokenizer_name,
             **kwargs
         )
+    
+    @classmethod
+    def from_datasetdict(cls,
+                         repo_id):
+        data = load_dataset(repo_id)
+        return cls(data)
 
     def prep_data(self) -> 'DatasetDict':
         if self.unshuffled_size:
@@ -318,12 +338,12 @@ class TASTEset(DatasetDict):
                 dump_suffix = 'aligned_qa'
             else:
                 dump_suffix = 'unaligned_qa'
-            json.dump(df_list, open(self.data_path.replace('.json', f'_{dump_suffix}.json'), 'w'), ensure_ascii=False)
+            json.dump(df_list, open(self.data_path.replace('.json', f'_{dump_suffix}_dump.json'), 'w'), ensure_ascii=False)
         ds_dict = Dataset.from_list(df_list).train_test_split(test_size = self.dev_size)
+
         self['train'] = ds_dict['train']
         ds_dict['dev'] = ds_dict.pop('test')
         self['dev'] = ds_dict['dev']
-        return ds_dict
 
     def extend(self, sample_list, extend_ratio = 1):
         int_ratio = int(extend_ratio)
@@ -408,6 +428,21 @@ class TASTEset(DatasetDict):
                         'num_ents': len(original_indexes)})
         return sample
 
+    def qa_tokenize(self, sample):
+        '''
+        Pass this to .map when tokenizing a dataset for QA-style training.
+        Remember to shuffle before using this, otherwise if you shuffle
+        after you get batch size mismatches,
+        since we're using longest in the batch for padding.
+        '''
+        sample.update(self.tokenizer(sample['query'],
+                        sample['context'],
+                        padding = 'longest',
+                        truncation = True,
+                        return_tensors = 'pt'
+                        ))
+        return sample
+
     @staticmethod
     def shuffle_entities(sample, shuffle_lang, verbose = False) -> dict:
         '''
@@ -464,22 +499,6 @@ class TASTEset(DatasetDict):
             print(sample['idx_en'])
             print(sample['idx_it'])
 
-        return sample
-
-    @staticmethod
-    def qa_tokenize(sample: Union[str, List], tokenizer):
-        '''
-        Pass this to .map when tokenizing a dataset for QA-style training.
-        Remember to shuffle before using this, otherwise if you shuffle
-        after you get batch size mismatches,
-        since we're using longest in the batch for padding.
-        '''
-        sample.update(tokenizer(sample['query'],
-                        sample['context'],
-                        padding = 'longest',
-                        truncation = True,
-                        return_tensors = 'pt'
-                        ))
         return sample
 
 class XLWADataset(DatasetDict):
@@ -658,7 +677,7 @@ def data_loader(dataset, batch_size, n_rows = None):
                             )
     return dl_dict
 
-def push_card(repo_id, model_name, model_description = '', language = 'en'):
+def push_model_card(repo_id, model_description = '', results = '', language = 'en', template_path = None):
     repo_id = repo_id
     card_data = ModelCardData(language=language,
                               license='mit',
@@ -667,12 +686,19 @@ def push_card(repo_id, model_name, model_description = '', language = 'en'):
                               )
     card = ModelCard.from_template(
         card_data,
-        model_id = model_name.split('/')[-1],
         model_description = model_description,
+        results = results,
         developers = "Paolo Gajo",
+        template_path=template_path
     )
     card.push_to_hub(repo_id)
     return repo_id
+
+def push_dataset_card(repo_id, *, dataset_summary, template_path = None):
+    DatasetCard.from_template(DatasetCardData(),
+                            dataset_summary=dataset_summary,
+                            template_path = template_path,
+                            ).push_to_hub(repo_id)
 
 def save_local_model(model_dir, model, tokenizer):
     print(f'Saving model to directory: {model_dir}')

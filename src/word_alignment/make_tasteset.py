@@ -1,8 +1,6 @@
-import os
-from utils import TASTEset
+from utils import TASTEset, push_dataset_card
 import warnings
 import argparse
-from transformers import AutoTokenizer
 
 def main():
     parser = argparse.ArgumentParser()
@@ -19,41 +17,41 @@ def main():
 
     args = parser.parse_args()
     # args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL.json'
-    args.unshuffled_size = 1
-    args.shuffled_size = 0
+    args.unshuffled_size = 0
+    args.shuffled_size = 1
     args.drop_duplicates = True
 
-    args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json'
+    # tokenizer_name = 'bert-base-multilingual-cased'
+    tokenizer_name = 'microsoft/mdeberta-v3-base'
 
-    model_name = 'bert-base-multilingual-cased'
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    dataset = TASTEset.from_json(args.input,
-        tokenizer =  tokenizer,
+    args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json'
+    dataset = TASTEset.from_json(
+        args.input,
+        tokenizer_name,
         shuffle_languages = ['it'],
         src_lang = 'en',
         dev_size = 0.2,
         shuffled_size = args.shuffled_size,
         unshuffled_size = args.unshuffled_size,
-        # drop_duplicates = True,
-        debug_dump = True,
-        # n_rows = 10,
-        aligned = False,
         )
     
-    # print(dataset)
-    # print(dataset['train'][0:5])
-    # print(dataset.__class__)
-    
-    # lang_id = '-'.join(args.shuffle_languages.split())
-    # suffix = 'drop_duplicates' if args.drop_duplicates == True else 'keep_duplicates'
-
-    # if not args.output:
-    #     output_path = os.path.join(os.path.dirname(args.input),
-    #                 f'.{args.src_lang}/{args.tokenizer_name.split("/")[-1]}_{lang_id}_{suffix}_shuffled_size_{args.shuffled_size}')
-    #     if not os.path.isdir(output_path):
-    #         os.makedirs(output_path)
-    
-    # dataset.save_to_disk(output_path)
+    tokenizer_dict = {
+        'bert-base-multilingual-cased': 'mbert',
+        'microsoft/mdeberta-v3-base': 'mdeberta',
+    }
+    save_name = f"{tokenizer_dict[tokenizer_name]}_{dataset.name}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_DROP{str(int(dataset.drop_duplicates))}"
+    repo_id = f"pgajo/{save_name}"
+    print('repo_id:', repo_id)
+    dataset.push_to_hub(repo_id)
+    dataset_summary = f'''
+    Tokenizer: {tokenizer_dict[tokenizer_name]}\n
+    Dataset: {dataset.name}\n
+    Unshuffled ratio: {dataset.unshuffled_size}\n
+    Shuffled ratio: {dataset.shuffled_size}\n
+    Drop duplicates: {dataset.drop_duplicates}\n
+    Dataset path = {dataset.data_path}\n
+    '''
+    push_dataset_card(repo_id, dataset_summary=dataset_summary)
 
 if __name__ == '__main__':
     with warnings.catch_warnings():

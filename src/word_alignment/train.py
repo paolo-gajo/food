@@ -2,14 +2,13 @@ import warnings
 import os
 import torch
 from tqdm.auto import tqdm
-from datasets import DatasetDict
 from evaluate import load
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
-from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, save_local_model, push_card
-from datetime import datetime
+from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, save_local_model, push_model_card
 from huggingface_hub import HfApi
 import pandas as pd
 import argparse
+import re
 
 def main():
     parser = argparse.ArgumentParser()
@@ -36,38 +35,27 @@ def main():
     lang_id = '-'.join(languages)
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    # args.file = f'/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL.json'
-    # args.file = f'/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json'
-    results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
-    data = TASTEset.from_json(
-            args.file,
-            tokenizer = tokenizer,
-            shuffle_languages=['it'],
-            src_lang = 'en',
-            dev_size = 0.2,
-            shuffled_size = 1,
-            unshuffled_size = 0,
-            # drop_duplicates = False,
-            debug_dump = True,
-            # n_rows=200,
-            )
 
-    # data_path = f'//home/pgajo/working/food/data/XL-WA/data'
-    # results_path = f'/home/pgajo/working/food/results/xl-wa/{lang_id}'
-    # data = XLWADataset(
-    #     data_path,
-    #     tokenizer,
-    #     languages = languages,
-    #     # n_rows=20,
+    args.file = 'pgajo/mbert_TASTEset_U0_S1_DROP1'
+    # args.file = 'pgajo/xlwa_en-it'
+    data = TASTEset.from_datasetdict(args.file)
+
+    # args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json'
+    # data = TASTEset.from_json(
+    #     args.input,
+    #     model_name,
+    #     shuffle_languages = ['it'],
+    #     src_lang = 'en',
+    #     dev_size = 0.2,
+    #     shuffled_size = 0,
+    #     unshuffled_size = 1,
     #     )
-    
-    # data = DatasetDict.load_from_disk(data_path) # load prepared tokenized dataset
-    batch_size = 16
+
+    batch_size = 32
     dataset = data_loader(data,
                         batch_size,
+                        # n_rows=320,
                         )
-
-    
     model = AutoModelForQuestionAnswering.from_pretrained(model_name)
     device = 'cuda'
     model = torch.nn.DataParallel(model).to(device)
@@ -141,8 +129,10 @@ def main():
             print(f'Early stopping triggered on epoch {epoch}. \
                 \nBest epoch: {evaluator.epoch_best}.')                                               
             break
-
+    
     evaluator.print_metrics()
+    
+    results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
     if not os.path.isdir(results_path):
         os.makedirs(results_path)
     evaluator.save_metrics_to_csv(results_path)
@@ -151,15 +141,13 @@ def main():
         'bert-base-multilingual-cased': 'mbert',
         'microsoft/mdeberta-v3-base': 'mdeberta',
     }
-
-    if not hasattr(data, 'unshuffled_size'):
-        data.unshuffled_size = 1
-    if not hasattr(data, 'shuffled_size'):
-        data.shuffled_size = 0
         
     # model save folder
     model_dir = './models'
-    save_name = f"{model_dict[model_name]}_{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}_DROP{str(int(data.drop_duplicates))}_{args.file.split('/')[-1][:-5]}"
+    filename_simple = re.sub('\..*', '', args.file.split('/')[-1]) # remove extension if local path
+    save_name = f"{filename_simple}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
+    # filename_simple = f"{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_DROP{data.drop_duplicates}"
+    # save_name = f"{filename_simple}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
     if args.test:
         save_name = save_name + "_test" # comment if not testing
     model_save_dir = os.path.join(model_dir, f"{data.name}/{save_name}")
@@ -176,24 +164,27 @@ def main():
     df_desc.index += 1
     df_desc.index.name = 'epoch'
     df_desc = df_desc.to_markdown()
+    u_ratio = '(?<=_U)\d'
+    s_ratio = '(?<=_S)\d'
+    drop_flag = '(?<=_DROP)\d'
     model_description = f'''
     Model: {model_dict[model_name]}\n
     Dataset: {data.name}\n
-    Unshuffled ratio: {data.unshuffled_size}\n
-    Shuffled ratio: {data.shuffled_size}\n
+    Unshuffled ratio: {re.search(u_ratio, 'pgajo/mbert_TASTEset_U0_S1_DROP1').group()}\n
+    Shuffled ratio: {re.search(s_ratio, 'pgajo/mbert_TASTEset_U0_S1_DROP1').group()}\n
     Best exact match epoch: {evaluator.epoch_best}\n
     Best exact match: {str(round(evaluator.exact_dev_best, ndigits=2))}\n
-    Drop duplicates: {data.drop_duplicates}\n
+    Drop duplicates: {re.search(drop_flag, 'pgajo/mbert_TASTEset_U0_S1_DROP1').group()}\n
+    Epochs = {epochs}\n
     Optimizer lr = {lr}\n
     Optimizer eps = {eps}\n
     Batch size = {batch_size}\n
     Dataset path = {args.file}\n
-    Metrics:\n
-    {df_desc}
     '''
-    push_card(repo_id=repo_id,
-            model_name=model_name,
+    push_model_card(repo_id=repo_id,
             model_description=model_description,
+            results=df_desc,
+            template_path='/home/pgajo/modelcardtemplate.md'
             )
     api.upload_folder(repo_id=repo_id, folder_path=model_save_dir) 
 
