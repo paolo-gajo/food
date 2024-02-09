@@ -14,4 +14,3 @@ models/
 !data/*.json
 !data/TASTEset/utils/*
 *.sh
-!/home/paolog/working/food/data/ls_annotations/label_studio.sqlite3
