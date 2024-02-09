@@ -12,3 +12,4 @@ models/
 # Allow
 *.sh
 # data/
+*.spacy
