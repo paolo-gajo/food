@@ -1,30 +1,3 @@
-<View>
-  <Labels name="label_en" toName="ingredients_en_ref">   
-  <Label value="FOOD" background="#dd00ff"/>
-  <Label value="QUANTITY" background="#ff0000"/>
-  <Label value="UNIT" background="#FFC069"/>
-  <Label value="PROCESS" background="#AD8B00"/>
-  <Label value="PHYSICAL_QUALITY" background="#D3F261"/>
-  <Label value="COLOR" background="#389E0D"/>
-  <Label value="TASTE" background="#5CDBD3"/>
-  <Label value="PURPOSE" background="#096DD9"/>
-  <Label value="PART" background="#302930"/>
-  <Label value="QUALITY/BRAND" background="#8f98c2"/>
-  </Labels>
-  <Text name="ingredients_en_ref" value="$ingredients_en"/>
-  
-  <Labels name="label_it" toName="ingredients_it_ref">   
-  <Label value="FOOD" background="#dd00ff"/>
-  <Label value="QUANTITY" background="#ff0000"/>
-  <Label value="UNIT" background="#FFC069"/>
-  <Label value="PROCESS" background="#AD8B00"/>
-  <Label value="PHYSICAL_QUALITY" background="#D3F261"/>
-  <Label value="COLOR" background="#389E0D"/>
-  <Label value="TASTE" background="#5CDBD3"/>
-  <Label value="PURPOSE" background="#096DD9"/>
-  <Label value="PART" background="#302930"/>
-  <Label value="QUALITY/BRAND" background="#8f98c2"/>
-  </Labels>
-  <Text name="ingredients_it_ref" value="$ingredients_it"/>
-  
-</View>
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4691e5fc25e449f26fadeac273676449afb1b772f4cf21720aa121688d85aff
+size 1246
