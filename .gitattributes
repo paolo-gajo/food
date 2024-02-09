@@ -1,3 +1,3 @@
-/home/pg/working/food/data/label_studio/label_studio.sqlite3 filter=lfs diff=lfs merge=lfs -text
+data/ filter=lfs diff=lfs merge=lfs -text
 *.json filter=lfs diff=lfs merge=lfs -text
 *.sqlite3 filter=lfs diff=lfs merge=lfs -text

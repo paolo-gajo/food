@@ -3,7 +3,6 @@ food-env/
 slurm_error/
 slurm_output/
 .stuff/
-data/*
 src/ner/spacy_outputs/
 # src/translate/*
 models/
@@ -11,6 +10,4 @@ models/
 */__pycache__
 *.log
 # Allow
-!data/*.json
-!data/TASTEset/utils/*
 *.sh
