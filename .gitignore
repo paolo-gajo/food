@@ -1,5 +1,5 @@
 # Ignore
-food-env/
+.o/
 slurm_error/
 slurm_output/
 .stuff/
