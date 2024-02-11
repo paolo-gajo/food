@@ -1,14 +1,15 @@
 from utils import TASTEset, push_dataset_card
 import warnings
+import os
 
 def main():
     unshuffled_size = 1
     shuffled_size = 0
 
-    tokenizer_name = 'bert-base-multilingual-cased'
-    # tokenizer_name = 'microsoft/mdeberta-v3-base'
+    # tokenizer_name = 'bert-base-multilingual-cased'
+    tokenizer_name = 'microsoft/mdeberta-v3-base'
 
-    data_path = '/home/pgajo/working/food/data/GZ/GZ-GOLD-NER-ALIGN_105.json'
+    data_path = '/home/pgajo/working/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105.json'
     
     dataset = TASTEset.from_json(
         data_path,
@@ -19,7 +20,7 @@ def main():
         shuffled_size = shuffled_size,
         unshuffled_size = unshuffled_size,
         # aligned = False,
-        debug_dump = True,
+        # debug_dump = True,
         drop_duplicates = False,
         label_studio = True,
         inverse_languages = True,
@@ -34,6 +35,10 @@ def main():
     save_name = f"{tokenizer_dict[tokenizer_name]}_{dataset.name}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_DROP{str(int(dataset.drop_duplicates))}"
     repo_id = f"pgajo/{save_name}"
     print('repo_id:', repo_id)
+    local_dir = data_path.replace('.json', '')
+    if not os.path.isdir(local_dir):
+        os.makedirs(local_dir)
+    # dataset.save_to_disk(local_dir)
     dataset.push_to_hub(repo_id)
     dataset_summary = f'''
     Tokenizer: {tokenizer_dict[tokenizer_name]}\n
@@ -43,7 +48,7 @@ def main():
     Drop duplicates: {dataset.drop_duplicates}\n
     Dataset path = {dataset.data_path}\n
     '''
-    push_dataset_card(repo_id, dataset_summary=dataset_summary)
+    push_dataset_card(repo_id, dataset_summary=dataset_summary, model_metrics = '')
 
 if __name__ == '__main__':
     with warnings.catch_warnings():

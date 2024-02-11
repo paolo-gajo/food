@@ -67,7 +67,7 @@ class SquadEvaluator:
                 self.exact_dev_best = self.epoch_metrics[f'{eval_metric}_exact']
                 self.epoch_best = epoch + 1
                 self.patience_counter = 0
-                print(f'----Best dev exact updated: {round(self.exact_dev_best, ndigits=2)}\
+                print(f'----Best {eval_metric} exact updated: {round(self.exact_dev_best, ndigits=2)}\
                     \n----Best epoch updated: {self.epoch_best}')
                 if hasattr(model, 'module'):
                     self.best_model = model.module
@@ -262,8 +262,8 @@ class TASTEset(DatasetDict):
                                 'start_positions',
                                 'end_positions']
                                 )
-            self['train'] = input_data['train']
-            self['dev'] = input_data['dev']
+            for key in input_data.keys():
+                self[key] = input_data[key]
 
         else:
             self.src_lang = src_lang
@@ -759,9 +759,10 @@ def push_model_card(repo_id, model_description = '', results = '', language = 'e
     card.push_to_hub(repo_id)
     return repo_id
 
-def push_dataset_card(repo_id, *, dataset_summary, template_path = None):
+def push_dataset_card(repo_id, *, dataset_summary, model_metrics = '', template_path = None):
     DatasetCard.from_template(DatasetCardData(),
                             dataset_summary=dataset_summary,
+                            model_metrics = '',
                             template_path = template_path,
                             ).push_to_hub(repo_id)
 
