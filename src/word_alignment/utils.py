@@ -187,7 +187,7 @@ class TASTEset(DatasetDict):
         tokenizer_name = '',
         data_path = '',
         src_lang = 'en',
-        shuffle_languages = ['it'],
+        tgt_langs = ['it'],
         drop_duplicates = True,
         src_context = True,
         shuffled_size = 0,
@@ -198,6 +198,7 @@ class TASTEset(DatasetDict):
         aligned = True,
         n_rows = None,
         label_studio = False,
+        inverse_languages = False,
         ) -> 'TASTEset':
         '''
         Prepares data from the TASTEset dataset based on the wanted languages,
@@ -214,9 +215,12 @@ class TASTEset(DatasetDict):
                 ISO 639-1 language code. Indicates which language is the source language,
                 with the entities in that language not being shuffled.
                 string of multiple space-separated language codes, or list of language codes.
-            shuffle_languages (`str` or `List[str]`):
+            tgt_langs (`str` or `List[str]`):
                 String of a single 2-character language code (ISO 639-1),
-                string of multiple space-separated language codes, or list of language codes.
+                string of multiple space-separated language codes, or list of language codes
+                indicating the target languages of the dataset.
+                The entities of the target languages will be shuffled in the portion of the dataset
+                dictated by the size ratio 'shuffled_size'.
             drop_duplicates (`bool`, defaults to `True`):
                 If `True`, drop duplicates from the dataset based on the ['answer'] column.
             src_context (`bool`, defaults to `True`):
@@ -245,6 +249,10 @@ class TASTEset(DatasetDict):
             label_studio (`bool`, defaults to `False`):
                 If `True`, the input data is assumed to be in Label Studio format
                 and is going to be converted to TASTEset format using 'label_studio_to_tasteset'.
+            inverse_languages (`bool`, defaults to `False`):
+                If `True`, check relations in the direction opposite to the the one they were annotated as,
+                e.g. to allow producing Italian samples from English samples when relation annotations
+                were actually done from Italian to English.
         '''
         self.name = 'TASTEset'
         if isinstance(input_data, DatasetDict):
@@ -259,14 +267,16 @@ class TASTEset(DatasetDict):
 
         else:
             self.src_lang = src_lang
+            self.tgt_langs = tgt_langs
+            self.inverse_languages = inverse_languages
             if label_studio:
-                input_data = label_studio_to_tasteset(input_data, self.src_lang)
+                input_data = self.label_studio_to_tasteset(input_data)
             self.input_data = input_data['annotations']
             self.data_path = data_path
             self.tokenizer_name = tokenizer_name
             self.tokenizer = AutoTokenizer.from_pretrained(self.tokenizer_name)
             self.rm_char = [' ', ';']
-            self.shuffle_languages = shuffle_languages
+            
             self.drop_duplicates = drop_duplicates
             self.src_context = src_context
             self.shuffled_size = shuffled_size
@@ -281,8 +291,8 @@ class TASTEset(DatasetDict):
             if not hasattr(self.tokenizer, 'sep'):
                 self.tokenizer.sep = None
 
-            if isinstance(self.shuffle_languages, str):
-                self.shuffle_languages = self.shuffle_languages.split()
+            if isinstance(self.tgt_langs, str):
+                self.tgt_langs = self.tgt_langs.split()
 
             if not self.aligned:
                 self.drop_duplicates = False
@@ -344,11 +354,14 @@ class TASTEset(DatasetDict):
             else:
                 dump_suffix = 'unaligned_qa'
             json.dump(df_list, open(self.data_path.replace('.json', f'_{dump_suffix}_dump.json'), 'w'), ensure_ascii=False)
-        ds_dict = Dataset.from_list(df_list).train_test_split(test_size = self.dev_size)
-
-        self['train'] = ds_dict['train']
-        ds_dict['dev'] = ds_dict.pop('test')
-        self['dev'] = ds_dict['dev']
+        if self.dev_size == 0:
+            ds_dict = Dataset.from_list(df_list)
+            self['test'] = ds_dict
+        else:
+            ds_dict = Dataset.from_list(df_list).train_test_split(test_size = self.dev_size)
+            self['train'] = ds_dict['train']
+            ds_dict['dev'] = ds_dict.pop('test')
+            self['dev'] = ds_dict['dev']
 
     def extend(self, sample_list, extend_ratio = 1):
         int_ratio = int(extend_ratio)
@@ -390,23 +403,27 @@ class TASTEset(DatasetDict):
         tgt_lang = ''.join([lang for lang in sample['sample_langs'] if lang != self.src_lang])
         sample_list = []
         if shuffle:
-            for shuffle_lang in self.shuffle_languages:
+            for shuffle_lang in self.tgt_langs:
                 sample = self.shuffle_entities(sample, shuffle_lang)
-        for i in range(sample['num_ents']):
+        for idx in range(sample['num_ents']):
             new_sample = {}
 
             if self.src_context:
-                new_sample['query'] = sample[f'text_{self.src_lang}'][:sample[f'ents_{self.src_lang}'][i][0]] +\
-                            '• ' + sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][i][0]:sample[f'ents_{self.src_lang}'][i][1]] + ' •' +\
-                            sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][i][1]:]
+                new_sample['query'] = sample[f'text_{self.src_lang}'][:sample[f'ents_{self.src_lang}'][idx][0]] +\
+                            '• ' + sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]] + ' •' +\
+                            sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][1]:]
             else:
                 new_sample['query'] = sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][0]:sample[f'ents_{self.src_lang}'][1]]
 
             new_sample['context'] = sample[f'text_{tgt_lang}']
             if self.aligned:
-                new_sample['answer_start'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].i(i)][0]
-                new_sample['answer_end'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].i(i)][1]
+                new_sample['answer_start'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(idx)][0]
+                new_sample['answer_end'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(idx)][1]
                 new_sample['answer'] = sample[f'text_{tgt_lang}'][new_sample['answer_start']:new_sample['answer_end']]
+                if new_sample['answer'] == '':
+                    print('ANSWER IS EMPTY, IS THIS RIGHT?')
+                    print(new_sample)
+                    continue
                 query_enc = self.tokenizer(new_sample['query'])
                 l = len(query_enc['input_ids']) 
                 context_enc = self.tokenizer(new_sample['context'])
@@ -422,7 +439,7 @@ class TASTEset(DatasetDict):
                     new_sample['query'] = new_sample['query'].replace(char, self.tokenizer.sep)
                     new_sample['context'] = new_sample['context'].replace(char, self.tokenizer.sep)
             new_sample['sentence_index'] = sentence_index
-            new_sample['sample_index'] = i
+            new_sample['sample_index'] = idx
             new_sample['index'] = self.index
             self.index += 1
             sample_list.append(new_sample)
@@ -451,6 +468,45 @@ class TASTEset(DatasetDict):
                         return_tensors = 'pt'
                         ))
         return sample
+    
+    def label_studio_to_tasteset(self, data):
+        if self.inverse_languages:
+            source_id = 'to_id' # check relations in the opposite verse of annotation
+            target_id = 'from_id'
+        else:
+            source_id = 'from_id' # check relations in the verse of annotation
+            target_id = 'to_id'
+        formatted_data = []
+        for sample in data:
+            sample_labels_src = [el for el in sample['annotations'][0]['result'] if el['type'] == 'labels' and el['from_name'] == f'label_{self.src_lang}']
+            ents_src = []
+            relations = [el for el in sample['annotations'][0]['result'] if el['type'] == 'relation']
+            if len(relations)>0:
+                sample_dict = {}
+                for tgt_lang in self.tgt_langs:
+                    sample_labels_tgt = [el for el in sample['annotations'][0]['result'] if el['type'] == 'labels' and el['from_name'] == f'label_{tgt_lang}']
+                    ents_tgt = [] 
+                    for label_src in sample_labels_src:
+                        src_id = label_src['id']
+                        src_ent = [label_src['value']['start'], label_src['value']['end'], label_src['value']['labels'][0], label_src['value']['text']]
+                        for relation in relations:
+                            if relation[source_id] == src_id:
+                                tgt_id = relation[target_id]
+                                for label_src in sample_labels_tgt:
+                                    if label_src['id'] == tgt_id:
+                                        tgt_ent = [label_src['value']['start'], label_src['value']['end'], label_src['value']['labels'][0], label_src['value']['text']]
+                        ents_src.append(src_ent)
+                        ents_tgt.append(tgt_ent)
+                    sample_dict.update({
+                        f'text_{tgt_lang}': sample['data'][f'ingredients_{tgt_lang}'],
+                        f'ents_{tgt_lang}': ents_tgt,
+                    })
+                sample_dict.update({
+                    f'text_{self.src_lang}': sample['data'][f'ingredients_{self.src_lang}'],
+                    f'ents_{self.src_lang}': ents_src,
+                })
+                formatted_data.append(sample_dict)
+        return {'annotations': formatted_data}
 
     @staticmethod
     def shuffle_entities(sample, shuffle_lang, verbose = False) -> dict:
@@ -778,18 +834,19 @@ def tasteset_to_label_studio(annotation_list, model_name):
         })
     return tasks
 
-def label_studio_to_tasteset(data, src_lang = 'it'):
-    formatted_data = []
-    languages = [key.split('_')[-1] for key in data[0]['data'].keys() if '_' in key]
-    tgt_langs = [lang for lang in languages if lang != src_lang]
-    for line in data:
-        tmp_dict = {}
-        for tgt_lang in tgt_langs:
-            tmp_dict[f'text_{tgt_lang}'] = line['data'][f'ingredients_{tgt_lang}']
-        tmp_dict[f'text_{src_lang}'] = line['data'][f'ingredients_{src_lang}']
-        tmp_dict[f'ents_{src_lang}'] = []
-        for ent in line['annotations'][0]['result']:
-            tmp_dict[f'ents_{src_lang}'].append([ent['value']['start'], ent['value']['end'], ent['value']['labels'][0]])
-        tmp_dict[f'ents_{src_lang}'].sort()
-        formatted_data.append(tmp_dict)
-    return {'annotations': formatted_data}
+# def label_studio_to_tasteset(data, src_lang = 'it'):
+#     formatted_data = []
+#     languages = [key.split('_')[-1] for key in data[0]['data'].keys() if '_' in key]
+#     tgt_langs = [lang for lang in languages if lang != src_lang]
+#     for line in data:
+#         tmp_dict = {}
+#         for tgt_lang in tgt_langs:
+#             tmp_dict[f'text_{tgt_lang}'] = line['data'][f'ingredients_{tgt_lang}']
+#         tmp_dict[f'text_{src_lang}'] = line['data'][f'ingredients_{src_lang}']
+#         tmp_dict[f'ents_{src_lang}'] = []
+#         for ent in line['annotations'][0]['result']:
+#             tmp_dict[f'ents_{src_lang}'].append([ent['value']['start'], ent['value']['end'], ent['value']['labels'][0]])
+#         tmp_dict[f'ents_{src_lang}'].sort()
+#         formatted_data.append(tmp_dict)
+#     return {'annotations': formatted_data}
+
