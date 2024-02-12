@@ -35,6 +35,7 @@ def main():
         dev_size = 0.2,
         shuffled_size = args.shuffled_size,
         unshuffled_size = args.unshuffled_size,
+        shuffle_type = 'ingredient',
         )
     
     tokenizer_dict = {
