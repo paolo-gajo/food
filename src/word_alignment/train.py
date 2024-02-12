@@ -15,9 +15,6 @@ def main():
     parser.add_argument('-t', '--test', default=False, action='store_true', help='Add a "_test" suffix to the repo name')
     parser.add_argument('-f', '--file', default='/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json')
     args = parser.parse_args()
-
-    # model_name = 'bert-base-multilingual-cased'
-    model_name = 'microsoft/mdeberta-v3-base'
     
     languages = [
         # 'ru',
@@ -34,16 +31,30 @@ def main():
 
     lang_id = '-'.join(languages)
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    # model_repo = 'bert-base-multilingual-cased' 
+    # model_repo = 'pgajo/mbert-xlwa-en-it' # mbert fine-tuned on xlwa-en-it
+    # data_repo = 'pgajo/xlwa_en-it_mbert' # xl-wa
+    # data_repo = 'pgajo/EW-TT-PE_U1_S0_DROP1_mbert' # unshuffled
+    # data_repo = 'pgajo/EW-TT-PE_U0_S1_DROP1_mbert' # shuffled
 
-    args.file = 'pgajo/mdeberta_TASTEset_U0_S1_DROP1'
-    # args.file = 'pgajo/xlwa_en-it'
-    data = TASTEset.from_datasetdict(args.file)
+    # data_repo = 'pgajo/EW-TT-MT_LOC_U1_S0_DROP1_mbert' # unshuffled
+    # data_repo = 'pgajo/EW-TT-MT_LOC_U0_S1_DROP1_mbert' # shuffled
+
+    model_repo = 'microsoft/mdeberta-v3-base'
+    # model_repo = 'pgajo/mdeberta-xlwa-en-it' # mdeberta fine-tuned on xlwa-en-it
+    # data_repo = 'pgajo/xlwa_en-it_mdeberta' # xl-wa
+    # data_repo = 'pgajo/EW-TT-PE_U1_S0_DROP1_mdeberta' # unshuffled
+    # data_repo = 'pgajo/EW-TT-PE_U0_S1_DROP1_mdeberta' # shuffled
+
+    # data_repo = 'pgajo/EW-TT-MT_LOC_U1_S0_DROP1_mdeberta' # unshuffled
+    data_repo = 'pgajo/EW-TT-MT_LOC_U0_S1_DROP1_mdeberta' # shuffled
+    
+    data = TASTEset.from_datasetdict(data_repo)
 
     # args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json'
     # data = TASTEset.from_json(
     #     args.input,
-    #     model_name,
+    #     model_repo,
     #     shuffle_languages = ['it'],
     #     src_lang = 'en',
     #     dev_size = 0.2,
@@ -56,7 +67,7 @@ def main():
                         batch_size,
                         # n_rows=320,
                         )
-    model = AutoModelForQuestionAnswering.from_pretrained(model_name)
+    model = AutoModelForQuestionAnswering.from_pretrained(model_repo)
     device = 'cuda'
     model = torch.nn.DataParallel(model).to(device)
     
@@ -66,7 +77,8 @@ def main():
                                 lr = lr,
                                 eps = eps
                                 )
-
+    
+    tokenizer = AutoTokenizer.from_pretrained(model_repo)
     evaluator = SquadEvaluator(tokenizer,
                             model,
                             load("squad_v2"),
@@ -81,6 +93,8 @@ def main():
         progbar = tqdm(enumerate(dataset[split]),
                                 total=len(dataset[split]),
                                 desc=f"{split} - epoch {epoch + 1}")
+        print('model_repo:', model_repo)
+        print('data_repo:', data_repo)
         for i, batch in progbar:
             outputs = model(**batch) # ['loss', 'start_logits', 'end_logits']
             loss = outputs[0].mean()
@@ -107,6 +121,8 @@ def main():
         progbar = tqdm(enumerate(dataset[split]),
                                 total=len(dataset[split]),
                                 desc=f"{split} - epoch {epoch + 1}")
+        print('model_repo:', model_repo)
+        print('data_repo:', data_repo)
         for i, batch in progbar:
             with torch.inference_mode():
                 outputs = model(**batch)
@@ -132,20 +148,15 @@ def main():
     
     evaluator.print_metrics()
     
-    results_path = f'/home/pgajo/working/food/results/tasteset/{lang_id}'
-    if not os.path.isdir(results_path):
-        os.makedirs(results_path)
-    evaluator.save_metrics_to_csv(results_path)
-
-    model_dict = {
-        'bert-base-multilingual-cased': 'mbert',
-        'microsoft/mdeberta-v3-base': 'mdeberta',
-    }
+    results_path = '/home/pgajo/working/food/results'
+    model_results_path = os.path.join(results_path, data_repo.split('/')[-1])
+    evaluator.save_metrics_to_csv(os.path.join(model_results_path, model_repo.split('/')[-1]))
         
     # model save folder
     model_dir = './models'
-    filename_simple = re.sub('\..*', '', args.file.split('/')[-1]) # remove extension if local path
-    save_name = f"{filename_simple}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
+    model_name = model_repo.split('/')[-1].split('_')[0]
+    filename_simple = re.sub('\..*', '', data_repo.split('/')[-1]) # remove extension if local path
+    save_name = f"{model_name}_{filename_simple}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
     # filename_simple = f"{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_DROP{data.drop_duplicates}"
     # save_name = f"{filename_simple}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
     if args.test:
@@ -168,19 +179,19 @@ def main():
     s_ratio = '(?<=_S)\d'
     drop_flag = '(?<=_DROP)\d'
     model_description = f'''
-    Model: {model_dict[model_name]}\n
+    Model: {model_repo}\n
     Dataset: {data.name}\n
-    Unshuffled ratio: {re.search(u_ratio, args.file).group()}\n
-    Shuffled ratio: {re.search(s_ratio, args.file).group()}\n
+    Unshuffled ratio: {re.findall(u_ratio, data_repo)}\n
+    Shuffled ratio: {re.findall(s_ratio, data_repo)}\n
     Best exact match epoch: {evaluator.epoch_best}\n
     Best exact match: {str(round(evaluator.exact_dev_best, ndigits=2))}\n
     Best epoch: {evaluator.epoch_best}\n
-    Drop duplicates: {re.search(drop_flag, args.file).group()}\n
+    Drop duplicates: {re.findall(drop_flag, data_repo)}\n
     Max epochs = {epochs}\n
     Optimizer lr = {lr}\n
     Optimizer eps = {eps}\n
     Batch size = {batch_size}\n
-    Dataset path = {args.file}\n
+    Dataset path = {data_repo}\n
     '''
     push_model_card(repo_id=repo_id,
             model_description=model_description,

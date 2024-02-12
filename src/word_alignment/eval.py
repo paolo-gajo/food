@@ -8,12 +8,19 @@ from utils import data_loader, SquadEvaluator, TASTEset
 import pandas as pd
 
 def main():
-    # model_repo = 'pgajo/mbert_TASTEset_U1_S0_DROP1_E10_DEV92.0'
-    # model_repo = 'pgajo/mbert_TASTEset_U0_S1_DROP1_E10_DEV80.0'
-    # model_repo = 'pgajo/mdeberta_TASTEset_U1_S0_DROP1_E1_DEV98.0'
-    model_repo = 'pgajo/mdeberta_TASTEset_U0_S1_DROP1_E1_DEV89.0'
-    # tokenizer_name = 'microsoft/mdeberta-v3-base'
-    # model_repo = 'microsoft/mdeberta-v3-base'
+    # model_repo = 'pgajo/mbert-xlwa-en-it' # mbert fine-tuned on xlwa-en-it
+    # model_repo = 'pgajo/mdeberta-xlwa-en-it' # mdeberta fine-tuned on xlwa-en-it
+
+    # model_repo = 'pgajo/mbert-EW-TT-PE_U1_S0_DROP1_E4_DEV98.0' # mbert fine-tuned on ew-tt-pe unshuffled
+    # model_repo = 'pgajo/mbert-EW-TT-PE_U0_S1_DROP1_E10_DEV74.0' # mbert fine-tuned on ew-tt-pe shuffled
+    # model_repo = 'pgajo/mbert-xlwa-en-it_EW-TT-PE_U1_S0_DROP1_mbert_E5_DEV98.0' # mbert-xlwa fine-tuned on ew-tt-pe unshuffled
+    # model_repo = 'pgajo/mbert-xlwa-en-it_EW-TT-PE_U0_S1_DROP1_mbert_E9_DEV76.0' # mbert-xlwa fine-tuned on ew-tt-pe shuffled
+    # model_repo = 'pgajo/mdeberta-v3-base_EW-TT-PE_U1_S0_DROP1_mdeberta_E2_DEV100.0' # mdeberta fine-tuned on ew-tt-pe unshuffled
+    # model_repo = 'pgajo/mdeberta-v3-base_mdeberta_EW-TT-PE_U0_S1_DROP1_E8_DEV93.0' # mdeberta fine-tuned on ew-tt-pe shuffled
+    # model_repo = 'pgajo/mdeberta-xlwa-en-it_EW-TT-PE_U1_S0_DROP1_mdeberta_E2_DEV100.0' # mdeberta-xlwa fine-tuned on ew-tt-pe unshuffled
+    model_repo = 'pgajo/mdeberta-xlwa-en-it_mdeberta_EW-TT-PE_U0_S1_DROP1_E8_DEV92.0' # mdeberta-xlwa fine-tuned on ew-tt-pe shuffled
+
+
     
     languages = [
         # 'ru',
@@ -31,9 +38,10 @@ def main():
     lang_id = '-'.join(languages)
 
     tokenizer = AutoTokenizer.from_pretrained(model_repo)
-
-    # data_repo = 'pgajo/mbert_GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0'
-    data_repo = 'pgajo/mdeberta_GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0'
+    # data_repo = 'pgajo/xlwa_en-it_mbert'
+    # data_repo = 'pgajo/xlwa_en-it_mdeberta'
+    # data_repo = 'pgajo/GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0_mbert'
+    data_repo = 'pgajo/GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0_mdeberta'
     data = TASTEset.from_datasetdict(data_repo)
 
     batch_size = 32

@@ -22,13 +22,15 @@ def main():
     args.drop_duplicates = True
 
     # tokenizer_name = 'bert-base-multilingual-cased'
+    # tokenizer_name = 'bert-large-uncased'
     tokenizer_name = 'microsoft/mdeberta-v3-base'
 
-    args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json'
+    # args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-PE.json'
+    args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_LOC.json'
     dataset = TASTEset.from_json(
         args.input,
         tokenizer_name,
-        shuffle_languages = ['it'],
+        tgt_langs = ['it'],
         src_lang = 'en',
         dev_size = 0.2,
         shuffled_size = args.shuffled_size,
@@ -38,8 +40,10 @@ def main():
     tokenizer_dict = {
         'bert-base-multilingual-cased': 'mbert',
         'microsoft/mdeberta-v3-base': 'mdeberta',
+        'bert-large-uncased': 'bert-large-uncased'
     }
-    save_name = f"{tokenizer_dict[tokenizer_name]}_{dataset.name}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_DROP{str(int(dataset.drop_duplicates))}"
+
+    save_name = f"{args.input.split('/')[-1].replace('.json', '')}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_DROP{str(int(dataset.drop_duplicates))}_{tokenizer_dict[tokenizer_name]}"
     repo_id = f"pgajo/{save_name}"
     print('repo_id:', repo_id)
     dataset.push_to_hub(repo_id)

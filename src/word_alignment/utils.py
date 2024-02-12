@@ -58,10 +58,15 @@ class SquadEvaluator:
         self.best_model = model
 
     def evaluate(self, model, split, epoch, eval_metric = 'dev'):
+        print(f'len(self.preds[{split}])', len(self.preds[split]))
         self.epoch_metrics[f'{split}_f1'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['f1']
         self.epoch_metrics[f'{split}_exact'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['exact']
+
+        self.preds[split] = []
+        self.trues[split] = []
+
         if split == eval_metric:
             if self.epoch_metrics[f'{eval_metric}_exact'] > self.exact_dev_best:
                 self.exact_dev_best = self.epoch_metrics[f'{eval_metric}_exact']
@@ -113,6 +118,8 @@ class SquadEvaluator:
                 'no_answer_probability': 0
             }
 
+            self.preds[split].append(dict_pred)
+
         for i, pair in enumerate(true_batch):
             text_true = self.tokenizer.decode(
                 batch['input_ids'][i][pair[0]:pair[1]])
@@ -123,9 +130,7 @@ class SquadEvaluator:
                     },
                     'id': pred_batch_ids[i]
                 }
-
-        self.preds[split].append(dict_pred)
-        self.trues[split].append(dict_true)
+            self.trues[split].append(dict_true)
     
     def print_metrics(self, current_epoch = None, current_split = None):
         if current_epoch is None:
@@ -199,6 +204,7 @@ class TASTEset(DatasetDict):
         n_rows = None,
         label_studio = False,
         inverse_languages = False,
+        keep_raw = False,
         ) -> 'TASTEset':
         '''
         Prepares data from the TASTEset dataset based on the wanted languages,
@@ -253,15 +259,19 @@ class TASTEset(DatasetDict):
                 If `True`, check relations in the direction opposite to the the one they were annotated as,
                 e.g. to allow producing Italian samples from English samples when relation annotations
                 were actually done from Italian to English.
+            keep_raw (`bool`, defaults to `False`):
+                If `True`, keep raw text data in the dataset.
         '''
         self.name = 'TASTEset'
+        columns = None
+        if not keep_raw:
+            columns = ['input_ids',
+                        'token_type_ids',
+                        'attention_mask',
+                        'start_positions',
+                        'end_positions']
         if isinstance(input_data, DatasetDict):
-            input_data.set_format('torch', columns = ['input_ids',
-                                'token_type_ids',
-                                'attention_mask',
-                                'start_positions',
-                                'end_positions']
-                                )
+            input_data.set_format('torch', columns = columns)
             for key in input_data.keys():
                 self[key] = input_data[key]
 
@@ -333,9 +343,12 @@ class TASTEset(DatasetDict):
     
     @classmethod
     def from_datasetdict(cls,
-                         repo_id):
+                         repo_id,
+                         **kwargs
+                         ):
         data = load_dataset(repo_id)
-        return cls(data)
+        return cls(data,
+                   **kwargs)
 
     def prep_data(self) -> 'DatasetDict':
         if self.unshuffled_size:
@@ -599,7 +612,7 @@ class XLWADataset(DatasetDict):
             splits (`List[str]`, defaults to `['train', 'dev', 'test']`):
                 List of names of the splits to include in the dataset.
         '''
-        self.name = 'xlwa'
+        self.name = f"xlwa_en-{'-'.join(languages)}"
         self.tokenizer = tokenizer
         self.languages = languages
         self.src_context = src_context
