@@ -12,6 +12,7 @@ from huggingface_hub import ModelCard, ModelCardData, DatasetCard, DatasetCardDa
 from datetime import datetime
 import copy
 from transformers import AutoTokenizer
+import re
 
 sep_dict = {
     'csv': ',',
@@ -299,7 +300,7 @@ class TASTEset(DatasetDict):
             self.unshuffled_samples = []
             self.shuffled_samples = []
             self.index = 0
-            self.shuffled_type = shuffle_type
+            self.shuffle_type = shuffle_type
             if not hasattr(self.tokenizer, 'sep'):
                 self.tokenizer.sep = None
 
@@ -419,9 +420,9 @@ class TASTEset(DatasetDict):
         sample_list = []
         if shuffle:
             for shuffle_lang in self.tgt_langs:
-                if self.shuffled_type == 'recipe':
+                if self.shuffle_type == 'recipe':
                     sample = self.shuffle_entities_recipe(sample, shuffle_lang)
-                if self.shuffled_type == 'ingredient':
+                if self.shuffle_type == 'ingredient':
                     sample = self.shuffle_entities_ingredient(sample, shuffle_lang)
         for idx in range(sample['num_ents']):
             new_sample = {}
@@ -534,54 +535,64 @@ class TASTEset(DatasetDict):
         to be linked somehow after shuffling one language
         (usually the target language)!
         '''
+        
         text_key = f'text_{shuffle_lang}'
         ent_key = f'ents_{shuffle_lang}'
-        shuffled_ents = []
-        shuffled_indexes = [i for i in range(len(sample[ent_key]))]
-        random.shuffle(shuffled_indexes)
-        sample.update({f'idx_{shuffle_lang}': shuffled_indexes})
-        
-        # get non-entity positions and strings from the original text
-        blanks = []
-        for i in range(len(sample[ent_key])-1):
-            end_prev = sample[ent_key][i][1]
-            start_foll = sample[ent_key][i+1][0]
-            blanks.append([end_prev, start_foll, sample[text_key][end_prev:start_foll]])
-            
-        ent_start = 0
+        sample_text = sample[text_key]
+        semicolon_positions = [0] + [match.end() for match in re.finditer(';', sample_text)] + [len(sample_text)]
+
+        shuffled_list = []
         shuffled_text = ''
-        for new, idx in enumerate(sample[f'idx_{shuffle_lang}']):
-            tmp_ent = sample[ent_key][idx]
-            text_tmp_ent = sample[text_key][sample[ent_key][idx][0]:sample[ent_key][idx][1]]
-            
-            len_text = len((text_tmp_ent))
-            tmp_ent[0] = ent_start
-            tmp_ent[1] = tmp_ent[0] + len_text
-            tmp_ent[2] = sample[ent_key][idx][2]
-            shuffled_ents.append(tmp_ent)
 
-            if len(blanks) > 0:
-                next_blank = blanks.pop(0)
-                ent_start += len((text_tmp_ent)) + next_blank[1] - next_blank[0]
-            else:
-                pass
+        for pos in range(1, len(semicolon_positions)):
+            scope_start = semicolon_positions[pos - 1]
+            scope_end = semicolon_positions[pos]
+            scope = sample_text[scope_start:scope_end]
+            ingr = []
+            for ent in sample[ent_key]:
+                if ent[1] <= scope_end and ent[0] >= scope_start:
+                    ingr.append(copy.deepcopy(ent))
 
-            shuffled_text += text_tmp_ent + next_blank[2]
+            shuffled_ents = []
+            shuffled_indexes = [i for i in range(len(ingr))]
+            random.shuffle(shuffled_indexes)
+            # sample.update({f'idx_{shuffle_lang}': shuffled_indexes})
+
+            # get non-entity positions and strings from the original text
+            blanks_ingr = []
+            for i in range(1, len(ingr)):
+                end_prev = ingr[i-1][1]
+                start_foll = ingr[i][0]
+                blanks_ingr.append([end_prev, start_foll, sample_text[end_prev:start_foll]])
+
+            ent_start = ingr[0][0]
+            shuffled_text_ingr = ''
+            for idx in shuffled_indexes:
+                tmp_ent = ingr[idx]
+                text_tmp_ent = sample_text[ingr[idx][0]:ingr[idx][1]]
+                
+                len_text = len((text_tmp_ent))
+                tmp_ent[0] = ent_start
+                tmp_ent[1] = tmp_ent[0] + len_text
+                tmp_ent[2] = ingr[idx][2]
+                shuffled_ents.append(tmp_ent)
+
+                if len(blanks_ingr) > 0:
+                    next_blank = blanks_ingr.pop(0)
+                    ent_start += len((text_tmp_ent)) + next_blank[1] - next_blank[0]
+                else:
+                    next_blank = ['', '', '']
+                    pass
+
+                shuffled_text_ingr += text_tmp_ent + next_blank[2]
+            shuffled_list += shuffled_ents
+            shuffled_text += shuffled_text_ingr
+            shuffled_text = shuffled_text + sample_text[len(shuffled_text):scope_end]
+        
         sample.update({
             text_key: shuffled_text,
-            ent_key: shuffled_ents,
+            ent_key: shuffled_list,
         })
-        if verbose:
-            print_list = []
-            for i in range(len(sample[f'idx_{shuffle_lang}'])):
-                row = []
-                for l in sample['sample_langs']:
-                    row.append([[sample[f'idx_{l}'].index(i)], sample[f'ents_{l}'][sample[f'idx_{l}'].index(i)] + [sample[f'text_{l}'][sample[f'ents_{l}'][sample[f'idx_{l}'].index(i)][0]:sample[f'ents_{l}'][sample[f'idx_{l}'].index(i)][1]]]])
-                print_list.append(row)
-            print(pd.DataFrame(print_list))
-            print(sample['idx_en'])
-            print(sample['idx_it'])
-
         return sample
 
     @staticmethod

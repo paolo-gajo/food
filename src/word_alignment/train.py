@@ -31,25 +31,31 @@ def main():
 
     lang_id = '-'.join(languages)
 
-    model_repo = 'bert-base-multilingual-cased' 
-    # model_repo = 'pgajo/mbert-xlwa-en-it' # mbert fine-tuned on xlwa-en-it
-    # data_repo = 'pgajo/xlwa_en-it_mbert' # xl-wa
+    # model_repo = 'bert-base-multilingual-cased' 
+    model_repo = 'pgajo/mbert-xlwa-en-it' # mbert fine-tuned on xlwa-en-it
+
+    # xl-wa
+    # data_repo = 'pgajo/xlwa_en-it_mbert' 
     
-    data_repo = 'pgajo/EW-TT-PE_U1_S0_DROP1_mbert' # unshuffled
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_DROP1_mbert' # shuffled
+    # tasteset
+    # data_repo = 'pgajo/EW-TT-PE_U1_S0_DROP1_mbert' # unshuffled
+    data_repo = 'pgajo/EW-TT-PE_U0_S1_DROP1_mbert' # shuffled
 
     # data_repo = 'pgajo/EW-TT-MT_LOC_U1_S0_DROP1_mbert' # unshuffled
     # data_repo = 'pgajo/EW-TT-MT_LOC_U0_S1_DROP1_mbert' # shuffled
 
     # model_repo = 'microsoft/mdeberta-v3-base'
     # model_repo = 'pgajo/mdeberta-xlwa-en-it' # mdeberta fine-tuned on xlwa-en-it
-    # data_repo = 'pgajo/xlwa_en-it_mdeberta' # xl-wa
+    
+    # xl-wa
+    # data_repo = 'pgajo/xlwa_en-it_mdeberta'
 
+    # tasteset
     # data_repo = 'pgajo/EW-TT-PE_U1_S0_DROP1_mdeberta' # unshuffled
     # data_repo = 'pgajo/EW-TT-PE_U0_S1_DROP1_mdeberta' # shuffled
 
     # data_repo = 'pgajo/EW-TT-MT_LOC_U1_S0_DROP1_mdeberta' # unshuffled
-    data_repo = 'pgajo/EW-TT-MT_LOC_U0_S1_DROP1_mdeberta' # shuffled
+    # data_repo = 'pgajo/EW-TT-MT_LOC_U0_S1_DROP1_mdeberta' # shuffled
     
     data = TASTEset.from_datasetdict(data_repo)
 
@@ -64,7 +70,7 @@ def main():
     #     unshuffled_size = 1,
     #     )
 
-    batch_size = 8
+    batch_size = 32
     dataset = data_loader(data,
                         batch_size,
                         # n_rows=320,
@@ -151,16 +157,17 @@ def main():
     evaluator.print_metrics()
     
     results_path = '/home/pgajo/working/food/results'
-    model_results_path = os.path.join(results_path, data_repo.split('/')[-1])
-    evaluator.save_metrics_to_csv(os.path.join(model_results_path, model_repo.split('/')[-1]))
-        
     # model save folder
     model_dir = './models'
     model_name = model_repo.split('/')[-1].split('_')[0]
-    filename_simple = re.sub('\..*', '', data_repo.split('/')[-1]) # remove extension if local path
-    save_name = f"{model_name}_{filename_simple}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
+    data_name = re.sub('\..*', '', data_repo.split('/')[-1]) # remove extension if local path
+    model_results_path = os.path.join(results_path, data_name)
+    save_name = f"{model_name}_{data_name}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
     save_name = save_name.replace('bert-base-multilingual-cased', 'mbert')
     save_name = save_name.replace('mdeberta-v3-base', 'mdeberta')
+
+    evaluator.save_metrics_to_csv(os.path.join(model_results_path, save_name))
+
     # filename_simple = f"{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_DROP{data.drop_duplicates}"
     # save_name = f"{filename_simple}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
     if args.test:
