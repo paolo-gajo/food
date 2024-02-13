@@ -27,7 +27,6 @@ def shuffle_entities_ingredient(sample, shuffle_lang, verbose = False) -> dict:
     for pos in range(1, len(semicolon_positions)):
         scope_start = semicolon_positions[pos - 1]
         scope_end = semicolon_positions[pos]
-        scope = sample_text[scope_start:scope_end]
         ingr = []
         for ent in sample[ent_key]:
             if ent[1] <= scope_end and ent[0] >= scope_start:
@@ -88,5 +87,5 @@ for key in sample_shuffled.keys():
     print(f"{key}:\t", sample_shuffled[key])
 print('-----------------')
 
-for ent in sample_shuffled['ents_it']:
-    print(sample_shuffled['text_it'][ent[0]:ent[1]])
+# for ent in sample_shuffled['ents_it']:
+#     print(sample_shuffled['text_it'][ent[0]:ent[1]])

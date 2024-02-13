@@ -36,6 +36,7 @@ def main():
         shuffled_size = args.shuffled_size,
         unshuffled_size = args.unshuffled_size,
         shuffle_type = 'ingredient',
+        shuffle_probability = 0.25
         )
     
     tokenizer_dict = {
@@ -44,7 +45,7 @@ def main():
         'bert-large-uncased': 'bert-large-uncased'
     }
 
-    save_name = f"{args.input.split('/')[-1].replace('.json', '')}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_T{dataset.shuffle_type}_DROP{str(int(dataset.drop_duplicates))}_{tokenizer_dict[tokenizer_name]}"
+    save_name = f"{args.input.split('/')[-1].replace('.json', '')}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_T{dataset.shuffle_type}_P{dataset.shuffle_probability}_DROP{str(int(dataset.drop_duplicates))}_{tokenizer_dict[tokenizer_name]}"
     repo_id = f"pgajo/{save_name}"
     print('repo_id:', repo_id)
     dataset.push_to_hub(repo_id)
@@ -53,6 +54,7 @@ def main():
     Dataset: {dataset.name}\n
     Unshuffled ratio: {dataset.unshuffled_size}\n
     Shuffled ratio: {dataset.shuffled_size}\n
+    Shuffle probability: {dataset.shuffle_probability}\n
     Drop duplicates: {dataset.drop_duplicates}\n
     Dataset path = {dataset.data_path}\n
     '''

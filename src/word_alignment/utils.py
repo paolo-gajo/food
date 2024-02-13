@@ -148,7 +148,7 @@ class SquadEvaluator:
         print(df)
         return df
     
-    def save_metrics_to_csv(self, path, add_date = True, add_best_dev = True, format = 'tsv'):
+    def save_metrics_to_csv(self, results_dir_path, add_date = True, add_best_dev = True, format = 'tsv'):
         now = datetime.now()
         if add_date:
             dt_string = now.strftime("%Y-%m-%d_%H-%M-%S") + '_'
@@ -162,12 +162,10 @@ class SquadEvaluator:
         df = pd.DataFrame(self.metrics)
         df.index += 1
         df.index.name = 'epoch'
-        if not os.path.isdir(path):
-            os.makedirs(path)
+
         if self.epoch_best > 0 or self.split == 'test':
-            metrics_save_name = os.path.join(path, dt_string + self.best_model.config._name_or_path.split('/')[-1] + exact_dev_best_suffix)
-            print(f'Saving metrics to: {metrics_save_name}')
-            csv_save_name = metrics_save_name + f'.{format}'
+            csv_save_name = results_dir_path + f'.{format}'
+            print(f'Saving metrics to: {csv_save_name}')
             df.to_csv(csv_save_name, sep=sep_dict[format])
         else:
             print('No best model! Did you run with too few instances just for testing?')
@@ -207,6 +205,7 @@ class TASTEset(DatasetDict):
         inverse_languages = False,
         keep_raw = False,
         shuffle_type = 'recipe',
+        shuffle_probability = 0,
         ) -> 'TASTEset':
         '''
         Prepares data from the TASTEset dataset based on the wanted languages,
@@ -301,6 +300,7 @@ class TASTEset(DatasetDict):
             self.shuffled_samples = []
             self.index = 0
             self.shuffle_type = shuffle_type
+            self.shuffle_probability = shuffle_probability
             if not hasattr(self.tokenizer, 'sep'):
                 self.tokenizer.sep = None
 
@@ -527,8 +527,7 @@ class TASTEset(DatasetDict):
                 formatted_data.append(sample_dict)
         return {'annotations': formatted_data}
 
-    @staticmethod
-    def shuffle_entities_ingredient(sample, shuffle_lang, verbose = False) -> dict:
+    def shuffle_entities_ingredient(self, sample, shuffle_lang, verbose = False) -> dict:
         '''
         Shuffles entities and text for a sample.
         Only shuffles, so the source and target entities need 
@@ -539,24 +538,24 @@ class TASTEset(DatasetDict):
         text_key = f'text_{shuffle_lang}'
         ent_key = f'ents_{shuffle_lang}'
         sample_text = sample[text_key]
-        semicolon_positions = [0] + [match.end() for match in re.finditer(';', sample_text)] + [len(sample_text)]
+        semicolon_positions = [0] + [match.end() for match in re.finditer('(?<!\s);(?!\s)', sample_text)] + [len(sample_text)]
 
         shuffled_list = []
         shuffled_text = ''
-
+        shuffled_indexes = []
         for pos in range(1, len(semicolon_positions)):
             scope_start = semicolon_positions[pos - 1]
             scope_end = semicolon_positions[pos]
-            scope = sample_text[scope_start:scope_end]
             ingr = []
             for ent in sample[ent_key]:
                 if ent[1] <= scope_end and ent[0] >= scope_start:
                     ingr.append(copy.deepcopy(ent))
 
             shuffled_ents = []
-            shuffled_indexes = [i for i in range(len(ingr))]
-            random.shuffle(shuffled_indexes)
-            # sample.update({f'idx_{shuffle_lang}': shuffled_indexes})
+            shuffled_indexes_ingr = [i for i in range(len(ingr))]
+            if random.random() > self.shuffle_probability:
+                random.shuffle(shuffled_indexes_ingr)
+            
 
             # get non-entity positions and strings from the original text
             blanks_ingr = []
@@ -567,7 +566,7 @@ class TASTEset(DatasetDict):
 
             ent_start = ingr[0][0]
             shuffled_text_ingr = ''
-            for idx in shuffled_indexes:
+            for idx in shuffled_indexes_ingr:
                 tmp_ent = ingr[idx]
                 text_tmp_ent = sample_text[ingr[idx][0]:ingr[idx][1]]
                 
@@ -588,15 +587,15 @@ class TASTEset(DatasetDict):
             shuffled_list += shuffled_ents
             shuffled_text += shuffled_text_ingr
             shuffled_text = shuffled_text + sample_text[len(shuffled_text):scope_end]
-        
+            shuffled_indexes += [i + len(shuffled_indexes) for i in shuffled_indexes_ingr]
+        sample.update({f'idx_{shuffle_lang}': shuffled_indexes})
         sample.update({
             text_key: shuffled_text,
             ent_key: shuffled_list,
         })
         return sample
 
-    @staticmethod
-    def shuffle_entities_recipe(sample, shuffle_lang, verbose = False) -> dict:
+    def shuffle_entities_recipe(self, sample, shuffle_lang, verbose = False) -> dict:
         '''
         Shuffles entities and text for a sample.
         Only shuffles, so the source and target entities need 
@@ -607,7 +606,8 @@ class TASTEset(DatasetDict):
         ent_key = f'ents_{shuffle_lang}'
         shuffled_ents = []
         shuffled_indexes = [i for i in range(len(sample[ent_key]))]
-        random.shuffle(shuffled_indexes)
+        if random.random() > self.shuffle_probability:
+            random.shuffle(shuffled_indexes)
         sample.update({f'idx_{shuffle_lang}': shuffled_indexes})
         
         # get non-entity positions and strings from the original text
