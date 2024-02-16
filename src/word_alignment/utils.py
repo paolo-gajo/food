@@ -13,6 +13,7 @@ from datetime import datetime
 import copy
 from transformers import AutoTokenizer
 import re
+from compute_score import compute_exact
 
 sep_dict = {
     'csv': ',',
@@ -57,13 +58,35 @@ class SquadEvaluator:
         self.patience_counter = 0
         self.stop_training = False
         self.best_model = model
+        self.labels = []
+        self.type_metrics_dict = None
+        self.prediction_dataset = []
 
     def evaluate(self, model, split, epoch, eval_metric = 'dev'):
-        print(f'len(self.preds[{split}])', len(self.preds[split]))
         self.epoch_metrics[f'{split}_f1'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['f1']
         self.epoch_metrics[f'{split}_exact'] = self.eval_fc.compute(predictions=self.preds[split],
                                                 references=self.trues[split])['exact']
+        if self.labels:
+            types = set(self.labels)
+            self.type_metrics_dict = {type: {} for type in types}
+            for type in types:
+                preds_type = []
+                trues_type = []
+                for i in range(len(self.preds[split])):
+                    if self.labels[i] == type:
+                        preds_type.append(self.preds[split][i])
+                        trues_type.append(self.trues[split][i])
+                self.type_metrics_dict[type].update(
+                    {'f1':self.eval_fc.compute(predictions=preds_type,
+                                                    references=trues_type)['f1'],
+                    'exact':self.eval_fc.compute(predictions=preds_type,
+                                                    references=trues_type)['exact'],
+                    'support': len(preds_type),
+                    }
+                )
+                pd.DataFrame(self.type_metrics_dict).to_csv('type_metrics_dict.csv')
+            pd.DataFrame(self.prediction_dataset).to_csv('prediction_dataset.csv')
 
         self.preds[split] = []
         self.trues[split] = []
@@ -96,7 +119,7 @@ class SquadEvaluator:
             'test_loss': 0, 'test_f1': 0, 'test_exact': 0,
             }
 
-    def get_eval_batch(self, model_outputs, batch, split):
+    def get_eval_batch(self, model_outputs, batch, split, type_labels = False):
         self.split = split
         start_preds = torch.argmax(model_outputs['start_logits'], dim=1)
         end_preds = torch.argmax(model_outputs['end_logits'], dim=1)
@@ -104,6 +127,10 @@ class SquadEvaluator:
                                        end_preds.tolist())]
         true_batch = [el for el in zip(batch["start_positions"].tolist(),
                                        batch["end_positions"].tolist())]
+        types_batch = [el for el in batch['entity_type']]
+        if type_labels:
+            self.labels += types_batch
+        text_preds = []
         pred_batch_ids = [str(uuid.uuid4()) for i in range(len(start_preds))]
 
         for i, pair in enumerate(pred_batch):
@@ -116,9 +143,9 @@ class SquadEvaluator:
             dict_pred = {
                 'prediction_text': text_pred,
                 'id': pred_batch_ids[i],
-                'no_answer_probability': 0
+                'no_answer_probability': 0,
             }
-
+            text_preds.append(text_pred)
             self.preds[split].append(dict_pred)
 
         for i, pair in enumerate(true_batch):
@@ -132,6 +159,25 @@ class SquadEvaluator:
                     'id': pred_batch_ids[i]
                 }
             self.trues[split].append(dict_true)
+        
+        for i in range(len(pred_batch)):
+            prediction_dataset_sample = {
+                'query': batch['query'][i],
+                'context': batch['context'][i],
+                'answer_start': batch['answer_start'].tolist()[i],
+                'answer_end': batch['answer_end'].tolist()[i],
+                'answer': batch['answer'][i],
+                'prediction': text_preds[i],
+                'pred_start': pred_batch[i][0],
+                'pred_end': pred_batch[i][1],
+                'correct': compute_exact(batch['answer'][i], text_preds[i]),
+                'type': types_batch[i],
+                'start_positions': batch['start_positions'][i],
+                'end_positions': batch['end_positions'][i],
+
+            }
+
+            self.prediction_dataset.append(prediction_dataset_sample)
     
     def print_metrics(self, current_epoch = None, current_split = None):
         if current_epoch is None:
@@ -429,7 +475,7 @@ class TASTEset(DatasetDict):
 
             if self.src_context:
                 new_sample['query'] = sample[f'text_{self.src_lang}'][:sample[f'ents_{self.src_lang}'][idx][0]] +\
-                            '• ' + sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]] + ' •' +\
+                            '• ' + sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]] + '     ' +\
                             sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][1]:]
             else:
                 new_sample['query'] = sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][0]:sample[f'ents_{self.src_lang}'][1]]
@@ -457,6 +503,7 @@ class TASTEset(DatasetDict):
                 for char in self.rm_char:
                     new_sample['query'] = new_sample['query'].replace(char, self.tokenizer.sep)
                     new_sample['context'] = new_sample['context'].replace(char, self.tokenizer.sep)
+            new_sample['entity_type'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(idx)][2]
             new_sample['sentence_index'] = sentence_index
             new_sample['sample_index'] = idx
             new_sample['index'] = self.index
@@ -511,9 +558,9 @@ class TASTEset(DatasetDict):
                         for relation in relations:
                             if relation[source_id] == src_id:
                                 tgt_id = relation[target_id]
-                                for label_src in sample_labels_tgt:
-                                    if label_src['id'] == tgt_id:
-                                        tgt_ent = [label_src['value']['start'], label_src['value']['end'], label_src['value']['labels'][0], label_src['value']['text']]
+                                for label_tgt in sample_labels_tgt:
+                                    if label_tgt['id'] == tgt_id:
+                                        tgt_ent = [label_tgt['value']['start'], label_tgt['value']['end'], label_tgt['value']['labels'][0], label_tgt['value']['text']]
                         ents_src.append(src_ent)
                         ents_tgt.append(tgt_ent)
                     sample_dict.update({

@@ -25,8 +25,8 @@ def main():
     # tokenizer_name = 'bert-large-uncased'
     # tokenizer_name = 'microsoft/mdeberta-v3-base'
 
-    args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-PE.json'
-    # args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_LOC.json'
+    # args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-PE.json'
+    args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_LOC.json'
     dataset = TASTEset.from_json(
         args.input,
         tokenizer_name,
@@ -48,17 +48,19 @@ def main():
     save_name = f"{args.input.split('/')[-1].replace('.json', '')}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_T{dataset.shuffle_type}_P{dataset.shuffle_probability}_DROP{str(int(dataset.drop_duplicates))}_{tokenizer_dict[tokenizer_name]}"
     repo_id = f"pgajo/{save_name}"
     print('repo_id:', repo_id)
-    dataset.push_to_hub(repo_id)
-    dataset_summary = f'''
-    Tokenizer: {tokenizer_dict[tokenizer_name]}\n
-    Dataset: {dataset.name}\n
-    Unshuffled ratio: {dataset.unshuffled_size}\n
-    Shuffled ratio: {dataset.shuffled_size}\n
-    Shuffle probability: {dataset.shuffle_probability}\n
-    Drop duplicates: {dataset.drop_duplicates}\n
-    Dataset path = {dataset.data_path}\n
-    '''
-    push_dataset_card(repo_id, dataset_summary=dataset_summary)
+    # dataset.push_to_hub(repo_id)
+    # dataset_summary = f'''
+    # Tokenizer: {tokenizer_dict[tokenizer_name]}\n
+    # Dataset: {dataset.name}\n
+    # Unshuffled ratio: {dataset.unshuffled_size}\n
+    # Shuffled ratio: {dataset.shuffled_size}\n
+    # Shuffle probability: {dataset.shuffle_probability}\n
+    # Drop duplicates: {dataset.drop_duplicates}\n
+    # Dataset path = {dataset.data_path}\n
+    # '''
+    # push_dataset_card(repo_id, dataset_summary=dataset_summary)
+    training_data_path = '/home/pgajo/working/food/training_data'
+    dataset.save_to_disk(training_data_path)
 
 if __name__ == '__main__':
     with warnings.catch_warnings():

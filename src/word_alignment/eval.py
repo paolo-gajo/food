@@ -44,7 +44,7 @@ def main():
     # model_repo = 'pgajo/mdeberta_EW-TT-PE_U0_S1_Tingredient_P0.75_DROP1_mdeberta_E5_DEV98.0'              # 75% ingredient shuffle mdeberta base *
     # model_repo = '/home/pgajo/working/food/models/TASTEset/mdeberta_EW-TT-PE_U0_S1_Tingredient_P0.75_DROP1_E5_DEV98.0'
     # model_repo = 'pgajo/mdeberta-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.75_DROP1_mdeberta_E4_DEV98.0'   # 75% ingredient shuffle mdeberta xlwa *
-    model_repo = '/home/pgajo/working/food/models/TASTEset/mdeberta-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.75_DROP1_E4_DEV98.0'
+    # model_repo = '/home/pgajo/working/food/models/TASTEset/mdeberta-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.75_DROP1_E4_DEV98.0'
 
     # model_repo = 'pgajo/mbert_EW-TT-PE_U0_S1_Tingredient_P0.5_DROP1_mbert_E8_DEV83.0'                     # 50% ingredient shuffle mbert base *
     # model_repo = '/home/pgajo/working/food/models/TASTEset/mbert_EW-TT-PE_U0_S1_Tingredient_P0.50_E8_DEV83.0'
@@ -59,20 +59,25 @@ def main():
     # model_repo = '/home/pgajo/working/food/models/TASTEset/mbert_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E10_DEV80.0'
     # model_repo = 'pgajo/mbert-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mbert_E10_DEV87.0'        # 25% ingredient shuffle mbert xlwa *
     # model_repo = '/home/pgajo/working/food/models/TASTEset/mbert-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E10_DEV87.0'
-    # model_repo = 'pgajo/mdeberta_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mdeberta_E9_DEV97.0'              # 25% ingredient shuffle mdeberta base *
-    # model_repo = '/home/pgajo/working/food/models/TASTEset/mdeberta_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E9_DEV97.0'
+    # model_repo = 'pgajo/mdeberta_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mdeberta_E9_DEV97.0'              # 25% ingredient shuffle mdeberta base * --> 61.28 exact match!
+    model_repo = '/home/pgajo/working/food/models/TASTEset/mdeberta_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E9_DEV97.0'
     # model_repo = 'pgajo/mdeberta-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mdeberta_E5_DEV95.0'   # 25% ingredient shuffle mdeberta xlwa *
     # model_repo = '/home/pgajo/working/food/models/TASTEset/mdeberta-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E5_DEV95.0'
+
+    # model_repo = 'pgajo/mbert-xlwa-en-it'
+    # model_repo = 'pgajo/mdeberta-xlwa-en-it'
 
     tokenizer = AutoTokenizer.from_pretrained(model_repo)
     # data_repo = 'pgajo/xlwa_en-it_mbert'
     # data_repo = 'pgajo/xlwa_en-it_mdeberta'
     # data_repo = 'pgajo/GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0_mbert'
-    data_repo = 'pgajo/GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0_mdeberta'
-    data = TASTEset.from_datasetdict(data_repo)
+    data_repo = 'pgajo/mdeberta_GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0_types'
+    data = TASTEset.from_datasetdict(data_repo,
+                                     keep_raw = True,
+                                     )
 
     batch_size = 32
-    dataset = data_loader(data,
+    dataset = data_loader(data, 
                         batch_size,
                         # n_rows=100
                         )
@@ -95,15 +100,23 @@ def main():
     progbar = tqdm(enumerate(dataset[split]),
                             total=len(dataset[split]),
                             desc=f"{split} - epoch {epoch + 1}")
+    columns = ['input_ids', 'token_type_ids', 'attention_mask', 'start_positions', 'end_positions']
     for i, batch in progbar:
         with torch.inference_mode():
-            outputs = model(**batch)
+            input = {k: batch[k].to('cuda') for k in columns}
+            outputs = model(**input)
+            # set to -10000 any logits in the query (left side of the inputs) so that the model cannot predict those tokens
+            # for i in range(len(outputs['start_logits'])):
+            #     outputs['start_logits'][i] = torch.where(input['token_type_ids'][i]!=0, outputs['start_logits'][i], input['token_type_ids'][i]-10000)
+            #     outputs['end_logits'][i] = torch.where(input['token_type_ids'][i]!=0, outputs['end_logits'][i], input['token_type_ids'][i]-10000)
         loss = outputs[0].mean()
         epoch_test_loss += loss.item()
         loss_tmp = round(epoch_test_loss / (i + 1), 4)
         progbar.set_postfix({'Loss': loss_tmp})
         
-        evaluator.get_eval_batch(outputs, batch, split)
+        evaluator.get_eval_batch(outputs, batch, split, type_labels = True)
+
+
     
     evaluator.evaluate(model, split, epoch, eval_metric='test')
     epoch_test_loss /= len(dataset[split])
@@ -112,7 +125,7 @@ def main():
     evaluator.print_metrics(current_epoch = epoch, current_split = split)
     evaluator.store_metrics()
 
-    results_path = '/home/pgajo/working/food/results_new'
+    results_path = '/home/pgajo/working/food/results_new2'
     # model save folder
     model_name = model_repo.split('/')[-1]
     data_name = re.sub('\..*', '', data_repo.split('/')[-1]) # remove extension if local path

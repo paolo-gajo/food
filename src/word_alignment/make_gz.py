@@ -33,7 +33,7 @@ def main():
 
     dataset.name = data_path.split('/')[-1].replace('.json', '')
     save_name = f"{tokenizer_dict[tokenizer_name]}_{dataset.name}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_DROP{str(int(dataset.drop_duplicates))}"
-    repo_id = f"pgajo/{save_name}"
+    repo_id = f"pgajo/{save_name}_types"
     print('repo_id:', repo_id)
     local_dir = data_path.replace('.json', '')
     if not os.path.isdir(local_dir):
