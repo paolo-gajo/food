@@ -1,6 +1,7 @@
 from utils import TASTEset, push_dataset_card
 import warnings
 import argparse
+import os
 
 def main():
     parser = argparse.ArgumentParser()
@@ -25,8 +26,8 @@ def main():
     # tokenizer_name = 'bert-large-uncased'
     # tokenizer_name = 'microsoft/mdeberta-v3-base'
 
-    # args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-PE.json'
-    args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_LOC.json'
+    args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-PE_en-it.json'
+    # args.input = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_LOC_en-it.json'
     dataset = TASTEset.from_json(
         args.input,
         tokenizer_name,
@@ -36,7 +37,7 @@ def main():
         shuffled_size = args.shuffled_size,
         unshuffled_size = args.unshuffled_size,
         shuffle_type = 'ingredient',
-        shuffle_probability = 0.25
+        shuffle_probability = 0.25,
         )
     
     tokenizer_dict = {
@@ -59,8 +60,8 @@ def main():
     # Dataset path = {dataset.data_path}\n
     # '''
     # push_dataset_card(repo_id, dataset_summary=dataset_summary)
-    training_data_path = '/home/pgajo/working/food/training_data'
-    dataset.save_to_disk(training_data_path)
+    datasets_dir_path = '/home/pgajo/working/food/datasets'
+    dataset.save_to_disk(os.path.join(datasets_dir_path, save_name))
 
 if __name__ == '__main__':
     with warnings.catch_warnings():

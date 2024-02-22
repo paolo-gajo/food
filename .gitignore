@@ -7,7 +7,7 @@ src/ner/spacy_outputs/
 # src/translate/*
 models/
 .vscode
-*/__pycache__
+**/__pycache__/
 *.log
 # Allow
 *.sh

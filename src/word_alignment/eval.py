@@ -7,6 +7,7 @@ from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 from utils import data_loader, SquadEvaluator, TASTEset
 import pandas as pd
 import re
+from aligner_pt import AlignerLoss, BertAligner
 
 def main():
     # model_repo = 'pgajo/mbert_EW-TT-PE_U1_S0_DROP1_mbert_E10_DEV98.0'                                     # 0% recipe shuffle mbert base *
@@ -57,10 +58,11 @@ def main():
 
     # model_repo = 'pgajo/mbert_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mbert_E10_DEV80.0'                   # 25% ingredient shuffle mbert base *
     # model_repo = '/home/pgajo/working/food/models/TASTEset/mbert_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E10_DEV80.0'
+    model_repo = '/home/pgajo/working/food/models/TASTEset/mbert_EW-TT-PE_en-it_U0_S1_Tingredient_P0.25_DROP1_mbert_E9_DEV76.0_2024-02-22-01-28-20'                   # 25% ingredient shuffle mbert base dropout
     # model_repo = 'pgajo/mbert-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mbert_E10_DEV87.0'        # 25% ingredient shuffle mbert xlwa *
     # model_repo = '/home/pgajo/working/food/models/TASTEset/mbert-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E10_DEV87.0'
     # model_repo = 'pgajo/mdeberta_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mdeberta_E9_DEV97.0'              # 25% ingredient shuffle mdeberta base * --> 61.28 exact match!
-    model_repo = '/home/pgajo/working/food/models/TASTEset/mdeberta_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E9_DEV97.0'
+    # model_repo = '/home/pgajo/working/food/models/TASTEset/mdeberta_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E9_DEV97.0'
     # model_repo = 'pgajo/mdeberta-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mdeberta_E5_DEV95.0'   # 25% ingredient shuffle mdeberta xlwa *
     # model_repo = '/home/pgajo/working/food/models/TASTEset/mdeberta-xlwa-en-it_EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_E5_DEV95.0'
 
@@ -70,11 +72,9 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(model_repo)
     # data_repo = 'pgajo/xlwa_en-it_mbert'
     # data_repo = 'pgajo/xlwa_en-it_mdeberta'
-    # data_repo = 'pgajo/GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0_mbert'
-    data_repo = 'pgajo/mdeberta_GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0_types'
-    data = TASTEset.from_datasetdict(data_repo,
-                                     keep_raw = True,
-                                     )
+    data_repo = '/home/pgajo/working/food/datasets/GZ-GOLD-NER-ALIGN_105_U1_S0_Trecipe_P0_DROP0_mbert'
+    # data_repo = 'pgajo/mdeberta_GZ-GOLD-NER-ALIGN_105_U1_S0_DROP0_types'
+    data = TASTEset.from_disk(data_repo)
 
     batch_size = 32
     dataset = data_loader(data, 
@@ -84,6 +84,8 @@ def main():
 
     
     model = AutoModelForQuestionAnswering.from_pretrained(model_repo)
+    model = BertAligner.from_pretrained(model_repo)
+    print(model.eval())
     device = 'cuda'
     model = torch.nn.DataParallel(model).to(device)
 
@@ -109,7 +111,8 @@ def main():
             # for i in range(len(outputs['start_logits'])):
             #     outputs['start_logits'][i] = torch.where(input['token_type_ids'][i]!=0, outputs['start_logits'][i], input['token_type_ids'][i]-10000)
             #     outputs['end_logits'][i] = torch.where(input['token_type_ids'][i]!=0, outputs['end_logits'][i], input['token_type_ids'][i]-10000)
-        loss = outputs[0].mean()
+        # loss = outputs[0].mean()
+        loss = outputs['loss'].mean()
         epoch_test_loss += loss.item()
         loss_tmp = round(epoch_test_loss / (i + 1), 4)
         progbar.set_postfix({'Loss': loss_tmp})

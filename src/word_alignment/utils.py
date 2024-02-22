@@ -2,7 +2,7 @@ import os
 import json
 import pandas as pd
 from typing import List, Union
-from datasets import Dataset, DatasetDict, load_dataset
+from datasets import Dataset, DatasetDict, load_dataset, load_from_disk
 from tqdm.auto import tqdm
 import random
 from torch.utils.data import DataLoader
@@ -127,9 +127,11 @@ class SquadEvaluator:
                                        end_preds.tolist())]
         true_batch = [el for el in zip(batch["start_positions"].tolist(),
                                        batch["end_positions"].tolist())]
-        types_batch = [el for el in batch['entity_type']]
         if type_labels:
+            types_batch = [el for el in batch['entity_type']]
             self.labels += types_batch
+        else:
+            types_batch = [None for i in range(len(batch['start_positions']))]
         text_preds = []
         pred_batch_ids = [str(uuid.uuid4()) for i in range(len(start_preds))]
 
@@ -249,7 +251,6 @@ class TASTEset(DatasetDict):
         n_rows = None,
         label_studio = False,
         inverse_languages = False,
-        keep_raw = False,
         shuffle_type = 'recipe',
         shuffle_probability = 0,
         ) -> 'TASTEset':
@@ -306,17 +307,10 @@ class TASTEset(DatasetDict):
                 If `True`, check relations in the direction opposite to the the one they were annotated as,
                 e.g. to allow producing Italian samples from English samples when relation annotations
                 were actually done from Italian to English.
-            keep_raw (`bool`, defaults to `False`):
-                If `True`, keep raw text data in the dataset.
         '''
         self.name = 'TASTEset'
         columns = None
-        if not keep_raw:
-            columns = ['input_ids',
-                        'token_type_ids',
-                        'attention_mask',
-                        'start_positions',
-                        'end_positions']
+
         if isinstance(input_data, DatasetDict):
             input_data.set_format('torch', columns = columns)
             for key in input_data.keys():
@@ -396,6 +390,15 @@ class TASTEset(DatasetDict):
                          **kwargs
                          ):
         data = load_dataset(repo_id)
+        return cls(data,
+                   **kwargs)
+
+    @classmethod
+    def from_disk(cls,
+                         repo_id,
+                         **kwargs
+                         ):
+        data = load_from_disk(repo_id)
         return cls(data,
                    **kwargs)
 
