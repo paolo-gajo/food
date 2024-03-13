@@ -340,7 +340,7 @@ class TASTEset(DatasetDict):
             self.shuffled_samples = []
             self.index = 0
             self.shuffle_type = shuffle_type
-            self.shuffle_probability = shuffle_probability
+            self.shuffle_threshold = 1 - shuffle_probability
             if not hasattr(self.tokenizer, 'sep'):
                 self.tokenizer.sep = None
 
@@ -603,7 +603,7 @@ class TASTEset(DatasetDict):
 
             shuffled_ents = []
             shuffled_indexes_ingr = [i for i in range(len(ingr))]
-            if random.random() > self.shuffle_probability:
+            if random.random() > self.shuffle_threshold:
                 random.shuffle(shuffled_indexes_ingr)
             
 
