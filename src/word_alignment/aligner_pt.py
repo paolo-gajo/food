@@ -8,8 +8,9 @@ class AlignerLoss(CrossEntropyLoss):
         super().__init__(weight, size_average, ignore_index, reduce, reduction, label_smoothing)
         self.len_pred = len_pred.type(torch.float32)
         self.len_answer = len_answer.type(torch.float32)
+
     def forward(self, input, target):
-        diff = (abs(self.len_pred - self.len_answer)**2).mean().clamp(0,1)
+        diff = abs(self.len_pred - self.len_answer).mean() / self.len_answer.mean()
         ce = cross_entropy(input, target)
         # ce = ce * diff
         return ce
@@ -43,8 +44,8 @@ class BertAligner(BertPreTrainedModel):
         pred_lengths = end_preds - start_preds
         answer_lengths = end_positions - start_positions
 
-        # loss_fn = AlignerLoss(pred_lengths, answer_lengths)
-        loss_fn = CrossEntropyLoss()
+        loss_fn = AlignerLoss(pred_lengths, answer_lengths)
+        # loss_fn = CrossEntropyLoss()
 
         loss_start = loss_fn(start_logits, start_positions)
         loss_end = loss_fn(end_logits, end_positions)
