@@ -89,7 +89,7 @@ def main():
     device = 'cuda'
     model = torch.nn.DataParallel(model).to(device)
 
-    evaluator = SquadEvaluator(tokenizer,
+    evaluator = Evaluator(tokenizer,
                             model,
                             load("squad_v2"),
                             )

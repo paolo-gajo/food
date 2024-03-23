@@ -3,6 +3,8 @@ import torch
 from tqdm.auto import tqdm
 from evaluate import load
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering, BertTokenizer, BertForQuestionAnswering, BertModel, PretrainedConfig, BertPreTrainedModel
+import sys
+sys.path.append('/home/pgajo/food/src')
 from utils import data_loader, SquadEvaluator, TASTEset, save_local_model
 from aligner_pt import BertAligner
 import re
@@ -66,6 +68,7 @@ def main():
                     ]
         for i, batch in progbar:
             input = {k: batch[k].to(device) for k in columns}
+            print((input['input_ids'].shape))
             outputs = model(**input) # ['loss', 'start_logits', 'end_logits']
             loss = outputs['loss'].mean()
             loss.backward()

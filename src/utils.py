@@ -14,6 +14,7 @@ import copy
 from transformers import AutoTokenizer
 import re
 from compute_score import compute_exact
+from icecream import ic
 
 sep_dict = {
     'csv': ',',
@@ -946,12 +947,11 @@ def token_span_to_char_indexes(input, start_index_token, end_index_token, sample
     # print('char_span_prediction', [char_span_prediction])
     return start, end
 
-def tasteset_to_label_studio(annotation_list, model_name):
+def tasteset_to_label_studio(annotation_list, model_name = '', languages = ['en', 'it'], label_field='annotations'):
     tasks = []
     for recipe in annotation_list:
-        predictions = []
+        annotations = []
         results = []
-        languages = ['en', 'it']
         entry = {}
         for language in languages:
             for entity in recipe[f'ents_{language}']:
@@ -965,26 +965,74 @@ def tasteset_to_label_studio(annotation_list, model_name):
                         'labels': [entity[2]]}
                         })
             entry[f'text_{language}'] = recipe[f'text_{language}']
-        predictions.append({'model_version': model_name, 'result': results})
+        annotations.append({'model_version': model_name, 'result': results})
         tasks.append({
             'data': entry,
-            'predictions': predictions,
+            label_field: annotations,
         })
     return tasks
 
-# def label_studio_to_tasteset(data, src_lang = 'it'):
-#     formatted_data = []
-#     languages = [key.split('_')[-1] for key in data[0]['data'].keys() if '_' in key]
-#     tgt_langs = [lang for lang in languages if lang != src_lang]
-#     for line in data:
-#         tmp_dict = {}
-#         for tgt_lang in tgt_langs:
-#             tmp_dict[f'text_{tgt_lang}'] = line['data'][f'ingredients_{tgt_lang}']
-#         tmp_dict[f'text_{src_lang}'] = line['data'][f'ingredients_{src_lang}']
-#         tmp_dict[f'ents_{src_lang}'] = []
-#         for ent in line['annotations'][0]['result']:
-#             tmp_dict[f'ents_{src_lang}'].append([ent['value']['start'], ent['value']['end'], ent['value']['labels'][0]])
-#         tmp_dict[f'ents_{src_lang}'].sort()
-#         formatted_data.append(tmp_dict)
-#     return {'annotations': formatted_data}
+def label_studio_to_tasteset(data, src_langs = ['it', 'en'], label_field = 'annotations'):
+    formatted_data = []
+    for line in data:
+        tmp_dict = {}
+        for src_lang in src_langs:
+            # languages = [key.split('_')[-1] for key in data[0]['data'].keys() if '_' in key]
+            # tgt_langs = [lang for lang in languages if lang != src_lang]
+
+            # for tgt_lang in tgt_langs:
+            #     tmp_dict[f'text_{tgt_lang}'] = line['data'][f'ingredients_{tgt_lang}']
+            tmp_dict[f'text_{src_lang}'] = line['data'][f'ingredients_{src_lang}']
+            tmp_dict[f'ents_{src_lang}'] = []
+            for ent in line[label_field][0]['result']:
+                # if 'value' in ent.keys():
+                if 'direction' not in ent.keys():
+                    if ent['from_name'] == f'label_{src_lang}':
+                        # print(ent)
+                        tmp_dict[f'ents_{src_lang}'].append([ent['value']['start'], ent['value']['end'], ent['value']['labels'][0]])
+        tmp_dict[f'ents_{src_lang}'].sort()
+        formatted_data.append(tmp_dict)
+    return {label_field: formatted_data}
+
+def make_ner_sample(example, tokenizer, label_dict):
+    example_text = example['data']['text_en']
+    # print(example_text)
+    tokens = tokenizer(example_text,
+                    #    return_tensors='pt',
+                       truncation = True,
+                       padding = True,
+                       max_length = 512,
+                       )
+    print(tokens)
+    label_list = []
+    previous_match_span = (-1, -1)
+    for i, id in enumerate(tokens['input_ids']):
+        span = tokens.token_to_chars(i)
+        if int(id) not in [101, 102, tokenizer.pad_token_id]:
+            start = span.start
+            end = span.end
+            new_item = ''
+            for result in example['predictions'][0]['result']:
+                # ic(start, end)
+                # ic(result)
+                if start <= result['value']['end'] and end >= result['value']['start'] and result['from_name'] == 'label_en':
+                    if result['value']['start'] == previous_match_span[0] and result['value']['end'] == previous_match_span[1]:
+                        new_item = 'I-'+result['value']['labels'][0]
+                    else:
+                        new_item = 'B-'+result['value']['labels'][0]
+                    label_list.append(new_item)
+                    previous_match_span = (result['value']['start'], result['value']['end'])
+            if not new_item:
+                label_list.append('O')
+            # ic(i, int(id), new_item, example['data']['text_en'][start:end], tokenizer.decode(id))
+        else:
+            new_item = -100
+            label_list.append(new_item)
+    labels = [int(label_dict[label] if isinstance(label, str) else label) for label in label_list]
+    
+    tokens.update({'labels': labels})
+    # tokens['input_ids'] = tokens['input_ids'].squeeze()
+    # tokens['attention_mask'] = tokens['attention_mask'].squeeze()
+    print(tokens)
+    return tokens
 

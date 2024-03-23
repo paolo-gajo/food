@@ -1,7 +1,9 @@
 import re
 import json
 import random
-
+import sys
+sys.path.append('/home/pgajo/food/src')
+from utils import label_studio_to_tasteset, tasteset_to_label_studio
 en_mapping = {
         # '½': '1/2', '¼': '1/4', '¾': '3/4',
         # '⅓': '1/3', '⅔': '2/3', '⅕': '1/5',
@@ -18,6 +20,7 @@ en_mapping = {
         # 'matzoh': 'matzah',
         # 'course': 'coarse',
         # 'rotel': 'Rotel',
+    ';': ' ; '
     }
 
 def randomizer(s_list):
@@ -324,6 +327,7 @@ it_mapping = {
     # 'bone in': 'con le ossa',
     # 'Zia Maria': 'Tia Maria',
     # 'Grasso ridotto': 'a basso contenuto di grassi',
+    ';': ' ; '
         
 }
 
@@ -335,8 +339,6 @@ mappings = {
 def sub_shift(json_data, mappings, *, lang):
     text_key = f'text_{lang}'
     ents_key = f'ents_{lang}'
-
-    
 
     for j, annotation in enumerate(json_data['annotations']):
         text = annotation[text_key]
@@ -537,14 +539,24 @@ pattern_list = [
 
 converter = Converter(patterns=pattern_list)
 
-json_file = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-MT.json'
+json_file = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105.json'
 with open(json_file, 'r', encoding='utf-8') as file:
     data = json.load(file)
+label_field = 'annotations'
+data = label_studio_to_tasteset(data, label_field=label_field)
 
-# clean up translation mistakes by doing simple substitutions first with this function
-# data = sub_shift(data, mappings, lang = 'en')
-# data = sub_shift(data, mappings, lang = 'it')
-localized_data = converter.localize_ingredients(data)
+# from icecream import ic
+# ic(data)
+# # clean up translation mistakes by doing simple substitutions first with this function
+data = sub_shift(data, mappings, lang = 'en')
+data = sub_shift(data, mappings, lang = 'it')
+
+with open(json_file[:-5] + '_tastesetformat.json', 'w', encoding='utf-8') as file:
+    json.dump(data, file, ensure_ascii=False, indent=4)
+
+data = tasteset_to_label_studio(data['annotations'], label_field=label_field)
+localized_data = data
+# localized_data = converter.localize_ingredients(localized_data)
 # save to updated json file with different name
-with open(json_file[:-5] + '_LOC.json', 'w', encoding='utf-8') as file:
+with open(json_file[:-5] + '_spaced.json', 'w', encoding='utf-8') as file:
     json.dump(localized_data, file, ensure_ascii=False, indent=4)
