@@ -539,11 +539,12 @@ pattern_list = [
 
 converter = Converter(patterns=pattern_list)
 
-json_file = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105.json'
+json_file = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_LOC_en-it.json'
+
 with open(json_file, 'r', encoding='utf-8') as file:
     data = json.load(file)
 label_field = 'annotations'
-data = label_studio_to_tasteset(data, label_field=label_field)
+# data = label_studio_to_tasteset(data, label_field=label_field)
 
 # from icecream import ic
 # ic(data)

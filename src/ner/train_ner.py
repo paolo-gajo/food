@@ -17,30 +17,31 @@ from ner_utils import make_ner_sample, get_ner_classes
 # # sys.path.append('/home/pgajo/food/src')
 # from utils import make_ner_sample
 
-data_name = '/home/pgajo/food/datasets/EW-TT-PE_en-it_spaced'
+# data_name = '/home/pgajo/food/datasets/EW-TT-MT_en-it_spaced_ner'
+# data_name = '/home/pgajo/food/datasets/EW-TT-MT_LOC_en-it_spaced_ner'
+data_name = '/home/pgajo/food/datasets/EW-TT-PE_en-it_spaced_ner'
 data_name_simple = data_name.split('/')[-1]
 dataset = load_from_disk(data_name)
 # dataset['train'] = dataset['train'].select(range(2))
 # dataset['test'] = dataset['test'].select(range(2))
 # dataset.save_to_disk(os.path.join('/home/pgajo/food/datasets', data_name.split('/')[-1]))
 print(dataset)
-
-raw_labels, label_list, label2id, id2label = get_ner_classes(dataset)
+label_field = 'annotations'
+raw_labels, label_list, label2id, id2label = get_ner_classes(dataset, label_field=label_field)
 ic(raw_labels)
 ic(label_list)
 
 from transformers import AutoTokenizer
 
-
 model_name = "bert-base-multilingual-cased"
-# model_name = "bert-base-uncased"=======
-model_name = "bert-large-uncased"
+# model_name = "bert-base-uncased"
+# model_name = "bert-large-uncased"
 # model_name = "microsoft/mdeberta-v3-base"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 # for i, example in enumerate(dataset['train']):
-#     output = make_ner_sample(dataset['train'][i], tokenizer, label2id, lang='it')
+#     output = make_ner_sample(dataset['train'][i], tokenizer, label2id, `lang='it')
 #     if not len(output['input_ids']) == len(output['labels']):
 #         print(output)
 #         print(len(output['input_ids']))
@@ -52,16 +53,18 @@ languages_traindev = [
     'en',
     'it'
     ]
+
 languages_test = [
     'en',
     'it'
     ]
+
 df_train = pd.DataFrame()
 df_dev = pd.DataFrame()
 
 for lang in languages_traindev:
-    df_train = pd.concat([df_train, pd.DataFrame([make_ner_sample(sample, tokenizer, label2id, lang, label_list=raw_labels) for sample in dataset['train']])])
-    df_dev = pd.concat([df_dev, pd.DataFrame([make_ner_sample(sample, tokenizer, label2id, lang, label_list=raw_labels) for sample in dataset['test']])])
+    df_train = pd.concat([df_train, pd.DataFrame([make_ner_sample(sample, tokenizer, label2id, lang, label_list=raw_labels, label_field=label_field) for sample in dataset['train']])])
+    df_dev = pd.concat([df_dev, pd.DataFrame([make_ner_sample(sample, tokenizer, label2id, lang, label_list=raw_labels, label_field=label_field) for sample in dataset['test']])])
 
 dataset_train = Dataset.from_pandas(df_train)
 dataset_dev = Dataset.from_pandas(df_dev)
@@ -85,6 +88,8 @@ data_collator = DataCollatorForTokenClassification(tokenizer=tokenizer)
 # Get the NER labels first, and then create a function that passes your true predictions
 # and true labels to [compute](https://huggingface.co/docs/evaluate/main/en/package_reference/main_classes#evaluate.EvaluationModule.compute) to calculate the scores:
 
+df_eval = pd.DataFrame()
+
 import numpy as np
 
 seqeval = evaluate.load("seqeval")
@@ -103,12 +108,14 @@ def compute_metrics(p):
     ]
 
     results = seqeval.compute(predictions=true_predictions, references=true_labels)
-    return {
+    overall_results = {
         "precision": results["overall_precision"],
         "recall": results["overall_recall"],
         "f1": results["overall_f1"],
         "accuracy": results["overall_accuracy"],
     }
+    
+    return overall_results
 
 from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer
 
@@ -119,20 +126,27 @@ model = AutoModelForTokenClassification.from_pretrained(
                                                     id2label=id2label,
                                                     label2id=label2id
                                                 )
-
+csv_dir = f'/home/pgajo/food/results/ner/{model_name_simple}'
+if not os.path.exists(csv_dir):
+    os.makedirs(csv_dir)
 model_dir = os.path.join('/home/pgajo/food/models', model_name_simple)
+
+# class TrainerCallback:
+#     def on_epoch_end(self):
+#         df_eval = pd.concat([df_eval, pd.DataFrame(overall_results)])
 
 training_args = TrainingArguments(
     output_dir=model_dir,
     learning_rate=2e-5,
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
-    num_train_epochs=3,
+    num_train_epochs=1,
     weight_decay=0.01,
     evaluation_strategy="epoch",
-    save_strategy="no",
+    save_strategy="epoch",
     # load_best_model_at_end=True,
     # push_to_hub=True,
+    logging_strategy='epoch',
 )
 
 trainer = Trainer(
@@ -143,9 +157,12 @@ trainer = Trainer(
     tokenizer=tokenizer,
     data_collator=data_collator,
     compute_metrics=compute_metrics,
+    
 )
 
 trainer.train()
+
+df_eval.to_csv(os.path.join(csv_dir, f'{data_name_simple}_dev_results.csv'))
 
 data_name_test = '/home/pgajo/food/datasets/GZ-GOLD-NER-ALIGN_105_spaced_testonly'
 data_name_test_simple = data_name_test.split('/')[-1]
@@ -161,6 +178,8 @@ verbose = 0
 for lang in languages_test:
     sample_buffer = []
     for i, sample in enumerate(dataset_test_raw['train']):
+        if i > 105:
+            break
         ner_sample = make_ner_sample(sample,
                                     tokenizer,
                                     label2id,
@@ -175,10 +194,10 @@ for lang in languages_test:
             # print('decoded ids', [tokenizer.decode(id) for id in ner_sample['input_ids']])
             # print('labels', ner_sample['labels'])
             print('line number:', i)
-            for decoded_token, label in zip([tokenizer.decode(id) for id in ner_sample['input_ids']], ner_sample['labels']):
-                if label != -100:
-                    print(decoded_token, (id2label[label] if label in id2label.keys() else 'None'), sep = '\t')
-            print('--------------------------------------')
+            for id, label in zip(ner_sample['input_ids'], ner_sample['labels']):
+                if id != tokenizer.pad_token_id:
+                    print(id, tokenizer.decode(id), label, (id2label[label] if label in id2label.keys() else 'None'), sep = '\t')
+            print('##################################################################')
             # raise Exception("Length > 512")
         sample_buffer.append(ner_sample)
     df_test = pd.concat([df_test, pd.DataFrame(sample_buffer)])
@@ -224,12 +243,6 @@ def compute_metrics(predictions, labels):
     ]
 
     results = seqeval.compute(predictions=true_predictions, references=true_labels)
-    # {
-    #     "precision": results["overall_precision"],
-    #     "recall": results["overall_recall"],
-    #     "f1": results["overall_f1"],
-    #     "accuracy": results["overall_accuracy"],
-    # }
     return results
 
 
@@ -243,8 +256,9 @@ for i, batch in progbar:
         texts.extend([tokenizer.decode(ids) for ids in batch['input_ids']])
 
 epoch_test_loss /= len(dataset[split])
-print(compute_metrics(all_preds, all_trues))
+
 print(pd.DataFrame(compute_metrics(all_preds, all_trues)))
+pd.DataFrame(compute_metrics(all_preds, all_trues)).to_csv(os.path.join(csv_dir, f'{data_name_test_simple}_test_results.csv'))
 
 result_dict = {
     'text': texts,
@@ -253,7 +267,4 @@ result_dict = {
 }
 
 result_df = pd.DataFrame(result_dict)
-csv_dir = f'/home/pgajo/food/results/ner/{data_name_test_simple}'
-if not os.path.exists(csv_dir):
-    os.makedirs(csv_dir)
-result_df.to_csv(os.path.join(csv_dir, f'{model_name_simple}_predictions.csv'))
+result_df.to_csv(os.path.join(csv_dir, f'{data_name_test_simple}_predictions.csv'))

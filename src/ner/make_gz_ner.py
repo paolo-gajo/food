@@ -7,7 +7,7 @@ json_path = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced.json'
 
 with open(json_path, 'r', encoding='utf8') as f:
     dataset_raw = json.load(f)
-# print(dataset_raw)
+
 df = pd.DataFrame(data=dataset_raw)
 dataset = Dataset.from_pandas(df[['data', 'annotations']])
 print(dataset)

@@ -66,7 +66,7 @@ def get_ner_classes(data=None, label_field='predictions', raw_labels=None):
     prefixes = [
         # '',
         'B-',
-        'I-'
+        # 'I-'
         ]
     for raw_label in raw_labels:
         for prefix in prefixes:
@@ -121,6 +121,7 @@ def make_ner_sample(sample,
             if ent[2] != 'O' and ent[2] in label_list:
                 if i == 0:
                     ent_label = 'B-' + ent[2]
+                    # ent_label = ent[2]
                     ent_labels.append(ent_label)
                 else:
                     ent_label = -100
