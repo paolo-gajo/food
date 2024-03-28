@@ -14,8 +14,8 @@ print(dataset)
 datasetdict = DatasetDict()
 datasetdict['train'] = dataset
 print(datasetdict['train'][0])
-dataset_name = json_path.split('/')[-1].split('.')[0] + '_testonly'
+dataset_name = json_path.split('/')[-1].split('.')[0] + '_ner_test'
 repo_name = f'pgajo/{dataset_name}'
 print('repo name:', repo_name)
-dataset_dir = '/home/pgajo/food/datasets'
+dataset_dir = '/home/pgajo/food/datasets/ner'
 datasetdict.save_to_disk(os.path.join(dataset_dir, dataset_name))

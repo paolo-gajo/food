@@ -112,7 +112,7 @@ def make_ner_sample(sample,
     ents_filled.sort()
     
     for ent in ents_filled:
-        sample_text = sample['data'][f'text_{lang}']
+        sample_text = sample['data'][f'{text_name}_{lang}']
         ent_text = sample_text[ent[0]:ent[1]]
         ent_text_encoded = tokenizer(ent_text)
         ent_input_ids = ent_text_encoded['input_ids'][1:-1]

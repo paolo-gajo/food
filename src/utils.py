@@ -254,6 +254,7 @@ class TASTEset(DatasetDict):
         inverse_languages = False,
         shuffle_type = 'recipe',
         shuffle_probability = 0,
+        verbose = False,
         ) -> 'TASTEset':
         '''
         Prepares data from the TASTEset dataset based on the wanted languages,
@@ -341,7 +342,8 @@ class TASTEset(DatasetDict):
             self.shuffled_samples = []
             self.index = 0
             self.shuffle_type = shuffle_type
-            self.shuffle_threshold = 1 - shuffle_probability
+            self.shuffle_probability = shuffle_probability
+            self.verbose = verbose
             if not hasattr(self.tokenizer, 'sep'):
                 self.tokenizer.sep = None
 
@@ -479,7 +481,7 @@ class TASTEset(DatasetDict):
 
             if self.src_context:
                 new_sample['query'] = sample[f'text_{self.src_lang}'][:sample[f'ents_{self.src_lang}'][idx][0]] +\
-                            '• ' + sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]] + '     ' +\
+                            '• ' + sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]] + ' •' +\
                             sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][1]:]
             else:
                 new_sample['query'] = sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][0]:sample[f'ents_{self.src_lang}'][1]]
@@ -501,7 +503,12 @@ class TASTEset(DatasetDict):
                 new_sample['start_positions'] = context_enc.char_to_token(
                     new_sample['answer_start']) - 1 + l
                 new_sample['end_positions'] = context_enc.char_to_token(
-                    new_sample['answer_end']-1) + l
+                    new_sample['answer_end'] - 1) + l
+                if self.verbose:
+                    print(sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]])
+                    print(new_sample['answer'])
+                    print(self.tokenizer.decode(context_enc['input_ids'][new_sample['start_positions']+1-l:new_sample['end_positions']-l+1]))
+                    print('#############################################')
                 
             if self.tokenizer.sep:
                 for char in self.rm_char:
@@ -555,18 +562,20 @@ class TASTEset(DatasetDict):
                 sample_dict = {}
                 for tgt_lang in self.tgt_langs:
                     sample_labels_tgt = [el for el in sample['annotations'][0]['result'] if el['type'] == 'labels' and el['from_name'] == f'label_{tgt_lang}']
-                    ents_tgt = [] 
+                    ents_tgt = []
                     for label_src in sample_labels_src:
                         src_id = label_src['id']
                         src_ent = [label_src['value']['start'], label_src['value']['end'], label_src['value']['labels'][0], label_src['value']['text']]
+                        tgt_ent = []
                         for relation in relations:
                             if relation[source_id] == src_id:
                                 tgt_id = relation[target_id]
                                 for label_tgt in sample_labels_tgt:
                                     if label_tgt['id'] == tgt_id:
                                         tgt_ent = [label_tgt['value']['start'], label_tgt['value']['end'], label_tgt['value']['labels'][0], label_tgt['value']['text']]
-                        ents_src.append(src_ent)
-                        ents_tgt.append(tgt_ent)
+                        if len(tgt_ent) > 0:
+                            ents_src.append(src_ent)
+                            ents_tgt.append(tgt_ent)
                     sample_dict.update({
                         f'text_{tgt_lang}': sample['data'][f'ingredients_{tgt_lang}'],
                         f'ents_{tgt_lang}': ents_tgt,
@@ -604,7 +613,7 @@ class TASTEset(DatasetDict):
 
             shuffled_ents = []
             shuffled_indexes_ingr = [i for i in range(len(ingr))]
-            if random.random() > self.shuffle_threshold:
+            if random.random() > 1 - self.shuffle_probability:
                 random.shuffle(shuffled_indexes_ingr)
             
 
@@ -933,6 +942,7 @@ def token_span_to_char_indexes(input, start_index_token, end_index_token, sample
     token_span = tokens[start_index_token:end_index_token]
     token_based_prediction = tokenizer.decode(token_span)
     start = input.token_to_chars(start_index_token)[0]
+    # end = start + len(token_based_prediction)
     if 'deberta_v2' in str(tokenizer.__class__).split('.'):
         end = start + len(token_based_prediction)
         char_span_prediction = sample[target_text_key][start:end]

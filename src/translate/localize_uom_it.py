@@ -3,7 +3,12 @@ import json
 import random
 import sys
 sys.path.append('/home/pgajo/food/src')
-from utils import label_studio_to_tasteset, tasteset_to_label_studio
+from utils import label_studio_to_tasteset, tasteset_to_label_studio, TASTEset
+
+def randomizer(s_list):
+    i = random.randrange(len(s_list))
+    return s_list[i]
+
 en_mapping = {
         # '½': '1/2', '¼': '1/4', '¾': '3/4',
         # '⅓': '1/3', '⅔': '2/3', '⅕': '1/5',
@@ -23,11 +28,6 @@ en_mapping = {
     ';': ' ; '
     }
 
-def randomizer(s_list):
-    i = random.randrange(len(s_list))
-    return s_list[i]
-
-    
 it_mapping = {
     # r"panini con l'hashish": "hash browns",
     # 'a lisca di pesce': 'lb',
@@ -539,12 +539,14 @@ pattern_list = [
 
 converter = Converter(patterns=pattern_list)
 
-json_file = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_LOC_en-it.json'
+# json_file = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-PE_en-it.json'
+# json_file = '/home/pgajo/food/data/TASTEset/data/SW-TASTE/SW-TASTE_en-it_DEEPL_unaligned.json'
+json_file = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105.json'
 
 with open(json_file, 'r', encoding='utf-8') as file:
     data = json.load(file)
 label_field = 'annotations'
-# data = label_studio_to_tasteset(data, label_field=label_field)
+data = label_studio_to_tasteset(data, label_field=label_field)
 
 # from icecream import ic
 # ic(data)
@@ -552,7 +554,7 @@ label_field = 'annotations'
 data = sub_shift(data, mappings, lang = 'en')
 data = sub_shift(data, mappings, lang = 'it')
 
-with open(json_file[:-5] + '_tastesetformat.json', 'w', encoding='utf-8') as file:
+with open(json_file[:-5] + '_spaced_TS.json', 'w', encoding='utf-8') as file:
     json.dump(data, file, ensure_ascii=False, indent=4)
 
 data = tasteset_to_label_studio(data['annotations'], label_field=label_field)
