@@ -13,4 +13,8 @@ models/
 *.sh
 data/
 datasets/
+results/
 *.spacy
+TASTEset-2.0/
+awesome-align/
+.bertexperiments/

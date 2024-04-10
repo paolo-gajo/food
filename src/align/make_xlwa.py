@@ -12,7 +12,7 @@ def main():
       'it',
       # 'pt',
       # 'et',
-      # 'es',
+      'es',
       # 'hu',
       # 'da',
       # 'bg',
@@ -42,7 +42,9 @@ def main():
     # Dataset path = {data_path}\n
     # '''
     # push_dataset_card(repo_id, dataset_summary=dataset_summary)
-    datasets_dir_path = '/home/pgajo/food/datasets'
+    datasets_dir_path = f"/home/pgajo/food/datasets/alignment/{'-'.join(languages)}/{tokenizer_dict[tokenizer_name]}"
+    if not os.path.exists(datasets_dir_path):
+        os.makedirs(datasets_dir_path)
     full_save_path = os.path.join(datasets_dir_path, save_name)
     print(full_save_path)
     dataset.save_to_disk(full_save_path)

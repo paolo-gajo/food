@@ -19,34 +19,40 @@ def main():
     parser.add_argument('-ds', '--dev_size', default=1, help='size of the dev split (default=0.2)')
 
     args = parser.parse_args()
-    # args.input = '/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL.json'
+
     args.unshuffled_size = 0
     args.shuffled_size = 1
     args.drop_duplicates = True
 
-    # tokenizer_name = 'bert-base-multilingual-cased'
+    tokenizer_name = 'bert-base-multilingual-cased'
     # tokenizer_name = 'bert-large-uncased'
-    tokenizer_name = 'microsoft/mdeberta-v3-base'
+    # tokenizer_name = 'microsoft/mdeberta-v3-base'
 
     # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-PE_en-it_spaced_TS.json'
     # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_LOC_en-it_spaced_TS.json'
     # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-it_spaced_TS.json'
 
-    args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-it_context.json'
-    # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-de_context.json'
-    
+    # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-it_context_fix_TS.json'
+    # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-es_context_fix_TS.json'
+    args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_multi_context_TS.json'
+    langs = [
+        'it',
+        'es',
+        # 'de',
+    ]
 
     dataset = TASTEset.from_json(
         args.input,
         tokenizer_name,
-        tgt_langs = ['it'],
+        tgt_langs = langs,
         src_lang = 'en',
         dev_size = 0.2,
         shuffled_size = args.shuffled_size,
         unshuffled_size = args.unshuffled_size,
         shuffle_type = 'ingredient',
-        shuffle_probability = 0.5,
+        shuffle_probability = 0.1,
         drop_duplicates = 0,
+        debug_dump = True,
         # verbose = True
         )
     
@@ -56,7 +62,7 @@ def main():
         'bert-large-uncased': 'bert-large-uncased'
     }
 
-    save_name = f"{args.input.split('/')[-1].replace('.json', '')}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_{dataset.shuffle_type[0:3].upper()}_P{dataset.shuffle_probability}_DROP{str(int(dataset.drop_duplicates))}_{tokenizer_dict[tokenizer_name]}_align"
+    save_name = f"{args.input.split('/')[-1].replace('.json', '')}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_{dataset.shuffle_type[0:3].upper()}_P{dataset.shuffle_probability}_DROP{str(int(dataset.drop_duplicates))}_en-{'-'.join(langs)}"
     repo_id = f"pgajo/{save_name}"
     print('repo_id:', repo_id)
     # dataset.push_to_hub(repo_id)
@@ -70,7 +76,9 @@ def main():
     # Dataset path = {dataset.data_path}\n
     # '''
     # push_dataset_card(repo_id, dataset_summary=dataset_summary)
-    datasets_dir_path = '/home/pgajo/food/datasets/alignment'
+    datasets_dir_path = f"/home/pgajo/food/datasets/alignment/{'-'.join(langs)}/{tokenizer_dict[tokenizer_name]}"
+    if not os.path.exists(datasets_dir_path):
+        os.makedirs(datasets_dir_path)
     full_save_path = os.path.join(datasets_dir_path, save_name)
     print(full_save_path)
     dataset.save_to_disk(full_save_path)

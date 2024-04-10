@@ -10,41 +10,33 @@ def randomizer(s_list):
     return s_list[i]
 
 en_mapping = {
-    '½': '1/2', '¼': '1/4', '¾': '3/4',
-    '⅓': '1/3', '⅔': '2/3', '⅕': '1/5',
-    '⅖': '2/5', '⅗': '3/5', '⅘': '4/5',
-    '⅙': '1/6', '⅚': '5/6', '⅛': '1/8',
-    '⅜': '3/8', '⅝': '5/8', '⅞': '7/8',
-    # ';': ' ; ',
-    # '  ;  ': ' ',
-    # ' ;  ': ' '
-    # 'mnce': 'minced',
-    # 'maccha': 'matcha',
-    # 'bushes baked beans': "Bush's Baked Beans",
-    # '/colored': 'colored',
-    # '2 2 ': '2 ',
-    # 'empire apples or': 'empire apples',
-    # 'lipton recip secret': 'Lipton Recipe Secrets',
-    # 'matzoh': 'matzah',
-    # 'course': 'coarse',
-    # 'rotel': 'Rotel',
-    }
-
-es_mapping = {
-    '½': '1/2', '¼': '1/4', '¾': '3/4',
-    '⅓': '1/3', '⅔': '2/3', '⅕': '1/5',
-    '⅖': '2/5', '⅗': '3/5', '⅘': '4/5',
-    '⅙': '1/6', '⅚': '5/6', '⅛': '1/8',
-    '⅜': '3/8', '⅝': '5/8', '⅞': '7/8',
-    # ';': ' ; ',
-    # '  ;  ': ' ',
-    # ' ;  ': ' '
+        # '½': '1/2', '¼': '1/4', '¾': '3/4',
+        # '⅓': '1/3', '⅔': '2/3', '⅕': '1/5',
+        # '⅖': '2/5', '⅗': '3/5', '⅘': '4/5',
+        # '⅙': '1/6', '⅚': '5/6', '⅛': '1/8',
+        # '⅜': '3/8', '⅝': '5/8', '⅞': '7/8',
+        # 'mnce': 'minced',
+        # 'maccha': 'matcha',
+        # 'bushes baked beans': "Bush's Baked Beans",
+        # '/colored': 'colored',
+        # '2 2 ': '2 ',
+        # 'empire apples or': 'empire apples',
+        # 'lipton recip secret': 'Lipton Recipe Secrets',
+        # 'matzoh': 'matzah',
+        # 'course': 'coarse',
+        # 'rotel': 'Rotel',
+    '  ;  ': ' ',
+    ' ;  ': ' '
     }
 
 de_mapping = {
-    # ';': ' ; ',
-    # '  ;  ': ' ',
-    # ' ;  ': ' '
+    '  ;  ': ' ',
+    ' ;  ': ' '
+    }
+
+es_mapping = {
+    '  ;  ': ' ',
+    ' ;  ': ' '
     }
 
 it_mapping = {
@@ -346,9 +338,8 @@ it_mapping = {
     # 'bone in': 'con le ossa',
     # 'Zia Maria': 'Tia Maria',
     # 'Grasso ridotto': 'a basso contenuto di grassi',
-    # ';': ' ; ',
-    # '  ;  ': ' ',
-    # ' ;  ': ' '
+    '  ;  ': ' ',
+    ' ;  ': ' '
         
 }
 
@@ -359,12 +350,12 @@ mappings = {
     'es': es_mapping,
 }
 
-def sub_shift(json_data, mappings, *, lang, field = 'ingredients'):
-    ingredients_key = f'{field}_{lang}'
+def sub_shift(json_data, mappings, *, lang):
+    text_key = f'text_{lang}'
     ents_key = f'ents_{lang}'
 
-    for j, annotation in enumerate(json_data):
-        text = annotation[ingredients_key]
+    for j, annotation in enumerate(json_data['annotations']):
+        text = annotation[text_key]
         entities = annotation[ents_key]
         adjustment = 0
         pattern = re.compile('|'.join(re.escape(key) for key in mappings[lang].keys()))
@@ -389,8 +380,8 @@ def sub_shift(json_data, mappings, *, lang, field = 'ingredients'):
                     entity[0] = start + len_diff
                     entity[1] = end + len_diff
             adjustment += len_diff
-        annotation[ingredients_key] = text.replace("⁄", "/")
-        # print(j, [annotation[ingredients_key][entities[i][0]:entities[i][1]] for i in range(len(entities))])
+        annotation[text_key] = text.replace("⁄", "/")
+        # print(j, [annotation[text_key][entities[i][0]:entities[i][1]] for i in range(len(entities))])
     return json_data
 
 class Converter:
@@ -430,13 +421,13 @@ class Converter:
     def localize_ingredients(self, data, lang = 'it'):
         with open('./output.log', 'w') as f:
             for j, sample in enumerate(data['annotations']):
-                ingredients_key = f'ingredients_{lang}'
+                text_key = f'text_{lang}'
                 ents_key = f'ents_{lang}'
-                text = sample[ingredients_key]
+                text = sample[text_key]
                 ents = sample[ents_key]
                 print(j, file = f)
-                print(sample['ingredients_en'], file = f)
-                print([sample['ingredients_en'][sample['ents_en'][i][0]:sample['ents_en'][i][1]] for i in range(len(sample['ents_en']))], file = f)
+                print(sample['text_en'], file = f)
+                print([sample['text_en'][sample['ents_en'][i][0]:sample['ents_en'][i][1]] for i in range(len(sample['ents_en']))], file = f)
                 print(text, file = f)
                 print([text[ents[i][0]:ents[i][1]] for i in range(len(ents))], file = f)
                 
@@ -470,7 +461,7 @@ class Converter:
                                 ent[1] = end + len_diff
                         adjustment += len_diff
                 sample['id'] = j
-                sample[ingredients_key] = text
+                sample[text_key] = text
                 print(text, file = f)
                 print([text[ents[i][0]:ents[i][1]] for i in range(len(ents))], file = f)
                 print('-----------------------------------------------------------', file = f)
@@ -562,21 +553,19 @@ pattern_list = [
 
 converter = Converter(patterns=pattern_list)
 
-tgt_lang = 'es'
-# json_file = f'/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-{tgt_lang}_context.json'
-# json_file = '/home/pgajo/food/data/TASTEset/data/SW-TASTE/SW-TASTE_en-it_DEEPL_unaligned.json'
-json_file = '/home/pgajo/food/src/extract/mycolombianrecipes.json'
+tgt_lang = 'de'
+json_file = f'/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-{tgt_lang}_context.json'
 
 with open(json_file, 'r', encoding='utf-8') as file:
     data = json.load(file)
-# data = data['annotations']
+label_field = 'annotations'
 # data = label_studio_to_tasteset(data, label_field=label_field)
 
 # from icecream import ic
 # ic(data)
 # # clean up translation mistakes by doing simple substitutions first with this function
-data = sub_shift(data, mappings, field = 'instructions', lang = 'en')
-data = sub_shift(data, mappings, field = 'instructions', lang = tgt_lang)
+data = sub_shift(data, mappings, lang = 'en')
+data = sub_shift(data, mappings, lang = tgt_lang)
 
 with open(json_file[:-5] + '_fix_TS.json', 'w', encoding='utf-8') as file:
     json.dump(data, file, ensure_ascii=False, indent=4)

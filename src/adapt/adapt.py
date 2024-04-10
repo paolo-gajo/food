@@ -6,12 +6,12 @@ model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2
 tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
 
 import json
-json_path = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced.json'
+json_path = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_data.json'
 with open(json_path, 'r', encoding='utf8') as f:
     data = json.load(f)
 
 lang = 'en'
-sample = data[0]['data']
+sample = data[29]
 recipe_text = sample[f'title_{lang}'] + '\n\n' + sample[f'presentation_{lang}'] + '\n\n' + sample[f'ingredients_{lang}'] + '\n\n' + sample[f'preparation_{lang}']
 
 messages = [

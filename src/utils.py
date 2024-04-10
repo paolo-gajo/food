@@ -470,56 +470,57 @@ class TASTEset(DatasetDict):
         sample = self.assign_indexes_to_entities(sample)
         tgt_lang = ''.join([lang for lang in sample['sample_langs'] if lang != self.src_lang])
         sample_list = []
-        if shuffle:
-            for shuffle_lang in self.tgt_langs:
+        
+        for tgt_lang in self.tgt_langs:
+            if shuffle:
                 if self.shuffle_type == 'recipe':
-                    sample = self.shuffle_entities_recipe(sample, shuffle_lang)
+                    sample = self.shuffle_entities_recipe(sample, shuffle_lang = tgt_lang)
                 if self.shuffle_type == 'ingredient':
-                    sample = self.shuffle_entities_ingredient(sample, shuffle_lang)
-        for idx in range(sample['num_ents']):
-            new_sample = {}
+                    sample = self.shuffle_entities_ingredient(sample, shuffle_lang = tgt_lang)
+            for idx in range(len(sample[f'ents_{tgt_lang}'])):
+                new_sample = {}
 
-            if self.src_context:
-                new_sample['query'] = sample[f'text_{self.src_lang}'][:sample[f'ents_{self.src_lang}'][idx][0]] +\
-                            '• ' + sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]] + ' •' +\
-                            sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][1]:]
-            else:
-                new_sample['query'] = sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][0]:sample[f'ents_{self.src_lang}'][1]]
+                if self.src_context:
+                    new_sample['query'] = sample[f'text_{self.src_lang}'][:sample[f'ents_{self.src_lang}'][idx][0]] +\
+                                '• ' + sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]] + ' •' +\
+                                sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][1]:]
+                else:
+                    new_sample['query'] = sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][0]:sample[f'ents_{self.src_lang}'][1]]
 
-            new_sample['context'] = sample[f'text_{tgt_lang}']
-            if self.aligned:
-                new_sample['answer_start'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(idx)][0]
-                new_sample['answer_end'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(idx)][1]
-                new_sample['answer'] = sample[f'text_{tgt_lang}'][new_sample['answer_start']:new_sample['answer_end']]
-                if new_sample['answer'] == '':
-                    print('ANSWER IS EMPTY, IS THIS RIGHT?')
-                    print(new_sample)
-                    continue
-                query_enc = self.tokenizer(new_sample['query'])
-                l = len(query_enc['input_ids']) 
-                context_enc = self.tokenizer(new_sample['context'])
+                new_sample['context'] = sample[f'text_{tgt_lang}']
+                if self.aligned:
+                    new_sample['answer_start'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(idx)][0]
+                    new_sample['answer_end'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(idx)][1]
+                    new_sample['answer'] = sample[f'text_{tgt_lang}'][new_sample['answer_start']:new_sample['answer_end']]
+                    if new_sample['answer'] == '':
+                        print('ANSWER IS EMPTY, IS THIS RIGHT?')
+                        print(new_sample)
+                        continue
+                    query_enc = self.tokenizer(new_sample['query'])
+                    l = len(query_enc['input_ids']) 
+                    context_enc = self.tokenizer(new_sample['context'])
 
-                # start_positions and end_positions are token positions
-                new_sample['start_positions'] = context_enc.char_to_token(
-                    new_sample['answer_start']) - 1 + l
-                new_sample['end_positions'] = context_enc.char_to_token(
-                    new_sample['answer_end'] - 1) + l
-                if self.verbose:
-                    print(sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]])
-                    print(new_sample['answer'])
-                    print(self.tokenizer.decode(context_enc['input_ids'][new_sample['start_positions']+1-l:new_sample['end_positions']-l+1]))
-                    print('#############################################')
-                
-            if self.tokenizer.sep:
-                for char in self.rm_char:
-                    new_sample['query'] = new_sample['query'].replace(char, self.tokenizer.sep)
-                    new_sample['context'] = new_sample['context'].replace(char, self.tokenizer.sep)
-            new_sample['entity_type'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(idx)][2]
-            new_sample['sentence_index'] = sentence_index
-            new_sample['sample_index'] = idx
-            new_sample['index'] = self.index
-            self.index += 1
-            sample_list.append(new_sample)
+                    # start_positions and end_positions are token positions
+                    new_sample['start_positions'] = context_enc.char_to_token(
+                        new_sample['answer_start']) - 1 + l
+                    new_sample['end_positions'] = context_enc.char_to_token(
+                        new_sample['answer_end'] - 1) + l
+                    if self.verbose:
+                        print(sample[f'text_{self.src_lang}'][sample[f'ents_{self.src_lang}'][idx][0]:sample[f'ents_{self.src_lang}'][idx][1]])
+                        print(new_sample['answer'])
+                        print(self.tokenizer.decode(context_enc['input_ids'][new_sample['start_positions']+1-l:new_sample['end_positions']-l+1]))
+                        print('#############################################')
+                    
+                if self.tokenizer.sep:
+                    for char in self.rm_char:
+                        new_sample['query'] = new_sample['query'].replace(char, self.tokenizer.sep)
+                        new_sample['context'] = new_sample['context'].replace(char, self.tokenizer.sep)
+                new_sample['entity_type'] = sample[f'ents_{tgt_lang}'][sample[f'idx_{tgt_lang}'].index(idx)][2]
+                new_sample['sentence_index'] = sentence_index
+                new_sample['sample_index'] = idx
+                new_sample['index'] = self.index
+                self.index += 1
+                sample_list.append(new_sample)
         return sample_list
 
     def assign_indexes_to_entities(self, sample) -> dict:
@@ -587,7 +588,7 @@ class TASTEset(DatasetDict):
                 formatted_data.append(sample_dict)
         return {'annotations': formatted_data}
 
-    def shuffle_entities_ingredient(self, sample, shuffle_lang, verbose = False) -> dict:
+    def shuffle_entities_ingredient(self, sample, *, shuffle_lang, verbose = False) -> dict:
         '''
         Shuffles entities and text for a sample.
         Only shuffles, so the source and target entities need 
@@ -598,7 +599,7 @@ class TASTEset(DatasetDict):
         text_key = f'text_{shuffle_lang}'
         ent_key = f'ents_{shuffle_lang}'
         sample_text = sample[text_key]
-        semicolon_positions = [0] + [match.end() for match in re.finditer('(?<!\s);(?!\s)', sample_text)] + [len(sample_text)]
+        semicolon_positions = [0] + [match.end() for match in re.finditer('\s;\s', sample_text)] + [len(sample_text)]
 
         shuffled_list = []
         shuffled_text = ''
@@ -655,7 +656,7 @@ class TASTEset(DatasetDict):
         })
         return sample
 
-    def shuffle_entities_recipe(self, sample, shuffle_lang, verbose = False) -> dict:
+    def shuffle_entities_recipe(self, sample, *, shuffle_lang, verbose = False) -> dict:
         '''
         Shuffles entities and text for a sample.
         Only shuffles, so the source and target entities need 
