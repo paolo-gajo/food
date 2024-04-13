@@ -389,7 +389,7 @@ def sub_shift(json_data, mappings, *, lang, field = 'ingredients'):
                     entity[0] = start + len_diff
                     entity[1] = end + len_diff
             adjustment += len_diff
-        annotation[ingredients_key] = text.replace("⁄", "/")
+        annotation[ingredients_key] = text
         # print(j, [annotation[ingredients_key][entities[i][0]:entities[i][1]] for i in range(len(entities))])
     return json_data
 

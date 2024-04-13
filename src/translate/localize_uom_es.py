@@ -537,7 +537,7 @@ pattern_list = [
 
 converter = Converter(patterns=pattern_list)
 
-json_file = '/home/pgajo/working/food/data/TASTEset/data/EW-TASTE/EW-TT-MT.json'
+json_file = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_multi_context_TS.json'
 with open(json_file, 'r', encoding='utf-8') as file:
     data = json.load(file)
 

@@ -6,9 +6,10 @@ import re
 import pandas as pd
 import sys
 sys.path.append('/home/pgajo/food/src')
-from utils import data_loader
-sys.path.append('/home/pgajo/food/bert_crf')
-from crf_models.bert_crf import BertCrf
+from utils_food import data_loader
+# sys.path.append('/home/pgajo/food/bert_crf')
+sys.path.append('/home/pgajo/food/data/TASTEset-2.0/src')
+from BERT_with_CRF import BERTCRF
 import torch
 from tqdm.auto import tqdm
 import evaluate
@@ -19,8 +20,8 @@ from ner_utils import make_ner_sample, get_ner_classes
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data')
-    parser.add_argument('--model')
+    parser.add_argument('--data', default='/home/pgajo/food/datasets/ner/EW-TT-MT_multi_context_TS_ner')
+    parser.add_argument('--model', default="bert-base-multilingual-cased")
     parser.add_argument('--langs_train', default='it')
     parser.add_argument('--langs_test', default='it')
     args = parser.parse_args()
@@ -113,25 +114,35 @@ def main():
     from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer
 
     model_name_simple = model_name.split('/')[-1]
-    model = AutoModelForTokenClassification.from_pretrained(
+    crf = 0
+    
+    if crf:
+        model = BERTCRF.from_pretrained(
+                                        model_name,
+                                        num_labels=len(label_list),
+                                        # id2label=id2label,
+                                        # label2id=label2id
+                                    )
+        model_name = model_name + '_CRF'
+    else:
+        model = AutoModelForTokenClassification.from_pretrained(
                                                         model_name,
                                                         num_labels=len(label_list),
                                                         # id2label=id2label,
                                                         # label2id=label2id
                                                     )
+    ic(model_name)
 
-    # model = BertCrf(len(label_list), model_name)
-    # model_name = model_name + '_CRF'
     from datetime import datetime
     date_time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-    model_dir = os.path.join('/home/pgajo/food/models/ner', f"{'-'.join(languages_train)}_train_{'-'.join(languages_test)}_test", model_name_simple, data_name_simple, date_time)
+    model_dir = os.path.join('/home/pgajo/food/models/ner', f"{'-'.join(languages_train)}_train_{'-'.join(languages_test)}_test2", model_name_simple, data_name_simple, date_time)
 
     training_args = TrainingArguments(
         output_dir=model_dir,
         learning_rate=2e-5,
         per_device_train_batch_size=16,
         per_device_eval_batch_size=16,
-        num_train_epochs=3,
+        num_train_epochs=1,
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="no",
