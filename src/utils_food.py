@@ -15,6 +15,7 @@ from transformers import AutoTokenizer
 import re
 from compute_score import compute_exact
 from icecream import ic
+from sacremoses import MosesTokenizer, MosesDetokenizer
 
 sep_dict = {
     'csv': ',',
@@ -586,7 +587,33 @@ class TASTEset(DatasetDict):
                     f'ents_{self.src_lang}': ents_src,
                 })
                 formatted_data.append(sample_dict)
-        return {'annotations': formatted_data}
+        return formatted_data
+    
+    @staticmethod
+    def tasteset_to_label_studio(data, model_name = '', languages = ['en', 'it'], label_field='annotations', text_field = 'ingredients'):
+        tasks = []
+        for recipe in data:
+            annotations = []
+            results = []
+            entry = {}
+            for language in languages:
+                for entity in recipe[f'ents_{language}']:
+                    results.append({
+                        'from_name': f'label_{language}',
+                        'to_name': f'{text_field}_{language}_ref',
+                        'type': 'labels',
+                        'value': {
+                            'start': entity[0],
+                            'end': entity[1],
+                            'labels': [entity[2]]}
+                            })
+                entry[f'{text_field}_{language}'] = recipe[f'{text_field}_{language}']
+            annotations.append({'model_version': model_name, 'result': results})
+            tasks.append({
+                'data': entry,
+                label_field: annotations,
+            })
+        return tasks
 
     def shuffle_entities_ingredient(self, sample, *, shuffle_lang, verbose = False) -> dict:
         '''
@@ -958,52 +985,27 @@ def token_span_to_char_indexes(input, start_index_token, end_index_token, sample
     # print('char_span_prediction', [char_span_prediction])
     return start, end
 
-def tasteset_to_label_studio(annotation_list, model_name = '', languages = ['en', 'it'], label_field='annotations'):
-    tasks = []
-    for recipe in annotation_list:
-        annotations = []
-        results = []
-        entry = {}
-        for language in languages:
-            for entity in recipe[f'ents_{language}']:
-                results.append({
-                    'from_name': f'label_{language}',
-                    'to_name': f'text_{language}_ref',
-                    'type': 'labels',
-                    'value': {
-                        'start': entity[0],
-                        'end': entity[1],
-                        'labels': [entity[2]]}
-                        })
-            entry[f'text_{language}'] = recipe[f'text_{language}']
-        annotations.append({'model_version': model_name, 'result': results})
-        tasks.append({
-            'data': entry,
-            label_field: annotations,
-        })
-    return tasks
+# def label_studio_to_tasteset(data, src_langs = ['it', 'en'], label_field = 'annotations'):
+#     formatted_data = []
+#     for line in data:
+#         tmp_dict = {}
+#         for src_lang in src_langs:
+#             # languages = [key.split('_')[-1] for key in data[0]['data'].keys() if '_' in key]
+#             # tgt_langs = [lang for lang in languages if lang != src_lang]
 
-def label_studio_to_tasteset(data, src_langs = ['it', 'en'], label_field = 'annotations'):
-    formatted_data = []
-    for line in data:
-        tmp_dict = {}
-        for src_lang in src_langs:
-            # languages = [key.split('_')[-1] for key in data[0]['data'].keys() if '_' in key]
-            # tgt_langs = [lang for lang in languages if lang != src_lang]
-
-            # for tgt_lang in tgt_langs:
-            #     tmp_dict[f'text_{tgt_lang}'] = line['data'][f'ingredients_{tgt_lang}']
-            tmp_dict[f'text_{src_lang}'] = line['data'][f'ingredients_{src_lang}']
-            tmp_dict[f'ents_{src_lang}'] = []
-            for ent in line[label_field][0]['result']:
-                # if 'value' in ent.keys():
-                if 'direction' not in ent.keys():
-                    if ent['from_name'] == f'label_{src_lang}':
-                        # print(ent)
-                        tmp_dict[f'ents_{src_lang}'].append([ent['value']['start'], ent['value']['end'], ent['value']['labels'][0]])
-        tmp_dict[f'ents_{src_lang}'].sort()
-        formatted_data.append(tmp_dict)
-    return {label_field: formatted_data}
+#             # for tgt_lang in tgt_langs:
+#             #     tmp_dict[f'text_{tgt_lang}'] = line['data'][f'ingredients_{tgt_lang}']
+#             tmp_dict[f'text_{src_lang}'] = line['data'][f'ingredients_{src_lang}']
+#             tmp_dict[f'ents_{src_lang}'] = []
+#             for ent in line[label_field][0]['result']:
+#                 # if 'value' in ent.keys():
+#                 if 'direction' not in ent.keys():
+#                     if ent['from_name'] == f'label_{src_lang}':
+#                         # print(ent)
+#                         tmp_dict[f'ents_{src_lang}'].append([ent['value']['start'], ent['value']['end'], ent['value']['labels'][0]])
+#         tmp_dict[f'ents_{src_lang}'].sort()
+#         formatted_data.append(tmp_dict)
+#     return {label_field: formatted_data}
 
 def make_ner_sample(example, tokenizer, label_dict):
     example_text = example['data']['text_en']
@@ -1047,3 +1049,115 @@ def make_ner_sample(example, tokenizer, label_dict):
     print(tokens)
     return tokens
 
+mappings = [
+    {'pattern': r'(?<!\s)([^\w\s])|([^\w\s])(?!\s)', 'target': ' placeholder '},
+    {'pattern': r'\s+', 'target': ' '},
+]
+
+diacritics = 'àèìòùáéíóúÀÈÌÒÙÁÉÍÓÚ'
+
+def get_entities_from_sample(sample, lang = 'en', sort = False):
+    entities = [ent for ent in sample['annotations'][0]['result'] if ent['type'] == 'labels' and ent[f'from_name'] == f'label_{lang}']
+    if sort:
+        entities = sorted(entities, key = lambda ent: ent['value']['start'])
+    return entities
+
+def get_relations_from_sample(sample):
+    relations = [rel for rel in sample['annotations'][0]['result'] if rel['type'] == 'relation']
+    return relations
+
+class EntityShifter:
+    def __init__(self, languages = ['en', 'it']) -> None:
+        self.mappings = mappings
+        self.diacritics = diacritics
+        self.languages = languages
+        self.tokenizers = {lang: MosesTokenizer(lang=lang) for lang in languages}
+        self.detokenizers = {lang: MosesDetokenizer(lang=lang) for lang in languages}
+
+    def sub_shift(self, sample, *, text_field = 'ingredients', data_format = 'label_studio', strategy = 'regex', verbose = False):
+        annotations = []
+        if strategy == 'moses':
+            for lang in self.languages:
+                adjustment = 0
+                ingredients_key = f'{text_field}_{lang}'
+                text = sample['data'][ingredients_key].rstrip()
+                if data_format == 'label_studio':
+                    ents = get_entities_from_sample(sample, lang=lang, sort=True)
+                    for i, ent in enumerate(ents):
+                        text_ent = text[ent['value']['start']:ent['value']['end']]
+                        text_ent_tokenized = self.tokenizers[lang].tokenize(text_ent)
+                        text_ent_detokenized = self.detokenizers[lang].detokenize(text_ent_tokenized)
+                        ent['value']['text'] = text_ent_detokenized
+                        len_diff = len(text_ent_detokenized) - len(text_ent)
+                        text = text[:ent['value']['start']] + text_ent_detokenized + text[ent['value']['end']:]
+                        ent['value']['end'] = ent['value']['start'] + len(text_ent_detokenized)
+                        for ent_tmp in ents[i+1:]:
+                            ent_tmp['value']['start'] += len_diff
+                            ent_tmp['value']['end'] = ent_tmp['value']['start'] + len(ent_tmp['value']['text'])
+                elif data_format == 'tasteset':
+                    ents = sorted(sample[f'ents_{lang}'], key = lambda ent: ent[0])
+                    for i, ent in enumerate(sample[f'ents_{lang}']):
+                        text_ent = text[ent[0]:ent[1]]
+                        text_ent_tokenized = self.tokenizers[lang].tokenize(text_ent)
+                        text_ent_detokenized = self.detokenizers[lang].detokenize(text_ent_tokenized)
+                        len_diff = len(text_ent_detokenized) - len(text_ent)
+                        text = text[:ent[0]] + text_ent_detokenized + text[ent[0] + len(text_ent_detokenized):]
+                        for ent_tmp in sample[f'ents_{lang}']:
+                            if ent_tmp[0] < ent[0] + len(text_ent_detokenized):
+                                ent_tmp[0] = ent_tmp[0] + len_diff
+                                ent_tmp[1] = ent_tmp[1] + len_diff
+                adjustment += len_diff
+                sample['data'][ingredients_key] = text
+                annotations += ents
+                if verbose:
+                    text_reconstructed = ' '.join([text[ent['value']['start']:ent['value']['end']] for ent in ents])
+                    print(text)
+                    print(text_reconstructed)
+                    print('------------')
+            annotations += get_relations_from_sample(sample)
+            sample['annotations'][0]['result'] = annotations
+            return sample
+        
+        elif strategy == 'regex':
+            for lang in self.languages:
+                ingredients_key = f'{text_field}_{lang}'
+                for mapping in self.mappings:
+                    text = sample['data'][ingredients_key].rstrip()
+
+                    adjustment = 0
+                    pattern = re.compile(mapping['pattern'])
+                    for match in re.finditer(pattern, text):
+                        match_index = match.start() + adjustment
+                        match_contents = match.group()
+                        if match_contents not in diacritics:
+                            subbed_text = mapping['target'].replace('placeholder', match_contents)
+                        else:
+                            subbed_text = match_contents
+                        len_diff = len(subbed_text) - len(match_contents)
+                        text = text[:match_index] + subbed_text + text[match_index + len(match_contents):]
+                        
+                        # Adjust the indices of subsequent annotations
+                        if data_format == 'label_studio':
+                            for ent in sample['annotations'][0]['result']:
+                                if ent['type'] == 'labels':
+                                    if ent['from_name'] == f'label_{lang}':
+                                        ent_start = ent['value']['start']
+                                        ent_end = ent['value']['end']
+                                        if ent_start <= match_index and ent_end > match_index:
+                                            ent['value']['start'] = ent_start
+                                            ent['value']['end'] = ent_end + len_diff
+                                        if ent_start > match_index:
+                                            ent['value']['start'] = ent_start + len_diff
+                                            ent['value']['end'] = ent_end + len_diff
+                        elif data_format == 'tasetset':
+                            for entity in sample[f'{text_field}_{lang}']:
+                                start, end = entity[0], entity[1]
+                                if start <= match_index and end > match_index:
+                                    entity[0] = start
+                                    entity[1] = end + len_diff
+                                if start > match_index:
+                                    entity[0] = start + len_diff
+                                    entity[1] = end + len_diff
+                        adjustment += len_diff
+                sample['data'][ingredients_key] = text
+            return sample

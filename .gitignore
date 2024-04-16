@@ -3,7 +3,6 @@
 slurm_error/
 slurm_output/
 .stuff/
-src/ner/spacy_outputs/
 # src/translate/*
 models/
 .vscode

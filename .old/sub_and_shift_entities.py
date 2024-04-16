@@ -3,7 +3,7 @@ import json
 import random
 import sys
 sys.path.append('/home/pgajo/food/src')
-from utils import label_studio_to_tasteset, tasteset_to_label_studio, TASTEset
+from utils_food import label_studio_to_tasteset, tasteset_to_label_studio, TASTEset
 
 def randomizer(s_list):
     i = random.randrange(len(s_list))
@@ -467,91 +467,7 @@ class Converter:
                 print('-----------------------------------------------------------', file = f)
         return data
 
-pattern_list = [
-    # fix uom
-    # {'pattern': r'chili pepper(?!\w)', 'type': 'plain', 'sub': 'peperoncino'},
-    # {'pattern': r'cancellato(?!\w)', 'type': 'plain', 'sub': 'strofinate'},
-    # {'pattern': r'(?<=cucchiai )come(?!\w)', 'type': 'plain', 'sub': 'menta'},
-    # {'pattern': r'(?<=ramoscello fresco )come(?!\w)', 'type': 'plain', 'sub': 'menta'},
-    # {'pattern': r'come(?=\s(?:foglie|foglia))', 'type': 'plain', 'sub': 'menta'},
-
-    {'pattern': r'(\d[-/\.\,\d\s]*)tazz.(?!\w)', 'ratio': 236, 'uom': 'g', 'type': 'quantity'},
-    {'pattern': r'(\d[-/\.\,\d\s]*)(?:(?:once fluide)|(?:oncia fluida)|once|oncia|oz\.|oz)(?!\w)', 'ratio': 28.35, 'uom': 'g', 'type': 'quantity'},
-    {'pattern': r'(\d[-/\.\,\d\sa]*)(?:chili|chilo|lbs?\.?|libbre|pounds|pound|sterline|sterlina)(?!\w)', 'ratio': 0.45, 'uom': 'kg', 'type': 'quantity'},
-    {'pattern': r'(\d[-/\.\,\d\s]*)(?:di pollice|pollic.|\")(?!\w)', 'ratio': 2.54, 'uom': 'cm', 'type': 'quantity'},
-    {'pattern': r'(\d[-/\.\,\d\s]*)(?:pinte|pinta)(?!\w)', 'ratio': 473, 'uom': 'ml', 'type': 'quantity'},
-    {'pattern': r'(\d[-/\.\,\d\s]*)(?:quartini|quartino)(?!\w)', 'ratio': 946, 'uom': 'ml', 'type': 'quantity'},
-    {'pattern': r'(\d[-/\.\,\d\s]*)gallon(?!\w)', 'ratio': 3.78, 'uom': 'l', 'type': 'quantity'},
-
-    {'pattern': r'tazz.(?!\w)', 'ratio': 236, 'uom': 'g', 'type': 'uom'},
-    {'pattern': r'(?:(?:once fluide)|(?:oncia fluida)|once|oncia|oz\.|oz)(?!\w)', 'ratio': 28.35, 'uom': 'g', 'type': 'uom'},
-    {'pattern': r'(?:chili|chilo|lbs?\.?|libbre|pounds|pound|sterline|sterlina)(?!\w)', 'ratio': 0.45, 'uom': 'kg', 'type': 'uom'},
-    {'pattern': r'(?:di pollice|pollic.|\")(?!\w)', 'ratio': 2.54, 'uom': 'cm', 'type': 'uom'},
-    {'pattern': r'(?:pinte|pinta)(?!\w)', 'ratio': 473, 'uom': 'ml', 'type': 'uom'},
-    {'pattern': r'(?:quartini|quartino)(?!\w)', 'ratio': 946, 'uom': 'ml', 'type': 'uom'},
-    {'pattern': r'gallon(?!\w)', 'ratio': 3.78, 'uom': 'l', 'type': 'uom'},
-
-    # {'pattern': r'tigli(?!\w)', 'type': 'plain', 'sub': 'lime'},
-    # {'pattern': r'orso(?!\w)', 'type': 'plain', 'sub': 'birra'},
-    # {'pattern': r'orecchie(?!\w)', 'type': 'plain', 'sub': 'pannocchie'},
-    # {'pattern': r'(?<=\d\s)misurini(?!\w)', 'type': 'plain', 'sub': 'palline'},
-    # {'pattern': r'marrone(?= zucchero)', 'type': 'plain', 'sub': 'di canna'},
-    # {'pattern': r'marrone(?= chiaro zucchero)', 'type': 'plain', 'sub': 'di canna'},
-    # {'pattern': r'marrone(?= scuro zucchero)', 'type': 'plain', 'sub': 'di canna'},
-    # {'pattern': r'abbondanza(?= sale kosher)', 'type': 'plain', 'sub': 'in abbondanza'},
-    # {'pattern': r'kg(?= lime)', 'type': 'plain', 'sub': 'chili'},
-    # {'pattern': r'(?<=mini )peperoni', 'type': 'plain', 'sub': 'peperoncini'},
-    # {'pattern': r'(?<=aglio )(?:chiodo di garofano|chiodi di garofano)', 'type': 'plain', 'sub': 'spicchio'},
-    # {'pattern': r'(?:chiodo di garofano|chiodi di garofano)(?= aglio)', 'type': 'plain', 'sub': 'spicchio'},
-    # {'pattern': r'[Zz]uppa di cipolle alla francese', 'type': 'plain', 'sub': 'zuppa di cipolle francese'},
-    # {'pattern': r'sale di cipolla', 'type': 'plain', 'sub': 'sale alla cipolla'},
-    # {'pattern': r'livido', 'type': 'plain', 'sub': 'schiacciato'},
-    # {'pattern': r'caldo(?= peperoncino)', 'type': 'plain', 'sub': 'piccante'},    
-    # {'pattern': r'[Ff]arina di tutti i tipi', 'type': 'plain', 'sub': 'farina 00'},
-    # {'pattern': r'(?<=cannella )bastone', 'type': 'plain', 'sub': 'bastoncino'},
-    # {'pattern': r'bastone(?= cannella)', 'type': 'plain', 'sub': 'bastoncino'},
-    # {'pattern': r'(?<=burro )bastone', 'type': 'plain', 'sub': 'panetto'},
-    # {'pattern': r'bastone(?= burro)', 'type': 'plain', 'sub': 'panetto'},
-    # {'pattern': r'(?<=pepe \()[Ff]resco', 'type': 'plain', 'sub': 'appena'},
-    # {'pattern': r'(?<=alghe \()filo', 'type': 'plain', 'sub': 'arame'}, 
-    # {'pattern': r'(?<=mazzo )verdi', 'type': 'plain', 'sub': 'verdura'},
-    # {'pattern': r'scuro(?= gocce di cioccolato)', 'type': 'plain', 'sub': 'fondente'},
-    # {'pattern': r'scuro(?= cioccolato)', 'type': 'plain', 'sub': 'fondente'},
-    # {'pattern': r'(?<=scolato )sfogliato', 'type': 'plain', 'sub': 'a lamelle'},
-    # {'pattern': r'cubo(?= bistecche)', 'type': 'plain', 'sub': 'girello'},
-    # {'pattern': r'(?<!\w)[Mm]aggio', 'type': 'plain', 'sub': 'maionese'},
-    # {'pattern': r'noce di cocco', 'type': 'plain', 'sub': 'cocco'},
-    # {'pattern': r'(?<=(?:uova|uovo) )(bianchi)', 'type': 'plain', 'sub': 'albumi'},
-    # {'pattern': r'carton(?!\w)', 'type': 'plain', 'sub': 'cartone'},
-    # {'pattern': r'(?<=matzah )tavole', 'type': 'plain', 'sub': 'fogli'},
-    # {'pattern': r'barattolo(?= cola)', 'type': 'plain', 'sub': 'lattina'},
-    # {'pattern': r'per person(?!\w)', 'type': 'plain', 'sub': 'per persona'},
-    # {'pattern': r'caldo(?= salsa)', 'type': 'plain', 'sub': 'piccante'},
-    # {'pattern': r'(?<=wafer al cioccolato \()scuro', 'type': 'plain', 'sub': 'fondente'},
-    # {'pattern': r'(?<=maiale )costole', 'type': 'plain', 'sub': 'costine'},
-    # {'pattern': r'(?<=farina \()semplice', 'type': 'plain', 'sub': '00'},
-    # {'pattern': r'(?<!\w)la miscela', 'type': 'plain', 'sub': 'il preparato'},
-    # {'pattern': r'(?<=patata )pelli', 'type': 'plain', 'sub': 'bucce'},
-    # {'pattern': r'bastoncini(?= burro)', 'type': 'plain', 'sub': 'panetti'},
-    # {'pattern': r'bastoncini(?= salato burro)', 'type': 'plain', 'sub': 'panetti'},
-    # {'pattern': r'(?<=circa 20 )bastoncini', 'type': 'plain', 'sub': 'punte'},
-    # {'pattern': r'in polvere(?= zucchero)', 'type': 'plain', 'sub': 'a velo'},
-    # {'pattern': r'barattolo(?= soda)', 'type': 'plain', 'sub': 'lattina'},
-    # {'pattern': r'(?<=lime )soda', 'type': 'plain', 'sub': 'bibita'},
-    # {'pattern': r'(?<=lattina )soda', 'type': 'plain', 'sub': 'bibita'},
-    # {'pattern': r'barattolo(?= tonno)', 'type': 'plain', 'sub': 'lattina'},
-    # {'pattern': r'(?<=2 kg )manzo in scatola punta di petto', 'type': 'plain', 'sub': 'punta di petto di manzo in scatola'},
-    # {'pattern': r'(?<=4 fette )manzo in scatola', 'type': 'plain', 'sub': 'petto di manzo in scatola'},
-    # {'pattern': r'(?<=0,9 - 1,4 kg )petto di manzo in scatola', 'type': 'plain', 'sub': 'punta di petto di manzo in scatola'},
-    # {'pattern': r'(?<=vaniglia )fagiolo', 'type': 'plain', 'sub': 'baccello'},
-    # {'pattern': r'(?<=denocciolato )data', 'type': 'plain', 'sub': 'dattero'},
-    # {'pattern': r'(?<=arrostito rosso )pepe', 'type': 'plain', 'sub': 'peperone'},
-    # {'pattern': r'pepe(?= \(a cubetti\))', 'type': 'plain', 'sub': 'peperone'},
-    # {'pattern': r'pani(?!\w)', 'type': 'plain', 'sub': 'pagnotte'},
-    
-]
-
-converter = Converter(patterns=pattern_list)
+converter = Converter(patterns=json.load(open('/home/pgajo/food/src/regex_patterns_uom.json', 'r', encoding='utf8')))
 
 tgt_lang = 'de'
 json_file = f'/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-{tgt_lang}_context.json'
@@ -561,8 +477,6 @@ with open(json_file, 'r', encoding='utf-8') as file:
 label_field = 'annotations'
 # data = label_studio_to_tasteset(data, label_field=label_field)
 
-# from icecream import ic
-# ic(data)
 # # clean up translation mistakes by doing simple substitutions first with this function
 data = sub_shift(data, mappings, lang = 'en')
 data = sub_shift(data, mappings, lang = tgt_lang)

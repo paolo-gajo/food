@@ -1,26 +1,33 @@
 import os
 import sys
 sys.path.append('/home/pgajo/food/src')
-from utils import XLWADataset, push_dataset_card
-from transformers import AutoTokenizer
+from utils_food import XLWADataset, push_dataset_card
+from transformers import AutoTokenizer, MarianTokenizerFast
+from icecream import ic
 
 def main():
     data_path = '/home/pgajo/food/data/XL-WA/data'
     languages = [
-      # 'ru',
-      # 'nl',
+      'ru',
+      'nl',
       'it',
-      # 'pt',
-      # 'et',
+      'pt',
+      'et',
       'es',
-      # 'hu',
-      # 'da',
-      # 'bg',
-      # 'sl',
+    #   'hu',
+    #   'da',
+    #   'bg',
+      'sl',
       ]
-    tokenizer_name = 'bert-base-multilingual-cased'
+    # tokenizer_name = 'bert-base-multilingual-cased'
+    tokenizer_name = 'Helsinki-NLP/opus-mt-en-it'
     # tokenizer_name = 'microsoft/mdeberta-v3-base'
     tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+    # print(type(tokenizer).__name__)
+    # test_sentence = tokenizer.decode(tokenizer('This is sequence one.', 'While this is the second one.',
+    #                                 return_tensors='pt',
+    #                                 return_token_type_ids=True)['input_ids'].squeeze())
+    # print(test_sentence)
     dataset = XLWADataset(
         data_path,
         tokenizer,
@@ -42,7 +49,7 @@ def main():
     # Dataset path = {data_path}\n
     # '''
     # push_dataset_card(repo_id, dataset_summary=dataset_summary)
-    datasets_dir_path = f"/home/pgajo/food/datasets/alignment/{'-'.join(languages)}/{tokenizer_dict[tokenizer_name]}"
+    datasets_dir_path = f"/home/pgajo/food/datasets/alignment/{'-'.join(languages)}/{type(tokenizer).__name__}/{tokenizer_name.split('/')[-1]}"
     if not os.path.exists(datasets_dir_path):
         os.makedirs(datasets_dir_path)
     full_save_path = os.path.join(datasets_dir_path, save_name)

@@ -20,15 +20,16 @@ from ner_utils import make_ner_sample, get_ner_classes
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', default='/home/pgajo/food/datasets/ner/EW-TT-MT_multi_context_TS_ner')
+    parser.add_argument('--train_path', default='/home/pgajo/food/datasets/ner/EW-TT-MT_multi_context_TS_ner')
+    parser.add_argument('--test_path', default='/home/pgajo/food/datasets/ner/GZ-GOLD-NER-ALIGN_105_spaced_ner_test')
     parser.add_argument('--model', default="bert-base-multilingual-cased")
     parser.add_argument('--langs_train', default='it')
     parser.add_argument('--langs_test', default='it')
     args = parser.parse_args()
 
-    data_name = args.data
-    data_name_simple = data_name.split('/')[-1]
-    dataset = load_from_disk(data_name)
+    print('Current dataset:', args.train_path)
+    data_name_simple = args.train_path.split('/')[-1]
+    dataset = load_from_disk(args.train_path)
 
     print(dataset)
     label_field = 'annotations'
@@ -40,21 +41,6 @@ def main():
     model_name = args.model
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-    # for i, example in enumerate(dataset['train']):
-    #     output = make_ner_sample(dataset['train'][i], tokenizer, label2id, `lang='it')
-    #     if not len(output['input_ids']) == len(output['labels']):
-    #         print(output)
-    #         print(len(output['input_ids']))
-    #         print(len(output['labels']))
-    #         for i, (id, label) in enumerate(zip([tokenizer.decode(token) for token in output['input_ids']], output['labels'])):
-    #             print(i, id, label, sep = '\t')
-
-    # for line in dataset['train']:
-    #     for result in line['annotations'][0]['result']:
-    #         print(result['from_name'][-2:])
-    # languages_train = set([result['from_name'][-2:] for line in dataset['train'] for result in line['annotations'][0]['result']])
-    # print(languages_train)
     
     languages_train = list(args.langs_train.split('-'))
     languages_test = list(args.langs_test.split('-'))
@@ -63,8 +49,22 @@ def main():
     df_dev = pd.DataFrame()
 
     for lang in languages_train:
-        df_train = pd.concat([df_train, pd.DataFrame([make_ner_sample(sample, tokenizer, label2id, lang, label_list=raw_labels, label_field=label_field) for sample in dataset['train']])])
-        df_dev = pd.concat([df_dev, pd.DataFrame([make_ner_sample(sample, tokenizer, label2id, lang, label_list=raw_labels, label_field=label_field) for sample in dataset['test']])])
+        df_train = pd.concat([df_train, pd.DataFrame([make_ner_sample(sample,
+                                                        tokenizer,
+                                                        label2id,
+                                                        lang,
+                                                        label_list=raw_labels,
+                                                        label_field=label_field,
+                                                        text_name = 'ingredients') for sample in dataset['train']])],
+                                                        )
+        df_dev = pd.concat([df_dev, pd.DataFrame([make_ner_sample(sample,
+                                                        tokenizer,
+                                                        label2id,
+                                                        lang,
+                                                        label_list=raw_labels,
+                                                        label_field=label_field,
+                                                        text_name = 'ingredients') for sample in dataset['test']])],
+                                                        )
 
     dataset_train = Dataset.from_pandas(df_train)
     dataset_dev = Dataset.from_pandas(df_dev)
@@ -135,14 +135,14 @@ def main():
 
     from datetime import datetime
     date_time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-    model_dir = os.path.join('/home/pgajo/food/models/ner', f"{'-'.join(languages_train)}_train_{'-'.join(languages_test)}_test2", model_name_simple, data_name_simple, date_time)
+    model_dir = os.path.join('/home/pgajo/food/models/ner', f"{'-'.join(languages_train)}_train_{'-'.join(languages_test)}_test", model_name_simple, data_name_simple, date_time)
 
     training_args = TrainingArguments(
         output_dir=model_dir,
         learning_rate=2e-5,
         per_device_train_batch_size=16,
         per_device_eval_batch_size=16,
-        num_train_epochs=1,
+        num_train_epochs=3,
         weight_decay=0.01,
         evaluation_strategy="epoch",
         save_strategy="no",
@@ -171,9 +171,8 @@ def main():
     trainer.save_metrics("train", metrics)
     trainer.save_state()
 
-    data_name_test = '/home/pgajo/food/datasets/ner/GZ-GOLD-NER-ALIGN_105_spaced_ner_test'
-    data_name_test_simple = data_name_test.split('/')[-1]
-    dataset_test_raw = load_from_disk(data_name_test)
+    data_name_test_simple = args.test_path.split('/')[-1]
+    dataset_test_raw = load_from_disk(args.test_path)
     label_field = 'annotations'
     # print(dataset_test_raw['train'][label_field])
     # label_list, label2id, id2label = get_ner_classes(dataset_test_raw, label_field=label_field)

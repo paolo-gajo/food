@@ -86,7 +86,6 @@ def make_ner_sample(sample,
                     label_list = [],
                     max_length = 512
                     ):
-    
     input_ids = [101]
     attention_mask = [1]
     labels = [-100]
