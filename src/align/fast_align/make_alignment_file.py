@@ -21,7 +21,7 @@ shifter = EntityShifter(languages = [lang_src, lang_tgt])
 
 text_field = 'ingredients'
 data_format = 'label_studio'
-strategy = 'moses'
+strategy = 'regex'
 
 data_tokenized = []
 for line in tqdm(data, total=len(data)):
@@ -29,7 +29,7 @@ for line in tqdm(data, total=len(data)):
                         text_field = text_field,
                         data_format = data_format,
                         strategy = strategy,
-                        verbose=True,
+                        # verbose=True,
                         )
     data_tokenized.append(line_tokenized)
 

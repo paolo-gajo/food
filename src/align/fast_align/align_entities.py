@@ -122,7 +122,8 @@ def main():
         data = json.load(f)
 
     # filename_alignments = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses_en-it_align_fast-align.txt'
-    filename_alignments = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses_align_gpp.txt'
+    # filename_alignments = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses_align_gpp.txt'
+    filename_alignments = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_regex_align_gpp.txt'
 
     # filename_alignments = '/home/pgajo/food/data/TASTEset/data/SW-TASTE/fast-align/data/SW-TASTE_en-it_DEEPL_unaligned_spaced_align_fast-align.txt'
     # filename_alignments = '/home/pgajo/food/data/TASTEset/data/SW-TASTE/fast-align/data/SW-TASTE_en-it_DEEPL_unaligned_spaced_align_gpp.txt'

@@ -1049,6 +1049,14 @@ def make_ner_sample(example, tokenizer, label_dict):
     print(tokens)
     return tokens
 
+def adjust_entities(ents, adjustment, match_index, len_diff):
+    for ent in ents:
+        if ent['value']['start'] > match_index:
+            ent['value']['start'] += len_diff
+            ent['value']['end'] += len_diff
+        elif ent['value']['start'] <= match_index < ent['value']['end']:
+            ent['value']['end'] += len_diff
+
 mappings = [
     {'pattern': r'(?<!\s)([^\w\s])|([^\w\s])(?!\s)', 'target': ' placeholder '},
     {'pattern': r'\s+', 'target': ' '},
@@ -1078,7 +1086,6 @@ class EntityShifter:
         annotations = []
         if strategy == 'moses':
             for lang in self.languages:
-                adjustment = 0
                 ingredients_key = f'{text_field}_{lang}'
                 text = sample['data'][ingredients_key].rstrip()
                 if data_format == 'label_studio':
@@ -1106,7 +1113,6 @@ class EntityShifter:
                             if ent_tmp[0] < ent[0] + len(text_ent_detokenized):
                                 ent_tmp[0] = ent_tmp[0] + len_diff
                                 ent_tmp[1] = ent_tmp[1] + len_diff
-                adjustment += len_diff
                 sample['data'][ingredients_key] = text
                 annotations += ents
                 if verbose:
@@ -1120,10 +1126,13 @@ class EntityShifter:
         
         elif strategy == 'regex':
             for lang in self.languages:
+                if data_format == 'label_studio':
+                    ents = get_entities_from_sample(sample, lang=lang, sort=True)
+                elif data_format == 'tasteset':
+                    ents = sorted(sample[f'ents_{lang}'], key = lambda ent: ent[0])
                 ingredients_key = f'{text_field}_{lang}'
                 for mapping in self.mappings:
                     text = sample['data'][ingredients_key].rstrip()
-
                     adjustment = 0
                     pattern = re.compile(mapping['pattern'])
                     for match in re.finditer(pattern, text):
@@ -1138,26 +1147,37 @@ class EntityShifter:
                         
                         # Adjust the indices of subsequent annotations
                         if data_format == 'label_studio':
-                            for ent in sample['annotations'][0]['result']:
-                                if ent['type'] == 'labels':
-                                    if ent['from_name'] == f'label_{lang}':
-                                        ent_start = ent['value']['start']
-                                        ent_end = ent['value']['end']
-                                        if ent_start <= match_index and ent_end > match_index:
-                                            ent['value']['start'] = ent_start
-                                            ent['value']['end'] = ent_end + len_diff
-                                        if ent_start > match_index:
-                                            ent['value']['start'] = ent_start + len_diff
-                                            ent['value']['end'] = ent_end + len_diff
+                            for ent in ents:
+                                if ent['value']['start'] <= match_index and ent['value']['end'] > match_index:
+                                    # ent['value']['start'] = ent['value']['start']
+                                    ent['value']['end'] += len_diff
+                                    monitor1 = text[ent['value']['start']:ent['value']['end']]
+                                if ent['value']['start'] > match_index:
+                                    ent['value']['start'] += len_diff
+                                    ent['value']['end'] += len_diff
+                                    monitor2 = text[ent['value']['start']:ent['value']['end']]
+                            text_reconstructed = ' '.join([text[ent['value']['start']:ent['value']['end']] for ent in ents if ent['from_name'] == f'label_{lang}'])
+                            # ic(text)
+                            print(match_contents, text_reconstructed)
+                            print('------------')                   
+                            pass
                         elif data_format == 'tasetset':
-                            for entity in sample[f'{text_field}_{lang}']:
-                                start, end = entity[0], entity[1]
+                            for ent in ents:
+                                start, end = ent[0], ent[1]
                                 if start <= match_index and end > match_index:
-                                    entity[0] = start
-                                    entity[1] = end + len_diff
+                                    ent[0] = start
+                                    ent[1] = end + len_diff
                                 if start > match_index:
-                                    entity[0] = start + len_diff
-                                    entity[1] = end + len_diff
+                                    ent[0] = start + len_diff
+                                    ent[1] = end + len_diff
                         adjustment += len_diff
                 sample['data'][ingredients_key] = text
+                annotations += ents
+                if verbose:
+                    text_reconstructed = ' '.join([text[ent['value']['start']:ent['value']['end']] for ent in ents if ent['from_name'] == f'label_{lang}'])
+                    ic(text)
+                    print(text_reconstructed)
+                    print('------------')
+            annotations += get_relations_from_sample(sample)
+            sample['annotations'][0]['result'] = annotations
             return sample
