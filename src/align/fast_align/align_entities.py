@@ -5,7 +5,7 @@ from icecream import ic
 import os
 import logging
 import sys
-sys.path.append('/home/pgajo/food/src')
+sys.path.append('./src')
 from utils_food import get_entities_from_sample, get_relations_from_sample
 
 def word_idx_to_span(idx, wordlist):
@@ -13,9 +13,13 @@ def word_idx_to_span(idx, wordlist):
     right = left + len(wordlist[idx])
     return {'start': left, 'end': right}
 
-def match_id(ent_src, entity_list, lang_tgt = 'it'):
-    ents = [ent for ent in entity_list if ent['type'] == 'labels' and ent[f'from_name'] == f'label_{lang_tgt}']
-    rels = [rel for rel in entity_list if rel['type'] == 'relation']
+def match_id(ent_src, sample, lang_tgt = 'it'):
+    ents = get_entities_from_sample(sample, lang=lang_tgt)
+    rels = get_relations_from_sample(sample)
+    from_ids = [rel['from_id'] for rel in rels]
+    to_ids = [rel['to_id'] for rel in rels]
+    if ent_src['id'] not in from_ids and ent_src['id'] not in to_ids:
+        return None
     from_id = ''
     for rel in rels:
         if rel['to_id'] == ent_src['id']:
@@ -25,8 +29,6 @@ def match_id(ent_src, entity_list, lang_tgt = 'it'):
         for ent in ents:
             if ent['id'] == from_id:
                 return ent
-    else:
-        return {'id': ''}
 
 def format_ls_ent(from_name='', id='', to_name='', type='', start=0, end=0, labels=''):
     ent_ls = {
@@ -81,52 +83,91 @@ def match_src_words_to_entities(sample, alignment_list, lang_src = 'en', lang_tg
     Aggregate source words falling within the same entity
     '''
     ent_src_list = get_entities_from_sample(sample, lang=lang_src, sort=True)
-    ent_tgt_list = get_entities_from_sample(sample, lang=lang_tgt, sort=True)
-    relations = get_relations_from_sample(sample)
     ingredients_list_src = sample['data'][f'{field_name}_{lang_src}'].split()
     ingredients_list_tgt = sample['data'][f'{field_name}_{lang_tgt}'].split()
     alignments_tgt_final = []
-    sample['predictions'].append({'model_version': model_name, 'result': [],})
+    sample['predictions'] = [{'model_version': model_name, 'result': [],}]
     for ent_src in ent_src_list:
-        start_src = ent_src['value']['start']
-        end_src = ent_src['value']['end']
-        label_src = ent_src['value']['labels'][0]
-        for alignment in alignment_list:
-            word_src = ingredients_list_src[alignment['source']]
-            alignment_src_span = word_idx_to_span(alignment['source'], ingredients_list_src)
-            if start_src <= alignment_src_span['start'] and alignment_src_span['end'] <= end_src:
-                alignment_tgt_tmp = [word_idx_to_span(al, ingredients_list_tgt) for al in alignment['target']]
-                alignments_tgt_final.extend(alignment_tgt_tmp)
-                alignment_tgt_tmp = []
+        ent_tgt = match_id(ent_src, sample)
+        if ent_tgt is not None: # check if there is an alignment for this entity
+            start_src = ent_src['value']['start']
+            end_src = ent_src['value']['end']
+            label_src = ent_src['value']['labels'][0]
+            for alignment in alignment_list:
+                word_src = ingredients_list_src[alignment['source']]
+                alignment_src_span = word_idx_to_span(alignment['source'], ingredients_list_src)
+                if start_src <= alignment_src_span['start'] and alignment_src_span['end'] <= end_src:
+                    alignment_tgt_tmp = [word_idx_to_span(al, ingredients_list_tgt) for al in alignment['target']]
+                    alignments_tgt_final.extend(alignment_tgt_tmp)
+                    alignment_tgt_tmp = []
 
-        if alignments_tgt_final:
-            start_tgt, end_tgt = get_minmax(alignments_tgt_final)
-        else:
-            start_tgt = start_src
-            end_tgt = end_src
-        ent_tgt = match_id(ent_src, sample['annotations'][0]['result'])
-        ent_it_new = format_ls_ent(from_name=f'label_{lang_tgt}', id=ent_tgt['id'], to_name=f'{field_name}_{lang_tgt}_ref', type='labels', labels=label_src,
-                                       start=start_tgt,
-                                       end=end_tgt,
-                                       )
-        sample['predictions'].append(ent_it_new)
-        alignments_tgt_final = []
+            if alignments_tgt_final:
+                start_tgt, end_tgt = get_minmax(alignments_tgt_final)
+            else:
+                start_tgt = start_src
+                end_tgt = end_src
+            ent_it_new = format_ls_ent(from_name=f'label_{lang_tgt}', id=ent_tgt['id'], to_name=f'{field_name}_{lang_tgt}_ref', type='labels', labels=label_src,
+                                        start=start_tgt,
+                                        end=end_tgt,
+                                        )
+            sample['predictions'][0]['result'].append(ent_it_new)
+            alignments_tgt_final = []
     return sample
 
+def evaluate_predictions(dataset, results_path, eval_metric='squad_v2', lang_tgt = 'it'):
+    metric = load(eval_metric)
+
+    if not os.path.exists(results_path):
+        os.makedirs(results_path)
+
+    preds = []
+    trues = []
+
+    # Iterate over each sample in the aligned dataset
+    for sample in dataset:
+        annotations = get_entities_from_sample(sample, lang=lang_tgt, field='annotations')
+        predictions = get_entities_from_sample(sample, lang=lang_tgt, field='predictions')
+        # Iterate over each annotation and prediction
+        for annotation in annotations:
+            for prediction in predictions:
+                # Check if the ids match and that the prediction has a non-empty id
+                if prediction['id'] == annotation['id'] and prediction['id']:
+                    # Prepare the true data format
+                    dict_true = {
+                        'answers': {
+                            'answer_start': [annotation['value']['start']],
+                            'text': [sample['data'][f'ingredients_{lang_tgt}'][annotation['value']['start']:annotation['value']['end']]]
+                        },
+                        'id': annotation['id']
+                    }
+                    trues.append(dict_true)
+
+                    # Prepare the predicted data format
+                    dict_pred = {
+                        'prediction_text': sample['data'][f'ingredients_{lang_tgt}'][prediction['value']['start']:prediction['value']['end']],
+                        'id': annotation['id'],
+                        'no_answer_probability': 0,
+                    }
+                    preds.append(dict_pred)
+
+    results = metric.compute(predictions=preds, references=trues)
+    return results
 
 def main():
-    data_path = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses.json'
+    # data_path = '/home/pg/working/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses.json'
+    data_path = '/home/pg/working/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_regex.json'
     # data_path = 'data/TASTEset/data/SW-TASTE/SW-TASTE_en-it_DEEPL_unaligned_spaced_tok.json'
 
     with open(data_path, 'r', encoding='utf8') as f:
         data = json.load(f)
 
-    # filename_alignments = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses_en-it_align_fast-align.txt'
-    # filename_alignments = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses_align_gpp.txt'
-    filename_alignments = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_regex_align_gpp.txt'
+    # filename_alignments = '/home/pg/working/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses_en-it_align_fast-align.txt'
+    # filename_alignments = '/home/pg/working/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses_align_gpp.txt'
+    # filename_alignments = '/home/pg/working/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_moses_align_gpp.txt'
+    filename_alignments = '/home/pg/working/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced_tok_regex_align_gpp.txt'
 
-    # filename_alignments = '/home/pgajo/food/data/TASTEset/data/SW-TASTE/fast-align/data/SW-TASTE_en-it_DEEPL_unaligned_spaced_align_fast-align.txt'
-    # filename_alignments = '/home/pgajo/food/data/TASTEset/data/SW-TASTE/fast-align/data/SW-TASTE_en-it_DEEPL_unaligned_spaced_align_gpp.txt'
+    # filename_alignments = '/home/pg/working/food/data/TASTEset/data/SW-TASTE/fast-align/data/SW-TASTE_en-it_DEEPL_unaligned_spaced_align_fast-align.txt'
+    # filename_alignments = '/home/pg/working/food/data/TASTEset/data/SW-TASTE/fast-align/data/SW-TASTE_en-it_DEEPL_unaligned_spaced_align_gpp.txt'
 
     model_name = filename_alignments.split('_')[-1].split('.')[0]
     with open(filename_alignments, 'r', encoding='utf8') as f:
@@ -138,40 +179,16 @@ def main():
         matched_sample = match_src_words_to_entities(sample, aggregated_alignments, model_name=model_name)
         dataset_aligned.append(matched_sample)
 
-    with open(data_path.replace('.json', f'_preds_{model_name}.json'), 'w', encoding='utf8') as f:
-        json.dump(dataset_aligned, f, ensure_ascii = False)
+    # with open(data_path.replace('.json', f'_preds_{model_name}.json'), 'w', encoding='utf8') as f:
+    #     json.dump(dataset_aligned, f, ensure_ascii = False)
+    
+    results_path = f"./results/alignment/test/{data_path.split('/')[-1].split('.')[0]}"
+    lang_tgt = 'it'
+    results = evaluate_predictions(dataset=dataset_aligned, results_path=results_path, lang_tgt=lang_tgt)
+    print(results)
+
+    # with open(os.path.join(results_path, model_name), 'w', encoding='utf8') as f:
+    #     json.dump(results, f, ensure_ascii = False)
 
 if __name__ == "__main__":
     main()
-
-# metric = load("squad_v2")
-# results_path = f"/home/pgajo/food/results/alignment/test/{data_path.split('/')[-1].split('.')[0]}"
-
-# if not os.path.exists(results_path):
-#     os.makedirs(results_path)
-
-
-# preds = []
-# trues = []
-
-# with open(os.path.join(results_path, model_name), 'w', encoding='utf8') as f:
-#     json.dump(test_metrics, f, ensure_ascii = False)
-
-        # if eval:
-        #     ent_gold = match_id(ent, line['annotations'][0]['result'])
-        #     if ent_gold['id']:
-        #         dict_true = {
-        #             'answers': {
-        #                 'answer_start': [ent_gold['value']['start']],
-        #                 'text': [line['data'][f'{field_name}_{lang_tgt}'][ent_gold['value']['start']:ent_gold['value']['end']]],
-        #                 },
-        #                 'id': ent_gold['id']
-        #             }
-        #         trues.append(dict_true)
-        #         dict_pred = {
-        #             'prediction_text': line['data'][f'{field_name}_{lang_tgt}'][alignment_tgt_left:alignment_tgt_right],
-        #             'id': ent_gold['id'],
-        #             'no_answer_probability': 0,
-        #         }
-        #         preds.append(dict_pred)
-        # results = metric.compute(predictions=preds, references=trues)

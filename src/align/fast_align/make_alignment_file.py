@@ -1,12 +1,12 @@
 import json
 import sys
-sys.path.append('/home/pgajo/food/src')
+sys.path.append('/home/pg/working/food/src')
 from utils_food import EntityShifter
 from tqdm.auto import tqdm
 
-json_path = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced.json'
-# json_path = '/home/pgajo/food/data/TASTEset/data/SW-TASTE/SW-TASTE_en-it_DEEPL_unaligned_spaced.json'
-# json_path = '/home/pgajo/food/data/mycolombianrecipes/mycolombianrecipes.json'
+json_path = '/home/pg/working/food/data/GZ/GZ-GOLD/GZ-GOLD-NER-ALIGN_105_spaced.json'
+# json_path = '/home/pg/working/food/data/TASTEset/data/SW-TASTE/SW-TASTE_en-it_DEEPL_unaligned_spaced.json'
+# json_path = '/home/pg/working/food/data/mycolombianrecipes/mycolombianrecipes.json'
 
 with open(json_path, 'r', encoding='utf8') as f:
     data = json.load(f)

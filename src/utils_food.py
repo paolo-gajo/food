@@ -1049,14 +1049,6 @@ def make_ner_sample(example, tokenizer, label_dict):
     print(tokens)
     return tokens
 
-def adjust_entities(ents, adjustment, match_index, len_diff):
-    for ent in ents:
-        if ent['value']['start'] > match_index:
-            ent['value']['start'] += len_diff
-            ent['value']['end'] += len_diff
-        elif ent['value']['start'] <= match_index < ent['value']['end']:
-            ent['value']['end'] += len_diff
-
 mappings = [
     {'pattern': r'(?<!\s)([^\w\s])|([^\w\s])(?!\s)', 'target': ' placeholder '},
     {'pattern': r'\s+', 'target': ' '},
@@ -1064,8 +1056,8 @@ mappings = [
 
 diacritics = 'àèìòùáéíóúÀÈÌÒÙÁÉÍÓÚ'
 
-def get_entities_from_sample(sample, lang = 'en', sort = False):
-    entities = [ent for ent in sample['annotations'][0]['result'] if ent['type'] == 'labels' and ent[f'from_name'] == f'label_{lang}']
+def get_entities_from_sample(sample, field = 'annotations', lang = 'en', sort = False):
+    entities = [ent for ent in sample[field][0]['result'] if ent['type'] == 'labels' and ent[f'from_name'] == f'label_{lang}']
     if sort:
         entities = sorted(entities, key = lambda ent: ent['value']['start'])
     return entities
@@ -1126,13 +1118,13 @@ class EntityShifter:
         
         elif strategy == 'regex':
             for lang in self.languages:
+                ingredients_key = f'{text_field}_{lang}'
+                text = sample['data'][ingredients_key].rstrip()
                 if data_format == 'label_studio':
                     ents = get_entities_from_sample(sample, lang=lang, sort=True)
                 elif data_format == 'tasteset':
                     ents = sorted(sample[f'ents_{lang}'], key = lambda ent: ent[0])
-                ingredients_key = f'{text_field}_{lang}'
                 for mapping in self.mappings:
-                    text = sample['data'][ingredients_key].rstrip()
                     adjustment = 0
                     pattern = re.compile(mapping['pattern'])
                     for match in re.finditer(pattern, text):
