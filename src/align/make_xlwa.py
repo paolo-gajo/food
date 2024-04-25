@@ -2,25 +2,25 @@ import os
 import sys
 sys.path.append('/home/pgajo/food/src')
 from utils_food import XLWADataset, push_dataset_card
-from transformers import AutoTokenizer, MarianTokenizerFast
+from transformers import AutoTokenizer
 from icecream import ic
 
 def main():
     data_path = '/home/pgajo/food/data/XL-WA/data'
     languages = [
-      'ru',
-      'nl',
-      'it',
-      'pt',
-      'et',
+    #   'ru',
+    #   'nl',
+    #   'it',
+    #   'pt',
+    #   'et',
       'es',
     #   'hu',
     #   'da',
     #   'bg',
-      'sl',
+    #   'sl',
       ]
-    # tokenizer_name = 'bert-base-multilingual-cased'
-    tokenizer_name = 'Helsinki-NLP/opus-mt-en-it'
+    tokenizer_name = 'bert-base-multilingual-cased'
+    # tokenizer_name = 'Helsinki-NLP/opus-mt-en-it'
     # tokenizer_name = 'microsoft/mdeberta-v3-base'
     tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
     # print(type(tokenizer).__name__)

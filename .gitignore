@@ -18,3 +18,5 @@ TASTEset-2.0/
 awesome-align/
 .bertexperiments/
 bert_crf/
+.old/
+.paper/

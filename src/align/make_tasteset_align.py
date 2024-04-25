@@ -3,7 +3,8 @@ import argparse
 import os
 import sys
 sys.path.append('/home/pgajo/food/src')
-from utils import TASTEset, push_dataset_card
+from utils_food import TASTEset, push_dataset_card
+from transformers import AutoTokenizer
 
 def main():
     parser = argparse.ArgumentParser()
@@ -24,26 +25,37 @@ def main():
     args.shuffled_size = 1
     args.drop_duplicates = True
 
-    tokenizer_name = 'bert-base-multilingual-cased'
-    # tokenizer_name = 'bert-large-uncased'
-    # tokenizer_name = 'microsoft/mdeberta-v3-base'
+    # tokenizer_name = 'bert-base-multilingual-cased'
+    tokenizer_name = 'microsoft/mdeberta-v3-base'
 
-    # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-PE_en-it_spaced_TS.json'
-    # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_LOC_en-it_spaced_TS.json'
-    # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-it_spaced_TS.json'
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
 
-    # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-it_context_fix_TS.json'
-    # args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_en-es_context_fix_TS.json'
-    args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_multi_context_TS.json'
+    args.input = '/home/pgajo/food/data/TASTEset/data/EW-TASTE/EW-TT-MT_multi_ctx.json'
+
     langs = [
         'it',
         'es',
         # 'de',
     ]
-
+    class_filter = [
+        'FOOD',
+        'QUANTITY',
+        'UNIT',
+        'PROCESS',
+        'PHYSICAL_QUALITY',
+        'COLOR',
+        'TASTE',
+        'PURPOSE',
+        # 'PART',
+    ]
+    all_classes = ['FOOD', 'QUANTITY', 'UNIT', 'PROCESS', 'PHYSICAL_QUALITY', 'COLOR', 'TASTE', 'PURPOSE', 'PART',]
+    
+    # for i in range(11):
+    #     if i > 2:
+    #         break
     dataset = TASTEset.from_json(
         args.input,
-        tokenizer_name,
+        tokenizer = tokenizer,
         tgt_langs = langs,
         src_lang = 'en',
         dev_size = 0.2,
@@ -52,17 +64,10 @@ def main():
         shuffle_type = 'ingredient',
         shuffle_probability = 0.1,
         drop_duplicates = 0,
-        debug_dump = True,
-        # verbose = True
+        class_filter = class_filter
         )
-    
-    tokenizer_dict = {
-        'bert-base-multilingual-cased': 'mbert',
-        'microsoft/mdeberta-v3-base': 'mdeberta',
-        'bert-large-uncased': 'bert-large-uncased'
-    }
 
-    save_name = f"{args.input.split('/')[-1].replace('.json', '')}_U{dataset.unshuffled_size}_S{dataset.shuffled_size}_{dataset.shuffle_type[0:3].upper()}_P{dataset.shuffle_probability}_DROP{str(int(dataset.drop_duplicates))}_en-{'-'.join(langs)}"
+    save_name = f"{args.input.split('/')[-1].replace('.json', '')}_P{dataset.shuffle_probability}_en-{'-'.join(langs)}_{'-'.join(list(set(all_classes).difference(set(class_filter))))}"
     repo_id = f"pgajo/{save_name}"
     print('repo_id:', repo_id)
     # dataset.push_to_hub(repo_id)
@@ -76,7 +81,7 @@ def main():
     # Dataset path = {dataset.data_path}\n
     # '''
     # push_dataset_card(repo_id, dataset_summary=dataset_summary)
-    datasets_dir_path = f"/home/pgajo/food/datasets/alignment/{'-'.join(langs)}/{tokenizer_dict[tokenizer_name]}"
+    datasets_dir_path = f"/home/pgajo/food/datasets/alignment/en-{'-'.join(langs)}/{str(type(tokenizer).__name__)}"
     if not os.path.exists(datasets_dir_path):
         os.makedirs(datasets_dir_path)
     full_save_path = os.path.join(datasets_dir_path, save_name)

@@ -20,15 +20,16 @@ from ner_utils import make_ner_sample, get_ner_classes
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--train_path', default='/home/pgajo/food/datasets/ner/EW-TT-MT_multi_context_TS_ner')
-    parser.add_argument('--test_path', default='/home/pgajo/food/datasets/ner/GZ-GOLD-NER-ALIGN_105_spaced_ner_test')
-    parser.add_argument('--model', default="bert-base-multilingual-cased")
-    parser.add_argument('--langs_train', default='it')
-    parser.add_argument('--langs_test', default='it')
+    parser.add_argument('--train_path')
+    parser.add_argument('--test_path')
+    parser.add_argument('--model')
+    parser.add_argument('--langs_train')
+    parser.add_argument('--langs_test')
     args = parser.parse_args()
 
     print('Current dataset:', args.train_path)
-    data_name_simple = args.train_path.split('/')[-1]
+    train_name_simple = args.train_path.split('/')[-1]
+    test_name_simple = args.test_path.split('/')[-1]
     dataset = load_from_disk(args.train_path)
 
     print(dataset)
@@ -135,7 +136,12 @@ def main():
 
     from datetime import datetime
     date_time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-    model_dir = os.path.join('/home/pgajo/food/models/ner', f"{'-'.join(languages_train)}_train_{'-'.join(languages_test)}_test", model_name_simple, data_name_simple, date_time)
+    model_dir = os.path.join('/home/pgajo/food/models/ner',
+                                f"{'-'.join(languages_train)}_train_{'-'.join(languages_test)}_test",
+                                f"model={model_name_simple}",
+                                f"train={train_name_simple}",
+                                f"test={test_name_simple}",
+                                date_time)
 
     training_args = TrainingArguments(
         output_dir=model_dir,
@@ -184,8 +190,8 @@ def main():
     for lang in languages_test:
         sample_buffer = []
         for i, sample in enumerate(dataset_test_raw['train']):
-            if i > 104:
-                break
+            # if i > 301:
+            #     break
             ner_sample = make_ner_sample(sample,
                                         tokenizer,
                                         label2id,
