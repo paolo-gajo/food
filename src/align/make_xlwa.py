@@ -13,15 +13,15 @@ def main():
     #   'it',
     #   'pt',
     #   'et',
-      'es',
+    #   'es',
     #   'hu',
     #   'da',
     #   'bg',
-    #   'sl',
+      'sl',
       ]
-    tokenizer_name = 'bert-base-multilingual-cased'
+    # tokenizer_name = 'bert-base-multilingual-cased'
     # tokenizer_name = 'Helsinki-NLP/opus-mt-en-it'
-    # tokenizer_name = 'microsoft/mdeberta-v3-base'
+    tokenizer_name = 'microsoft/mdeberta-v3-base'
     tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
     # print(type(tokenizer).__name__)
     # test_sentence = tokenizer.decode(tokenizer('This is sequence one.', 'While this is the second one.',
@@ -49,7 +49,7 @@ def main():
     # Dataset path = {data_path}\n
     # '''
     # push_dataset_card(repo_id, dataset_summary=dataset_summary)
-    datasets_dir_path = f"/home/pgajo/food/datasets/alignment/{'-'.join(languages)}/{type(tokenizer).__name__}/{tokenizer_name.split('/')[-1]}"
+    datasets_dir_path = f"/home/pgajo/food/datasets/alignment/en-{'-'.join(languages)}/{type(tokenizer).__name__}/{tokenizer_name.split('/')[-1]}"
     if not os.path.exists(datasets_dir_path):
         os.makedirs(datasets_dir_path)
     full_save_path = os.path.join(datasets_dir_path, save_name)

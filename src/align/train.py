@@ -1,79 +1,51 @@
 import warnings
-import os
 import torch
+torch.set_printoptions(linewidth=100000, threshold=100000)
 from tqdm.auto import tqdm
 from evaluate import load
-from transformers import AutoTokenizer, AutoModelForQuestionAnswering
-from utils import data_loader, SquadEvaluator, TASTEset, XLWADataset, save_local_model, push_model_card
-from huggingface_hub import HfApi
-import pandas as pd
-import argparse
+from transformers import AutoTokenizer, AutoModelForQuestionAnswering, BertTokenizer, BertForQuestionAnswering, BertModel, PretrainedConfig, BertPreTrainedModel
+import sys
+sys.path.append('/home/pgajo/food/src')
+from utils_food import data_loader, SquadEvaluator, TASTEset, save_local_model
+from aligner_pt import BertAligner
 import re
+from datetime import datetime
+import os
+import argparse
+import json
+# import sys
+# sys.path.append('/home/pgajo/food/bert_crf')
+# from crf_models.bert_crf import BertCrf
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', '--test', default=False, action='store_true', help='Add a "_test" suffix to the repo name')
-    parser.add_argument('-f', '--file', default='/home/pgajo/working/food/data/EW-TASTE_en-it_DEEPL_localized_uom.json')
+    parser.add_argument('--model_path')
+    parser.add_argument('--data_path')
+    parser.add_argument('--use_bert_aligner', action='store_true', default=False,
+                    help='Use BERT aligner if this flag is set (default: %(default)s)')
     args = parser.parse_args()
 
-    ############################################################################## mbert
-    model_repo = 'bert-base-multilingual-cased'
-    # model_repo = 'pgajo/mbert-xlwa-en-it' # mbert fine-tuned on xlwa-en-it
+    model_name = args.model_path
+    data_name = args.data_path
 
-    ##################### xl-wa
-    # data_repo = 'pgajo/xlwa_en-it_mbert' 
-    
-    ##################### tasteset
-    # data_repo = 'pgajo/EW-TT-PE_U1_S0_DROP1_mbert' # unshuffled PE
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_DROP1_mbert' # 100% recipe shuffle PE
+    langs = re.search(r'([a-z]{2}-[a-z]{2})', data_name).group(1)
 
-    data_repo = 'pgajo/EW-TT-MT_LOC_U1_S0_DROP1_mbert' # unshuffled MT-LOC
-    # data_repo = 'pgajo/EW-TT-MT_LOC_U0_S1_DROP1_mbert' # 100% recipe shuffle MT-LOC
+    data_name_simple = data_name.split('/')[-1]
 
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_Tingredient_P1_DROP1_mbert'     # 100% ingredient shuffle PE
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_Tingredient_P0.75_DROP1_mbert'  # 75% ingredient shuffle PE
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_Tingredient_P0.5_DROP1_mbert'   # 50% ingredient shuffle PE
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mbert'  # 25% ingredient shuffle PE
+    data = TASTEset.from_disk(data_name)
 
-    # data_repo = ''     # 100% ingredient shuffle MT-LOC
-    # data_repo = ''  # 75% ingredient shuffle MT-LOC
-    # data_repo = ''   # 50% ingredient shuffle MT-LOC
-    # data_repo = ''  # 25% ingredient shuffle MT-LOC
-
-    ############################################################################## mdeberta
-    # model_repo = 'microsoft/mdeberta-v3-base'
-    # model_repo = 'pgajo/mdeberta-xlwa-en-it' # mdeberta fine-tuned on xlwa-en-it
-    
-    ##################### xl-wa
-    # data_repo = 'pgajo/xlwa_en-it_mdeberta'
-
-    ##################### tasteset
-    # data_repo = 'pgajo/EW-TT-PE_U1_S0_DROP1_mdeberta' # unshuffled PE
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_DROP1_mdeberta' # 100% recipe shuffle PE
-
-    # data_repo = 'pgajo/EW-TT-MT_LOC_U1_S0_DROP1_mdeberta' # unshuffled MT-LOC
-    # data_repo = 'pgajo/EW-TT-MT_LOC_U0_S1_DROP1_mdeberta' # 100% recipe shuffle MT-LOC
-
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_Tingredient_P1_DROP1_mdeberta'      # 100% ingredient shuffle PE
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_Tingredient_P0.75_DROP1_mdeberta'   # 75% ingredient shuffle PE
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_Tingredient_P0.5_DROP1_mdeberta'    # 50% ingredient shuffle PE
-    # data_repo = 'pgajo/EW-TT-PE_U0_S1_Tingredient_P0.25_DROP1_mdeberta'     # 25% ingredient shuffle PE
-
-    # data_repo = '' # 100% ingredient shuffle MT-LOC
-    # data_repo = '' # 75% ingredient shuffle MT-LOC
-    # data_repo = '' # 50% ingredient shuffle MT-LOC
-    # data_repo = '' # 25% ingredient shuffle MT-LOC
-
-    data = TASTEset.from_datasetdict(data_repo)
-
-    batch_size = 32
+    batch_size = 16
     dataset = data_loader(data,
                         batch_size,
                         # n_rows=320,
                         )
-    model = AutoModelForQuestionAnswering.from_pretrained(model_repo)
     device = 'cuda'
-    model = torch.nn.DataParallel(model).to(device)
+    bertaligner = args.use_bert_aligner
+    if bertaligner:
+        model = BertAligner.from_pretrained(model_name,
+                                        output_hidden_states=True).to(device)
+    else:
+        model = AutoModelForQuestionAnswering.from_pretrained(model_name).to(device)
     
     lr = 3e-5
     eps = 1e-8
@@ -82,13 +54,13 @@ def main():
                                 eps = eps
                                 )
     
-    tokenizer = AutoTokenizer.from_pretrained(model_repo)
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
     evaluator = SquadEvaluator(tokenizer,
                             model,
                             load("squad_v2"),
                             )
-
-    epochs = 10
+    bottom_out_non_context = 0
+    epochs = 3
     for epoch in range(epochs):
         # train
         epoch_train_loss = 0
@@ -97,11 +69,24 @@ def main():
         progbar = tqdm(enumerate(dataset[split]),
                                 total=len(dataset[split]),
                                 desc=f"{split} - epoch {epoch + 1}")
-        print('model_repo:', model_repo)
-        print('data_repo:', data_repo)
+        print('model_name:', model_name)
+        print('data_name:', data_name)
+        columns = [
+                    'input_ids',
+                    'token_type_ids',
+                    'attention_mask',
+                    'start_positions',
+                    'end_positions'
+                    ]
         for i, batch in progbar:
-            outputs = model(**batch) # ['loss', 'start_logits', 'end_logits']
-            loss = outputs[0].mean()
+            input = {k: batch[k].to(device) for k in columns}
+            outputs = model(**input) # ['loss', 'start_logits', 'end_logits']
+            if bottom_out_non_context:
+                for i in range(len(outputs['start_logits'])):
+                    outputs['start_logits'][i] = torch.where(input['token_type_ids'][i]!=0, outputs['start_logits'][i], -10000)
+                    outputs['end_logits'][i] = torch.where(input['token_type_ids'][i]!=0, outputs['end_logits'][i], -10000)
+            
+            loss = outputs['loss']#.mean()
             loss.backward()
             optimizer.step()
             optimizer.zero_grad()
@@ -125,12 +110,13 @@ def main():
         progbar = tqdm(enumerate(dataset[split]),
                                 total=len(dataset[split]),
                                 desc=f"{split} - epoch {epoch + 1}")
-        print('model_repo:', model_repo)
-        print('data_repo:', data_repo)
+        print('model_name:', model_name)
+        print('data_name:', data_name)
         for i, batch in progbar:
+            input = {k: batch[k].to(device) for k in columns}
             with torch.inference_mode():
-                outputs = model(**batch)
-            loss = outputs[0].mean()
+                outputs = model(**input)
+            loss = outputs['loss']#.mean()
             epoch_dev_loss += loss.item()
             loss_tmp = round(epoch_dev_loss / (i + 1), 4)
             progbar.set_postfix({'Loss': loss_tmp})
@@ -150,65 +136,58 @@ def main():
                 \nBest epoch: {evaluator.epoch_best}.')                                               
             break
     
-    evaluator.print_metrics()
+    metrics = evaluator.print_metrics()
 
-    results_path = '/home/pgajo/working/food/results'
-    # model save folder
-    model_dir = './models'
-    model_name = model_repo.split('/')[-1].split('_')[0]
-    data_name = re.sub('.json', '', data_repo.split('/')[-1]) # remove extension if local path
-    data_results_path = os.path.join(results_path, data_name)
-    if not os.path.isdir(data_results_path):
-        os.makedirs(data_results_path)
-    save_name = f"{model_name}_{data_name}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
-    save_name = save_name.replace('bert-base-multilingual-cased', 'mbert')
-    save_name = save_name.replace('mdeberta-v3-base', 'mdeberta')
-    csv_save_path = os.path.join(data_results_path, save_name)
+    if bertaligner:
+        model_name_simple = f"{model_name.split('/')[-1]}_BertAligner"
+    else:
+        model_name_simple = model_name.split('/')[-1]
+    
+    data_name = re.sub('.json', '', data_name.split('/')[-1]) # remove extension if local path
+
+    results_path = f'/home/pgajo/food/results/alignment/{langs}/dev/{data_name}/{model_name_simple}/'
+    if not os.path.isdir(results_path):
+        os.makedirs(results_path)
+
+    model_dir = f'/home/pgajo/food/models/alignment/{langs}/{data_name}/{model_name_simple}/'
+    if not os.path.isdir(model_dir):
+        os.makedirs(model_dir)
+
+    date_time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+    save_name = f"E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}_ME{epochs}_{date_time}"
+    csv_save_path = os.path.join(results_path, save_name)
     print('Saving metrics to:', csv_save_path)
     evaluator.save_metrics_to_csv(csv_save_path)
 
-    # filename_simple = f"{data.name}_U{data.unshuffled_size}_S{data.shuffled_size}_DROP{data.drop_duplicates}"
-    # save_name = f"{filename_simple}_E{evaluator.epoch_best}_DEV{str(round(evaluator.exact_dev_best, ndigits=0))}"
-    if args.test:
-        save_name = save_name + "_test" # comment if not testing
-    model_save_dir = os.path.join(model_dir, f"{data.name}/{save_name}")
+    model_save_dir = os.path.join(model_dir, f"{model_name_simple}_{data_name_simple}_ME{epochs}_{date_time}")
     if not os.path.isdir(model_save_dir):
         os.makedirs(model_save_dir)
     evaluator.save_metrics_to_csv(os.path.join(model_save_dir, 'metrics'))
     save_local_model(model_save_dir, model, tokenizer)
 
-    # repo_id = f"pgajo/{save_name}"
-    # print('repo_id', repo_id)
-    # api = HfApi(token = os.environ['HF_TOKEN'])
-    # api.create_repo(repo_id)
-    # df_desc = pd.DataFrame(evaluator.metrics).round(2)
-    # df_desc.index += 1
-    # df_desc.index.name = 'epoch'
-    # df_desc = df_desc.to_markdown()
-    # u_ratio = '(?<=_U)\d'
-    # s_ratio = '(?<=_S)\d'
-    # drop_flag = '(?<=_DROP)\d'
-    # model_description = f'''
-    # Model: {model_repo}\n
-    # Dataset: {data.name}\n
-    # Unshuffled ratio: {re.findall(u_ratio, data_repo)}\n
-    # Shuffled ratio: {re.findall(s_ratio, data_repo)}\n
-    # Best exact match epoch: {evaluator.epoch_best}\n
-    # Best exact match: {str(round(evaluator.exact_dev_best, ndigits=2))}\n
-    # Best epoch: {evaluator.epoch_best}\n
-    # Drop duplicates: {re.findall(drop_flag, data_repo)}\n
-    # Max epochs = {epochs}\n
-    # Optimizer lr = {lr}\n
-    # Optimizer eps = {eps}\n
-    # Batch size = {batch_size}\n
-    # Dataset path = {data_repo}\n
-    # '''
-    # push_model_card(repo_id=repo_id,
-    #         model_description=model_description,
-    #         results=df_desc,
-    #         template_path='/home/pgajo/modelcardtemplate.md'
-    #         )
-    # api.upload_folder(repo_id=repo_id, folder_path=model_save_dir) 
+    model_info = {
+        'model_name': model_name,
+        'batch_size': batch_size,
+        'learning_rate': 3e-5,
+        'epsilon': 1e-8,
+        'data_name': data_name,
+        'len_train': len(dataset['train']),
+        'len_dev': len(dataset['dev']),
+        'max_epochs': epochs,
+        'date_time': date_time,
+        'tokenizer_type': str(type(tokenizer).__name__),
+        'bottom_out_non_context': bottom_out_non_context,
+        'use_bert_aligner': args.use_bert_aligner,
+    }
+
+    info_path = os.path.join(model_save_dir, 'model_info.json')
+    with open(info_path, 'w', encoding='utf8') as f:
+        json.dump(model_info, f, ensure_ascii = False)
+    
+    # this needs to be the last print from this script
+    # for the bash script to pick up the model for test evaluation
+    print(model_save_dir)
+    
 
 if __name__ == '__main__':
     with warnings.catch_warnings():

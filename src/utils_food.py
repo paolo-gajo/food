@@ -16,6 +16,7 @@ import re
 from compute_score import compute_exact
 from icecream import ic
 from sacremoses import MosesTokenizer, MosesDetokenizer
+import unicodedata
 
 sep_dict = {
     'csv': ',',
@@ -1183,3 +1184,36 @@ class EntityShifter:
                 annotations += get_relations_from_sample(sample)
                 sample['annotations'][0]['result'] = annotations
             return sample
+
+def sub_shift_spans(text, ents, mappings = []):
+    for mapping in mappings:
+        adjustment = 0
+        pattern = re.compile(mapping['pattern'])
+        for match in re.finditer(pattern, text):
+            match_index = match.start() + adjustment
+            match_contents = match.group()
+            if all(unicodedata.category(char).startswith('P') for char in match_contents):
+                subbed_text = mapping['target'].replace('placeholder', match_contents)
+            else:
+                subbed_text = match_contents
+            len_diff = len(subbed_text) - len(match_contents)
+            text = text[:match_index] + subbed_text + text[match_index + len(match_contents):]
+
+            if isinstance(ents, list):
+                for ent in ents:
+                    if ent['start'] <= match_index and ent['end'] > match_index:
+                        ent['end'] += len_diff
+                    if ent['start'] > match_index:
+                        ent['start'] += len_diff
+                        ent['end'] += len_diff
+            elif isinstance(ents, dict):
+                if ents['start'] <= match_index and ents['end'] > match_index:
+                    ents['end'] += len_diff
+                if ents['start'] > match_index:
+                    ents['start'] += len_diff
+                    ents['end'] += len_diff
+
+            adjustment += len_diff
+    # for ent in ent_list:
+    #     ic(text[ent['start']:ent['end']])
+    return text, ents

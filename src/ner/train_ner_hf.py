@@ -6,7 +6,7 @@ import re
 import pandas as pd
 import sys
 sys.path.append('/home/pgajo/food/src')
-from utils_food import data_loader
+from utils_paolo import data_loader
 # sys.path.append('/home/pgajo/food/bert_crf')
 sys.path.append('/home/pgajo/food/data/TASTEset-2.0/src')
 from BERT_with_CRF import BERTCRF
