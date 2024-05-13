@@ -6,7 +6,7 @@ This repository hosts the code and data for a PhD project focused on applying Na
 ## Research Objectives and Methodology
 The primary objective is to develop a computational system capable of adapting omnivorous recipes to dietary restrictions such as vegetarian, vegan, halal, or kosher diets. The current pipeline, partially implemented and illustrated below, enriches culinary data by annotating various entities like "food", "quantity", and "process".
 
-![Pipeline]([[data/path_to_image/project_pipeline.png](https://i.imgur.com/zX51MP1.png)](https://i.imgur.com/zX51MP1.png))  
+![Pipeline](https://i.imgur.com/zX51MP1.png "Project pipeline")
 *Figure: Recipe adaptation pipeline. The green section is implemented; the red section is planned.*
 
 This enriched data is used to train models to extract such entities from recipes, which are crucial for describing and modeling a culinary recipe. These structured data are then used to develop a model that can substitute unwanted ingredients in a recipe. The adapted recipe is provided to a large language model, which outputs a complete recipe with ingredients and preparation instructions.
