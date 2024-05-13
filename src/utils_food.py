@@ -2,7 +2,7 @@ import os
 import json
 import pandas as pd
 from typing import List, Union
-from datasets import Dataset, DatasetDict, load_dataset, load_from_disk
+from datasets import Dataset, DatasetDict, load_dataset, load_from_disk, concatenate_datasets
 from tqdm.auto import tqdm
 import random
 from torch.utils.data import DataLoader
@@ -767,7 +767,8 @@ class XLWADataset(DatasetDict):
                 src_context = True,
                 n_rows = None,
                 batch_size = None,
-                splits = ['train', 'dev', 'test']
+                splits = ['train', 'dev', 'test'],
+                split_mapping = {'train': ['train'], 'dev': ['dev'], 'test': ['test']}
                     ):
         '''
         Prepares data from the XL-WA dataset based on the wanted languages,
@@ -816,6 +817,9 @@ class XLWADataset(DatasetDict):
             for line in progbar:
                 ds[split] += self.create_samples_xlwa(line)
             self[split] = Dataset.from_list(ds[split])
+
+        for mapping in split_mapping:
+            self[mapping] = concatenate_datasets([self[split] for split in split_mapping[mapping]])
 
         dataset = self.map(
             lambda sample: self.qa_tokenize(sample, self.tokenizer),
