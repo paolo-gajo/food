@@ -10,7 +10,7 @@ models/
 *.log
 # Allow
 *.sh
-data/
+# data/
 datasets/
 results/
 *.spacy
