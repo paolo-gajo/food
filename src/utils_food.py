@@ -1066,7 +1066,22 @@ def make_ner_sample(example, tokenizer, label_dict):
 mappings = [
     {'pattern': r'(?<!\s)([^\w\s])|([^\w\s])(?!\s)', 'target': ' placeholder '},
     {'pattern': r'\s+', 'target': ' '},
-    {'pattern': r'https?:\/\/(?:www\.)?[^\s]+', 'target': ''}
+    {'pattern': r'https?:\/\/(?:www\.)?[^\s]+', 'target': ''},
+    {'pattern': r'½', 'target': '1/2'},
+    {'pattern': r'¼', 'target': '1/4'},
+    {'pattern': r'¾', 'target': '3/4'},
+    {'pattern': r'⅓', 'target': '1/3'},
+    {'pattern': r'⅔', 'target': '2/3'},
+    {'pattern': r'⅕', 'target': '1/5'},
+    {'pattern': r'⅖', 'target': '2/5'},
+    {'pattern': r'⅗', 'target': '3/5'},
+    {'pattern': r'⅘', 'target': '4/5'},
+    {'pattern': r'⅙', 'target': '1/6'},
+    {'pattern': r'⅚', 'target': '5/6'},
+    {'pattern': r'⅛', 'target': '1/8'},
+    {'pattern': r'⅜', 'target': '3/8'},
+    {'pattern': r'⅝', 'target': '5/8'},
+    {'pattern': r'⅞', 'target': '7/8'},
 ]
 
 diacritics = 'àèìòùáéíóúÀÈÌÒÙÁÉÍÓÚ'
