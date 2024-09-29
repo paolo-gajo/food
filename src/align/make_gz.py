@@ -1,6 +1,6 @@
 import sys
 sys.path.append('/home/pgajo/food/src')
-from utils_food import TASTEset, push_dataset_card
+from utils_food import TASTEset
 from transformers import AutoTokenizer
 import warnings
 import os
@@ -14,22 +14,22 @@ def main():
 
     tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
 
-    data_path = '/home/pgajo/food/data/GZ/GZ-GOLD/GZ-GOLD_301.json'
-    # data_path = '/home/pgajo/food/data/mycolombianrecipes/MCR-GOLD_291.json'
+    # data_path = './data/GZ/GZ_GOLD/GZ-GOLD_301.json'
+    data_path = './data/mycolombianrecipes/MCR-GOLD_291.json'
     class_filter = [
-        'FOOD',
-        'QUANTITY',
-        'UNIT',
-        'PROCESS',
-        'PHYSICAL_QUALITY',
-        'COLOR',
-        'TASTE',
-        'PURPOSE',
+        # 'FOOD',
+        # 'QUANTITY',
+        # 'UNIT',
+        # 'PROCESS',
+        # 'PHYSICAL_QUALITY',
+        # 'COLOR',
+        # 'TASTE',
+        # 'PURPOSE',
         # 'PART',
     ]
     all_classes = ['FOOD', 'QUANTITY', 'UNIT', 'PROCESS', 'PHYSICAL_QUALITY', 'COLOR', 'TASTE', 'PURPOSE', 'PART',]
     src_lang = 'en'
-    tgt_langs = ['it']
+    tgt_langs = ['es']
     dataset = TASTEset.from_json(
         data_path,
         tokenizer = tokenizer,
@@ -50,7 +50,7 @@ def main():
         )
 
     tgt_langs_string = ''.join(dataset.tgt_langs)
-    save_name = f"{data_path.split('/')[-1].replace('.json', '')}_{type(tokenizer).__name__}_{dataset.src_lang}-{tgt_langs_string}_{'-'.join(list(set(all_classes).difference(set(class_filter))))}"
+    save_name = f"{data_path.split('/')[-1].replace('.json', '')}_{type(tokenizer).__name__}_{dataset.src_lang}-{tgt_langs_string}{'_' + '-'.join(list(set(all_classes).difference(set(class_filter)))) if len(class_filter)>0 else ''}"
     repo_id = f"pgajo/{save_name}"
     print('repo_id:', repo_id)
     # dataset.push_to_hub(repo_id)

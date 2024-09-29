@@ -230,7 +230,7 @@ class SquadEvaluator:
         df.to_csv(csv_path, sep=sep_dict[format], index=False)
 
 class SampleList:
-    def __init__(self, samples:List[dict], shuffle:bool = False) -> None:
+    def __init__(self, samples:List[dict], shuffle:bool = False):
         self.samples = samples
         self.shuffle = shuffle
         self.index = None
@@ -662,7 +662,6 @@ class TASTEset(DatasetDict):
             if random.random() > 1 - self.shuffle_probability:
                 random.shuffle(shuffled_indexes_ingr)
             
-
             # get non-entity positions and strings from the original text
             blanks_ingr = []
             for i in range(1, len(ingr)):

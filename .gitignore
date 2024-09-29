@@ -12,7 +12,7 @@ models/
 *.sh
 # data/
 datasets/
-results/
+# results/
 *.spacy
 TASTEset-2.0/
 awesome-align/
