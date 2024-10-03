@@ -38,5 +38,14 @@ Contributions to this project are welcome. Please fork the repository and submit
 ## License
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
 
+## Citation
+```
+@inproceedings{gajo2024ner,
+    author = {Gajo, Paolo and Barr\'{o}n-Cede\~{n}o, Alberto},
+    title = {{On Cross-Language Entity Label Projection and Recognition}},
+    booktitle = {{CLiC-it 2024: 10th Italian Conference on Computational Linguistics,}},
+    year = {2024},
+}
+```
 ## Acknowledgments
 This project is funded by the National Recovery and Resilience Plan under Grant Agreement No. 118/2023.
