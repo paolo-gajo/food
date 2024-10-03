@@ -1,7 +1,7 @@
 # Bites and Bytes: NLP for Italian Gastronomy
 
 ## Project Overview
-This repository hosts the code and data for a PhD project focused on applying Natural Language Processing techniques to the culinary field. Conducted under the auspices of the University of Bologna's PhD program in Translation, Interpreting, and Interculturality, this research is part of a scholarship funded by PNRR (National Recovery and Resilience Plan) ex D.M. 118/2023. The project aims to promote the Italian culinary heritage using a multilingual approach.
+This repository hosts the code and data for the publication <em>On Cross-Language Entity Label Projection and Recognition</em>, a study focused on applying Natural Language Processing techniques to the culinary field. Conducted under the auspices of the University of Bologna's PhD program in Translation, Interpreting, and Interculturality, this research is part of a scholarship funded by PNRR (National Recovery and Resilience Plan) ex D.M. 118/2023. The project aims to promote the Italian culinary heritage using a multilingual approach.
 
 ## Research Objectives and Methodology
 The primary objective is to develop a computational system capable of adapting omnivorous recipes to dietary restrictions such as vegetarian, vegan, halal, or kosher diets. The current pipeline, partially implemented and illustrated below, enriches culinary data by annotating various entities like "food", "quantity", and "process".
