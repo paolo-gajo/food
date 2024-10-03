@@ -1,4 +1,4 @@
-# Bites and Bytes: NLP-driven Italian Gastronomy Promotion
+# Bites and Bytes: NLP for Italian Gastronomy
 
 ## Project Overview
 This repository hosts the code and data for a PhD project focused on applying Natural Language Processing techniques to the culinary field. Conducted under the auspices of the University of Bologna's PhD program in Translation, Interpreting, and Interculturality, this research is part of a scholarship funded by PNRR (National Recovery and Resilience Plan) ex D.M. 118/2023. The project aims to promote the Italian culinary heritage using a multilingual approach.
